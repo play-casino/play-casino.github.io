@@ -297,6 +297,8 @@
   .rc-brow{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--neon)}
   .rc-name{font-family:"Unbounded",sans-serif;font-weight:900;font-size:34px;line-height:1;margin:12px 0 4px;background:var(--neon-grad);-webkit-background-clip:text;background-clip:text;color:transparent;width:-moz-fit-content;width:fit-content}
   .rc-sub{color:var(--mut);font-size:13px}
+  .rc-why{margin:11px 0 2px;font-size:12.5px;line-height:1.45;color:#dfe3f4}
+  .rc-why b{color:var(--neon);font-weight:800}
   /* tear line: clean dashed rule between two punched notches sitting on the card edges */
   .rc-perf{position:relative;height:0;margin:20px 0;border-top:2px dashed color-mix(in srgb,var(--neon) 42%,var(--line2))}
   .rc-perf::before,.rc-perf::after{content:"";position:absolute;top:0;width:24px;height:24px;border-radius:50%;background:var(--ink);z-index:4}
@@ -585,13 +587,14 @@
   @media(max-width:820px){.brandlinks,.slotlinks{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:480px){.brandlinks{grid-template-columns:1fr}}
 
-  /* "Показать все" card — prominent, with arrow */
-  .brandlinks a.all-card,.slotlinks a.all-card{position:relative;background:linear-gradient(135deg,color-mix(in srgb,#b8ff2b 20%,var(--panel2)),var(--panel));border-color:color-mix(in srgb,#b8ff2b 48%,var(--line2))}
-  .brandlinks a.all-card::before{background:linear-gradient(180deg,#b8ff2b,#ff2e93);opacity:1}
-  .slotlinks a.all-card{align-items:center;justify-content:center;text-align:center;padding:18px;gap:8px}
-  .brandlinks a.all-card b,.slotlinks a.all-card b{color:#d4ff73}
-  .brandlinks a.all-card small,.slotlinks a.all-card .allcount{color:#b8ff2b;font-weight:800;font-size:12px}
-  .brandlinks a.all-card:hover,.slotlinks a.all-card:hover{border-color:#b8ff2b;box-shadow:0 16px 34px -18px rgba(184,255,43,.6)}
+  /* "Показать все" cards — md-showall style (tall gradient tint, big title, subtitle, accent arrow) */
+  .brandlinks a.all-card,.slotlinks a.all-card{--tc:#b8ff2b;--tc2:#5fbf00;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:7px;padding:16px 18px;background:linear-gradient(135deg,color-mix(in srgb,var(--tc) 24%,var(--panel2)),var(--panel));border:1px solid color-mix(in srgb,var(--tc) 48%,var(--line2))}
+  .slotlinks a.all-card{--tc:#ffcf3f;--tc2:#e0952f}
+  .brandlinks a.all-card::before,.slotlinks a.all-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;z-index:2;background:linear-gradient(180deg,var(--tc),var(--tc2));opacity:1}
+  .all-card .sa-title{font-family:"Unbounded",sans-serif;font-weight:900;font-size:19px;line-height:1.05;color:var(--tc);text-shadow:0 0 22px color-mix(in srgb,var(--tc) 34%,transparent)}
+  .all-card .sa-sub{color:var(--mut);font-size:12.5px;line-height:1.4}
+  .all-card .sa-more{margin-top:4px;display:inline-flex;align-items:center;gap:5px;font-family:"Unbounded",sans-serif;font-weight:800;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--tc)}
+  .brandlinks a.all-card:hover,.slotlinks a.all-card:hover{transform:translateY(-3px);border-color:var(--tc);box-shadow:0 16px 34px -18px var(--tc)}
 
   footer{border-top:1px solid var(--line);margin-top:56px;padding:32px 0 48px;color:var(--mut);font-size:13px}
   footer .age{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--txt);border:1px solid var(--line2);border-radius:10px;padding:8px 14px;margin-bottom:16px}
@@ -669,6 +672,7 @@
             <div class="rc-brow">Чек редакции · лидер 2026</div>
             <div class="rc-name">Vavada</div>
             <div class="rc-sub">Депозит от 100 ₽ · вывод 1–24 ч · лицензия Кюрасао</div>
+            <div class="rc-why"><b>Почему №1:</b> быстрые выплаты и проверяемая лицензия при минимуме спорных ситуаций</div>
             <div class="rc-perf" aria-hidden="true"></div>
             <ul class="rc-spec">
               <li><span>Минимальный депозит</span><i class="dots"></i><b class="rp">100 ₽</b></li>
@@ -676,6 +680,8 @@
               <li><span>Приветственный бонус</span><i class="dots"></i><b class="gc">100% + 100 FS</b></li>
               <li><span>Вейджер бонуса</span><i class="dots"></i><b class="nc">x40</b></li>
               <li><span>Средний срок выплаты</span><i class="dots"></i><b class="nc">~3 часа</b></li>
+              <li><span>Способы вывода</span><i class="dots"></i><b class="nc">СБП · USDT · карта</b></li>
+              <li><span>Слотов в каталоге</span><i class="dots"></i><b class="gc">7 000+</b></li>
             </ul>
             <a href="/go/vavada" rel="nofollow sponsored" class="btn btn-neon rc-cta">Открыть Vavada</a>
             <div class="rc-chips">
@@ -1587,7 +1593,7 @@
     pick(brands,3).forEach(function(b){
       h+='<a href="/casino/'+b.s+'" style="--tc:'+b.c+';--tc2:'+b.c2+'"><b>'+esc(b.n)+'</b><small>'+esc(b.d)+' · '+b.sc+'</small></a>';
     });
-    h+='<a class="all-card" href="/casino/"><b>Показать все</b><small>→ '+brands.length+' обзоров</small></a>';
+    h+='<a class="all-card" href="/casino/"><span class="sa-title">Показать все</span><span class="sa-sub">подробные обзоры всех казино рейтинга</span><span class="sa-more">Все обзоры →</span></a>';
     bEl.innerHTML=h;
   }
   var sEl=document.getElementById('slotlinks');
@@ -1609,7 +1615,7 @@
         +'<span class="pills"><span class="rtpp">RTP '+rtp+'%</span><span class="pill '+vol+'">'+esc(s.v)+'</span></span></span>'
       +'</a>';
     });
-    hs+='<a class="all-card" href="/slots"><b>Показать все</b><span class="allcount">→ '+slots.length+' слотов</span></a>';
+    hs+='<a class="all-card" href="/slots"><span class="sa-title">Показать все</span><span class="sa-sub">полный рейтинг слотов под маленький банк</span><span class="sa-more">Все слоты →</span></a>';
     sEl.innerHTML=hs;
   }
 })();
