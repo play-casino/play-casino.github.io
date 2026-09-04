@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Рейтинг лучших онлайн-казино 2026 — топ честных и надёжных</title>
-<meta name="description" content="Рейтинг лучших онлайн-казино 2026: топ-12 честных и надёжных площадок с лицензией и быстрыми выплатами. Кто №1 и почему — методика оценки, обзоры брендов, анти-топ и FAQ.">
+<title>Рейтинг онлайн-казино 2026 — топ честных, быстрый вывод, лицензия</title>
+<meta name="description" content="Рейтинг онлайн-казино 2026 от редакции PlayCasino: топ-12 честных площадок с лицензией, выводом от 8 минут и вейджером x40. Кто №1 и почему — проверь.">
 <meta name="author" content="Редакция PlayCasino">
 <meta name="robots" content="index, follow, noarchive, max-image-preview:large">
 <link rel="canonical" href="https://casino-dengi.top/">
@@ -12,8 +12,8 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Рейтинг лучших онлайн-казино 2026 — топ честных и надёжных">
-<meta property="og:description" content="Рейтинг лучших онлайн-казино 2026: топ-12 честных и надёжных площадок с лицензией и быстрыми выплатами. Кто №1 и почему — методика, обзоры, анти-топ и FAQ.">
+<meta property="og:title" content="Рейтинг онлайн-казино 2026 — топ честных, быстрый вывод, лицензия">
+<meta property="og:description" content="Рейтинг онлайн-казино 2026 от редакции PlayCasino: топ-12 честных площадок с лицензией, выводом от 8 минут и вейджером x40. Кто №1 и почему — проверь.">
 <meta property="og:url" content="https://casino-dengi.top/">
 <meta property="og:site_name" content="PlayCasino">
 <meta property="og:locale" content="ru_RU">
@@ -21,8 +21,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Рейтинг лучших онлайн-казино 2026 — топ честных и надёжных">
-<meta name="twitter:description" content="Топ-12 честных и надёжных онлайн-казино 2026: методика оценки по 7 критериям, обзоры брендов, анти-топ и FAQ.">
+<meta name="twitter:title" content="Рейтинг онлайн-казино 2026 — топ честных, быстрый вывод, лицензия">
+<meta name="twitter:description" content="Топ-12 честных онлайн-казино 2026: методика по 7 критериям, вывод от 8 минут, лицензия Кюрасао. Кто №1 и почему — проверь.">
 <meta name="twitter:image" content="https://casino-dengi.top/og.jpg">
 
 <!-- Icons / manifest -->
@@ -140,7 +140,7 @@
 
   /* overhang ribbons + floats */
   .ribbon{
-    position:absolute;top:16px;right:-9px;z-index:3;
+    position:absolute;top:-13px;right:-9px;z-index:5;
     background:var(--neon-grad);color:#0a1200;font-family:"Unbounded",sans-serif;font-weight:800;
     font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:8px;
     transform:rotate(3deg);box-shadow:0 12px 26px -12px rgba(184,255,43,.7);
@@ -201,7 +201,10 @@
   .spot ul{list-style:none;margin:14px 0 18px;padding:0;font-size:13.5px}
   .spot ul li{position:relative;padding-left:22px;margin:7px 0;color:#d3d7ee}
   .spot ul li::before{content:"";position:absolute;left:2px;top:8px;width:8px;height:8px;border-radius:3px;background:var(--neon)}
-  .spot .float{right:-14px;top:-18px}
+  /* leader card: ribbon top-LEFT, score float top-RIGHT — never overlap */
+  .spot .ribbon{top:-14px;left:22px;right:auto;transform:rotate(-2deg)}
+  .spot .float{right:-14px;top:-16px;left:auto;bottom:auto}
+  .spot .card-body{padding-top:6px}
 
   /* ---------- stat band ---------- */
   .band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(184,255,43,.03),transparent);margin-top:30px}
@@ -222,25 +225,32 @@
   table.rank tbody td{border-bottom:1px solid var(--line)}
   table.rank tbody tr:last-child td{border-bottom:none}
   table.rank tbody tr:hover{background:rgba(255,255,255,.035)}
-  table.rank tr.top1{background:linear-gradient(90deg,rgba(255,207,63,.10),transparent 72%)}
-  table.rank tr.top1:hover{background:linear-gradient(90deg,rgba(255,207,63,.15),transparent 72%)}
-  table.rank tr.top1 td:first-child{box-shadow:inset 3px 0 0 var(--gold)}
-  table.rank tr.top2 td:first-child{box-shadow:inset 3px 0 0 #cfd3dc}
-  table.rank tr.top3 td:first-child{box-shadow:inset 3px 0 0 #d99a63}
-  .rk{width:48px;text-align:center}
-  .medal{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:15px;color:#111}
-  .medal.g{background:var(--gold-grad);box-shadow:0 0 20px -4px rgba(255,207,63,.85);animation:pulseGold 3s var(--ease) infinite}
-  .medal.s{background:linear-gradient(135deg,#eef1f6,#aab2c4);color:#1c2030}
-  .medal.b{background:linear-gradient(135deg,#e6a56a,#b06d34);color:#241403}
-  .rk .num{font-family:"Unbounded",sans-serif;font-weight:700;font-size:16px;color:var(--mut)}
+  /* per-row accent palette — each row plays its own colour */
+  table.rank tbody tr{--rc:#b8ff2b;--rc2:#5fbf00;--rtext:#0a1200}
+  table.rank tr.top1{--rc:#ffcf3f;--rc2:#e0952f;--rtext:#231600;background:linear-gradient(90deg,rgba(255,207,63,.13),transparent 74%)}
+  table.rank tr.top2{--rc:#e6eaf3;--rc2:#a9b1c6;--rtext:#1c2030;background:linear-gradient(90deg,rgba(207,211,220,.10),transparent 74%)}
+  table.rank tr.top3{--rc:#eaa96f;--rc2:#b06d34;--rtext:#241403;background:linear-gradient(90deg,rgba(217,154,99,.11),transparent 74%)}
+  table.rank tbody tr:nth-child(5){--rc:#37e0c8;--rc2:#12a892;--rtext:#04231e}
+  table.rank tbody tr:nth-child(6){--rc:#ff2e93;--rc2:#c81f6f;--rtext:#fff}
+  table.rank tbody tr:nth-child(7){--rc:#ffa63d;--rc2:#e07a12;--rtext:#2a1600}
+  table.rank tbody tr:nth-child(9){--rc:#37e0c8;--rc2:#12a892;--rtext:#04231e}
+  table.rank tbody tr:nth-child(10){--rc:#ff2e93;--rc2:#c81f6f;--rtext:#fff}
+  table.rank tbody tr:nth-child(11){--rc:#ffa63d;--rc2:#e07a12;--rtext:#2a1600}
+  table.rank tbody tr td:first-child{box-shadow:inset 3px 0 0 var(--rc)}
+  table.rank tbody tr:hover td{background:color-mix(in srgb,var(--rc) 9%,transparent)}
+  table.rank tbody tr:hover .medal,table.rank tbody tr:hover .rk .num,table.rank tbody tr:hover .score{box-shadow:0 0 24px -3px var(--rc);transform:translateY(-1px)}
+  .rk{width:54px;text-align:center}
+  .medal{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:11px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:15px;color:var(--rtext);background:linear-gradient(135deg,var(--rc),var(--rc2));box-shadow:0 0 20px -5px var(--rc);transition:transform .18s,box-shadow .18s}
+  .medal.g{animation:pulseGold 3s var(--ease) infinite}
+  .rk .num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;font-family:"Unbounded",sans-serif;font-weight:800;font-size:15px;color:var(--rtext);background:linear-gradient(135deg,var(--rc),var(--rc2));box-shadow:0 0 16px -6px var(--rc);transition:transform .18s,box-shadow .18s}
   .brand{font-weight:700;font-size:16px;color:var(--txt);display:block}
-  .brand small{display:block;font-weight:500;color:var(--mut);font-size:12px;margin-top:1px}
-  .brand-cell .badge{margin-top:6px}
-  .badge{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:999px;background:rgba(184,255,43,.12);color:var(--neon);border:1px solid rgba(184,255,43,.32)}
-  .score{font-family:"Unbounded",sans-serif;font-weight:800;color:var(--neon);font-size:17px;white-space:nowrap;display:block}
-  .scorebar{height:5px;border-radius:5px;background:rgba(255,255,255,.08);margin-top:6px;overflow:hidden;min-width:66px}
-  .scorebar i{display:block;height:100%;width:0;border-radius:5px;background:var(--neon-grad);transition:width 1.1s var(--ease)}
-  .cta-sm{display:inline-block;background:var(--neon-grad);color:#0a1200;font-weight:800;padding:9px 16px;border-radius:10px;font-size:13px;white-space:nowrap;text-align:center;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s}
+  .brand small{display:inline-block;font-weight:600;color:var(--rc);font-size:11px;margin-top:6px;padding:3px 10px;border-radius:6px;background:color-mix(in srgb,var(--rc) 13%,transparent);border-left:3px solid var(--rc)}
+  .brand-cell .badge{margin-top:7px}
+  .badge{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--rc) 16%,transparent);color:var(--rc);border:1px solid color-mix(in srgb,var(--rc) 42%,transparent)}
+  .score{display:inline-block;font-family:"Unbounded",sans-serif;font-weight:800;color:var(--rtext);font-size:15px;white-space:nowrap;padding:5px 13px;border-radius:999px;background:linear-gradient(135deg,var(--rc),var(--rc2));box-shadow:0 0 18px -6px var(--rc);transition:transform .18s,box-shadow .18s}
+  .scorebar{height:5px;border-radius:5px;background:rgba(255,255,255,.08);margin-top:8px;overflow:hidden;min-width:72px}
+  .scorebar i{display:block;height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,var(--rc2),var(--rc));box-shadow:0 0 10px -2px var(--rc);transition:width 1.1s var(--ease)}
+  .cta-sm{display:inline-flex;align-items:center;gap:5px;background:var(--neon-grad);color:#0a1200;font-weight:800;padding:9px 16px;border-radius:10px;font-size:13px;white-space:nowrap;text-align:center;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s}
   .cta-sm:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(184,255,43,.7);color:#0a1200}
   .cta-sm::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .cta-sm:hover::after{animation:shimmer .85s var(--ease)}
@@ -276,7 +286,10 @@
   .mcard .rows{margin-top:18px;border-top:1px dashed var(--line2);padding-top:14px}
   .mcard .rows div{display:flex;justify-content:space-between;font-size:13.5px;padding:6px 0;color:#d3d7ee}
   .mcard .rows b{color:var(--txt)}
-  .mcard .float{left:-14px;bottom:-18px}
+  /* float sits in a reserved clear strip at the card bottom — no overlap with rows/text */
+  .mcard .float{left:-12px;right:auto;top:auto;bottom:16px;display:flex;align-items:baseline;gap:8px}
+  .mcard .float .fl{margin-top:0}
+  .mcard.hasfloat{padding-bottom:70px}
   .mcard .float .fv{background:var(--hot-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
   /* ---------- reviews ---------- */
@@ -309,13 +322,27 @@
   .prose p{margin:12px 0}
 
   /* ---------- category chips ---------- */
-  .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(224px,1fr));gap:10px;margin:16px 0}
-  .cats a{display:block;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--rad-sm);padding:13px 15px;color:var(--txt);font-size:14px;position:relative;overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s}
-  .cats a::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .22s;background:radial-gradient(130px 64px at var(--mx,50%) 0,rgba(184,255,43,.16),transparent 70%)}
-  .cats a:hover{transform:translateY(-3px);border-color:rgba(184,255,43,.34);box-shadow:0 14px 30px -18px rgba(184,255,43,.5);color:var(--txt)}
-  .cats a:hover::before{opacity:1}
-  .cats a b{display:block;font-weight:700;font-size:14.5px}
-  .cats a small{color:var(--mut);font-size:12px}
+  .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:18px 0}
+  .cats a{--ca:var(--neon);--ca2:var(--neon-d);position:relative;display:flex;align-items:center;gap:12px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:13px 15px 13px 18px;color:var(--txt);overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s,background .22s}
+  .cats a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--ca),var(--ca2));opacity:.85}
+  .cats a:hover{transform:translateY(-3px);border-color:var(--ca);box-shadow:0 16px 34px -18px var(--ca);background:linear-gradient(180deg,color-mix(in srgb,var(--ca) 10%,var(--panel2)),var(--panel));color:var(--txt)}
+  .cats a .ci{flex:0 0 auto;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font-size:20px;line-height:1;background:color-mix(in srgb,var(--ca) 14%,rgba(255,255,255,.03));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ca) 30%,transparent);transition:transform .22s}
+  .cats a:hover .ci{transform:scale(1.08) rotate(-5deg)}
+  .cats a .ct{display:flex;flex-direction:column;min-width:0}
+  .cats a b{font-weight:700;font-size:14px;line-height:1.2}
+  .cats a small{color:var(--mut);font-size:11.5px;margin-top:2px}
+  .cats a .ftag{margin-left:auto;flex:0 0 auto;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#08120a;background:linear-gradient(135deg,var(--ca),var(--ca2));padding:4px 10px;border-radius:999px;box-shadow:0 0 16px -5px var(--ca);white-space:nowrap}
+  .cats a.feat{grid-column:span 2;padding:16px 18px;border-color:color-mix(in srgb,var(--ca) 40%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--ca) 16%,var(--panel2)),var(--panel))}
+  .cats a.feat .ci{width:46px;height:46px;font-size:24px;background:linear-gradient(135deg,var(--ca),var(--ca2));box-shadow:0 0 20px -4px var(--ca)}
+  .cats a.feat b{font-size:16px}
+  .cats a.feat small{font-size:12.5px}
+  .cats a:nth-of-type(6n+1){--ca:#b8ff2b;--ca2:#5fbf00}
+  .cats a:nth-of-type(6n+2){--ca:#37e0c8;--ca2:#12a892}
+  .cats a:nth-of-type(6n+3){--ca:#ff2e93;--ca2:#c81f6f}
+  .cats a:nth-of-type(6n+4){--ca:#ffa63d;--ca2:#e07a12}
+  .cats a:nth-of-type(6n+5){--ca:#6cc4ff;--ca2:#2a86e0}
+  .cats a:nth-of-type(6n){--ca:#c8ff5a;--ca2:#8fd400}
+  @media(max-width:560px){.cats a.feat{grid-column:span 1}.cats a .ftag{display:none}}
 
   /* ---------- anti-top ---------- */
   .anti{background:linear-gradient(180deg,rgba(255,46,147,.09),rgba(255,46,147,.03));border:1px solid rgba(255,46,147,.3);border-radius:var(--rad);padding:8px 24px;box-shadow:var(--shadow)}
@@ -429,7 +456,7 @@
     <div class="cols top">
       <div class="txt">
         <span class="brow reveal" style="--d:.02s"><b>PlayCasino</b> · независимое издание-рейтинг · обновлено 4 сентября 2026</span>
-        <h1 class="reveal" style="--d:.08s">Рейтинг лучших онлайн-казино 2026: <span class="hl">топ честных</span> и <span class="hl hot">надёжных</span></h1>
+        <h1 class="reveal" style="--d:.08s">Топ-12 онлайн-казино 2026: кто <span class="hl">платит быстро</span>, честно и <span class="hl hot">без сюрпризов</span> в кассе</h1>
         <p class="lead reveal" style="--d:.16s">
           Первое место в рейтинге держит <b>Vavada</b> — за действующую лицензию Кюрасао, вывод от 1 до 24 часов и минимум спорных ситуаций. Рядом — <b>1win</b> и <b>7K</b>. Все три площадки прошли проверку редакции PlayCasino по 7 критериям на реальных депозитах. Ниже — таблица топ-12, методика с весами и разбор, кто №1 и почему.
         </p>
@@ -482,7 +509,7 @@
   <section class="sect" id="rating">
     <div class="sect-head reveal">
       <span class="kicker">Топ-12 · сентябрь 2026</span>
-      <h2>Рейтинг казино 2026: <span class="hl">оценки, бонусы и вывод</span> в одной таблице</h2>
+      <h2>Рейтинг онлайн-казино 2026: <span class="hl">оценки, бонусы и вывод</span> в одной таблице</h2>
     </div>
     <div class="tablewrap reveal">
       <table class="rank">
@@ -612,7 +639,7 @@
         <p>Пока хотя бы один вопрос без числового ответа — бренд в топ не идёт. Это база.</p>
       </div>
 
-      <aside class="panel panel-p mcard oh reveal">
+      <aside class="panel panel-p mcard oh hasfloat reveal">
         <span class="wm" aria-hidden="true">183</span>
         <span class="ribbon">Факт-чек</span>
         <div class="float"><div class="fv">100%</div><div class="fl">выводов — на реальные деньги</div></div>
@@ -709,7 +736,7 @@
   <section class="sect prose" id="honest">
     <div class="sect-head reveal">
       <span class="kicker">Фильтр скама</span>
-      <h2>Честные и надёжные казино: <span class="hl">по каким признакам</span> редакция отсеивает</h2>
+      <h2>Рейтинг честных и надёжных онлайн-казино 2026: <span class="hl">по каким признакам</span> отбираем</h2>
     </div>
     <p class="reveal">Честная площадка — та, где исход определяет сертифицированный генератор случайных чисел, а бонусные условия написаны без ловушек. Надёжная — та, что стабильно платит и не меняет правила задним числом. Редакция PlayCasino проверяет это по четырём признакам.</p>
     <ul class="reveal">
@@ -725,7 +752,7 @@
   <section class="sect" id="legal">
     <div class="sect-head reveal">
       <span class="kicker">Легальность в РФ</span>
-      <h2>Официальные и лицензионные казино для России: <span class="hl">что законно</span></h2>
+      <h2>Официальные лицензионные казино для России: <span class="hl">что законно</span> в 2026</h2>
     </div>
     <p class="reveal">Отдельной лицензии на онлайн-казино в РФ нет. Легально работают игровые разделы букмекеров с российским разрешением и международные площадки под лицензиями Кюрасао или Anjouan, доступные через зеркала. «Официальный сайт казино» — это оригинальный домен бренда, а не его клон из выдачи. Ниже — как юрисдикции отличаются на практике.</p>
     <div class="tbl-box tbl-scroll reveal" style="margin:16px 0">
@@ -746,7 +773,7 @@
   <section class="sect" id="cashbox">
     <div class="sect-head reveal">
       <span class="kicker">Касса</span>
-      <h2>Касса и скорость вывода: <span class="hl hot">сколько ждать деньги</span> по каждому методу</h2>
+      <h2>Лучшие казино по скорости вывода: <span class="hl hot">сколько ждать деньги</span> по каждому методу</h2>
     </div>
     <div class="cols top">
       <div class="txt">
@@ -764,7 +791,7 @@
         </div>
         <p class="reveal prose">Быстрее всего деньги приходят на крипту, дольше всего — на карту. Так работает почти везде. Если вывод завис — в 9 случаях из 10 причина не в казино, а в недоигранном вейджере или незавершённой верификации.</p>
       </div>
-      <aside class="panel panel-p mcard oh reveal">
+      <aside class="panel panel-p mcard oh hasfloat reveal">
         <span class="wm" aria-hidden="true">9</span>
         <span class="ribbon">Замер</span>
         <div class="float"><div class="fv">18 мин</div><div class="fl">медиана KYC у топ-3</div></div>
@@ -955,7 +982,7 @@
   <section class="sect prose" id="new">
     <div class="sect-head reveal">
       <span class="kicker">Свежие бренды</span>
-      <h2>Новые казино 2026: <span class="hl">стоит ли заходить</span> в свежие бренды</h2>
+      <h2>Топ новых казино 2026: <span class="hl">стоит ли заходить</span> в свежие бренды</h2>
     </div>
     <p class="reveal">Новые казино 2026 — это соблазн и риск одновременно. Соблазн — щедрые стартовые пакеты и свежие механики. Риск — короткая история выплат: у бренда возрастом три месяца нет статистики, по которой видно, платит он крупные заносы или тянет с ними. Редакция PlayCasino берёт свежие площадки в рейтинг только после первого тестового вывода и проверки лицензии по номеру.</p>
     <p class="reveal">Практическое правило. Новый бренд стоит пробовать мелким депозитом — 100–300 ₽ — и первым делом протестировать вывод, а не гнаться за бонусом. Если 500 ₽ уходят на карту без «дополнительных проверок» — уже сигнал. Kent в этом списке самый молодой из топа, поэтому у него балл 8.9, а не выше: механика хорошая, а истории выплат пока меньше, чем у ветеранов вроде JoyCasino.</p>
@@ -969,35 +996,35 @@
     </div>
     <p class="reveal">Ищете казино под конкретную задачу? Редакция разобрала каждый интент отдельной подборкой — выбирайте кластер:</p>
     <div class="cats">
-      <a href="/luchshie"><b>Лучшие казино</b><small>эталонные площадки года</small></a>
-      <a href="/top-casino"><b>Топ казино</b><small>топ-10 по совокупности</small></a>
-      <a href="/rejting-kazino"><b>Рейтинг казино</b><small>полный ранжированный список</small></a>
-      <a href="/na-dengi"><b>Казино на деньги</b><small>игра на реальные ставки</small></a>
-      <a href="/na-rubli"><b>Казино на рубли</b><small>рублёвые счета</small></a>
-      <a href="/novye"><b>Новые казино 2026</b><small>свежие бренды</small></a>
-      <a href="/licenzionnye"><b>Лицензионные казино</b><small>с рабочей лицензией</small></a>
-      <a href="/oficialnye"><b>Официальные казино</b><small>оригинальные сайты</small></a>
-      <a href="/platjat"><b>Казино, которые платят</b><small>с реальными выплатами</small></a>
-      <a href="/bystryj-vyvod"><b>Быстрый вывод</b><small>моментальные выплаты</small></a>
-      <a href="/min-depozit"><b>Минимальный депозит</b><small>старт от 50–100 ₽</small></a>
-      <a href="/bezdepozit"><b>Бездепозитные бонусы</b><small>бонус без вложений</small></a>
-      <a href="/privetstvennyj"><b>Приветственный бонус</b><small>на первый депозит</small></a>
-      <a href="/frispiny"><b>Фриспины</b><small>бесплатные вращения</small></a>
-      <a href="/cashback"><b>Кэшбэк</b><small>возврат проигрыша</small></a>
-      <a href="/promo"><b>Промокоды</b><small>актуальные бонус-коды</small></a>
-      <a href="/vyvod-na-kartu"><b>Вывод на карту</b><small>на карты банков РФ</small></a>
-      <a href="/sbp"><b>СБП</b><small>пополнение и вывод</small></a>
-      <a href="/bitkoin"><b>Биткоин казино</b><small>оплата в BTC</small></a>
-      <a href="/crypto"><b>Крипто казино</b><small>USDT и другие</small></a>
-      <a href="/avtomaty"><b>Игровые автоматы</b><small>слоты на деньги</small></a>
-      <a href="/ruletka"><b>Рулетка</b><small>онлайн-рулетка</small></a>
-      <a href="/live"><b>Live-казино</b><small>живые дилеры</small></a>
-      <a href="/mobilnye"><b>Мобильные казино</b><small>игра с телефона</small></a>
-      <a href="/vip"><b>VIP казино</b><small>элитные программы</small></a>
-      <a href="/bez-verifikacii"><b>Без верификации</b><small>вывод без паспорта</small></a>
-      <a href="/otzyvy"><b>Отзывы игроков</b><small>реальный опыт</small></a>
-      <a href="/rossiya"><b>Казино России</b><small>для игроков из РФ</small></a>
-      <a href="/online-kazino"><b>Онлайн казино</b><small>общий каталог</small></a>
+      <a class="reveal feat" href="/min-depozit"><span class="ci">🎯</span><span class="ct"><b>Минимальный депозит</b><small>старт от 50–100 ₽</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal feat" href="/bystryj-vyvod"><span class="ci">⚡</span><span class="ct"><b>Быстрый вывод</b><small>от 8 минут на крипту и СБП</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal feat" href="/privetstvennyj"><span class="ci">🎁</span><span class="ct"><b>Приветственный бонус</b><small>100–500% на первый депозит</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal feat" href="/licenzionnye"><span class="ci">📜</span><span class="ct"><b>Лицензионные казино</b><small>Кюрасао и Anjouan с номером</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal" href="/luchshie"><span class="ci">🏆</span><span class="ct"><b>Лучшие казино</b><small>эталонные площадки года</small></span></a>
+      <a class="reveal" href="/top-casino"><span class="ci">🥇</span><span class="ct"><b>Топ казино</b><small>топ-10 по совокупности</small></span></a>
+      <a class="reveal" href="/rejting-kazino"><span class="ci">📊</span><span class="ct"><b>Рейтинг казино</b><small>полный ранжированный список</small></span></a>
+      <a class="reveal" href="/na-dengi"><span class="ci">💵</span><span class="ct"><b>Казино на деньги</b><small>игра на реальные ставки</small></span></a>
+      <a class="reveal" href="/na-rubli"><span class="ci">🪙</span><span class="ct"><b>Казино на рубли</b><small>рублёвые счета</small></span></a>
+      <a class="reveal" href="/novye"><span class="ci">🆕</span><span class="ct"><b>Новые казино 2026</b><small>свежие бренды</small></span></a>
+      <a class="reveal" href="/oficialnye"><span class="ci">✅</span><span class="ct"><b>Официальные казино</b><small>оригинальные сайты</small></span></a>
+      <a class="reveal" href="/platjat"><span class="ci">💸</span><span class="ct"><b>Казино, которые платят</b><small>с реальными выплатами</small></span></a>
+      <a class="reveal" href="/bezdepozit"><span class="ci">🎈</span><span class="ct"><b>Бездепозитные бонусы</b><small>бонус без вложений</small></span></a>
+      <a class="reveal" href="/frispiny"><span class="ci">🎰</span><span class="ct"><b>Фриспины</b><small>бесплатные вращения</small></span></a>
+      <a class="reveal" href="/cashback"><span class="ci">💰</span><span class="ct"><b>Кэшбэк</b><small>возврат проигрыша</small></span></a>
+      <a class="reveal" href="/promo"><span class="ci">🏷️</span><span class="ct"><b>Промокоды</b><small>актуальные бонус-коды</small></span></a>
+      <a class="reveal" href="/vyvod-na-kartu"><span class="ci">💳</span><span class="ct"><b>Вывод на карту</b><small>на карты банков РФ</small></span></a>
+      <a class="reveal" href="/sbp"><span class="ci">🏦</span><span class="ct"><b>СБП</b><small>пополнение и вывод</small></span></a>
+      <a class="reveal" href="/bitkoin"><span class="ci">🟠</span><span class="ct"><b>Биткоин казино</b><small>оплата в BTC</small></span></a>
+      <a class="reveal" href="/crypto"><span class="ci">💠</span><span class="ct"><b>Крипто казино</b><small>USDT и другие</small></span></a>
+      <a class="reveal" href="/avtomaty"><span class="ci">🕹️</span><span class="ct"><b>Игровые автоматы</b><small>слоты на деньги</small></span></a>
+      <a class="reveal" href="/ruletka"><span class="ci">🎡</span><span class="ct"><b>Рулетка</b><small>онлайн-рулетка</small></span></a>
+      <a class="reveal" href="/live"><span class="ci">🎥</span><span class="ct"><b>Live-казино</b><small>живые дилеры</small></span></a>
+      <a class="reveal" href="/mobilnye"><span class="ci">📱</span><span class="ct"><b>Мобильные казино</b><small>игра с телефона</small></span></a>
+      <a class="reveal" href="/vip"><span class="ci">👑</span><span class="ct"><b>VIP казино</b><small>элитные программы</small></span></a>
+      <a class="reveal" href="/bez-verifikacii"><span class="ci">🔓</span><span class="ct"><b>Без верификации</b><small>вывод без паспорта</small></span></a>
+      <a class="reveal" href="/otzyvy"><span class="ci">💬</span><span class="ct"><b>Отзывы игроков</b><small>реальный опыт</small></span></a>
+      <a class="reveal" href="/rossiya"><span class="ci">🌍</span><span class="ct"><b>Казино России</b><small>для игроков из РФ</small></span></a>
+      <a class="reveal" href="/online-kazino"><span class="ci">🌐</span><span class="ct"><b>Онлайн казино</b><small>общий каталог</small></span></a>
     </div>
   </section>
 
