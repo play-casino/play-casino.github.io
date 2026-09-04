@@ -43,7 +43,7 @@
     --txt:#eef0fb; --mut:#9096b4; --dim:#6c7194;
     --neon:#b8ff2b; --neon-d:#8fd400; --hot:#ff2e93; --gold:#ffcf3f;
     --rad:18px; --rad-sm:12px;
-    --maxw:1180px;
+    --maxw:1260px;
     --ease:cubic-bezier(.22,1,.36,1);
     --neon-grad:linear-gradient(105deg,var(--neon),var(--neon-d));
     --hot-grad:linear-gradient(105deg,var(--hot),#c81f6f);
@@ -144,7 +144,9 @@
   .cols{display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center}
   .cols.top{align-items:flex-start}
   .cols.rev .txt{order:2}
-  @media(max-width:940px){.cols{grid-template-columns:1fr;gap:30px}.cols.rev .txt{order:0}}
+  /* hero gets a wider right column so the leader card is not dwarfed and no air is left on its right */
+  .hero .cols{grid-template-columns:1fr 1.02fr;gap:40px}
+  @media(max-width:940px){.cols{grid-template-columns:1fr;gap:30px}.cols.rev .txt{order:0}.hero .cols{grid-template-columns:1fr;gap:30px}}
 
   /* ---------- panels / cards ---------- */
   .panel{position:relative;border-radius:var(--rad);background:linear-gradient(168deg,var(--panel2),var(--panel));border:1px solid var(--line2);box-shadow:var(--shadow);overflow:hidden}
@@ -282,7 +284,8 @@
   .receipt{position:relative;width:100%;margin:6px 0 10px;overflow:visible}
   .receipt .ribbon{top:-13px;left:22px;right:auto;transform:rotate(-2deg)}
   .receipt .float{right:-12px;top:-16px;left:auto;bottom:auto}
-  .rc-card{position:relative;overflow:visible;border-radius:20px;padding:26px 30px 24px;background:linear-gradient(168deg,var(--panel2),var(--panel));border:1px solid color-mix(in srgb,var(--neon) 30%,var(--line2));box-shadow:0 40px 90px -40px #000}
+  /* overflow clipped: notches read as edge-flush semicircles and never poke past the card, so the right edge stays flush with the content boundary (no empty strip) */
+  .rc-card{position:relative;overflow:hidden;border-radius:20px;padding:26px 30px 24px;background:linear-gradient(168deg,var(--panel2),var(--panel));border:1px solid color-mix(in srgb,var(--neon) 30%,var(--line2));box-shadow:0 40px 90px -40px #000}
   .rc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;border-radius:20px 20px 0 0;background:linear-gradient(90deg,var(--neon),var(--gold) 50%,var(--hot));z-index:3}
   .rc-card .wm{right:16px;bottom:4px;font-size:118px;line-height:.8;color:rgba(184,255,43,.05);-webkit-text-stroke:0;z-index:0}
   .rc-body{position:relative;z-index:1}
@@ -538,7 +541,7 @@
   .toplinks a:hover{transform:translateY(-2px);border-color:rgba(184,255,43,.34);color:var(--neon)}
 
   /* ---------- brand-review interlinks (multicolour) ---------- */
-  .brandlinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;margin:16px 0}
+  .brandlinks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
   .brandlinks a{--tc:var(--neon);--tc2:var(--neon-d);position:relative;display:flex;flex-direction:column;gap:2px;padding:14px 16px 14px 18px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s}
   .brandlinks a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--tc),var(--tc2))}
   .brandlinks a:hover{transform:translateY(-3px);border-color:var(--tc);box-shadow:0 16px 34px -18px var(--tc)}
@@ -553,13 +556,31 @@
   .brandlinks a:nth-child(7){--tc:#6cc4ff;--tc2:#2a86e0}
   .brandlinks a:nth-child(8){--tc:#ff2e93;--tc2:#c81f6f}
 
-  /* ---------- slot-rating interlinks ---------- */
-  .slotlinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:16px 0}
-  .slotlinks a{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:12px 15px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:12px;transition:transform .2s,border-color .2s,box-shadow .2s}
-  .slotlinks a:hover{transform:translateY(-2px);border-color:rgba(184,255,43,.34);box-shadow:0 14px 30px -18px rgba(184,255,43,.5)}
-  .slotlinks a b{font-family:"Sora",sans-serif;font-weight:700;font-size:14px;color:var(--txt);margin-right:auto}
-  .slotlinks a .rtp{font-family:"Sora",sans-serif;font-weight:700;color:#a6e838}
-  .slotlinks a .rtp.best{color:#d4ff73;text-shadow:0 0 16px rgba(184,255,43,.55)}
+  /* ---------- slot-rating interlinks (real cover cards) ---------- */
+  .slotlinks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+  .slotlinks a{position:relative;display:flex;flex-direction:column;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+  .slotlinks a:hover{transform:translateY(-3px);border-color:rgba(184,255,43,.34);box-shadow:0 18px 36px -20px rgba(184,255,43,.5)}
+  .slotlinks .cover{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,#171b33,#0c0e1c)}
+  .slotlinks .cover img{width:100%;height:100%;object-fit:cover;display:block}
+  .slotlinks .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:"Unbounded",sans-serif;font-weight:900;font-size:44px;color:#08120a;background:linear-gradient(140deg,var(--pc,#b8ff2b),var(--pc2,#5fbf00))}
+  .slotlinks .kind{position:absolute;top:8px;left:8px;z-index:2;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:999px;color:#fff}
+  .slotlinks .kind.crash{background:var(--hot-grad);box-shadow:0 0 16px -5px rgba(255,46,147,.8)}
+  .slotlinks .kind.live{background:linear-gradient(135deg,#37e0c8,#12a892);color:#04231e;box-shadow:0 0 16px -5px rgba(55,224,200,.8)}
+  .slotlinks .meta{padding:11px 12px 13px;display:flex;flex-direction:column;gap:5px}
+  .slotlinks .sn{font-family:"Sora",sans-serif;font-weight:700;font-size:13px;color:var(--txt);line-height:1.22}
+  .slotlinks .sp{font-size:11px;color:var(--mut)}
+  .slotlinks .pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}
+  .slotlinks .rtpp{font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:999px;color:#c8ff5a;background:color-mix(in srgb,#b8ff2b 14%,transparent);border:1px solid color-mix(in srgb,#b8ff2b 40%,transparent);white-space:nowrap}
+  @media(max-width:820px){.brandlinks,.slotlinks{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.brandlinks{grid-template-columns:1fr}}
+
+  /* "Показать все" card — prominent, with arrow */
+  .brandlinks a.all-card,.slotlinks a.all-card{position:relative;background:linear-gradient(135deg,color-mix(in srgb,#b8ff2b 20%,var(--panel2)),var(--panel));border-color:color-mix(in srgb,#b8ff2b 48%,var(--line2))}
+  .brandlinks a.all-card::before{background:linear-gradient(180deg,#b8ff2b,#ff2e93);opacity:1}
+  .slotlinks a.all-card{align-items:center;justify-content:center;text-align:center;padding:18px;gap:8px}
+  .brandlinks a.all-card b,.slotlinks a.all-card b{color:#d4ff73}
+  .brandlinks a.all-card small,.slotlinks a.all-card .allcount{color:#b8ff2b;font-weight:800;font-size:12px}
+  .brandlinks a.all-card:hover,.slotlinks a.all-card:hover{border-color:#b8ff2b;box-shadow:0 16px 34px -18px rgba(184,255,43,.6)}
 
   footer{border-top:1px solid var(--line);margin-top:56px;padding:32px 0 48px;color:var(--mut);font-size:13px}
   footer .age{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--txt);border:1px solid var(--line2);border-radius:10px;padding:8px 14px;margin-bottom:16px}
@@ -1357,17 +1378,25 @@
       <span class="kicker">По каждому бренду</span>
       <div class="h2v">Подробные <span class="hl">обзоры казино</span></div>
     </div>
-    <p class="reveal">Разбор каждой площадки из топа отдельно: лицензия по номеру, замеры выводов, вейджер, каталог и живые минусы. Выбирайте бренд:</p>
-    <div class="brandlinks reveal">
-      <a href="/casino/vavada"><b>Vavada</b><small>№1 · надёжность · 9.7</small></a>
-      <a href="/casino/1win"><b>1win</b><small>казино + ставки · 9.5</small></a>
-      <a href="/casino/7k"><b>7K Casino</b><small>быстрые выплаты · 9.3</small></a>
-      <a href="/casino/pokerdom"><b>PokerDom</b><small>покер и слоты · 9.2</small></a>
-      <a href="/casino/sol"><b>Sol Casino</b><small>ассортимент игр · 9.0</small></a>
-      <a href="/casino/kent"><b>Kent Casino</b><small>старт новичка · 8.9</small></a>
-      <a href="/casino/starda"><b>Starda</b><small>турниры и live · 8.8</small></a>
-      <a href="/casino/monro"><b>Monro</b><small>программа лояльности · 8.7</small></a>
-    </div>
+    <p class="reveal">Разбор каждой площадки из топа отдельно: лицензия по номеру, замеры выводов, вейджер, каталог и живые минусы. При каждом обновлении — случайная тройка обзоров из пула:</p>
+    <div class="brandlinks reveal" id="brandlinks" data-render="brands"></div>
+    <noscript>
+      <div class="brandlinks">
+        <a href="/casino/vavada"><b>Vavada</b><small>№1 · надёжность · 9.7</small></a>
+        <a href="/casino/1win"><b>1win</b><small>казино + ставки · 9.5</small></a>
+        <a href="/casino/7k"><b>7K Casino</b><small>быстрые выплаты · 9.3</small></a>
+        <a href="/casino/pokerdom"><b>PokerDom</b><small>покер и слоты · 9.2</small></a>
+        <a href="/casino/sol"><b>Sol Casino</b><small>ассортимент игр · 9.0</small></a>
+        <a href="/casino/kent"><b>Kent Casino</b><small>старт новичка · 8.9</small></a>
+        <a href="/casino/starda"><b>Starda</b><small>турниры и live · 8.8</small></a>
+        <a href="/casino/monro"><b>Monro</b><small>лояльность · 8.7</small></a>
+        <a href="/casino/izzi"><b>Izzi</b><small>простой интерфейс · 8.6</small></a>
+        <a href="/casino/legzo"><b>Legzo</b><small>мобильная версия · 8.5</small></a>
+        <a href="/casino/joycasino"><b>JoyCasino</b><small>стаж на рынке · 8.4</small></a>
+        <a href="/casino/rox"><b>Rox</b><small>акции и промо · 8.3</small></a>
+        <a href="/casino/">Показать все обзоры →</a>
+      </div>
+    </noscript>
   </section>
 
   <!-- ===== interlinking: slots rating ===== -->
@@ -1376,16 +1405,28 @@
       <span class="kicker">Игры под лупой</span>
       <div class="h2v">Рейтинг слотов: <span class="hl gold">RTP и волатильность</span></div>
     </div>
-    <p class="reveal">Отдельный рейтинг автоматов с проверенной отдачей — по данным студий, а не витрины казино. Полная таблица — в разделе <a href="#slots">«Слоты и провайдеры»</a>.</p>
-    <div class="slotlinks reveal">
-      <a href="/slot/lightning-roulette"><b>Lightning Roulette</b><span class="rtp best">97,30%</span><span class="pill na">live</span></a>
-      <a href="/slot/big-bass-bonanza"><b>Big Bass Bonanza</b><span class="rtp best">96,71%</span><span class="pill mid">средняя</span></a>
-      <a href="/slot/razor-shark"><b>Razor Shark</b><span class="rtp">96,70%</span><span class="pill hi">высокая</span></a>
-      <a href="/slot/sweet-bonanza"><b>Sweet Bonanza</b><span class="rtp">96,51%</span><span class="pill hi">высокая</span></a>
-      <a href="/slot/gates-of-olympus"><b>Gates of Olympus</b><span class="rtp">96,50%</span><span class="pill hi">высокая</span></a>
-      <a href="/slot/wanted-dead-or-a-wild"><b>Wanted Dead or a Wild</b><span class="rtp">96,38%</span><span class="pill ext">экстрим</span></a>
-      <a href="/slot/starburst"><b>Starburst</b><span class="rtp">96,09%</span><span class="pill low">низкая</span></a>
-    </div>
+    <p class="reveal">Отдельный рейтинг автоматов с проверенной отдачей — по данным студий, а не витрины казино. Тройка слотов меняется при каждом обновлении; полная таблица — в разделе <a href="#slots">«Слоты и провайдеры»</a>.</p>
+    <div class="slotlinks reveal" id="slotlinks" data-render="slots"></div>
+    <noscript>
+      <div class="toplinks">
+        <a href="/slots/gates-of-olympus-1000">Gates of Olympus 1000 — RTP 96,5% (высокая)</a>
+        <a href="/slots/sweet-bonanza-candyland">Sweet Bonanza CandyLand — RTP 96,48% (live)</a>
+        <a href="/slots/sugar-rush-1000">Sugar Rush 1000 — RTP 96,5% (высокая)</a>
+        <a href="/slots/the-dog-house-megaways-1000">The Dog House Megaways 1000 — RTP 96,55% (высокая)</a>
+        <a href="/slots/big-bass-bonanza-1000">Big Bass Bonanza 1000 — RTP 96,71% (высокая)</a>
+        <a href="/slots/book-of-1win">Book Of 1win — RTP 96,0% (высокая)</a>
+        <a href="/slots/lucky-jet">Lucky Jet — RTP 97,0% (краш)</a>
+        <a href="/slots/rocket-queen">Rocket Queen — RTP 97,0% (краш)</a>
+        <a href="/slots/zeus-vs-hades-gods-of-war-250">Zeus vs Hades – Gods of War 250 — RTP 96,07% (высокая)</a>
+        <a href="/slots/dragon-hatch-2">Dragon Hatch 2 — RTP 96,7% (высокая)</a>
+        <a href="/slots/aztec-fire-2">Aztec Fire 2 — RTP 95,6% (высокая)</a>
+        <a href="/slots/joker-stoker">Joker Stoker — RTP 96,0% (средняя)</a>
+        <a href="/slots/crazy-time">Crazy Time — RTP 95,5% (live)</a>
+        <a href="/slots/coin-up-hot-fire">Coin UP : Hot Fire — RTP 95,9% (высокая)</a>
+        <a href="/slots/3-coin-volcanoes">3 Coin Volcanoes — RTP 95,7% (высокая)</a>
+        <a href="/slots">Показать все слоты →</a>
+      </div>
+    </noscript>
     <div class="toplinks reveal" style="margin-top:14px">
       <a href="/slots">Весь рейтинг слотов →</a>
       <a href="/avtomaty">Игровые автоматы</a>
@@ -1482,6 +1523,79 @@
       a.style.setProperty('--mx', (e.clientX-r.left)+'px');
     });
   });
+})();
+</script>
+
+<script>
+/* Data-driven random interlinks — extend the pools below to add items */
+(function(){
+  var brands=[
+    {n:'Vavada',s:'vavada',sc:'9.7',d:'№1 · надёжность',c:'#ffcf3f',c2:'#e0952f'},
+    {n:'1win',s:'1win',sc:'9.5',d:'казино + ставки',c:'#e6eaf3',c2:'#a9b1c6'},
+    {n:'7K Casino',s:'7k',sc:'9.3',d:'быстрые выплаты',c:'#eaa96f',c2:'#b06d34'},
+    {n:'PokerDom',s:'pokerdom',sc:'9.2',d:'покер и слоты',c:'#37e0c8',c2:'#12a892'},
+    {n:'Sol Casino',s:'sol',sc:'9.0',d:'ассортимент игр',c:'#ffa63d',c2:'#e07a12'},
+    {n:'Kent Casino',s:'kent',sc:'8.9',d:'старт новичка',c:'#c78bff',c2:'#8a4fe0'},
+    {n:'Starda',s:'starda',sc:'8.8',d:'турниры и live',c:'#6cc4ff',c2:'#2a86e0'},
+    {n:'Monro',s:'monro',sc:'8.7',d:'лояльность',c:'#ff2e93',c2:'#c81f6f'},
+    {n:'Izzi',s:'izzi',sc:'8.6',d:'простой интерфейс',c:'#c8ff5a',c2:'#8fd400'},
+    {n:'Legzo',s:'legzo',sc:'8.5',d:'мобильная версия',c:'#b8ff2b',c2:'#5fbf00'},
+    {n:'JoyCasino',s:'joycasino',sc:'8.4',d:'стаж на рынке',c:'#37e0c8',c2:'#12a892'},
+    {n:'Rox',s:'rox',sc:'8.3',d:'акции и промо',c:'#ffa63d',c2:'#e07a12'}
+  ];
+  var slots=[
+    {n:'Gates of Olympus 1000',p:'Pragmatic Play',href:'/slots/gates-of-olympus-1000',rtp:'96.5',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png'},
+    {n:'Sweet Bonanza CandyLand',p:'Pragmatic Play Live',href:'/slots/sweet-bonanza-candyland',rtp:'96.48',v:'средняя',kind:'live',img:'https://v1.bundlecdn.com/casino-images/v/6e7fded2-3230-4cce-9d7a-2ddf32e6ac33_vertical.png'},
+    {n:'Sugar Rush 1000',p:'Pragmatic Play',href:'/slots/sugar-rush-1000',rtp:'96.5',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/477573a4-06c2-4ecc-9f1e-d485da524241_vertical.png'},
+    {n:'The Dog House Megaways 1000',p:'Pragmatic Play',href:'/slots/the-dog-house-megaways-1000',rtp:'96.55',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/4b19a8c4-5deb-4b2b-8af0-2f54ff6e891e_vertical.png'},
+    {n:'Big Bass Bonanza 1000',p:'Pragmatic Play',href:'/slots/big-bass-bonanza-1000',rtp:'96.71',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/44edf132-1243-464f-8fb5-c1c2362f35ab_vertical.png'},
+    {n:'Book Of 1win',p:'Spinomenal',href:'/slots/book-of-1win',rtp:'96.0',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/f4f75cab-da7d-4003-b5eb-d25110e0c45d_vertical.png'},
+    {n:'Lucky Jet',p:'1win Games',href:'/slots/lucky-jet',rtp:'97.0',v:'средняя',kind:'краш',img:'https://v1.bundlecdn.com/casino-images/v/15104946-3407-452c-be6a-9c7f5110994d_vertical.png'},
+    {n:'Rocket Queen',p:'1win Games',href:'/slots/rocket-queen',rtp:'97.0',v:'средняя',kind:'краш',img:'https://v1.bundlecdn.com/casino-images/v/86489246-a24c-4f71-88ec-9f2a4cfcd6d6_vertical.png'},
+    {n:'Zeus vs Hades – Gods of War 250',p:'Pragmatic Play',href:'/slots/zeus-vs-hades-gods-of-war-250',rtp:'96.07',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/1adec641-8639-4d20-81cb-285b8ca51fc3_vertical.png'},
+    {n:'Dragon Hatch 2',p:'PG SOFT',href:'/slots/dragon-hatch-2',rtp:'96.7',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/1694c3ef-30c3-4817-b4eb-0fc6f785a82a_vertical.jpg'},
+    {n:'Aztec Fire 2',p:'3 Oaks Gaming',href:'/slots/aztec-fire-2',rtp:'95.6',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/8c507a92-d77f-4644-b837-f06b6b603ede_vertical.png'},
+    {n:'Joker Stoker',p:'Endorphina',href:'/slots/joker-stoker',rtp:'96.0',v:'средняя',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/ec197517-e04e-4a00-84f4-e8129306bc6b_vertical.png'},
+    {n:'Crazy Time',p:'Evolution',href:'/slots/crazy-time',rtp:'95.5',v:'средняя',kind:'live',img:'https://v1.bundlecdn.com/casino-images/v/9ea794e4-af4d-439a-9c8a-849d0ed77818_vertical.png'},
+    {n:'Coin UP : Hot Fire',p:'3 Oaks Gaming',href:'/slots/coin-up-hot-fire',rtp:'95.9',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/cccdb4a9-cca9-40bd-bf42-0e542473e9d4_vertical.png'},
+    {n:'3 Coin Volcanoes',p:'3 Oaks Gaming',href:'/slots/3-coin-volcanoes',rtp:'95.7',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/ec3e518c-aff1-4582-ac54-c3fcc3d83114_vertical.png'}
+  ];
+  var vmap={'высокая':'ext','средняя':'mid','низкая':'low'};
+  var phc=[['#b8ff2b','#5fbf00'],['#37e0c8','#12a892'],['#ff2e93','#c81f6f'],['#ffa63d','#e07a12'],['#c78bff','#8a4fe0'],['#ffcf3f','#e0952f'],['#6cc4ff','#2a86e0']];
+  function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function pick(a,n){return shuffle(a.slice()).slice(0,n);}
+  function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  var bEl=document.getElementById('brandlinks');
+  if(bEl){
+    var h='';
+    pick(brands,3).forEach(function(b){
+      h+='<a href="/casino/'+b.s+'" style="--tc:'+b.c+';--tc2:'+b.c2+'"><b>'+esc(b.n)+'</b><small>'+esc(b.d)+' · '+b.sc+'</small></a>';
+    });
+    h+='<a class="all-card" href="/casino/"><b>Показать все</b><small>→ '+brands.length+' обзоров</small></a>';
+    bEl.innerHTML=h;
+  }
+  var sEl=document.getElementById('slotlinks');
+  if(sEl){
+    var hs='';
+    pick(slots,3).forEach(function(s,i){
+      var pc=phc[i%phc.length];
+      var kind=(s.kind==='краш')?'<span class="kind crash">краш</span>':(s.kind==='live')?'<span class="kind live">live</span>':'';
+      var vol=vmap[s.v]||'mid';
+      var rtp=String(s.rtp).replace('.',',');
+      hs+='<a href="'+s.href+'">'
+        +'<span class="cover">'
+        +'<img loading="lazy" src="'+s.img+'" alt="'+esc(s.n)+' — обложка слота" '
+        +'onerror="this.onerror=null;this.style.display=\'none\';this.nextElementSibling.style.display=\'grid\'">'
+        +'<span class="ph" style="display:none;--pc:'+pc[0]+';--pc2:'+pc[1]+'">'+esc(s.n.charAt(0))+'</span>'
+        +kind
+        +'</span>'
+        +'<span class="meta"><span class="sn">'+esc(s.n)+'</span><span class="sp">'+esc(s.p)+'</span>'
+        +'<span class="pills"><span class="rtpp">RTP '+rtp+'%</span><span class="pill '+vol+'">'+esc(s.v)+'</span></span></span>'
+      +'</a>';
+    });
+    hs+='<a class="all-card" href="/slots"><b>Показать все</b><span class="allcount">→ '+slots.length+' слотов</span></a>';
+    sEl.innerHTML=hs;
+  }
 })();
 </script>
 
