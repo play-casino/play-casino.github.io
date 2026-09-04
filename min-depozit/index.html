@@ -83,8 +83,16 @@
   :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
 
   .md-shell{max-width:var(--w);margin:0 auto;padding:0 22px}
-  .md-kick{display:inline-flex;align-items:center;gap:.5em;font-size:11.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
-  .md-kick::before{content:"₽";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:6px;background:rgba(255,207,63,.15);border:1px solid rgba(255,207,63,.35);font-size:11px}
+  .md-kick{display:inline-flex;align-items:center;gap:.5em;font-size:11.5px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--kc,var(--gold))}
+  .md-kick::before{content:"₽";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:6px;background:color-mix(in srgb,var(--kc,var(--gold)) 16%,transparent);border:1px solid color-mix(in srgb,var(--kc,var(--gold)) 38%,transparent);color:var(--kc,var(--gold));font-size:11px}
+  /* even color distribution across sections — no dominant hue */
+  main .md-shell>section:nth-of-type(7n+1){--kc:var(--gold)}
+  main .md-shell>section:nth-of-type(7n+2){--kc:var(--neon)}
+  main .md-shell>section:nth-of-type(7n+3){--kc:var(--hot)}
+  main .md-shell>section:nth-of-type(7n+4){--kc:var(--cyan)}
+  main .md-shell>section:nth-of-type(7n+5){--kc:var(--sky)}
+  main .md-shell>section:nth-of-type(7n+6){--kc:var(--viol)}
+  main .md-shell>section:nth-of-type(7n+7){--kc:#c8ff5a}
 
   /* ---------- header ---------- */
   .md-head{
@@ -120,6 +128,7 @@
   .g-cyan{background:linear-gradient(105deg,var(--cyan),#12a892);-webkit-background-clip:text;background-clip:text;color:transparent}
   .g-sky{background:linear-gradient(105deg,var(--sky),#2a86e0);-webkit-background-clip:text;background-clip:text;color:transparent}
   .g-viol{background:linear-gradient(105deg,var(--viol),#7d4fd6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .g-lime{background:linear-gradient(105deg,#c8ff5a,#8fd400);-webkit-background-clip:text;background-clip:text;color:transparent}
   .hl-neon{color:var(--neon);font-weight:700}
   .hl-hot{color:var(--hot);font-weight:700}
   .hl-gold{color:var(--gold);font-weight:700}
@@ -181,9 +190,14 @@
   .md-ladder{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 20px}
   .md-ladder .step{position:relative;flex:1 1 auto;min-width:96px;padding:12px 14px;border-radius:14px;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);transition:transform .22s,border-color .22s,box-shadow .22s}
   .md-ladder .step:hover{transform:translateY(-3px);border-color:var(--gold);box-shadow:0 16px 34px -18px rgba(255,207,63,.6)}
-  .md-ladder .step .amt{font-family:"Unbounded",sans-serif;font-weight:900;font-size:20px;line-height:1;background:var(--g-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .md-ladder .step{--lc:var(--gold);--lc2:#e0952f}
+  .md-ladder .step:nth-child(2){--lc:var(--neon);--lc2:var(--neon-d)}
+  .md-ladder .step:nth-child(3){--lc:var(--cyan);--lc2:#12a892}
+  .md-ladder .step:nth-child(4){--lc:var(--hot);--lc2:#c81f6f}
+  .md-ladder .step .amt{font-family:"Unbounded",sans-serif;font-weight:900;font-size:20px;line-height:1;background:linear-gradient(105deg,var(--lc),var(--lc2));-webkit-background-clip:text;background-clip:text;color:transparent}
   .md-ladder .step small{display:block;color:var(--mu);font-size:11px;margin-top:5px}
-  .md-ladder .step.best{border-color:rgba(255,207,63,.45);background:linear-gradient(150deg,rgba(255,207,63,.14),var(--pan))}
+  .md-ladder .step:hover{border-color:var(--lc);box-shadow:0 16px 34px -18px color-mix(in srgb,var(--lc) 65%,#000)}
+  .md-ladder .step.best{border-color:color-mix(in srgb,var(--lc) 45%,var(--hair));background:linear-gradient(150deg,color-mix(in srgb,var(--lc) 14%,transparent),var(--pan))}
 
   .md-byl{display:flex;flex-wrap:wrap;gap:8px 12px;font-size:12.5px;color:var(--mu);margin:0}
   .md-byl span{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;background:var(--pan);border:1px solid var(--hair);border-radius:999px}
@@ -417,7 +431,17 @@
   .md-log b{color:var(--gold)}
 
   /* ---------- team ---------- */
-  .md-team{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin:18px 0}
+  .md-team{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin:18px 0}
+  .md-team .md-mem{grid-column:span 2}
+  .md-team .md-mem:nth-child(4),.md-team .md-mem:nth-child(5){grid-column:span 3}
+  @media(max-width:900px){
+    .md-team .md-mem{grid-column:span 3}
+    .md-team .md-mem:nth-child(4){grid-column:span 3}
+    .md-team .md-mem:nth-child(5){grid-column:span 6}
+  }
+  @media(max-width:560px){
+    .md-team .md-mem,.md-team .md-mem:nth-child(4),.md-team .md-mem:nth-child(5){grid-column:span 6}
+  }
   .md-mem{position:relative;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);border-radius:var(--r);padding:20px;overflow:hidden;transition:transform .25s,border-color .25s}
   .md-mem:hover{transform:translateY(-3px);border-color:var(--hair2)}
   .md-mem .wm{position:absolute;right:10px;bottom:-24px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:100px;line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);opacity:.5;pointer-events:none;user-select:none}
@@ -619,7 +643,7 @@
   <section class="md-sect" id="rating">
     <div class="md-sh rv">
       <span class="md-kick">Топ-10 · сентябрь 2026</span>
-      <h2>Рейтинг казино с низким депозитом 2026: <span class="g-gold">топ-10 по реальному порогу входа</span></h2>
+      <h2>Рейтинг казино с низким депозитом 2026: <span class="g-lime">топ-10 по реальному порогу входа</span></h2>
     </div>
     <p class="rv">Список отранжирован по совокупной оценке, но колонку с порогом мы вынесли на первый план — ради неё вы и открыли страницу. Цифра рядом с брендом — минимальный депозит, который реально прошёл через кассу. Оценка — средневзвешенный балл по семи критериям.</p>
 
@@ -861,7 +885,7 @@
   <section class="md-sect md-prose" id="sbp">
     <div class="md-sh rv">
       <span class="md-kick">Инструкция</span>
-      <h2>Пополнение от 50 ₽ через СБП: <span class="g-neon">как закинуть минималку</span></h2>
+      <h2>Пополнение от 50 ₽ через СБП: <span class="g-lime">как закинуть минималку</span></h2>
     </div>
     <p class="rv">СБП стал главным способом для маленьких депозитов — быстро, без карты и без комиссии. Разберём три сценария входа, которые редакция прошла сама.</p>
     <h3 class="rv h-neon">Через СБП по номеру телефона</h3>
@@ -935,7 +959,7 @@
   <section class="md-sect" id="bonus">
     <div class="md-sh rv">
       <span class="md-kick">Бонус с минималки</span>
-      <h2>Бонус на минимальный депозит: <span class="g-gold">что дают за 50–100 ₽</span></h2>
+      <h2>Бонус на минимальный депозит: <span class="g-viol">что дают за 50–100 ₽</span></h2>
     </div>
     <p class="rv">Главный подвох минималки — бонус стартует не всегда. Многие площадки активируют приветственный пакет от 300–500 ₽, а со 100 ₽ дают только фриспины или ничего. Ниже — от какой суммы включается бонус у топ-площадок и на каких условиях.</p>
     <div class="md-tbox md-scroll rv" style="margin:16px 0">
@@ -957,7 +981,7 @@
   <section class="md-sect" id="wager">
     <div class="md-sh rv">
       <span class="md-kick">Отыгрыш</span>
-      <h2>Вейджер на минималке: <span class="g-viol">сколько реально прокрутить</span></h2>
+      <h2>Вейджер на минималке: <span class="g-lime">сколько реально прокрутить</span></h2>
     </div>
     <div class="md-cols">
       <div class="md-c-txt md-prose rv">
@@ -1086,7 +1110,7 @@
   <section class="md-sect md-prose" id="nopassport">
     <div class="md-sh rv">
       <span class="md-kick">Без паспорта и с телефона</span>
-      <h2>Казино с минимальным депозитом <span class="g-neon">без паспорта и с телефона</span></h2>
+      <h2>Казино с минимальным депозитом <span class="g-lime">без паспорта и с телефона</span></h2>
     </div>
     <p class="rv">Два частых запроса под минималку — «без верификации» и «с телефона». Разберём честно, без обещаний.</p>
     <h3 class="rv h-neon">Депозит и игра без паспорта</h3>
@@ -1109,7 +1133,7 @@
   <section class="md-sect" id="cases">
     <div class="md-sh rv">
       <span class="md-kick">Замеры</span>
-      <h2>Реальные кейсы: <span class="g-hot">заносы с минимального депозита</span></h2>
+      <h2>Реальные кейсы: <span class="g-gold">заносы с минимального депозита</span></h2>
     </div>
     <p class="rv">Ниже — типичные сценарии по нашим тестовым депозитам от 50 до 300 ₽. Суммы и сроки — реальные замеры редакции PlayCasino на верифицированных аккаунтах, а не заверенные показания игроков. Это про то, что реально бывает с маленького входа — включая проигрыш.</p>
     <div class="md-tbox md-scroll rv" style="margin:16px 0">
@@ -1194,7 +1218,7 @@
   <section class="md-sect" id="faq">
     <div class="md-sh rv">
       <span class="md-kick">Коротко и по делу</span>
-      <h2>Частые вопросы <span class="g-gold">о казино с минимальным депозитом</span></h2>
+      <h2>Частые вопросы <span class="g-sky">о казино с минимальным депозитом</span></h2>
     </div>
 
     <details open class="rv"><summary><span class="ic">+</span>Какой минимальный депозит в казино в 2026 году?</summary><div class="bd"><div><p>Самый низкий рабочий порог редакция подтвердила у PokerDom — 50 ₽. У большинства площадок топа минимальный депозит 100 ₽, у отдельных касс — 150–300 ₽. Через СБП вход дешевле всего, через карту Visa порог выше.</p></div></div></details>
@@ -1297,7 +1321,7 @@
   <section class="md-sect" id="trust">
     <div class="md-sh rv">
       <span class="md-kick">Доверие в цифрах</span>
-      <div class="md-h2v">Почему нам можно <span class="g-neon">доверять</span></div>
+      <div class="md-h2v">Почему нам можно <span class="g-sky">доверять</span></div>
     </div>
     <div class="md-stats">
       <div class="st rv"><div class="n" data-count="10">10</div><div class="l">казино в рейтинге</div></div>
