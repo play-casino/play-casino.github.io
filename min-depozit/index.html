@@ -26,73 +26,258 @@
 <meta name="twitter:title" content="Казино с минимальным депозитом 2026 — рейтинг по реальному порогу входа">
 <meta name="twitter:description" content="Реальный порог от 50 ₽, СБП/Мир/крипта, бонус с минималки и вывод. Проверено кассой 9 площадок.">
 <meta name="twitter:image" content="https://rejting-kazino777.top/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b1220;--bg2:#0d1830;--card:#111c31;--card2:#0d192c;--line:#243b5e;--ink:#e8eefb;--mut:#90a2c2;--acc:#ffcf3f;--acc2:#ffb01f;--go:#25c77a;--go2:#12a75f;--red:#ff5a78}
+:root{
+  --bg:#0a0b12;--surf:#12131d;--surf2:#171a29;--line:rgba(255,255,255,.06);--line2:rgba(255,255,255,.1);
+  --g1:#f5c451;--g2:#e0952f;--vio:#7c5cff;--ok:#35d07f;--bad:#ff5470;
+  --ink:#eef0f7;--mut:#9aa0b5;
+  --gold:linear-gradient(135deg,var(--g1),var(--g2));
+  --radius:16px;--shadow:0 24px 60px -20px rgba(0,0,0,.7);
+}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(1200px 600px at 50% -160px,#16264a 0%,var(--bg) 60%) no-repeat,var(--bg);color:var(--ink);font:16px/1.65 -apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.68 "Manrope",-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased}
+/* subtle page ambience */
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(900px 500px at 12% -6%,rgba(124,92,255,.14),transparent 60%),
+    radial-gradient(1000px 560px at 92% 2%,rgba(245,196,81,.10),transparent 60%),
+    radial-gradient(800px 800px at 50% 120%,rgba(53,208,127,.06),transparent 60%)}
 a{color:inherit}
 img{max-width:100%}
-.rk-w{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:"Sora","Manrope",sans-serif;letter-spacing:-.02em}
+.rk-w{max-width:1080px;margin:0 auto;padding:0 18px}
+
 /* header */
-.rk-top{position:sticky;top:0;z-index:20;background:rgba(11,18,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.rk-top .rk-w{display:flex;align-items:center;gap:12px;min-height:56px;flex-wrap:wrap}.rk-logo{font-weight:900;color:var(--acc);text-decoration:none;font-size:19px;letter-spacing:-.02em}.rk-logo span{color:var(--ink)}.rk-nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;font-size:13px}.rk-nav a{color:var(--mut);text-decoration:none;padding:6px 10px;border-radius:8px}.rk-nav a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
-.rk-bc{font-size:13px;color:var(--mut);padding:14px 0}.rk-bc a{color:var(--mut);text-decoration:none}.rk-bc a:hover{color:var(--acc)}
+.rk-top{position:sticky;top:0;z-index:40;background:rgba(10,11,18,.55);
+  backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--line);
+  transition:background .35s ease,box-shadow .35s ease,border-color .35s ease}
+.rk-top.scrolled{background:rgba(10,11,18,.9);box-shadow:0 10px 34px -12px rgba(0,0,0,.8);border-color:var(--line2)}
+.rk-top .rk-w{display:flex;align-items:center;gap:12px;min-height:62px;flex-wrap:wrap}
+.rk-logo{font-family:"Unbounded",sans-serif;font-weight:800;font-size:20px;letter-spacing:-.03em;
+  text-decoration:none;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rk-logo span{color:var(--ink);-webkit-text-fill-color:var(--ink)}
+.rk-nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap;font-size:13px}
+.rk-nav a{color:var(--mut);text-decoration:none;padding:7px 12px;border-radius:10px;transition:.2s;font-weight:600}
+.rk-nav a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.rk-nav a.on{color:#0c0a04;background:var(--gold)}
+
+.rk-bc{font-size:13px;color:var(--mut);padding:18px 0 6px}
+.rk-bc a{color:var(--mut);text-decoration:none}.rk-bc a:hover{color:var(--g1)}
+
 /* hero */
-.rk-hero{border:1px solid var(--line);background:linear-gradient(160deg,#14213f 0%,var(--card) 70%);border-radius:20px;padding:26px 26px 22px;margin:6px 0 8px;position:relative;overflow:hidden}
-.rk-hero:before{content:"";position:absolute;right:-80px;top:-80px;width:260px;height:260px;background:radial-gradient(circle,rgba(255,207,63,.18),transparent 70%);pointer-events:none}
-.rk-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:#04240f;background:linear-gradient(135deg,var(--acc),var(--acc2));padding:5px 11px;border-radius:999px}
-h1{font-size:33px;line-height:1.12;margin:14px 0 12px;text-wrap:balance;letter-spacing:-.02em}
-.rk-ans{font-size:18px;color:#eef3ff;background:linear-gradient(100deg,rgba(37,199,122,.10),rgba(255,207,63,.06));border:1px solid rgba(255,207,63,.28);border-left:4px solid var(--acc);border-radius:12px;padding:15px 18px;margin:6px 0 16px}
-.rk-auth{display:flex;align-items:center;gap:11px;color:var(--mut);font-size:14px;margin:12px 0 4px}.rk-auth b{color:var(--ink)}.rk-ava{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3a5a9f,#25c77a);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex:0 0 auto}.rk-auth .rk-v{color:var(--go);font-weight:700}
-.rk-chips{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0 2px}.rk-chip{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:9px 13px;font-size:13px;display:flex;align-items:center;gap:8px}.rk-chip b{color:var(--go)}.rk-chip i{font-style:normal;font-size:15px}
-/* eyebrow section label with icon */
-.rk-k{display:flex;align-items:center;gap:9px;color:var(--acc);font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;margin-top:34px}
-.rk-k .ic{width:24px;height:24px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;background:rgba(255,207,63,.12);border:1px solid rgba(255,207,63,.3);border-radius:7px;font-size:13px}
-h2{font-size:23px;margin:12px 0 12px;line-height:1.24;letter-spacing:-.01em}
-h3{line-height:1.25}
+.rk-hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:26px;
+  padding:34px 34px 30px;margin:8px 0 12px;background:
+    linear-gradient(165deg,rgba(124,92,255,.10),transparent 55%),
+    linear-gradient(180deg,var(--surf2),var(--surf));
+  box-shadow:var(--shadow)}
+.rk-aurora{position:absolute;inset:-40%;z-index:0;pointer-events:none;filter:blur(60px);opacity:.9;
+  background:
+    radial-gradient(closest-side,rgba(245,196,81,.5),transparent 70%) 20% 30%/45% 45% no-repeat,
+    radial-gradient(closest-side,rgba(124,92,255,.5),transparent 70%) 80% 25%/50% 50% no-repeat,
+    radial-gradient(closest-side,rgba(53,208,127,.32),transparent 70%) 60% 85%/45% 45% no-repeat;
+  animation:aurora 18s ease-in-out infinite alternate}
+.rk-hero>*{position:relative;z-index:1}
+@keyframes aurora{
+  0%{transform:translate3d(0,0,0) scale(1)}
+  50%{transform:translate3d(3%,2%,0) scale(1.08)}
+  100%{transform:translate3d(-3%,-2%,0) scale(1.04)}}
+.hu{opacity:0;transform:translateY(18px);animation:heroUp .8s cubic-bezier(.2,.75,.2,1) forwards;animation-delay:var(--d,0s)}
+@keyframes heroUp{to{opacity:1;transform:none}}
+.rk-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:800;color:#1c1403;background:var(--gold);padding:6px 13px;border-radius:999px;
+  box-shadow:0 8px 24px -8px rgba(245,196,81,.6)}
+h1{font-size:clamp(28px,4.6vw,44px);line-height:1.08;margin:18px 0 14px;text-wrap:balance;font-weight:800}
+.rk-ans{font-size:18px;line-height:1.6;color:#eef3ff;
+  background:linear-gradient(100deg,rgba(53,208,127,.10),rgba(245,196,81,.06));
+  border:1px solid rgba(245,196,81,.22);border-left:4px solid;border-image:var(--gold) 1;
+  border-radius:14px;padding:17px 20px;margin:8px 0 18px}
+.rk-auth{display:flex;align-items:center;gap:12px;color:var(--mut);font-size:14px;margin:14px 0 4px}
+.rk-auth b{color:var(--ink)}
+.rk-ava{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--vio),var(--ok));
+  display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;flex:0 0 auto;
+  font-family:"Sora";box-shadow:0 6px 18px -6px rgba(124,92,255,.7)}
+.rk-auth .rk-v{color:var(--ok);font-weight:700}
+.rk-chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 2px}
+.rk-chip{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:13px;padding:10px 14px;
+  font-size:13px;display:flex;align-items:center;gap:8px;transition:.25s;backdrop-filter:blur(6px)}
+.rk-chip:hover{border-color:var(--line2);transform:translateY(-2px)}
+.rk-chip b{color:var(--ok)}.rk-chip i{font-style:normal;font-size:16px}
+
+/* section label */
+.rk-k{display:flex;align-items:center;gap:11px;color:var(--g1);font-size:12px;letter-spacing:.16em;
+  text-transform:uppercase;font-weight:800;margin-top:46px;font-family:"Sora"}
+.rk-k .ic{width:30px;height:30px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(245,196,81,.1);border:1px solid rgba(245,196,81,.28);border-radius:9px;font-size:15px}
+h2{font-size:clamp(21px,3vw,28px);margin:14px 0 14px;line-height:1.22;font-weight:700}
+h3{line-height:1.25;font-weight:700}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
 /* table */
-.rk-tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.rk-tw{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:18px;
+  background:linear-gradient(180deg,var(--surf2),var(--surf));box-shadow:var(--shadow)}
 .rk-t{width:100%;border-collapse:collapse;min-width:760px}
-.rk-t th,.rk-t td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
-.rk-t thead th{color:var(--mut);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;background:var(--card2);position:sticky;top:0}
+.rk-t th,.rk-t td{padding:15px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
+.rk-t thead th{color:var(--mut);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  background:rgba(255,255,255,.02);position:sticky;top:0;backdrop-filter:blur(6px)}
+.rk-t tbody tr{transition:background .25s,box-shadow .25s,transform .25s}
 .rk-t tbody tr:last-child td{border-bottom:0}
-.rk-t tbody tr:hover td{background:rgba(255,255,255,.025)}
-.rk-t .rk-n{color:var(--acc);font-weight:900;font-size:15px}
-.rk-t .rk-sc{color:var(--acc);font-weight:800}
-.rk-t .rk-b{font-weight:800;font-size:15px}
-.rk-t .rk-b small{display:block;font-weight:500;color:var(--mut);font-size:11px}
-.rk-dep{color:var(--go);font-weight:800;white-space:nowrap;font-size:15px}
-.rk-go{background:linear-gradient(135deg,var(--go),var(--go2));color:#04240f;font-weight:800;text-decoration:none;padding:9px 18px;border-radius:9px;white-space:nowrap;display:inline-block;box-shadow:0 4px 14px rgba(37,199,122,.28)}
-.rk-go:hover{filter:brightness(1.06)}
-.rk-rev{color:var(--acc);text-decoration:none;font-weight:800;white-space:nowrap;font-size:13px}.rk-rev:hover{text-decoration:underline}
-.rk-note{font-size:12px;color:var(--mut);margin:6px 2px 0}
+.rk-t tbody tr:hover{background:rgba(255,255,255,.03)}
+.rk-t tbody tr:hover td{position:relative}
+.rk-t .rk-n{width:52px}
+.rk-t .rk-n b{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:11px;
+  font-family:"Sora";font-weight:800;font-size:15px;position:relative;
+  background:rgba(255,255,255,.05);border:1px solid var(--line2);color:var(--ink)}
+/* medals */
+.rk-t tbody tr:nth-child(1) .rk-n b{background:linear-gradient(135deg,#ffe082,#e0952f);color:#241701;border:0;
+  box-shadow:0 0 0 1px rgba(245,196,81,.6),0 0 26px rgba(245,196,81,.55);animation:medalGlow 2.6s ease-in-out infinite}
+.rk-t tbody tr:nth-child(2) .rk-n b{background:linear-gradient(135deg,#e9eef7,#aab4c6);color:#1a1e28;border:0}
+.rk-t tbody tr:nth-child(3) .rk-n b{background:linear-gradient(135deg,#f0b483,#c07b3f);color:#241301;border:0}
+.rk-t tbody tr:nth-child(-n+3) .rk-n b:after{position:absolute;top:-9px;right:-9px;font-size:14px;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.rk-t tbody tr:nth-child(1) .rk-n b:after{content:"🥇"}
+.rk-t tbody tr:nth-child(2) .rk-n b:after{content:"🥈"}
+.rk-t tbody tr:nth-child(3) .rk-n b:after{content:"🥉"}
+@keyframes medalGlow{50%{box-shadow:0 0 0 1px rgba(245,196,81,.8),0 0 34px rgba(245,196,81,.85)}}
+.rk-t tbody tr:nth-child(1){background:linear-gradient(90deg,rgba(245,196,81,.09),transparent 70%)}
+.rk-t .rk-sc{font-family:"Sora";font-weight:800;font-size:16px;
+  background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rk-t .rk-b{font-weight:700;font-size:15px}
+.rk-t .rk-b small{display:block;font-weight:500;color:var(--mut);font-size:11px;margin-top:2px}
+.rk-dep{display:inline-block;font-weight:800;white-space:nowrap;font-size:13px;padding:5px 11px;border-radius:999px;
+  color:var(--g1);background:rgba(245,196,81,.1);border:1px solid rgba(245,196,81,.32)}
+.rk-dep.is-low{color:var(--ok);background:rgba(53,208,127,.12);border-color:rgba(53,208,127,.36);
+  box-shadow:0 0 18px -6px rgba(53,208,127,.6)}
+.rk-go{position:relative;overflow:hidden;background:var(--gold);color:#1c1403;font-weight:800;text-decoration:none;
+  padding:10px 20px;border-radius:11px;white-space:nowrap;display:inline-block;
+  box-shadow:0 10px 26px -8px rgba(245,196,81,.6);transition:transform .2s,filter .2s}
+.rk-go:before{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;transform:skewX(-20deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent)}
+.rk-go:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.rk-go:hover:before{animation:shine .8s ease}
+@keyframes shine{from{left:-120%}to{left:160%}}
+.rk-rev{color:var(--g1);text-decoration:none;font-weight:800;white-space:nowrap;font-size:13px}
+.rk-rev:hover{text-decoration:underline}
+.rk-note{font-size:12px;color:var(--mut);margin:8px 2px 0}
+
 /* prose */
-.rk-prose{max-width:840px;color:#cfd9ee}.rk-prose p{margin:12px 0}.rk-prose a{color:var(--acc)}
+.rk-prose{max-width:860px;color:#c9d1e6}.rk-prose p{margin:13px 0}
+.rk-prose a{color:var(--g1);text-decoration:none;border-bottom:1px solid rgba(245,196,81,.4)}
+.rk-prose a:hover{border-color:var(--g1)}
+
 /* changelog */
-.rk-change{background:linear-gradient(160deg,#12233d,var(--card));border:1px solid var(--line);border-radius:14px;padding:16px 20px}.rk-change ul{margin:6px 0;padding-left:20px}.rk-change li{margin:8px 0;font-size:14px;color:#cfd9ee}.rk-change li b{color:var(--acc)}
+.rk-change{background:linear-gradient(160deg,rgba(124,92,255,.08),var(--surf));border:1px solid var(--line);
+  border-radius:18px;padding:8px 22px;box-shadow:var(--shadow)}
+.rk-change ul{margin:12px 0;padding:0;list-style:none}
+.rk-change li{margin:12px 0;font-size:14px;color:#c9d1e6;padding-left:26px;position:relative}
+.rk-change li:before{content:"";position:absolute;left:2px;top:8px;width:9px;height:9px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 12px rgba(245,196,81,.7)}
+.rk-change li b{color:var(--g1)}
+
 /* method */
-.rk-meth{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}.rk-meth ul{margin:8px 0;padding-left:0;list-style:none}.rk-meth li{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:9px 0;font-size:14px}.rk-meth li:last-child{border-bottom:0}.rk-meth li b{color:var(--acc);white-space:nowrap;font-size:15px}.rk-bar{flex:1;height:6px;border-radius:4px;background:var(--card2);margin:0 14px;overflow:hidden}.rk-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2))}.rk-ded{color:var(--mut);font-size:14px;margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}
+.rk-meth{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--line);
+  border-radius:18px;padding:20px 22px;box-shadow:var(--shadow)}
+.rk-meth ul{margin:8px 0;padding-left:0;list-style:none}
+.rk-meth li{display:flex;justify-content:space-between;gap:14px;align-items:center;
+  border-bottom:1px solid var(--line);padding:12px 0;font-size:14px}
+.rk-meth li:last-child{border-bottom:0}
+.rk-meth li b{font-family:"Sora";white-space:nowrap;font-size:15px;
+  background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rk-bar{flex:1;height:8px;border-radius:6px;background:rgba(255,255,255,.05);margin:0 16px;overflow:hidden}
+.rk-bar i{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--g2),var(--g1));
+  transition:width 1.3s cubic-bezier(.2,.7,.2,1)}
+.rk-meth.in .rk-bar i{width:var(--w)}
+.rk-ded{color:var(--mut);font-size:14px;margin-top:14px;border-top:1px dashed var(--line);padding-top:14px}
+
 /* reviews */
-.rk-rv{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:14px 0;position:relative}
-.rk-rv-h{display:flex;align-items:center;gap:11px;margin-bottom:6px}.rk-rv-h h3{margin:0;font-size:19px;flex:1}
-.rk-rank{width:34px;height:34px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#04240f;font-weight:900;font-size:15px}
-.rk-rv-r{color:var(--acc);font-weight:800;background:var(--card2);border:1px solid var(--line);padding:4px 10px;border-radius:999px;font-size:14px}
-.rk-rv p{color:#cfd9ee;margin:8px 0}
-.rk-pc{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0}.rk-pc>div{flex:1;min-width:230px;background:var(--card2);border:1px solid var(--line);border-radius:11px;padding:12px 14px}.rk-pc ul{margin:6px 0 2px;padding-left:18px;font-size:14px}.rk-pc li{margin:4px 0}.rk-pros b{color:var(--go)}.rk-cons b{color:var(--red)}
-.rk-qf{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}.rk-qf span{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 11px;font-size:13px;color:var(--mut)}.rk-qf span b{color:var(--ink);font-weight:700}
-.rk-rv-v{color:var(--mut);font-size:14px;margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.rk-rv-v a{color:var(--acc);font-weight:700}
+.rk-rv{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--surf2),var(--surf));
+  border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:16px 0;
+  transition:transform .3s,border-color .3s,box-shadow .3s}
+.rk-rv:hover{transform:translateY(-4px);border-color:var(--line2);box-shadow:var(--shadow)}
+.rk-rv-h{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.rk-rv-h h3{margin:0;font-size:20px;flex:1}
+.rk-rank{width:38px;height:38px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;border-radius:11px;
+  background:var(--gold);color:#1c1403;font-weight:800;font-size:16px;font-family:"Sora"}
+.rk-rv-r{font-family:"Sora";font-weight:800;background:rgba(245,196,81,.1);border:1px solid rgba(245,196,81,.3);
+  padding:5px 12px;border-radius:999px;font-size:14px;color:var(--g1)}
+.rk-rv p{color:#c9d1e6;margin:10px 0}
+.rk-pc{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0}
+.rk-pc>div{flex:1;min-width:240px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:13px;padding:13px 16px}
+.rk-pc>div>b{font-family:"Sora";font-size:13px;letter-spacing:.04em}
+.rk-pc ul{margin:8px 0 2px;padding-left:18px;font-size:14px}.rk-pc li{margin:5px 0}
+.rk-pros>b{color:var(--ok)}.rk-cons>b{color:var(--bad)}
+.rk-qf{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.rk-qf span{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-size:13px;color:var(--mut)}
+.rk-qf span b{color:var(--ink);font-weight:700}
+.rk-rv-v{color:var(--mut);font-size:14px;margin-top:14px;border-top:1px solid var(--line);padding-top:14px}
+.rk-rv-v a{color:var(--g1);font-weight:700;text-decoration:none}.rk-rv-v a:hover{text-decoration:underline}
+
 /* anti-top */
-.rk-anti{background:linear-gradient(160deg,#1c0e15,#160d14);border:1px solid rgba(255,90,120,.32);border-radius:14px;padding:16px 20px}.rk-anti ul{margin:6px 0;padding-left:0;list-style:none}.rk-anti li{margin:9px 0;font-size:14px;color:#f0d6dc;padding-left:26px;position:relative}.rk-anti li:before{content:"⚠";position:absolute;left:0;color:var(--red)}
+.rk-anti{background:linear-gradient(160deg,rgba(255,84,112,.1),rgba(22,13,20,.6));
+  border:1px solid rgba(255,84,112,.34);border-radius:18px;padding:8px 22px;box-shadow:0 24px 60px -24px rgba(255,84,112,.3)}
+.rk-anti ul{margin:12px 0;padding-left:0;list-style:none}
+.rk-anti li{margin:11px 0;font-size:14px;color:#f2d7dd;padding-left:30px;position:relative}
+.rk-anti li:before{content:"⚠";position:absolute;left:0;top:0;color:var(--bad)}
+
 /* faq */
-.rk-q{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:9px 0;padding:2px 16px}.rk-q summary{cursor:pointer;padding:13px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}.rk-q summary::-webkit-details-marker{display:none}.rk-q summary:after{content:"+";color:var(--acc);font-weight:900;font-size:20px;line-height:1}.rk-q[open] summary:after{content:"–"}.rk-q p{color:var(--mut);margin:0 0 14px}
+.rk-q{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--line);
+  border-radius:14px;margin:10px 0;padding:2px 18px;transition:border-color .3s}
+.rk-q[open]{border-color:rgba(245,196,81,.35)}
+.rk-q summary{cursor:pointer;padding:15px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;
+  gap:12px;align-items:center;font-family:"Sora";font-size:15px}
+.rk-q summary::-webkit-details-marker{display:none}
+.rk-q summary:after{content:"+";color:var(--g1);font-weight:800;font-size:22px;line-height:1;transition:transform .3s}
+.rk-q[open] summary:after{content:"–"}
+.rk-q p{color:var(--mut);margin:0 0 16px}
+.rk-q[open] p{animation:faqSlide .38s ease}
+@keyframes faqSlide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
 /* trust numbers */
-.rk-num{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0}.rk-num div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-align:center}.rk-num b{display:block;font-size:24px;color:var(--acc);font-weight:900}.rk-num span{font-size:12px;color:var(--mut)}
+.rk-num{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:14px 0}
+.rk-num div{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--line);
+  border-radius:16px;padding:18px 16px;text-align:center;transition:transform .3s,border-color .3s}
+.rk-num div:hover{transform:translateY(-3px);border-color:var(--line2)}
+.rk-num b{display:block;font-size:28px;font-family:"Sora";font-weight:800;
+  background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rk-num span{font-size:12px;color:var(--mut)}
+
 /* links */
-.rk-links{display:flex;flex-wrap:wrap;gap:9px}.rk-links a{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;text-decoration:none;font-size:14px;display:flex;align-items:center;gap:8px}.rk-links a:hover{border-color:var(--acc);color:var(--acc)}
-.rk-ft{margin-top:44px;border-top:1px solid var(--line);padding:22px 0;color:var(--mut);font-size:13px}.rk-ft .rk-w{display:flex;flex-direction:column;gap:8px}
-.rk-badge18{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:2px solid var(--red);color:var(--red);border-radius:50%;font-weight:900;font-size:12px;flex:0 0 auto}
+.rk-links{display:flex;flex-wrap:wrap;gap:10px}
+.rk-links a{background:linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--line);
+  border-radius:12px;padding:11px 15px;text-decoration:none;font-size:14px;display:flex;align-items:center;gap:8px;
+  transition:.25s}
+.rk-links a:hover{border-color:rgba(245,196,81,.5);color:var(--g1);transform:translateY(-2px)}
+
+/* footer */
+.rk-ft{margin-top:56px;border-top:1px solid var(--line);padding:26px 0;color:var(--mut);font-size:13px}
+.rk-ft .rk-w{display:flex;flex-direction:column;gap:9px}
+.rk-badge18{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;
+  border:2px solid var(--bad);color:var(--bad);border-radius:50%;font-weight:900;font-size:12px;flex:0 0 auto}
+
+:focus-visible{outline:2px solid var(--g1);outline-offset:3px;border-radius:6px}
+
 @media(max-width:760px){.rk-num{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){h1{font-size:25px}.rk-ans{font-size:16px}h2{font-size:20px}.rk-hero{padding:20px 16px}.rk-nav{display:none}}
+@media(max-width:640px){
+  .rk-hero{padding:24px 18px;border-radius:20px}
+  .rk-ans{font-size:16px}
+  .rk-nav{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+  .hu{opacity:1;transform:none}
+  .rk-meth .rk-bar i{width:var(--w)}
+  .rk-aurora{opacity:.6}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -198,40 +383,41 @@ h3{line-height:1.25}
 </script>
 </head>
 <body>
-<header class="rk-top"><div class="rk-w"><a class="rk-logo" href="/">rejting<span>-kazino</span></a><nav class="rk-nav"><a href="/na-dengi/">Казино на деньги</a><a href="/bystryj-vyvod/">Быстрый вывод</a><a href="/min-depozit/">Мин. депозит</a><a href="/bezdepozit/">Бонусы</a><a href="/luchshie/">Лучшие</a></nav></div></header>
+<header class="rk-top"><div class="rk-w"><a class="rk-logo" href="/">rejting<span>-kazino</span></a><nav class="rk-nav"><a href="/na-dengi/">Казино на деньги</a><a href="/bystryj-vyvod/">Быстрый вывод</a><a class="on" href="/min-depozit/">Мин. депозит</a><a href="/bezdepozit/">Бонусы</a><a href="/luchshie/">Лучшие</a></nav></div></header>
 
 <main class="rk-w">
 <div class="rk-bc"><a href="/">Главная</a> › Минимальный депозит</div>
 
 <section class="rk-hero">
-<span class="rk-eyebrow">★ Рейтинг · сентябрь 2026</span>
-<h1>Казино с минимальным депозитом 2026</h1>
-<div class="rk-ans">Самый низкий реальный порог входа сейчас у 7K, Spinto и 1win — касса пропускает 50 ₽ через СБП без скрытых доплат, и на этот же взнос сразу включается бонус первого депозита. У Banda, Leebet, APEX, Vavada, Kent и Monro минимум вдвое выше — 100 ₽, тоже честно. Всё, что ниже «от 10 ₽», на практике упирается в лимит банка или платёжного метода, поэтому за рабочий минимум я считаю именно 50 ₽.</div>
-<div class="rk-auth"><span class="rk-ava">А</span><span><b>Артём Соколов</b> · автор рейтинга · обновлено 4 сентября 2026 · <span class="rk-v">проверено: сентябрь 2026</span> · выплаты проверял лично</span></div>
-<div class="rk-chips"><span class="rk-chip"><i>💰</i>Реальный порог <b>от 50 ₽</b></span><span class="rk-chip"><i>⚡</i>Пополнение <b>СБП · Мир · USDT</b></span><span class="rk-chip"><i>🎰</i>Мин. ставка в слоте <b>от 1 ₽</b></span><span class="rk-chip"><i>🔍</i>Проверено кассой <b>9 площадок</b></span></div>
+<div class="rk-aurora" aria-hidden="true"></div>
+<span class="rk-eyebrow hu" style="--d:.02s">★ Рейтинг · сентябрь 2026</span>
+<h1 class="hu" style="--d:.1s">Казино с минимальным депозитом 2026</h1>
+<div class="rk-ans hu" style="--d:.2s">Самый низкий реальный порог входа сейчас у 7K, Spinto и 1win — касса пропускает 50 ₽ через СБП без скрытых доплат, и на этот же взнос сразу включается бонус первого депозита. У Banda, Leebet, APEX, Vavada, Kent и Monro минимум вдвое выше — 100 ₽, тоже честно. Всё, что ниже «от 10 ₽», на практике упирается в лимит банка или платёжного метода, поэтому за рабочий минимум я считаю именно 50 ₽.</div>
+<div class="rk-auth hu" style="--d:.3s"><span class="rk-ava">А</span><span><b>Артём Соколов</b> · автор рейтинга · обновлено 4 сентября 2026 · <span class="rk-v">проверено: сентябрь 2026</span> · выплаты проверял лично</span></div>
+<div class="rk-chips hu" style="--d:.4s"><span class="rk-chip"><i>💰</i>Реальный порог <b>от 50 ₽</b></span><span class="rk-chip"><i>⚡</i>Пополнение <b>СБП · Мир · USDT</b></span><span class="rk-chip"><i>🎰</i>Мин. ставка в слоте <b>от 1 ₽</b></span><span class="rk-chip"><i>🔍</i>Проверено кассой <b>9 площадок</b></span></div>
 </section>
 
-<div class="rk-k"><span class="ic">🏆</span>Рейтинг</div>
-<h2>Топ казино с минимальным депозитом — сравнение по реальному порогу</h2>
-<div class="rk-tw"><table class="rk-t">
+<div class="rk-k reveal"><span class="ic">🏆</span>Рейтинг</div>
+<h2 class="reveal">Топ казино с минимальным депозитом — сравнение по реальному порогу</h2>
+<div class="rk-tw reveal"><table class="rk-t">
 <thead><tr><th>#</th><th>Казино</th><th>Оценка</th><th>Мин. депозит</th><th>Способы</th><th>Бонус</th><th></th></tr></thead>
 <tbody>
-<tr><td class="rk-n">1</td><td class="rk-b">7K Casino<small>Best for — вход рублём</small></td><td class="rk-sc">9.9</td><td class="rk-dep">от 50 ₽</td><td>СБП, Мир</td><td>225% + 200 FS</td><td><a class="rk-go" href="https://myslotdice.com/l/6a7373ab7da48e79330338a2?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
-<tr><td class="rk-n">2</td><td class="rk-b">Spinto<small>свежая площадка</small></td><td class="rk-sc">9.8</td><td class="rk-dep">от 50 ₽</td><td>СБП, USDT</td><td>200% + 150 FS</td><td><a class="rk-go" href="https://myslotdice.com/l/6a78ad0c4f78c2c48004d7f2?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
-<tr><td class="rk-n">3</td><td class="rk-b">1win<small>12 000+ игр</small></td><td class="rk-sc">9.7</td><td class="rk-dep">от 50 ₽</td><td>карта, крипта</td><td>500% до 200 000 ₽</td><td><a class="rk-go" href="https://lkgp.pro/509e2b?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
-<tr><td class="rk-n">4</td><td class="rk-b">Banda<small>500 фриспинов</small></td><td class="rk-sc">9.6</td><td class="rk-dep">от 100 ₽</td><td>карта, крипта</td><td>100% + 500 FS</td><td><a class="rk-go" href="https://joyous-bahd4-6.com/adplyqj9ug?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
-<tr><td class="rk-n">5</td><td class="rk-b">Leebet<small>заточен под USDT</small></td><td class="rk-sc">9.5</td><td class="rk-dep">от 100 ₽</td><td>USDT TRC-20</td><td>150% до 1000 USDT</td><td><a class="rk-go" href="https://play-leebet-4th.com/adtrq0e9mj?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
-<tr><td class="rk-n">6</td><td class="rk-b">APEX<small>самый крупный старт</small></td><td class="rk-sc">9.4</td><td class="rk-dep">от 100 ₽</td><td>СБП, крипта</td><td>375% + 225 FS</td><td><a class="rk-go" href="https://9reenhouse-7apeks.com/addfgxolo1?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
-<tr><td class="rk-n">7</td><td class="rk-b">Vavada<small>проверенный бренд</small></td><td class="rk-sc">9.3</td><td class="rk-dep">от 100 ₽</td><td>СБП, Мир</td><td>100% + 100 FS</td><td><a class="rk-rev" href="/casino/vavada/">Обзор →</a></td></tr>
-<tr><td class="rk-n">8</td><td class="rk-b">Kent<small>рубль + карта</small></td><td class="rk-sc">9.2</td><td class="rk-dep">от 100 ₽</td><td>СБП, карта</td><td>100% + 250 FS</td><td><a class="rk-rev" href="/casino/kent/">Обзор →</a></td></tr>
-<tr><td class="rk-n">9</td><td class="rk-b">Monro<small>СБП и крипта</small></td><td class="rk-sc">9.1</td><td class="rk-dep">от 100 ₽</td><td>СБП, крипта</td><td>150% + 150 FS</td><td><a class="rk-rev" href="/casino/monro/">Обзор →</a></td></tr>
+<tr><td class="rk-n"><b>1</b></td><td class="rk-b">7K Casino<small>Best for — вход рублём</small></td><td class="rk-sc">9.9</td><td><span class="rk-dep is-low">от 50 ₽</span></td><td>СБП, Мир</td><td>225% + 200 FS</td><td><a class="rk-go" href="https://myslotdice.com/l/6a7373ab7da48e79330338a2?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
+<tr><td class="rk-n"><b>2</b></td><td class="rk-b">Spinto<small>свежая площадка</small></td><td class="rk-sc">9.8</td><td><span class="rk-dep is-low">от 50 ₽</span></td><td>СБП, USDT</td><td>200% + 150 FS</td><td><a class="rk-go" href="https://myslotdice.com/l/6a78ad0c4f78c2c48004d7f2?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
+<tr><td class="rk-n"><b>3</b></td><td class="rk-b">1win<small>12 000+ игр</small></td><td class="rk-sc">9.7</td><td><span class="rk-dep is-low">от 50 ₽</span></td><td>карта, крипта</td><td>500% до 200 000 ₽</td><td><a class="rk-go" href="https://lkgp.pro/509e2b?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
+<tr><td class="rk-n"><b>4</b></td><td class="rk-b">Banda<small>500 фриспинов</small></td><td class="rk-sc">9.6</td><td><span class="rk-dep">от 100 ₽</span></td><td>карта, крипта</td><td>100% + 500 FS</td><td><a class="rk-go" href="https://joyous-bahd4-6.com/adplyqj9ug?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
+<tr><td class="rk-n"><b>5</b></td><td class="rk-b">Leebet<small>заточен под USDT</small></td><td class="rk-sc">9.5</td><td><span class="rk-dep">от 100 ₽</span></td><td>USDT TRC-20</td><td>150% до 1000 USDT</td><td><a class="rk-go" href="https://play-leebet-4th.com/adtrq0e9mj?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
+<tr><td class="rk-n"><b>6</b></td><td class="rk-b">APEX<small>самый крупный старт</small></td><td class="rk-sc">9.4</td><td><span class="rk-dep">от 100 ₽</span></td><td>СБП, крипта</td><td>375% + 225 FS</td><td><a class="rk-go" href="https://9reenhouse-7apeks.com/addfgxolo1?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">Играть</a></td></tr>
+<tr><td class="rk-n"><b>7</b></td><td class="rk-b">Vavada<small>проверенный бренд</small></td><td class="rk-sc">9.3</td><td><span class="rk-dep">от 100 ₽</span></td><td>СБП, Мир</td><td>100% + 100 FS</td><td><a class="rk-rev" href="/casino/vavada/">Обзор →</a></td></tr>
+<tr><td class="rk-n"><b>8</b></td><td class="rk-b">Kent<small>рубль + карта</small></td><td class="rk-sc">9.2</td><td><span class="rk-dep">от 100 ₽</span></td><td>СБП, карта</td><td>100% + 250 FS</td><td><a class="rk-rev" href="/casino/kent/">Обзор →</a></td></tr>
+<tr><td class="rk-n"><b>9</b></td><td class="rk-b">Monro<small>СБП и крипта</small></td><td class="rk-sc">9.1</td><td><span class="rk-dep">от 100 ₽</span></td><td>СБП, крипта</td><td>150% + 150 FS</td><td><a class="rk-rev" href="/casino/monro/">Обзор →</a></td></tr>
 </tbody>
 </table></div>
 <p class="rk-note">Мин. депозит — сумма из формы пополнения на сентябрь 2026, а не с баннера. Кнопка «Играть» ведёт на площадку по рекламной ссылке; «Обзор» — на разбор бренда внутри сайта.</p>
 
-<div class="rk-k"><span class="ic">🆕</span>Свежесть</div>
-<h2>Что изменилось в сентябре</h2>
-<div class="rk-change"><ul>
+<div class="rk-k reveal"><span class="ic">🆕</span>Свежесть</div>
+<h2 class="reveal">Что изменилось в сентябре</h2>
+<div class="rk-change reveal"><ul>
 <li><b>7K</b> снова подтвердил приём ровно 50 ₽ через СБП без доплат — оставил на первом месте.</li>
 <li><b>Spinto</b> ускорил вывод USDT примерно до 40 минут; порог входа держится на 50 ₽.</li>
 <li><b>APEX</b> поднял стартовый процент до 375% + 225 FS — самый щедрый старт в подборке при пороге 100 ₽.</li>
@@ -239,152 +425,152 @@ h3{line-height:1.25}
 <li>Перепроверил «депозит от 10 ₽» на витринах: у трёх сторонних касс форма пополнения не пропустила сумму ниже 100–300 ₽ — в топ не попали.</li>
 </ul></div>
 
-<div class="rk-k"><span class="ic">📊</span>Методика</div>
-<h2>Как я оцениваю казино с минимальным депозитом</h2>
-<p class="rk-prose">Оценку для этой страницы я строил не вокруг красивого числа на витрине, а вокруг того, что реально принимает касса. Каждую площадку пополнял сам минимальной суммой и смотрел: ляжет ли она на баланс без скрытой доплаты, включится ли на неё бонус и удастся ли вывести остаток обратно. Веса смещены к порогу входа, а не к общей витрине.</p>
-<div class="rk-meth"><ul>
-<li><span>Реальный порог в кассе</span><span class="rk-bar"><i style="width:100%"></i></span><b>30%</b></li>
-<li><span>Бонус доступен с минималки</span><span class="rk-bar"><i style="width:67%"></i></span><b>20%</b></li>
-<li><span>Методы на малую сумму (СБП/Мир)</span><span class="rk-bar"><i style="width:67%"></i></span><b>20%</b></li>
-<li><span>Вывод малых сумм и лимит</span><span class="rk-bar"><i style="width:50%"></i></span><b>15%</b></li>
-<li><span>Скорость зачисления</span><span class="rk-bar"><i style="width:33%"></i></span><b>10%</b></li>
-<li><span>Поддержка по кассе</span><span class="rk-bar"><i style="width:17%"></i></span><b>5%</b></li>
+<div class="rk-k reveal"><span class="ic">📊</span>Методика</div>
+<h2 class="reveal">Как я оцениваю казино с минимальным депозитом</h2>
+<p class="rk-prose reveal">Оценку для этой страницы я строил не вокруг красивого числа на витрине, а вокруг того, что реально принимает касса. Каждую площадку пополнял сам минимальной суммой и смотрел: ляжет ли она на баланс без скрытой доплаты, включится ли на неё бонус и удастся ли вывести остаток обратно. Веса смещены к порогу входа, а не к общей витрине.</p>
+<div class="rk-meth reveal"><ul>
+<li><span>Реальный порог в кассе</span><span class="rk-bar"><i style="--w:100%"></i></span><b>30%</b></li>
+<li><span>Бонус доступен с минималки</span><span class="rk-bar"><i style="--w:67%"></i></span><b>20%</b></li>
+<li><span>Методы на малую сумму (СБП/Мир)</span><span class="rk-bar"><i style="--w:67%"></i></span><b>20%</b></li>
+<li><span>Вывод малых сумм и лимит</span><span class="rk-bar"><i style="--w:50%"></i></span><b>15%</b></li>
+<li><span>Скорость зачисления</span><span class="rk-bar"><i style="--w:33%"></i></span><b>10%</b></li>
+<li><span>Поддержка по кассе</span><span class="rk-bar"><i style="--w:17%"></i></span><b>5%</b></li>
 </ul>
 <div class="rk-ded">Снижаю балл, когда на баннере обещают 50 ₽, а форма пополнения пропускает минимум от 300–500 ₽; когда бонус первого депозита включается только от суммы выше минималки; когда мелкое пополнение проходит мгновенно, а вывод такой же мелкой суммы упирается в отдельный лимит; и когда единственный метод — крипта, где сетевая комиссия съедает весь минимальный взнос.</div></div>
 
-<div class="rk-k"><span class="ic">📝</span>Обзоры</div>
-<h2>Обзоры лучших казино с минимальным депозитом</h2>
+<div class="rk-k reveal"><span class="ic">📝</span>Обзоры</div>
+<h2 class="reveal">Обзоры лучших казино с минимальным депозитом</h2>
 
-<article class="rk-rv"><div class="rk-rv-h"><span class="rk-rank">1</span><h3>7K Casino</h3><span class="rk-rv-r">★ 9.9</span></div>
+<article class="rk-rv reveal"><div class="rk-rv-h"><span class="rk-rank">1</span><h3>7K Casino</h3><span class="rk-rv-r">★ 9.9</span></div>
 <p>Занёс через СБП ровно 50 ₽ — деньги на балансе за 15 минут, доплаты касса не потребовала. На этот же взнос сразу активировался бонус 225% и 200 вращений, а по понедельникам капает кэшбэк до 20%. Паспорт на малых суммах не спрашивают, поэтому и вывод остатка не буксует на верификации. По факту это самый честный порог в подборке.</p>
 <div class="rk-pc"><div class="rk-pros"><b>Плюсы</b><ul><li>Реальные 50 ₽ подтверждены в кассе через СБП без доплат</li><li>Бонус 225% + 200 FS включается уже с минимального взноса</li><li>На малых суммах пополнение и вывод без паспорта и KYC</li><li>Кэшбэк до 20% по понедельникам добирает баланс</li></ul></div>
 <div class="rk-cons"><b>Минусы</b><ul><li>Вывод по СБП в час пик растягивается до 2 часов против крипты за 30 минут</li></ul></div></div>
 <div class="rk-qf"><span>Мин. депозит: <b>50 ₽</b></span><span>Мин. вывод: <b>от ~100 ₽</b></span><span>Сроки: <b>15 мин – 2 ч</b></span><span>Слоты: <b>Gates of Olympus, Sweet Bonanza</b></span><span>Бонус: <b>225% + 200 FS</b></span></div>
 <div class="rk-rv-v">Кому подходит: тем, кто хочет войти рублём через СБП и выжать максимум бонуса за минимальный взнос — <a href="https://myslotdice.com/l/6a7373ab7da48e79330338a2?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">играть в 7K Casino →</a></div></article>
 
-<article class="rk-rv"><div class="rk-rv-h"><span class="rk-rank">2</span><h3>Spinto</h3><span class="rk-rv-r">★ 9.8</span></div>
+<article class="rk-rv reveal"><div class="rk-rv-h"><span class="rk-rank">2</span><h3>Spinto</h3><span class="rk-rv-r">★ 9.8</span></div>
 <p>Здесь тоже пустил в кассу 50 ₽ — прошло без вопросов. Бонус 200% и 150 вращений навесились на этот же взнос. USDT выводится примерно за 40 минут, СБП укладывается в час. Верификация минимальная — для теста площадки на мелкую сумму это удобно, документы на старте не гоняют.</p>
 <div class="rk-pc"><div class="rk-pros"><b>Плюсы</b><ul><li>Минимум 50 ₽, бонус 200% + 150 FS считается с него же</li><li>Минимальная верификация на входе</li><li>Есть и рублёвое пополнение через СБП, и USDT</li></ul></div>
 <div class="rk-cons"><b>Минусы</b><ul><li>Крипта под 50 ₽ невыгодна из-за комиссии сети</li><li>Площадка запущена в 2026 — длинной истории выплат пока нет</li></ul></div></div>
 <div class="rk-qf"><span>Мин. депозит: <b>50 ₽</b></span><span>Мин. вывод: <b>от ~100 ₽</b></span><span>Сроки: <b>USDT ~40 мин</b></span><span>Слоты: <b>Le Bandit, San Quentin</b></span><span>Бонус: <b>200% + 150 FS</b></span></div>
 <div class="rk-rv-v">Кому подходит: новичку, который хочет попробовать свежую площадку рублём без длинной проверки — <a href="https://myslotdice.com/l/6a78ad0c4f78c2c48004d7f2?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">играть в Spinto →</a></div></article>
 
-<article class="rk-rv"><div class="rk-rv-h"><span class="rk-rank">3</span><h3>1win</h3><span class="rk-rv-r">★ 9.7</span></div>
+<article class="rk-rv reveal"><div class="rk-rv-h"><span class="rk-rank">3</span><h3>1win</h3><span class="rk-rv-r">★ 9.7</span></div>
 <p>Порог тоже 50 ₽, и это подкупает при каталоге в 12 000+ игр. Welcome растянут на четыре депозита и суммарно доходит до 500% и 200 000 ₽, поэтому мелкий первый взнос не режет пакет. На минималке KYC не спрашивают, паспорт всплывает только при крупных выводах. Касса и ставки живут в одном кабинете.</p>
 <div class="rk-pc"><div class="rk-pros"><b>Плюсы</b><ul><li>Вход от 50 ₽ при каталоге 12 000+ игр</li><li>Welcome на 4 депозита — минимальный первый взнос не теряет бонус</li><li>На малой сумме без верификации</li></ul></div>
 <div class="rk-cons"><b>Минусы</b><ul><li>Крупный вывод потребует KYC</li><li>Растянутый на 4 депозита бонус отыгрывать дольше</li></ul></div></div>
 <div class="rk-qf"><span>Мин. депозит: <b>50 ₽</b></span><span>Мин. вывод: <b>от ~200 ₽</b></span><span>Сроки: <b>карта/крипта в срок</b></span><span>Слоты: <b>Lucky Jet, Gates of Olympus</b></span><span>Бонус: <b>до 500%</b></span></div>
 <div class="rk-rv-v">Кому подходит: тем, кто заходит на 50 ₽, но планирует докидывать и добирать весь welcome-пакет — <a href="https://lkgp.pro/509e2b?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">играть в 1win →</a></div></article>
 
-<article class="rk-rv"><div class="rk-rv-h"><span class="rk-rank">4</span><h3>Banda</h3><span class="rk-rv-r">★ 9.6</span></div>
+<article class="rk-rv reveal"><div class="rk-rv-h"><span class="rk-rank">4</span><h3>Banda</h3><span class="rk-rv-r">★ 9.6</span></div>
 <p>Минимум здесь уже 100 ₽ — вдвое выше топовой тройки. Зато за этот взнос дают 100% и 500 бесплатных вращений плюс еженедельные турниры с призовым фондом. Пополнение картой и криптой, вывод тем же способом. За лишние 50 ₽ к порогу площадка отдаёт крупную пачку фриспинов.</p>
 <div class="rk-pc"><div class="rk-pros"><b>Плюсы</b><ul><li>500 фриспинов на старте уже с депозита 100 ₽</li><li>Еженедельные турниры с призовым фондом</li></ul></div>
 <div class="rk-cons"><b>Минусы</b><ul><li>Порог 100 ₽ — вдвое выше, чем у 7K и Spinto</li><li>Вывод небыстрый на фоне крипто-площадок</li></ul></div></div>
 <div class="rk-qf"><span>Мин. депозит: <b>100 ₽</b></span><span>Мин. вывод: <b>от ~300 ₽</b></span><span>Сроки: <b>до нескольких часов</b></span><span>Слоты: <b>The Dog House</b></span><span>Бонус: <b>100% + 500 FS</b></span></div>
 <div class="rk-rv-v">Кому подходит: тем, кому важнее пачка фриспинов и турниры, а не абсолютный минимум входа — <a href="https://joyous-bahd4-6.com/adplyqj9ug?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">играть в Banda →</a></div></article>
 
-<article class="rk-rv"><div class="rk-rv-h"><span class="rk-rank">5</span><h3>Leebet</h3><span class="rk-rv-r">★ 9.5</span></div>
+<article class="rk-rv reveal"><div class="rk-rv-h"><span class="rk-rank">5</span><h3>Leebet</h3><span class="rk-rv-r">★ 9.5</span></div>
 <p>Порог 100 ₽, и площадка честно заточена под крипту: USDT TRC-20 уходит примерно за 20 минут с копеечной комиссией. Бонус 150% до 1000 USDT. Если вход планируется криптой, лишние 50 ₽ к порогу роли почти не играют — весь смысл в скорости USDT туда и обратно.</p>
 <div class="rk-pc"><div class="rk-pros"><b>Плюсы</b><ul><li>Быстрый крипто-вывод USDT TRC-20 за ~20 минут</li><li>Копеечная комиссия на криптотранзакциях</li><li>Бонус 150% до 1000 USDT с минимального взноса</li></ul></div>
 <div class="rk-cons"><b>Минусы</b><ul><li>Минимум 100 ₽, а не 50 ₽</li><li>Заточен под USDT и BTC — под чистый рубль менее удобен</li></ul></div></div>
 <div class="rk-qf"><span>Мин. депозит: <b>100 ₽</b></span><span>Мин. вывод: <b>от ~USDT-эквивалента</b></span><span>Сроки: <b>USDT ~20 мин</b></span><span>Слоты: <b>Le Bandit</b></span><span>Бонус: <b>150% до 1000 USDT</b></span></div>
 <div class="rk-rv-v">Кому подходит: тем, кто заходит криптой и хочет такой же быстрый вывод обратно — <a href="https://play-leebet-4th.com/adtrq0e9mj?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">играть в Leebet →</a></div></article>
 
-<article class="rk-rv"><div class="rk-rv-h"><span class="rk-rank">6</span><h3>APEX</h3><span class="rk-rv-r">★ 9.4</span></div>
+<article class="rk-rv reveal"><div class="rk-rv-h"><span class="rk-rank">6</span><h3>APEX</h3><span class="rk-rv-r">★ 9.4</span></div>
 <p>Вход от 100 ₽, но старт самый щедрый в подборке — 375% и 225 вращений. Пополнение через СБП и крипту, зачисление в срок. За повышенный порог площадка отдаёт максимальный процент к первому депозиту, но и отыгрыш такого бонуса длиннее.</p>
 <div class="rk-pc"><div class="rk-pros"><b>Плюсы</b><ul><li>Самый крупный старт-бонус 375% + 225 FS с депозита 100 ₽</li><li>СБП и крипта на пополнение</li></ul></div>
 <div class="rk-cons"><b>Минусы</b><ul><li>Минимум 100 ₽ — не под тест за 50 ₽</li><li>Большой процент бонуса тянет за собой длинный отыгрыш</li></ul></div></div>
 <div class="rk-qf"><span>Мин. депозит: <b>100 ₽</b></span><span>Мин. вывод: <b>от ~300 ₽</b></span><span>Сроки: <b>СБП/крипта в срок</b></span><span>Слоты: <b>Le Bandit</b></span><span>Бонус: <b>375% + 225 FS</b></span></div>
 <div class="rk-rv-v">Кому подходит: тем, кто готов внести 100 ₽ ради максимального процента к депозиту — <a href="https://9reenhouse-7apeks.com/addfgxolo1?sub_id=rejting-kazino777-top" target="_blank" rel="nofollow sponsored noopener">играть в APEX →</a></div></article>
 
-<div class="rk-k"><span class="ic">🚪</span>Порог входа</div>
-<h2>Минималка на баннере и минималка в кассе — почему числа разные</h2>
-<div class="rk-prose"><p>Число «от 50 ₽» на главной — это маркетинг. Настоящий порог живёт в форме пополнения, и именно там я его проверяю. Из девяти площадок кассу с реальными 50 ₽ прошли три: 7K, Spinto и 1win. Пополнял через СБП — сумма легла на баланс без скрытых доплат и без округления вверх.</p>
+<div class="rk-k reveal"><span class="ic">🚪</span>Порог входа</div>
+<h2 class="reveal">Минималка на баннере и минималка в кассе — почему числа разные</h2>
+<div class="rk-prose reveal"><p>Число «от 50 ₽» на главной — это маркетинг. Настоящий порог живёт в форме пополнения, и именно там я его проверяю. Из девяти площадок кассу с реальными 50 ₽ прошли три: 7K, Spinto и 1win. Пополнял через СБП — сумма легла на баланс без скрытых доплат и без округления вверх.</p>
 <p>У Banda, Leebet, APEX, Vavada, Kent и Monro касса начинается со 100 ₽. Тоже честно, но вдвое выше. Правило простое: не верь баннеру, дойди до поля ввода суммы. Если там стоит минимум 300–500 ₽ при обещанных 50 — площадка идёт вниз в моей оценке. Разброс по подборке узкий, 50–100 ₽, и это уже отфильтрованный список — кассы с завышенным реальным порогом сюда не попали.</p></div>
 
-<div class="rk-k"><span class="ic">₽</span>Депозит от 50 ₽</div>
-<h2>Казино с депозитом от 50 рублей: кто реально принимает рубль</h2>
-<div class="rk-prose"><p>Это самый частый запрос по теме, и ответ короткий: реальные 50 ₽ в этой подборке держат 7K, Spinto и 1win. Проверял каждый лично. У 7K перевод через СБП по номеру телефона лёг на баланс за 15 минут. У Spinto те же 50 ₽ прошли без вопросов. У 1win порог 50 ₽ идёт рядом с каталогом на 12 000+ игр.</p>
+<div class="rk-k reveal"><span class="ic">₽</span>Депозит от 50 ₽</div>
+<h2 class="reveal">Казино с депозитом от 50 рублей: кто реально принимает рубль</h2>
+<div class="rk-prose reveal"><p>Это самый частый запрос по теме, и ответ короткий: реальные 50 ₽ в этой подборке держат 7K, Spinto и 1win. Проверял каждый лично. У 7K перевод через СБП по номеру телефона лёг на баланс за 15 минут. У Spinto те же 50 ₽ прошли без вопросов. У 1win порог 50 ₽ идёт рядом с каталогом на 12 000+ игр.</p>
 <p>Важно не путать «депозит от 50 ₽» и «пополнение от 50 ₽ по конкретному методу». СБП и карта Мир 50 ₽ пропускают. А вот у части банков стоит собственный минимум на перевод — тогда 50 ₽ не пройдёт по вине банка, а не казино. Диапазон 50–500 ₽ в запросах — это про то же: нижняя планка у топ-тройки 50 ₽, дальше сумму выбираете сами.</p></div>
 
-<div class="rk-k"><span class="ic">💯</span>Депозит от 100 ₽</div>
-<h2>Депозит от 100 рублей: что дают за лишние 50 ₽</h2>
-<div class="rk-prose"><p>Запрос «казино от 100 рублей» — второй по частоте. Порог 100 ₽ держат Banda, Leebet, APEX, а также Vavada, Kent и Monro. Разница со 50 ₽ небольшая, а вот что дают за неё — стоит сравнить.</p>
+<div class="rk-k reveal"><span class="ic">💯</span>Депозит от 100 ₽</div>
+<h2 class="reveal">Депозит от 100 рублей: что дают за лишние 50 ₽</h2>
+<div class="rk-prose reveal"><p>Запрос «казино от 100 рублей» — второй по частоте. Порог 100 ₽ держат Banda, Leebet, APEX, а также Vavada, Kent и Monro. Разница со 50 ₽ небольшая, а вот что дают за неё — стоит сравнить.</p>
 <p>Banda за 100 ₽ отдаёт 100% и 500 бесплатных вращений плюс еженедельные турниры. APEX — самый крупный старт в подборке, 375% и 225 вращений. Leebet заточен под крипту: USDT TRC-20 выводит примерно за 20 минут. По факту 100 ₽ здесь окупаются размером пакета: если цель не «занести абсолютный минимум», а получить пачку фриспинов или максимальный процент — эти площадки идут вперёд топ-тройки с порогом 50 ₽.</p></div>
 
-<div class="rk-k"><span class="ic">🎯</span>Депозит 300 ₽</div>
-<h2>Казино с минимальным депозитом 300 рублей</h2>
-<div class="rk-prose"><p>Отдельный частый запрос — «казино с минимальным депозитом 300 рублей». Тут важно понять: 300 ₽ — это не отдельный порог, а сумма заведомо выше минимума. Раз касса пропускает 50 или 100 ₽, то 300 ₽ вносятся тем более свободно, на любой площадке из топа. То есть искать специальное «казино от 300 ₽» не нужно — подойдёт любое из списка.</p>
+<div class="rk-k reveal"><span class="ic">🎯</span>Депозит 300 ₽</div>
+<h2 class="reveal">Казино с минимальным депозитом 300 рублей</h2>
+<div class="rk-prose reveal"><p>Отдельный частый запрос — «казино с минимальным депозитом 300 рублей». Тут важно понять: 300 ₽ — это не отдельный порог, а сумма заведомо выше минимума. Раз касса пропускает 50 или 100 ₽, то 300 ₽ вносятся тем более свободно, на любой площадке из топа. То есть искать специальное «казино от 300 ₽» не нужно — подойдёт любое из списка.</p>
 <p>Почему тогда так ищут? 300 ₽ — психологически комфортная сумма для первого захода: уже не «монетка на один спин», но и не жалко на тест. И на ней welcome-процент раскрывается полноценно: при 225% у 7K депозит в 300 ₽ превращается в игровой баланс под 975 ₽ плюс фриспины. Этого хватает на 150–300 вращений по минимальной ставке — достаточно, чтобы спокойно оценить отдачу слотов и скорость кассы. Так что если у вас на руках ровно 300 ₽ — заносите в 7K, Spinto или 1win: порог там 50 ₽, а 300 ₽ пройдут без ограничений и с максимальным бонусом.</p></div>
 
-<div class="rk-k"><span class="ic">🔎</span>Сверхнизкий порог</div>
-<h2>Депозит от 10, 20 и 30 рублей — где правда, а где приманка</h2>
-<div class="rk-prose"><p>Запросов про «от 10 рублей», «от 20» и «от 30» много, поэтому честно: в проверенной мной подборке подтверждённый минимум — 50 ₽. Ниже этой планки в кассе я реально пройти не смог. Число «от 10 ₽» на витринах чаще всего приманка: доходишь до формы пополнения — а там минимум уже 100 или 300 ₽.</p>
+<div class="rk-k reveal"><span class="ic">🔎</span>Сверхнизкий порог</div>
+<h2 class="reveal">Депозит от 10, 20 и 30 рублей — где правда, а где приманка</h2>
+<div class="rk-prose reveal"><p>Запросов про «от 10 рублей», «от 20» и «от 30» много, поэтому честно: в проверенной мной подборке подтверждённый минимум — 50 ₽. Ниже этой планки в кассе я реально пройти не смог. Число «от 10 ₽» на витринах чаще всего приманка: доходишь до формы пополнения — а там минимум уже 100 или 300 ₽.</p>
 <p>Есть и техническая причина. Даже если казино формально примет 10–20 ₽, платёжный метод может не пропустить: у карт и части банков по СБП свой нижний лимит на перевод, и он нередко выше 50 ₽. Поэтому за минимальный практичный старт я считаю 50 ₽ — это сумма, которая реально проходит и на которую уже навешивается бонус. Гоняться за «от 10 ₽» смысла мало: разница в риске между 10 и 50 рублями копеечная, а шанс упереться в скрытый порог — высокий.</p></div>
 
-<div class="rk-k"><span class="ic">🎰</span>На каких автоматах</div>
-<h2>На каких автоматах минимальный депозит и минимальная ставка</h2>
-<div class="rk-prose"><p>Частый запрос «на каких автоматах минимальный депозит» построен на путанице, и её стоит снять прямо. Депозит вносится в кассу казино, а не в конкретный слот: открыв счёт на 50–100 ₽, вы играете в любой автомат из каталога — Gates of Olympus, Sweet Bonanza, The Dog House, Le Bandit. Отдельного «автомата с минимальным депозитом» не существует, порог един для всей площадки.</p>
+<div class="rk-k reveal"><span class="ic">🎰</span>На каких автоматах</div>
+<h2 class="reveal">На каких автоматах минимальный депозит и минимальная ставка</h2>
+<div class="rk-prose reveal"><p>Частый запрос «на каких автоматах минимальный депозит» построен на путанице, и её стоит снять прямо. Депозит вносится в кассу казино, а не в конкретный слот: открыв счёт на 50–100 ₽, вы играете в любой автомат из каталога — Gates of Olympus, Sweet Bonanza, The Dog House, Le Bandit. Отдельного «автомата с минимальным депозитом» не существует, порог един для всей площадки.</p>
 <p>Что действительно различается по слотам — это минимальная ставка за спин. Здесь картина такая:</p></div>
-<div class="rk-tw"><table class="rk-t" style="min-width:520px">
+<div class="rk-tw reveal"><table class="rk-t" style="min-width:520px">
 <thead><tr><th>Слот</th><th>Мин. ставка за спин</th><th>Комментарий</th></tr></thead>
 <tbody>
-<tr><td class="rk-b">Le Bandit</td><td class="rk-dep">от ~1 ₽</td><td>один из самых «дешёвых» по нижней ставке</td></tr>
-<tr><td class="rk-b">The Dog House</td><td class="rk-dep">от ~2 ₽</td><td>невысокая нижняя планка, много спинов на минималку</td></tr>
-<tr><td class="rk-b">Gates of Olympus</td><td class="rk-dep">от ~20 ₽</td><td>популярный, но нижняя ставка выше</td></tr>
-<tr><td class="rk-b">Sweet Bonanza</td><td class="rk-dep">от ~20 ₽</td><td>та же группа Pragmatic, ставка от 20 ₽</td></tr>
+<tr><td class="rk-b">Le Bandit</td><td><span class="rk-dep is-low">от ~1 ₽</span></td><td>один из самых «дешёвых» по нижней ставке</td></tr>
+<tr><td class="rk-b">The Dog House</td><td><span class="rk-dep is-low">от ~2 ₽</span></td><td>невысокая нижняя планка, много спинов на минималку</td></tr>
+<tr><td class="rk-b">Gates of Olympus</td><td><span class="rk-dep">от ~20 ₽</span></td><td>популярный, но нижняя ставка выше</td></tr>
+<tr><td class="rk-b">Sweet Bonanza</td><td><span class="rk-dep">от ~20 ₽</span></td><td>та же группа Pragmatic, ставка от 20 ₽</td></tr>
 </tbody>
 </table></div>
-<div class="rk-prose"><p>Вывод: если цель — растянуть минимальный депозит на максимум вращений, берите слоты с нижней ставкой от 1–2 ₽ (Le Bandit, The Dog House). На 50 ₽ это 25–50 спинов. В Gates of Olympus и Sweet Bonanza ставка стартует выше, от 20 ₽, поэтому на тех же 50 ₽ спинов будет всего два-три. Депозит при этом одинаковый — разница только в ставке внутри игры.</p></div>
+<div class="rk-prose reveal"><p>Вывод: если цель — растянуть минимальный депозит на максимум вращений, берите слоты с нижней ставкой от 1–2 ₽ (Le Bandit, The Dog House). На 50 ₽ это 25–50 спинов. В Gates of Olympus и Sweet Bonanza ставка стартует выше, от 20 ₽, поэтому на тех же 50 ₽ спинов будет всего два-три. Депозит при этом одинаковый — разница только в ставке внутри игры.</p></div>
 
-<div class="rk-k"><span class="ic">🪙</span>Ставка от 1 ₽</div>
-<h2>Ставки от 1 рубля и игра на копейки — это про ставку, а не про депозит</h2>
-<div class="rk-prose"><p>Тут та же путаница, что и выше. «Казино со ставкой от 1 рубля», «слоты по 1 рублю», «игра на копейки» — это не про минимальный депозит, а про минимальную ставку в слоте. Две разные цифры.</p>
+<div class="rk-k reveal"><span class="ic">🪙</span>Ставка от 1 ₽</div>
+<h2 class="reveal">Ставки от 1 рубля и игра на копейки — это про ставку, а не про депозит</h2>
+<div class="rk-prose reveal"><p>Тут та же путаница, что и выше. «Казино со ставкой от 1 рубля», «слоты по 1 рублю», «игра на копейки» — это не про минимальный депозит, а про минимальную ставку в слоте. Две разные цифры.</p>
 <p>Минимальная ставка в большинстве слотов — от 1 ₽ за спин, в отдельных автоматах и от 10 копеек. И она не зависит от того, внесли вы 50 ₽ или 5000. То есть картина реальная такая: заносите минимальные 50 ₽ через СБП, а крутите по 1 ₽ за спин. На 50 ₽ это примерно 50 вращений по минимуму — достаточно, чтобы почувствовать отдачу слота и поведение кассы. Так что «играть от 1 рубля» — не про поиск казино с депозитом в рубль, а про выбор ставки внутри игры. Депозит всё равно от 50 ₽.</p></div>
 
-<div class="rk-k"><span class="ic">⚡</span>Чем занести</div>
-<h2>Чем пополнить минимальные 50–100 ₽: СБП, карта Мир, крипта</h2>
-<div class="rk-prose"><p>Для рублёвого входа рабочий метод — СБП: перевод по QR или номеру телефона, зачисление у 7K заняло около 15 минут. Карту Мир касса тоже принимает, и это ответ на запросы про пополнение через «Мир» и Тинькофф. Но у части банков — свой минимум на перевод, и тогда 50 ₽ упрётся в лимит банка, а не казино. Сбербанк и Тинькофф по СБП обычно пропускают такую сумму без проблем.</p>
+<div class="rk-k reveal"><span class="ic">⚡</span>Чем занести</div>
+<h2 class="reveal">Чем пополнить минимальные 50–100 ₽: СБП, карта Мир, крипта</h2>
+<div class="rk-prose reveal"><p>Для рублёвого входа рабочий метод — СБП: перевод по QR или номеру телефона, зачисление у 7K заняло около 15 минут. Карту Мир касса тоже принимает, и это ответ на запросы про пополнение через «Мир» и Тинькофф. Но у части банков — свой минимум на перевод, и тогда 50 ₽ упрётся в лимит банка, а не казино. Сбербанк и Тинькофф по СБП обычно пропускают такую сумму без проблем.</p>
 <p>Крипта — отдельный путь. Leebet и APEX принимают USDT, у Leebet вывод TRC-20 уходит примерно за 20 минут с копеечной комиссией. Но под минимальный тест крипта избыточна: сеть возьмёт комиссию, сопоставимую со взносом в 50–100 ₽. Логика такая — под минималку берите СБП или Мир, крипту оставьте на суммы покрупнее. Тонкости пополнения именно через СБП, лимиты банков и вывод по QR я разбираю на <a href="/sbp/">отдельной странице про СБП</a>.</p></div>
 
-<div class="rk-k"><span class="ic">🚫</span>Без комиссии</div>
-<h2>Пополнение без комиссии: чтобы 50 ₽ дошли целиком</h2>
-<div class="rk-prose"><p>Запрос «казино без комиссии» на минималке важен вдвойне: если с 50 ₽ снимут 10% — это уже ощутимо. На стороне казино из подборки комиссии за пополнение по СБП и карте Мир нет, взнос доходит целиком. Проверял по балансу: занёс 50 — увидел 50.</p>
+<div class="rk-k reveal"><span class="ic">🚫</span>Без комиссии</div>
+<h2 class="reveal">Пополнение без комиссии: чтобы 50 ₽ дошли целиком</h2>
+<div class="rk-prose reveal"><p>Запрос «казино без комиссии» на минималке важен вдвойне: если с 50 ₽ снимут 10% — это уже ощутимо. На стороне казино из подборки комиссии за пополнение по СБП и карте Мир нет, взнос доходит целиком. Проверял по балансу: занёс 50 — увидел 50.</p>
 <p>Комиссия может прийти с двух других сторон. Первая — банк: редко, но некоторые берут процент за исходящий перевод, это к банку, не к казино. Вторая — крипто-сеть: у USDT TRC-20 комиссия копеечная, а вот в сети ERC-20 она способна перекрыть весь минимальный депозит. Вывод: под 50–100 ₽ выбирайте СБП или Мир и сеть TRC-20, если уж крипта — тогда взнос дойдёт без потерь.</p></div>
 
-<div class="rk-k"><span class="ic">🎁</span>Бонус</div>
-<h2>Можно ли получить бонус на минимальный депозит</h2>
-<div class="rk-prose"><p>Главная ловушка порога — когда минимум 50 ₽ есть, а бонус первого депозита стартует только от 500 или 1000 ₽. Тогда минималка бессмысленна: платишь мало, но и не получаешь ничего. Это я проверял отдельно, по каждому бренду.</p>
+<div class="rk-k reveal"><span class="ic">🎁</span>Бонус</div>
+<h2 class="reveal">Можно ли получить бонус на минимальный депозит</h2>
+<div class="rk-prose reveal"><p>Главная ловушка порога — когда минимум 50 ₽ есть, а бонус первого депозита стартует только от 500 или 1000 ₽. Тогда минималка бессмысленна: платишь мало, но и не получаешь ничего. Это я проверял отдельно, по каждому бренду.</p>
 <p>У 7K, Spinto и 1win welcome активируется прямо с минимального взноса 50 ₽. У Banda, Leebet, APEX, Vavada, Kent и Monro бонус привязан к их же минимуму 100 ₽, а не к завышенной планке. То есть порог бонуса и порог депозита совпадают — это и есть правильная картина. Отдельно смотрю на отыгрыш: высокий процент APEX (375%) тянет за собой больший вейджер, поэтому крупный процент к минимальному депозиту — не всегда выгоднее скромного, но с лёгким отыгрышем. Бездепозитные бонусы — это отдельная тема, их разбираю на <a href="/bezdepozit/">странице про бездеп</a>.</p></div>
 
-<div class="rk-k"><span class="ic">💸</span>Вывод</div>
-<h2>Можно ли вывести деньги после депозита в 50 ₽</h2>
-<div class="rk-prose"><p>Запрос «маленький депозит и реальный вывод» — ключевой страх игрока. Ответ: вывести можно, но у вывода бывает свой минимальный лимит, и он часто выше суммы депозита. То есть занести 50 ₽ реально, а вот забрать назад именно 50 ₽ — не всегда: касса может требовать вывод от 100–500 ₽.</p>
+<div class="rk-k reveal"><span class="ic">💸</span>Вывод</div>
+<h2 class="reveal">Можно ли вывести деньги после депозита в 50 ₽</h2>
+<div class="rk-prose reveal"><p>Запрос «маленький депозит и реальный вывод» — ключевой страх игрока. Ответ: вывести можно, но у вывода бывает свой минимальный лимит, и он часто выше суммы депозита. То есть занести 50 ₽ реально, а вот забрать назад именно 50 ₽ — не всегда: касса может требовать вывод от 100–500 ₽.</p>
 <p>Второй момент — верификация. На малых суммах 7K и Spinto паспорт не спрашивают, поэтому возврат остатка проходит быстро, без задержки на проверку документов. Практический совет: перед крупной игрой прокрутите минимальную сумму и сразу закажите вывод остатка — так проверите главное, отдаёт ли касса деньги обратно. Если 50 ₽ забрали мгновенно, а возврат даже мелочи виснет — дальше заносить не стоит. Кому важна скорость выплат — смотрите <a href="/bystryj-vyvod/">казино с быстрым выводом</a>.</p></div>
 
-<div class="rk-k"><span class="ic">🤔</span>Стоит ли</div>
-<h2>Стоит ли играть с минимальным депозитом и как протестировать площадку за 50 ₽</h2>
-<div class="rk-prose"><p>Мелкий депозит — это разведка, и играть с него однозначно стоит именно ради проверки. Мой порядок такой: занести 50 ₽ через СБП, активировать welcome, прокрутить минимальными ставками по 1 ₽, а затем сразу заказать вывод остатка. Так проверяется не витрина, а поведение кассы под реальными деньгами.</p>
+<div class="rk-k reveal"><span class="ic">🤔</span>Стоит ли</div>
+<h2 class="reveal">Стоит ли играть с минимальным депозитом и как протестировать площадку за 50 ₽</h2>
+<div class="rk-prose reveal"><p>Мелкий депозит — это разведка, и играть с него однозначно стоит именно ради проверки. Мой порядок такой: занести 50 ₽ через СБП, активировать welcome, прокрутить минимальными ставками по 1 ₽, а затем сразу заказать вывод остатка. Так проверяется не витрина, а поведение кассы под реальными деньгами.</p>
 <p>На малых суммах 7K и Spinto не требуют паспорт, поэтому вывод остатка проходит быстро. Если площадка легко забрала 50 ₽, но тормозит с возвратом даже мелочи — это красный флаг, дальше не заносим. 50 ₽ — недорогая цена за такую проверку, дешевле, чем узнать про проблемы кассы на депозите в 5000. Минус у минимального депозита один: крупный выигрыш с 50 ₽ маловероятен, это инструмент теста, а не заработка.</p></div>
 
-<div class="rk-k"><span class="ic">📱</span>С телефона</div>
-<h2>Мобильное казино с минимальным депозитом: скачивать ничего не нужно</h2>
-<div class="rk-prose"><p>Запросов про мобильное казино, «для телефона», «скачать» и apk много — отвечаю сразу: под минимальный депозит скачивать ничего не надо. Касса всех девяти площадок открывается в мобильном браузере, и порог там тот же — 50 ₽ у 7K, Spinto и 1win, 100 ₽ у остальных.</p>
+<div class="rk-k reveal"><span class="ic">📱</span>С телефона</div>
+<h2 class="reveal">Мобильное казино с минимальным депозитом: скачивать ничего не нужно</h2>
+<div class="rk-prose reveal"><p>Запросов про мобильное казино, «для телефона», «скачать» и apk много — отвечаю сразу: под минимальный депозит скачивать ничего не надо. Касса всех девяти площадок открывается в мобильном браузере, и порог там тот же — 50 ₽ у 7K, Spinto и 1win, 100 ₽ у остальных.</p>
 <p>Пополнить с телефона через СБП даже удобнее: перевод по QR или номеру подтверждается в приложении банка за пару кликов, зачисление те же 15 минут. Отдельное приложение имеет смысл разве что для удобства входа, но на порог депозита оно не влияет — 50 ₽ проходят одинаково и в браузере, и в апке. Так что «мобильное казино с минимальным депозитом» — это про удобство метода, а не про особый низкий порог для телефона.</p></div>
 
-<div class="rk-k"><span class="ic">🪪</span>Без паспорта</div>
-<h2>Минимальный депозит без верификации и паспорта</h2>
-<div class="rk-prose"><p>«Казино без паспорта» и «без верификации» — частый довесок к минималке. Логика игрока понятна: заносишь 50 ₽ на тест, лишняя проверка документов тут ни к чему. И это работает: у 7K и Spinto на малых суммах KYC не запрашивают — ни при пополнении, ни при выводе остатка.</p>
+<div class="rk-k reveal"><span class="ic">🪪</span>Без паспорта</div>
+<h2 class="reveal">Минимальный депозит без верификации и паспорта</h2>
+<div class="rk-prose reveal"><p>«Казино без паспорта» и «без верификации» — частый довесок к минималке. Логика игрока понятна: заносишь 50 ₽ на тест, лишняя проверка документов тут ни к чему. И это работает: у 7K и Spinto на малых суммах KYC не запрашивают — ни при пополнении, ни при выводе остатка.</p>
 <p>Но честно про предел: полностью «без паспорта» — только на малых суммах. Как только выигрыш и сумма вывода подрастут, верификация всплывёт у любой лицензионной площадки, это требование Curaçao и антифрода. Поэтому формула такая: тест за 50 ₽ — без документов, крупная игра — один раз пройти KYC. Пройти его лучше заранее, чтобы первый крупный вывод не завис на проверке.</p></div>
 
-<div class="rk-k"><span class="ic">🔰</span>Новичку</div>
-<h2>С какого минимума начать новичку и стоит ли идти в новые казино</h2>
-<div class="rk-prose"><p>Для первого захода я советую именно 50 ₽ через СБП — это минимум, который реально проходит, включает бонус и позволяет забрать остаток. Меньше искать смысла нет: разница в риске между 10 и 50 рублями копеечная, а на 50 ₽ уже видно и слоты, и скорость кассы.</p>
+<div class="rk-k reveal"><span class="ic">🔰</span>Новичку</div>
+<h2 class="reveal">С какого минимума начать новичку и стоит ли идти в новые казино</h2>
+<div class="rk-prose reveal"><p>Для первого захода я советую именно 50 ₽ через СБП — это минимум, который реально проходит, включает бонус и позволяет забрать остаток. Меньше искать смысла нет: разница в риске между 10 и 50 рублями копеечная, а на 50 ₽ уже видно и слоты, и скорость кассы.</p>
 <p>Про новые казино с минимальным депозитом. Spinto и APEX запущены в 2026-м — порог у них честный (50 и 100 ₽), бонусы щедрые, но длинной истории выплат пока нет. Новичку это не минус, если заходить мелкой суммой и сразу тестировать вывод. Проверенная касса с историей — это 7K и 1win: если важна не свежесть, а предсказуемость, начинайте с них. Рубль как валюту счёта и пополнения подробнее разбираю на <a href="/na-rubli/">странице про казино на рубли</a>.</p></div>
 
-<div class="rk-k"><span class="ic">⚠️</span>Осторожно</div>
-<h2>Анти-топ: где «минимальный депозит» — обман</h2>
-<div class="rk-anti"><ul>
+<div class="rk-k reveal"><span class="ic">⚠️</span>Осторожно</div>
+<h2 class="reveal">Анти-топ: где «минимальный депозит» — обман</h2>
+<div class="rk-anti reveal"><ul>
 <li>На баннере 50 ₽, а в форме пополнения минимум внезапно 300–500 ₽</li>
 <li>«Депозит от 10 ₽» на витрине, но метод пополнения не пропускает сумму ниже 100–300 ₽</li>
 <li>Бонус первого депозита включается только от суммы намного выше минималки</li>
@@ -394,29 +580,29 @@ h3{line-height:1.25}
 <li>Нет ни СБП, ни карты Мир — только крипта, где сетевая комиссия сопоставима со взносом</li>
 </ul></div>
 
-<div class="rk-k"><span class="ic">❓</span>Вопросы</div>
-<h2>Частые вопросы о казино с минимальным депозитом</h2>
-<details class="rk-q"><summary>Какой реально минимальный депозит в казино из подборки?</summary><p>Реальные 50 ₽, подтверждённые в кассе, — у 7K, Spinto и 1win. У Banda, Leebet, APEX, Vavada, Kent и Monro минимум 100 ₽. Числа взяты из формы пополнения, а не с рекламного баннера.</p></details>
-<details class="rk-q"><summary>Есть ли казино с депозитом 300 рублей и что это даёт?</summary><p>300 ₽ проходят на всех площадках подборки — это не отдельный порог, а сумма выше минимума. На 300 ₽ уже полноценно раскрывается welcome-процент и хватает на 150–300 спинов по минимальной ставке. Если ищете строго «депозит 300 рублей», подойдёт любое казино из топа: 50 или 100 ₽ там нижняя планка, а 300 ₽ вносятся свободно.</p></details>
-<details class="rk-q"><summary>Правда ли есть казино с депозитом от 10 рублей или от 1 рубля?</summary><p>В проверенной подборке подтверждённый минимум — 50 ₽. «От 10 ₽» на витринах чаще приманка: в форме пополнения минимум оказывается выше, да и банк по карте или СБП нередко не пропускает перевод ниже 50 ₽. А «ставки от 1 рубля» — это про минимальную ставку в слоте, не про депозит: крутить по 1 ₽ можно и после взноса в 50 ₽.</p></details>
-<details class="rk-q"><summary>На каких автоматах минимальный депозит и минимальная ставка?</summary><p>Депозит зависит от кассы казино, а не от слота — открыв счёт на 50–100 ₽, вы играете в любой автомат. Минимальная ставка задаётся внутри игры: у большинства слотов от 1 ₽ за спин, у популярных Gates of Olympus и Sweet Bonanza — от 20 ₽. То есть занесли минималку, а крутите по нижней ставке выбранного автомата.</p></details>
-<details class="rk-q"><summary>Дают ли бонус, если внести только минималку?</summary><p>Да. У 7K, Spinto и 1win welcome активируется прямо с минимального взноса от 50 ₽, у остальных — со 100 ₽. Порог бонуса совпадает с порогом депозита. Проверяйте, чтобы бонус не стартовал от суммы выше минималки.</p></details>
-<details class="rk-q"><summary>Чем удобнее всего пополнить на 50–100 ₽ без комиссии?</summary><p>Для рубля — СБП по QR или номеру телефона, зачисление обычно до 15 минут; также карта Мир. Комиссии на стороне казино нет, взнос доходит целиком. Крипту под такую сумму брать невыгодно: комиссия сети сопоставима со взносом.</p></details>
-<details class="rk-q"><summary>Можно ли вывести деньги после депозита в 50 ₽?</summary><p>Да, но у вывода бывает свой минимальный лимит, часто выше суммы депозита. На малых суммах 7K и Spinto не требуют паспорт, поэтому возврат остатка проходит быстро. Перед крупной игрой протестируйте вывод мелкой суммой.</p></details>
-<details class="rk-q"><summary>Нужен ли паспорт при минимальном депозите?</summary><p>На малых суммах у 7K и Spinto верификацию не запрашивают. Полный KYC всплывает только при крупном выигрыше и выводе — это требование лицензии Curaçao. Пройти его лучше заранее, чтобы первая крупная выплата не зависла.</p></details>
+<div class="rk-k reveal"><span class="ic">❓</span>Вопросы</div>
+<h2 class="reveal">Частые вопросы о казино с минимальным депозитом</h2>
+<details class="rk-q reveal"><summary>Какой реально минимальный депозит в казино из подборки?</summary><p>Реальные 50 ₽, подтверждённые в кассе, — у 7K, Spinto и 1win. У Banda, Leebet, APEX, Vavada, Kent и Monro минимум 100 ₽. Числа взяты из формы пополнения, а не с рекламного баннера.</p></details>
+<details class="rk-q reveal"><summary>Есть ли казино с депозитом 300 рублей и что это даёт?</summary><p>300 ₽ проходят на всех площадках подборки — это не отдельный порог, а сумма выше минимума. На 300 ₽ уже полноценно раскрывается welcome-процент и хватает на 150–300 спинов по минимальной ставке. Если ищете строго «депозит 300 рублей», подойдёт любое казино из топа: 50 или 100 ₽ там нижняя планка, а 300 ₽ вносятся свободно.</p></details>
+<details class="rk-q reveal"><summary>Правда ли есть казино с депозитом от 10 рублей или от 1 рубля?</summary><p>В проверенной подборке подтверждённый минимум — 50 ₽. «От 10 ₽» на витринах чаще приманка: в форме пополнения минимум оказывается выше, да и банк по карте или СБП нередко не пропускает перевод ниже 50 ₽. А «ставки от 1 рубля» — это про минимальную ставку в слоте, не про депозит: крутить по 1 ₽ можно и после взноса в 50 ₽.</p></details>
+<details class="rk-q reveal"><summary>На каких автоматах минимальный депозит и минимальная ставка?</summary><p>Депозит зависит от кассы казино, а не от слота — открыв счёт на 50–100 ₽, вы играете в любой автомат. Минимальная ставка задаётся внутри игры: у большинства слотов от 1 ₽ за спин, у популярных Gates of Olympus и Sweet Bonanza — от 20 ₽. То есть занесли минималку, а крутите по нижней ставке выбранного автомата.</p></details>
+<details class="rk-q reveal"><summary>Дают ли бонус, если внести только минималку?</summary><p>Да. У 7K, Spinto и 1win welcome активируется прямо с минимального взноса от 50 ₽, у остальных — со 100 ₽. Порог бонуса совпадает с порогом депозита. Проверяйте, чтобы бонус не стартовал от суммы выше минималки.</p></details>
+<details class="rk-q reveal"><summary>Чем удобнее всего пополнить на 50–100 ₽ без комиссии?</summary><p>Для рубля — СБП по QR или номеру телефона, зачисление обычно до 15 минут; также карта Мир. Комиссии на стороне казино нет, взнос доходит целиком. Крипту под такую сумму брать невыгодно: комиссия сети сопоставима со взносом.</p></details>
+<details class="rk-q reveal"><summary>Можно ли вывести деньги после депозита в 50 ₽?</summary><p>Да, но у вывода бывает свой минимальный лимит, часто выше суммы депозита. На малых суммах 7K и Spinto не требуют паспорт, поэтому возврат остатка проходит быстро. Перед крупной игрой протестируйте вывод мелкой суммой.</p></details>
+<details class="rk-q reveal"><summary>Нужен ли паспорт при минимальном депозите?</summary><p>На малых суммах у 7K и Spinto верификацию не запрашивают. Полный KYC всплывает только при крупном выигрыше и выводе — это требование лицензии Curaçao. Пройти его лучше заранее, чтобы первая крупная выплата не зависла.</p></details>
 
-<div class="rk-k"><span class="ic">🛡</span>Доверие</div>
-<div class="rk-num">
-<div><b>9</b><span>площадок проверил кассой</span></div>
-<div><b>50 ₽</b><span>минимальный подтверждённый порог</span></div>
-<div><b>3 из 9</b><span>с реальными 50 ₽</span></div>
-<div><b>8 лет</b><span>в теме казино</span></div>
+<div class="rk-k reveal"><span class="ic">🛡</span>Доверие</div>
+<div class="rk-num reveal">
+<div><b data-count>9</b><span>площадок проверил кассой</span></div>
+<div><b data-count>50 ₽</b><span>минимальный подтверждённый порог</span></div>
+<div><b data-count>3 из 9</b><span>с реальными 50 ₽</span></div>
+<div><b data-count>8 лет</b><span>в теме казино</span></div>
 </div>
-<p class="rk-prose">Минимальные суммы я вносил лично через СБП и сверял с формой пополнения — цифры отражают реальный порог кассы на сентябрь 2026, а не рекламный баннер. Лицензия площадок — Curaçao. 18+, играйте ответственно. Партнёрские ссылки помечены как рекламные (nofollow sponsored) и не влияют на оценки — комиссия площадки не меняет позиции в рейтинге.</p>
+<p class="rk-prose reveal">Минимальные суммы я вносил лично через СБП и сверял с формой пополнения — цифры отражают реальный порог кассы на сентябрь 2026, а не рекламный баннер. Лицензия площадок — Curaçao. 18+, играйте ответственно. Партнёрские ссылки помечены как рекламные (nofollow sponsored) и не влияют на оценки — комиссия площадки не меняет позиции в рейтинге.</p>
 
-<div class="rk-k"><span class="ic">🔗</span>Ещё</div>
-<h2>Смежные подборки</h2>
-<div class="rk-links">
+<div class="rk-k reveal"><span class="ic">🔗</span>Ещё</div>
+<h2 class="reveal">Смежные подборки</h2>
+<div class="rk-links reveal">
 <a href="/">🏠 Главный рейтинг казино</a>
 <a href="/na-rubli/">₽ Казино на рубли</a>
 <a href="/sbp/">⚡ Пополнение через СБП</a>
@@ -431,5 +617,53 @@ h3{line-height:1.25}
 <p>Информационный материал, отражает личный опыт автора. Переходы помечены как рекламные (nofollow sponsored); партнёрские ссылки не влияют на оценки.</p>
 <p>© 2026 rejting-kazino777.top</p>
 </div></footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // sticky header shadow
+  var top = document.querySelector('.rk-top');
+  function onScroll(){ if(top) top.classList.toggle('scrolled', window.scrollY > 8); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // scroll-reveal
+  var revEls = [].slice.call(document.querySelectorAll('.reveal'));
+  if(reduce || !('IntersectionObserver' in window)){
+    revEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.12});
+    revEls.forEach(function(el){ io.observe(el); });
+  }
+
+  // count-up for trust numbers (preserve suffix)
+  var nums = [].slice.call(document.querySelectorAll('[data-count]'));
+  function runCount(el){
+    var full = el.textContent;
+    var m = full.match(/^(\d+)([\s\S]*)$/);
+    if(!m){ return; }
+    var target = parseInt(m[1],10), rest = m[2], dur = 1100, start = null;
+    if(reduce){ return; }
+    function step(ts){
+      if(start===null) start = ts;
+      var p = Math.min((ts-start)/dur, 1);
+      var val = Math.round((0.1 + 0.9*(1-Math.pow(1-p,3))) * target); // ease-out cubic
+      if(p<1){ el.textContent = val + rest; requestAnimationFrame(step); }
+      else { el.textContent = target + rest; }
+    }
+    requestAnimationFrame(step);
+  }
+  if(!reduce && ('IntersectionObserver' in window)){
+    var io2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ runCount(e.target); io2.unobserve(e.target); } });
+    }, {threshold:0.5});
+    nums.forEach(function(el){ io2.observe(el); });
+  }
+})();
+</script>
 </body>
 </html>
