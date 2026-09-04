@@ -43,7 +43,7 @@
     --ink:#06070e; --ink2:#0b0d1a; --pan:#111426; --pan2:#161a30;
     --hair:rgba(255,255,255,.08); --hair2:rgba(255,255,255,.14);
     --tx:#eef0fb; --mu:#9096b4; --dm:#6c7194;
-    --neon:#b8ff2b; --neon-d:#8fd400; --hot:#ff2e93; --gold:#ffcf3f; --cyan:#37e0c8; --sky:#6cc4ff; --amber:#ffa63d;
+    --neon:#b8ff2b; --neon-d:#8fd400; --hot:#ff2e93; --gold:#ffcf3f; --cyan:#37e0c8; --sky:#6cc4ff; --amber:#ffa63d; --viol:#a879ff;
     --r:20px; --r-s:13px;
     --w:1160px;
     --ez:cubic-bezier(.22,1,.36,1);
@@ -117,9 +117,25 @@
   .g-neon{background:var(--g-neon);-webkit-background-clip:text;background-clip:text;color:transparent}
   .g-hot{background:var(--g-hot);-webkit-background-clip:text;background-clip:text;color:transparent}
   .g-gold{background:var(--g-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .g-cyan{background:linear-gradient(105deg,var(--cyan),#12a892);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .g-sky{background:linear-gradient(105deg,var(--sky),#2a86e0);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .g-viol{background:linear-gradient(105deg,var(--viol),#7d4fd6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hl-neon{color:var(--neon);font-weight:700}
+  .hl-hot{color:var(--hot);font-weight:700}
+  .hl-gold{color:var(--gold);font-weight:700}
+  .hl-cyan{color:var(--cyan);font-weight:700}
+  .hl-sky{color:var(--sky);font-weight:700}
+  .hl-amber{color:var(--amber);font-weight:700}
+  .hl-viol{color:var(--viol);font-weight:700}
   h2{font-family:"Unbounded",sans-serif;font-weight:900;font-size:clamp(21px,3.3vw,31px);line-height:1.18;letter-spacing:-.015em;margin:12px 0 14px}
   .md-h2v{font-family:"Unbounded",sans-serif;font-weight:900;font-size:clamp(21px,3.3vw,31px);line-height:1.18;letter-spacing:-.015em;margin:12px 0 14px}
-  h3{font-family:"Sora",sans-serif;font-weight:700;font-size:clamp(17px,2.4vw,20px);margin:24px 0 8px;color:#e7eaff}
+  h3{--h3c:var(--gold);--h3c2:#e0952f;font-family:"Sora",sans-serif;font-weight:800;font-size:clamp(17px,2.4vw,20px);margin:24px 0 8px;line-height:1.25;display:flex;align-items:baseline;gap:.55em;background:linear-gradient(100deg,var(--h3c),var(--h3c2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  h3::before{content:"";flex:0 0 auto;align-self:center;width:9px;height:9px;border-radius:3px;background:linear-gradient(135deg,var(--h3c),var(--h3c2));box-shadow:0 0 13px -1px var(--h3c);transform:rotate(45deg)}
+  h3.h-neon{--h3c:var(--neon);--h3c2:var(--neon-d)}
+  h3.h-hot{--h3c:var(--hot);--h3c2:#c81f6f}
+  h3.h-cyan{--h3c:var(--cyan);--h3c2:#12a892}
+  h3.h-sky{--h3c:var(--sky);--h3c2:#2a86e0}
+  h3.h-viol{--h3c:var(--viol);--h3c2:#7d4fd6}
   .md-sect{padding:50px 0 8px;position:relative}
   .md-sh{position:relative;margin-bottom:14px}
   .md-sh .md-kick{margin-bottom:11px}
@@ -208,7 +224,11 @@
   .md-strip .u{padding:24px 18px;text-align:center;border-right:1px solid var(--hair);position:relative;overflow:hidden}
   .md-strip .u:last-child{border-right:0}
   .md-strip .u .wm{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:"Unbounded",sans-serif;font-weight:900;font-size:84px;color:rgba(255,255,255,.03);pointer-events:none;line-height:.8}
-  .md-strip .u .v{font-family:"Unbounded",sans-serif;font-size:clamp(23px,3.5vw,33px);font-weight:900;background:var(--g-gold);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;position:relative;z-index:1}
+  .md-strip .u{--uc:var(--gold);--uc2:#e0952f}
+  .md-strip .u:nth-child(2){--uc:var(--neon);--uc2:var(--neon-d)}
+  .md-strip .u:nth-child(3){--uc:var(--cyan);--uc2:#12a892}
+  .md-strip .u:nth-child(4){--uc:var(--hot);--uc2:#c81f6f}
+  .md-strip .u .v{font-family:"Unbounded",sans-serif;font-size:clamp(23px,3.5vw,33px);font-weight:900;background:linear-gradient(105deg,var(--uc),var(--uc2));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;position:relative;z-index:1}
   .md-strip .u .l{font-size:12.5px;color:var(--mu);margin-top:6px;position:relative;z-index:1}
   @media(max-width:620px){.md-strip .md-shell{grid-template-columns:repeat(2,1fr)}.md-strip .u:nth-child(2n){border-right:0}.md-strip .u{border-bottom:1px solid var(--hair)}}
 
@@ -222,7 +242,7 @@
   .md-medal.g{animation:md-pulse 3s var(--ez) infinite}
   @keyframes md-pulse{0%,100%{box-shadow:0 0 20px -5px var(--c)}50%{box-shadow:0 0 38px 0 var(--c)}}
   .md-card:hover .md-medal{transform:translateY(-1px) scale(1.05)}
-  .md-mid .bn{font-family:"Sora",sans-serif;font-weight:700;font-size:18px;color:var(--tx);line-height:1.1}
+  .md-mid .bn{font-family:"Sora",sans-serif;font-weight:800;font-size:18px;color:var(--c);line-height:1.1;text-shadow:0 0 22px color-mix(in srgb,var(--c) 38%,transparent)}
   .md-mid .bt{display:inline-block;font-size:11px;font-weight:700;color:var(--c);margin-top:6px;padding:3px 10px;border-radius:7px;background:color-mix(in srgb,var(--c) 13%,transparent);border-left:3px solid var(--c)}
   .md-mid .prm{margin:9px 0 0;font-size:13px;color:var(--mu);display:flex;flex-wrap:wrap;gap:6px 14px}
   .md-mid .prm b{color:#d7dbf2;font-weight:600}
@@ -242,7 +262,7 @@
   /* per-rank palette */
   .md-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .md-card.r2{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
-  .md-card.r3{--c:var(--cyan);--c2:#12a892;--ct:#04231e;background:linear-gradient(120deg,rgba(55,224,200,.09),var(--pan) 72%)}
+  .md-card.r3{--c:#f0a35a;--c2:#c9752e;--ct:#2a1600;background:linear-gradient(120deg,rgba(240,163,90,.1),var(--pan) 72%)}
   .md-card.r4{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
   .md-card.r5{--c:var(--hot);--c2:#c81f6f;--ct:#fff}
   .md-card.r6{--c:var(--sky);--c2:#2a86e0;--ct:#04121f}
@@ -300,9 +320,13 @@
   .md-cols.flip .md-c-txt{order:2}
   @media(max-width:940px){.md-cols{grid-template-columns:1fr;gap:28px}.md-cols.flip .md-c-txt{order:0}}
 
-  .md-side{position:relative;border-radius:var(--r);background:linear-gradient(168deg,var(--pan2),var(--pan));border:1px solid var(--hair2);box-shadow:var(--sh);padding:24px;overflow:visible}
-  .md-side .wm{position:absolute;right:14px;top:-6px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:104px;line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(255,207,63,.09);opacity:.5;pointer-events:none;user-select:none}
-  .md-side .big{font-family:"Unbounded",sans-serif;font-weight:900;font-size:clamp(38px,7vw,60px);line-height:.95;background:var(--g-gold);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;z-index:1}
+  .md-side{--sc:var(--gold);--sc2:#e0952f;position:relative;border-radius:var(--r);background:linear-gradient(168deg,var(--pan2),var(--pan));border:1px solid color-mix(in srgb,var(--sc) 26%,var(--hair2));box-shadow:var(--sh);padding:24px 24px 24px 27px;overflow:visible}
+  .md-side::after{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:3px;background:linear-gradient(180deg,var(--sc),var(--sc2));box-shadow:0 0 16px -2px var(--sc)}
+  .md-side.sd-neon{--sc:var(--neon);--sc2:var(--neon-d)}
+  .md-side.sd-hot{--sc:var(--hot);--sc2:#c81f6f}
+  .md-side.sd-cyan{--sc:var(--cyan);--sc2:#12a892}
+  .md-side .wm{position:absolute;right:14px;top:-6px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:104px;line-height:.8;color:transparent;-webkit-text-stroke:1px color-mix(in srgb,var(--sc) 40%,transparent);opacity:.5;pointer-events:none;user-select:none}
+  .md-side .big{font-family:"Unbounded",sans-serif;font-weight:900;font-size:clamp(38px,7vw,60px);line-height:.95;background:linear-gradient(105deg,var(--sc),var(--sc2));-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;z-index:1}
   .md-side .cap{color:var(--mu);font-size:14px;margin-top:2px;position:relative;z-index:1}
   .md-side .rows{margin-top:16px;border-top:1px dashed var(--hair2);padding-top:14px;position:relative;z-index:1}
   .md-side .rows div{display:flex;justify-content:space-between;gap:12px;font-size:13.5px;padding:6px 0;color:#d3d7ee}
@@ -315,22 +339,35 @@
 
   /* ---------- method bars ---------- */
   .md-crits{display:grid;grid-template-columns:1fr;gap:10px;margin:16px 0}
-  .md-crit{background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);border-radius:var(--r);padding:14px 18px;transition:transform .25s,border-color .25s}
-  .md-crit:hover{transform:translateY(-3px);border-color:var(--hair2)}
+  .md-crit{--cc:var(--gold);--cc2:#e0952f;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);border-radius:var(--r);padding:14px 18px;transition:transform .25s,border-color .25s,box-shadow .25s}
+  .md-crit:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--cc) 48%,var(--hair));box-shadow:0 18px 40px -24px color-mix(in srgb,var(--cc) 70%,#000)}
   .md-crit .hd{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-  .md-crit .hd span:first-child{font-weight:700;font-size:15px}
-  .md-crit .w{font-family:"Unbounded",sans-serif;font-weight:800;color:var(--gold);font-size:15px}
+  .md-crit .hd span:first-child{font-weight:800;font-size:15px;color:color-mix(in srgb,var(--cc) 60%,#eef0fb)}
+  .md-crit .w{font-family:"Unbounded",sans-serif;font-weight:800;color:var(--cc);font-size:15px}
   .md-bar{height:8px;border-radius:6px;background:rgba(255,255,255,.07);margin:10px 0 6px;overflow:hidden}
-  .md-bar span{display:block;height:100%;width:0;border-radius:6px;background:var(--g-gold);transition:width 1.2s var(--ez)}
+  .md-bar span{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--cc2),var(--cc));box-shadow:0 0 14px -3px var(--cc);transition:width 1.2s var(--ez)}
   .md-crit p{margin:6px 0 0;font-size:13.5px;color:var(--mu)}
+  .md-crits .md-crit:nth-of-type(1){--cc:var(--gold);--cc2:#e0952f}
+  .md-crits .md-crit:nth-of-type(2){--cc:var(--neon);--cc2:var(--neon-d)}
+  .md-crits .md-crit:nth-of-type(3){--cc:var(--hot);--cc2:#c81f6f}
+  .md-crits .md-crit:nth-of-type(4){--cc:var(--cyan);--cc2:#12a892}
+  .md-crits .md-crit:nth-of-type(5){--cc:var(--sky);--cc2:#2a86e0}
+  .md-crits .md-crit:nth-of-type(6){--cc:var(--amber);--cc2:#e07a12}
+  .md-crits .md-crit:nth-of-type(7){--cc:var(--viol);--cc2:#7d4fd6}
 
   /* ---------- reviews ---------- */
   .md-rev{position:relative;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--sh);padding:22px 24px;margin:15px 0;transition:transform .3s,border-color .3s,box-shadow .3s;overflow:hidden}
   .md-rev:hover{transform:translateY(-3px);border-color:var(--hair2);box-shadow:0 26px 56px -26px rgba(255,207,63,.22)}
   .md-rev .wm{position:absolute;right:16px;top:-16px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:90px;line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);opacity:.5;pointer-events:none;user-select:none}
   .md-rev .rh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between;position:relative;z-index:1}
-  .md-rev .rh .nm{font-family:"Unbounded",sans-serif;font-size:clamp(18px,2.6vw,22px);font-weight:800}
-  .md-rev .rh .nm span{font-family:"Manrope",sans-serif;font-size:12.5px;font-weight:600;color:var(--mu);margin-left:8px}
+  .md-rev .rh .nm{--nc:var(--gold);font-family:"Unbounded",sans-serif;font-size:clamp(18px,2.6vw,22px);font-weight:800;color:var(--nc);text-shadow:0 0 26px color-mix(in srgb,var(--nc) 34%,transparent)}
+  .md-rev .rh .nm.c-gold{--nc:var(--gold)}
+  .md-rev .rh .nm.c-silv{--nc:#e6eaf3}
+  .md-rev .rh .nm.c-brnz{--nc:#f0a35a}
+  .md-rev .rh .nm.c-neon{--nc:var(--neon)}
+  .md-rev .rh .nm.c-hot{--nc:var(--hot)}
+  .md-rev .rh .nm.c-cyan{--nc:var(--cyan)}
+  .md-rev .rh .nm span{font-family:"Manrope",sans-serif;font-size:12.5px;font-weight:600;color:var(--mu);margin-left:8px;text-shadow:none}
   .md-rev .rh .sc{font-family:"Unbounded",sans-serif;font-weight:800;font-size:17px;color:var(--gold)}
   .md-rev>p{margin:14px 0 0;color:#d3d7ee;position:relative;z-index:1}
   .md-pc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 4px;position:relative;z-index:1}
@@ -411,8 +448,13 @@
   /* ---------- trust ---------- */
   .md-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0;text-align:center}
   .md-stats .st{position:relative;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);border-radius:var(--r);padding:22px 12px;transition:transform .25s,border-color .25s;overflow:hidden}
-  .md-stats .st:hover{transform:translateY(-3px);border-color:rgba(255,207,63,.34)}
-  .md-stats .n{font-family:"Unbounded",sans-serif;font-size:clamp(25px,4vw,33px);font-weight:900;background:var(--g-gold);-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;z-index:1}
+  .md-stats .st{--tc:var(--gold);--tc2:#e0952f}
+  .md-stats .st:nth-child(2){--tc:var(--neon);--tc2:var(--neon-d)}
+  .md-stats .st:nth-child(3){--tc:var(--cyan);--tc2:#12a892}
+  .md-stats .st:nth-child(4){--tc:var(--sky);--tc2:#2a86e0}
+  .md-stats .st:nth-child(5){--tc:var(--hot);--tc2:#c81f6f}
+  .md-stats .st:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--tc) 40%,var(--hair))}
+  .md-stats .n{font-family:"Unbounded",sans-serif;font-size:clamp(25px,4vw,33px);font-weight:900;background:linear-gradient(105deg,var(--tc),var(--tc2));-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;z-index:1}
   .md-stats .l{font-size:12.5px;color:var(--mu);margin-top:4px;position:relative;z-index:1}
 
   .md-disc{background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);border-radius:var(--r);box-shadow:var(--sh);padding:18px 20px;margin:18px 0;font-size:13.5px;color:var(--mu)}
@@ -423,6 +465,17 @@
   .md-links{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
   .md-links a{padding:9px 15px;background:var(--pan);border:1px solid var(--hair);border-radius:999px;color:var(--tx);font-size:13.5px;font-weight:600;transition:transform .2s,border-color .2s,color .2s}
   .md-links a:hover{transform:translateY(-2px);border-color:rgba(255,207,63,.34);color:var(--gold)}
+
+  /* ---------- brand review / slot cards (multicolor interlinking) ---------- */
+  .md-brands{display:grid;grid-template-columns:repeat(auto-fill,minmax(198px,1fr));gap:11px;margin:18px 0}
+  .md-brands a{--bc:var(--gold);--bc2:#e0952f;position:relative;display:flex;flex-direction:column;gap:6px;padding:15px 17px 14px;border-radius:15px;background:linear-gradient(165deg,var(--pan2),var(--pan));border:1px solid var(--hair);overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s}
+  .md-brands a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--bc),var(--bc2))}
+  .md-brands a:hover{transform:translateY(-3px);border-color:var(--bc);box-shadow:0 16px 34px -18px var(--bc)}
+  .md-brands a .bnm{font-family:"Sora",sans-serif;font-weight:800;font-size:16px;color:var(--bc);line-height:1.1;text-shadow:0 0 22px color-mix(in srgb,var(--bc) 34%,transparent)}
+  .md-brands a .bds{color:var(--mu);font-size:12.5px;line-height:1.4}
+  .md-brands a .bmore{margin-top:2px;display:inline-flex;align-items:center;gap:5px;font-family:"Unbounded",sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--bc)}
+  .md-brands a .bsc{position:absolute;top:13px;right:14px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:14px;color:var(--bc)}
+  .md-brands a .bpills{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}
 
   footer{border-top:1px solid var(--hair);margin-top:54px;padding:32px 0 48px;color:var(--mu);font-size:13px}
   footer .age{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--tx);border:1px solid var(--hair2);border-radius:10px;padding:8px 14px;margin-bottom:16px}
@@ -476,9 +529,9 @@
     <div class="md-hero-grid">
       <div>
         <span class="md-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка кассой · обновлено 4 сентября 2026</span>
-        <h1 class="rv" style="--d:.08s">Казино с минимальным депозитом: где реально войти <span class="g-gold">от 50 ₽</span> и что за это дают в 2026</h1>
+        <h1 class="rv" style="--d:.08s">Казино с <span class="g-neon">минимальным депозитом</span>: где реально войти <span class="g-gold">от 50 ₽</span> и что за это дают в <span class="g-hot">2026</span></h1>
         <p class="md-lead rv" style="--d:.16s">
-          Самый низкий рабочий порог редакция подтвердила у <b>PokerDom — 50 ₽</b>. У большинства площадок топа минимум <b>100 ₽</b>, у отдельных касс — 300 ₽. Мы закидывали минималку через СБП, карту Мир и USDT, отыгрывали бонус и запрашивали вывод. Ниже — рейтинг из 10 казино по реальному порогу входа, сравнение 50 / 100 / 300 ₽ и ответ, дают ли бонус с маленького депозита.
+          Самый низкий рабочий порог редакция подтвердила у <span class="hl-cyan">PokerDom</span> — <b>50 ₽</b>. У большинства площадок топа минимум <b>100 ₽</b>, у отдельных касс — <span class="hl-amber">300 ₽</span>. Мы закидывали минималку через <span class="hl-sky">СБП</span>, <span class="hl-hot">карту Мир</span> и <span class="hl-viol">USDT</span>, отыгрывали бонус и запрашивали вывод. Ниже — рейтинг из 10 казино по реальному порогу входа, сравнение <span class="hl-neon">50</span> / <span class="hl-gold">100</span> / <span class="hl-amber">300 ₽</span> и ответ, дают ли бонус с маленького депозита.
         </p>
         <div class="md-ladder rv" style="--d:.2s" aria-hidden="false">
           <div class="step best"><div class="amt">50 ₽</div><small>минимум рынка · PokerDom</small></div>
@@ -546,7 +599,7 @@
         </ul>
         <p>Короче так. Минимальный депозит — это про попробовать, а не про заработать. Пока хоть один из пяти вопросов без числа — площадку в рейтинг мы не берём.</p>
       </div>
-      <aside class="md-side hasfoot rv">
+      <aside class="md-side sd-neon hasfoot rv">
         <span class="wm" aria-hidden="true">₽</span>
         <span class="md-ribbon neon" style="top:-13px;left:20px;transform:rotate(-2deg)">Замер</span>
         <div class="floatb"><span class="fv">100%</span><span class="fl">депозитов — на реальные деньги</span></div>
@@ -738,7 +791,7 @@
   <section class="md-sect" id="method">
     <div class="md-sh rv">
       <span class="md-kick">Прозрачно</span>
-      <h2>Методика: как редакция проверяла <span class="g-gold">минимальный депозит</span> кассой</h2>
+      <h2>Методика: как редакция проверяла <span class="g-neon">минимальный депозит</span> кассой</h2>
     </div>
     <p class="rv">Порог входа мы не переписываем с баннера казино — там любят указать «от 1 ₽», а на деле касса не пропустит платёж меньше 100. Каждую цифру Денис Кравцов подтверждал реальным переводом: закидывал заявленный минимум и смотрел, зачислится ли. Итоговый балл складывается из семи критериев с фиксированными весами.</p>
     <div class="md-tbox md-scroll rv" style="margin:16px 0">
@@ -756,13 +809,13 @@
       </table>
     </div>
     <div class="md-crits">
-      <div class="md-crit rv"><div class="hd"><span>Реальный порог входа</span><span class="w">24%</span></div><div class="md-bar"><span data-w="100"></span></div><p>Главный критерий этой страницы. Проверяем не рекламный «от 1 ₽», а сумму, которую касса реально зачислит на баланс. Расхождение с баннером снижает балл.</p></div>
-      <div class="md-crit rv"><div class="hd"><span>Касса и вывод</span><span class="w">20%</span></div><div class="md-bar"><span data-w="83"></span></div><p>Минимум на вывод, скорость по каждому методу в минутах, комиссии. У малых сумм комиссия кусается сильнее — за это снимаем.</p></div>
-      <div class="md-crit rv"><div class="hd"><span>Бонус с малого депозита</span><span class="w">18%</span></div><div class="md-bar"><span data-w="75"></span></div><p>От какой суммы активируется приветственный пакет и какой реальный вейджер. Бонус, который не стартует со 100 ₽, ценим ниже.</p></div>
-      <div class="md-crit rv"><div class="hd"><span>Лицензия и безопасность</span><span class="w">16%</span></div><div class="md-bar"><span data-w="67"></span></div><p>Кюрасао GCB 8048, Anjouan или RU-разрешение — с проверяемым номером, а не логотипом. SSL и сертифицированный ГСЧ у провайдеров.</p></div>
-      <div class="md-crit rv"><div class="hd"><span>Игры под низкую ставку</span><span class="w">12%</span></div><div class="md-bar"><span data-w="50"></span></div><p>Есть ли слоты со ставкой от 1–10 ₽ за спин. С депозитом 100 ₽ важно, чтобы игры хватило хотя бы на вечер.</p></div>
-      <div class="md-crit rv"><div class="hd"><span>Мобильная касса</span><span class="w">6%</span></div><div class="md-bar"><span data-w="25"></span></div><p>Пополнение минималки через СБП с телефона, полный кабинет и вывод без десктопа.</p></div>
-      <div class="md-crit rv"><div class="hd"><span>Репутация и отзывы</span><span class="w">4%</span></div><div class="md-bar"><span data-w="17"></span></div><p>Смотрим структуру жалоб на малые депозиты: «съели 100 ₽ и заблокировали» — красный флаг. Средняя звезда без разбора — пустой сигнал.</p></div>
+      <div class="md-crit rv"><div class="hd"><span>Реальный порог входа</span><span class="w">24%</span></div><div class="md-bar"><span data-w="100"></span></div><p>Главный критерий этой страницы: проверяем не рекламный «от 1 ₽» на баннере, а сумму, которую касса реально зачисляет на баланс. Денис закидывает заявленный минимум через СБП, карту и крипту и смотрит, пройдёт ли платёж без «доплати до 500». За каждое расхождение витрины с кассой снимаем баллы, а при разнице в разы бренд вылетает из топа.</p></div>
+      <div class="md-crit rv"><div class="hd"><span>Касса и вывод</span><span class="w">20%</span></div><div class="md-bar"><span data-w="83"></span></div><p>Замеряем минимальную сумму на вывод, скорость по каждому методу в реальных минутах и комиссии на малых суммах. Заявки редакция подаёт с тестовых балансов 500–1 000 ₽ и засекает время до зачисления на карту, СБП и USDT. Снимаем за высокий порог вывода, скрытые проценты и задержки сверх заявленных лимитов.</p></div>
+      <div class="md-crit rv"><div class="hd"><span>Бонус с малого депозита</span><span class="w">18%</span></div><div class="md-bar"><span data-w="75"></span></div><p>Смотрим, с какой суммы стартует приветственный пакет и какой у него реальный вейджер — x35–x45 считаем нормой. Активируем бонус вручную со 100 ₽ и проверяем, начисляется ли он или касса требует доплатить до 300–500 ₽. Бонус, который не включается с минималки, и вейджер x50+ понижают оценку.</p></div>
+      <div class="md-crit rv"><div class="hd"><span>Лицензия и безопасность</span><span class="w">16%</span></div><div class="md-bar"><span data-w="67"></span></div><p>Сверяем действующий регулятор — Кюрасао GCB 8048, Anjouan или RU-разрешение — по номеру в реестре, а не по логотипу в подвале. Ольга проверяет юрлицо-держателя, SSL и сертификаты ГСЧ у провайдеров. За лицензию «на картинке» без рабочего номера снимаем сразу и жёстко.</p></div>
+      <div class="md-crit rv"><div class="hd"><span>Игры под низкую ставку</span><span class="w">12%</span></div><div class="md-bar"><span data-w="50"></span></div><p>Проверяем, есть ли слоты со ставкой от 1–10 ₽ за спин и сколько провайдеров реально доступно на минимальном балансе. С депозитом 100 ₽ важно, чтобы игры хватило хотя бы на вечер, а не на десять спинов. Каталог из тысяч тайтлов, но с минимальной ставкой 50 ₽, баллов не добавляет.</p></div>
+      <div class="md-crit rv"><div class="hd"><span>Мобильная касса</span><span class="w">6%</span></div><div class="md-bar"><span data-w="25"></span></div><p>Проходим весь путь с телефона: пополнение минималки через СБП прямо из приложения банка, отыгрыш, заявку на вывод и KYC. Оцениваем полноту мобильного кабинета и стабильность кассы под нагрузкой. Снимаем, если на смартфоне отваливается платёж или часть методов доступна только с десктопа.</p></div>
+      <div class="md-crit rv"><div class="hd"><span>Репутация и отзывы</span><span class="w">4%</span></div><div class="md-bar"><span data-w="17"></span></div><p>Разбираем структуру жалоб на малые депозиты: «съели 100 ₽ и заблокировали под мультиаккаунт» — красный флаг, а средняя звезда без разбора — пустой сигнал. Считаем долю решённых споров, стаж бренда и историю выплат по нашим прошлым замерам. Свежие массовые жалобы на зажатые минималки роняют оценку быстрее всего.</p></div>
     </div>
   </section>
 
@@ -770,7 +823,7 @@
   <section class="md-sect" id="pay">
     <div class="md-sh rv">
       <span class="md-kick">Порог по методам</span>
-      <h2>Порог входа по способам пополнения: <span class="g-gold">сколько нужно</span> для СБП, карты и крипты</h2>
+      <h2>Порог входа по способам пополнения: <span class="g-cyan">сколько нужно</span> для СБП, карты и крипты</h2>
     </div>
     <div class="md-cols top">
       <div class="md-c-txt">
@@ -808,14 +861,14 @@
   <section class="md-sect md-prose" id="sbp">
     <div class="md-sh rv">
       <span class="md-kick">Инструкция</span>
-      <h2>Пополнение от 50 ₽ через СБП: <span class="g-gold">как закинуть минималку</span></h2>
+      <h2>Пополнение от 50 ₽ через СБП: <span class="g-neon">как закинуть минималку</span></h2>
     </div>
     <p class="rv">СБП стал главным способом для маленьких депозитов — быстро, без карты и без комиссии. Разберём три сценария входа, которые редакция прошла сама.</p>
-    <h3 class="rv">Через СБП по номеру телефона</h3>
+    <h3 class="rv h-neon">Через СБП по номеру телефона</h3>
     <p class="rv">Открываете кассу, выбираете «СБП», вводите сумму от 50–100 ₽. Приложение банка ловит запрос по номеру телефона, подтверждаете — деньги на балансе за 10–20 секунд. Это самый дешёвый и быстрый вход, комиссии казино не берёт.</p>
-    <h3 class="rv">Через карту Мир</h3>
+    <h3 class="rv h-cyan">Через карту Мир</h3>
     <p class="rv">Карта Мир проходит напрямую у большинства площадок топа. Минимум чуть выше — 100–200 ₽, зачисление мгновенное. Удобно, если не пользуетесь СБП, но помните: выводить лучше тем же методом, каким пополняли.</p>
-    <h3 class="rv">Через криптовалюту</h3>
+    <h3 class="rv h-viol">Через криптовалюту</h3>
     <p class="rv">USDT в сети TRC-20 или биткоин — вход от эквивалента 100 ₽. Депозит подтверждается за 1–5 минут в зависимости от сети. Для минималки крипта избыточна, но если играете на USDT — комиссия сети мелкая, а вывод потом быстрее карты.</p>
   </section>
 
@@ -823,7 +876,7 @@
   <section class="md-sect md-prose" id="from100">
     <div class="md-sh rv">
       <span class="md-kick">Порог 100 ₽</span>
-      <h2>Топ казино с депозитом от 100 рублей: <span class="g-gold">где старт самый низкий</span></h2>
+      <h2>Топ казино с депозитом от 100 рублей: <span class="g-sky">где старт самый низкий</span></h2>
     </div>
     <p class="rv">Сто рублей — рыночная норма входа: восемь из десяти площадок топа пускают именно с этой суммы. За 100 ₽ вы получаете полноценный баланс, доступ ко всему каталогу слотов и, у большинства, право на приветственный бонус. Ниже 100 ₽ спускается только PokerDom — там порог 50 ₽, но приветственный пакет активируется с большей суммы.</p>
     <p class="rv">Что реально с депозитом 100 ₽. На слотах со ставкой 1–5 ₽ за спин этой суммы хватает на 20–100 вращений — достаточно, чтобы оценить кассу и поймать бонусную игру. Заработать 100 ₽ вряд ли даст, а вот протестировать площадку без риска — да. Именно для этого минимальный депозит и существует: закинули сотку, проверили вывод, дальше решаете.</p>
@@ -856,7 +909,7 @@
   <section class="md-sect" id="slots">
     <div class="md-sh rv">
       <span class="md-kick">Игры под маленький банк</span>
-      <h2>На каких автоматах <span class="g-gold">минимальная ставка</span> при маленьком депозите</h2>
+      <h2>На каких автоматах <span class="g-hot">минимальная ставка</span> при маленьком депозите</h2>
     </div>
     <p class="rv">С депозитом 100 ₽ ключевой вопрос — минимальная ставка за спин. Чем она ниже, тем дольше играете и тем больше шансов дождаться бонусной игры. RTP — параметр студии-провайдера, оператор его не крутит; редакция сверяет отдачу с данными Pragmatic Play, NetEnt и других. Ниже — популярные слоты с минимальной ставкой и реальным RTP.</p>
     <div class="md-tbox md-scroll rv" style="margin:16px 0">
@@ -874,7 +927,7 @@
         </tbody>
       </table>
     </div>
-    <h3 class="rv">Как растянуть депозит 100 ₽</h3>
+    <h3 class="rv h-hot">Как растянуть депозит 100 ₽</h3>
     <p class="rv md-prose">Правило простое. Со ста рублями берите низковолатильные слоты с минимальной ставкой — Starburst по 1 ₽ тянет долго, выигрыши мелкие и частые. Высокая волатильность вроде Sweet Bonanza при ставке 18 ₽ съест депозит за 5–6 спинов — либо занос, либо ноль. Под отыгрыш бонуса — низкая и средняя волатильность; под азарт на последней сотке — верх. Aviator и краш-игры позволяют ставить от 9 ₽, но множитель забирайте до вылета: жадность на краше карается быстрее всего.</p>
   </section>
 
@@ -904,7 +957,7 @@
   <section class="md-sect" id="wager">
     <div class="md-sh rv">
       <span class="md-kick">Отыгрыш</span>
-      <h2>Вейджер на минималке: <span class="g-gold">сколько реально прокрутить</span></h2>
+      <h2>Вейджер на минималке: <span class="g-viol">сколько реально прокрутить</span></h2>
     </div>
     <div class="md-cols">
       <div class="md-c-txt md-prose rv">
@@ -912,7 +965,7 @@
         <p>Важная арифметика для маленького депозита. Приветственный бонус со 100 ₽ — это ещё 100 ₽ бонусных, вейджер x40 = оборот 4 000 ₽. Достижимо, если играть низковолатильные слоты. А вот бездепозитный бонус почти всегда режется лимитом на вывод — обычно потолок 5 000 ₽, сколько бы вы ни выиграли. Это не обман, это стандартное правило, но его надо знать до старта.</p>
         <p>Совет от Марины. Если депозит маленький и цель — вывести хоть что-то, бонус иногда лучше не брать вовсе: без бонуса нет вейджера, и любой выигрыш можно выводить сразу после KYC. Считайте под свою задачу.</p>
       </div>
-      <aside class="md-side rv">
+      <aside class="md-side sd-hot rv">
         <span class="wm" aria-hidden="true">40</span>
         <span class="md-ribbon hot" style="top:-13px;left:20px;transform:rotate(-2deg)">Норма x35–x45</span>
         <div class="big">4 000 ₽</div>
@@ -936,7 +989,7 @@
 
     <div class="md-rev rv">
       <span class="wm" aria-hidden="true">01</span>
-      <div class="rh"><div class="nm">1. Vavada <span>лучший баланс порога и надёжности</span></div><div class="sc">9.6 / 10</div></div>
+      <div class="rh"><div class="nm c-gold">1. Vavada <span>лучший баланс порога и надёжности</span></div><div class="sc">9.6 / 10</div></div>
       <p>Вход от 100 ₽ через СБП, приветственный бонус стартует с той же сотки. Касса предсказуемая: USDT приходит за 9 минут по замерам, спорных ситуаций минимум. Бонус с минималки активируется без танцев — редкая честность для порога входа.</p>
       <div class="md-pc">
         <div class="cl pro"><h4>Плюсы</h4><ul><li>Бонус 100% + 100 FS стартует со 100 ₽</li><li>Быстрый вывод, USDT за 9 минут</li><li>СБП без комиссии от 100 ₽</li></ul></div>
@@ -947,7 +1000,7 @@
 
     <div class="md-rev rv">
       <span class="wm" aria-hidden="true">02</span>
-      <div class="rh"><div class="nm">2. 7K Casino <span>быстрый вывод с минималки</span></div><div class="sc">9.4 / 10</div></div>
+      <div class="rh"><div class="nm c-silv">2. 7K Casino <span>быстрый вывод с минималки</span></div><div class="sc">9.4 / 10</div></div>
       <p>Порог 100 ₽ и главная фишка — скорость кассы даже на малых суммах. Моментальные выводы на карту и СБП, приветственный пакет доступен с сотки. Если цель — закинуть немного и быстро проверить вывод, это первый кандидат.</p>
       <div class="md-pc">
         <div class="cl pro"><h4>Плюсы</h4><ul><li>Моментальные выплаты, низкий минимум вывода</li><li>Прозрачный вейджер x35</li><li>Удобное мобильное приложение</li></ul></div>
@@ -958,7 +1011,7 @@
 
     <div class="md-rev rv">
       <span class="wm" aria-hidden="true">03</span>
-      <div class="rh"><div class="nm">3. PokerDom <span>самый низкий порог — 50 ₽</span></div><div class="sc">9.3 / 10</div></div>
+      <div class="rh"><div class="nm c-brnz">3. PokerDom <span>самый низкий порог — 50 ₽</span></div><div class="sc">9.3 / 10</div></div>
       <p>Единственная площадка топа с реальным входом от 50 ₽. Плюс собственный покер-рум и приём рублёвых карт напрямую. Нюанс: сам депозит проходит от 50 ₽, а приветственный бонус активируется с 300 ₽ — минималка тут про «попробовать», не про пакет.</p>
       <div class="md-pc">
         <div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ — минимум рынка</li><li>Собственный покер-рум с турнирами</li><li>Приём карт РФ без посредников</li></ul></div>
@@ -969,7 +1022,7 @@
 
     <div class="md-rev rv">
       <span class="wm" aria-hidden="true">04</span>
-      <div class="rh"><div class="nm">4. 1win <span>казино и ставки от 100 ₽</span></div><div class="sc">9.2 / 10</div></div>
+      <div class="rh"><div class="nm c-neon">4. 1win <span>казино и ставки от 100 ₽</span></div><div class="sc">9.2 / 10</div></div>
       <p>Вход от 100 ₽, но за приветственным пакетом до 500% придётся закинуть от 300 ₽ — бонус растянут на четыре депозита. Сильная касса: вывод через СБП и крипту без комиссии. Разумный выбор, когда нужны и слот, и линия на матч под одним счётом.</p>
       <div class="md-pc">
         <div class="cl pro"><h4>Плюсы</h4><ul><li>Вывод через СБП и крипту без комиссии</li><li>Казино и ставки в одном кабинете</li><li>Большой каталог и live</li></ul></div>
@@ -980,7 +1033,7 @@
 
     <div class="md-rev rv">
       <span class="wm" aria-hidden="true">05</span>
-      <div class="rh"><div class="nm">5. Kent Casino <span>старт новичка</span></div><div class="sc">8.9 / 10</div></div>
+      <div class="rh"><div class="nm c-hot">5. Kent Casino <span>старт новичка</span></div><div class="sc">8.9 / 10</div></div>
       <p>Дружелюбный вход: порог 100 ₽, 250 фриспинов в пакете и простой интерфейс без лишнего. Бонус активируется с сотки — хороший вариант для первого захода, чтобы протестировать площадку и сразу получить фриспины.</p>
       <div class="md-pc">
         <div class="cl pro"><h4>Плюсы</h4><ul><li>Бонус стартует со 100 ₽</li><li>250 фриспинов в приветственном пакете</li><li>Простой и понятный интерфейс</li></ul></div>
@@ -991,7 +1044,7 @@
 
     <div class="md-rev rv">
       <span class="wm" aria-hidden="true">06</span>
-      <div class="rh"><div class="nm">6. Sol Casino <span>каталог под низкую ставку</span></div><div class="sc">9.0 / 10</div></div>
+      <div class="rh"><div class="nm c-cyan">6. Sol Casino <span>каталог под низкую ставку</span></div><div class="sc">9.0 / 10</div></div>
       <p>Порог чуть выше — 150 ₽, зато свыше 7 000 слотов и еженедельный кэшбэк до 10%. Много игр со ставкой от 1–5 ₽ за спин, так что даже с небольшого депозита хватает надолго. Один из ветеранов, стабильно попадающих в топ.</p>
       <div class="md-pc">
         <div class="cl pro"><h4>Плюсы</h4><ul><li>7 000+ слотов, много игр со ставкой от 1 ₽</li><li>Еженедельный кэшбэк без сложных условий</li><li>Бонус со 150 ₽</li></ul></div>
@@ -1005,10 +1058,10 @@
   <section class="md-sect" id="cashout">
     <div class="md-sh rv">
       <span class="md-kick">Вывод</span>
-      <h2>Как вывести деньги <span class="g-gold">после депозита от 50 ₽</span></h2>
+      <h2>Как вывести деньги <span class="g-cyan">после депозита от 50 ₽</span></h2>
     </div>
     <div class="md-cols flip">
-      <aside class="md-side hasfoot rv">
+      <aside class="md-side sd-neon hasfoot rv">
         <span class="wm" aria-hidden="true">₽</span>
         <span class="md-ribbon neon" style="top:-13px;left:20px;transform:rotate(-2deg)">Порог вывода</span>
         <div class="floatb"><span class="fv">500 ₽</span><span class="fl">минимальная заявка на вывод</span></div>
@@ -1033,12 +1086,12 @@
   <section class="md-sect md-prose" id="nopassport">
     <div class="md-sh rv">
       <span class="md-kick">Без паспорта и с телефона</span>
-      <h2>Казино с минимальным депозитом <span class="g-gold">без паспорта и с телефона</span></h2>
+      <h2>Казино с минимальным депозитом <span class="g-neon">без паспорта и с телефона</span></h2>
     </div>
     <p class="rv">Два частых запроса под минималку — «без верификации» и «с телефона». Разберём честно, без обещаний.</p>
-    <h3 class="rv">Депозит и игра без паспорта</h3>
+    <h3 class="rv h-neon">Депозит и игра без паспорта</h3>
     <p class="rv">Закинуть 50–100 ₽ и играть можно без всякой верификации — KYC для депозита не нужен нигде. Паспорт и селфи просят при первом выводе, и то не всегда: часть площадок пропускает выплаты до 15 000 ₽ без полной проверки. Полностью анонимного вывода крупных сумм не бывает — это требование лицензии и антиотмывочных правил, а не каприз казино. Обещания «вывод без паспорта на любые суммы» — маркер скама.</p>
-    <h3 class="rv">Пополнение минималки с телефона</h3>
+    <h3 class="rv h-cyan">Пополнение минималки с телефона</h3>
     <p class="rv">С телефона удобнее всего: СБП работает прямо из приложения банка, минимум 50–100 ₽, зачисление за секунды. Мобильные версии у топ-площадок держат полный кабинет — депозит, вывод, бонусы и KYC доступны без десктопа. Отдельное приложение есть у 7K, Legzo и 1win; остальные работают через адаптивный сайт, что для минималки достаточно.</p>
   </section>
 
@@ -1046,7 +1099,7 @@
   <section class="md-sect md-prose" id="crypto">
     <div class="md-sh rv">
       <span class="md-kick">Крипта на минималке</span>
-      <h2>Крипто-казино с минимальным депозитом: <span class="g-gold">USDT и биткоин</span> от 100 ₽</h2>
+      <h2>Крипто-казино с минимальным депозитом: <span class="g-viol">USDT и биткоин</span> от 100 ₽</h2>
     </div>
     <p class="rv">Крипта на минимальном депозите — история про скорость вывода, а не про дешёвый вход. Порог по USDT в сети TRC-20 или биткоину примерно равен эквиваленту 100 ₽, депозит подтверждается за 1–5 минут. Комиссию берёт не казино, а сама сеть: у TRC-20 она копеечная, у биткоина при загрузке сети — заметнее.</p>
     <p class="rv">Зачем крипта, если СБП пускает от 50 ₽ и без комиссии. Ответ в выводе: USDT приходит за 8–25 минут против суток на карту Мир. Если вы уже держите стейблкоины — минималкой на USDT входить логично, вывод потом будет самым быстрым из всех методов. Если крипты нет — ради депозита 100 ₽ заводить кошелёк смысла мало, СБП проще. Крипто-казино из топа — 1win, Izzi и Vavada принимают USDT и BTC наравне с рублёвыми методами.</p>
@@ -1056,7 +1109,7 @@
   <section class="md-sect" id="cases">
     <div class="md-sh rv">
       <span class="md-kick">Замеры</span>
-      <h2>Реальные кейсы: <span class="g-gold">заносы с минимального депозита</span></h2>
+      <h2>Реальные кейсы: <span class="g-hot">заносы с минимального депозита</span></h2>
     </div>
     <p class="rv">Ниже — типичные сценарии по нашим тестовым депозитам от 50 до 300 ₽. Суммы и сроки — реальные замеры редакции PlayCasino на верифицированных аккаунтах, а не заверенные показания игроков. Это про то, что реально бывает с маленького входа — включая проигрыш.</p>
     <div class="md-tbox md-scroll rv" style="margin:16px 0">
@@ -1096,7 +1149,7 @@
   <section class="md-sect" id="picks">
     <div class="md-sh rv">
       <span class="md-kick">Смежные подборки</span>
-      <h2>Категории и <span class="g-gold">популярные запросы</span></h2>
+      <h2>Категории и <span class="g-sky">популярные запросы</span></h2>
     </div>
     <p class="rv">Порог входа — только один срез. Если ищете казино под другую задачу, редакция разобрала каждый интент отдельной подборкой:</p>
     <div class="md-picks">
@@ -1123,7 +1176,7 @@
   <section class="md-sect" id="log">
     <div class="md-sh rv">
       <span class="md-kick">Динамика</span>
-      <h2>Что изменилось <span class="g-gold">в сентябре 2026</span></h2>
+      <h2>Что изменилось <span class="g-neon">в сентябре 2026</span></h2>
     </div>
     <div class="md-log rv">
       <ul>
@@ -1131,7 +1184,7 @@
         <li><b>7K ускорил вывод с минималки</b> — заявки на 500–1 000 ₽ через СБП уходят почти моментально.</li>
         <li><b>Vavada сохранил бонус со 100 ₽</b> — приветственный пакет активируется с минимального депозита без доплаты.</li>
         <li><b>Одну площадку убрали из списка</b> за расхождение баннера «от 1 ₽» с реальным порогом 300 ₽ — детали в анти-топе.</li>
-        <li>Перепроверили пороги входа у 10 брендов реальными переводами, обновили лимиты кассы.</li>
+        <li><b>Перепроверили пороги у 10 брендов</b> — реальными переводами, обновили лимиты кассы.</li>
       </ul>
     </div>
     <p class="md-note">Промокоды у площадок обновляются по средам, лимиты кассы редакция сверяет ежемесячно. Текущая версия — от 4 сентября 2026.</p>
@@ -1165,7 +1218,7 @@
   <section class="md-sect" id="team">
     <div class="md-sh rv">
       <span class="md-kick">Об экспертизе</span>
-      <h2>Редакция PlayCasino: <span class="g-gold">кто проверял пороги входа</span></h2>
+      <h2>Редакция PlayCasino: <span class="g-cyan">кто проверял пороги входа</span></h2>
     </div>
     <p class="rv">PlayCasino основан в 2019 году как независимое издание-рейтинг. Правило одно — рейтинг для игрока, а не для казино: мы не продаём места и не меняем веса критериев под рекламодателя. За методику, замеры кассы и фактчек отвечают пять человек с профильным опытом.</p>
 
@@ -1223,7 +1276,7 @@
 
     <div class="md-founded">
       <div class="md-prose rv">
-        <h3 style="margin-top:0">Методика в цифрах</h3>
+        <h3 class="h-sky" style="margin-top:0">Методика в цифрах</h3>
         <p>За 2026 год редакция протестировала 40+ брендов, закинула 64 депозита от 50 до 300 ₽, замерила 183 вывода на карту, СБП и криптовалюту. Оценка складывается из семи критериев с фиксированными весами — от реального порога входа (24%) до репутации (4%). Порог входа в рейтинг — 7.5 из 10.</p>
       </div>
       <aside class="md-side rv">
@@ -1244,7 +1297,7 @@
   <section class="md-sect" id="trust">
     <div class="md-sh rv">
       <span class="md-kick">Доверие в цифрах</span>
-      <div class="md-h2v">Почему нам можно <span class="g-gold">доверять</span></div>
+      <div class="md-h2v">Почему нам можно <span class="g-neon">доверять</span></div>
     </div>
     <div class="md-stats">
       <div class="st rv"><div class="n" data-count="10">10</div><div class="l">казино в рейтинге</div></div>
@@ -1253,27 +1306,51 @@
       <div class="st rv"><div class="n" data-count="183">183</div><div class="l">выводов замерено</div></div>
       <div class="st rv"><div class="n" data-count="100" data-suffix="%">100%</div><div class="l">проверок на реальные деньги</div></div>
     </div>
+  </section>
 
-    <div class="md-disc rv">
-      <p><span class="md-rg">18+</span> Азартные игры предназначены только для совершеннолетних и могут вызывать зависимость. Играйте ответственно, не ставьте больше, чем готовы потерять. Минимальный депозит — способ попробовать, а не заработать. Если игра перестала быть развлечением — обратитесь за помощью на <a href="https://www.responsiblegambling.org/" rel="nofollow noopener">responsiblegambling.org</a>.</p>
-      <p><b>Раскрытие:</b> сайт может получать партнёрскую комиссию за переходы по ссылкам. Это <b>не влияет</b> на оценки и порядок мест — методика и баллы формируются независимо от партнёрских договорённостей. PlayCasino не является оператором азартных игр и не принимает ставки.</p>
+  <!-- ===== slot ratings interlinking ===== -->
+  <section class="md-sect" id="slots-rating">
+    <div class="md-sh rv">
+      <span class="md-kick">Слоты</span>
+      <div class="md-h2v">Рейтинг и <span class="g-neon">обзоры слотов</span></div>
+    </div>
+    <p class="rv">Автоматы под маленький банк редакция разобрала отдельно: минимальная ставка, реальный RTP по данным студий и волатильность — по каждому слоту своя карточка. Ниже — популярные тайтлы, которые дольше тянут депозит от 100 ₽.</p>
+    <div class="md-brands rv">
+      <a href="/avtomaty/aviator" style="--bc:#37e0c8;--bc2:#12a892"><span class="bnm">Aviator</span><span class="bds">Spribe · краш-игра, ставка от 9 ₽</span><span class="bpills"><span class="md-pill dep-g">RTP 97,00%</span><span class="md-pill pay">игрок задаёт</span></span><span class="bmore">Обзор слота →</span></a>
+      <a href="/avtomaty/gates-of-olympus" style="--bc:#ff2e93;--bc2:#c81f6f"><span class="bnm">Gates of Olympus</span><span class="bds">Pragmatic Play · ставка от 18 ₽</span><span class="bpills"><span class="md-pill dep-y">RTP 96,50%</span><span class="md-pill vhigh">высокая</span></span><span class="bmore">Обзор слота →</span></a>
+      <a href="/avtomaty/sweet-bonanza" style="--bc:#ffa63d;--bc2:#e07a12"><span class="bnm">Sweet Bonanza</span><span class="bds">Pragmatic Play · ставка от 18 ₽</span><span class="bpills"><span class="md-pill dep-y">RTP 96,51%</span><span class="md-pill vhigh">высокая</span></span><span class="bmore">Обзор слота →</span></a>
+      <a href="/avtomaty/starburst" style="--bc:#b8ff2b;--bc2:#8fd400"><span class="bnm">Starburst</span><span class="bds">NetEnt · ставка от 1 ₽</span><span class="bpills"><span class="md-pill dep-g">RTP 96,09%</span><span class="md-pill vlow">низкая</span></span><span class="bmore">Обзор слота →</span></a>
+    </div>
+    <div class="md-links rv">
+      <a href="/avtomaty">Рейтинг игровых автоматов</a>
+      <a href="/casino/games">Все обзоры слотов</a>
+      <a href="/rtp">Слоты по высокому RTP</a>
+      <a href="/casino/provaydery">Провайдеры слотов</a>
     </div>
   </section>
 
-  <!-- ===== interlinking ===== -->
+  <!-- ===== brand review interlinking ===== -->
   <section class="md-sect" id="more">
     <div class="md-sh rv">
       <span class="md-kick">Смотрите также</span>
-      <div class="md-h2v">Другие <span class="g-gold">подборки</span> PlayCasino</div>
+      <div class="md-h2v">Подробные <span class="g-hot">обзоры казино</span></div>
+    </div>
+    <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: реальный порог входа, скорость кассы по замерам, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
+    <div class="md-brands rv">
+      <a href="/casino/vavada" style="--bc:#ffcf3f;--bc2:#e0952f"><span class="bsc">9.6</span><span class="bnm">Vavada</span><span class="bds">баланс порога и надёжности · депозит 100 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/7k" style="--bc:#e6eaf3;--bc2:#a9b1c6"><span class="bsc">9.4</span><span class="bnm">7K Casino</span><span class="bds">быстрый вывод с минималки · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/pokerdom" style="--bc:#f0a35a;--bc2:#c9752e"><span class="bsc">9.3</span><span class="bnm">PokerDom</span><span class="bds">самый низкий порог рынка · 50 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/1win" style="--bc:#b8ff2b;--bc2:#8fd400"><span class="bsc">9.2</span><span class="bnm">1win</span><span class="bds">казино и ставки с одного счёта · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/sol" style="--bc:#ff2e93;--bc2:#c81f6f"><span class="bsc">9.0</span><span class="bnm">Sol Casino</span><span class="bds">7 000+ слотов под низкую ставку · 150 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/kent" style="--bc:#6cc4ff;--bc2:#2a86e0"><span class="bsc">8.9</span><span class="bnm">Kent Casino</span><span class="bds">старт новичка, 250 FS · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/starda" style="--bc:#ffa63d;--bc2:#e07a12"><span class="bsc">8.8</span><span class="bnm">Starda</span><span class="bds">турниры с малым бай-ином · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/izzi" style="--bc:#c8ff5a;--bc2:#8fd400"><span class="bsc">8.6</span><span class="bnm">Izzi</span><span class="bds">простой вход и крипта · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/legzo" style="--bc:#37e0c8;--bc2:#12a892"><span class="bsc">8.5</span><span class="bnm">Legzo</span><span class="bds">мобильная касса целиком · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
+      <a href="/casino/monro" style="--bc:#a879ff;--bc2:#7d4fd6"><span class="bsc">8.4</span><span class="bnm">Monro</span><span class="bds">кэшбэк до 15% лояльным · 150 ₽</span><span class="bmore">Полный обзор →</span></a>
     </div>
     <div class="md-links rv">
       <a href="/rejting-kazino">Полный рейтинг казино</a>
       <a href="/top-casino">Топ-10 казино</a>
-      <a href="/sbp">Пополнение через СБП</a>
-      <a href="/bystryj-vyvod">Быстрый вывод</a>
-      <a href="/bezdepozit">Бездепозитные бонусы</a>
-      <a href="/licenzionnye">Лицензионные казино</a>
-      <a href="/novye">Новые казино 2026</a>
       <a href="/otzyvy">Отзывы игроков</a>
     </div>
   </section>
@@ -1286,6 +1363,7 @@
     <span class="age"><b>18+</b> Играйте ответственно</span>
     <p>PlayCasino — независимое издание-рейтинг онлайн-казино. Материалы носят информационно-обзорный характер. Издание не является оператором азартных игр, не принимает ставки и не выплачивает выигрыши. Переходя по кнопкам, вы попадаете на площадку с международной лицензией, оператор которой несёт ответственность за услуги.</p>
     <p>Азартные игры связаны с риском потери денег и могут вызывать зависимость — это развлечение, а не источник дохода. Не играйте на заёмные средства и устанавливайте лимиты. Помощь при игровой зависимости — <a href="https://www.responsiblegambling.org/" rel="nofollow noopener">responsiblegambling.org</a>. Контакт редакции: <a href="mailto:editor@playcasino.example">editor@playcasino.example</a>.</p>
+    <p><b>Раскрытие:</b> сайт может получать партнёрскую комиссию за переходы по ссылкам. Это <b>не влияет</b> на оценки и порядок мест — методика и баллы формируются независимо от партнёрских договорённостей.</p>
     <div class="fl">
       <a href="/rejting-kazino">Рейтинг</a>
       <a href="/top-casino">Топ</a>
