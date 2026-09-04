@@ -119,7 +119,11 @@
   .hl.hot{background:var(--hot-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .hl.gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   h2,.h2v{font-family:"Unbounded",sans-serif;font-weight:900;font-size:clamp(22px,3.5vw,33px);line-height:1.16;letter-spacing:-.015em;margin:12px 0 14px}
-  h3{font-family:"Sora",sans-serif;font-weight:700;font-size:clamp(17px,2.4vw,21px);margin:26px 0 8px;color:#e7eaff}
+  /* small subheadings — always alive, never pale */
+  h3{font-family:"Sora",sans-serif;font-weight:700;font-size:clamp(17px,2.4vw,21px);margin:26px 0 8px;background:var(--neon-grad);-webkit-background-clip:text;background-clip:text;color:transparent;width:-moz-fit-content;width:fit-content}
+  #terms h3{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  #slots h3:nth-of-type(2){background:var(--hot-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .founded h3{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .sect{padding:52px 0 8px;position:relative}
   .sect-head{position:relative;margin-bottom:14px}
   .sect-head .kicker{margin-bottom:12px}
@@ -259,6 +263,34 @@
   .cta-sm:hover::after{animation:shimmer .85s var(--ease)}
   .note{font-size:13px;color:var(--mut);margin:12px 0 0}
 
+  /* ---------- editorial receipt card (leader / выбор редакции) ---------- */
+  .receipt{position:relative;max-width:440px;margin:6px auto 10px;overflow:visible}
+  .receipt .ribbon{top:-13px;left:22px;right:auto;transform:rotate(-2deg)}
+  .receipt .float{right:-12px;top:-16px;left:auto;bottom:auto}
+  .rc-card{position:relative;overflow:hidden;border-radius:20px;padding:26px 28px 24px;background:linear-gradient(168deg,var(--panel2),var(--panel));border:1px solid color-mix(in srgb,var(--neon) 30%,var(--line2));box-shadow:0 40px 90px -40px #000}
+  .rc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--neon),var(--gold) 50%,var(--hot));z-index:3}
+  .rc-card .wm{right:8px;bottom:-30px;font-size:150px;color:rgba(184,255,43,.06);-webkit-text-stroke:0}
+  .rc-body{position:relative;z-index:1}
+  .rc-brow{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--neon)}
+  .rc-name{font-family:"Unbounded",sans-serif;font-weight:900;font-size:34px;line-height:1;margin:12px 0 4px;background:var(--neon-grad);-webkit-background-clip:text;background-clip:text;color:transparent;width:-moz-fit-content;width:fit-content}
+  .rc-sub{color:var(--mut);font-size:13px}
+  .rc-perf{position:relative;height:2px;margin:20px -28px;border-top:2px dashed color-mix(in srgb,var(--neon) 45%,var(--line2))}
+  .rc-perf::before,.rc-perf::after{content:"";position:absolute;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--ink)}
+  .rc-perf::before{left:-11px}
+  .rc-perf::after{right:-11px}
+  .rc-spec{list-style:none;margin:0 0 20px;padding:0}
+  .rc-spec li{display:flex;align-items:baseline;font-size:14px;margin:10px 0}
+  .rc-spec li span{flex:0 0 auto;color:#cfd3ec}
+  .rc-spec li .dots{flex:1 1 auto;align-self:flex-end;margin:0 8px 5px;min-width:16px;border-bottom:2px dotted var(--line2)}
+  .rc-spec li b{flex:0 0 auto;font-family:"Sora",sans-serif;font-weight:700;white-space:nowrap}
+  .rc-spec b.rp{color:var(--gold);text-shadow:0 0 16px rgba(255,207,63,.4)}
+  .rc-spec b.nc{color:var(--neon);text-shadow:0 0 16px rgba(184,255,43,.4)}
+  .rc-spec b.gc{color:var(--gold)}
+  .rc-cta{width:100%}
+  .rc-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .rc-chips span{font-size:11.5px;font-weight:700;color:#cfd3ec;background:color-mix(in srgb,var(--neon) 8%,rgba(255,255,255,.03));border:1px solid color-mix(in srgb,var(--neon) 24%,transparent);padding:5px 11px;border-radius:999px;white-space:nowrap}
+  @media(max-width:480px){.receipt{max-width:100%}}
+
   /* ---------- generic tables (rich neon) ---------- */
   .tbl-box{position:relative;border:1px solid var(--line2);border-radius:var(--rad);overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:var(--shadow)}
   .tbl-box::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;z-index:3;background:linear-gradient(90deg,var(--neon),var(--gold) 46%,var(--hot))}
@@ -290,14 +322,22 @@
 
   /* ---------- method ---------- */
   .method{display:grid;grid-template-columns:1fr;gap:11px;margin:16px 0}
-  .crit{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--rad);padding:15px 18px;transition:transform .25s,border-color .25s}
-  .crit:hover{transform:translateY(-3px);border-color:var(--line2)}
+  .crit{--cc:var(--neon);--cc2:var(--neon-d);background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--rad);padding:15px 18px;transition:transform .25s,border-color .25s}
+  .crit:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--cc) 42%,var(--line2))}
   .crit .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
   .crit .head span:first-child{font-weight:700;font-size:15.5px}
-  .crit .w{font-family:"Unbounded",sans-serif;font-weight:800;color:var(--neon);font-size:15px}
+  .crit .w{font-family:"Unbounded",sans-serif;font-weight:800;color:var(--cc);font-size:15px;text-shadow:0 0 18px color-mix(in srgb,var(--cc) 45%,transparent)}
   .bar{height:8px;border-radius:6px;background:rgba(255,255,255,.07);margin:11px 0 6px;overflow:hidden}
-  .bar span{display:block;height:100%;width:0;border-radius:6px;background:var(--neon-grad);transition:width 1.2s var(--ease);box-shadow:0 0 12px -2px rgba(184,255,43,.5)}
+  .bar span{display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--cc2),var(--cc));transition:width 1.2s var(--ease);box-shadow:0 0 12px -2px var(--cc)}
   .crit p{margin:6px 0 0;font-size:13.5px;color:var(--mut)}
+  /* each criterion plays its own colour */
+  .method .crit:nth-of-type(1){--cc:#b8ff2b;--cc2:#5fbf00}
+  .method .crit:nth-of-type(2){--cc:#ffcf3f;--cc2:#e0952f}
+  .method .crit:nth-of-type(3){--cc:#ff2e93;--cc2:#c81f6f}
+  .method .crit:nth-of-type(4){--cc:#37e0c8;--cc2:#12a892}
+  .method .crit:nth-of-type(5){--cc:#ffa63d;--cc2:#e07a12}
+  .method .crit:nth-of-type(6){--cc:#c78bff;--cc2:#8a4fe0}
+  .method .crit:nth-of-type(7){--cc:#c8ff5a;--cc2:#8fd400}
 
   /* method side card */
   .mcard{position:relative;overflow:visible}
@@ -313,13 +353,32 @@
   .mcard.hasfloat{padding-bottom:70px}
   .mcard .float .fv{background:var(--hot-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
+  /* KYC card — lifted to the colour level of the tables */
+  .mcard.kyc{border-color:color-mix(in srgb,var(--neon) 32%,var(--line2))}
+  .mcard.kyc::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--rad) var(--rad) 0 0;background:linear-gradient(90deg,var(--neon),var(--gold) 48%,var(--hot));z-index:2}
+  .mcard.kyc .rows{border-top-color:color-mix(in srgb,var(--neon) 26%,var(--line2))}
+  .mcard.kyc .rows div{padding:7px 0}
+  .mcard.kyc .rows b{font-family:"Sora",sans-serif;color:var(--gold);text-shadow:0 0 16px rgba(255,207,63,.4)}
+  .mcard.kyc .kyc-lead b{color:var(--neon);font-weight:700}
+  .ed-tip{position:relative;margin-top:16px;padding:11px 14px 11px 15px;font-size:12.5px;line-height:1.5;color:#dfe3f4;background:color-mix(in srgb,var(--neon) 9%,rgba(255,255,255,.02));border:1px solid color-mix(in srgb,var(--neon) 26%,transparent);border-left:3px solid var(--neon);border-radius:9px}
+  .ed-tip b{color:var(--neon);font-weight:800}
+
   /* ---------- reviews ---------- */
   .review{position:relative;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--rad);box-shadow:var(--shadow);padding:22px 24px;margin:16px 0;transition:transform .3s,border-color .3s,box-shadow .3s;overflow:hidden}
   .review:hover{transform:translateY(-3px);border-color:var(--line2);box-shadow:0 26px 56px -26px rgba(184,255,43,.24)}
   .review .wm{right:16px;top:-14px;font-size:96px}
   .review .rh{display:flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:space-between;position:relative;z-index:1}
-  .review .rh .name{font-family:"Unbounded",sans-serif;font-size:clamp(18px,2.6vw,22px);font-weight:800}
-  .review .rh .name span{font-family:"Manrope",sans-serif;font-size:12.5px;font-weight:600;color:var(--mut);margin-left:8px}
+  .review .rh .name{font-family:"Unbounded",sans-serif;font-size:clamp(18px,2.6vw,22px);font-weight:800;color:var(--brandc,#eef0fb);text-shadow:0 0 22px color-mix(in srgb,var(--brandc,#fff) 30%,transparent)}
+  .review .rh .name span{font-family:"Manrope",sans-serif;font-size:12.5px;font-weight:600;color:var(--mut);margin-left:8px;text-shadow:none}
+  /* each brand review — its own colour; top-3 = gold / silver / bronze */
+  #reviews .review:nth-child(2){--brandc:#ffcf3f}
+  #reviews .review:nth-child(3){--brandc:#e6eaf3}
+  #reviews .review:nth-child(4){--brandc:#eaa96f}
+  #reviews .review:nth-child(5){--brandc:#37e0c8}
+  #reviews .review:nth-child(6){--brandc:#ffa63d}
+  #reviews .review:nth-child(7){--brandc:#c78bff}
+  #reviews .review:nth-child(8){--brandc:#c8ff5a}
+  #reviews .review:nth-child(9){--brandc:#ff2e93}
   .review .rh .score{font-size:18px}
   .review>p{margin:14px 0 0;color:#d3d7ee;position:relative;z-index:1}
   .pc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 4px;position:relative;z-index:1}
@@ -343,8 +402,8 @@
   .prose p{margin:12px 0}
 
   /* ---------- category chips ---------- */
-  .cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:18px 0}
-  .cats a{--ca:var(--neon);--ca2:var(--neon-d);position:relative;display:flex;align-items:center;gap:12px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:13px 15px 13px 18px;color:var(--txt);overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s,background .22s}
+  .cats{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:80px;grid-auto-flow:dense;gap:12px;margin:18px 0}
+  .cats a{--ca:var(--neon);--ca2:var(--neon-d);position:relative;display:flex;align-items:center;gap:12px;height:100%;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:13px 15px 13px 18px;color:var(--txt);overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s,background .22s}
   .cats a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--ca),var(--ca2));opacity:.85}
   .cats a:hover{transform:translateY(-3px);border-color:var(--ca);box-shadow:0 16px 34px -18px var(--ca);background:linear-gradient(180deg,color-mix(in srgb,var(--ca) 10%,var(--panel2)),var(--panel));color:var(--txt)}
   .cats a .ci{flex:0 0 auto;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;line-height:1;color:var(--ca);background:color-mix(in srgb,var(--ca) 14%,rgba(255,255,255,.03));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ca) 30%,transparent);transition:transform .22s}
@@ -354,18 +413,30 @@
   .cats a b{font-weight:700;font-size:14px;line-height:1.2}
   .cats a small{color:var(--mut);font-size:11.5px;margin-top:2px}
   .cats a .ftag{margin-left:auto;flex:0 0 auto;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#08120a;background:linear-gradient(135deg,var(--ca),var(--ca2));padding:4px 10px;border-radius:999px;box-shadow:0 0 16px -5px var(--ca);white-space:nowrap}
-  .cats a.feat{grid-column:span 2;padding:16px 18px;border-color:color-mix(in srgb,var(--ca) 40%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--ca) 16%,var(--panel2)),var(--panel))}
+  .cats a.feat{padding:16px 18px;border-color:color-mix(in srgb,var(--ca) 40%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--ca) 16%,var(--panel2)),var(--panel))}
   .cats a.feat .ci{width:46px;height:46px;color:#08120a;background:linear-gradient(135deg,var(--ca),var(--ca2));box-shadow:0 0 20px -4px var(--ca)}
   .cats a.feat .ci svg{width:24px;height:24px;stroke-width:2}
   .cats a.feat b{font-size:16px}
   .cats a.feat small{font-size:12.5px}
+  /* Metro/masonry mosaic — varied tile sizes, dense packing, no holes */
+  .cats a.t-wide{grid-column:span 2}
+  .cats a.t-tall{grid-row:span 2;flex-direction:column;align-items:flex-start;justify-content:center;gap:9px}
+  .cats a.t-lg{grid-column:span 2;grid-row:span 2;flex-direction:column;align-items:flex-start;justify-content:center;gap:11px}
+  .cats a.t-tall .ftag,.cats a.t-lg .ftag{margin-left:0}
+  .cats a.t-lg b{font-size:17px}
   .cats a:nth-of-type(6n+1){--ca:#b8ff2b;--ca2:#5fbf00}
   .cats a:nth-of-type(6n+2){--ca:#37e0c8;--ca2:#12a892}
   .cats a:nth-of-type(6n+3){--ca:#ff2e93;--ca2:#c81f6f}
   .cats a:nth-of-type(6n+4){--ca:#ffa63d;--ca2:#e07a12}
   .cats a:nth-of-type(6n+5){--ca:#6cc4ff;--ca2:#2a86e0}
   .cats a:nth-of-type(6n){--ca:#c8ff5a;--ca2:#8fd400}
-  @media(max-width:560px){.cats a.feat{grid-column:span 1}.cats a .ftag{display:none}}
+  @media(max-width:680px){
+    .cats{grid-template-columns:repeat(2,1fr);grid-auto-rows:minmax(72px,auto)}
+    .cats a{height:auto}
+    .cats a.t-wide,.cats a.t-tall{grid-column:auto;grid-row:auto;flex-direction:row;align-items:center;gap:12px}
+    .cats a.t-lg{grid-column:span 2;grid-row:auto;flex-direction:row;align-items:center;gap:12px}
+    .cats a .ftag{display:none}
+  }
 
   /* ---------- anti-top ---------- */
   .anti{background:linear-gradient(180deg,rgba(255,46,147,.09),rgba(255,46,147,.03));border:1px solid rgba(255,46,147,.3);border-radius:var(--rad);padding:8px 24px;box-shadow:var(--shadow)}
@@ -426,6 +497,30 @@
   .toplinks{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
   .toplinks a{padding:9px 15px;background:var(--panel);border:1px solid var(--line);border-radius:999px;color:var(--txt);font-size:13.5px;font-weight:600;transition:transform .2s,border-color .2s,color .2s}
   .toplinks a:hover{transform:translateY(-2px);border-color:rgba(184,255,43,.34);color:var(--neon)}
+
+  /* ---------- brand-review interlinks (multicolour) ---------- */
+  .brandlinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px;margin:16px 0}
+  .brandlinks a{--tc:var(--neon);--tc2:var(--neon-d);position:relative;display:flex;flex-direction:column;gap:2px;padding:14px 16px 14px 18px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s}
+  .brandlinks a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--tc),var(--tc2))}
+  .brandlinks a:hover{transform:translateY(-3px);border-color:var(--tc);box-shadow:0 16px 34px -18px var(--tc)}
+  .brandlinks a b{font-family:"Sora",sans-serif;font-weight:700;font-size:15.5px;color:var(--tc)}
+  .brandlinks a small{color:var(--mut);font-size:12px}
+  .brandlinks a:nth-child(1){--tc:#ffcf3f;--tc2:#e0952f}
+  .brandlinks a:nth-child(2){--tc:#e6eaf3;--tc2:#a9b1c6}
+  .brandlinks a:nth-child(3){--tc:#eaa96f;--tc2:#b06d34}
+  .brandlinks a:nth-child(4){--tc:#37e0c8;--tc2:#12a892}
+  .brandlinks a:nth-child(5){--tc:#ffa63d;--tc2:#e07a12}
+  .brandlinks a:nth-child(6){--tc:#c78bff;--tc2:#8a4fe0}
+  .brandlinks a:nth-child(7){--tc:#6cc4ff;--tc2:#2a86e0}
+  .brandlinks a:nth-child(8){--tc:#ff2e93;--tc2:#c81f6f}
+
+  /* ---------- slot-rating interlinks ---------- */
+  .slotlinks{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:16px 0}
+  .slotlinks a{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:12px 15px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:12px;transition:transform .2s,border-color .2s,box-shadow .2s}
+  .slotlinks a:hover{transform:translateY(-2px);border-color:rgba(184,255,43,.34);box-shadow:0 14px 30px -18px rgba(184,255,43,.5)}
+  .slotlinks a b{font-family:"Sora",sans-serif;font-weight:700;font-size:14px;color:var(--txt);margin-right:auto}
+  .slotlinks a .rtp{font-family:"Sora",sans-serif;font-weight:700;color:#a6e838}
+  .slotlinks a .rtp.best{color:#d4ff73;text-shadow:0 0 16px rgba(184,255,43,.55)}
 
   footer{border-top:1px solid var(--line);margin-top:56px;padding:32px 0 48px;color:var(--mut);font-size:13px}
   footer .age{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--txt);border:1px solid var(--line2);border-radius:10px;padding:8px 14px;margin-bottom:16px}
@@ -534,6 +629,34 @@
       <span class="kicker">Топ-12 · сентябрь 2026</span>
       <h2>Рейтинг онлайн-казино 2026: <span class="hl">оценки, бонусы и вывод</span> в одной таблице</h2>
     </div>
+
+    <div class="receipt reveal">
+      <span class="ribbon">Выбор редакции</span>
+      <div class="float"><div class="fv">9.7</div><div class="fl">балл из 10</div></div>
+      <div class="rc-card">
+        <span class="wm" aria-hidden="true">₽</span>
+        <div class="rc-body">
+          <div class="rc-brow">Чек редакции · лидер 2026</div>
+          <div class="rc-name">Vavada</div>
+          <div class="rc-sub">Депозит от 100 ₽ · вывод 1–24 ч · лицензия Кюрасао</div>
+          <div class="rc-perf" aria-hidden="true"></div>
+          <ul class="rc-spec">
+            <li><span>Минимальный депозит</span><i class="dots"></i><b class="rp">100 ₽</b></li>
+            <li><span>Оценка редакции</span><i class="dots"></i><b class="nc">9.7 / 10</b></li>
+            <li><span>Приветственный бонус</span><i class="dots"></i><b class="gc">100% + 100 FS</b></li>
+            <li><span>Вейджер бонуса</span><i class="dots"></i><b class="nc">x40</b></li>
+            <li><span>Средний срок выплаты</span><i class="dots"></i><b class="nc">~3 часа</b></li>
+          </ul>
+          <a href="/go/vavada" rel="nofollow sponsored" class="btn btn-neon rc-cta">Открыть Vavada</a>
+          <div class="rc-chips">
+            <span>СБП от 100 ₽</span>
+            <span>Мир · USDT · BTC</span>
+            <span>Кюрасао GCB 8048</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="tablewrap reveal">
       <table class="rank">
         <thead>
@@ -704,13 +827,13 @@
     </div>
 
     <div class="method">
-      <div class="crit reveal"><div class="head"><span>Лицензия и безопасность</span><span class="w">25%</span></div><div class="bar"><span data-w="100"></span></div><p>Действующая лицензия (Кюрасао, Anjouan, RU-разрешение для БК), SSL, провайдеры с сертификатами RNG, история выплат без массовых блокировок.</p></div>
-      <div class="crit reveal"><div class="head"><span>Выплаты и касса</span><span class="w">20%</span></div><div class="bar"><span data-w="80"></span></div><p>Скорость вывода замеряем в минутах по каждому методу — карта, СБП, крипта. Проверяем лимиты и отсутствие скрытых комиссий.</p></div>
-      <div class="crit reveal"><div class="head"><span>Игры и провайдеры</span><span class="w">18%</span></div><div class="bar"><span data-w="72"></span></div><p>Количество слотов, live-казино, средний RTP, наличие Pragmatic Play, NetEnt, Evolution и честность генератора.</p></div>
-      <div class="crit reveal"><div class="head"><span>Бонусы и отыгрыш</span><span class="w">17%</span></div><div class="bar"><span data-w="68"></span></div><p>Размер приветственного пакета, реальный вейджер, кэшбэк, прозрачность правил. За x50+ снимаем баллы.</p></div>
-      <div class="crit reveal"><div class="head"><span>Поддержка</span><span class="w">10%</span></div><div class="bar"><span data-w="40"></span></div><p>Живой чат 24/7 на русском, скорость первого ответа, компетентность операторов. Пишем ночью — засекаем минуты.</p></div>
-      <div class="crit reveal"><div class="head"><span>Мобильная версия</span><span class="w">6%</span></div><div class="bar"><span data-w="24"></span></div><p>Адаптивный сайт и приложение, стабильность, полный функционал кассы и бонусов с телефона.</p></div>
-      <div class="crit reveal"><div class="head"><span>Репутация и отзывы</span><span class="w">4%</span></div><div class="bar"><span data-w="16"></span></div><p>Реальные отзывы, доля решённых жалоб, срок работы бренда. Смотрим структуру претензий, а не среднюю звезду.</p></div>
+      <div class="crit reveal"><div class="head"><span>Лицензия и безопасность</span><span class="w">25%</span></div><div class="bar"><span data-w="100"></span></div><p>Пробиваем регулятора по номеру в реестре — Кюрасао GCB, Anjouan или RU-разрешение для БК, — а не по логотипу в подвале. Проверяем SSL, сертификаты RNG у провайдеров и историю выплат без массовых блокировок аккаунтов. За нерабочий номер лицензии или мутное юрлицо-держатель снимаем баллы вплоть до вылета из топа.</p></div>
+      <div class="crit reveal"><div class="head"><span>Выплаты и касса</span><span class="w">20%</span></div><div class="bar"><span data-w="80"></span></div><p>Заносим депозит, отыгрываем и сами запрашиваем вывод — скорость засекаем в минутах по каждому методу: карта, СБП, крипта. Проверяем минимальные и суточные лимиты, отсутствие скрытых комиссий и «дополнительных проверок» перед каждой выплатой. За задержки свыше суток без причины и урезанные лимиты вывода балл падает.</p></div>
+      <div class="crit reveal"><div class="head"><span>Игры и провайдеры</span><span class="w">18%</span></div><div class="bar"><span data-w="72"></span></div><p>Считаем реальное число слотов и live-столов, долю топ-студий — Pragmatic Play, NetEnt, Evolution — и сверяем средний RTP с данными провайдера. Ловим «свои» сборки автоматов с заниженной отдачей, где заявленный процент возврата не бьётся с оригиналом. За скудный каталог и подкрученный RTP снимаем баллы.</p></div>
+      <div class="crit reveal"><div class="head"><span>Бонусы и отыгрыш</span><span class="w">17%</span></div><div class="bar"><span data-w="68"></span></div><p>Разбираем размер приветственного пакета, реальный вейджер и вклад игр в отыгрыш, кэшбэк и прозрачность правил. Норма вейджера — x35–x45; всё, что x50 и выше, режем в оценке. За скрытые условия отыгрыша и низкий лимит на вывод бонуса балл снижается.</p></div>
+      <div class="crit reveal"><div class="head"><span>Поддержка</span><span class="w">10%</span></div><div class="bar"><span data-w="40"></span></div><p>Пишем в живой чат днём и ночью, засекаем время первого ответа и смотрим, решает ли оператор вопрос по существу, а не отписками. Проверяем русскоязычность и режим 24/7. За бота вместо человека и молчание в пиковые часы снимаем баллы.</p></div>
+      <div class="crit reveal"><div class="head"><span>Мобильная версия</span><span class="w">6%</span></div><div class="bar"><span data-w="24"></span></div><p>Открываем кассу, бонусы и live с телефона — важен полный функционал, а не урезанная витрина. Проверяем адаптив, наличие приложения и стабильность при слабом соединении. За вылеты, тормоза и недоступные с мобильного разделы балл падает.</p></div>
+      <div class="crit reveal"><div class="head"><span>Репутация и отзывы</span><span class="w">4%</span></div><div class="bar"><span data-w="16"></span></div><p>Смотрим не среднюю звезду, а структуру жалоб: массовые невыплаты — красный флаг, единичные споры по недоигранному вейджеру — рабочая ситуация. Учитываем долю решённых претензий, стаж бренда и поведенческие сигналы. За системные жалобы на невыплаты снимаем баллы.</p></div>
     </div>
   </section>
 
@@ -814,19 +937,19 @@
         </div>
         <p class="reveal prose">Быстрее всего деньги приходят на крипту, дольше всего — на карту. Так работает почти везде. Если вывод завис — в 9 случаях из 10 причина не в казино, а в недоигранном вейджере или незавершённой верификации.</p>
       </div>
-      <aside class="panel panel-p mcard oh hasfloat reveal">
+      <aside class="panel panel-p mcard oh hasfloat kyc reveal">
         <span class="wm" aria-hidden="true">9</span>
         <span class="ribbon">Замер</span>
         <div class="float"><div class="fv">18 мин</div><div class="fl">медиана KYC у топ-3</div></div>
         <div class="card-body">
           <h3 style="margin-top:0">Верификация (KYC)</h3>
-          <p style="color:var(--mut);font-size:14px">Первый вывод — после проверки: паспорт и селфи. У топ-брендов занимает до 20 минут, дальше выплаты идут без повторных запросов.</p>
+          <p class="kyc-lead" style="font-size:14px">Первый вывод — после проверки: паспорт и селфи. У топ-брендов занимает <b>до 20 минут</b>, дальше выплаты идут без повторных запросов.</p>
           <div class="rows">
             <div><span>Мин. сумма вывода</span><b>500 ₽</b></div>
             <div><span>Лимит в сутки</span><b>до 500 000 ₽</b></div>
             <div><span>Лимит в месяц</span><b>до 2 000 000 ₽</b></div>
           </div>
-          <p style="color:var(--dim);font-size:12.5px;margin-top:14px">Совет редакции: выводите тем же методом, каким пополняли — заявка проходит быстрее.</p>
+          <p class="ed-tip"><b>Совет редакции:</b> выводите тем же методом, каким пополняли — заявка проходит быстрее.</p>
         </div>
       </aside>
     </div>
@@ -1019,29 +1142,29 @@
     </div>
     <p class="reveal">Ищете казино под конкретную задачу? Редакция разобрала каждый интент отдельной подборкой — выбирайте кластер:</p>
     <div class="cats">
-      <a class="reveal feat" href="/min-depozit"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span><span class="ct"><b>Минимальный депозит</b><small>старт от 50–100 ₽</small></span><span class="ftag">частый запрос</span></a>
-      <a class="reveal feat" href="/bystryj-vyvod"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><span class="ct"><b>Быстрый вывод</b><small>от 8 минут на крипту и СБП</small></span><span class="ftag">частый запрос</span></a>
-      <a class="reveal feat" href="/privetstvennyj"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><span class="ct"><b>Приветственный бонус</b><small>100–500% на первый депозит</small></span><span class="ftag">частый запрос</span></a>
-      <a class="reveal feat" href="/licenzionnye"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="ct"><b>Лицензионные казино</b><small>Кюрасао и Anjouan с номером</small></span><span class="ftag">частый запрос</span></a>
-      <a class="reveal" href="/luchshie"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></span><span class="ct"><b>Лучшие казино</b><small>эталонные площадки года</small></span></a>
+      <a class="reveal feat t-lg" href="/min-depozit"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span><span class="ct"><b>Минимальный депозит</b><small>старт от 50–100 ₽</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal feat t-lg" href="/bystryj-vyvod"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><span class="ct"><b>Быстрый вывод</b><small>от 8 минут на крипту и СБП</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal feat t-lg" href="/privetstvennyj"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></span><span class="ct"><b>Приветственный бонус</b><small>100–500% на первый депозит</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal feat t-lg" href="/licenzionnye"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="ct"><b>Лицензионные казино</b><small>Кюрасао и Anjouan с номером</small></span><span class="ftag">частый запрос</span></a>
+      <a class="reveal t-tall" href="/luchshie"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></span><span class="ct"><b>Лучшие казино</b><small>эталонные площадки года</small></span></a>
       <a class="reveal" href="/top-casino"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span><span class="ct"><b>Топ казино</b><small>топ-10 по совокупности</small></span></a>
-      <a class="reveal" href="/rejting-kazino"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="4" width="3" height="14"/></svg></span><span class="ct"><b>Рейтинг казино</b><small>полный ранжированный список</small></span></a>
+      <a class="reveal t-wide" href="/rejting-kazino"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="4" width="3" height="14"/></svg></span><span class="ct"><b>Рейтинг казино</b><small>полный ранжированный список</small></span></a>
       <a class="reveal" href="/na-dengi"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.2"/><path d="M6 12h.01M18 12h.01"/></svg></span><span class="ct"><b>Казино на деньги</b><small>игра на реальные ставки</small></span></a>
-      <a class="reveal" href="/na-rubli"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.3 17V7h3.4a2.6 2.6 0 0 1 0 5.2H8.2"/><path d="M8.2 14.4h5"/></svg></span><span class="ct"><b>Казино на рубли</b><small>рублёвые счета</small></span></a>
+      <a class="reveal t-tall" href="/na-rubli"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.3 17V7h3.4a2.6 2.6 0 0 1 0 5.2H8.2"/><path d="M8.2 14.4h5"/></svg></span><span class="ct"><b>Казино на рубли</b><small>рублёвые счета</small></span></a>
       <a class="reveal" href="/novye"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.4 6.2L21 12l-6.6 2.8L12 21l-2.4-6.2L3 12l6.6-2.8z"/></svg></span><span class="ct"><b>Новые казино 2026</b><small>свежие бренды</small></span></a>
-      <a class="reveal" href="/oficialnye"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="ct"><b>Официальные казино</b><small>оригинальные сайты</small></span></a>
+      <a class="reveal t-wide" href="/oficialnye"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="ct"><b>Официальные казино</b><small>оригинальные сайты</small></span></a>
       <a class="reveal" href="/platjat"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/></svg></span><span class="ct"><b>Казино, которые платят</b><small>с реальными выплатами</small></span></a>
-      <a class="reveal" href="/bezdepozit"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01M22 8h.01M15 2h.01M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11a1.5 1.5 0 0 1-1.43 1.22H17"/></svg></span><span class="ct"><b>Бездепозитные бонусы</b><small>бонус без вложений</small></span></a>
+      <a class="reveal t-tall" href="/bezdepozit"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01M22 8h.01M15 2h.01M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11a1.5 1.5 0 0 1-1.43 1.22H17"/></svg></span><span class="ct"><b>Бездепозитные бонусы</b><small>бонус без вложений</small></span></a>
       <a class="reveal" href="/frispiny"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></span><span class="ct"><b>Фриспины</b><small>бесплатные вращения</small></span></a>
-      <a class="reveal" href="/cashback"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 15 15 9"/><circle cx="9.5" cy="9.5" r="1"/><circle cx="14.5" cy="14.5" r="1"/></svg></span><span class="ct"><b>Кэшбэк</b><small>возврат проигрыша</small></span></a>
+      <a class="reveal t-wide" href="/cashback"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 15 15 9"/><circle cx="9.5" cy="9.5" r="1"/><circle cx="14.5" cy="14.5" r="1"/></svg></span><span class="ct"><b>Кэшбэк</b><small>возврат проигрыша</small></span></a>
       <a class="reveal" href="/promo"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.83 8.83a2 2 0 0 0 2.82 0l7.17-7.17a2 2 0 0 0 0-2.82z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><span class="ct"><b>Промокоды</b><small>актуальные бонус-коды</small></span></a>
-      <a class="reveal" href="/vyvod-na-kartu"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></span><span class="ct"><b>Вывод на карту</b><small>на карты банков РФ</small></span></a>
+      <a class="reveal t-tall" href="/vyvod-na-kartu"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></span><span class="ct"><b>Вывод на карту</b><small>на карты банков РФ</small></span></a>
       <a class="reveal" href="/sbp"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 21v.01M17 21h.01M21 17h.01"/></svg></span><span class="ct"><b>СБП</b><small>пополнение и вывод</small></span></a>
-      <a class="reveal" href="/bitkoin"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 7.5v9M13 7.5v9"/><path d="M8.5 8h5a2 2 0 0 1 0 4h-5m0 0h5.5a2 2 0 0 1 0 4H8.5"/></svg></span><span class="ct"><b>Биткоин казино</b><small>оплата в BTC</small></span></a>
+      <a class="reveal t-wide" href="/bitkoin"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 7.5v9M13 7.5v9"/><path d="M8.5 8h5a2 2 0 0 1 0 4h-5m0 0h5.5a2 2 0 0 1 0 4H8.5"/></svg></span><span class="ct"><b>Биткоин казино</b><small>оплата в BTC</small></span></a>
       <a class="reveal" href="/crypto"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg></span><span class="ct"><b>Крипто казино</b><small>USDT и другие</small></span></a>
-      <a class="reveal" href="/avtomaty"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="10" width="12" height="12" rx="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01M10 14h.01M15 6h.01M18 9h.01"/></svg></span><span class="ct"><b>Игровые автоматы</b><small>слоты на деньги</small></span></a>
+      <a class="reveal t-tall" href="/avtomaty"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="10" width="12" height="12" rx="2"/><path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/><path d="M6 18h.01M10 14h.01M15 6h.01M18 9h.01"/></svg></span><span class="ct"><b>Игровые автоматы</b><small>слоты на деньги</small></span></a>
       <a class="reveal" href="/ruletka"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><span class="ct"><b>Рулетка</b><small>онлайн-рулетка</small></span></a>
-      <a class="reveal" href="/live"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span><span class="ct"><b>Live-казино</b><small>живые дилеры</small></span></a>
+      <a class="reveal t-wide" href="/live"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span><span class="ct"><b>Live-казино</b><small>живые дилеры</small></span></a>
       <a class="reveal" href="/mobilnye"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span><span class="ct"><b>Мобильные казино</b><small>игра с телефона</small></span></a>
       <a class="reveal" href="/vip"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.56 3.27a.5.5 0 0 1 .88 0l2.95 5.6a1 1 0 0 0 1.52.3l4.28-3.67a.5.5 0 0 1 .8.52l-2.84 10.25a1 1 0 0 1-.96.73H5.81a1 1 0 0 1-.96-.73L2.02 6.02a.5.5 0 0 1 .8-.52l4.27 3.67a1 1 0 0 0 1.52-.3z"/><path d="M5 21h14"/></svg></span><span class="ct"><b>VIP казино</b><small>элитные программы</small></span></a>
       <a class="reveal" href="/bez-verifikacii"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg></span><span class="ct"><b>Без верификации</b><small>вывод без паспорта</small></span></a>
@@ -1207,28 +1330,48 @@
       <div class="stat reveal"><div class="n" data-count="183">183</div><div class="l">выводов замерено</div></div>
       <div class="stat reveal"><div class="n" data-count="100" data-suffix="%">100%</div><div class="l">выводов на реальные деньги</div></div>
     </div>
+  </section>
 
-    <div class="disc reveal">
-      <p><span class="rg">18+</span> Азартные игры предназначены только для совершеннолетних и могут вызывать зависимость. Играйте ответственно, не ставьте больше, чем готовы потерять. Если игра перестала быть развлечением — обратитесь за помощью на <a href="https://www.responsiblegambling.org/" rel="nofollow noopener">responsiblegambling.org</a>.</p>
-      <p><b>Раскрытие:</b> сайт может получать партнёрскую комиссию за переходы по ссылкам. Это <b>не влияет</b> на оценки и порядок мест — методика и баллы формируются независимо от партнёрских договорённостей. PlayCasino не является оператором азартных игр и не принимает ставки.</p>
+  <!-- ===== interlinking: brand reviews ===== -->
+  <section class="sect" id="links">
+    <div class="sect-head reveal">
+      <span class="kicker">По каждому бренду</span>
+      <div class="h2v">Подробные <span class="hl">обзоры казино</span></div>
+    </div>
+    <p class="reveal">Разбор каждой площадки из топа отдельно: лицензия по номеру, замеры выводов, вейджер, каталог и живые минусы. Выбирайте бренд:</p>
+    <div class="brandlinks reveal">
+      <a href="/casino/vavada"><b>Vavada</b><small>№1 · надёжность · 9.7</small></a>
+      <a href="/casino/1win"><b>1win</b><small>казино + ставки · 9.5</small></a>
+      <a href="/casino/7k"><b>7K Casino</b><small>быстрые выплаты · 9.3</small></a>
+      <a href="/casino/pokerdom"><b>PokerDom</b><small>покер и слоты · 9.2</small></a>
+      <a href="/casino/sol"><b>Sol Casino</b><small>ассортимент игр · 9.0</small></a>
+      <a href="/casino/kent"><b>Kent Casino</b><small>старт новичка · 8.9</small></a>
+      <a href="/casino/starda"><b>Starda</b><small>турниры и live · 8.8</small></a>
+      <a href="/casino/monro"><b>Monro</b><small>программа лояльности · 8.7</small></a>
     </div>
   </section>
 
-  <!-- ===== interlinking ===== -->
-  <section class="sect" id="links">
+  <!-- ===== interlinking: slots rating ===== -->
+  <section class="sect" id="slots-rating">
     <div class="sect-head reveal">
-      <span class="kicker">Смотрите также</span>
-      <div class="h2v">Другие <span class="hl">подборки</span> PlayCasino</div>
+      <span class="kicker">Игры под лупой</span>
+      <div class="h2v">Рейтинг слотов: <span class="hl gold">RTP и волатильность</span></div>
     </div>
-    <div class="toplinks reveal">
-      <a href="/rejting-kazino">Полный рейтинг казино</a>
-      <a href="/top-casino">Топ-10 казино</a>
-      <a href="/luchshie">Лучшие казино на деньги</a>
-      <a href="/novye">Новые казино 2026</a>
-      <a href="/licenzionnye">Лицензионные казино</a>
-      <a href="/bystryj-vyvod">Быстрый вывод</a>
-      <a href="/bezdepozit">Бездепозитные бонусы</a>
-      <a href="/otzyvy">Отзывы игроков</a>
+    <p class="reveal">Отдельный рейтинг автоматов с проверенной отдачей — по данным студий, а не витрины казино. Полная таблица — в разделе <a href="#slots">«Слоты и провайдеры»</a>.</p>
+    <div class="slotlinks reveal">
+      <a href="/slot/lightning-roulette"><b>Lightning Roulette</b><span class="rtp best">97,30%</span><span class="pill na">live</span></a>
+      <a href="/slot/big-bass-bonanza"><b>Big Bass Bonanza</b><span class="rtp best">96,71%</span><span class="pill mid">средняя</span></a>
+      <a href="/slot/razor-shark"><b>Razor Shark</b><span class="rtp">96,70%</span><span class="pill hi">высокая</span></a>
+      <a href="/slot/sweet-bonanza"><b>Sweet Bonanza</b><span class="rtp">96,51%</span><span class="pill hi">высокая</span></a>
+      <a href="/slot/gates-of-olympus"><b>Gates of Olympus</b><span class="rtp">96,50%</span><span class="pill hi">высокая</span></a>
+      <a href="/slot/wanted-dead-or-a-wild"><b>Wanted Dead or a Wild</b><span class="rtp">96,38%</span><span class="pill ext">экстрим</span></a>
+      <a href="/slot/starburst"><b>Starburst</b><span class="rtp">96,09%</span><span class="pill low">низкая</span></a>
+    </div>
+    <div class="toplinks reveal" style="margin-top:14px">
+      <a href="/slots">Весь рейтинг слотов →</a>
+      <a href="/avtomaty">Игровые автоматы</a>
+      <a href="/live">Live-казино</a>
+      <a href="/ruletka">Рулетка</a>
     </div>
   </section>
 
@@ -1240,6 +1383,7 @@
     <span class="age"><b>18+</b> Играйте ответственно</span>
     <p>PlayCasino — независимое издание-рейтинг онлайн-казино. Материалы носят информационно-обзорный характер. Издание не является оператором азартных игр, не принимает ставки и не выплачивает выигрыши. Переходя по кнопкам, вы попадаете на площадку с международной лицензией, оператор которой несёт ответственность за услуги.</p>
     <p>Азартные игры связаны с риском потери денег и могут вызывать зависимость — это развлечение, а не источник дохода. Не играйте на заёмные средства и устанавливайте лимиты. Помощь при игровой зависимости — <a href="https://www.responsiblegambling.org/" rel="nofollow noopener">responsiblegambling.org</a>. Контакт редакции: <a href="mailto:editor@playcasino.example">editor@playcasino.example</a>.</p>
+    <p><b>Раскрытие:</b> сайт может получать партнёрскую комиссию за переходы по ссылкам — это не влияет на оценки и порядок мест, методика и баллы формируются независимо от партнёрских договорённостей.</p>
     <div class="links">
       <a href="/rejting-kazino">Рейтинг</a>
       <a href="/top-casino">Топ</a>
