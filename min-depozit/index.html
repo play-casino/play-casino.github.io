@@ -182,7 +182,7 @@
 
   .md-brow{display:inline-flex;align-items:center;gap:9px;padding:7px 14px;border:1px solid var(--hair2);border-radius:999px;font-size:12.5px;color:var(--mu);margin-bottom:20px}
   .md-brow b{color:var(--gold)}
-  .md-lead{font-size:clamp(15.5px,1.9vw,18px);color:#d3d7ee;margin:6px 0 20px;max-width:620px}
+  .md-lead{font-size:clamp(15.5px,1.9vw,18px);color:#d3d7ee;margin:6px 0 20px}
   .md-lead b{color:var(--gold);font-weight:700}
   .md-hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin:20px 0 20px}
 
@@ -500,11 +500,24 @@
   .md-brands a .bmore{margin-top:2px;display:inline-flex;align-items:center;gap:5px;font-family:"Unbounded",sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--bc)}
   .md-brands a .bsc{position:absolute;top:13px;right:14px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:14px;color:var(--bc)}
   .md-brands a .bpills{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}
+  .md-brands a.md-showall{justify-content:center;align-items:flex-start;background:linear-gradient(135deg,color-mix(in srgb,var(--bc) 24%,var(--pan2)),var(--pan));border-color:color-mix(in srgb,var(--bc) 48%,var(--hair))}
+  .md-brands a.md-showall .bnm{font-size:17px}
+  .md-brands a.md-showall .bmore{font-size:11.5px}
+  /* SEO: full link pool always present in DOM for crawlers, hidden for users */
+  .md-seo-links{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+  /* slot cards with real vertical covers */
+  .md-brands a.md-slot{padding:0 0 14px}
+  .md-slot .scover{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--bc) 26%,var(--pan2)),var(--pan))}
+  .md-slot .scover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .md-slot .sph{position:absolute;inset:0;display:none;place-items:center;font-family:"Unbounded",sans-serif;font-weight:900;font-size:56px;color:color-mix(in srgb,var(--bc) 80%,#fff);background:linear-gradient(150deg,color-mix(in srgb,var(--bc) 30%,var(--pan2)),var(--pan))}
+  .md-slot .skind{position:absolute;top:9px;left:9px;z-index:2;font-family:"Unbounded",sans-serif;font-weight:800;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:7px;color:#0a0d16;background:linear-gradient(135deg,var(--bc),var(--bc2));box-shadow:0 6px 16px -6px var(--bc)}
+  .md-slot .bnm,.md-slot .bds,.md-slot .bpills,.md-slot .bmore{margin-left:16px;margin-right:16px}
+  .md-slot .scover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(180deg,transparent,rgba(6,7,14,.5));pointer-events:none}
 
   footer{border-top:1px solid var(--hair);margin-top:54px;padding:32px 0 48px;color:var(--mu);font-size:13px}
   footer .age{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--tx);border:1px solid var(--hair2);border-radius:10px;padding:8px 14px;margin-bottom:16px}
   footer .age b{color:var(--hot)}
-  footer p{margin:0 0 12px;max-width:940px}
+  footer p{margin:0 0 12px}
   footer a{color:var(--mu)}
   footer a:hover{color:var(--gold)}
   footer .fl{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
@@ -1339,12 +1352,25 @@
       <div class="md-h2v">Рейтинг и <span class="g-neon">обзоры слотов</span></div>
     </div>
     <p class="rv">Автоматы под маленький банк редакция разобрала отдельно: минимальная ставка, реальный RTP по данным студий и волатильность — по каждому слоту своя карточка. Ниже — популярные тайтлы, которые дольше тянут депозит от 100 ₽.</p>
-    <div class="md-brands rv">
-      <a href="/avtomaty/aviator" style="--bc:#37e0c8;--bc2:#12a892"><span class="bnm">Aviator</span><span class="bds">Spribe · краш-игра, ставка от 9 ₽</span><span class="bpills"><span class="md-pill dep-g">RTP 97,00%</span><span class="md-pill pay">игрок задаёт</span></span><span class="bmore">Обзор слота →</span></a>
-      <a href="/avtomaty/gates-of-olympus" style="--bc:#ff2e93;--bc2:#c81f6f"><span class="bnm">Gates of Olympus</span><span class="bds">Pragmatic Play · ставка от 18 ₽</span><span class="bpills"><span class="md-pill dep-y">RTP 96,50%</span><span class="md-pill vhigh">высокая</span></span><span class="bmore">Обзор слота →</span></a>
-      <a href="/avtomaty/sweet-bonanza" style="--bc:#ffa63d;--bc2:#e07a12"><span class="bnm">Sweet Bonanza</span><span class="bds">Pragmatic Play · ставка от 18 ₽</span><span class="bpills"><span class="md-pill dep-y">RTP 96,51%</span><span class="md-pill vhigh">высокая</span></span><span class="bmore">Обзор слота →</span></a>
-      <a href="/avtomaty/starburst" style="--bc:#b8ff2b;--bc2:#8fd400"><span class="bnm">Starburst</span><span class="bds">NetEnt · ставка от 1 ₽</span><span class="bpills"><span class="md-pill dep-g">RTP 96,09%</span><span class="md-pill vlow">низкая</span></span><span class="bmore">Обзор слота →</span></a>
-    </div>
+    <div class="md-brands rv" id="slotsGrid" aria-label="Случайная подборка обзоров слотов"></div>
+    <ul class="md-seo-links">
+      <li><a href="/slots/gates-of-olympus-1000">Gates of Olympus 1000 — обзор слота (Pragmatic Play)</a></li>
+      <li><a href="/slots/sweet-bonanza-candyland">Sweet Bonanza CandyLand — обзор (Pragmatic Play Live)</a></li>
+      <li><a href="/slots/sugar-rush-1000">Sugar Rush 1000 — обзор слота (Pragmatic Play)</a></li>
+      <li><a href="/slots/the-dog-house-megaways-1000">The Dog House Megaways 1000 — обзор (Pragmatic Play)</a></li>
+      <li><a href="/slots/big-bass-bonanza-1000">Big Bass Bonanza 1000 — обзор слота (Pragmatic Play)</a></li>
+      <li><a href="/slots/book-of-1win">Book Of 1win — обзор слота (Spinomenal)</a></li>
+      <li><a href="/slots/lucky-jet">Lucky Jet — обзор краш-игры (1win Games)</a></li>
+      <li><a href="/slots/rocket-queen">Rocket Queen — обзор краш-игры (1win Games)</a></li>
+      <li><a href="/slots/zeus-vs-hades-gods-of-war-250">Zeus vs Hades – Gods of War 250 — обзор (Pragmatic Play)</a></li>
+      <li><a href="/slots/dragon-hatch-2">Dragon Hatch 2 — обзор слота (PG SOFT)</a></li>
+      <li><a href="/slots/aztec-fire-2">Aztec Fire 2 — обзор слота (3 Oaks Gaming)</a></li>
+      <li><a href="/slots/joker-stoker">Joker Stoker — обзор слота (Endorphina)</a></li>
+      <li><a href="/slots/crazy-time">Crazy Time — обзор live-игры (Evolution)</a></li>
+      <li><a href="/slots/coin-up-hot-fire">Coin UP : Hot Fire — обзор слота (3 Oaks Gaming)</a></li>
+      <li><a href="/slots/3-coin-volcanoes">3 Coin Volcanoes — обзор слота (3 Oaks Gaming)</a></li>
+      <li><a href="/avtomaty">Рейтинг игровых автоматов — все слоты</a></li>
+    </ul>
     <div class="md-links rv">
       <a href="/avtomaty">Рейтинг игровых автоматов</a>
       <a href="/casino/games">Все обзоры слотов</a>
@@ -1360,18 +1386,20 @@
       <div class="md-h2v">Подробные <span class="g-hot">обзоры казино</span></div>
     </div>
     <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: реальный порог входа, скорость кассы по замерам, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
-    <div class="md-brands rv">
-      <a href="/casino/vavada" style="--bc:#ffcf3f;--bc2:#e0952f"><span class="bsc">9.6</span><span class="bnm">Vavada</span><span class="bds">баланс порога и надёжности · депозит 100 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/7k" style="--bc:#e6eaf3;--bc2:#a9b1c6"><span class="bsc">9.4</span><span class="bnm">7K Casino</span><span class="bds">быстрый вывод с минималки · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/pokerdom" style="--bc:#f0a35a;--bc2:#c9752e"><span class="bsc">9.3</span><span class="bnm">PokerDom</span><span class="bds">самый низкий порог рынка · 50 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/1win" style="--bc:#b8ff2b;--bc2:#8fd400"><span class="bsc">9.2</span><span class="bnm">1win</span><span class="bds">казино и ставки с одного счёта · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/sol" style="--bc:#ff2e93;--bc2:#c81f6f"><span class="bsc">9.0</span><span class="bnm">Sol Casino</span><span class="bds">7 000+ слотов под низкую ставку · 150 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/kent" style="--bc:#6cc4ff;--bc2:#2a86e0"><span class="bsc">8.9</span><span class="bnm">Kent Casino</span><span class="bds">старт новичка, 250 FS · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/starda" style="--bc:#ffa63d;--bc2:#e07a12"><span class="bsc">8.8</span><span class="bnm">Starda</span><span class="bds">турниры с малым бай-ином · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/izzi" style="--bc:#c8ff5a;--bc2:#8fd400"><span class="bsc">8.6</span><span class="bnm">Izzi</span><span class="bds">простой вход и крипта · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/legzo" style="--bc:#37e0c8;--bc2:#12a892"><span class="bsc">8.5</span><span class="bnm">Legzo</span><span class="bds">мобильная касса целиком · 100 ₽</span><span class="bmore">Полный обзор →</span></a>
-      <a href="/casino/monro" style="--bc:#a879ff;--bc2:#7d4fd6"><span class="bsc">8.4</span><span class="bnm">Monro</span><span class="bds">кэшбэк до 15% лояльным · 150 ₽</span><span class="bmore">Полный обзор →</span></a>
-    </div>
+    <div class="md-brands rv" id="brandsGrid" aria-label="Случайная подборка обзоров казино"></div>
+    <ul class="md-seo-links">
+      <li><a href="/casino/vavada">Обзор казино Vavada — депозит 100 ₽</a></li>
+      <li><a href="/casino/7k">Обзор казино 7K Casino — депозит 100 ₽</a></li>
+      <li><a href="/casino/pokerdom">Обзор казино PokerDom — депозит 50 ₽</a></li>
+      <li><a href="/casino/1win">Обзор казино 1win — депозит 100 ₽</a></li>
+      <li><a href="/casino/sol">Обзор казино Sol Casino — депозит 150 ₽</a></li>
+      <li><a href="/casino/kent">Обзор казино Kent Casino — депозит 100 ₽</a></li>
+      <li><a href="/casino/starda">Обзор казино Starda — депозит 100 ₽</a></li>
+      <li><a href="/casino/izzi">Обзор казино Izzi — депозит 100 ₽</a></li>
+      <li><a href="/casino/legzo">Обзор казино Legzo — депозит 100 ₽</a></li>
+      <li><a href="/casino/monro">Обзор казино Monro — депозит 150 ₽</a></li>
+      <li><a href="/casino/">Все обзоры казино</a></li>
+    </ul>
     <div class="md-links rv">
       <a href="/rejting-kazino">Полный рейтинг казино</a>
       <a href="/top-casino">Топ-10 казино</a>
@@ -1460,6 +1488,94 @@
     document.querySelectorAll('.n[data-count],.v[data-count]').forEach(countUp);
   }
   setTimeout(function(){ fillBars(document); }, 400);
+})();
+</script>
+
+<script>
+/* Data-driven random interlinking — casino reviews & slot reviews.
+   Пул легко расширять: просто дописывайте объекты в массивы ниже.
+   Показывается 3 случайных карточки + карточка «Показать все». */
+(function(){
+  var CASINOS = [
+    {n:"Vavada",       c:"#ffcf3f", c2:"#e0952f", s:"9.6", d:"баланс порога и надёжности · депозит 100 ₽", h:"/casino/vavada"},
+    {n:"7K Casino",    c:"#e6eaf3", c2:"#a9b1c6", s:"9.4", d:"быстрый вывод с минималки · 100 ₽",          h:"/casino/7k"},
+    {n:"PokerDom",     c:"#f0a35a", c2:"#c9752e", s:"9.3", d:"самый низкий порог рынка · 50 ₽",             h:"/casino/pokerdom"},
+    {n:"1win",         c:"#b8ff2b", c2:"#8fd400", s:"9.2", d:"казино и ставки с одного счёта · 100 ₽",      h:"/casino/1win"},
+    {n:"Sol Casino",   c:"#ff2e93", c2:"#c81f6f", s:"9.0", d:"7 000+ слотов под низкую ставку · 150 ₽",     h:"/casino/sol"},
+    {n:"Kent Casino",  c:"#6cc4ff", c2:"#2a86e0", s:"8.9", d:"старт новичка, 250 FS · 100 ₽",               h:"/casino/kent"},
+    {n:"Starda",       c:"#ffa63d", c2:"#e07a12", s:"8.8", d:"турниры с малым бай-ином · 100 ₽",            h:"/casino/starda"},
+    {n:"Izzi",         c:"#c8ff5a", c2:"#8fd400", s:"8.6", d:"простой вход и крипта · 100 ₽",               h:"/casino/izzi"},
+    {n:"Legzo",        c:"#37e0c8", c2:"#12a892", s:"8.5", d:"мобильная касса целиком · 100 ₽",             h:"/casino/legzo"},
+    {n:"Monro",        c:"#a879ff", c2:"#7d4fd6", s:"8.4", d:"кэшбэк до 15% лояльным · 150 ₽",              h:"/casino/monro"}
+  ];
+  /* реальный пул слотов с обложками 1win (bundlecdn) — дополняйте объектами */
+  var SLOTS = [
+    {n:"Gates of Olympus 1000",        pv:"Pragmatic Play",      rtp:"96.5",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png", h:"/slots/gates-of-olympus-1000"},
+    {n:"Sweet Bonanza CandyLand",      pv:"Pragmatic Play Live", rtp:"96.48", vol:"средняя", kind:"live", img:"https://v1.bundlecdn.com/casino-images/v/6e7fded2-3230-4cce-9d7a-2ddf32e6ac33_vertical.png", h:"/slots/sweet-bonanza-candyland"},
+    {n:"Sugar Rush 1000",              pv:"Pragmatic Play",      rtp:"96.5",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/477573a4-06c2-4ecc-9f1e-d485da524241_vertical.png", h:"/slots/sugar-rush-1000"},
+    {n:"The Dog House Megaways 1000",  pv:"Pragmatic Play",      rtp:"96.55", vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/4b19a8c4-5deb-4b2b-8af0-2f54ff6e891e_vertical.png", h:"/slots/the-dog-house-megaways-1000"},
+    {n:"Big Bass Bonanza 1000",        pv:"Pragmatic Play",      rtp:"96.71", vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/44edf132-1243-464f-8fb5-c1c2362f35ab_vertical.png", h:"/slots/big-bass-bonanza-1000"},
+    {n:"Book Of 1win",                 pv:"Spinomenal",          rtp:"96.0",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/f4f75cab-da7d-4003-b5eb-d25110e0c45d_vertical.png", h:"/slots/book-of-1win"},
+    {n:"Lucky Jet",                    pv:"1win Games",          rtp:"97.0",  vol:"средняя", kind:"краш", img:"https://v1.bundlecdn.com/casino-images/v/15104946-3407-452c-be6a-9c7f5110994d_vertical.png", h:"/slots/lucky-jet"},
+    {n:"Rocket Queen",                 pv:"1win Games",          rtp:"97.0",  vol:"средняя", kind:"краш", img:"https://v1.bundlecdn.com/casino-images/v/86489246-a24c-4f71-88ec-9f2a4cfcd6d6_vertical.png", h:"/slots/rocket-queen"},
+    {n:"Zeus vs Hades – Gods of War 250", pv:"Pragmatic Play",   rtp:"96.07", vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/1adec641-8639-4d20-81cb-285b8ca51fc3_vertical.png", h:"/slots/zeus-vs-hades-gods-of-war-250"},
+    {n:"Dragon Hatch 2",               pv:"PG SOFT",             rtp:"96.7",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/1694c3ef-30c3-4817-b4eb-0fc6f785a82a_vertical.jpg", h:"/slots/dragon-hatch-2"},
+    {n:"Aztec Fire 2",                 pv:"3 Oaks Gaming",       rtp:"95.6",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/8c507a92-d77f-4644-b837-f06b6b603ede_vertical.png", h:"/slots/aztec-fire-2"},
+    {n:"Joker Stoker",                 pv:"Endorphina",          rtp:"96.0",  vol:"средняя", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/ec197517-e04e-4a00-84f4-e8129306bc6b_vertical.png", h:"/slots/joker-stoker"},
+    {n:"Crazy Time",                   pv:"Evolution",           rtp:"95.5",  vol:"средняя", kind:"live", img:"https://v1.bundlecdn.com/casino-images/v/9ea794e4-af4d-439a-9c8a-849d0ed77818_vertical.png", h:"/slots/crazy-time"},
+    {n:"Coin UP : Hot Fire",           pv:"3 Oaks Gaming",       rtp:"95.9",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/cccdb4a9-cca9-40bd-bf42-0e542473e9d4_vertical.png", h:"/slots/coin-up-hot-fire"},
+    {n:"3 Coin Volcanoes",             pv:"3 Oaks Gaming",       rtp:"95.7",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/ec3e518c-aff1-4582-ac54-c3fcc3d83114_vertical.png", h:"/slots/3-coin-volcanoes"}
+  ];
+  var SPAL=[["#ffcf3f","#e0952f"],["#b8ff2b","#8fd400"],["#ff2e93","#c81f6f"],["#37e0c8","#12a892"],["#6cc4ff","#2a86e0"],["#a879ff","#7d4fd6"],["#ffa63d","#e07a12"],["#c8ff5a","#8fd400"]];
+
+  function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+  function pick3(arr){return shuffle(arr.slice()).slice(0,3);}
+  function volClass(v){return v==="высокая"?"vhigh":(v==="средняя"?"vmid":"vlow");}
+
+  function renderCasinos(el){
+    var html="";
+    pick3(CASINOS).forEach(function(x){
+      html+='<a href="'+esc(x.h)+'" style="--bc:'+esc(x.c)+';--bc2:'+esc(x.c2)+'">'
+          +'<span class="bsc">'+esc(x.s)+'</span>'
+          +'<span class="bnm">'+esc(x.n)+'</span>'
+          +'<span class="bds">'+esc(x.d)+'</span>'
+          +'<span class="bmore">Полный обзор →</span></a>';
+    });
+    html+='<a href="/casino/" class="md-showall" style="--bc:#b8ff2b;--bc2:#8fd400">'
+        +'<span class="bnm">Показать все</span>'
+        +'<span class="bds">полный список обзоров казино по порогу входа</span>'
+        +'<span class="bmore">Все казино →</span></a>';
+    el.innerHTML=html;
+  }
+
+  function renderSlots(el){
+    var html="", start=Math.floor(Math.random()*SPAL.length);
+    pick3(SLOTS).forEach(function(x,i){
+      var pal=SPAL[(start+i)%SPAL.length], c=pal[0], c2=pal[1];
+      var rtp="RTP "+String(x.rtp).replace('.',',')+"%";
+      var kindBadge=(x.kind && x.kind!=="слот") ? '<span class="skind">'+esc(x.kind)+'</span>' : '';
+      var letter=esc(x.n.charAt(0));
+      html+='<a href="'+esc(x.h)+'" class="md-slot" style="--bc:'+c+';--bc2:'+c2+'">'
+          +'<span class="scover">'
+          +'<img src="'+esc(x.img)+'" alt="'+esc(x.n)+' — обложка слота" loading="lazy" decoding="async" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'grid\';">'
+          +'<span class="sph">'+letter+'</span>'+kindBadge
+          +'</span>'
+          +'<span class="bnm">'+esc(x.n)+'</span>'
+          +'<span class="bds">'+esc(x.pv)+'</span>'
+          +'<span class="bpills"><span class="md-pill dep-g">'+rtp+'</span>'
+          +'<span class="md-pill '+volClass(x.vol)+'">'+esc(x.vol)+'</span></span>'
+          +'<span class="bmore">Обзор слота →</span></a>';
+    });
+    html+='<a href="/avtomaty" class="md-showall" style="--bc:#ffcf3f;--bc2:#e0952f">'
+        +'<span class="bnm">Показать все</span>'
+        +'<span class="bds">полный рейтинг слотов под маленький банк</span>'
+        +'<span class="bmore">Все слоты →</span></a>';
+    el.innerHTML=html;
+  }
+
+  var cg=document.getElementById('brandsGrid'); if(cg) renderCasinos(cg);
+  var sg=document.getElementById('slotsGrid');  if(sg) renderSlots(sg);
 })();
 </script>
 
