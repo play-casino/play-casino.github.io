@@ -43,7 +43,7 @@
     --txt:#eef0fb; --mut:#9096b4; --dim:#6c7194;
     --neon:#b8ff2b; --neon-d:#8fd400; --hot:#ff2e93; --gold:#ffcf3f;
     --rad:18px; --rad-sm:12px;
-    --maxw:1260px;
+    --maxw:1180px;
     --ease:cubic-bezier(.22,1,.36,1);
     --neon-grad:linear-gradient(105deg,var(--neon),var(--neon-d));
     --hot-grad:linear-gradient(105deg,var(--hot),#c81f6f);
@@ -144,9 +144,14 @@
   .cols{display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center}
   .cols.top{align-items:flex-start}
   .cols.rev .txt{order:2}
-  /* hero gets a wider right column so the leader card is not dwarfed and no air is left on its right */
-  .hero .cols{grid-template-columns:1fr 1.02fr;gap:40px}
-  @media(max-width:940px){.cols{grid-template-columns:1fr;gap:30px}.cols.rev .txt{order:0}.hero .cols{grid-template-columns:1fr;gap:30px}}
+  /* hero keeps the shared column widths; the leader card stretches to fill the taller left column (no vertical gap under it) */
+  .hero .cols{align-items:stretch}
+  .hero .receipt{height:100%;display:flex;flex-direction:column}
+  .hero .rc-card{flex:1 1 auto;display:flex;flex-direction:column}
+  .hero .rc-body{flex:1 1 auto;display:flex;flex-direction:column}
+  .hero .rc-spec{flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+  .hero .rc-spec li{margin:0}
+  @media(max-width:940px){.cols{grid-template-columns:1fr;gap:30px}.cols.rev .txt{order:0}}
 
   /* ---------- panels / cards ---------- */
   .panel{position:relative;border-radius:var(--rad);background:linear-gradient(168deg,var(--panel2),var(--panel));border:1px solid var(--line2);box-shadow:var(--shadow);overflow:hidden}
@@ -308,6 +313,12 @@
   .rc-cta{width:100%}
   .rc-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
   .rc-chips span{font-size:11.5px;font-weight:700;color:#cfd3ec;background:color-mix(in srgb,var(--neon) 8%,rgba(255,255,255,.03));border:1px solid color-mix(in srgb,var(--neon) 24%,transparent);padding:5px 11px;border-radius:999px;white-space:nowrap}
+  /* editorial guarantees — closes the card at the bottom and helps fill the column height */
+  .rc-guar{list-style:none;margin:16px 0 0;padding:13px 0 0;border-top:1px dashed color-mix(in srgb,var(--neon) 22%,var(--line2));display:flex;flex-direction:column;gap:8px}
+  .rc-guar li{position:relative;padding-left:24px;font-size:12px;color:#cfd3ec;line-height:1.35}
+  .rc-guar li::before{content:"✓";position:absolute;left:0;top:-1px;width:17px;height:17px;display:grid;place-items:center;border-radius:5px;background:color-mix(in srgb,var(--neon) 16%,transparent);border:1px solid color-mix(in srgb,var(--neon) 40%,transparent);color:var(--neon);font-size:10px;font-weight:900}
+  .rc-guar li:nth-child(2)::before{background:color-mix(in srgb,var(--gold) 16%,transparent);border-color:color-mix(in srgb,var(--gold) 40%,transparent);color:var(--gold)}
+  .rc-guar li:nth-child(3)::before{background:color-mix(in srgb,#37e0c8 16%,transparent);border-color:color-mix(in srgb,#37e0c8 40%,transparent);color:#37e0c8}
   @media(max-width:480px){.receipt{max-width:100%}}
 
   /* ---------- generic tables (rich neon) ---------- */
@@ -672,6 +683,11 @@
               <span>Мир · USDT · BTC</span>
               <span>Кюрасао GCB 8048</span>
             </div>
+            <ul class="rc-guar">
+              <li>Проверка на реальных депозитах</li>
+              <li>Лицензия сверена по номеру</li>
+              <li>Выводы замерены редакцией</li>
+            </ul>
           </div>
         </div>
       </aside>
