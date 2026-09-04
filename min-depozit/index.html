@@ -220,6 +220,11 @@
   .md-ticket .line b{color:var(--tx)}
   .md-ticket .line .big{font-family:"Unbounded",sans-serif;font-weight:900;font-size:26px;background:var(--g-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
   .md-ticket .sc{font-family:"Unbounded",sans-serif;font-weight:900;font-size:20px;background:var(--g-neon);-webkit-background-clip:text;background-clip:text;color:transparent}
+  /* receipt spec rows with dotted leaders (fill height with real content) */
+  .md-ticket .line.spec{justify-content:flex-start;padding:6px 0}
+  .md-ticket .line.spec>span:first-child{flex:0 0 auto;color:var(--mu)}
+  .md-ticket .line.spec .dts{flex:1 1 auto;align-self:flex-end;margin:0 8px 6px;border-bottom:1px dotted color-mix(in srgb,var(--gold) 34%,var(--hair2))}
+  .md-ticket .line.spec .val{flex:0 0 auto;font-weight:700}
   /* overhang: ribbon top-left, float chip top-right — reserved clear zones, never overlap */
   .md-ribbon{position:absolute;z-index:5;font-family:"Unbounded",sans-serif;font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;padding:7px 13px;border-radius:9px;box-shadow:0 12px 26px -12px rgba(0,0,0,.7)}
   .md-ribbon.gold{background:var(--g-gold);color:#231600}
@@ -339,6 +344,14 @@
   .md-guar{margin-top:auto;padding-top:15px;border-top:1px dashed var(--hair2);display:flex;flex-wrap:wrap;gap:7px;position:relative;z-index:1}
   .md-guar span{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:#d5d9f0;padding:5px 10px;border-radius:999px;background:color-mix(in srgb,var(--sc) 12%,transparent);border:1px solid color-mix(in srgb,var(--sc) 30%,var(--hair))}
   .md-guar span::before{content:"✓";color:var(--sc);font-weight:900;font-size:10px}
+  /* content fillers for stretched asides — real facts, not empty space */
+  .md-side .md-steps{list-style:none;margin:15px 0 0;padding:0;counter-reset:st;position:relative;z-index:1}
+  .md-side .md-steps li{position:relative;padding:8px 0 8px 31px;font-size:12.8px;color:#d3d7ee;border-top:1px dashed var(--hair2)}
+  .md-side .md-steps li:first-child{border-top:0}
+  .md-side .md-steps li b{color:var(--tx)}
+  .md-side .md-steps li::before{counter-increment:st;content:counter(st);position:absolute;left:0;top:7px;width:21px;height:21px;border-radius:7px;display:grid;place-items:center;font-family:"Unbounded",sans-serif;font-weight:800;font-size:11px;color:#0a0d16;background:linear-gradient(135deg,var(--sc),var(--sc2))}
+  .md-side .md-take{margin-top:15px;padding:11px 13px;border-radius:12px;background:color-mix(in srgb,var(--sc) 9%,transparent);border:1px solid color-mix(in srgb,var(--sc) 26%,var(--hair));font-size:12.5px;line-height:1.5;color:#d5d9f0;position:relative;z-index:1}
+  .md-side .md-take b{color:var(--sc)}
   .md-side::after{content:"";position:absolute;left:0;top:16px;bottom:16px;width:3px;border-radius:3px;background:linear-gradient(180deg,var(--sc),var(--sc2));box-shadow:0 0 16px -2px var(--sc)}
   .md-side.sd-neon{--sc:var(--neon);--sc2:var(--neon-d)}
   .md-side.sd-hot{--sc:var(--hot);--sc2:#c81f6f}
@@ -509,14 +522,26 @@
   .md-brands a.md-showall .bmore{font-size:11.5px}
   /* SEO: full link pool always present in DOM for crawlers, hidden for users */
   .md-seo-links{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
-  /* slot cards with real vertical covers */
-  .md-brands a.md-slot{padding:0 0 14px}
-  .md-slot .scover{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(160deg,color-mix(in srgb,var(--bc) 26%,var(--pan2)),var(--pan))}
-  .md-slot .scover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-  .md-slot .sph{position:absolute;inset:0;display:none;place-items:center;font-family:"Unbounded",sans-serif;font-weight:900;font-size:56px;color:color-mix(in srgb,var(--bc) 80%,#fff);background:linear-gradient(150deg,color-mix(in srgb,var(--bc) 30%,var(--pan2)),var(--pan))}
-  .md-slot .skind{position:absolute;top:9px;left:9px;z-index:2;font-family:"Unbounded",sans-serif;font-weight:800;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:7px;color:#0a0d16;background:linear-gradient(135deg,var(--bc),var(--bc2));box-shadow:0 6px 16px -6px var(--bc)}
-  .md-slot .bnm,.md-slot .bds,.md-slot .bpills,.md-slot .bmore{margin-left:16px;margin-right:16px}
-  .md-slot .scover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(180deg,transparent,rgba(6,7,14,.5));pointer-events:none}
+  /* slot cards — эталон как на главной (обложка сверху + kind + meta + пилюли) */
+  .md-brands a.md-slot{padding:0;gap:0;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);border-radius:14px;overflow:hidden}
+  .md-slot::before{display:none}
+  .md-slot:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--sc) 42%,var(--hair2));box-shadow:0 18px 36px -20px color-mix(in srgb,var(--sc) 60%,#000)}
+  .md-slot .scover{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,var(--pan2),var(--ink2))}
+  .md-slot .scover img{width:100%;height:100%;object-fit:cover;display:block}
+  .md-slot .sph{position:absolute;inset:0;display:none;place-items:center;font-family:"Unbounded",sans-serif;font-weight:900;font-size:46px;color:#08120a;background:linear-gradient(140deg,var(--sc),var(--sc2))}
+  .md-slot .skind{position:absolute;top:8px;left:8px;z-index:2;font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:999px;color:#fff}
+  .md-slot .skind.crash{background:var(--g-hot);box-shadow:0 0 16px -5px rgba(255,46,147,.8)}
+  .md-slot .skind.live{background:linear-gradient(135deg,#37e0c8,#12a892);color:#04231e;box-shadow:0 0 16px -5px rgba(55,224,200,.8)}
+  .md-slot .smeta{padding:11px 13px 13px;display:flex;flex-direction:column;gap:5px}
+  .md-slot .sn{font-family:"Sora",sans-serif;font-weight:700;font-size:13px;color:var(--tx);line-height:1.22}
+  .md-slot .sp{font-size:11px;color:var(--mu)}
+  .md-slot .spills{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}
+  .md-slot .srtp{font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:999px;color:#c8ff5a;background:color-mix(in srgb,#b8ff2b 14%,transparent);border:1px solid color-mix(in srgb,#b8ff2b 40%,transparent);white-space:nowrap}
+  .md-slot .svol{font-size:10.5px;font-weight:800;padding:3px 9px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
+  .md-slot .svol.hi{color:#ff6aa8;background:color-mix(in srgb,var(--hot) 17%,transparent);border-color:color-mix(in srgb,var(--hot) 50%,transparent)}
+  .md-slot .svol.mid{color:var(--gold);background:color-mix(in srgb,var(--gold) 15%,transparent);border-color:color-mix(in srgb,var(--gold) 44%,transparent)}
+  .md-slot .svol.low{color:#c8ff5a;background:color-mix(in srgb,#b8ff2b 15%,transparent);border-color:color-mix(in srgb,#b8ff2b 44%,transparent)}
+  .md-slot .svol.ext{color:#ff6aa8;background:color-mix(in srgb,var(--hot) 17%,transparent);border-color:color-mix(in srgb,var(--hot) 50%,transparent)}
 
   footer{border-top:1px solid var(--hair);margin-top:54px;padding:32px 0 48px;color:var(--mu);font-size:13px}
   footer .age{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--tx);border:1px solid var(--hair2);border-radius:10px;padding:8px 14px;margin-bottom:16px}
@@ -603,6 +628,11 @@
         <div class="line"><span>Оценка редакции</span><span class="sc">9.6 / 10</span></div>
         <div class="line"><span>Бонус с минималки</span><b>100% + 100 FS</b></div>
         <div class="line"><span>Вейджер</span><b>x40</b></div>
+        <div class="line spec"><span>Способы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · карта · USDT</span></div>
+        <div class="line spec"><span>Средний срок выплаты</span><i class="dts"></i><span class="val hl-neon">~9 минут</span></div>
+        <div class="line spec"><span>Слотов в каталоге</span><i class="dts"></i><span class="val hl-gold">7000+</span></div>
+        <div class="line spec"><span>Кэшбэк</span><i class="dts"></i><span class="val hl-hot">до 10%</span></div>
+        <div class="line spec"><span>Поддержка</span><i class="dts"></i><span class="val hl-sky">24/7, чат</span></div>
         <a href="/go/vavada" rel="nofollow sponsored" class="md-btn md-btn-neon" style="width:100%;margin-top:12px">Открыть Vavada</a>
         <div class="foot"><span>СБП от 100 ₽</span><span>Мир · USDT · BTC</span><span>Кюрасао GCB 8048</span></div>
       </aside>
@@ -651,7 +681,11 @@
           <div><span>Медиана порога в топе</span><b>100 ₽</b></div>
           <div><span>Порог на вывод</span><b>от 500 ₽</b></div>
           <div><span>Быстрое зачисление</span><b>СБП, ~15 сек</b></div>
+          <div><span>Способов пополнить</span><b>6</b></div>
+          <div><span>Мин. на бонус</span><b>от 100 ₽</b></div>
+          <div><span>Средний срок вывода</span><b>~18 мин</b></div>
         </div>
+        <div class="md-take"><b>Вывод редакции:</b> оптимум для новичка — <b>100 ₽ через СБП</b>: и приветственный бонус стартует, и слотов хватает на вечер, и до порога вывода реально дойти.</div>
         <div class="md-guar"><span>Реальные депозиты</span><span>Лицензия сверена</span><span>Выводы замерены</span></div>
       </aside>
     </div>
@@ -893,8 +927,15 @@
         <div class="rows">
           <div><span>Мин. через СБП</span><b>от 50 ₽</b></div>
           <div><span>Мин. через Visa</span><b>от 300 ₽</b></div>
+          <div><span>Мин. на бонус</span><b>от 100 ₽</b></div>
           <div><span>Мин. на вывод</span><b>от 500 ₽</b></div>
+          <div><span>Комиссия СБП</span><b>0 ₽</b></div>
         </div>
+        <ol class="md-steps">
+          <li>Откройте кассу и выберите <b>СБП</b> по номеру телефона</li>
+          <li>Введите сумму <b>от 50 ₽</b> и подтвердите в приложении банка</li>
+          <li>Деньги на балансе за <b>10–20 секунд</b>, без комиссии</li>
+        </ol>
         <div class="md-guar"><span>Пополнения проверены</span><span>СБП без комиссии</span><span>Замеры сентября</span></div>
       </aside>
     </div>
@@ -1018,7 +1059,10 @@
           <div><span>Бонус 100 ₽ · x40</span><b>4 000 ₽ оборот</b></div>
           <div><span>Бонус 100 ₽ · x50</span><b class="hot">5 000 ₽ (в анти-топ)</b></div>
           <div><span>Лимит вывода бездепа</span><b>обычно 5 000 ₽</b></div>
+          <div><span>Слоты в отыгрыш</span><b>100%</b></div>
+          <div><span>Live / краш</span><b>частично</b></div>
         </div>
+        <div class="md-take"><b>Совет Марины:</b> если цель — вывести хоть что-то с маленького депозита, бонус иногда выгоднее не брать вовсе — без вейджера любой выигрыш выводится сразу после KYC.</div>
         <div class="md-guar"><span>Вейджеры пересчитаны</span><span>Условия сверены</span><span>Отыгрыш проверен</span></div>
       </aside>
     </div>
@@ -1116,7 +1160,10 @@
           <div><span>USDT TRC-20</span><b>8–25 мин</b></div>
           <div><span>СБП</span><b>10–40 мин</b></div>
           <div><span>Карта Мир</span><b>до 24 ч</b></div>
+          <div><span>Комиссия вывода</span><b>0 ₽</b></div>
+          <div><span>KYC при первом выводе</span><b>паспорт + селфи</b></div>
         </div>
+        <div class="md-take"><b>Правило редакции:</b> выводите тем же методом, каким пополняли — так заявка проходит быстрее и без вопросов финмониторинга. Первый вывод после KYC, дальше — без повторных проверок.</div>
         <div class="md-guar"><span>183 вывода замерено</span><span>KYC пройден</span><span>Сроки по факту</span></div>
       </aside>
       <div class="md-c-txt md-prose rv">
@@ -1540,7 +1587,7 @@
   function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
   function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
   function pick3(arr){return shuffle(arr.slice()).slice(0,3);}
-  function volClass(v){return v==="высокая"?"vhigh":(v==="средняя"?"vmid":"vlow");}
+  function volClass(v){return v==="высокая"?"hi":(v==="средняя"?"mid":(v==="низкая"?"low":"ext"));}
 
   function renderCasinos(el){
     var html="";
@@ -1563,18 +1610,17 @@
     pick3(SLOTS).forEach(function(x,i){
       var pal=SPAL[(start+i)%SPAL.length], c=pal[0], c2=pal[1];
       var rtp="RTP "+String(x.rtp).replace('.',',')+"%";
-      var kindBadge=(x.kind && x.kind!=="слот") ? '<span class="skind">'+esc(x.kind)+'</span>' : '';
+      var kindBadge=(x.kind==="краш")?'<span class="skind crash">краш</span>':(x.kind==="live")?'<span class="skind live">live</span>':'';
       var letter=esc(x.n.charAt(0));
-      html+='<a href="'+esc(x.h)+'" class="md-slot" style="--bc:'+c+';--bc2:'+c2+'">'
+      html+='<a href="'+esc(x.h)+'" class="md-slot" style="--sc:'+c+';--sc2:'+c2+'">'
           +'<span class="scover">'
-          +'<img src="'+esc(x.img)+'" alt="'+esc(x.n)+' — обложка слота" loading="lazy" decoding="async" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'grid\';">'
+          +'<img src="'+esc(x.img)+'" alt="'+esc(x.n)+' — обложка слота" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.display=\'none\';this.nextElementSibling.style.display=\'grid\';">'
           +'<span class="sph">'+letter+'</span>'+kindBadge
           +'</span>'
-          +'<span class="bnm">'+esc(x.n)+'</span>'
-          +'<span class="bds">'+esc(x.pv)+'</span>'
-          +'<span class="bpills"><span class="md-pill dep-g">'+rtp+'</span>'
-          +'<span class="md-pill '+volClass(x.vol)+'">'+esc(x.vol)+'</span></span>'
-          +'<span class="bmore">Обзор слота →</span></a>';
+          +'<span class="smeta"><span class="sn">'+esc(x.n)+'</span><span class="sp">'+esc(x.pv)+'</span>'
+          +'<span class="spills"><span class="srtp">RTP '+rtp+'%</span>'
+          +'<span class="svol '+volClass(x.vol)+'">'+esc(x.vol)+'</span></span></span>'
+          +'</a>';
     });
     html+='<a href="/avtomaty" class="md-showall" style="--bc:#ffcf3f;--bc2:#e0952f">'
         +'<span class="bnm">Показать все</span>'
