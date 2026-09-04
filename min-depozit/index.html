@@ -225,6 +225,16 @@
   .md-ticket .line.spec>span:first-child{flex:0 0 auto;color:var(--mu)}
   .md-ticket .line.spec .dts{flex:1 1 auto;align-self:flex-end;margin:0 8px 6px;border-bottom:1px dotted color-mix(in srgb,var(--gold) 34%,var(--hair2))}
   .md-ticket .line.spec .val{flex:0 0 auto;font-weight:700}
+  /* index-style fill: why line, flex-grow spec list distributing rows, bottom guarantees */
+  .md-ticket .why{margin:10px 0 2px;font-size:12.5px;line-height:1.45;color:#dfe3f4;position:relative;z-index:1}
+  .md-ticket .why b{color:var(--gold);font-weight:800}
+  .md-ticket .tspec{flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between;gap:7px;margin:2px 0 12px;position:relative;z-index:1}
+  .md-ticket .tspec .line{padding:0}
+  .md-ticket .tguar{list-style:none;margin:14px 0 0;padding:13px 0 0;border-top:1px dashed color-mix(in srgb,var(--gold) 24%,var(--hair2));display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+  .md-ticket .tguar li{position:relative;padding-left:24px;font-size:12px;color:#cfd3ec;line-height:1.35}
+  .md-ticket .tguar li::before{content:"✓";position:absolute;left:0;top:-1px;width:17px;height:17px;display:grid;place-items:center;border-radius:5px;background:color-mix(in srgb,var(--gold) 16%,transparent);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);color:var(--gold);font-size:10px;font-weight:900}
+  .md-ticket .tguar li:nth-child(2)::before{background:color-mix(in srgb,var(--neon) 16%,transparent);border-color:color-mix(in srgb,var(--neon) 40%,transparent);color:var(--neon)}
+  .md-ticket .tguar li:nth-child(3)::before{background:color-mix(in srgb,var(--cyan) 16%,transparent);border-color:color-mix(in srgb,var(--cyan) 40%,transparent);color:var(--cyan)}
   /* overhang: ribbon top-left, float chip top-right — reserved clear zones, never overlap */
   .md-ribbon{position:absolute;z-index:5;font-family:"Unbounded",sans-serif;font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;padding:7px 13px;border-radius:9px;box-shadow:0 12px 26px -12px rgba(0,0,0,.7)}
   .md-ribbon.gold{background:var(--g-gold);color:#231600}
@@ -234,7 +244,7 @@
   .md-chip-oh{position:absolute;z-index:4;top:-15px;right:-12px;background:rgba(11,13,26,.94);border:1px solid var(--hair2);border-radius:12px;padding:9px 13px;box-shadow:0 18px 40px -18px #000;backdrop-filter:blur(6px)}
   .md-chip-oh .cv{font-family:"Unbounded",sans-serif;font-weight:900;font-size:20px;line-height:1;background:var(--g-neon);-webkit-background-clip:text;background-clip:text;color:transparent}
   .md-chip-oh .cl{font-size:10.5px;color:var(--mu);margin-top:3px}
-  .md-ticket .foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:14px;font-size:11.5px;color:var(--dm)}
+  .md-ticket .foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;font-size:11.5px;color:var(--dm)}
   .md-ticket .foot span{padding:4px 9px;border:1px solid var(--hair);border-radius:7px;background:rgba(255,255,255,.02)}
 
   /* ---------- ledger stat strip ---------- */
@@ -509,15 +519,16 @@
 
   /* ---------- brand review / slot cards (multicolor interlinking) ---------- */
   .md-brands{display:grid;grid-template-columns:repeat(auto-fill,minmax(198px,1fr));gap:11px;margin:18px 0}
-  .md-brands a{--bc:var(--gold);--bc2:#e0952f;position:relative;display:flex;flex-direction:column;gap:6px;padding:15px 17px 14px;border-radius:15px;background:linear-gradient(165deg,var(--pan2),var(--pan));border:1px solid var(--hair);overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s}
+  .md-brands a{--bc:var(--gold);--bc2:#e0952f;position:relative;display:flex;flex-direction:column;gap:2px;padding:14px 16px 14px 18px;border-radius:13px;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s}
   .md-brands a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--bc),var(--bc2))}
   .md-brands a:hover{transform:translateY(-3px);border-color:var(--bc);box-shadow:0 16px 34px -18px var(--bc)}
-  .md-brands a .bnm{font-family:"Sora",sans-serif;font-weight:800;font-size:16px;color:var(--bc);line-height:1.1;text-shadow:0 0 22px color-mix(in srgb,var(--bc) 34%,transparent)}
-  .md-brands a .bds{color:var(--mu);font-size:12.5px;line-height:1.4}
+  .md-brands a .bnm{font-family:"Sora",sans-serif;font-weight:700;font-size:15.5px;color:var(--bc);line-height:1.18}
+  .md-brands a .bds{color:var(--mu);font-size:12px;line-height:1.4}
+  .md-brands a .bds .sc{font-family:"Sora",sans-serif;font-weight:700;color:var(--bc)}
   .md-brands a .bmore{margin-top:2px;display:inline-flex;align-items:center;gap:5px;font-family:"Unbounded",sans-serif;font-weight:800;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--bc)}
   .md-brands a .bsc{position:absolute;top:13px;right:14px;font-family:"Unbounded",sans-serif;font-weight:900;font-size:14px;color:var(--bc)}
   .md-brands a .bpills{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px}
-  .md-brands a.md-showall{justify-content:center;align-items:flex-start;background:linear-gradient(135deg,color-mix(in srgb,var(--bc) 24%,var(--pan2)),var(--pan));border-color:color-mix(in srgb,var(--bc) 48%,var(--hair))}
+  .md-brands a.md-showall{justify-content:center;align-items:flex-start;gap:7px;padding:16px 18px;background:linear-gradient(135deg,color-mix(in srgb,var(--bc) 24%,var(--pan2)),var(--pan));border-color:color-mix(in srgb,var(--bc) 48%,var(--hair))}
   .md-brands a.md-showall .bnm{font-size:17px}
   .md-brands a.md-showall .bmore{font-size:11.5px}
   /* SEO: full link pool always present in DOM for crawlers, hidden for users */
@@ -623,18 +634,27 @@
         <div class="tag">Чек редакции · вход дешёвый</div>
         <div class="bn">Vavada</div>
         <div class="bs">депозит 100 ₽, вывод от 9 минут на USDT</div>
+        <div class="why"><b>Почему в топе:</b> быстрые выплаты и проверяемая лицензия при минимуме спорных ситуаций — бонус активируется с той же минимальной сотки.</div>
         <div class="perf" aria-hidden="true"></div>
-        <div class="line"><span>Минимальный депозит</span><span class="big">100 ₽</span></div>
-        <div class="line"><span>Оценка редакции</span><span class="sc">9.6 / 10</span></div>
-        <div class="line"><span>Бонус с минималки</span><b>100% + 100 FS</b></div>
-        <div class="line"><span>Вейджер</span><b>x40</b></div>
-        <div class="line spec"><span>Способы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · карта · USDT</span></div>
-        <div class="line spec"><span>Средний срок выплаты</span><i class="dts"></i><span class="val hl-neon">~9 минут</span></div>
-        <div class="line spec"><span>Слотов в каталоге</span><i class="dts"></i><span class="val hl-gold">7000+</span></div>
-        <div class="line spec"><span>Кэшбэк</span><i class="dts"></i><span class="val hl-hot">до 10%</span></div>
-        <div class="line spec"><span>Поддержка</span><i class="dts"></i><span class="val hl-sky">24/7, чат</span></div>
+        <div class="tspec">
+          <div class="line"><span>Минимальный депозит</span><span class="big">100 ₽</span></div>
+          <div class="line"><span>Оценка редакции</span><span class="sc">9.6 / 10</span></div>
+          <div class="line spec"><span>Бонус с минималки</span><i class="dts"></i><span class="val hl-gold">100% + 100 FS</span></div>
+          <div class="line spec"><span>Вейджер бонуса</span><i class="dts"></i><span class="val hl-neon">x40</span></div>
+          <div class="line spec"><span>Способы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · карта · USDT</span></div>
+          <div class="line spec"><span>Средний срок выплаты</span><i class="dts"></i><span class="val hl-neon">~9 минут</span></div>
+          <div class="line spec"><span>Валюты счёта</span><i class="dts"></i><span class="val hl-gold">₽ · USDT · BTC</span></div>
+          <div class="line spec"><span>Слотов в каталоге</span><i class="dts"></i><span class="val hl-gold">7000+</span></div>
+          <div class="line spec"><span>Кэшбэк</span><i class="dts"></i><span class="val hl-hot">до 10%</span></div>
+          <div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао GCB 8048</span></div>
+        </div>
         <a href="/go/vavada" rel="nofollow sponsored" class="md-btn md-btn-neon" style="width:100%;margin-top:12px">Открыть Vavada</a>
         <div class="foot"><span>СБП от 100 ₽</span><span>Мир · USDT · BTC</span><span>Кюрасао GCB 8048</span></div>
+        <ul class="tguar">
+          <li>Депозиты и выводы проверены кассой</li>
+          <li>Лицензия сверена по номеру в реестре</li>
+          <li>Сроки выплат замерены редакцией</li>
+        </ul>
       </aside>
     </div>
   </div>
@@ -1593,10 +1613,8 @@
     var html="";
     pick3(CASINOS).forEach(function(x){
       html+='<a href="'+esc(x.h)+'" style="--bc:'+esc(x.c)+';--bc2:'+esc(x.c2)+'">'
-          +'<span class="bsc">'+esc(x.s)+'</span>'
-          +'<span class="bnm">'+esc(x.n)+'</span>'
-          +'<span class="bds">'+esc(x.d)+'</span>'
-          +'<span class="bmore">Полный обзор →</span></a>';
+          +'<b class="bnm">'+esc(x.n)+'</b>'
+          +'<small class="bds">'+esc(x.d)+' · <span class="sc">'+esc(x.s)+'</span></small></a>';
     });
     html+='<a href="/casino/" class="md-showall" style="--bc:#b8ff2b;--bc2:#8fd400">'
         +'<span class="bnm">Показать все</span>'
