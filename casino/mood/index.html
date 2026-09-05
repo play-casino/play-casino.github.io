@@ -571,21 +571,45 @@
 .pcnav-burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 @media(max-width:900px){
  .pcnav-burger{display:flex}
- .pcnav-links{position:fixed;top:57px;left:0;right:0;bottom:0;z-index:99989;margin:0;flex-direction:column;align-items:stretch;gap:2px;
-  padding:14px 16px 40px;overflow-y:auto;background:#080912;
-  transform:translateX(100%);transition:transform .32s cubic-bezier(.22,1,.36,1)}
+ .pcnav-links{position:fixed;top:57px;left:0;right:0;bottom:0;z-index:99989;margin:0;flex-direction:column;align-items:stretch;gap:7px;
+  padding:16px 16px 40px;overflow-y:auto;transform:translateX(100%);transition:transform .32s cubic-bezier(.22,1,.36,1);
+  background:radial-gradient(620px 300px at 100% -4%,rgba(255,46,147,.16),transparent),radial-gradient(520px 300px at -6% 14%,rgba(184,255,43,.13),transparent),radial-gradient(560px 440px at 60% 116%,rgba(169,123,255,.15),transparent),#070810}
  .pcnav-links.open{transform:translateX(0)}
- .pcnav-links>a,.pcnav-dropbtn{width:100%;text-align:left;font-size:16px;padding:13px 12px;border-radius:12px}
- .pcnav-links>a::after{display:none}
- .pcnav-links>a:active,.pcnav-dropbtn:active{background:rgba(255,255,255,.06)}
- .pcnav-drop{width:100%}
- .pcnav-dropbtn{display:flex;justify-content:space-between;align-items:center}
- .pcnav-menu,.pcnav-menu.pcnav-mega{position:static;min-width:0;width:100%;opacity:1;visibility:visible;transform:none;
-  display:none;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.03);border:0;box-shadow:none;margin:2px 0 6px;padding:8px}
- .pcnav-drop.open .pcnav-menu{display:grid}
- .pcnav-cta{margin:12px 0 0;text-align:center}
+ .pcnav-links.open>*{opacity:0;transform:translateY(12px);animation:pcin .4s cubic-bezier(.22,1,.36,1) forwards}
+ .pcnav-links.open>*:nth-child(1){animation-delay:.04s}
+ .pcnav-links.open>*:nth-child(2){animation-delay:.09s}
+ .pcnav-links.open>*:nth-child(3){animation-delay:.14s}
+ .pcnav-links.open>*:nth-child(4){animation-delay:.19s}
+ .pcnav-links.open>*:nth-child(5){animation-delay:.24s}
+ .pcnav-links.open>*:nth-child(6){animation-delay:.29s}
+ .pcnav-links.open>*:nth-child(7){animation-delay:.34s}
+ .pcnav-links>a{display:flex;align-items:center;gap:12px;width:100%;font-size:16px;font-weight:800;padding:15px 15px;border-radius:14px;background:rgba(255,255,255,.045);border-left:3px solid transparent}
+ .pcnav-links>a::after{content:"A";margin-left:auto;font-size:22px;line-height:1;opacity:.45;position:static;background:none;transform:none;transition:transform .2s}
+ .pcnav-links>a:active{background:rgba(255,255,255,.09)}
+ .pcnav-links>a:active::after{transform:translateX(3px)}
+ .pcnav-links>a:nth-of-type(1){color:#b8ff2b;border-left-color:#b8ff2b}
+ .pcnav-links>a:nth-of-type(1)::before{content:"F3B0";font-size:18px}
+ .pcnav-links>a:nth-of-type(2){color:#3fe0d0;border-left-color:#3fe0d0}
+ .pcnav-links>a:nth-of-type(2)::before{content:"F3B2";font-size:18px}
+ .pcnav-links>a:nth-of-type(3){color:#ffcf3f;border-left-color:#ffcf3f}
+ .pcnav-links>a:nth-of-type(3)::before{content:"F4B0";font-size:18px}
+ .pcnav-drop{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden}
+ .pcnav-dropbtn{display:flex;justify-content:space-between;align-items:center;width:100%;padding:15px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#eef0fb}
+ .pcnav-drop:nth-of-type(1) .pcnav-dropbtn{color:#ff2e93}
+ .pcnav-drop:nth-of-type(2) .pcnav-dropbtn{color:#a97bff}
+ .pcnav-dropbtn::after{content:"4";font-size:20px;line-height:.6;opacity:.7;transition:transform .3s}
+ .pcnav-drop.open .pcnav-dropbtn::after{transform:rotate(180deg)}
+ .pcnav-menu,.pcnav-menu.pcnav-mega{position:static;min-width:0;width:100%;opacity:1;visibility:visible;transform:none;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;background:none;border:0;box-shadow:none;max-height:0;overflow:hidden;padding:0 15px;transition:max-height .34s ease,padding .3s ease}
+ .pcnav-drop.open .pcnav-menu{max-height:900px;padding:2px 15px 14px}
+ .pcnav-menu .pcnav-col{display:contents}
+ .pcnav-menu .pcnav-h{display:none}
+ .pcnav-menu a{color:#c4c9e8!important;font-size:13.5px;font-weight:600;padding:9px 2px!important;border-bottom:1px solid rgba(255,255,255,.05);border-radius:0}
+ .pcnav-menu a:active{color:#b8ff2b!important}
+ .pcnav-cta{margin-top:6px;text-align:center;background:linear-gradient(105deg,#b8ff2b,#ffcf3f)!important;color:#06070e!important;padding:15px!important;font-size:16px}
+ .pcnav-cta::after{display:none}
+ .pcnav-mtg{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:4px;padding:15px;border-radius:14px;color:#fff!important;font-weight:800;font-size:15px;background:linear-gradient(105deg,#2AABEE,#229ED9);box-shadow:0 8px 22px rgba(34,158,217,.4)}
+ .pcnav-mtg svg{width:21px;height:21px;flex:0 0 auto}
 }
-/* --- цветность и анимации меню --- */
 .pcnav-logo:hover .d{transform:rotate(-10deg) scale(1.08)}
 .pcnav-links>a:nth-of-type(1):hover{color:#b8ff2b}
 .pcnav-links>a:nth-of-type(2):hover{color:#3fe0d0}
@@ -593,40 +617,6 @@
 .pcnav-drop:nth-of-type(1) .pcnav-dropbtn:hover{color:#ff2e93}
 .pcnav-drop:nth-of-type(2) .pcnav-dropbtn:hover{color:#a97bff}
 .pcnav-h{background:linear-gradient(90deg,#b8ff2b,#ff2e93);-webkit-background-clip:text;background-clip:text;color:transparent}
-@media(max-width:900px){
- .pcnav-links{background:radial-gradient(620px 300px at 100% -5%,rgba(255,46,147,.17),transparent),radial-gradient(520px 280px at -5% 12%,rgba(184,255,43,.14),transparent),radial-gradient(560px 420px at 55% 118%,rgba(169,123,255,.16),transparent),#06070e}
- .pcnav-links>a,.pcnav-dropbtn{border-left:3px solid transparent;background:rgba(255,255,255,.045);margin-bottom:3px;font-weight:800}
- .pcnav-links>a::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:11px;vertical-align:middle;background:currentColor;box-shadow:0 0 12px currentColor}
- .pcnav-links.open>*{opacity:0;transform:translateX(26px);animation:pcin .44s cubic-bezier(.22,1,.36,1) forwards}
- .pcnav-links.open>*:nth-child(1){animation-delay:.05s}
- .pcnav-links.open>*:nth-child(2){animation-delay:.10s}
- .pcnav-links.open>*:nth-child(3){animation-delay:.15s}
- .pcnav-links.open>*:nth-child(4){animation-delay:.20s}
- .pcnav-links.open>*:nth-child(5){animation-delay:.25s}
- .pcnav-links.open>*:nth-child(6){animation-delay:.30s}
- .pcnav-links>a:nth-child(1){color:#b8ff2b;border-left-color:#b8ff2b}
- .pcnav-links>a:nth-child(2){color:#3fe0d0;border-left-color:#3fe0d0}
- .pcnav-links>a:nth-child(3){color:#ffcf3f;border-left-color:#ffcf3f}
- .pcnav-drop:nth-of-type(1) .pcnav-dropbtn{color:#ff2e93;border-left-color:#ff2e93}
- .pcnav-drop:nth-of-type(2) .pcnav-dropbtn{color:#a97bff;border-left-color:#a97bff}
- .pcnav-links>a:active{background:rgba(255,255,255,.09);transform:scale(.99)}
- /* CTA «Топ казино» — читаемость (яркий фон, тёмный текст) */
- .pcnav-links>a.pcnav-cta{background:linear-gradient(105deg,#b8ff2b,#ffcf3f)!important;color:#06070e!important;border-left:0!important;margin-top:6px;text-align:center;box-shadow:0 8px 20px rgba(184,255,43,.35)}
- .pcnav-links>a.pcnav-cta::before{display:none}
- /* каталоги и бонусы раскрыты чипами — заполняют пространство */
- .pcnav-drop{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:12px 12px 9px;margin:5px 0}
- .pcnav-dropbtn{pointer-events:none;font-size:11px!important;text-transform:uppercase;letter-spacing:1.2px;padding:0 2px 10px!important;border-left:0!important;
-  background:linear-gradient(90deg,#b8ff2b,#ff2e93)!important;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
- .pcnav-drop .pcnav-menu,.pcnav-drop .pcnav-menu.pcnav-mega{display:flex!important;flex-wrap:wrap;gap:8px;position:static;min-width:0;opacity:1!important;visibility:visible!important;transform:none!important;background:none!important;border:0!important;box-shadow:none!important;padding:0!important}
- .pcnav-menu .pcnav-col{display:contents}
- .pcnav-menu .pcnav-h{display:none}
- .pcnav-menu a{flex:0 0 auto;background:rgba(255,255,255,.05)!important;border:1px solid rgba(255,255,255,.10);border-radius:999px;padding:9px 13px!important;font-size:13px!important;font-weight:600;color:#e6e9fb!important;transform:none!important;transition:.16s}
- .pcnav-menu a:active,.pcnav-menu a:hover{background:linear-gradient(100deg,rgba(184,255,43,.22),rgba(255,46,147,.22))!important;color:#fff!important;border-color:transparent}
- /* Telegram-сотрудничество внизу меню */
- .pcnav-mtg{display:flex!important;align-items:center;justify-content:center;gap:9px;margin-top:16px;padding:14px;border-radius:14px;color:#fff!important;font-weight:800;font-size:15px;background:linear-gradient(105deg,#2AABEE,#229ED9);box-shadow:0 8px 22px rgba(34,158,217,.42)}
- .pcnav-mtg svg{width:21px;height:21px;flex:0 0 auto}
- .pcnav-mtg::before{display:none}
-}
 .pcnav-mtg{display:none}
 @keyframes pcin{to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.pcnav *{animation:none!important;transition:none!important}.pcnav-links.open>*{opacity:1!important;transform:none!important}}
