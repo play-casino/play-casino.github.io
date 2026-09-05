@@ -196,6 +196,73 @@ footer.s02-foot{border-top:1px solid var(--line2);margin-top:26px;padding:36px 0
 }
 </style></head>
 <body>
+<!--PCNAV--><style id="pcnav-style">
+.pcnav *{box-sizing:border-box}
+.pcnav{position:sticky;top:0;z-index:99990;font-family:"Manrope",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ background:rgba(6,7,14,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+ border-bottom:1px solid rgba(255,255,255,.10);box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.pcnav-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:11px 16px}
+.pcnav-logo{display:flex;align-items:center;gap:2px;font-family:"Unbounded","Manrope",sans-serif;font-weight:800;
+ font-size:19px;text-decoration:none;letter-spacing:.2px;color:#eef0fb;white-space:nowrap}
+.pcnav-logo .d{display:inline-flex;width:26px;height:26px;margin-right:7px;border-radius:8px;align-items:center;justify-content:center;
+ color:#06070e;font-size:15px;background:linear-gradient(135deg,#b8ff2b,#ffcf3f);box-shadow:0 0 16px rgba(184,255,43,.5);animation:pcpulse 2.6s var(--pce,ease) infinite}
+.pcnav-logo b{background:linear-gradient(105deg,#b8ff2b,#ff2e93 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes pcpulse{0%,100%{box-shadow:0 0 12px rgba(184,255,43,.45)}50%{box-shadow:0 0 22px rgba(255,46,147,.7)}}
+.pcnav-links{display:flex;align-items:center;gap:2px;margin-left:auto}
+.pcnav-links>a,.pcnav-dropbtn{position:relative;background:none;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:14.5px;
+ color:#d7dbf0;padding:9px 13px;border-radius:11px;text-decoration:none;transition:color .2s,background .2s}
+.pcnav-links>a::after{content:"";position:absolute;left:13px;right:13px;bottom:5px;height:2px;border-radius:2px;
+ background:linear-gradient(90deg,#b8ff2b,#ff2e93);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.22,1,.36,1)}
+.pcnav-links>a:hover{color:#fff}.pcnav-links>a:hover::after{transform:scaleX(1)}
+.pcnav-dropbtn:hover{color:#fff;background:rgba(255,255,255,.06)}
+.pcnav-drop{position:relative}
+.pcnav-menu{position:absolute;top:calc(100% + 10px);left:0;min-width:210px;padding:10px;border-radius:16px;
+ background:rgba(13,16,32,.97);border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 50px rgba(0,0,0,.55);
+ display:grid;gap:3px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.24s cubic-bezier(.22,1,.36,1)}
+.pcnav-drop:hover .pcnav-menu,.pcnav-drop.open .pcnav-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.pcnav-menu.pcnav-mega{left:auto;right:0;grid-template-columns:repeat(3,minmax(150px,1fr));gap:6px 16px;min-width:560px;padding:16px}
+.pcnav-col{display:flex;flex-direction:column;gap:1px}
+.pcnav-h{font-size:11px;text-transform:uppercase;letter-spacing:.9px;color:#7f86aa;margin:2px 0 5px;font-weight:800}
+.pcnav-menu a{color:#c9cdea;text-decoration:none;font-size:13.5px;font-weight:600;padding:7px 9px;border-radius:9px;transition:.16s}
+.pcnav-menu a:hover{background:linear-gradient(100deg,rgba(184,255,43,.16),rgba(255,46,147,.16));color:#fff;transform:translateX(3px)}
+.pcnav-cta{margin-left:6px;color:#06070e!important;font-weight:800;padding:9px 16px;border-radius:11px;text-decoration:none;
+ background:linear-gradient(105deg,#b8ff2b,#ffcf3f);box-shadow:0 6px 18px rgba(184,255,43,.32);transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.pcnav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,207,63,.45)}
+.pcnav-cta::after{display:none}
+.pcnav-burger{display:none;margin-left:auto;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.pcnav-burger span{width:26px;height:3px;border-radius:3px;background:linear-gradient(90deg,#b8ff2b,#ff2e93);transition:.3s}
+.pcnav-burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.pcnav-burger.open span:nth-child(2){opacity:0}
+.pcnav-burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media(max-width:900px){
+ .pcnav-burger{display:flex}
+ .pcnav-links{position:fixed;top:59px;left:0;right:0;bottom:0;margin:0;flex-direction:column;align-items:stretch;gap:2px;
+  padding:14px 16px 40px;overflow-y:auto;background:rgba(6,7,14,.98);backdrop-filter:blur(16px);
+  transform:translateX(100%);transition:transform .32s cubic-bezier(.22,1,.36,1)}
+ .pcnav-links.open{transform:translateX(0)}
+ .pcnav-links>a,.pcnav-dropbtn{width:100%;text-align:left;font-size:16px;padding:13px 12px;border-radius:12px}
+ .pcnav-links>a::after{display:none}
+ .pcnav-links>a:active,.pcnav-dropbtn:active{background:rgba(255,255,255,.06)}
+ .pcnav-drop{width:100%}
+ .pcnav-dropbtn{display:flex;justify-content:space-between;align-items:center}
+ .pcnav-menu,.pcnav-menu.pcnav-mega{position:static;min-width:0;width:100%;opacity:1;visibility:visible;transform:none;
+  display:none;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.03);border:0;box-shadow:none;margin:2px 0 6px;padding:8px}
+ .pcnav-drop.open .pcnav-menu{display:grid}
+ .pcnav-cta{margin:12px 0 0;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.pcnav *{animation:none!important;transition:none!important}}
+</style><div class="pcnav" id="pcnav"><div class="pcnav-in"><a class="pcnav-logo" href="/"><span class="d">P</span>Play<b>Casino</b></a><button class="pcnav-burger" id="pcnavBurger" aria-label="Меню"><span></span><span></span><span></span></button><nav class="pcnav-links" id="pcnavLinks"><a href="/casino/">Казино</a><a href="/slots/">Слоты</a><a href="/min-depozit/">Мин. депозит</a><div class="pcnav-drop"><button class="pcnav-dropbtn">Бонусы ▾</button><div class="pcnav-menu"><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div></div><div class="pcnav-drop"><button class="pcnav-dropbtn">Каталоги ▾</button><div class="pcnav-menu pcnav-mega"><div class="pcnav-col"><span class="pcnav-h">Рейтинги</span><a href="/online-kazino/">Онлайн-казино</a><a href="/rejting-kazino/">Рейтинг казино</a><a href="/top-casino/">Топ казино</a><a href="/luchshie/">Лучшие казино</a><a href="/novye/">Новые казино</a></div><div class="pcnav-col"><span class="pcnav-h">По депозиту</span><a href="/min-depozit/">Мин. депозит</a><a href="/na-rubli/">На рубли</a><a href="/sbp/">СБП</a><a href="/vyvod-na-kartu/">Вывод на карту</a><a href="/bystryj-vyvod/">Быстрый вывод</a></div><div class="pcnav-col"><span class="pcnav-h">Бонусы</span><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div><div class="pcnav-col"><span class="pcnav-h">Игры</span><a href="/avtomaty/">Игровые автоматы</a><a href="/ruletka/">Рулетка</a><a href="/live/">Live-казино</a><a href="/vip/">VIP-казино</a></div><div class="pcnav-col"><span class="pcnav-h">Надёжность</span><a href="/licenzionnye/">Лицензионные</a><a href="/oficialnye/">Официальные</a><a href="/otzyvy/">Отзывы игроков</a><a href="/platjat/">Которые платят</a><a href="/bez-verifikacii/">Без верификации</a></div><div class="pcnav-col"><span class="pcnav-h">Крипто и устройства</span><a href="/bitkoin/">Биткоин</a><a href="/crypto/">Криптовалюта</a><a href="/mobilnye/">Мобильные</a><a href="/android/">Android</a><a href="/rossiya/">Россия</a><a href="/kazakhstan/">Казахстан</a></div></div></div><a class="pcnav-cta" href="/luchshie/">🏆 Топ казино</a></nav></div></div><script id="pcnav-js">
+(function(){if(window.__pcnav)return;window.__pcnav=1;
+var b=document.getElementById('pcnavBurger'),l=document.getElementById('pcnavLinks');
+if(b&&l){b.addEventListener('click',function(){b.classList.toggle('open');l.classList.toggle('open');
+ document.body.style.overflow=l.classList.contains('open')?'hidden':'';});}
+document.querySelectorAll('.pcnav-dropbtn').forEach(function(btn){btn.addEventListener('click',function(e){
+ if(window.matchMedia('(max-width:900px)').matches){e.preventDefault();btn.parentElement.classList.toggle('open');}});});
+document.querySelectorAll('.pcnav-links a').forEach(function(a){a.addEventListener('click',function(){
+ b&&b.classList.remove('open');l&&l.classList.remove('open');document.body.style.overflow='';});});
+})();
+</script><!--/PCNAV-->
+
 <header class="s02-top"><div class="s02-wrap">
 <a class="s02-logo" href="/"><span class="d">P</span><span><b>PlayCasino</b> <em>рейтинг для игрока</em></span></a>
 <nav class="s02-nav">
