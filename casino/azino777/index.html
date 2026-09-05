@@ -576,6 +576,15 @@ document.querySelectorAll('.pcnav-dropbtn').forEach(function(btn){btn.addEventLi
  if(window.matchMedia('(max-width:900px)').matches){e.preventDefault();btn.parentElement.classList.toggle('open');}});});
 document.querySelectorAll('.pcnav-links a').forEach(function(a){a.addEventListener('click',function(){
  b&&b.classList.remove('open');l&&l.classList.remove('open');document.body.style.overflow='';});});
+// Фолбэк-долив шкал оценок (data-w): гарантирует заполнение при reduced-motion/несработавшем observer страницы
+window.addEventListener('load',function(){
+ var bars=document.querySelectorAll('[data-w]');if(!bars.length)return;
+ var rd=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function fl(el){var v=el.getAttribute('data-w');if(v!=null&&v!==''){el.style.width=(/[%px]/.test(v)?v:v+'%');}}
+ if(rd||!('IntersectionObserver' in window)){bars.forEach(fl);return;}
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){fl(e.target);io.unobserve(e.target);}});},{threshold:.15});
+ bars.forEach(function(x){io.observe(x);});
+});
 })();
 </script><!--/PCNAV-->
 
