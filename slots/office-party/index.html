@@ -257,7 +257,36 @@ section:first-of-type{border-top:0}
  .pcnav-drop.open .pcnav-menu{display:grid}
  .pcnav-cta{margin:12px 0 0;text-align:center}
 }
-@media(prefers-reduced-motion:reduce){.pcnav *{animation:none!important;transition:none!important}}
+/* --- цветность и анимации меню --- */
+.pcnav-logo:hover .d{transform:rotate(-10deg) scale(1.08)}
+.pcnav-links>a:nth-of-type(1):hover{color:#b8ff2b}
+.pcnav-links>a:nth-of-type(2):hover{color:#3fe0d0}
+.pcnav-links>a:nth-of-type(3):hover{color:#ffcf3f}
+.pcnav-drop:nth-of-type(1) .pcnav-dropbtn:hover{color:#ff2e93}
+.pcnav-drop:nth-of-type(2) .pcnav-dropbtn:hover{color:#a97bff}
+.pcnav-h{background:linear-gradient(90deg,#b8ff2b,#ff2e93);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:900px){
+ .pcnav-links{background:radial-gradient(620px 300px at 100% -5%,rgba(255,46,147,.17),transparent),radial-gradient(520px 280px at -5% 12%,rgba(184,255,43,.14),transparent),radial-gradient(560px 420px at 55% 118%,rgba(169,123,255,.16),transparent),#06070e}
+ .pcnav-links>a,.pcnav-dropbtn{border-left:3px solid transparent;background:rgba(255,255,255,.045);margin-bottom:3px;font-weight:800}
+ .pcnav-links>a::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:11px;vertical-align:middle;background:currentColor;box-shadow:0 0 12px currentColor}
+ .pcnav-links.open>*{opacity:0;transform:translateX(26px);animation:pcin .44s cubic-bezier(.22,1,.36,1) forwards}
+ .pcnav-links.open>*:nth-child(1){animation-delay:.05s}
+ .pcnav-links.open>*:nth-child(2){animation-delay:.10s}
+ .pcnav-links.open>*:nth-child(3){animation-delay:.15s}
+ .pcnav-links.open>*:nth-child(4){animation-delay:.20s}
+ .pcnav-links.open>*:nth-child(5){animation-delay:.25s}
+ .pcnav-links.open>*:nth-child(6){animation-delay:.30s}
+ .pcnav-links>a:nth-child(1){color:#b8ff2b;border-left-color:#b8ff2b}
+ .pcnav-links>a:nth-child(2){color:#3fe0d0;border-left-color:#3fe0d0}
+ .pcnav-links>a:nth-child(3){color:#ffcf3f;border-left-color:#ffcf3f}
+ .pcnav-drop:nth-of-type(1) .pcnav-dropbtn{color:#ff2e93;border-left-color:#ff2e93}
+ .pcnav-drop:nth-of-type(2) .pcnav-dropbtn{color:#a97bff;border-left-color:#a97bff}
+ .pcnav-links>a:active{background:rgba(255,255,255,.09);transform:scale(.99)}
+ .pcnav-menu a{color:#e6e9fb!important}
+ .pcnav-menu a:hover{color:#fff!important}
+}
+@keyframes pcin{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.pcnav *{animation:none!important;transition:none!important}.pcnav-links.open>*{opacity:1!important;transform:none!important}}
 </style><div class="pcnav" id="pcnav"><div class="pcnav-in"><a class="pcnav-logo" href="/"><span class="d">P</span>Play<b>Casino</b></a><button class="pcnav-burger" id="pcnavBurger" aria-label="Меню"><span></span><span></span><span></span></button><nav class="pcnav-links" id="pcnavLinks"><a href="/casino/">Казино</a><a href="/slots/">Слоты</a><a href="/min-depozit/">Мин. депозит</a><div class="pcnav-drop"><button class="pcnav-dropbtn">Бонусы ▾</button><div class="pcnav-menu"><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div></div><div class="pcnav-drop"><button class="pcnav-dropbtn">Каталоги ▾</button><div class="pcnav-menu pcnav-mega"><div class="pcnav-col"><span class="pcnav-h">Рейтинги</span><a href="/online-kazino/">Онлайн-казино</a><a href="/rejting-kazino/">Рейтинг казино</a><a href="/top-casino/">Топ казино</a><a href="/luchshie/">Лучшие казино</a><a href="/novye/">Новые казино</a></div><div class="pcnav-col"><span class="pcnav-h">По депозиту</span><a href="/min-depozit/">Мин. депозит</a><a href="/na-rubli/">На рубли</a><a href="/sbp/">СБП</a><a href="/vyvod-na-kartu/">Вывод на карту</a><a href="/bystryj-vyvod/">Быстрый вывод</a></div><div class="pcnav-col"><span class="pcnav-h">Бонусы</span><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div><div class="pcnav-col"><span class="pcnav-h">Игры</span><a href="/avtomaty/">Игровые автоматы</a><a href="/ruletka/">Рулетка</a><a href="/live/">Live-казино</a><a href="/vip/">VIP-казино</a></div><div class="pcnav-col"><span class="pcnav-h">Надёжность</span><a href="/licenzionnye/">Лицензионные</a><a href="/oficialnye/">Официальные</a><a href="/otzyvy/">Отзывы игроков</a><a href="/platjat/">Которые платят</a><a href="/bez-verifikacii/">Без верификации</a></div><div class="pcnav-col"><span class="pcnav-h">Крипто и устройства</span><a href="/bitkoin/">Биткоин</a><a href="/crypto/">Криптовалюта</a><a href="/mobilnye/">Мобильные</a><a href="/android/">Android</a><a href="/rossiya/">Россия</a><a href="/kazakhstan/">Казахстан</a></div></div></div><a class="pcnav-cta" href="/luchshie/">🏆 Топ казино</a></nav></div></div><script id="pcnav-js">
 (function(){if(window.__pcnav)return;window.__pcnav=1;
 var b=document.getElementById('pcnavBurger'),l=document.getElementById('pcnavLinks');
@@ -412,31 +441,50 @@ window.addEventListener('load',function(){
 </section>
 </div>
 </main>
-<footer class="s03-foot">
-<div class="s03-shell">
-<div class="discl">18+. Азартные игры несут риск финансовых потерь. Материал носит информационный характер и не является призывом к игре. Играйте ответственно, не берите в долг, установите лимиты депозита. Если игра перестала быть развлечением — обратитесь на линию помощи.</div>
-<div class="cols">
-<div>
-<div class="s03-logo" style="font-size:18px;margin-bottom:8px"><span class="mk">P</span> Play<b>Casino</b></div>
-<p style="font-size:13px;color:var(--dm);margin:0">Независимый рейтинг казино и слотов с 2019 года. Оцениваем математику, кассу и честность выплат — для игрока, а не для казино.</p>
-</div>
-<div><h5>Слоты</h5><ul>
-<li><a href="/avtomaty/">Все автоматы</a></li>
-<li><a href="/frispiny/">Фриспины</a></li>
-<li><a href="/slots/devils-finger/">Devils Finger</a></li><li><a href="/slots/3-fat-kings/">3 Fat Kings</a></li>
-</ul></div>
-<div><h5>Казино</h5><ul>
-<li><a href="/casino/vavada/">Vavada</a></li><li><a href="/casino/1win/">1win</a></li><li><a href="/casino/starda/">Starda</a></li>
-<li><a href="/rejting-kazino/">Весь рейтинг</a></li>
-</ul></div>
-</div>
-</div>
-</footer>
 <script>
 (function(){var hd=document.getElementById('hd');var on=function(){hd.classList.toggle('stuck',window.scrollY>8)};on();addEventListener('scroll',on,{passive:true});})();
 </script>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "PlayCasino", "item": "https://rejting-kazino777.top/"}, {"@type": "ListItem", "position": 2, "name": "Слоты", "item": "https://rejting-kazino777.top/avtomaty/"}, {"@type": "ListItem", "position": 3, "name": "Office Party", "item": "https://rejting-kazino777.top/slots/office-party/"}]}, {"@type": "Organization", "name": "PlayCasino", "url": "https://rejting-kazino777.top/", "description": "Независимый рейтинг онлайн-казино и слотов"}, {"@type": "WebPage", "name": "Office Party (Офис Пати) — слот Shady Lady: RTP 96,51%, демо, играть 2026", "url": "https://rejting-kazino777.top/slots/office-party/", "inLanguage": "ru-RU", "datePublished": "2026-09-05", "dateModified": "2026-09-05"}, {"@type": "Review", "itemReviewed": {"@type": "Game", "name": "Office Party", "gameItem": {"@type": "Thing", "name": "Видеослот"}, "author": {"@type": "Organization", "name": "Shady Lady"}}, "reviewRating": {"@type": "Rating", "ratingValue": "8.7", "bestRating": "10", "worstRating": "1"}, "author": {"@type": "Person", "name": "Илья Ремизов"}, "publisher": {"@type": "Organization", "name": "PlayCasino"}},{"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Какой RTP у слота Office Party?", "acceptedAnswer": {"@type": "Answer", "text": "Базовый RTP Office Party от Shady Lady — 96,51%, что выше среднего по рынку. Существуют и урезанные версии, поэтому реальную отдачу проверяйте в паратейбле выбранного казино."}}, {"@type": "Question", "name": "Что такое режим Gimp в Office Party?", "acceptedAnswer": {"@type": "Answer", "text": "Это альтернативный режим игры с повышенным бонус-потенциалом и повышенным риском. В Normal слот ровнее, в Gimp — жирнее возможный занос, но добраться до бонуса сложнее."}}, {"@type": "Question", "name": "Какой максимальный выигрыш в Office Party?", "acceptedAnswer": {"@type": "Answer", "text": "Потолок — x20 000 от ставки. Шанс поймать максимум крайне низкий, около 1 к 48 000 000 спинов, и реализуется он через бонус Severance с множителями."}}, {"@type": "Question", "name": "Можно ли купить бонус в Office Party?", "acceptedAnswer": {"@type": "Answer", "text": "Основной «риск-инструмент» — режим Gimp. Отдельные площадки также дают Bonus Buy на Severance, но в части российских казино покупка отключена — уточняйте наличие кнопки в лобби."}}, {"@type": "Question", "name": "Где играть в Office Party на деньги?", "acceptedAnswer": {"@type": "Answer", "text": "Редакция советует Vavada, 1win, Starda и Izzi: там Shady Lady представлен официально, есть демо и стабильный вывод на карту, СБП и крипту."}}]},{"@type": "Person", "name": "Илья Ремизов", "jobTitle": "Эксперт по слотам и RTP", "worksFor": {"@type": "Organization", "name": "PlayCasino"}}]}
 </script>
+<!--PCFOOT--><style id="pcfoot-style">
+.pcfoot *{box-sizing:border-box}
+.pcfoot{position:relative;margin-top:52px;background:linear-gradient(180deg,#080a14,#05060c);
+ border-top:1px solid rgba(255,255,255,.08);color:#c9cdea;font-family:"Manrope",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}
+.pcfoot a{color:inherit;text-decoration:none}
+.pcf-in{max-width:1180px;margin:0 auto;padding:40px 16px 24px}
+.pcf-coop{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;
+ padding:24px 26px;border-radius:22px;margin-bottom:38px;overflow:hidden;
+ background:linear-gradient(120deg,rgba(42,171,238,.15),rgba(184,255,43,.10) 55%,rgba(255,46,147,.14))}
+.pcf-coop::before{content:"";position:absolute;inset:0;border-radius:22px;padding:1.6px;pointer-events:none;
+ background:linear-gradient(120deg,#2AABEE,#b8ff2b,#ffcf3f,#ff2e93,#2AABEE);background-size:300% 100%;
+ -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+ animation:pcborder 6s linear infinite}
+@keyframes pcborder{to{background-position:300% 0}}
+.pcf-coop-t{font-family:"Unbounded","Manrope",sans-serif;font-weight:800;font-size:19px;color:#fff;margin:0 0 5px}
+.pcf-coop-p{color:#d3d7f0;font-size:13.5px;margin:0;max-width:540px}
+.pcf-tg{display:inline-flex;align-items:center;gap:11px;padding:14px 24px;border-radius:14px;font-weight:800;font-size:15px;color:#fff;white-space:nowrap;
+ background:linear-gradient(105deg,#2AABEE,#229ED9);box-shadow:0 10px 26px rgba(34,158,217,.42);transition:transform .2s,box-shadow .2s;animation:pctg 2.6s ease-in-out infinite}
+.pcf-tg:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 18px 40px rgba(34,158,217,.6)}
+.pcf-tg svg{width:23px;height:23px;flex:0 0 auto}
+@keyframes pctg{0%,100%{box-shadow:0 10px 26px rgba(34,158,217,.42)}50%{box-shadow:0 12px 34px rgba(34,158,217,.72)}}
+.pcf-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:28px}
+.pcf-logo{display:inline-flex;align-items:center;gap:2px;font-family:"Unbounded","Manrope",sans-serif;font-weight:800;font-size:20px;color:#eef0fb}
+.pcf-logo .d{display:inline-flex;width:26px;height:26px;margin-right:7px;border-radius:8px;align-items:center;justify-content:center;color:#06070e;font-size:15px;background:linear-gradient(135deg,#b8ff2b,#ffcf3f)}
+.pcf-logo b{background:linear-gradient(105deg,#b8ff2b,#ff2e93 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pcf-tag{color:#9096b4;font-size:13px;margin:13px 0 16px;max-width:300px;line-height:1.6}
+.pcf-18{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#b9bedd;border:1px solid rgba(255,255,255,.14);padding:7px 13px;border-radius:999px}
+.pcf-18 b{color:#ff2e93}
+.pcf-col h4{font-family:"Unbounded","Manrope",sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin:0 0 14px;
+ background:linear-gradient(90deg,#b8ff2b,#ff2e93);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pcf-col a{display:block;font-size:13.6px;padding:5px 0;color:#b9bedd;transition:color .16s,transform .16s}
+.pcf-col a::before{content:"A";color:#3fe0d0;margin-right:0;max-width:0;display:inline-block;overflow:hidden;opacity:0;transition:.18s}
+.pcf-col a:hover{color:#fff;transform:translateX(3px)}
+.pcf-col a:hover::before{opacity:1;margin-right:7px;max-width:14px}
+.pcf-bottom{margin-top:34px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;color:#6c7194;font-size:12.5px}
+@media(max-width:820px){.pcf-grid{grid-template-columns:1fr 1fr}.pcf-coop{flex-direction:column;align-items:flex-start}}
+@media(max-width:520px){.pcf-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.pcfoot *{animation:none!important}}
+</style><footer class="pcfoot"><div class="pcf-in"><div class="pcf-coop"><div><p class="pcf-coop-t">Сотрудничество и реклама</p><p class="pcf-coop-p">Размещение, партнёрство и вопросы по рейтингу — пишите напрямую в наш Telegram, отвечаем быстро.</p></div><a class="pcf-tg" href="https://t.me/landeks" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 18.6l.3-4.24 7.68-6.93c.34-.3-.07-.45-.52-.18L7.72 13.3 3.6 12c-.9-.27-.9-.88.2-1.32L19.8 4.5c.74-.34 1.44.18 1.16 1.3l-2.72 12.82c-.19.9-.74 1.12-1.5.7l-4.14-3.05-2 1.93c-.22.22-.4.4-.8.4z"/></svg><span>Написать в Telegram</span></a></div><div class="pcf-grid"><div class="pcf-brand"><a class="pcf-logo" href="/"><span class="d">P</span>Play<b>Casino</b></a><p class="pcf-tag">Рейтинг онлайн-казино: подробные обзоры, бонусы, скорость выплат и честные оценки редакции.</p><span class="pcf-18"><b>18+</b> Играйте ответственно</span></div><div class="pcf-col"><h4>Обзоры</h4><a href="/casino/">Все казино</a><a href="/casino/vavada/">Vavada</a><a href="/casino/1win/">1win</a><a href="/casino/7k/">7K Casino</a><a href="/slots/">Слоты</a></div><div class="pcf-col"><h4>Каталоги</h4><a href="/min-depozit/">Мин. депозит</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/bystryj-vyvod/">Быстрый вывод</a><a href="/licenzionnye/">Лицензионные</a></div><div class="pcf-col"><h4>О проекте</h4><a href="/o-redakcii/">О редакции</a><a href="/o-redakcii/#metodika">Как мы оцениваем</a><a href="/otzyvy/">Отзывы игроков</a><a href="https://t.me/landeks" target="_blank" rel="nofollow noopener">Контакты</a></div></div><div class="pcf-bottom"><span>© 2026 PlayCasino</span><span>Материалы предназначены для лиц старше 18 лет</span></div></div></footer><!--/PCFOOT-->
 </body>
 </html>
