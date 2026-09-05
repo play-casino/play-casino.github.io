@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 <head>
 <meta charset="utf-8"/>
@@ -136,181 +137,197 @@
   @media(max-width:820px){.s05-hero{grid-template-columns:1fr}.s05-cover{max-width:260px}.s05-two{grid-template-columns:1fr}}
   @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
-</head>
+<style id="mobile-fit">/* mobile-fit v3: таблицы разворачиваются в ЦВЕТНЫЕ карточки, номер слева, без бокового скролла (авто) */
+@media(max-width:600px){
+  html,body{overflow-x:clip!important;max-width:100%!important}
+  table.mfit, table.mfit thead, table.mfit tbody, table.mfit tr, table.mfit th, table.mfit td{display:block!important;width:auto!important;min-width:0!important;max-width:100%!important}
+  table.mfit{border:0!important;background:transparent!important;font-size:13.5px!important}
+  table.mfit caption{display:block!important;text-align:left!important;margin:0 0 9px!important;padding:0!important;font-size:13px;color:var(--mut,#9096b4);white-space:normal}
+  table.mfit thead{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  /* карточка-строка: цветной левый акцент по кругу (не серо!) + мягкая заливка */
+  table.mfit tbody tr{position:relative;margin:0 0 13px!important;border:1px solid var(--line2,rgba(255,255,255,.14))!important;border-left:3px solid var(--neon,#b8ff2b)!important;border-radius:14px!important;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.018))!important;box-shadow:0 10px 24px -18px #000}
+  table.mfit tbody tr:nth-of-type(6n+2){border-left-color:var(--gold,#ffcf3f)!important}
+  table.mfit tbody tr:nth-of-type(6n+3){border-left-color:var(--hot,#ff2e93)!important}
+  table.mfit tbody tr:nth-of-type(6n+4){border-left-color:#37d9c2!important}
+  table.mfit tbody tr:nth-of-type(6n+5){border-left-color:#5aa8ff!important}
+  table.mfit tbody tr:nth-of-type(6n+6){border-left-color:#b98cff!important}
+  /* ячейка = строка «подпись слева / значение справа»; значения СВОИ цвета (не переопределяем) */
+  table.mfit td{display:flex!important;flex-wrap:wrap;justify-content:space-between!important;align-items:center;gap:3px 14px;text-align:right!important;padding:8px 13px!important;border:0!important;border-top:1px solid var(--line,rgba(255,255,255,.06))!important;white-space:normal!important;overflow:hidden}
+  table.mfit td:first-child{border-top:0!important}
+  table.mfit td>*{min-width:0;max-width:100%}
+  table.mfit td::before{content:attr(data-label);font-weight:700;color:var(--mut,#9096b4);text-align:left;flex:1 1 38%;white-space:normal;letter-spacing:.01em;text-transform:none}
+  table.mfit td:not([data-label])::before,table.mfit td[data-label='']:not(.mfit-num)::before{content:''}
+  table.mfit td:empty{display:none!important}
+  /* КОЛОНКА НУМЕРАЦИИ: номер сразу слева, крупно, без подписи-справа (шапка карточки) */
+  table.mfit td.mfit-num{justify-content:flex-start!important;text-align:left!important;gap:9px;font-family:"Unbounded",sans-serif;font-weight:900!important;font-size:15px!important;padding:9px 13px!important;background:rgba(255,255,255,.035)!important;border-top:0!important}
+  table.mfit td.mfit-num::before{content:''!important;display:none!important}
+  table.mfit td.mfit-num *{font-size:inherit!important}
+  /* нейтрализовать скролл-обёртки, чтобы страница не тянулась вбок */
+  [class*='scroll'],[class*='-wrap'],[class*='tbl'],[class*='table-'],[class*='-table']{overflow-x:visible!important;min-width:0!important;max-width:100%!important}
+  img{max-width:100%!important;height:auto!important}
+}
+</style></head>
 <body>
 <header class="s05-head">
-  <div class="s05-shell">
-    <a class="s05-logo" href="/"><span class="mk">P</span><span><b>PlayCasino</b> <em>рейтинг для игрока</em></span></a>
-    <nav class="s05-nav">
-      <a href="/">Главная</a>
-      <a href="/avtomaty/">Автоматы</a>
-      <a href="/frispiny/">Фриспины</a>
-      <a href="/min-depozit/">Мин-депозит</a>
-      <a class="cta" href="/go/vavada">Играть</a>
-    </nav>
-  </div>
+<div class="s05-shell">
+<a class="s05-logo" href="/"><span class="mk">P</span><span><b>PlayCasino</b> <em>рейтинг для игрока</em></span></a>
+<nav class="s05-nav">
+<a href="/">Главная</a>
+<a href="/avtomaty/">Автоматы</a>
+<a href="/frispiny/">Фриспины</a>
+<a href="/min-depozit/">Мин-депозит</a>
+<a class="cta" href="/go/vavada">Играть</a>
+</nav>
+</div>
 </header>
-
 <main class="s05-shell">
-  <nav class="s05-crumbs"><a href="/">Главная</a> → <a href="/avtomaty/">Автоматы</a> → <span>Gates of 1win</span></nav>
-
-  <section class="s05-hero" style="margin-bottom:8px">
-    <div class="s05-cover">
-      <span class="prov">Pragmatic Play</span>
-      <img alt="Gates of 1win — обложка слота Pragmatic Play" loading="lazy" src="https://v1.bundlecdn.com/casino-images/v/69d457c5-5e90-403c-88ae-eda8476bcefc_vertical.png" onerror="this.outerHTML='&lt;div class=\'ph\'&gt;G&lt;/div&gt;'"/>
-    </div>
-    <div class="s05-heroC">
-      <span class="kick">Обзор слота · RTP и демо</span>
-      <h1>Gates of 1win — <span class="g-gold">античные врата</span>, молнии и <span class="g-jade">шары-множители</span></h1>
-      <div class="s05-alt">Рус.: «Гейтс оф 1вин» · провайдер <b class="c-moss">Pragmatic Play</b> · брендовая версия Gates of Olympus · 2023</div>
-      <div class="s05-pills">
-        <span class="pill rtp">RTP <b>96,50%</b></span>
-        <span class="pill vol">волатильность <b>высокая</b></span>
-        <span class="pill">поле <b>6×5</b>, pay anywhere</span>
-        <span class="pill max">макс <b>x5000</b></span>
-        <span class="pill">ставка <b>20 ₽–25 000 ₽</b></span>
-      </div>
-      <a class="s05-cta" href="/go/vavada">Играть в Gates of 1win →</a>
-      <a class="s05-cta alt" href="#demo">Демо бесплатно</a>
-      <div class="s05-verdict">Короткий вердикт: это узнаваемый движок Gates of Olympus в брендовой обёртке 1win. Всё держится на <b>каскадах</b> и сферах-множителях, которые копятся до x500 в бонусе. Кому зайдёт: тем, кто любит охоту за множителями и терпит длинные пустые серии. Наша оценка — <b>8,8/10</b>.</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>О слоте <span class="g-gold">Gates of 1win</span>: тема и сюжет</h2>
-    <div class="s05-two">
-      <div class="s05-panel">
-        <p>Перед нами тот самый Олимп, только под флагом 1win. Громовержец с седой бородой мечет молнии из-за золотых врат, а на барабанах падают самоцветы, кубки и короны. Никакой сюжетной новизны Pragmatic не завезли — и не должны были: игрок сюда идёт за знакомой механикой, а не за лором.</p>
-        <p>Формат — 6 барабанов по 5 символов, выплаты «где угодно» (pay anywhere): считается не линия, а количество одинаковых самоцветов на всём поле, 8 и больше. Именно поэтому слот ощущается как рулетка каскадов: одно удачное падение тянет за собой цепочку.</p>
-      </div>
-      <div class="s05-panel">
-        <h3 class="c-gold">Чем цепляет</h3>
-        <ul class="s05-list">
-          <li><b>Сферы-множители</b> копятся и бьют по всей сетке</li>
-          <li><b>Tumble</b> — выигравшие символы исчезают, падают новые</li>
-          <li><b>Scatter pays</b> — платит скопление, а не линия</li>
-          <li>Множители в бонусе суммируются до <b class="c-gold">x500</b></li>
-          <li><b>Bonus buy</b> и ante bet для быстрого входа</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Как играть в Gates of 1win и как <span class="g-jade">купить бонус</span></h2>
-    <p>База и бонус работают на одной идее: множители-сферы. В обычной игре они разово усиливают выигрыш, в фриспинах — прибавляются к общему счётчику и держатся до конца раунда. В этом вся соль отдачи.</p>
-    <div class="s05-two">
-      <div class="s05-panel">
-        <h3 class="c-jade">Спец-символы и механики</h3>
-        <ul class="s05-list">
-          <li><b>Самоцветы</b> — платят скоплением 8+ в любом месте поля</li>
-          <li><b>Сфера-множитель</b> — от x2 до <b class="c-gold">x500</b>, падает случайно</li>
-          <li><b>Scatter (громовержец)</b> — 4+ запускают 15 фриспинов</li>
-          <li><b>Tumble</b> — каскад до полной остановки выплат</li>
-          <li><b>Ретригер</b> — 3+ скаттера в бонусе дарят +5 спинов</li>
-        </ul>
-      </div>
-      <div class="s05-panel">
-        <h3 class="c-hot">Покупка бонуса (buy feature)</h3>
-        <p>Bonus Buy стоит около <b class="c-gold">x100</b> ставки и мгновенно кидает в 15 фриспинов. Альтернатива — <b>ante bet</b>: ставка растёт на 25%, зато скаттеры выпадают вдвое чаще. На дистанции RTP покупки чуть выше базового и держится у 96,5%.</p>
-        <p>Совет редакции: слот высоковолатильный, множители любят «молчать» по 50–70 спинов. Покупайте бонус только с банком минимум на 40–50 заходов, иначе дисперсия выбьет раньше, чем прилетит связка сфер.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>RTP и волатильность Gates of 1win: <span class="g-jade">отдача</span> цифрами</h2>
-    <p>Заявленный RTP — <b class="c-jade">96,50%</b>, один из самых высоких в линейке Pragmatic. Волатильность высокая: слот копит и выстреливает импульсами через множители, а не равномерными выплатами.</p>
-    <table>
-      <caption>Ключевые параметры отдачи Gates of 1win</caption>
-      <thead><tr><th>Параметр</th><th>Значение</th><th>Что это значит игроку</th></tr></thead>
-      <tbody>
-        <tr><td>RTP</td><td><span class="tag j">96,50%</span></td><td>С 1000 ₽ оборота в среднем возвращается ~965 ₽</td></tr>
-        <tr><td>Волатильность</td><td><span class="tag h">высокая</span></td><td>Длинные засухи, редкий, но мощный занос через сферы</td></tr>
-        <tr><td>Макс-выигрыш</td><td><span class="tag g">x5000</span></td><td>До 125 000 000 с максимальной ставки — теоретический потолок</td></tr>
-        <tr><td>Множитель</td><td>x2 – x500</td><td>Копится только в фриспинах, суммируется</td></tr>
-        <tr><td>Частота бонуса</td><td>~1 к 200 (без ante)</td><td>С ante bet — примерно вдвое чаще</td></tr>
-      </tbody>
-    </table>
-    <p style="margin-top:14px">Что значит «высокая волатильность» на практике: держите ставку в пределах 0,5% банка. Основной доход слота — не потолок x5000, а средние заходы с суммой сфер x20–x60 в удачном бонусе. Погоня за максимумом сжигает банк быстрее, чем окупается.</p>
-  </section>
-
-  <section id="demo">
-    <h2>Демо Gates of 1win бесплатно и где играть <span class="g-gold">на деньги</span></h2>
-    <p>Демо-режим Gates of 1win крутится без регистрации на виртуальные фишки — удобно, чтобы понять ритм каскадов и частоту сфер до реальных ставок. На деньги слот есть в казино из рейтинга PlayCasino с проверенной кассой.</p>
-    <div class="s05-casinos">
-      <div class="s05-cas" style="--kc:var(--gold)">
-        <div class="row"><h3>Vavada</h3><span class="sc">9.4</span></div>
-        <p>Полная линейка Pragmatic и bonus buy без лимитов. Вывод на карту и СБП за 1–2 часа.</p>
-        <a class="go" href="/casino/vavada/">Обзор Vavada →</a>
-      </div>
-      <div class="s05-cas" style="--kc:var(--jade)">
-        <div class="row"><h3>Sol Casino</h3><span class="sc">9.0</span></div>
-        <p>Есть Gates of 1win с ante bet, кэшбэк и турниры по слотам Pragmatic каждую неделю.</p>
-        <a class="go" href="/casino/sol/">Обзор Sol →</a>
-      </div>
-      <div class="s05-cas" style="--kc:var(--hot)">
-        <div class="row"><h3>Starda</h3><span class="sc">8.9</span></div>
-        <p>Демо в один клик, депозит от 100 ₽, крипта и рубли, быстрый вывод.</p>
-        <a class="go" href="/casino/starda/">Обзор Starda →</a>
-      </div>
-      <div class="s05-cas" style="--kc:var(--cyan)">
-        <div class="row"><h3>Rox Casino</h3><span class="sc">8.7</span></div>
-        <p>Bonus buy разрешён, регулярные фриспины на новинки Pragmatic Play.</p>
-        <a class="go" href="/casino/rox/">Обзор Rox →</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Похожие слоты: <span class="g-jade">tumble</span> и множители Pragmatic</h2>
-    <div class="s05-sim">
-      <a class="simcard" href="/slots/gates-of-hades/"><div class="ph">G</div><div class="b"><div class="nm">Gates of Hades</div><div class="pr">Pragmatic Play</div></div></a>
-      <a class="simcard" href="/slots/sweet-bonanza-super-scatter/"><div class="ph">S</div><div class="b"><div class="nm">Sweet Bonanza Super Scatter</div><div class="pr">Pragmatic Play</div></div></a>
-      <a class="simcard" href="/slots/wisdom-of-athena-1000/"><div class="ph">W</div><div class="b"><div class="nm">Wisdom of Athena 1000</div><div class="pr">Pragmatic Play</div></div></a>
-      <a class="simcard" href="/slots/madame-destiny-megaways/"><div class="ph">M</div><div class="b"><div class="nm">Madame Destiny Megaways</div><div class="pr">Pragmatic Play</div></div></a>
-      <a class="simcard" href="/slots/mustang-gold/"><div class="ph">M</div><div class="b"><div class="nm">Mustang Gold</div><div class="pr">Pragmatic Play</div></div></a>
-    </div>
-  </section>
-
-  <section class="s05-faq">
-    <h2>Частые вопросы про <span class="g-gold">Gates of 1win</span></h2>
-    <details open><summary>Какой RTP у Gates of 1win?</summary><p>Заявленный RTP слота — 96,50%. Это один из самых высоких показателей у Pragmatic Play. RTP покупки бонуса и режима ante bet держится примерно на том же уровне.</p></details>
-    <details><summary>Как купить бонус в Gates of 1win?</summary><p>Bonus Buy стоит около x100 от ставки и сразу запускает 15 фриспинов. Альтернатива — ante bet: ставка растёт на 25%, но скаттеры выпадают вдвое чаще.</p></details>
-    <details><summary>Какой максимальный выигрыш в слоте?</summary><p>Максимальный выигрыш — x5000 от ставки. Он достигается за счёт суммы множителей-сфер до x500 в удачном раунде фриспинов.</p></details>
-    <details><summary>Есть ли демо Gates of 1win бесплатно?</summary><p>Да, демо-режим доступен без регистрации и депозита на виртуальные фишки. Он помогает оценить частоту сфер и каскадов до игры на деньги.</p></details>
-    <details><summary>В каком казино играть Gates of 1win на деньги?</summary><p>Слот есть в Vavada, Sol, Starda и Rox из рейтинга PlayCasino — там Pragmatic Play в каталоге, разрешён bonus buy и быстрый вывод.</p></details>
-  </section>
-
-  <section>
-    <div class="s05-panel s05-author">
-      <div class="av">ИР</div>
-      <div class="meta"><b>Илья Ремизов</b> — эксперт по слотам и RTP редакции PlayCasino, 5 лет тестирования отдачи автоматов.<br/>Слот отыгран на демо и реальных ставках. Обновлено 5 сентября 2026.</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Смотрите также в <span class="g-jade">каталоге</span></h2>
-    <div class="s05-cats">
-      <a href="/avtomaty/">Все игровые автоматы</a>
-      <a href="/frispiny/">Слоты с фриспинами</a>
-      <a href="/bez-otigrysha/">Бонусы без отыгрыша</a>
-      <a href="/min-depozit/">Казино с мин-депозитом</a>
-      <a href="/slots/gates-of-hades/">Gates of Hades</a>
-    </div>
-  </section>
-
-  <footer class="s05-foot">
-    <div class="dis">18+. Азартные игры несут риск финансовых потерь. Материал носит информационный характер и не является призывом к игре. Играйте ответственно, не отыгрывайтесь и не ставьте последнее.</div>
+<nav class="s05-crumbs"><a href="/">Главная</a> → <a href="/avtomaty/">Автоматы</a> → <span>Gates of 1win</span></nav>
+<section class="s05-hero" style="margin-bottom:8px">
+<div class="s05-cover">
+<span class="prov">Pragmatic Play</span>
+<img alt="Gates of 1win — обложка слота Pragmatic Play" loading="lazy" onerror="this.outerHTML='&lt;div class=\'ph\'&gt;G&lt;/div&gt;'" src="https://v1.bundlecdn.com/casino-images/v/69d457c5-5e90-403c-88ae-eda8476bcefc_vertical.png"/>
+</div>
+<div class="s05-heroC">
+<span class="kick">Обзор слота · RTP и демо</span>
+<h1>Gates of 1win — <span class="g-gold">античные врата</span>, молнии и <span class="g-jade">шары-множители</span></h1>
+<div class="s05-alt">Рус.: «Гейтс оф 1вин» · провайдер <b class="c-moss">Pragmatic Play</b> · брендовая версия Gates of Olympus · 2023</div>
+<div class="s05-pills">
+<span class="pill rtp">RTP <b>96,50%</b></span>
+<span class="pill vol">волатильность <b>высокая</b></span>
+<span class="pill">поле <b>6×5</b>, pay anywhere</span>
+<span class="pill max">макс <b>x5000</b></span>
+<span class="pill">ставка <b>20 ₽–25 000 ₽</b></span>
+</div>
+<a class="s05-cta" href="/go/vavada">Играть в Gates of 1win →</a>
+<a class="s05-cta alt" href="#demo">Демо бесплатно</a>
+<div class="s05-verdict">Короткий вердикт: это узнаваемый движок Gates of Olympus в брендовой обёртке 1win. Всё держится на <b>каскадах</b> и сферах-множителях, которые копятся до x500 в бонусе. Кому зайдёт: тем, кто любит охоту за множителями и терпит длинные пустые серии. Наша оценка — <b>8,8/10</b>.</div>
+</div>
+</section>
+<section>
+<h2>О слоте <span class="g-gold">Gates of 1win</span>: тема и сюжет</h2>
+<div class="s05-two">
+<div class="s05-panel">
+<p>Перед нами тот самый Олимп, только под флагом 1win. Громовержец с седой бородой мечет молнии из-за золотых врат, а на барабанах падают самоцветы, кубки и короны. Никакой сюжетной новизны Pragmatic не завезли — и не должны были: игрок сюда идёт за знакомой механикой, а не за лором.</p>
+<p>Формат — 6 барабанов по 5 символов, выплаты «где угодно» (pay anywhere): считается не линия, а количество одинаковых самоцветов на всём поле, 8 и больше. Именно поэтому слот ощущается как рулетка каскадов: одно удачное падение тянет за собой цепочку.</p>
+</div>
+<div class="s05-panel">
+<h3 class="c-gold">Чем цепляет</h3>
+<ul class="s05-list">
+<li><b>Сферы-множители</b> копятся и бьют по всей сетке</li>
+<li><b>Tumble</b> — выигравшие символы исчезают, падают новые</li>
+<li><b>Scatter pays</b> — платит скопление, а не линия</li>
+<li>Множители в бонусе суммируются до <b class="c-gold">x500</b></li>
+<li><b>Bonus buy</b> и ante bet для быстрого входа</li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<h2>Как играть в Gates of 1win и как <span class="g-jade">купить бонус</span></h2>
+<p>База и бонус работают на одной идее: множители-сферы. В обычной игре они разово усиливают выигрыш, в фриспинах — прибавляются к общему счётчику и держатся до конца раунда. В этом вся соль отдачи.</p>
+<div class="s05-two">
+<div class="s05-panel">
+<h3 class="c-jade">Спец-символы и механики</h3>
+<ul class="s05-list">
+<li><b>Самоцветы</b> — платят скоплением 8+ в любом месте поля</li>
+<li><b>Сфера-множитель</b> — от x2 до <b class="c-gold">x500</b>, падает случайно</li>
+<li><b>Scatter (громовержец)</b> — 4+ запускают 15 фриспинов</li>
+<li><b>Tumble</b> — каскад до полной остановки выплат</li>
+<li><b>Ретригер</b> — 3+ скаттера в бонусе дарят +5 спинов</li>
+</ul>
+</div>
+<div class="s05-panel">
+<h3 class="c-hot">Покупка бонуса (buy feature)</h3>
+<p>Bonus Buy стоит около <b class="c-gold">x100</b> ставки и мгновенно кидает в 15 фриспинов. Альтернатива — <b>ante bet</b>: ставка растёт на 25%, зато скаттеры выпадают вдвое чаще. На дистанции RTP покупки чуть выше базового и держится у 96,5%.</p>
+<p>Совет редакции: слот высоковолатильный, множители любят «молчать» по 50–70 спинов. Покупайте бонус только с банком минимум на 40–50 заходов, иначе дисперсия выбьет раньше, чем прилетит связка сфер.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>RTP и волатильность Gates of 1win: <span class="g-jade">отдача</span> цифрами</h2>
+<p>Заявленный RTP — <b class="c-jade">96,50%</b>, один из самых высоких в линейке Pragmatic. Волатильность высокая: слот копит и выстреливает импульсами через множители, а не равномерными выплатами.</p>
+<table class="mfit">
+<caption>Ключевые параметры отдачи Gates of 1win</caption>
+<thead><tr><th>Параметр</th><th>Значение</th><th>Что это значит игроку</th></tr></thead>
+<tbody>
+<tr><td data-label="Параметр">RTP</td><td data-label="Значение"><span class="tag j">96,50%</span></td><td data-label="Что это значит игроку">С 1000 ₽ оборота в среднем возвращается ~965 ₽</td></tr>
+<tr><td data-label="Параметр">Волатильность</td><td data-label="Значение"><span class="tag h">высокая</span></td><td data-label="Что это значит игроку">Длинные засухи, редкий, но мощный занос через сферы</td></tr>
+<tr><td data-label="Параметр">Макс-выигрыш</td><td data-label="Значение"><span class="tag g">x5000</span></td><td data-label="Что это значит игроку">До 125 000 000 с максимальной ставки — теоретический потолок</td></tr>
+<tr><td data-label="Параметр">Множитель</td><td data-label="Значение">x2 – x500</td><td data-label="Что это значит игроку">Копится только в фриспинах, суммируется</td></tr>
+<tr><td data-label="Параметр">Частота бонуса</td><td data-label="Значение">~1 к 200 (без ante)</td><td data-label="Что это значит игроку">С ante bet — примерно вдвое чаще</td></tr>
+</tbody>
+</table>
+<p style="margin-top:14px">Что значит «высокая волатильность» на практике: держите ставку в пределах 0,5% банка. Основной доход слота — не потолок x5000, а средние заходы с суммой сфер x20–x60 в удачном бонусе. Погоня за максимумом сжигает банк быстрее, чем окупается.</p>
+</section>
+<section id="demo">
+<h2>Демо Gates of 1win бесплатно и где играть <span class="g-gold">на деньги</span></h2>
+<p>Демо-режим Gates of 1win крутится без регистрации на виртуальные фишки — удобно, чтобы понять ритм каскадов и частоту сфер до реальных ставок. На деньги слот есть в казино из рейтинга PlayCasino с проверенной кассой.</p>
+<div class="s05-casinos">
+<div class="s05-cas" style="--kc:var(--gold)">
+<div class="row"><h3>Vavada</h3><span class="sc">9.4</span></div>
+<p>Полная линейка Pragmatic и bonus buy без лимитов. Вывод на карту и СБП за 1–2 часа.</p>
+<a class="go" href="/casino/vavada/">Обзор Vavada →</a>
+</div>
+<div class="s05-cas" style="--kc:var(--jade)">
+<div class="row"><h3>Sol Casino</h3><span class="sc">9.0</span></div>
+<p>Есть Gates of 1win с ante bet, кэшбэк и турниры по слотам Pragmatic каждую неделю.</p>
+<a class="go" href="/casino/sol/">Обзор Sol →</a>
+</div>
+<div class="s05-cas" style="--kc:var(--hot)">
+<div class="row"><h3>Starda</h3><span class="sc">8.9</span></div>
+<p>Демо в один клик, депозит от 100 ₽, крипта и рубли, быстрый вывод.</p>
+<a class="go" href="/casino/starda/">Обзор Starda →</a>
+</div>
+<div class="s05-cas" style="--kc:var(--cyan)">
+<div class="row"><h3>Rox Casino</h3><span class="sc">8.7</span></div>
+<p>Bonus buy разрешён, регулярные фриспины на новинки Pragmatic Play.</p>
+<a class="go" href="/casino/rox/">Обзор Rox →</a>
+</div>
+</div>
+</section>
+<section>
+<h2>Похожие слоты: <span class="g-jade">tumble</span> и множители Pragmatic</h2>
+<div class="s05-sim">
+<a class="simcard" href="/slots/gates-of-hades/"><div class="ph">G</div><div class="b"><div class="nm">Gates of Hades</div><div class="pr">Pragmatic Play</div></div></a>
+<a class="simcard" href="/slots/sweet-bonanza-super-scatter/"><div class="ph">S</div><div class="b"><div class="nm">Sweet Bonanza Super Scatter</div><div class="pr">Pragmatic Play</div></div></a>
+<a class="simcard" href="/slots/wisdom-of-athena-1000/"><div class="ph">W</div><div class="b"><div class="nm">Wisdom of Athena 1000</div><div class="pr">Pragmatic Play</div></div></a>
+<a class="simcard" href="/slots/madame-destiny-megaways/"><div class="ph">M</div><div class="b"><div class="nm">Madame Destiny Megaways</div><div class="pr">Pragmatic Play</div></div></a>
+<a class="simcard" href="/slots/mustang-gold/"><div class="ph">M</div><div class="b"><div class="nm">Mustang Gold</div><div class="pr">Pragmatic Play</div></div></a>
+</div>
+</section>
+<section class="s05-faq">
+<h2>Частые вопросы про <span class="g-gold">Gates of 1win</span></h2>
+<details open=""><summary>Какой RTP у Gates of 1win?</summary><p>Заявленный RTP слота — 96,50%. Это один из самых высоких показателей у Pragmatic Play. RTP покупки бонуса и режима ante bet держится примерно на том же уровне.</p></details>
+<details><summary>Как купить бонус в Gates of 1win?</summary><p>Bonus Buy стоит около x100 от ставки и сразу запускает 15 фриспинов. Альтернатива — ante bet: ставка растёт на 25%, но скаттеры выпадают вдвое чаще.</p></details>
+<details><summary>Какой максимальный выигрыш в слоте?</summary><p>Максимальный выигрыш — x5000 от ставки. Он достигается за счёт суммы множителей-сфер до x500 в удачном раунде фриспинов.</p></details>
+<details><summary>Есть ли демо Gates of 1win бесплатно?</summary><p>Да, демо-режим доступен без регистрации и депозита на виртуальные фишки. Он помогает оценить частоту сфер и каскадов до игры на деньги.</p></details>
+<details><summary>В каком казино играть Gates of 1win на деньги?</summary><p>Слот есть в Vavada, Sol, Starda и Rox из рейтинга PlayCasino — там Pragmatic Play в каталоге, разрешён bonus buy и быстрый вывод.</p></details>
+</section>
+<section>
+<div class="s05-panel s05-author">
+<div class="av">ИР</div>
+<div class="meta"><b>Илья Ремизов</b> — эксперт по слотам и RTP редакции PlayCasino, 5 лет тестирования отдачи автоматов.<br/>Слот отыгран на демо и реальных ставках. Обновлено 5 сентября 2026.</div>
+</div>
+</section>
+<section>
+<h2>Смотрите также в <span class="g-jade">каталоге</span></h2>
+<div class="s05-cats">
+<a href="/avtomaty/">Все игровые автоматы</a>
+<a href="/frispiny/">Слоты с фриспинами</a>
+<a href="/bez-otigrysha/">Бонусы без отыгрыша</a>
+<a href="/min-depozit/">Казино с мин-депозитом</a>
+<a href="/slots/gates-of-hades/">Gates of Hades</a>
+</div>
+</section>
+<footer class="s05-foot">
+<div class="dis">18+. Азартные игры несут риск финансовых потерь. Материал носит информационный характер и не является призывом к игре. Играйте ответственно, не отыгрывайтесь и не ставьте последнее.</div>
     © 2019–2026 PlayCasino — рейтинг для игрока, не для казино. RTP и параметры слотов приведены по данным провайдера Pragmatic Play и могут отличаться в конкретном казино.
   </footer>
 </main>
-
 <script>
   var h=document.querySelector('.s05-head');
   addEventListener('scroll',function(){h.classList.toggle('stuck',scrollY>8)},{passive:true});
 </script>
-
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"BreadcrumbList","itemListElement":[
