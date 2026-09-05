@@ -526,22 +526,32 @@
     .vk-sbar i,.vk-bar span{transition:none}
   }
 </style>
-<style id="mobile-fit">/* mobile-fit v2: таблицы/блоки вмещаются на узких экранах, без бокового скролла (авто) */
+<style id="mobile-fit">/* mobile-fit v3: таблицы разворачиваются в ЦВЕТНЫЕ карточки, номер слева, без бокового скролла (авто) */
 @media(max-width:600px){
   html,body{overflow-x:clip!important;max-width:100%!important}
-  /* разворот таблиц в карточки «подпись: значение» + жёсткое обнуление min-width (иначе min-width:600px тянет бокс вбок) */
   table.mfit, table.mfit thead, table.mfit tbody, table.mfit tr, table.mfit th, table.mfit td{display:block!important;width:auto!important;min-width:0!important;max-width:100%!important}
-  table.mfit{border:0!important;background:transparent!important}
+  table.mfit{border:0!important;background:transparent!important;font-size:13.5px!important}
+  table.mfit caption{display:block!important;text-align:left!important;margin:0 0 9px!important;padding:0!important;font-size:13px;color:var(--mut,#9096b4);white-space:normal}
   table.mfit thead{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-  table.mfit tr{margin:0 0 12px!important;border:1px solid var(--line2,rgba(255,255,255,.14))!important;border-radius:14px!important;overflow:hidden;background:rgba(255,255,255,.03)!important;box-shadow:0 8px 22px -16px #000}
-  table.mfit td{display:flex!important;flex-wrap:wrap;justify-content:space-between!important;align-items:center;gap:5px 14px;text-align:right!important;padding:9px 13px!important;border:0!important;border-bottom:1px solid var(--line,rgba(255,255,255,.08))!important;white-space:normal!important;font-size:13.5px;overflow:hidden}
+  /* карточка-строка: цветной левый акцент по кругу (не серо!) + мягкая заливка */
+  table.mfit tbody tr{position:relative;margin:0 0 13px!important;border:1px solid var(--line2,rgba(255,255,255,.14))!important;border-left:3px solid var(--neon,#b8ff2b)!important;border-radius:14px!important;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.018))!important;box-shadow:0 10px 24px -18px #000}
+  table.mfit tbody tr:nth-of-type(6n+2){border-left-color:var(--gold,#ffcf3f)!important}
+  table.mfit tbody tr:nth-of-type(6n+3){border-left-color:var(--hot,#ff2e93)!important}
+  table.mfit tbody tr:nth-of-type(6n+4){border-left-color:#37d9c2!important}
+  table.mfit tbody tr:nth-of-type(6n+5){border-left-color:#5aa8ff!important}
+  table.mfit tbody tr:nth-of-type(6n+6){border-left-color:#b98cff!important}
+  /* ячейка = строка «подпись слева / значение справа»; значения СВОИ цвета (не переопределяем) */
+  table.mfit td{display:flex!important;flex-wrap:wrap;justify-content:space-between!important;align-items:center;gap:3px 14px;text-align:right!important;padding:8px 13px!important;border:0!important;border-top:1px solid var(--line,rgba(255,255,255,.06))!important;white-space:normal!important;overflow:hidden}
+  table.mfit td:first-child{border-top:0!important}
   table.mfit td>*{min-width:0;max-width:100%}
-  table.mfit td:last-child{border-bottom:0!important}
-  table.mfit td::before{content:attr(data-label);font-weight:700;color:var(--mut,#9096b4);text-align:left;flex:1 1 38%;white-space:normal;letter-spacing:.01em}
-  table.mfit td:not([data-label])::before,table.mfit td[data-label='']::before{content:''}
-  table.mfit td[data-label='']{justify-content:flex-end}
+  table.mfit td::before{content:attr(data-label);font-weight:700;color:var(--mut,#9096b4);text-align:left;flex:1 1 38%;white-space:normal;letter-spacing:.01em;text-transform:none}
+  table.mfit td:not([data-label])::before,table.mfit td[data-label='']:not(.mfit-num)::before{content:''}
   table.mfit td:empty{display:none!important}
-  /* нейтрализовать скролл-обёртки таблиц и не давать контейнерам тянуть страницу вбок */
+  /* КОЛОНКА НУМЕРАЦИИ: номер сразу слева, крупно, без подписи-справа (шапка карточки) */
+  table.mfit td.mfit-num{justify-content:flex-start!important;text-align:left!important;gap:9px;font-family:"Unbounded",sans-serif;font-weight:900!important;font-size:15px!important;padding:9px 13px!important;background:rgba(255,255,255,.035)!important;border-top:0!important}
+  table.mfit td.mfit-num::before{content:''!important;display:none!important}
+  table.mfit td.mfit-num *{font-size:inherit!important}
+  /* нейтрализовать скролл-обёртки, чтобы страница не тянулась вбок */
   [class*='scroll'],[class*='-wrap'],[class*='tbl'],[class*='table-'],[class*='-table']{overflow-x:visible!important;min-width:0!important;max-width:100%!important}
   img{max-width:100%!important;height:auto!important}
 }
@@ -763,12 +773,12 @@
 <caption>Сроки подтверждены замерами на реальных заявках; сортировка — по карточной оценке редакции.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Вывод на карту</th><th>Срок</th><th>Оценка</th><th>Бонус старта</th></tr></thead>
 <tbody>
-<tr><td class="vk-rub" data-label="#">1</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">7K Casino</span><span class="vk-line2"><span class="vk-best" style="--rc:#ffcf3f">Лучшее за — карту Сбера и Мир от 15 минут</span><span class="vk-ed">№1</span></span></td><td data-label="Вывод на карту">карта/СБП, на малых суммах без KYC</td><td data-label="Срок"><span class="vk-pill p-fast">15 мин – 2 ч</span></td><td data-label="Оценка"><span class="neon">9.9</span></td><td data-label="Бонус старта">225% + 200 FS</td></tr>
-<tr><td class="vk-rub" data-label="#">2</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">1win</span><span class="vk-line2"><span class="vk-best" style="--rc:#37e0c8">Лучшее за — прямой перевод на карту</span></span></td><td data-label="Вывод на карту">карта напрямую, на крупных суммах KYC</td><td data-label="Срок"><span class="vk-pill p-mid">от 20 мин</span></td><td data-label="Оценка"><span class="neon">9.6</span></td><td data-label="Бонус старта">500% до 200 000 ₽</td></tr>
-<tr><td class="vk-rub" data-label="#">3</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">Spinto</span><span class="vk-line2"><span class="vk-best" style="--rc:#b8ff2b">Лучшее за — моментальную кассу</span></span></td><td data-label="Вывод на карту">на карту через СБП меньше часа</td><td data-label="Срок"><span class="vk-pill p-fast">СБП, &lt; 1 ч</span></td><td data-label="Оценка"><span class="neon">9.4</span></td><td data-label="Бонус старта">200% + 150 FS</td></tr>
-<tr><td class="vk-rub" data-label="#">4</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">APEX</span><span class="vk-line2"><span class="vk-best" style="--rc:#6cc4ff">Лучшее за — крупный старт</span></span></td><td data-label="Вывод на карту">на карту через СБП в срок, плюс крипта</td><td data-label="Срок"><span class="vk-pill p-sky">СБП, ~30 мин</span></td><td data-label="Оценка"><span class="neon">9.1</span></td><td data-label="Бонус старта">375% + 225 FS</td></tr>
-<tr><td class="vk-rub" data-label="#">5</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">Banda</span><span class="vk-line2"><span class="vk-best" style="--rc:#ff2e93">Лучшее за — фриспины и турниры</span></span></td><td data-label="Вывод на карту">карта и крипта, касса не самая быстрая</td><td data-label="Срок"><span class="vk-pill p-slow">~3 ч</span></td><td data-label="Оценка"><span class="neon">8.9</span></td><td data-label="Бонус старта">100% + 500 FS</td></tr>
-<tr><td class="vk-rub" data-label="#">6</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">Leebet</span><span class="vk-line2"><span class="vk-best" style="--rc:#a879ff">Лучшее за — вывод в USDT</span></span></td><td data-label="Вывод на карту">заточен под USDT, карта — не сильная сторона</td><td data-label="Срок"><span class="vk-pill p-slow">USDT ~20 мин</span></td><td data-label="Оценка"><span class="neon">8.6</span></td><td data-label="Бонус старта">150% до 1000 USDT</td></tr>
+<tr><td class="vk-rub mfit-num" data-label="">1</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">7K Casino</span><span class="vk-line2"><span class="vk-best" style="--rc:#ffcf3f">Лучшее за — карту Сбера и Мир от 15 минут</span><span class="vk-ed">№1</span></span></td><td data-label="Вывод на карту">карта/СБП, на малых суммах без KYC</td><td data-label="Срок"><span class="vk-pill p-fast">15 мин – 2 ч</span></td><td data-label="Оценка"><span class="neon">9.9</span></td><td data-label="Бонус старта">225% + 200 FS</td></tr>
+<tr><td class="vk-rub mfit-num" data-label="">2</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">1win</span><span class="vk-line2"><span class="vk-best" style="--rc:#37e0c8">Лучшее за — прямой перевод на карту</span></span></td><td data-label="Вывод на карту">карта напрямую, на крупных суммах KYC</td><td data-label="Срок"><span class="vk-pill p-mid">от 20 мин</span></td><td data-label="Оценка"><span class="neon">9.6</span></td><td data-label="Бонус старта">500% до 200 000 ₽</td></tr>
+<tr><td class="vk-rub mfit-num" data-label="">3</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">Spinto</span><span class="vk-line2"><span class="vk-best" style="--rc:#b8ff2b">Лучшее за — моментальную кассу</span></span></td><td data-label="Вывод на карту">на карту через СБП меньше часа</td><td data-label="Срок"><span class="vk-pill p-fast">СБП, &lt; 1 ч</span></td><td data-label="Оценка"><span class="neon">9.4</span></td><td data-label="Бонус старта">200% + 150 FS</td></tr>
+<tr><td class="vk-rub mfit-num" data-label="">4</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">APEX</span><span class="vk-line2"><span class="vk-best" style="--rc:#6cc4ff">Лучшее за — крупный старт</span></span></td><td data-label="Вывод на карту">на карту через СБП в срок, плюс крипта</td><td data-label="Срок"><span class="vk-pill p-sky">СБП, ~30 мин</span></td><td data-label="Оценка"><span class="neon">9.1</span></td><td data-label="Бонус старта">375% + 225 FS</td></tr>
+<tr><td class="vk-rub mfit-num" data-label="">5</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">Banda</span><span class="vk-line2"><span class="vk-best" style="--rc:#ff2e93">Лучшее за — фриспины и турниры</span></span></td><td data-label="Вывод на карту">карта и крипта, касса не самая быстрая</td><td data-label="Срок"><span class="vk-pill p-slow">~3 ч</span></td><td data-label="Оценка"><span class="neon">8.9</span></td><td data-label="Бонус старта">100% + 500 FS</td></tr>
+<tr><td class="vk-rub mfit-num" data-label="">6</td><td class="vk-bc" data-label="Казино"><span class="vk-bn">Leebet</span><span class="vk-line2"><span class="vk-best" style="--rc:#a879ff">Лучшее за — вывод в USDT</span></span></td><td data-label="Вывод на карту">заточен под USDT, карта — не сильная сторона</td><td data-label="Срок"><span class="vk-pill p-slow">USDT ~20 мин</span></td><td data-label="Оценка"><span class="neon">8.6</span></td><td data-label="Бонус старта">150% до 1000 USDT</td></tr>
 </tbody>
 </table>
 </div>
