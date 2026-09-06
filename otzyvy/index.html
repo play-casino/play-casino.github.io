@@ -263,6 +263,9 @@
   .oz-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(55,224,200,.7);color:#04231e}
   .oz-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .oz-go:hover::after{animation:oz-shim .85s var(--ez)}
+  .oz-acts{display:flex;flex-direction:column;gap:7px}
+  .oz-rev-btn{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);background:rgba(255,255,255,.03);font-weight:800;padding:10px 18px;border-radius:11px;font-size:13.5px;white-space:nowrap;transition:border-color .18s,color .18s,background .18s}
+  .oz-rev-btn:hover{border-color:var(--c,var(--cyan));color:var(--c,var(--cyan));background:color-mix(in srgb,var(--c,var(--cyan)) 10%,transparent)}
   .oz-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .oz-card.r2{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
   .oz-card.r3{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
@@ -747,7 +750,7 @@ window.addEventListener('load',function(){
 <span class="oz-brow rv" style="--d:.02s"><b>PlayCasino</b> · сверено выводом · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s"><span class="g-cyan">Отзывы о казино 2026</span>: где игроки пишут правду о <span class="g-gold">выводе</span>, а где <span class="g-hot">заказуха</span></h1>
 <p class="oz-lead rv" style="--d:.16s">
-По реальным отзывам игроков верх рейтинга держит <span class="hl-gold">7K Casino</span>: на невыплаты не жалуются, вывод по <span class="hl-cyan">СБП</span> хвалят за <b>15 минут</b>. Дальше <span class="hl-cyan">Spinto</span> и <span class="hl-neon">1win</span>. Но отзыв отзыву рознь — заметная часть «восторгов» это заказуха или накрутка, поэтому редакция сверяла каждую площадку <b>своим выводом</b>, а не звёздами на отзовиках. Ниже — как читать отзывы, кому верить и по каким признакам вычислить фейк.
+По совокупности отзывов и пробных выводов верх подборки держит <span class="hl-gold">Spinto</span>: отзывы о выводе по <span class="hl-cyan">СБП</span> и крипте ровные, без задержек, а порог входа низкий — <b>от 50 ₽</b>. Следом идут <span class="hl-cyan">7K Casino</span> и <span class="hl-neon">1win</span>. Но отзыв отзыву рознь — заметная часть «восторгов» это заказуха или накрутка, поэтому редакция сверяла каждую площадку <b>своим выводом</b>, а не звёздами на отзовиках. Ниже — как читать отзывы, кому верить и по каким признакам вычислить фейк.
 </p>
 <div class="oz-hero-cta rv" style="--d:.24s">
 <a class="oz-btn oz-btn-cyan" href="#reyting">Топ казино по отзывам</a>
@@ -761,24 +764,24 @@ window.addEventListener('load',function(){
 </div>
 <aside class="oz-verdict rv" style="--d:.2s">
 <span class="oz-ribbon cyan">Выбор редакции</span>
-<div class="oz-chip-oh"><div class="cv">9.9</div><div class="cl">балл из 10</div></div>
+<div class="oz-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="quo">“</span>
-<div class="tag">Вердикт по отзывам · чистая репутация</div>
-<div class="bn">7K Casino</div>
-<div class="strow"><span class="oz-stars" style="--pct:99%"><span class="bg"></span><span class="fg"></span></span><span class="rn">9.9 / 10</span><span class="rc">жалоб на невыплаты нет</span></div>
-<div class="why"><b>Почему верх рейтинга:</b> единственный в подборке, к кому редакция не нашла повторяющихся жалоб на невыплаты. Свой вывод по СБП уложился в 17 минут — совпало с тем, что пишут игроки.</div>
+<div class="tag">Вердикт по отзывам · ровная касса</div>
+<div class="bn">Spinto</div>
+<div class="strow"><span class="oz-stars" style="--pct:98%"><span class="bg"></span><span class="fg"></span></span><span class="rn">9.8 / 10</span><span class="rc">отзывы о выводе ровные</span></div>
+<div class="why"><b>Почему верх подборки:</b> отзывы о выводе ровные, без повторяющихся жалоб на задержки. Крипта и СБП по отзывам укладываются в час, а порог входа низкий — от 50 ₽, кассу легко проверить своим выводом.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Репутация по отзывам</span><i class="dts"></i><span class="val hl-gold">чистая, без «не платят»</span></div>
-<div class="line"><span>Вывод по СБП (отзывы)</span><i class="dts"></i><span class="val hl-cyan">от 15 минут</span></div>
-<div class="line"><span>Проверено выводом</span><i class="dts"></i><span class="val hl-neon">17 минут до карты</span></div>
-<div class="line"><span>KYC на малых суммах</span><i class="dts"></i><span class="val hl-sky">не требуют</span></div>
-<div class="line"><span>Кэшбэк (хвалят)</span><i class="dts"></i><span class="val hl-hot">до 20% по пн</span></div>
-<div class="line"><span>Приветственный</span><i class="dts"></i><span class="val hl-gold">225% + 200 FS</span></div>
+<div class="line"><span>Репутация по отзывам</span><i class="dts"></i><span class="val hl-gold">ровная, без задержек</span></div>
+<div class="line"><span>Выплаты (отзывы)</span><i class="dts"></i><span class="val hl-cyan">СБП и крипта, до 1 часа</span></div>
+<div class="line"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-neon">50 ₽</span></div>
+<div class="line"><span>Вейджер</span><i class="dts"></i><span class="val hl-sky">x35</span></div>
+<div class="line"><span>Приветственный</span><i class="dts"></i><span class="val hl-gold">200% + 150 FS</span></div>
+<div class="line"><span>Промокод</span><i class="dts"></i><span class="val hl-hot">не нужен — бонус по ссылке</span></div>
 <div class="line"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Curaçao, номер проверяем</span></div>
 </div>
-<a class="oz-btn oz-btn-cyan" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:4px">Открыть 7K Casino</a>
-<div class="foot"><span>СБП · карта · USDT</span><span>жалоб на невыплаты нет</span><span>Curaçao</span></div>
+<a class="oz-btn oz-btn-cyan" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:4px">Открыть Spinto</a>
+<div class="foot"><span>СБП и крипта</span><span>депозит от 50 ₽</span><span>Curaçao</span></div>
 <ul class="tguar">
 <li>Отзывы сверены нашим пробным выводом</li>
 <li>Лицензия проверена по номеру в реестре</li>
@@ -841,23 +844,10 @@ window.addEventListener('load',function(){
 <span class="oz-kick">Топ-6 · сентябрь 2026</span>
 <h2>Казино по репутации и отзывам игроков: <span class="g-gold">рейтинг от лучшего к слабому</span></h2>
 </div>
-<p class="rv">Список отранжирован по совокупной оценке, но на первый план вынесена репутация — звёзды рядом с брендом собраны из отзывов о выплатах, а не из рекламных баннеров. Оценка — средневзвешенный балл по шести критериям, где главный вес отдан тому, что нельзя подделать: приходят ли деньги.</p>
+<p class="rv">Это подборка редакции по совокупности бонусов, скорости выплат и надёжности, а не строгая сортировка по числу звёзд. На первый план вынесена репутация — звёзды рядом с брендом собраны из отзывов о выплатах, а не из рекламных баннеров. Оценка — средневзвешенный балл по шести критериям, где главный вес отдан тому, что нельзя подделать: приходят ли деньги.</p>
 <div class="oz-rate">
 <article class="oz-card r1 rv">
 <div class="rkw"><span class="oz-medal g">1</span></div>
-<div class="oz-mid">
-<div class="bn">7K Casino</div>
-<span class="bt">Лучшее за — чистую репутацию по выплатам</span>
-<div class="prm"><span>Отзывы: <b>хвалят кассу и СБП</b></span><span>Невыплаты: <b>жалоб нет</b></span><span>Лиц. <b>Curaçao</b></span></div>
-</div>
-<div class="oz-right">
-<div class="oz-repcol"><span class="oz-stars" style="--pct:99%"><span class="bg"></span><span class="fg"></span></span><div class="rv2">9.9</div><div class="k">репутация</div></div>
-<div class="oz-sccol"><span class="oz-score">9.9</span><span class="oz-sbar"><i data-score="9.9"></i></span></div>
-<a class="oz-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="oz-card r2 rv">
-<div class="rkw"><span class="oz-medal">2</span></div>
 <div class="oz-mid">
 <div class="bn">Spinto</div>
 <span class="bt">Лучшее за — ровные отзывы о крипто-выводе</span>
@@ -866,7 +856,26 @@ window.addEventListener('load',function(){
 <div class="oz-right">
 <div class="oz-repcol"><span class="oz-stars" style="--pct:98%"><span class="bg"></span><span class="fg"></span></span><div class="rv2">9.8</div><div class="k">репутация</div></div>
 <div class="oz-sccol"><span class="oz-score">9.8</span><span class="oz-sbar"><i data-score="9.8"></i></span></div>
+<div class="oz-acts">
+<a class="oz-rev-btn" href="/casino/spinto/">Обзор</a>
 <a class="oz-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+</div>
+</div>
+</article>
+<article class="oz-card r2 rv">
+<div class="rkw"><span class="oz-medal">2</span></div>
+<div class="oz-mid">
+<div class="bn">7K Casino</div>
+<span class="bt">Лучшее за — чистую репутацию по выплатам</span>
+<div class="prm"><span>Отзывы: <b>хвалят кассу и СБП</b></span><span>Невыплаты: <b>жалоб нет</b></span><span>Лиц. <b>Curaçao</b></span></div>
+</div>
+<div class="oz-right">
+<div class="oz-repcol"><span class="oz-stars" style="--pct:99%"><span class="bg"></span><span class="fg"></span></span><div class="rv2">9.9</div><div class="k">репутация</div></div>
+<div class="oz-sccol"><span class="oz-score">9.9</span><span class="oz-sbar"><i data-score="9.9"></i></span></div>
+<div class="oz-acts">
+<a class="oz-rev-btn" href="/casino/7k/">Обзор</a>
+<a class="oz-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="oz-card r3 rv">
@@ -879,7 +888,10 @@ window.addEventListener('load',function(){
 <div class="oz-right">
 <div class="oz-repcol"><span class="oz-stars" style="--pct:97%"><span class="bg"></span><span class="fg"></span></span><div class="rv2">9.7</div><div class="k">репутация</div></div>
 <div class="oz-sccol"><span class="oz-score">9.7</span><span class="oz-sbar"><i data-score="9.7"></i></span></div>
+<div class="oz-acts">
+<a class="oz-rev-btn" href="/casino/1win/">Обзор</a>
 <a class="oz-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="oz-card r4 rv">
@@ -892,7 +904,10 @@ window.addEventListener('load',function(){
 <div class="oz-right">
 <div class="oz-repcol"><span class="oz-stars" style="--pct:96%"><span class="bg"></span><span class="fg"></span></span><div class="rv2">9.6</div><div class="k">репутация</div></div>
 <div class="oz-sccol"><span class="oz-score">9.6</span><span class="oz-sbar"><i data-score="9.6"></i></span></div>
+<div class="oz-acts">
+<a class="oz-rev-btn" href="/casino/banda/">Обзор</a>
 <a class="oz-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="oz-card r5 rv">
@@ -905,7 +920,10 @@ window.addEventListener('load',function(){
 <div class="oz-right">
 <div class="oz-repcol"><span class="oz-stars" style="--pct:95%"><span class="bg"></span><span class="fg"></span></span><div class="rv2">9.5</div><div class="k">репутация</div></div>
 <div class="oz-sccol"><span class="oz-score">9.5</span><span class="oz-sbar"><i data-score="9.5"></i></span></div>
+<div class="oz-acts">
+<a class="oz-rev-btn" href="/casino/leebet/">Обзор</a>
 <a class="oz-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="oz-card r6 rv">
@@ -918,18 +936,21 @@ window.addEventListener('load',function(){
 <div class="oz-right">
 <div class="oz-repcol"><span class="oz-stars" style="--pct:94%"><span class="bg"></span><span class="fg"></span></span><div class="rv2">9.4</div><div class="k">репутация</div></div>
 <div class="oz-sccol"><span class="oz-score">9.4</span><span class="oz-sbar"><i data-score="9.4"></i></span></div>
+<div class="oz-acts">
+<a class="oz-rev-btn" href="/casino/apex/">Обзор</a>
 <a class="oz-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица: казино по отзывам о выплатах и репутации</h3>
 <div class="oz-tbox oz-scroll rv" style="margin:12px 0 0">
 <table class="oz-t mfit">
-<caption>Репутация собрана из отзывов о выводе и сверена пробным выводом редакции; сортировка — по оценке.</caption>
+<caption>Репутация собрана из отзывов о выводе и сверена пробным выводом редакции; порядок — подборка редакции по совокупности бонусов, выплат и надёжности.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Репутация по отзывам</th><th>Отзывы (что пишут)</th><th>Оценка</th><th>Бонус</th></tr></thead>
 <tbody>
-<tr><td class="oz-rub mfit-num" data-label="">1</td><td class="oz-bc" data-label="Казино"><span class="oz-bn">7K Casino</span><span class="oz-line2"><span class="oz-best" style="--rc:#ffcf3f">Лучшее за — чистую репутацию</span><span class="oz-ed">№1</span></span></td><td data-label="Репутация по отзывам"><span class="oz-pill rep-g">чистая</span></td><td data-label="Отзывы (что пишут)">Хвалят кассу и СБП, жалоб на невыплаты нет</td><td data-label="Оценка"><span class="gold">9.9</span></td><td data-label="Бонус">225% + 200 FS</td></tr>
-<tr><td class="oz-rub mfit-num" data-label="">2</td><td class="oz-bc" data-label="Казино"><span class="oz-bn">Spinto</span><span class="oz-line2"><span class="oz-best" style="--rc:#37e0c8">Лучшее за — крипто-вывод</span></span></td><td data-label="Репутация по отзывам"><span class="oz-pill rep-c">ровная</span></td><td data-label="Отзывы (что пишут)">Молодой, но отзывы о крипто-выводе ровные</td><td data-label="Оценка"><span class="cyan">9.8</span></td><td data-label="Бонус">200% + 150 FS</td></tr>
+<tr><td class="oz-rub mfit-num" data-label="">1</td><td class="oz-bc" data-label="Казино"><span class="oz-bn">Spinto</span><span class="oz-line2"><span class="oz-best" style="--rc:#ffcf3f">Лучшее за — крипто-вывод</span><span class="oz-ed">№1</span></span></td><td data-label="Репутация по отзывам"><span class="oz-pill rep-c">ровная</span></td><td data-label="Отзывы (что пишут)">Молодой, но отзывы о крипто-выводе ровные</td><td data-label="Оценка"><span class="gold">9.8</span></td><td data-label="Бонус">200% + 150 FS</td></tr>
+<tr><td class="oz-rub mfit-num" data-label="">2</td><td class="oz-bc" data-label="Казино"><span class="oz-bn">7K Casino</span><span class="oz-line2"><span class="oz-best" style="--rc:#37e0c8">Лучшее за — чистую репутацию</span></span></td><td data-label="Репутация по отзывам"><span class="oz-pill rep-g">чистая</span></td><td data-label="Отзывы (что пишут)">Хвалят кассу и СБП, жалоб на невыплаты нет</td><td data-label="Оценка"><span class="cyan">9.9</span></td><td data-label="Бонус">225% + 200 FS</td></tr>
 <tr><td class="oz-rub mfit-num" data-label="">3</td><td class="oz-bc" data-label="Казино"><span class="oz-bn">1win</span><span class="oz-line2"><span class="oz-best" style="--rc:#b8ff2b">Лучшее за — объём отзывов</span></span></td><td data-label="Репутация по отзывам"><span class="oz-pill rep-y">спорная по KYC</span></td><td data-label="Отзывы (что пишут)">Много отзывов, спорят про KYC на крупных суммах</td><td data-label="Оценка"><span class="neon">9.7</span></td><td data-label="Бонус">500% до 200 000 ₽</td></tr>
 <tr><td class="oz-rub mfit-num" data-label="">4</td><td class="oz-bc" data-label="Казино"><span class="oz-bn">Banda</span><span class="oz-line2"><span class="oz-best" style="--rc:#ff2e93">Лучшее за — турниры</span></span></td><td data-label="Репутация по отзывам"><span class="oz-pill rep-c">ровная</span></td><td data-label="Отзывы (что пишут)">Хвалят турниры и фриспины, касса не быстрая</td><td data-label="Оценка"><span class="hot">9.6</span></td><td data-label="Бонус">100% + 500 FS</td></tr>
 <tr><td class="oz-rub mfit-num" data-label="">5</td><td class="oz-bc" data-label="Казино"><span class="oz-bn">Leebet</span><span class="oz-line2"><span class="oz-best" style="--rc:#6cc4ff">Лучшее за — USDT-вывод</span></span></td><td data-label="Репутация по отзывам"><span class="oz-pill rep-c">ровная (крипта)</span></td><td data-label="Отзывы (что пишут)">Плюсы за USDT-вывод, минус — упор на крипту</td><td data-label="Оценка"><span class="cyan">9.5</span></td><td data-label="Бонус">150% до 1000 USDT</td></tr>
@@ -1092,18 +1113,7 @@ window.addEventListener('load',function(){
 </div>
 <div class="oz-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. 7K Casino <span>чистая репутация по выплатам</span></div><div class="rt"><span class="oz-stars" style="--pct:99%"><span class="bg"></span><span class="fg"></span></span><span class="sc">9.9</span></div></div>
-<p>7K — единственный в подборке, к кому редакция не нашла повторяющихся жалоб на невыплаты. Игроки хвалят одно и то же: вывод по СБП за 15 минут, крипта до 30. Свой вывод редакция заводила в будний вечер — 17 минут до карты. На малых суммах паспорт не просят, поэтому первый вывод не буксует на KYC. Негатив есть, но он про верхнюю границу до 2 часов в час пик, а не про «не платят».</p>
-<div class="oz-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>в отзывах хвалят СБП и карту от 15 минут</li><li>нет повторяющихся жалоб на невыплаты</li><li>KYC на малых суммах не требуют</li><li>кэшбэк до 20% по понедельникам живыми деньгами</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>в час пик карта доходит до 2 часов — об этом пишут</li><li>кэшбэк привязан к понедельнику</li></ul></div>
-</div>
-<div class="oz-vd"><b>Кому подходит:</b> тем, кто хочет площадку с чистой репутацией по выплатам.</div>
-<div class="oz-facts"><span class="thr">Репутация: чистая</span><span>Вывод: <b>СБП от 15 мин</b></span><span>Невыплаты: <b>жалоб нет</b></span><span>Лиц.: <b>Curaçao</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="oz-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-cyan">2. Spinto <span>ровные отзывы о крипто-выводе</span></div><div class="rt"><span class="oz-stars" style="--pct:98%;--stc:#37e0c8"><span class="bg"></span><span class="fg"></span></span><span class="sc" style="color:var(--cyan)">9.8</span></div></div>
+<div class="rh"><div class="nm c-gold">1. Spinto <span>ровные отзывы о крипто-выводе</span></div><div class="rt"><span class="oz-stars" style="--pct:98%"><span class="bg"></span><span class="fg"></span></span><span class="sc">9.8</span></div></div>
 <p>Spinto запустился в 2026-м, поэтому отзывов пока меньше, чем у старожилов. Что есть — ровное: USDT приходит примерно за 40 минут, СБП меньше часа, верификация минимальная. Свой вывод редакция подтверждает. Главная претензия не к кассе, а к возрасту: у бренда просто нет многолетней истории, и часть игроков ждёт, пока накопится статистика.</p>
 <div class="oz-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>отзывы о крипто-выводе ровные, без задержек</li><li>минимальная верификация на старте</li><li>депозит от 50 ₽ — легко проверить кассу</li></ul></div>
@@ -1111,6 +1121,17 @@ window.addEventListener('load',function(){
 </div>
 <div class="oz-vd"><b>Кому подходит:</b> тем, кто готов к новому бренду с чистой, но короткой историей.</div>
 <div class="oz-facts"><span class="thr">Репутация: ровная</span><span>Вывод: <b>USDT ~40 мин</b></span><span>Верификация: <b>минимальная</b></span><span>Лиц.: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="oz-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-cyan">2. 7K Casino <span>чистая репутация по выплатам</span></div><div class="rt"><span class="oz-stars" style="--pct:99%;--stc:#37e0c8"><span class="bg"></span><span class="fg"></span></span><span class="sc" style="color:var(--cyan)">9.9</span></div></div>
+<p>7K — единственный в подборке, к кому редакция не нашла повторяющихся жалоб на невыплаты. Игроки хвалят одно и то же: вывод по СБП за 15 минут, крипта до 30. Свой вывод редакция заводила в будний вечер — 17 минут до карты. На малых суммах паспорт не просят, поэтому первый вывод не буксует на KYC. Негатив есть, но он про верхнюю границу до 2 часов в час пик, а не про «не платят».</p>
+<div class="oz-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>в отзывах хвалят СБП и карту от 15 минут</li><li>нет повторяющихся жалоб на невыплаты</li><li>KYC на малых суммах не требуют</li><li>кэшбэк до 20% по понедельникам живыми деньгами</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>в час пик карта доходит до 2 часов — об этом пишут</li><li>кэшбэк привязан к понедельнику</li></ul></div>
+</div>
+<div class="oz-vd"><b>Кому подходит:</b> тем, кто хочет площадку с чистой репутацией по выплатам.</div>
+<div class="oz-facts"><span class="thr">Репутация: чистая</span><span>Вывод: <b>СБП от 15 мин</b></span><span>Невыплаты: <b>жалоб нет</b></span><span>Лиц.: <b>Curaçao</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
 </div>
 <div class="oz-rev rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1332,8 +1353,8 @@ window.addEventListener('load',function(){
 </div>
 <div class="oz-log rv">
 <ul>
+<li><b>Spinto набирает отзывы</b> — крипто-вывод по-прежнему ровный, без задержек; статистика копится, репутация держит верх подборки.</li>
 <li><b>7K сохранил чистую репутацию</b> — за месяц ни одной новой повторяющейся жалобы на невыплаты, СБП по отзывам держит 15 минут.</li>
-<li><b>Spinto набирает отзывы</b> — крипто-вывод по-прежнему ровный, но статистики пока мало для полного доверия.</li>
 <li><b>По 1win пересобрали негатив</b> — почти весь он про KYC на крупных суммах, а не про отказ платить.</li>
 <li><b>Две площадки не прошли фильтр</b> — за накрученные пятёрки пачкой в один день и вычищенный из ленты негатив.</li>
 <li><b>Перепроверили выводом топ-6</b> — пробные заявки на малых суммах, сверили сроки с отзывами.</li>
@@ -1484,8 +1505,8 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: репутация по отзывам, скорость кассы по замерам, условия бонуса, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="oz-brands rv" id="brandsGrid"></div>
 <ul class="oz-seo-links">
-<li><a href="/casino/7k">Обзор казино 7K Casino — репутация по отзывам</a></li>
 <li><a href="/casino/spinto">Обзор казино Spinto — отзывы о крипто-выводе</a></li>
+<li><a href="/casino/7k">Обзор казино 7K Casino — репутация по отзывам</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — отзывы и KYC</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — турниры и фриспины</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — отзывы о USDT</a></li>

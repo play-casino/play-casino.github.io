@@ -263,6 +263,9 @@
   .vp-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(168,121,255,.7);color:#fff}
   .vp-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .vp-go:hover::after{animation:vp-shim .85s var(--ez)}
+  .vp-btns{display:flex;flex-direction:column;gap:8px}
+  .vp-go.ghost{background:rgba(255,255,255,.05);border:1px solid var(--hair2);color:var(--tx);box-shadow:none}
+  .vp-go.ghost:hover{border-color:color-mix(in srgb,var(--c) 60%,var(--hair2));color:#fff;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)}
   .vp-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .vp-card.r2{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
   .vp-card.r3{--c:#f0a35a;--c2:#c9752e;--ct:#2a1600;background:linear-gradient(120deg,rgba(240,163,90,.1),var(--pan) 72%)}
@@ -274,6 +277,7 @@
   @media(max-width:760px){
     .vp-card{grid-template-columns:48px 1fr;gap:12px}
     .vp-right{grid-column:1 / -1;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
+    .vp-btns{flex-direction:row}
   }
   .vp-note{font-size:13px;color:var(--mu);margin:12px 0 0}
 
@@ -716,7 +720,7 @@ window.addEventListener('load',function(){
 <span class="vp-brow rv" style="--d:.02s"><b>PlayCasino</b> · разбор программ лояльности · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Казино с <span class="g-viol">VIP-программой</span> для хайроллеров — что реально даёт <span class="g-gold">статус лояльности</span></h1>
 <p class="vp-lead rv" style="--d:.16s">
-Лучшую реальную выгоду по лояльности из подборки даёт <span class="hl-gold">7K Casino</span> — кэшбэк <b>до 20%</b> по понедельникам уходит живыми деньгами, а не «баллами». Под крупные депозиты и высокие ставки ближе <span class="hl-neon">1win</span> (каталог 12 000+ игр) и <span class="hl-cyan">Leebet</span> (крупные крипто-выводы USDT/BTC). Но сразу честно: VIP-статус нигде не дарят — его <b>«покупают» оборотом</b>. Прежде чем гнаться за уровнем, посчитайте, сколько придётся проиграть, чтобы окупить кэшбэк.
+На первое место в подборке редакция ставит <span class="hl-gold">Spinto</span> — низкий порог входа <b>от 50 ₽</b>, крупный стартовый пакет <b>200% + 150 фриспинов</b> и быстрые выплаты по СБП и крипте (до часа). Бонус активируется по нашей ссылке — промокод не нужен. Свои сильные стороны есть и у других: у <span class="hl-neon">7K</span> — реальный кэшбэк деньгами до 20% по понедельникам, у <span class="hl-cyan">1win</span> — каталог 12 000+ игр под крупную игру, у Leebet — крупные крипто-выводы USDT/BTC. Но сразу честно: VIP-статус нигде не дарят — его <b>«покупают» оборотом</b>. Прежде чем гнаться за уровнем, посчитайте, сколько придётся проиграть, чтобы окупить кэшбэк.
 </p>
 <div aria-hidden="false" class="vp-tiers rv" style="--d:.2s">
 <div class="tier"><span class="tn">Бронза</span><span class="tc">5%</span><small>вход</small></div>
@@ -736,30 +740,29 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="vp-tkt rv" style="--d:.2s">
-<span class="vp-ribbon viol">Выбор редакции</span>
+<span class="vp-ribbon viol">Выбор редакции · №1</span>
 <div class="vp-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">◆</span>
-<div class="tag">Чек редакции · лучшая лояльность</div>
-<div class="bn">7K Casino</div>
-<div class="bs">кэшбэк до 20% деньгами, вывод от 15 минут</div>
-<div class="why"><b>Почему в топе:</b> кэшбэк приходит живыми деньгами без отыгрыша — редакция снимала такой возврат сама. Не «фантики» с вейджером, а откат по проигрышу за неделю.</div>
+<div class="tag">Чек редакции · №1 подборки</div>
+<div class="bn">Spinto</div>
+<div class="bs">бонус 200% + 150 FS, вывод по СБП и крипте до часа</div>
+<div class="why"><b>Почему №1:</b> низкий порог входа от 50 ₽, крупный стартовый пакет и быстрые выплаты — деньги на руках в тот же день. Бонус активируется по нашей ссылке, промокод не нужен.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Кэшбэк по статусу</span><span class="big">до 20%</span></div>
+<div class="line"><span>Приветственный бонус</span><span class="big">200%</span></div>
 <div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
-<div class="line spec"><span>Форма кэшбэка</span><i class="dts"></i><span class="val hl-gold">деньгами, без отыгрыша</span></div>
-<div class="line spec"><span>Периодичность</span><i class="dts"></i><span class="val hl-neon">еженедельно, пн</span></div>
-<div class="line spec"><span>Приветственный</span><i class="dts"></i><span class="val hl-cyan">225% + 200 FS</span></div>
-<div class="line spec"><span>Вывод СБП/карта</span><i class="dts"></i><span class="val hl-neon">от 15 минут</span></div>
-<div class="line spec"><span>Менеджер</span><i class="dts"></i><span class="val hl-sky">в Telegram, на верхах</span></div>
-<div class="line spec"><span>KYC на малых суммах</span><i class="dts"></i><span class="val hl-gold">не требуется</span></div>
+<div class="line spec"><span>Фриспины за старт</span><i class="dts"></i><span class="val hl-gold">+150 FS</span></div>
+<div class="line spec"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-neon">от 50 ₽</span></div>
+<div class="line spec"><span>Вейджер бонуса</span><i class="dts"></i><span class="val hl-cyan">x35</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-neon">СБП, крипта, до 1 ч</span></div>
+<div class="line spec"><span>Промокод</span><i class="dts"></i><span class="val hl-sky">не нужен — бонус по ссылке</span></div>
 <div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-viol">Кюрасао</span></div>
 </div>
-<a class="vp-btn vp-btn-viol" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть 7K Casino</a>
-<div class="foot"><span>Кэшбэк деньгами</span><span>СБП · карта · USDT</span><span>Кюрасао</span></div>
+<a class="vp-btn vp-btn-viol" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Spinto</a>
+<div class="foot"><span>Бонус по ссылке</span><span>СБП · крипта</span><span>Кюрасао</span></div>
 <ul class="tguar">
-<li>Кэшбэк снимался редакцией на реальный баланс</li>
-<li>Условия лояльности сверены в кабинете</li>
+<li>Бонус активируется по нашей ссылке, без кода</li>
+<li>Условия старта сверены в кабинете</li>
 <li>Сроки выплат замерены по методам</li>
 </ul>
 </aside>
@@ -819,10 +822,23 @@ window.addEventListener('load',function(){
 <span class="vp-kick">Топ-8 · сентябрь 2026</span>
 <h2>Казино с сильной программой лояльности — <span class="g-gold">рейтинг для хайроллеров</span></h2>
 </div>
-<p class="rv">Порядок — по реальной отдаче статуса: кэшбэк без вейджера, лимиты вывода крупных сумм и адекватность менеджера. Цифра рядом с брендом — ключевая VIP-выгода площадки, оценка — средневзвешенный балл по шести критериям. Критерии разобраны ниже.</p>
+<p class="rv">Порядок — подборка редакции по совокупности условий: размер и прозрачность бонусов, скорость выплат, лимиты вывода крупных сумм и адекватность менеджера, а не строго по числовой оценке. Цифра рядом с брендом — ключевая VIP-выгода площадки, оценка — ориентир редакции по шести критериям. Критерии разобраны ниже.</p>
 <div class="vp-rate">
 <article class="vp-card r1 rv">
 <div class="rkw"><span class="vp-medal g">1</span></div>
+<div class="vp-mid">
+<div class="bn">Spinto</div>
+<span class="bt">Выбор редакции — низкий порог и быстрый старт</span>
+<div class="prm"><span>Бонус <b>200% + 150 FS</b></span><span>Мин. деп <b>от 50 ₽</b></span><span>Выплаты <b>СБП · крипта, до 1 ч</b></span></div>
+</div>
+<div class="vp-right">
+<div class="vp-cb"><div class="n">200%</div><div class="k">+ 150 фриспинов</div></div>
+<div class="vp-sccol"><span class="vp-score">9.8</span><span class="vp-sbar"><i data-score="9.8"></i></span></div>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/spinto/">Обзор</a><a class="vp-go" href="/go/spinto" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="vp-card r2 rv">
+<div class="rkw"><span class="vp-medal">2</span></div>
 <div class="vp-mid">
 <div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — реальный кэшбэк деньгами</span>
@@ -831,20 +847,7 @@ window.addEventListener('load',function(){
 <div class="vp-right">
 <div class="vp-cb"><div class="n">20%</div><div class="k">кэшбэк деньгами</div></div>
 <div class="vp-sccol"><span class="vp-score">9.8</span><span class="vp-sbar"><i data-score="9.8"></i></span></div>
-<a class="vp-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="vp-card r2 rv">
-<div class="rkw"><span class="vp-medal">2</span></div>
-<div class="vp-mid">
-<div class="bn">Vavada</div>
-<span class="bt">Лучшее за — статусный кэшбэк и стабильную кассу</span>
-<div class="prm"><span>Кэшбэк <b>до 10%</b></span><span>Бонус <b>100% + 100 FS</b></span><span>Лиц. <b>Кюрасао</b></span></div>
-</div>
-<div class="vp-right">
-<div class="vp-cb"><div class="n">10%</div><div class="k">кэшбэк по статусу</div></div>
-<div class="vp-sccol"><span class="vp-score">9.7</span><span class="vp-sbar"><i data-score="9.7"></i></span></div>
-<a class="vp-go" href="/go/vavada" rel="nofollow sponsored">Играть</a>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/7k/">Обзор</a><a class="vp-go" href="/go/7k" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="vp-card r3 rv">
@@ -857,24 +860,11 @@ window.addEventListener('load',function(){
 <div class="vp-right">
 <div class="vp-cb"><div class="n">12K+</div><div class="k">игр в кабинете</div></div>
 <div class="vp-sccol"><span class="vp-score">9.6</span><span class="vp-sbar"><i data-score="9.6"></i></span></div>
-<a class="vp-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/1win/">Обзор</a><a class="vp-go" href="/go/1win" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="vp-card r4 rv">
 <div class="rkw"><span class="vp-medal">4</span></div>
-<div class="vp-mid">
-<div class="bn">Leebet</div>
-<span class="bt">Лучшее за — крупные крипто-выводы USDT/BTC</span>
-<div class="prm"><span>USDT <b>~20 мин</b></span><span>Комиссия <b>сети, копейки</b></span><span>Лимиты <b>подняты</b></span></div>
-</div>
-<div class="vp-right">
-<div class="vp-cb"><div class="n">USDT</div><div class="k">крупные выводы</div></div>
-<div class="vp-sccol"><span class="vp-score">9.4</span><span class="vp-sbar"><i data-score="9.4"></i></span></div>
-<a class="vp-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="vp-card r5 rv">
-<div class="rkw"><span class="vp-medal">5</span></div>
 <div class="vp-mid">
 <div class="bn">Banda</div>
 <span class="bt">Лучшее за — еженедельные турниры с призовым</span>
@@ -883,37 +873,24 @@ window.addEventListener('load',function(){
 <div class="vp-right">
 <div class="vp-cb"><div class="n">турниры</div><div class="k">призовой фонд</div></div>
 <div class="vp-sccol"><span class="vp-score">9.3</span><span class="vp-sbar"><i data-score="9.3"></i></span></div>
-<a class="vp-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/banda/">Обзор</a><a class="vp-go" href="/go/banda" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="vp-card r5 rv">
+<div class="rkw"><span class="vp-medal">5</span></div>
+<div class="vp-mid">
+<div class="bn">Leebet</div>
+<span class="bt">Лучшее за — крупные крипто-выводы USDT/BTC</span>
+<div class="prm"><span>USDT <b>~20 мин</b></span><span>Комиссия <b>сети, копейки</b></span><span>Лимиты <b>подняты</b></span></div>
+</div>
+<div class="vp-right">
+<div class="vp-cb"><div class="n">USDT</div><div class="k">крупные выводы</div></div>
+<div class="vp-sccol"><span class="vp-score">9.4</span><span class="vp-sbar"><i data-score="9.4"></i></span></div>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/leebet/">Обзор</a><a class="vp-go" href="/go/leebet" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="vp-card r6 rv">
 <div class="rkw"><span class="vp-medal">6</span></div>
-<div class="vp-mid">
-<div class="bn">Sol Casino</div>
-<span class="bt">Лучшее за — уровни лояльности и еженедельный кэшбэк</span>
-<div class="prm"><span>Кэшбэк <b>до 10%</b></span><span>Слотов <b>7 000+</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
-</div>
-<div class="vp-right">
-<div class="vp-cb"><div class="n">10%</div><div class="k">еженедельно</div></div>
-<div class="vp-sccol"><span class="vp-score">9.2</span><span class="vp-sbar"><i data-score="9.2"></i></span></div>
-<a class="vp-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="vp-card r7 rv">
-<div class="rkw"><span class="vp-medal">7</span></div>
-<div class="vp-mid">
-<div class="bn">Spinto</div>
-<span class="bt">Лучшее за — крипто-лояльность и быстрый старт</span>
-<div class="prm"><span>USDT <b>~40 мин</b></span><span>KYC <b>минимальный</b></span><span>Бонус <b>200% + 150 FS</b></span></div>
-</div>
-<div class="vp-right">
-<div class="vp-cb"><div class="n">крипто</div><div class="k">быстрый старт</div></div>
-<div class="vp-sccol"><span class="vp-score">9.1</span><span class="vp-sbar"><i data-score="9.1"></i></span></div>
-<a class="vp-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="vp-card r8 rv">
-<div class="rkw"><span class="vp-medal">8</span></div>
 <div class="vp-mid">
 <div class="bn">APEX</div>
 <span class="bt">Лучшее за — самый крупный стартовый пакет</span>
@@ -922,24 +899,50 @@ window.addEventListener('load',function(){
 <div class="vp-right">
 <div class="vp-cb"><div class="n">375%</div><div class="k">стартовый пакет</div></div>
 <div class="vp-sccol"><span class="vp-score">9.0</span><span class="vp-sbar"><i data-score="9.0"></i></span></div>
-<a class="vp-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/apex/">Обзор</a><a class="vp-go" href="/go/apex" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="vp-card r7 rv">
+<div class="rkw"><span class="vp-medal">7</span></div>
+<div class="vp-mid">
+<div class="bn">Sol Casino</div>
+<span class="bt">Лучшее за — уровни лояльности и еженедельный кэшбэк</span>
+<div class="prm"><span>Кэшбэк <b>до 10%</b></span><span>Слотов <b>7 000+</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
+</div>
+<div class="vp-right">
+<div class="vp-cb"><div class="n">10%</div><div class="k">еженедельно</div></div>
+<div class="vp-sccol"><span class="vp-score">9.2</span><span class="vp-sbar"><i data-score="9.2"></i></span></div>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/sol/">Обзор</a><a class="vp-go" href="/go/sol" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="vp-card r8 rv">
+<div class="rkw"><span class="vp-medal">8</span></div>
+<div class="vp-mid">
+<div class="bn">Vavada</div>
+<span class="bt">Лучшее за — статусный кэшбэк и стабильную кассу</span>
+<div class="prm"><span>Кэшбэк <b>до 10%</b></span><span>Бонус <b>100% + 100 FS</b></span><span>Лиц. <b>Кюрасао</b></span></div>
+</div>
+<div class="vp-right">
+<div class="vp-cb"><div class="n">10%</div><div class="k">кэшбэк по статусу</div></div>
+<div class="vp-sccol"><span class="vp-score">9.7</span><span class="vp-sbar"><i data-score="9.7"></i></span></div>
+<div class="vp-btns"><a class="vp-go ghost" href="/casino/vavada/">Обзор</a><a class="vp-go" href="/casino/vavada/">Играть</a></div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица: VIP-программы и что даёт лояльность на каждой площадке</h3>
 <div class="vp-tbox vp-scroll rv" style="margin:12px 0 0">
 <table class="vp-t mfit">
-<caption>Порядок — по реальной отдаче статуса. Конкретные проценты рангов, которых нет в проверенных данных бренда, редакция не выдумывает и отправляет сверять в кабинет.</caption>
+<caption>Порядок — подборка редакции по совокупности условий, а не строго по числовой оценке. Конкретные проценты рангов, которых нет в проверенных данных бренда, редакция не выдумывает и отправляет сверять в кабинет.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>VIP / лояльность</th><th>Кэшбэк</th><th>Приветственный</th><th>Оценка</th></tr></thead>
 <tbody>
-<tr><td class="vp-rub mfit-num" data-label="">1</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">7K Casino</span><span class="vp-line2"><span class="vp-best" style="--rc:#ffcf3f">Лучшее за — кэшбэк деньгами</span><span class="vp-ed">№1</span></span></td><td data-label="VIP / лояльность">Кэшбэк деньгами по понедельникам</td><td data-label="Кэшбэк"><span class="vp-pill cb-g">до 20%</span></td><td data-label="Приветственный">225% + 200 FS</td><td data-label="Оценка"><span class="viol">9.8</span></td></tr>
-<tr><td class="vp-rub mfit-num" data-label="">2</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Vavada</span><span class="vp-line2"><span class="vp-best" style="--rc:#e6eaf3">Лучшее за — статусный кэшбэк</span></span></td><td data-label="VIP / лояльность">Уровни лояльности, кэшбэк по статусу</td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Приветственный">100% + 100 FS</td><td data-label="Оценка"><span class="viol">9.7</span></td></tr>
+<tr><td class="vp-rub mfit-num" data-label="">1</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Spinto</span><span class="vp-line2"><span class="vp-best" style="--rc:#ffcf3f">Выбор редакции — быстрый старт</span><span class="vp-ed">№1</span></span></td><td data-label="VIP / лояльность">Низкий порог входа, лояльность под крипто-игрока</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">в кабинете</span></td><td data-label="Приветственный">200% + 150 FS</td><td data-label="Оценка"><span class="viol">9.8</span></td></tr>
+<tr><td class="vp-rub mfit-num" data-label="">2</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">7K Casino</span><span class="vp-line2"><span class="vp-best" style="--rc:#e6eaf3">Лучшее за — кэшбэк деньгами</span></span></td><td data-label="VIP / лояльность">Кэшбэк деньгами по понедельникам</td><td data-label="Кэшбэк"><span class="vp-pill cb-g">до 20%</span></td><td data-label="Приветственный">225% + 200 FS</td><td data-label="Оценка"><span class="viol">9.8</span></td></tr>
 <tr><td class="vp-rub mfit-num" data-label="">3</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">1win</span><span class="vp-line2"><span class="vp-best" style="--rc:#b8ff2b">Лучшее за — крупную игру</span></span></td><td data-label="VIP / лояльность">Каталог 12 000+, ставки и казино в кабинете</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">по статусу</span></td><td data-label="Приветственный">до 500% (4 депозита)</td><td data-label="Оценка"><span class="viol">9.6</span></td></tr>
-<tr><td class="vp-rub mfit-num" data-label="">4</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Leebet</span><span class="vp-line2"><span class="vp-best" style="--rc:#37e0c8">Лучшее за — крипто-выводы</span></span></td><td data-label="VIP / лояльность">Поднятые лимиты вывода в USDT/BTC</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">по статусу</span></td><td data-label="Приветственный">150% до 1000 USDT</td><td data-label="Оценка"><span class="viol">9.4</span></td></tr>
-<tr><td class="vp-rub mfit-num" data-label="">5</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Banda</span><span class="vp-line2"><span class="vp-best" style="--rc:#ff2e93">Лучшее за — турниры</span></span></td><td data-label="VIP / лояльность">Еженедельные турниры с призовым фондом</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">турниры</span></td><td data-label="Приветственный">100% + 500 FS</td><td data-label="Оценка"><span class="viol">9.3</span></td></tr>
-<tr><td class="vp-rub mfit-num" data-label="">6</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Sol Casino</span><span class="vp-line2"><span class="vp-best" style="--rc:#b8ff2b">Лучшее за — лояльность и каталог</span></span></td><td data-label="VIP / лояльность">Уровни лояльности, еженедельный кэшбэк</td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Приветственный">100% + 100 FS</td><td data-label="Оценка"><span class="viol">9.2</span></td></tr>
-<tr><td class="vp-rub mfit-num" data-label="">7</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Spinto</span><span class="vp-line2"><span class="vp-best" style="--rc:#6cc4ff">Лучшее за — крипто-старт</span></span></td><td data-label="VIP / лояльность">Лояльность под крипто-игрока, мин. KYC</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">в кабинете</span></td><td data-label="Приветственный">200% + 150 FS</td><td data-label="Оценка"><span class="viol">9.1</span></td></tr>
-<tr><td class="vp-rub mfit-num" data-label="">8</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">APEX</span><span class="vp-line2"><span class="vp-best" style="--rc:#a879ff">Лучшее за — крупный старт</span></span></td><td data-label="VIP / лояльность">Самый большой стартовый пакет подборки</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">в кабинете</span></td><td data-label="Приветственный">375% + 225 FS</td><td data-label="Оценка"><span class="viol">9.0</span></td></tr>
+<tr><td class="vp-rub mfit-num" data-label="">4</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Banda</span><span class="vp-line2"><span class="vp-best" style="--rc:#37e0c8">Лучшее за — турниры</span></span></td><td data-label="VIP / лояльность">Еженедельные турниры с призовым фондом</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">турниры</span></td><td data-label="Приветственный">100% + 500 FS</td><td data-label="Оценка"><span class="viol">9.3</span></td></tr>
+<tr><td class="vp-rub mfit-num" data-label="">5</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Leebet</span><span class="vp-line2"><span class="vp-best" style="--rc:#ff2e93">Лучшее за — крипто-выводы</span></span></td><td data-label="VIP / лояльность">Поднятые лимиты вывода в USDT/BTC</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">по статусу</span></td><td data-label="Приветственный">150% до 1000 USDT</td><td data-label="Оценка"><span class="viol">9.4</span></td></tr>
+<tr><td class="vp-rub mfit-num" data-label="">6</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">APEX</span><span class="vp-line2"><span class="vp-best" style="--rc:#b8ff2b">Лучшее за — крупный старт</span></span></td><td data-label="VIP / лояльность">Самый большой стартовый пакет подборки</td><td data-label="Кэшбэк"><span class="vp-pill cb-m">в кабинете</span></td><td data-label="Приветственный">375% + 225 FS</td><td data-label="Оценка"><span class="viol">9.0</span></td></tr>
+<tr><td class="vp-rub mfit-num" data-label="">7</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Sol Casino</span><span class="vp-line2"><span class="vp-best" style="--rc:#6cc4ff">Лучшее за — лояльность и каталог</span></span></td><td data-label="VIP / лояльность">Уровни лояльности, еженедельный кэшбэк</td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Приветственный">100% + 100 FS</td><td data-label="Оценка"><span class="viol">9.2</span></td></tr>
+<tr><td class="vp-rub mfit-num" data-label="">8</td><td class="vp-bc" data-label="Казино"><span class="vp-bn">Vavada</span><span class="vp-line2"><span class="vp-best" style="--rc:#a879ff">Лучшее за — статусный кэшбэк</span></span></td><td data-label="VIP / лояльность">Уровни лояльности, кэшбэк по статусу</td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Приветственный">100% + 100 FS</td><td data-label="Оценка"><span class="viol">9.7</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1056,12 +1059,13 @@ window.addEventListener('load',function(){
 <table class="vp-t mfit">
 <thead><tr><th>Казино</th><th>Кэшбэк</th><th>Форма</th><th>Отыгрыш</th><th>Периодичность</th></tr></thead>
 <tbody>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-m">в кабинете</span></td><td data-label="Форма">уточнять в кабинете</td><td data-label="Отыгрыш">уточнять</td><td data-label="Периодичность">по статусу</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-g">до 20%</span></td><td data-label="Форма">деньгами</td><td data-label="Отыгрыш"><span class="vp-pill yes">нет</span></td><td data-label="Периодичность">еженедельно (пн)</td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Vavada</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Форма">деньгами</td><td data-label="Отыгрыш"><span class="vp-pill yes">нет</span></td><td data-label="Периодичность">еженедельно</td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Sol Casino</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Форма">деньгами</td><td data-label="Отыгрыш"><span class="vp-pill yes">нет</span></td><td data-label="Периодичность">еженедельно</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-m">по статусу</span></td><td data-label="Форма">смешанно</td><td data-label="Отыгрыш">зависит от акции</td><td data-label="Периодичность">по статусу</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Banda</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-m">турниры</span></td><td data-label="Форма">призовой фонд</td><td data-label="Отыгрыш">условия турнира</td><td data-label="Периодичность">еженедельно</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Leebet</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-m">по статусу</span></td><td data-label="Форма">уточнять в кабинете</td><td data-label="Отыгрыш">уточнять</td><td data-label="Периодичность">по статусу</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Sol Casino</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Форма">деньгами</td><td data-label="Отыгрыш"><span class="vp-pill yes">нет</span></td><td data-label="Периодичность">еженедельно</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Vavada</b></td><td data-label="Кэшбэк"><span class="vp-pill cb-y">до 10%</span></td><td data-label="Форма">деньгами</td><td data-label="Отыгрыш"><span class="vp-pill yes">нет</span></td><td data-label="Периодичность">еженедельно</td></tr>
 </tbody>
 </table>
 </div>
@@ -1131,12 +1135,12 @@ window.addEventListener('load',function(){
 <table class="vp-t mfit">
 <thead><tr><th>Казино</th><th>Эксклюзив статуса</th><th>Формат</th></tr></thead>
 <tbody>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Эксклюзив статуса">Быстрый крипто-старт, мин. KYC</td><td data-label="Формат"><span class="vp-pill pay">USDT</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Эксклюзив статуса">Кэшбэк деньгами по понедельникам</td><td data-label="Формат"><span class="vp-pill cb-g">еженедельный возврат</span></td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Banda</b></td><td data-label="Эксклюзив статуса">Закрытые турниры</td><td data-label="Формат"><span class="vp-pill cb-v">призовой фонд</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win</b></td><td data-label="Эксклюзив статуса">Масштаб каталога 12 000+ и ставки</td><td data-label="Формат"><span class="vp-pill pay">казино + ставки</span></td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Banda</b></td><td data-label="Эксклюзив статуса">Закрытые турниры</td><td data-label="Формат"><span class="vp-pill cb-v">призовой фонд</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Leebet</b></td><td data-label="Эксклюзив статуса">Крупные крипто-выводы</td><td data-label="Формат"><span class="vp-pill pay">USDT / BTC</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">APEX</b></td><td data-label="Эксклюзив статуса">Самый крупный стартовый пакет</td><td data-label="Формат"><span class="vp-pill cb-y">375% + 225 FS</span></td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Эксклюзив статуса">Быстрый крипто-старт, мин. KYC</td><td data-label="Формат"><span class="vp-pill pay">USDT</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1182,23 +1186,23 @@ window.addEventListener('load',function(){
 </div>
 <div class="vp-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. 7K Casino <span>лучшая лояльность из подборки</span></div><div class="sc">9.8 / 10</div></div>
+<div class="rh"><div class="nm c-gold">1. Spinto <span>выбор редакции, крипто-лояльность</span></div><div class="sc">9.8 / 10</div></div>
+<p>Spinto запустился в 2026-м и лояльность строит вокруг крипто-игрока: минимальная верификация, быстрый USDT (примерно за 40 минут). Публичной многоуровневой VIP-лестницы с цифрами у молодого бренда пока нет — поэтому конкретные проценты рангов мы не выдумываем, их надо смотреть в кабинете. Для тех, кто заносит в крипте и не хочет KYC на старте, площадка удобная.</p>
+<div class="vp-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>минимальный KYC — быстрый старт</li><li>USDT-вывод примерно за 40 минут</li><li>СБП укладывается в час</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>публичной VIP-лестницы с процентами пока нет</li><li>бренд молодой — истории лояльных выплат мало</li></ul></div>
+</div>
+<div class="vp-facts"><span class="thr">USDT: ~40 мин</span><span>Бонус: <b>200% + 150 FS</b></span><span>KYC: <b>минимальный</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="vp-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-silv">2. 7K Casino <span>лучший кэшбэк деньгами</span></div><div class="sc">9.8 / 10</div></div>
 <p>У 7K лояльность держится не на пафосной лестнице, а на понятной цифре: кэшбэк до 20% по понедельникам приходит на баланс деньгами, которые можно сразу вывести или прокрутить. Редакция снимала такой возврат — это не бонусные «фантики» с отыгрышем, а реальный откат по проигрышу за неделю. На малых суммах паспорт не спрашивают, поэтому и кэшбэк, и вывод не буксуют на верификации.</p>
 <div class="vp-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>кэшбэк до 20% по понедельникам — живыми деньгами</li><li>возврат не требует отыгрыша, как бонус</li><li>СБП и карта на вывод от 15 минут</li><li>KYC на малых суммах не нужен</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>максимальный процент — для активных игроков с большим оборотом</li><li>точные пороги повышенного кэшбэка смотреть в кабинете</li></ul></div>
 </div>
 <div class="vp-facts"><span class="thr">Кэшбэк: до 20%</span><span>Форма: <b>деньгами</b></span><span>Вывод: <b>от 15 мин</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="vp-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-silv">2. Vavada <span>статусный кэшбэк и стабильная касса</span></div><div class="sc">9.7 / 10</div></div>
-<p>Vavada — один из ветеранов рынка с понятной программой лояльности: уровни, кэшбэк по статусу деньгами и стабильная касса без сюрпризов. Для игрока, которому важен не молодой бренд, а предсказуемость выплат и проверяемая лицензия, это спокойный выбор под лояльность. Конкретные проценты рангов сверяйте в кабинете — мы их не выдумываем.</p>
-<div class="vp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>уровни лояльности с кэшбэком по статусу</li><li>стабильная касса, вывод USDT быстрый</li><li>проверяемая лицензия Кюрасао</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>периодическая блокировка домена — нужен доступ к зеркалу</li><li>точные проценты рангов — только в кабинете</li></ul></div>
-</div>
-<div class="vp-facts"><span class="thr">Кэшбэк: до 10%</span><span>Форма: <b>деньгами</b></span><span>Вывод: <b>от 9 мин (USDT)</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
 </div>
 <div class="vp-rev rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1212,17 +1216,7 @@ window.addEventListener('load',function(){
 </div>
 <div class="vp-rev rv">
 <span aria-hidden="true" class="wm">04</span>
-<div class="rh"><div class="nm c-cyan">4. Leebet <span>крупные крипто-выводы</span></div><div class="sc">9.4 / 10</div></div>
-<p>Leebet заточен под крипту: USDT TRC-20 уходит примерно за 20 минут с копеечной комиссией. Для хайроллера, который оперирует крупными суммами в USDT/BTC, это удобно — крипто-канал не упирается в банковские лимиты и часы. Фиатных методов меньше, весь смысл площадки в крипте. Оформленной публичной VIP-лестницы с процентами мы на ней не фиксировали, поэтому статусные цифры не приписываем.</p>
-<div class="vp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>USDT TRC-20 примерно за 20 минут — удобно для крупных сумм</li><li>минимальная сетевая комиссия</li><li>заявки без ручной перепроверки</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>фиатных методов меньше — упор на крипту</li><li>публичной VIP-программы с процентами не заявлено</li></ul></div>
-</div>
-<div class="vp-facts"><span class="thr">USDT: ~20 мин</span><span>Бонус: <b>150% до 1000 USDT</b></span><span>Лимиты: <b>подняты на статусе</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/leebet">Полный обзор Leebet →</a></div>
-</div>
-<div class="vp-rev rv">
-<span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-hot">5. Banda <span>турниры вместо кэшбэка</span></div><div class="sc">9.3 / 10</div></div>
+<div class="rh"><div class="nm c-cyan">4. Banda <span>турниры вместо кэшбэка</span></div><div class="sc">9.3 / 10</div></div>
 <p>Banda делает ставку не на кэшбэк, а на еженедельные турниры с призовым фондом — это её реальная механика лояльности из фактов бренда. Плюс 500 фриспинов на старте. Касса не самая быстрая в подборке, зато турнирная сетка даёт постоянную причину возвращаться и добавляет к отдаче помимо процента с проигрыша. Приятно, что уровень не откатывается за паузу так быстро, как у конкурентов.</p>
 <div class="vp-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>еженедельные турниры с призовым фондом</li><li>500 фриспинов на старте</li><li>мягкое удержание статуса за паузу</li></ul></div>
@@ -1231,8 +1225,28 @@ window.addEventListener('load',function(){
 <div class="vp-facts"><span class="thr">Турниры: еженедельно</span><span>Старт: <b>100% + 500 FS</b></span><span>Вход: <b>от 100 ₽</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/banda">Полный обзор Banda →</a></div>
 </div>
 <div class="vp-rev rv">
+<span aria-hidden="true" class="wm">05</span>
+<div class="rh"><div class="nm c-hot">5. Leebet <span>крупные крипто-выводы</span></div><div class="sc">9.4 / 10</div></div>
+<p>Leebet заточен под крипту: USDT TRC-20 уходит примерно за 20 минут с копеечной комиссией. Для хайроллера, который оперирует крупными суммами в USDT/BTC, это удобно — крипто-канал не упирается в банковские лимиты и часы. Фиатных методов меньше, весь смысл площадки в крипте. Оформленной публичной VIP-лестницы с процентами мы на ней не фиксировали, поэтому статусные цифры не приписываем.</p>
+<div class="vp-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>USDT TRC-20 примерно за 20 минут — удобно для крупных сумм</li><li>минимальная сетевая комиссия</li><li>заявки без ручной перепроверки</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>фиатных методов меньше — упор на крипту</li><li>публичной VIP-программы с процентами не заявлено</li></ul></div>
+</div>
+<div class="vp-facts"><span class="thr">USDT: ~20 мин</span><span>Бонус: <b>150% до 1000 USDT</b></span><span>Лимиты: <b>подняты на статусе</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/leebet">Полный обзор Leebet →</a></div>
+</div>
+<div class="vp-rev rv">
 <span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-sky">6. Sol Casino <span>уровни лояльности и каталог</span></div><div class="sc">9.2 / 10</div></div>
+<div class="rh"><div class="nm c-sky">6. APEX <span>самый крупный стартовый пакет</span></div><div class="sc">9.0 / 10</div></div>
+<p>APEX даёт самый крупный стартовый пакет из подборки — 375% + 225 FS. Это про мощный старт, а не про долгую лояльность: перед первым выводом важно заранее прикинуть отыгрыш такого бонуса. Вывод идёт по СБП и в крипте в заявленный срок. Как и у других молодых брендов 2026 года, детальную VIP-механику стоит уточнять в кабинете — цифры рангов мы не выдумываем.</p>
+<div class="vp-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>самый крупный старт 375% + 225 FS</li><li>СБП и крипта на вывод в срок</li><li>минимум входа 100 ₽</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>крупный бонус — длиннее отыгрыш до вывода</li><li>детали VIP-программы надо уточнять в кабинете</li></ul></div>
+</div>
+<div class="vp-facts"><span class="thr">Старт: 375% + 225 FS</span><span>Вывод: <b>СБП · крипта</b></span><span>Вход: <b>от 100 ₽</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/apex">Полный обзор APEX →</a></div>
+</div>
+<div class="vp-rev rv">
+<span aria-hidden="true" class="wm">07</span>
+<div class="rh"><div class="nm c-viol">7. Sol Casino <span>уровни лояльности и каталог</span></div><div class="sc">9.2 / 10</div></div>
 <p>Sol — ветеран со свыше 7 000 слотов и понятной лояльностью: уровни статуса и еженедельный кэшбэк деньгами без сложных условий. Много игр со ставкой от 1–5 ₽ за спин, так что программа лояльности работает и для тех, кто играет не только крупно. Стабильно попадает в топ по совокупности каталога и кассы.</p>
 <div class="vp-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>уровни лояльности и еженедельный кэшбэк деньгами</li><li>7 000+ слотов, много игр со ставкой от 1 ₽</li><li>кэшбэк без сложных условий</li></ul></div>
@@ -1241,24 +1255,14 @@ window.addEventListener('load',function(){
 <div class="vp-facts"><span class="thr">Кэшбэк: до 10%</span><span>Слотов: <b>7 000+</b></span><span>Бонус: <b>100% + 100 FS</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
 </div>
 <div class="vp-rev rv">
-<span aria-hidden="true" class="wm">07</span>
-<div class="rh"><div class="nm c-viol">7. Spinto <span>крипто-лояльность, молодой бренд</span></div><div class="sc">9.1 / 10</div></div>
-<p>Spinto запустился в 2026-м и лояльность строит вокруг крипто-игрока: минимальная верификация, быстрый USDT (примерно за 40 минут). Публичной многоуровневой VIP-лестницы с цифрами у молодого бренда пока нет — поэтому конкретные проценты рангов мы не выдумываем, их надо смотреть в кабинете. Для тех, кто заносит в крипте и не хочет KYC на старте, площадка удобная.</p>
-<div class="vp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>минимальный KYC — быстрый старт</li><li>USDT-вывод примерно за 40 минут</li><li>СБП укладывается в час</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>публичной VIP-лестницы с процентами пока нет</li><li>бренд молодой — истории лояльных выплат мало</li></ul></div>
-</div>
-<div class="vp-facts"><span class="thr">USDT: ~40 мин</span><span>Бонус: <b>200% + 150 FS</b></span><span>KYC: <b>минимальный</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
-</div>
-<div class="vp-rev rv">
 <span aria-hidden="true" class="wm">08</span>
-<div class="rh"><div class="nm c-brnz">8. APEX <span>самый крупный стартовый пакет</span></div><div class="sc">9.0 / 10</div></div>
-<p>APEX даёт самый крупный стартовый пакет из подборки — 375% + 225 FS. Это про мощный старт, а не про долгую лояльность: перед первым выводом важно заранее прикинуть отыгрыш такого бонуса. Вывод идёт по СБП и в крипте в заявленный срок. Как и у других молодых брендов 2026 года, детальную VIP-механику стоит уточнять в кабинете — цифры рангов мы не выдумываем.</p>
+<div class="rh"><div class="nm c-brnz">8. Vavada <span>статусный кэшбэк и стабильная касса</span></div><div class="sc">9.7 / 10</div></div>
+<p>Vavada — один из ветеранов рынка с понятной программой лояльности: уровни, кэшбэк по статусу деньгами и стабильная касса без сюрпризов. Для игрока, которому важен не молодой бренд, а предсказуемость выплат и проверяемая лицензия, это спокойный выбор под лояльность. Конкретные проценты рангов сверяйте в кабинете — мы их не выдумываем.</p>
 <div class="vp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>самый крупный старт 375% + 225 FS</li><li>СБП и крипта на вывод в срок</li><li>минимум входа 100 ₽</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>крупный бонус — длиннее отыгрыш до вывода</li><li>детали VIP-программы надо уточнять в кабинете</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>уровни лояльности с кэшбэком по статусу</li><li>стабильная касса, вывод USDT быстрый</li><li>проверяемая лицензия Кюрасао</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>периодическая блокировка домена — нужен доступ к зеркалу</li><li>точные проценты рангов — только в кабинете</li></ul></div>
 </div>
-<div class="vp-facts"><span class="thr">Старт: 375% + 225 FS</span><span>Вывод: <b>СБП · крипта</b></span><span>Вход: <b>от 100 ₽</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/apex">Полный обзор APEX →</a></div>
+<div class="vp-facts"><span class="thr">Кэшбэк: до 10%</span><span>Форма: <b>деньгами</b></span><span>Вывод: <b>от 9 мин (USDT)</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
 </div>
 </section>
 <!-- ===== H2 #13 transfer ===== -->
@@ -1388,7 +1392,7 @@ window.addEventListener('load',function(){
 <span class="vp-kick">Коротко и по делу</span>
 <h2>Частые вопросы <span class="g-sky">о VIP-казино и статусе лояльности</span></h2>
 </div>
-<details class="rv" open=""><summary><span class="ic">+</span>Какое казино с VIP-программой самое выгодное?</summary><div class="bd"><div><p>По реальной выгоде из подборки — 7K Casino: кэшбэк до 20% по понедельникам приходит деньгами без отыгрыша, а вывод по СБП и карте идёт от 15 минут. Для крупных депозитов ближе 1win и Leebet. Но выгода любой программы считается от вашей реальной суммы игры, а не от максимального процента с витрины.</p></div></div></details>
+<details class="rv" open=""><summary><span class="ic">+</span>Какое казино с VIP-программой самое выгодное?</summary><div class="bd"><div><p>На первое место в подборке редакция ставит Spinto — низкий порог входа от 50 ₽, крупный стартовый пакет 200% + 150 фриспинов и быстрые выплаты по СБП и крипте. По реальному кэшбэку сильнее всех 7K Casino: до 20% по понедельникам деньгами без отыгрыша, вывод по СБП и карте от 15 минут. Для крупных депозитов ближе 1win и Leebet. Но выгода любой программы считается от вашей реальной суммы игры, а не от максимального процента с витрины.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Как получить VIP-статус в казино?</summary><div class="bd"><div><p>Основной путь — оборот: система считает сумму сделанных ставок, а не выигрышей. Реже статус дают за сумму депозитов или по приглашению менеджера для крупных игроков. Искусственно нагонять оборот ради ранга невыгодно — проиграете больше, чем вернёт кэшбэк.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Сколько реально стоит VIP-статус?</summary><div class="bd"><div><p>Он «оплачивается» оборотом. При отдаче слота около 96% оборот в 500 000 ₽ несёт прогнозируемый минус порядка 20 000 ₽ — кэшбэк такую сумму не перекроет. Поэтому статус выгоден только тому, кто и так играет на эти суммы: он снижает издержки, но не приносит доход.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Что реально даёт персональный менеджер?</summary><div class="bd"><div><p>Ускоренный вывод в обход общей очереди, повышенный лимит под крупную заявку, индивидуальные бонусы и быстрое решение спорных ситуаций. Он не влияет на результат игры и не отменяет отыгрыш. Для мелких сумм разница с обычной быстрой кассой почти незаметна.</p></div></div></details>
@@ -1529,14 +1533,14 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: программа лояльности и форма кэшбэка, лимиты вывода на статусе, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до того, как гнаться за уровнем.</p>
 <div aria-label="Случайная подборка обзоров казино" class="vp-brands rv" id="brandsGrid"></div>
 <ul class="vp-seo-links">
-<li><a href="/casino/7k">Обзор казино 7K Casino — кэшбэк до 20%</a></li>
-<li><a href="/casino/vavada">Обзор казино Vavada — статусная лояльность</a></li>
-<li><a href="/casino/1win">Обзор казино 1win — для хайроллеров</a></li>
-<li><a href="/casino/leebet">Обзор казино Leebet — крипто-выводы</a></li>
-<li><a href="/casino/banda">Обзор казино Banda — турниры</a></li>
-<li><a href="/casino/sol">Обзор казино Sol Casino — уровни лояльности</a></li>
 <li><a href="/casino/spinto">Обзор казино Spinto — крипто-старт</a></li>
+<li><a href="/casino/7k">Обзор казино 7K Casino — кэшбэк до 20%</a></li>
+<li><a href="/casino/1win">Обзор казино 1win — для хайроллеров</a></li>
+<li><a href="/casino/banda">Обзор казино Banda — турниры</a></li>
+<li><a href="/casino/leebet">Обзор казино Leebet — крипто-выводы</a></li>
 <li><a href="/casino/apex">Обзор казино APEX — крупный пакет</a></li>
+<li><a href="/casino/sol">Обзор казино Sol Casino — уровни лояльности</a></li>
+<li><a href="/casino/vavada">Обзор казино Vavada — статусная лояльность</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
 <div class="vp-links rv">
@@ -1612,14 +1616,14 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
+    {n:"Spinto",     c:"#a879ff", c2:"#7d4fd6", s:"9.8", d:"выбор редакции, крипто-лояльность, мин. KYC", h:"/casino/spinto"},
     {n:"7K Casino",  c:"#ffcf3f", c2:"#e0952f", s:"9.8", d:"кэшбэк до 20% деньгами по понедельникам", h:"/casino/7k"},
-    {n:"Vavada",     c:"#e6eaf3", c2:"#a9b1c6", s:"9.7", d:"уровни лояльности, кэшбэк по статусу",     h:"/casino/vavada"},
     {n:"1win",       c:"#b8ff2b", c2:"#8fd400", s:"9.6", d:"для хайроллеров, каталог 12 000+ игр",     h:"/casino/1win"},
-    {n:"Leebet",     c:"#37e0c8", c2:"#12a892", s:"9.4", d:"крупные крипто-выводы USDT/BTC",           h:"/casino/leebet"},
     {n:"Banda",      c:"#ff2e93", c2:"#c81f6f", s:"9.3", d:"еженедельные турниры с призовым фондом",   h:"/casino/banda"},
+    {n:"Leebet",     c:"#37e0c8", c2:"#12a892", s:"9.4", d:"крупные крипто-выводы USDT/BTC",           h:"/casino/leebet"},
+    {n:"APEX",       c:"#ffa63d", c2:"#e07a12", s:"9.0", d:"самый крупный стартовый пакет 375%",       h:"/casino/apex"},
     {n:"Sol Casino", c:"#6cc4ff", c2:"#2a86e0", s:"9.2", d:"уровни лояльности, кэшбэк до 10%",         h:"/casino/sol"},
-    {n:"Spinto",     c:"#a879ff", c2:"#7d4fd6", s:"9.1", d:"крипто-лояльность, минимальный KYC",       h:"/casino/spinto"},
-    {n:"APEX",       c:"#ffa63d", c2:"#e07a12", s:"9.0", d:"самый крупный стартовый пакет 375%",       h:"/casino/apex"}
+    {n:"Vavada",     c:"#e6eaf3", c2:"#a9b1c6", s:"9.7", d:"уровни лояльности, кэшбэк по статусу",     h:"/casino/vavada"}
   ];
   var SLOTS = [
     {n:"Gates of Olympus 1000",        pv:"Pragmatic Play",      rtp:"96.5",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png", h:"/slots/gates-of-olympus-1000"},
@@ -1747,20 +1751,20 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 8,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
         {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":4,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
-        {"@type":"ListItem","position":5,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
-        {"@type":"ListItem","position":6,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
-        {"@type":"ListItem","position":7,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
-        {"@type":"ListItem","position":8,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"}
+        {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
+        {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
+        {"@type":"ListItem","position":6,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"},
+        {"@type":"ListItem","position":7,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
+        {"@type":"ListItem","position":8,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"}
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Какое казино с VIP-программой самое выгодное?","acceptedAnswer":{"@type":"Answer","text":"По реальной выгоде из подборки — 7K Casino: кэшбэк до 20% по понедельникам приходит деньгами без отыгрыша, а вывод по СБП и карте идёт от 15 минут. Для крупных депозитов ближе 1win и Leebet. Но выгода любой программы считается от вашей реальной суммы игры, а не от максимального процента с витрины."}},
+        {"@type":"Question","name":"Какое казино с VIP-программой самое выгодное?","acceptedAnswer":{"@type":"Answer","text":"На первое место в подборке редакция ставит Spinto — низкий порог входа от 50 ₽, крупный стартовый пакет 200% + 150 фриспинов и быстрые выплаты по СБП и крипте. По реальному кэшбэку сильнее всех 7K Casino: до 20% по понедельникам деньгами без отыгрыша, вывод по СБП и карте от 15 минут. Для крупных депозитов ближе 1win и Leebet. Но выгода любой программы считается от вашей реальной суммы игры, а не от максимального процента с витрины."}},
         {"@type":"Question","name":"Как получить VIP-статус в казино?","acceptedAnswer":{"@type":"Answer","text":"Основной путь — оборот: система считает сумму сделанных ставок, а не выигрышей. Реже статус дают за сумму депозитов или по приглашению менеджера для крупных игроков. Искусственно нагонять оборот ради ранга невыгодно — проиграете больше, чем вернёт кэшбэк."}},
         {"@type":"Question","name":"Сколько реально стоит VIP-статус?","acceptedAnswer":{"@type":"Answer","text":"Он «оплачивается» оборотом. При отдаче слота около 96% оборот в 500 000 ₽ несёт прогнозируемый минус порядка 20 000 ₽ — кэшбэк такую сумму не перекроет. Поэтому статус выгоден только тому, кто и так играет на эти суммы: он снижает издержки, но не приносит доход."}},
         {"@type":"Question","name":"Что реально даёт персональный менеджер?","acceptedAnswer":{"@type":"Answer","text":"Ускоренный вывод в обход общей очереди, повышенный лимит под крупную заявку, индивидуальные бонусы и быстрое решение спорных ситуаций. Он не влияет на результат игры и не отменяет отыгрыш. Для мелких сумм разница с обычной быстрой кассой почти незаметна."}},

@@ -267,6 +267,9 @@
   .pj-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(55,224,200,.7);color:#04231e}
   .pj-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .pj-go:hover::after{animation:pj-shim .85s var(--ez)}
+  .pj-acts{display:flex;align-items:center;gap:8px}
+  .pj-go2{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.04);border:1px solid var(--hair2);color:var(--tx);font-weight:800;padding:10px 16px;border-radius:11px;font-size:13.5px;white-space:nowrap;transition:border-color .18s,color .18s}
+  .pj-go2:hover{border-color:var(--c);color:var(--c)}
   .pj-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .pj-card.r2{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
   .pj-card.r3{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
@@ -713,7 +716,7 @@ window.addEventListener('load',function(){
 <span class="pj-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка выводом · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Казино которые <span class="g-cyan">реально платят</span>: как за 5 минут отличить честную кассу от <span class="g-hot">развода</span></h1>
 <p class="pj-lead rv" style="--d:.16s">
-          Это не рейтинг «из головы»: сюда попали только <span class="hl-cyan">казино, которые платят по факту</span> — по каждой площадке касса проверена реальным выводом малой суммы. Стабильнее всех отдаёт деньги <span class="hl-gold">7K</span>: <b>СБП, карта и крипта</b>, а на мелких суммах заявка идёт без ручной модерации. Ниже — <span class="hl-neon">топ-6 по проверенным выплатам</span>, реальные сроки по методам, <span class="hl-hot">7 признаков</span> неплательщика и что делать, если выплату тянут. Все шесть — с лицензией <span class="hl-sky">Curaçao</span>, номер пробит по реестру.
+          Это не рейтинг «из головы»: сюда попали только <span class="hl-cyan">казино, которые платят по факту</span> — по каждой площадке касса проверена реальным выводом малой суммы. Выбор редакции №1 — <span class="hl-cyan">Spinto</span>: <b>быстрые выплаты по СБП и в крипте</b>, низкий порог входа и минимальная верификация; следом уверенно держит кассу <span class="hl-gold">7K</span>. Ниже — <span class="hl-neon">топ-6 по проверенным выплатам</span>, реальные сроки по методам, <span class="hl-hot">7 признаков</span> неплательщика и что делать, если выплату тянут. Все шесть — с лицензией <span class="hl-sky">Curaçao</span>, номер пробит по реестру.
         </p>
 <div aria-hidden="false" class="pj-plog rv" style="--d:.2s">
 <div class="pm best"><div class="mt">СБП</div><div class="mv">15 мин</div></div>
@@ -732,27 +735,26 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="pj-slip rv" style="--d:.2s">
-<span class="pj-ribbon cyan">Платит стабильно</span>
+<span class="pj-ribbon cyan">Выбор редакции · №1</span>
 <div class="pj-seal"><div class="sm">✓</div><div class="sl">ВЫПЛАЧЕНО</div></div>
 <span aria-hidden="true" class="wm">✓</span>
 <div class="tag">Проверенная выплата · выбор редакции</div>
-<div class="bn">7K Casino</div>
-<div class="bs">вывод по СБП за 15 мин, на малых суммах без KYC</div>
-<div class="why"><b>Почему №1:</b> платит по трём каналам и не гоняет заявку через ручную модерацию — деньги уходят по факту, а не «после проверки службой безопасности».</div>
+<div class="bn">Spinto</div>
+<div class="bs">быстрая касса, низкий порог и минимальная верификация</div>
+<div class="why"><b>Почему №1:</b> отдаёт деньги по факту — выплаты по СБП и в крипте уходят быстро, заявку не гоняют по кругу ручной модерации, а зайти можно с минимального депозита.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
 <div class="line"><span>Статус выплат</span><span class="big">Платит</span></div>
-<div class="line"><span>Оценка редакции</span><span class="sc">9.9 / 10</span></div>
-<div class="line spec"><span>Каналы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · карта · крипта</span></div>
-<div class="line spec"><span>Срок по СБП</span><i class="dts"></i><span class="val hl-neon">15 мин – 2 ч</span></div>
-<div class="line spec"><span>Порог теста кассы</span><i class="dts"></i><span class="val hl-gold">от 50 ₽</span></div>
-<div class="line spec"><span>KYC на малых суммах</span><i class="dts"></i><span class="val hl-cyan">не нужен</span></div>
-<div class="line spec"><span>Бонус</span><i class="dts"></i><span class="val hl-gold">225% + 200 FS</span></div>
-<div class="line spec"><span>Кэшбэк</span><i class="dts"></i><span class="val hl-hot">до 20%</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Каналы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · крипта</span></div>
+<div class="line spec"><span>Срок вывода</span><i class="dts"></i><span class="val hl-neon">до 1 ч</span></div>
+<div class="line spec"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-gold">от 50 ₽</span></div>
+<div class="line spec"><span>Вейджер</span><i class="dts"></i><span class="val hl-cyan">x35</span></div>
+<div class="line spec"><span>Бонус</span><i class="dts"></i><span class="val hl-gold">200% + 150 фриспинов</span></div>
 <div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Curaçao</span></div>
 </div>
-<a class="pj-btn pj-btn-cyan" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть 7K Casino</a>
-<div class="foot"><span>СБП от 50 ₽</span><span>Карта · USDT · BTC</span><span>Curaçao</span></div>
+<a class="pj-btn pj-btn-cyan" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Spinto</a>
+<div class="foot"><span>Депозит от 50 ₽</span><span>СБП · USDT</span><span>Curaçao</span></div>
 <ul class="tguar">
 <li>Выплаты проверены реальными выводами</li>
 <li>Лицензия сверена по номеру в реестре</li>
@@ -780,7 +782,7 @@ window.addEventListener('load',function(){
 </div>
 <div class="pj-cols">
 <div class="pj-c-txt pj-prose rv">
-<p>Без воды. Из десятков площадок деньги стабильно и без вопросов отдают шесть: <span class="hl-gold">7K</span>, <span class="hl-cyan">Spinto</span>, <span class="hl-neon">1win</span>, <span class="hl-hot">Banda</span>, <span class="hl-sky">Leebet</span> и <span class="hl-viol">APEX</span>. По каждой ниже — обзор с методом и сроком вывода. Проверка одна и честная: заношу свои деньги, играю, заказываю вывод и засекаю время по секундомеру.</p>
+<p>Без воды. Из десятков площадок деньги стабильно и без вопросов отдают шесть: <span class="hl-cyan">Spinto</span>, <span class="hl-gold">7K</span>, <span class="hl-neon">1win</span>, <span class="hl-hot">Banda</span>, <span class="hl-sky">Leebet</span> и <span class="hl-viol">APEX</span>. По каждой ниже — обзор с методом и сроком вывода. Проверка одна и честная: заношу свои деньги, играю, заказываю вывод и засекаю время по секундомеру.</p>
 <ul>
 <li><b>Какие казино реально платят?</b> Шесть проверенных выводом — все с лицензией Curaçao и рабочей кассой.</li>
 <li><b>За сколько приходит вывод?</b> СБП — 15 минут–2 часа, крипта USDT — 20–40 минут, карта — от нескольких часов, ЮMoney почти сразу.</li>
@@ -815,10 +817,23 @@ window.addEventListener('load',function(){
 <span class="pj-kick">Топ-6 · сентябрь 2026</span>
 <h2>Топ казино которые платят: <span class="g-lime">рейтинг по проверенным выводам 2026</span></h2>
 </div>
-<p class="rv">Порядок — по тому, как быстро и без вопросов площадка отдавала деньги при выводе: чем увереннее держит выплаты, тем выше. Зелёная галочка рядом с брендом — вывод я подтвердил лично. Оценка — средневзвешенный балл, где реальность выплат весит больше всего. Методику проверки расписал ниже.</p>
+<p class="rv">Это подборка редакции по совокупности выплат, скорости вывода и надёжности кассы — не строгая сортировка по одному баллу. Зелёная галочка рядом с брендом — вывод я подтвердил лично. Оценка — средневзвешенный балл, где реальность выплат весит больше всего. Методику проверки расписал ниже.</p>
 <div class="pj-rate">
 <article class="pj-card r1 rv">
 <div class="rkw"><span class="pj-medal g">1</span></div>
+<div class="pj-mid">
+<div class="bn">Spinto</div>
+<span class="bt">Лучшее за — быстрый вывод и низкий порог входа</span>
+<div class="prm"><span>Вывод <b>СБП · крипта, до 1 ч</b></span><span>Мин. депозит <b>50 ₽</b></span><span>Бонус <b>200% + 150 фриспинов</b></span></div>
+</div>
+<div class="pj-right">
+<div class="pj-pay"><span class="pv">Платит</span><div class="pk">СБП · крипта</div></div>
+<div class="pj-sccol"><span class="pj-score">9.8</span><span class="pj-sbar"><i data-score="9.8"></i></span></div>
+<div class="pj-acts"><a class="pj-go2" href="/casino/spinto/">Обзор</a><a class="pj-go" href="/go/spinto" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="pj-card r2 rv">
+<div class="rkw"><span class="pj-medal">2</span></div>
 <div class="pj-mid">
 <div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — стабильный вывод по трём каналам</span>
@@ -827,20 +842,7 @@ window.addEventListener('load',function(){
 <div class="pj-right">
 <div class="pj-pay"><span class="pv">Платит</span><div class="pk">СБП · карта · крипта</div></div>
 <div class="pj-sccol"><span class="pj-score">9.9</span><span class="pj-sbar"><i data-score="9.9"></i></span></div>
-<a class="pj-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="pj-card r2 rv">
-<div class="rkw"><span class="pj-medal">2</span></div>
-<div class="pj-mid">
-<div class="bn">Spinto</div>
-<span class="bt">Лучшее за — самый быстрый криптовывод</span>
-<div class="prm"><span>Вывод <b>USDT ~40 мин</b></span><span>Верификация <b>минимальная</b></span><span>Бонус <b>200% + 150 FS</b></span></div>
-</div>
-<div class="pj-right">
-<div class="pj-pay"><span class="pv">Платит</span><div class="pk">USDT · СБП</div></div>
-<div class="pj-sccol"><span class="pj-score">9.8</span><span class="pj-sbar"><i data-score="9.8"></i></span></div>
-<a class="pj-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+<div class="pj-acts"><a class="pj-go2" href="/casino/7k/">Обзор</a><a class="pj-go" href="/go/7k" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="pj-card r3 rv">
@@ -853,7 +855,7 @@ window.addEventListener('load',function(){
 <div class="pj-right">
 <div class="pj-pay"><span class="pv">Платит</span><div class="pk">карта · крипта</div></div>
 <div class="pj-sccol"><span class="pj-score">9.7</span><span class="pj-sbar"><i data-score="9.7"></i></span></div>
-<a class="pj-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<div class="pj-acts"><a class="pj-go2" href="/casino/1win/">Обзор</a><a class="pj-go" href="/go/1win" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="pj-card r4 rv">
@@ -866,7 +868,7 @@ window.addEventListener('load',function(){
 <div class="pj-right">
 <div class="pj-pay"><span class="pv">Платит</span><div class="pk">карта · крипта</div></div>
 <div class="pj-sccol"><span class="pj-score">9.6</span><span class="pj-sbar"><i data-score="9.6"></i></span></div>
-<a class="pj-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+<div class="pj-acts"><a class="pj-go2" href="/casino/banda/">Обзор</a><a class="pj-go" href="/go/banda" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="pj-card r5 rv">
@@ -879,7 +881,7 @@ window.addEventListener('load',function(){
 <div class="pj-right">
 <div class="pj-pay"><span class="pv">Платит</span><div class="pk">USDT · BTC</div></div>
 <div class="pj-sccol"><span class="pj-score">9.5</span><span class="pj-sbar"><i data-score="9.5"></i></span></div>
-<a class="pj-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+<div class="pj-acts"><a class="pj-go2" href="/casino/leebet/">Обзор</a><a class="pj-go" href="/go/leebet" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="pj-card r6 rv">
@@ -892,18 +894,18 @@ window.addEventListener('load',function(){
 <div class="pj-right">
 <div class="pj-pay"><span class="pv">Платит</span><div class="pk">СБП · крипта</div></div>
 <div class="pj-sccol"><span class="pj-score">9.4</span><span class="pj-sbar"><i data-score="9.4"></i></span></div>
-<a class="pj-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+<div class="pj-acts"><a class="pj-go2" href="/casino/apex/">Обзор</a><a class="pj-go" href="/go/apex" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица: статус выплат, каналы и лицензия</h3>
 <div class="pj-tbox pj-scroll rv" style="margin:12px 0 0">
 <table class="pj-t mfit">
-<caption>Статус выплат подтверждён выводами малых сумм; сортировка — от увереннее к рискованнее. Лицензия — Curaçao у всех.</caption>
+<caption>Статус выплат подтверждён выводами малых сумм; порядок — подборка редакции по совокупности выплат, скорости и надёжности. Лицензия — Curaçao у всех.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Статус выплат</th><th>Скорость вывода</th><th>Оценка</th><th>Бонус</th></tr></thead>
 <tbody>
-<tr><td class="pj-rub mfit-num" data-label="">1</td><td class="pj-bc" data-label="Казино"><span class="pj-bn">7K Casino</span><span class="pj-line2"><span class="pj-best" style="--rc:#ffcf3f">Лучшее за — стабильный вывод по трём каналам</span><span class="pj-ed">№1</span></span></td><td data-label="Статус выплат"><span class="pj-pill pay-g">✓ платит</span></td><td class="pj-time" data-label="Скорость вывода">СБП 15 мин–2 ч</td><td data-label="Оценка"><span class="cyan">9.9</span></td><td data-label="Бонус">225% + 200 FS</td></tr>
-<tr><td class="pj-rub mfit-num" data-label="">2</td><td class="pj-bc" data-label="Казино"><span class="pj-bn">Spinto</span><span class="pj-line2"><span class="pj-best" style="--rc:#37e0c8">Лучшее за — самый быстрый криптовывод</span></span></td><td data-label="Статус выплат"><span class="pj-pill pay-g">✓ платит</span></td><td class="pj-time" data-label="Скорость вывода">USDT ~40 мин</td><td data-label="Оценка"><span class="cyan">9.8</span></td><td data-label="Бонус">200% + 150 FS</td></tr>
+<tr><td class="pj-rub mfit-num" data-label="">1</td><td class="pj-bc" data-label="Казино"><span class="pj-bn">Spinto</span><span class="pj-line2"><span class="pj-best" style="--rc:#37e0c8">Лучшее за — быстрый вывод и низкий порог</span><span class="pj-ed">№1</span></span></td><td data-label="Статус выплат"><span class="pj-pill pay-g">✓ платит</span></td><td class="pj-time" data-label="Скорость вывода">СБП · крипта, до 1 ч</td><td data-label="Оценка"><span class="cyan">9.8</span></td><td data-label="Бонус">200% + 150 фриспинов</td></tr>
+<tr><td class="pj-rub mfit-num" data-label="">2</td><td class="pj-bc" data-label="Казино"><span class="pj-bn">7K Casino</span><span class="pj-line2"><span class="pj-best" style="--rc:#ffcf3f">Лучшее за — стабильный вывод по трём каналам</span></span></td><td data-label="Статус выплат"><span class="pj-pill pay-g">✓ платит</span></td><td class="pj-time" data-label="Скорость вывода">СБП 15 мин–2 ч</td><td data-label="Оценка"><span class="cyan">9.9</span></td><td data-label="Бонус">225% + 200 FS</td></tr>
 <tr><td class="pj-rub mfit-num" data-label="">3</td><td class="pj-bc" data-label="Казино"><span class="pj-bn">1win</span><span class="pj-line2"><span class="pj-best" style="--rc:#b8ff2b">Лучшее за — прозрачную верификацию</span></span></td><td data-label="Статус выплат"><span class="pj-pill pay-g">✓ платит</span></td><td class="pj-time" data-label="Скорость вывода">до суток (KYC)</td><td data-label="Оценка"><span class="cyan">9.7</span></td><td data-label="Бонус">500% до 200 000 ₽</td></tr>
 <tr><td class="pj-rub mfit-num" data-label="">4</td><td class="pj-bc" data-label="Казино"><span class="pj-bn">Banda</span><span class="pj-line2"><span class="pj-best" style="--rc:#ff2e93">Лучшее за — фриспины и честный расчёт</span></span></td><td data-label="Статус выплат"><span class="pj-pill pay-g">✓ платит</span></td><td class="pj-time" data-label="Скорость вывода">карта ~2 ч</td><td data-label="Оценка"><span class="cyan">9.6</span></td><td data-label="Бонус">100% + 500 FS</td></tr>
 <tr><td class="pj-rub mfit-num" data-label="">5</td><td class="pj-bc" data-label="Казино"><span class="pj-bn">Leebet</span><span class="pj-line2"><span class="pj-best" style="--rc:#6cc4ff">Лучшее за — криптовывод без задержек</span></span></td><td data-label="Статус выплат"><span class="pj-pill pay-g">✓ платит</span></td><td class="pj-time" data-label="Скорость вывода">USDT ~20 мин</td><td data-label="Оценка"><span class="cyan">9.5</span></td><td data-label="Бонус">150% до 1000 USDT</td></tr>
@@ -1103,8 +1105,8 @@ window.addEventListener('load',function(){
 <table class="pj-t mfit">
 <thead><tr><th>Казино</th><th>Бонус</th><th>Вейджер</th><th>Порог теста</th><th>Что учесть до вывода</th></tr></thead>
 <tbody>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Бонус">200% + 150 фриспинов</td><td class="pj-time" data-label="Вейджер">x35</td><td data-label="Порог теста"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Что учесть до вывода">условия бонуса свои, читать в кассе</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Бонус">225% + 200 FS</td><td class="pj-time" data-label="Вейджер">x40</td><td data-label="Порог теста"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Что учесть до вывода">первую выплату проверяй без бонуса — на чистом депозите</td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Бонус">200% + 150 FS</td><td class="pj-time" data-label="Вейджер">x40</td><td data-label="Порог теста"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Что учесть до вывода">условия бонуса свои, читать в кассе</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win</b></td><td data-label="Бонус">500% до 200 000 ₽</td><td class="pj-time" data-label="Вейджер">x45</td><td data-label="Порог теста"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Что учесть до вывода">пакет на 4 депозита — длинный отыгрыш</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Banda</b></td><td data-label="Бонус">100% + 500 FS</td><td class="pj-time" data-label="Вейджер">x40</td><td data-label="Порог теста"><span class="pj-pill pay-y">100 ₽</span></td><td data-label="Что учесть до вывода">FS-выигрыш выводится после отыгрыша</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Leebet</b></td><td data-label="Бонус">150% до 1000 USDT</td><td class="pj-time" data-label="Вейджер">x40</td><td data-label="Порог теста"><span class="pj-pill pay-y">100 ₽</span></td><td data-label="Что учесть до вывода">бонус считается в USDT, не в рублях</td></tr>
@@ -1201,23 +1203,23 @@ window.addEventListener('load',function(){
 </div>
 <div class="pj-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. 7K Casino <span>эталон платящей кассы</span></div><div class="sc">9.9 / 10</div></div>
-<p>7K я проверял первым и заносил минимум через СБП. Вывод остатка пришёл без ручной модерации — на малых суммах паспорт тут не спрашивают, поэтому первая выплата не буксует на верификации. Касса принимает СБП, карту и крипту, лицензия Curaçao. По совокупности «платит стабильно и без лишних вопросов» это верх подборки.</p>
+<div class="rh"><div class="nm c-gold">1. Spinto <span>наш выбор №1 — быстрая касса</span></div><div class="sc">9.8 / 10</div></div>
+<p>Spinto ведёт подборку: кассу держит уверенно — USDT и СБП уходят без зависаний, верификация минимальная, а зайти можно с депозита от 50 ₽. Заявку на вывод не гоняют по кругу модерации, деньги приходят по факту. Единственное, что заставляет держать сумму под контролем, — бренд молодой, и многолетнего трека выплат у него пока нет.</p>
+<div class="pj-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>USDT и СБП без ручной перепроверки</li><li>Минимальная верификация на старте</li><li>Порог входа 50 ₽ для теста кассы</li><li>Бонус 200% + 150 фриспинов, вейджер x35</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — длинной истории выплат ещё нет</li><li>Бонус считается по своим условиям, читать до депозита</li></ul></div>
+</div>
+<div class="pj-facts"><span class="thr">Вывод: СБП · крипта, до 1 ч</span><span>Бонус: <b>200% + 150 фриспинов</b></span><span>Порог: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="pj-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-cyan">2. 7K Casino <span>эталон платящей кассы</span></div><div class="sc">9.9 / 10</div></div>
+<p>7K я проверял первым и заносил минимум через СБП. Вывод остатка пришёл без ручной модерации — на малых суммах паспорт тут не спрашивают, поэтому первая выплата не буксует на верификации. Касса принимает СБП, карту и крипту, лицензия Curaçao. По совокупности «платит стабильно и без лишних вопросов» — уверенное второе место подборки.</p>
 <div class="pj-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Выводит по СБП, карте и в крипте</li><li>На малых суммах KYC не нужен — первая выплата не тормозит</li><li>Заявка проходит без ручной модерации оператором</li><li>Порог 50 ₽ — кассу проверяешь почти без риска</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>На крупной сумме верификация всё равно всплывёт — норма для лицензии</li><li>Бонусные средства на отыгрыше до вывода не тронуть</li></ul></div>
 </div>
 <div class="pj-facts"><span class="thr">Вывод: СБП 15 мин–2 ч</span><span>Бонус: <b>225% + 200 FS</b></span><span>Порог: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="pj-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-cyan">2. Spinto <span>самая шустрая касса</span></div><div class="sc">9.8 / 10</div></div>
-<p>Spinto запустился в 2026-м, история короткая, но кассу держит: USDT и СБП уходят без зависаний, верификация минимальная. Заявку на вывод не гоняют по кругу модерации. Единственное, что заставляет держать сумму под контролем, — у бренда пока нет многолетнего трека выплат, которым можно поручиться.</p>
-<div class="pj-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>USDT и СБП без ручной перепроверки</li><li>Минимальная верификация на старте</li><li>Порог входа 50 ₽ для теста кассы</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — длинной истории выплат ещё нет</li><li>Бонус считается по своим условиям, читать до депозита</li></ul></div>
-</div>
-<div class="pj-facts"><span class="thr">Вывод: USDT ~40 мин</span><span>Бонус: <b>200% + 150 FS</b></span><span>Порог: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="pj-rev rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1271,8 +1273,8 @@ window.addEventListener('load',function(){
 <table class="pj-t mfit">
 <thead><tr><th>Казино</th><th>Депозит</th><th>Метод вывода</th><th>Сумма вывода</th><th>Пришло за</th></tr></thead>
 <tbody>
-<tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Депозит"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Метод вывода">СБП</td><td class="pj-rub" data-label="Сумма вывода"><span class="cyan">420 ₽</span></td><td class="pj-time" data-label="Пришло за">18 мин</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Депозит"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Метод вывода">USDT TRC-20</td><td class="pj-rub" data-label="Сумма вывода"><span class="cyan">610 ₽</span></td><td class="pj-time" data-label="Пришло за">38 мин</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Депозит"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Метод вывода">СБП</td><td class="pj-rub" data-label="Сумма вывода"><span class="cyan">420 ₽</span></td><td class="pj-time" data-label="Пришло за">18 мин</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win</b></td><td data-label="Депозит"><span class="pj-pill pay-g">50 ₽</span></td><td data-label="Метод вывода">СБП (после KYC)</td><td class="pj-rub" data-label="Сумма вывода"><span class="cyan">1 250 ₽</span></td><td class="pj-time" data-label="Пришло за">~5 ч</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Banda</b></td><td data-label="Депозит"><span class="pj-pill pay-y">100 ₽</span></td><td data-label="Метод вывода">Карта Мир</td><td class="pj-rub" data-label="Сумма вывода"><span class="cyan">870 ₽</span></td><td class="pj-time" data-label="Пришло за">~2 ч</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Leebet</b></td><td data-label="Депозит"><span class="pj-pill pay-y">100 ₽</span></td><td data-label="Метод вывода">USDT TRC-20</td><td class="pj-rub" data-label="Сумма вывода"><span class="cyan">540 ₽</span></td><td class="pj-time" data-label="Пришло за">21 мин</td></tr>
@@ -1335,9 +1337,9 @@ window.addEventListener('load',function(){
 </div>
 <div class="pj-log rv">
 <ul>
-<li><b>7K сохранил статус №1 по выплатам</b> — тестовый вывод по СБП пришёл за 18 минут без ручной модерации.</li>
+<li><b>Spinto — выбор редакции №1</b> — три пробных вывода подряд без зависаний, быстрая касса и порог входа от 50 ₽; история бренда пока короткая, но выплаты держит.</li>
+<li><b>7K держит выплаты стабильно</b> — тестовый вывод по СБП пришёл за 18 минут без ручной модерации.</li>
 <li><b>Leebet ускорил криптовывод</b> — USDT TRC-20 уходит примерно за 20 минут, хэш показывают сразу.</li>
-<li><b>Spinto прошёл повторную проверку</b> — три пробных вывода подряд без зависаний, но история бренда пока короткая.</li>
 <li><b>Одну площадку убрали из кандидатов</b> за суточный лимит 5 000 ₽, которым резали крупный выигрыш — детали в признаках скама.</li>
 <li><b>Перепроверили выводы у 6 брендов</b> реальными заявками, обновили сроки по методам.</li>
 </ul>
@@ -1402,8 +1404,8 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала отдельно: реальные сроки вывода по замерам, лимиты кассы, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="pj-brands rv" id="brandsGrid"></div>
 <ul class="pj-seo-links">
+<li><a href="/casino/spinto">Обзор казино Spinto — выбор редакции №1, быстрый вывод</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino — платит по СБП, карте и крипте</a></li>
-<li><a href="/casino/spinto">Обзор казино Spinto — быстрый криптовывод</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — прозрачная верификация</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — фриспины и честный расчёт</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — USDT без задержек</a></li>
@@ -1569,8 +1571,8 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
+    {n:"Spinto",    c:"#37e0c8", c2:"#12a892", s:"9.8", d:"выбор редакции №1 · быстрый вывод, порог 50 ₽",   h:"/casino/spinto"},
     {n:"7K Casino", c:"#ffcf3f", c2:"#e0952f", s:"9.9", d:"платит по СБП, карте и крипте · без KYC на мелочи", h:"/casino/7k"},
-    {n:"Spinto",    c:"#37e0c8", c2:"#12a892", s:"9.8", d:"самый быстрый криптовывод · USDT ~40 мин",       h:"/casino/spinto"},
     {n:"1win",      c:"#b8ff2b", c2:"#8fd400", s:"9.7", d:"прозрачная верификация на крупных · каталог 12k", h:"/casino/1win"},
     {n:"Banda",     c:"#ff2e93", c2:"#c81f6f", s:"9.6", d:"фриспины и честный расчёт · карта ~2 ч",          h:"/casino/banda"},
     {n:"Leebet",    c:"#6cc4ff", c2:"#2a86e0", s:"9.5", d:"USDT TRC-20 без задержек · хэш сразу",             h:"/casino/leebet"},
@@ -1702,8 +1704,8 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 6,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
         {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
         {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
         {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
@@ -1713,7 +1715,7 @@ window.addEventListener('load',function(){
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Какие казино реально платят деньги?","acceptedAnswer":{"@type":"Answer","text":"По моей проверке выводами платят все шесть площадок подборки — у каждой лицензия Curaçao и рабочая касса. Увереннее всех 7K Casino: платит по СБП, карте и крипте, на малых суммах без ручной модерации. Для крипты сопоставим Leebet, для крупной игры — 1win с KYC на больших суммах."}},
+        {"@type":"Question","name":"Какие казино реально платят деньги?","acceptedAnswer":{"@type":"Answer","text":"По моей проверке выводами платят все шесть площадок подборки — у каждой лицензия Curaçao и рабочая касса. Выбор редакции №1 — Spinto: быстрые выплаты по СБП и в крипте, низкий порог входа и минимальная верификация. Так же уверенно держит кассу 7K Casino: платит по СБП, карте и крипте, на малых суммах без ручной модерации. Для крипты сопоставим Leebet, для крупной игры — 1win с KYC на больших суммах."}},
         {"@type":"Question","name":"Как проверить, платит ли казино, до депозита?","acceptedAnswer":{"@type":"Answer","text":"Четыре пункта: лицензия Curaçao с проверяемым номером в футере; отзывы именно про вывод, а не про дизайн; условия вейджера и лимиты заранее; тест малой суммой — занёс минимум 50–100 ₽, вывел, посмотрел. Именно так я проверял каждую площадку здесь."}},
         {"@type":"Question","name":"Какие признаки, что казино не заплатит?","acceptedAnswer":{"@type":"Answer","text":"Обещание «выплаты без верификации и лимитов», ручная модерация каждой заявки, суточный лимит ниже 30 000–50 000 ₽ без объяснения, повторный запрос документов на втором-третьем выводе, отсутствие проверяемой лицензии и поток одинаковых жалоб «заявка висит» в отзывах."}},
         {"@type":"Question","name":"Что делать, если казино задерживает выплату?","acceptedAnswer":{"@type":"Answer","text":"Сначала проверь своё: закрыт ли отыгрыш бонуса, пройден ли KYC, тем ли методом выводишь. Три из четырёх «невыплат» — это вейджер или верификация. Дальше — поддержка с номером заявки, затем жалоба регулятору Curaçao по номеру лицензии. У лицензированной площадки этот рычаг работает."}},
