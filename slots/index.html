@@ -30,8 +30,13 @@ a{color:inherit}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
  padding:8px 10px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
 .c-score small{display:block;font-size:9px;color:var(--mut);font-weight:700;letter-spacing:.5px}
 .ccard{position:relative;flex-direction:column;align-items:stretch;padding:20px 20px 16px;overflow:hidden}
+.ccard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ac,#b8ff2b);opacity:.8}
+.ccard::after{content:"";position:absolute;top:-40px;right:-40px;width:150px;height:150px;border-radius:50%;background:var(--ac,#b8ff2b);opacity:.07;pointer-events:none}
+.ccard:hover{border-color:var(--ac,rgba(184,255,43,.4))}
 .ccard.top3{border-color:rgba(184,255,43,.35);box-shadow:0 0 0 1px rgba(184,255,43,.12),0 14px 34px rgba(0,0,0,.4)}
-.ccard.top3::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#b8ff2b,#ff2e93)}
+.ccard.top3::before{background:linear-gradient(180deg,#b8ff2b,#ff2e93);opacity:1}
+.ccard .c-vis{width:66px;height:66px;border-radius:16px;box-shadow:0 0 0 2px var(--ac),0 6px 16px rgba(0,0,0,.4)}
+.ccard .c-vis img{padding:6px}
 .ccard-rank{position:absolute;top:10px;left:15px;font-family:"Unbounded",sans-serif;font-weight:800;font-size:11px;color:var(--mut);opacity:.5}
 .ccard-top{display:flex;align-items:center;gap:15px}
 .ccard-h{flex:1 1 auto;min-width:0}
@@ -57,7 +62,7 @@ a{color:inherit}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
 .ccard-read{display:inline-flex;align-items:center;gap:6px;color:var(--neon);font-weight:800;font-size:13.5px;transition:gap .2s}
 .ccard-read .ra{display:inline-flex}.ccard-read .ra svg{width:16px;height:16px}
 .ccard:hover .ccard-read{gap:10px}
-@media(max-width:560px){.ccard{padding:18px 16px 14px}.ccard-name{font-size:16px}.ccard-score{font-size:20px;padding:8px 11px}.c-vis{width:46px!important;height:46px!important}}
+@media(max-width:560px){.ccard{padding:18px 15px 14px}.ccard-name{font-size:16px}.ccard-score{font-size:20px;padding:8px 11px}.ccard .c-vis{width:56px;height:56px}}
 .s-cover{aspect-ratio:3/4;width:100%;object-fit:cover;background:#0c0f1e;display:block}
 .s-b{padding:11px 12px}.s-name{font-weight:700;font-size:13.6px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:34px}
 .s-sub{color:var(--mut);font-size:11.5px;margin-top:4px;display:flex;justify-content:space-between;align-items:center}
