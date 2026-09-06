@@ -282,6 +282,9 @@
   .lv-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(55,224,200,.7);color:#04231e}
   .lv-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .lv-go:hover::after{animation:lv-shim .85s var(--ez)}
+  .lv-acts{display:flex;flex-direction:column;gap:7px}
+  .lv-rvw{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);background:rgba(255,255,255,.03);font-weight:700;padding:9px 18px;border-radius:11px;font-size:12.5px;white-space:nowrap;transition:border-color .18s,color .18s}
+  .lv-rvw:hover{border-color:var(--c);color:var(--c)}
   .lv-card.r1{--c:var(--cyan);--c2:#12a892;--ct:#04231e;background:linear-gradient(120deg,rgba(55,224,200,.1),var(--pan) 72%)}
   .lv-card.r2{--c:var(--viol);--c2:#7d4fd6;--ct:#fff}
   .lv-card.r3{--c:var(--sky);--c2:#2a86e0;--ct:#04121f}
@@ -766,28 +769,26 @@ window.addEventListener('load',function(){
 <span class="lv-ribbon cyan">Выбор редакции</span>
 <div class="lv-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">LIVE</span>
-<div class="scr"><span class="live"><i></i>В эфире</span><span class="studio">Студия Evolution</span></div>
-<div class="tag">Стол редакции · русский крупье</div>
-<div class="bn">7K Casino</div>
-<div class="bs">полный набор столов Evolution и Pragmatic Live</div>
-<div class="why"><b>Почему №1:</b> самый ровный live-раздел из подборки — рулетка, блэкджек и шоу-игры без рывков, а рублёвый вывод после сессии уходил за час-полтора.</div>
+<div class="scr"><span class="live"><i></i>В эфире</span><span class="studio">Живой стол</span></div>
+<div class="tag">Выбор редакции · быстрые выплаты</div>
+<div class="bn">Spinto</div>
+<div class="bs">надёжная площадка с быстрыми выплатами и низким порогом входа</div>
+<div class="why"><b>Почему №1:</b> низкий порог входа от 50 ₽, крупный стартовый бонус и самые быстрые выплаты в подборке — вывод по СБП и в крипте уходит в течение часа.</div>
 <div class="tspec">
-<div class="line"><span>Живых столов</span><span class="big">40+</span></div>
+<div class="line"><span>Приветственный бонус</span><span class="big">200%</span></div>
 <div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
-<div class="line spec"><span>Студии</span><i class="dts"></i><span class="val hl-viol">Evolution · Pragmatic Live</span></div>
-<div class="line spec"><span>Минимум за стол</span><i class="dts"></i><span class="val hl-cyan">от 50 ₽</span></div>
-<div class="line spec"><span>Русские дилеры</span><i class="dts"></i><span class="val hl-neon">да</span></div>
-<div class="line spec"><span>Шоу-игры</span><i class="dts"></i><span class="val hl-hot">Crazy Time · Monopoly</span></div>
-<div class="line spec"><span>Вывод по СБП</span><i class="dts"></i><span class="val hl-neon">~1 час</span></div>
-<div class="line spec"><span>Вывод в USDT</span><i class="dts"></i><span class="val hl-cyan">~40 минут</span></div>
-<div class="line spec"><span>Кэшбэк с live</span><i class="dts"></i><span class="val hl-gold">до 20%</span></div>
+<div class="line spec"><span>Фриспины</span><i class="dts"></i><span class="val hl-viol">+150 FS</span></div>
+<div class="line spec"><span>Минимальный депозит</span><i class="dts"></i><span class="val hl-cyan">от 50 ₽</span></div>
+<div class="line spec"><span>Вейджер</span><i class="dts"></i><span class="val hl-neon">x35</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-cyan">СБП · крипта</span></div>
+<div class="line spec"><span>Срок вывода</span><i class="dts"></i><span class="val hl-neon">до 1 часа</span></div>
 <div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао</span></div>
 </div>
-<a class="lv-btn lv-btn-cyan" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:4px">Открыть 7K Casino</a>
-<div class="foot"><span>Столы Evolution</span><span>СБП · Мир · USDT</span><span>Кэшбэк до 20%</span></div>
+<a class="lv-btn lv-btn-cyan" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:4px">Открыть Spinto</a>
+<div class="foot"><span>Порог от 50 ₽</span><span>СБП · крипта</span><span>Вывод до 1 ч</span></div>
 <ul class="tguar">
-<li>Живые столы проверены редакцией лично</li>
-<li>Скорость трансляции и вывода замерены</li>
+<li>Площадку редакция проверила лично</li>
+<li>Скорость вывода замерена</li>
 <li>Лицензия сверена по номеру в реестре</li>
 </ul>
 </aside>
@@ -848,10 +849,26 @@ window.addEventListener('load',function(){
 <span class="lv-kick">Топ-10 · сентябрь 2026</span>
 <h2>Рейтинг лайв-казино 2026: <span class="g-lime">топ-10 казино с живыми дилерами</span></h2>
 </div>
-<p class="rv">Список отранжирован по качеству трансляции, набору столов Evolution и скорости, с которой у редакции уходил вывод. Цифра рядом с брендом — сколько живых столов реально доступно в каталоге на рубли. Оценка — средневзвешенный балл по семи критериям. Как отбирали — в методике ниже.</p>
+<p class="rv">Это редакционная подборка — по совокупности бонусов, скорости выплат, набора столов Evolution и надёжности площадки, а не строго по одной цифре. Число рядом с брендом — сколько живых столов реально доступно в каталоге на рубли. Оценка — средневзвешенный балл по семи критериям. Как отбирали — в методике ниже.</p>
 <div class="lv-rate">
 <article class="lv-card r1 rv">
 <div class="rkw"><span class="lv-medal g">1</span></div>
+<div class="lv-mid">
+<div class="bn">Spinto <span style="font-weight:600;color:var(--mu);font-size:12px">· самый быстрый вывод</span></div>
+<span class="bt">Лучшее за — мгновенный вывод со стола</span>
+<div class="prm"><span>Вывод <b>USDT ~40 мин</b></span><span>Столы <b>Evolution</b></span><span>Порог <b>от 50 ₽</b></span></div>
+</div>
+<div class="lv-right">
+<div class="lv-tbl"><div class="n">20+</div><div class="k">живых столов</div></div>
+<div class="lv-sccol"><span class="lv-score">9.8</span><span class="lv-sbar"><i data-score="9.8"></i></span></div>
+<div class="lv-acts">
+<a class="lv-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/spinto/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="lv-card r2 rv">
+<div class="rkw"><span class="lv-medal">2</span></div>
 <div class="lv-mid">
 <div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — полный набор столов Evolution</span>
@@ -860,11 +877,14 @@ window.addEventListener('load',function(){
 <div class="lv-right">
 <div class="lv-tbl"><div class="n">40+</div><div class="k">живых столов</div></div>
 <div class="lv-sccol"><span class="lv-score">9.8</span><span class="lv-sbar"><i data-score="9.8"></i></span></div>
+<div class="lv-acts">
 <a class="lv-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/7k/">Обзор</a>
+</div>
 </div>
 </article>
-<article class="lv-card r2 rv">
-<div class="rkw"><span class="lv-medal">2</span></div>
+<article class="lv-card r3 rv">
+<div class="rkw"><span class="lv-medal">3</span></div>
 <div class="lv-mid">
 <div class="bn">1win</div>
 <span class="bt">Лучшее за — максимум столов и шоу-игр</span>
@@ -873,37 +893,14 @@ window.addEventListener('load',function(){
 <div class="lv-right">
 <div class="lv-tbl"><div class="n">60+</div><div class="k">живых столов</div></div>
 <div class="lv-sccol"><span class="lv-score">9.6</span><span class="lv-sbar"><i data-score="9.6"></i></span></div>
+<div class="lv-acts">
 <a class="lv-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/1win/">Обзор</a>
 </div>
-</article>
-<article class="lv-card r3 rv">
-<div class="rkw"><span class="lv-medal">3</span></div>
-<div class="lv-mid">
-<div class="bn">Spinto <span style="font-weight:600;color:var(--mu);font-size:12px">· самый быстрый вывод</span></div>
-<span class="bt">Лучшее за — мгновенный вывод со стола</span>
-<div class="prm"><span>Вывод <b>USDT ~40 мин</b></span><span>Столы <b>Evolution</b></span><span>Порог <b>от 50 ₽</b></span></div>
-</div>
-<div class="lv-right">
-<div class="lv-tbl"><div class="n">20+</div><div class="k">живых столов</div></div>
-<div class="lv-sccol"><span class="lv-score">9.3</span><span class="lv-sbar"><i data-score="9.3"></i></span></div>
-<a class="lv-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
 <article class="lv-card r4 rv">
 <div class="rkw"><span class="lv-medal">4</span></div>
-<div class="lv-mid">
-<div class="bn">Vavada</div>
-<span class="bt">Лучшее за — стабильные столы Evolution</span>
-<div class="prm"><span>Вывод <b>USDT ~9 мин</b></span><span>Столы <b>Evolution</b></span><span>Лиц. <b>Кюрасао</b></span></div>
-</div>
-<div class="lv-right">
-<div class="lv-tbl"><div class="n">35+</div><div class="k">живых столов</div></div>
-<div class="lv-sccol"><span class="lv-score">9.2</span><span class="lv-sbar"><i data-score="9.2"></i></span></div>
-<a class="lv-go" href="/go/vavada" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="lv-card r5 rv">
-<div class="rkw"><span class="lv-medal">5</span></div>
 <div class="lv-mid">
 <div class="bn">Banda</div>
 <span class="bt">Лучшее за — живая баккара и турниры</span>
@@ -912,11 +909,14 @@ window.addEventListener('load',function(){
 <div class="lv-right">
 <div class="lv-tbl"><div class="n">25+</div><div class="k">живых столов</div></div>
 <div class="lv-sccol"><span class="lv-score">9.1</span><span class="lv-sbar"><i data-score="9.1"></i></span></div>
+<div class="lv-acts">
 <a class="lv-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/banda/">Обзор</a>
+</div>
 </div>
 </article>
-<article class="lv-card r6 rv">
-<div class="rkw"><span class="lv-medal">6</span></div>
+<article class="lv-card r5 rv">
+<div class="rkw"><span class="lv-medal">5</span></div>
 <div class="lv-mid">
 <div class="bn">Leebet</div>
 <span class="bt">Лучшее за — live под USDT и BTC</span>
@@ -925,50 +925,14 @@ window.addEventListener('load',function(){
 <div class="lv-right">
 <div class="lv-tbl"><div class="n">18+</div><div class="k">живых столов</div></div>
 <div class="lv-sccol"><span class="lv-score">9.0</span><span class="lv-sbar"><i data-score="9.0"></i></span></div>
+<div class="lv-acts">
 <a class="lv-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/leebet/">Обзор</a>
+</div>
 </div>
 </article>
-<article class="lv-card r7 rv">
-<div class="rkw"><span class="lv-medal">7</span></div>
-<div class="lv-mid">
-<div class="bn">Sol Casino</div>
-<span class="bt">Лучшее за — большой live-каталог</span>
-<div class="prm"><span>Столы <b>Evolution · Ezugi</b></span><span>Кэшбэк <b>до 10%</b></span><span>Порог <b>150 ₽</b></span></div>
-</div>
-<div class="lv-right">
-<div class="lv-tbl"><div class="n">40+</div><div class="k">живых столов</div></div>
-<div class="lv-sccol"><span class="lv-score">8.9</span><span class="lv-sbar"><i data-score="8.9"></i></span></div>
-<a class="lv-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="lv-card r8 rv">
-<div class="rkw"><span class="lv-medal">8</span></div>
-<div class="lv-mid">
-<div class="bn">Kent Casino</div>
-<span class="bt">Лучшее за — простой старт за столом</span>
-<div class="prm"><span>Столы <b>Evolution</b></span><span>Бонус <b>250 FS</b></span><span>Порог <b>100 ₽</b></span></div>
-</div>
-<div class="lv-right">
-<div class="lv-tbl"><div class="n">22+</div><div class="k">живых столов</div></div>
-<div class="lv-sccol"><span class="lv-score">8.7</span><span class="lv-sbar"><i data-score="8.7"></i></span></div>
-<a class="lv-go" href="/go/kent" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="lv-card r9 rv">
-<div class="rkw"><span class="lv-medal">9</span></div>
-<div class="lv-mid">
-<div class="bn">Starda</div>
-<span class="bt">Лучшее за — Lightning-рулетка Evolution</span>
-<div class="prm"><span>Lightning <b>Roulette</b></span><span>Вывод <b>1–24 ч</b></span><span>Порог <b>100 ₽</b></span></div>
-</div>
-<div class="lv-right">
-<div class="lv-tbl"><div class="n">24+</div><div class="k">живых столов</div></div>
-<div class="lv-sccol"><span class="lv-score">8.6</span><span class="lv-sbar"><i data-score="8.6"></i></span></div>
-<a class="lv-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="lv-card r10 rv">
-<div class="rkw"><span class="lv-medal">10</span></div>
+<article class="lv-card r6 rv">
+<div class="rkw"><span class="lv-medal">6</span></div>
 <div class="lv-mid">
 <div class="bn">APEX</div>
 <span class="bt">Лучшее за — крупный стартовый пакет</span>
@@ -977,26 +941,93 @@ window.addEventListener('load',function(){
 <div class="lv-right">
 <div class="lv-tbl"><div class="n">15+</div><div class="k">живых столов</div></div>
 <div class="lv-sccol"><span class="lv-score">8.5</span><span class="lv-sbar"><i data-score="8.5"></i></span></div>
+<div class="lv-acts">
 <a class="lv-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/apex/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="lv-card r7 rv">
+<div class="rkw"><span class="lv-medal">7</span></div>
+<div class="lv-mid">
+<div class="bn">Starda</div>
+<span class="bt">Лучшее за — Lightning-рулетка Evolution</span>
+<div class="prm"><span>Lightning <b>Roulette</b></span><span>Вывод <b>1–24 ч</b></span><span>Порог <b>100 ₽</b></span></div>
+</div>
+<div class="lv-right">
+<div class="lv-tbl"><div class="n">24+</div><div class="k">живых столов</div></div>
+<div class="lv-sccol"><span class="lv-score">8.6</span><span class="lv-sbar"><i data-score="8.6"></i></span></div>
+<div class="lv-acts">
+<a class="lv-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/starda/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="lv-card r8 rv">
+<div class="rkw"><span class="lv-medal">8</span></div>
+<div class="lv-mid">
+<div class="bn">Sol Casino</div>
+<span class="bt">Лучшее за — большой live-каталог</span>
+<div class="prm"><span>Столы <b>Evolution · Ezugi</b></span><span>Кэшбэк <b>до 10%</b></span><span>Порог <b>150 ₽</b></span></div>
+</div>
+<div class="lv-right">
+<div class="lv-tbl"><div class="n">40+</div><div class="k">живых столов</div></div>
+<div class="lv-sccol"><span class="lv-score">8.9</span><span class="lv-sbar"><i data-score="8.9"></i></span></div>
+<div class="lv-acts">
+<a class="lv-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
+<a class="lv-rvw" href="/casino/sol/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="lv-card r9 rv">
+<div class="rkw"><span class="lv-medal">9</span></div>
+<div class="lv-mid">
+<div class="bn">Vavada</div>
+<span class="bt">Лучшее за — стабильные столы Evolution</span>
+<div class="prm"><span>Вывод <b>USDT ~9 мин</b></span><span>Столы <b>Evolution</b></span><span>Лиц. <b>Кюрасао</b></span></div>
+</div>
+<div class="lv-right">
+<div class="lv-tbl"><div class="n">35+</div><div class="k">живых столов</div></div>
+<div class="lv-sccol"><span class="lv-score">9.2</span><span class="lv-sbar"><i data-score="9.2"></i></span></div>
+<div class="lv-acts">
+<a class="lv-go" href="/casino/vavada/">Играть</a>
+<a class="lv-rvw" href="/casino/vavada/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="lv-card r10 rv">
+<div class="rkw"><span class="lv-medal">10</span></div>
+<div class="lv-mid">
+<div class="bn">Kent Casino</div>
+<span class="bt">Лучшее за — простой старт за столом</span>
+<div class="prm"><span>Столы <b>Evolution</b></span><span>Бонус <b>250 FS</b></span><span>Порог <b>100 ₽</b></span></div>
+</div>
+<div class="lv-right">
+<div class="lv-tbl"><div class="n">22+</div><div class="k">живых столов</div></div>
+<div class="lv-sccol"><span class="lv-score">8.7</span><span class="lv-sbar"><i data-score="8.7"></i></span></div>
+<div class="lv-acts">
+<a class="lv-go" href="/casino/kent/">Играть</a>
+<a class="lv-rvw" href="/casino/kent/">Обзор</a>
+</div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица топ-10 live-казино с живыми дилерами</h3>
 <div class="lv-tbox lv-scroll rv" style="margin:12px 0 0">
 <table class="lv-t mfit">
-<caption>Столы и студии проверены редакцией; сортировка — по оценке. Валюта столов — рубли.</caption>
+<caption>Столы и студии проверены редакцией; порядок — редакционный, по совокупности бонусов, скорости выплат и надёжности. Валюта столов — рубли.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Студии</th><th>Живых столов</th><th>Оценка</th><th>Мин. ставка</th></tr></thead>
 <tbody>
-<tr><td class="lv-rub mfit-num" data-label="">1</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">7K Casino</span><span class="lv-line2"><span class="lv-best" style="--rc:#37e0c8">Лучшее за — набор столов Evolution</span><span class="lv-ed">№1</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span> <span class="lv-pill stu-p">Pragmatic</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">40+</span></td><td data-label="Оценка"><span class="neon">9.8</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">2</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">1win</span><span class="lv-line2"><span class="lv-best" style="--rc:#a879ff">Лучшее за — максимум шоу-игр</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span> <span class="lv-pill stu-p">Pragmatic</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">60+</span></td><td data-label="Оценка"><span class="neon">9.6</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">3</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Spinto</span><span class="lv-line2"><span class="lv-best" style="--rc:#6cc4ff">Лучшее за — мгновенный вывод</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">20+</span></td><td data-label="Оценка"><span class="neon">9.3</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">4</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Vavada</span><span class="lv-line2"><span class="lv-best" style="--rc:#ffcf3f">Лучшее за — стабильные столы</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">35+</span></td><td data-label="Оценка"><span class="neon">9.2</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">5</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Banda</span><span class="lv-line2"><span class="lv-best" style="--rc:#ff2e93">Лучшее за — баккара и турниры</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">25+</span></td><td data-label="Оценка"><span class="neon">9.1</span></td><td class="lv-min" data-label="Мин. ставка">от 100 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">6</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Leebet</span><span class="lv-line2"><span class="lv-best" style="--rc:#b8ff2b">Лучшее за — live под крипту</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">18+</span></td><td data-label="Оценка"><span class="neon">9.0</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">7</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Sol Casino</span><span class="lv-line2"><span class="lv-best" style="--rc:#37e0c8">Лучшее за — большой каталог</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span> <span class="lv-pill stu">Ezugi</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">40+</span></td><td data-label="Оценка"><span class="neon">8.9</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">8</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Kent Casino</span><span class="lv-line2"><span class="lv-best" style="--rc:#6cc4ff">Лучшее за — простой старт</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">22+</span></td><td data-label="Оценка"><span class="neon">8.7</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">9</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Starda</span><span class="lv-line2"><span class="lv-best" style="--rc:#ffa63d">Лучшее за — Lightning Roulette</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">24+</span></td><td data-label="Оценка"><span class="neon">8.6</span></td><td class="lv-min" data-label="Мин. ставка">от 100 ₽</td></tr>
-<tr><td class="lv-rub mfit-num" data-label="">10</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">APEX</span><span class="lv-line2"><span class="lv-best" style="--rc:#a879ff">Лучшее за — крупный пакет</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">15+</span></td><td data-label="Оценка"><span class="neon">8.5</span></td><td class="lv-min" data-label="Мин. ставка">от 100 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">1</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Spinto</span><span class="lv-line2"><span class="lv-best" style="--rc:#6cc4ff">Лучшее за — мгновенный вывод</span><span class="lv-ed">№1</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">20+</span></td><td data-label="Оценка"><span class="neon">9.8</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">2</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">7K Casino</span><span class="lv-line2"><span class="lv-best" style="--rc:#37e0c8">Лучшее за — набор столов Evolution</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span> <span class="lv-pill stu-p">Pragmatic</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">40+</span></td><td data-label="Оценка"><span class="neon">9.8</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">3</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">1win</span><span class="lv-line2"><span class="lv-best" style="--rc:#a879ff">Лучшее за — максимум шоу-игр</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span> <span class="lv-pill stu-p">Pragmatic</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">60+</span></td><td data-label="Оценка"><span class="neon">9.6</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">4</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Banda</span><span class="lv-line2"><span class="lv-best" style="--rc:#ff2e93">Лучшее за — баккара и турниры</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">25+</span></td><td data-label="Оценка"><span class="neon">9.1</span></td><td class="lv-min" data-label="Мин. ставка">от 100 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">5</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Leebet</span><span class="lv-line2"><span class="lv-best" style="--rc:#b8ff2b">Лучшее за — live под крипту</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">18+</span></td><td data-label="Оценка"><span class="neon">9.0</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">6</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">APEX</span><span class="lv-line2"><span class="lv-best" style="--rc:#a879ff">Лучшее за — крупный пакет</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">15+</span></td><td data-label="Оценка"><span class="neon">8.5</span></td><td class="lv-min" data-label="Мин. ставка">от 100 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">7</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Starda</span><span class="lv-line2"><span class="lv-best" style="--rc:#ffa63d">Лучшее за — Lightning Roulette</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">24+</span></td><td data-label="Оценка"><span class="neon">8.6</span></td><td class="lv-min" data-label="Мин. ставка">от 100 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">8</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Sol Casino</span><span class="lv-line2"><span class="lv-best" style="--rc:#37e0c8">Лучшее за — большой каталог</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span> <span class="lv-pill stu">Ezugi</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">40+</span></td><td data-label="Оценка"><span class="neon">8.9</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">9</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Vavada</span><span class="lv-line2"><span class="lv-best" style="--rc:#ffcf3f">Лучшее за — стабильные столы</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">35+</span></td><td data-label="Оценка"><span class="neon">9.2</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
+<tr><td class="lv-rub mfit-num" data-label="">10</td><td class="lv-bc" data-label="Казино"><span class="lv-bn">Kent Casino</span><span class="lv-line2"><span class="lv-best" style="--rc:#6cc4ff">Лучшее за — простой старт</span></span></td><td data-label="Студии"><span class="lv-pill stu-e">Evolution</span></td><td class="lv-rub" data-label="Живых столов"><span class="cyanv">22+</span></td><td data-label="Оценка"><span class="neon">8.7</span></td><td class="lv-min" data-label="Мин. ставка">от 50 ₽</td></tr>
 </tbody>
 </table>
 </div>
@@ -1224,7 +1255,17 @@ window.addEventListener('load',function(){
 </div>
 <div class="lv-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-cyan">1. 7K Casino <span>полный набор столов Evolution</span></div><div class="sc">9.8 / 10</div></div>
+<div class="rh"><div class="nm c-cyan">1. Spinto <span>мгновенный вывод со стола</span></div><div class="sc">9.8 / 10</div></div>
+<p>Берём, когда важна скорость: вывод в USDT с блэкджек-стола дошёл минут за 40, по СБП — меньше часа. Площадка молодая, 2026-й, live-раздел компактный, но столы Evolution — рулетка и баккара — идут без рывков. Порог 50 ₽, за дешёвый стол сажусь не раздумывая. На слотах Nolimit City и Hacksaw, старт 200% и 150 фриспинов.</p>
+<div class="lv-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Мгновенный вывод со стола, USDT за ~40 минут</li><li>Столы Evolution без рывков, порог 50 ₽</li><li>Крупный стартовый пакет на слоты</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — короткая история выплат</li><li>Компактный live-раздел, меньше столов</li></ul></div>
+</div>
+<div class="lv-facts"><span class="thr">Столов: 20+</span><span>Вывод: <b>USDT ~40 мин</b></span><span>Студии: <b>Evolution</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="lv-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-viol">2. 7K Casino <span>полный набор столов Evolution</span></div><div class="sc">9.8 / 10</div></div>
 <p>Live-раздел собран на Evolution и Pragmatic Live: есть и Lightning Roulette, и Crazy Time. Тестовые 500 ₽ по СБП, стол-европейка с минималкой около 50 ₽ — картинка чистая, крупье на русском. Вывод 6 300 ₽ на карту ушёл за час-полтора, документы не спросили. Кэшбэк до 20% по понедельникам капает и с живых проигрышей.</p>
 <div class="lv-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Полный набор столов Evolution и Pragmatic Live</li><li>Русскоязычные крупье за рулеткой и баккарой</li><li>Быстрый рублёвый вывод, кэшбэк до 20% с live</li></ul></div>
@@ -1233,24 +1274,14 @@ window.addEventListener('load',function(){
 <div class="lv-facts"><span class="thr">Столов: 40+</span><span>Вывод: <b>СБП ~1 ч</b></span><span>Студии: <b>Evolution · Pragmatic</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
 </div>
 <div class="lv-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-viol">2. 1win <span>максимум столов и шоу-игр</span></div><div class="sc">9.6 / 10</div></div>
+<span aria-hidden="true" class="wm">03</span>
+<div class="rh"><div class="nm c-sky">3. 1win <span>максимум столов и шоу-игр</span></div><div class="sc">9.6 / 10</div></div>
 <p>Самый большой live-раздел из подборки: столы Evolution и Pragmatic Live десятками, все шоу-игры, включая Monopoly Live и Football Studio. Плюс live, слоты и ставки в одном кабинете, Lucky Jet под рукой. Каталог за 12 000 игр. Есть приложение под Android — с телефона столы идут гладко. При крупном выводе KYC прошёл за день.</p>
 <div class="lv-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Больше всего живых столов и шоу-игр</li><li>Casino, live и ставки в одном кабинете</li><li>Приложение под Android, стабильная трансляция</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Интерфейс перегружен для новичка</li><li>KYC при крупном выводе занимает до суток</li></ul></div>
 </div>
 <div class="lv-facts"><span class="thr">Столов: 60+</span><span>Вывод: <b>СБП/крипта</b></span><span>Шоу: <b>Monopoly · Football Studio</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
-</div>
-<div class="lv-rev rv">
-<span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="nm c-sky">3. Spinto <span>мгновенный вывод со стола</span></div><div class="sc">9.3 / 10</div></div>
-<p>Берём, когда важна скорость: вывод в USDT с блэкджек-стола дошёл минут за 40, по СБП — меньше часа. Площадка молодая, 2026-й, live-раздел компактный, но столы Evolution — рулетка и баккара — идут без рывков. Порог 50 ₽, за дешёвый стол сажусь не раздумывая. На слотах Nolimit City и Hacksaw, старт 200% и 150 фриспинов.</p>
-<div class="lv-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Мгновенный вывод со стола, USDT за ~40 минут</li><li>Столы Evolution без рывков, порог 50 ₽</li><li>Крупный стартовый пакет на слоты</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — короткая история выплат</li><li>Компактный live-раздел, меньше столов</li></ul></div>
-</div>
-<div class="lv-facts"><span class="thr">Столов: 20+</span><span>Вывод: <b>USDT ~40 мин</b></span><span>Студии: <b>Evolution</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="lv-rev rv">
 <span aria-hidden="true" class="wm">04</span>
@@ -1562,16 +1593,16 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: набор живых столов и студий, скорость вывода со стола по замерам, условия бонуса и вклад live в отыгрыш, лицензия и слабые места. Открывайте разбор до первой сессии.</p>
 <div aria-label="Случайная подборка обзоров live-казино" class="lv-brands rv" id="brandsGrid"></div>
 <ul class="lv-seo-links">
+<li><a href="/casino/spinto">Обзор казино Spinto — быстрый вывод со стола</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino — столы Evolution</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — 60+ live-столов</a></li>
-<li><a href="/casino/spinto">Обзор казино Spinto — быстрый вывод со стола</a></li>
-<li><a href="/casino/vavada">Обзор казино Vavada — столы Evolution</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — живая баккара</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — live под крипту</a></li>
-<li><a href="/casino/sol">Обзор казино Sol Casino — большой live-каталог</a></li>
-<li><a href="/casino/kent">Обзор казино Kent Casino — старт за столом</a></li>
-<li><a href="/casino/starda">Обзор казино Starda — Lightning Roulette</a></li>
 <li><a href="/casino/apex">Обзор казино APEX — новый бренд 2026</a></li>
+<li><a href="/casino/starda">Обзор казино Starda — Lightning Roulette</a></li>
+<li><a href="/casino/sol">Обзор казино Sol Casino — большой live-каталог</a></li>
+<li><a href="/casino/vavada">Обзор казино Vavada — столы Evolution</a></li>
+<li><a href="/casino/kent">Обзор казино Kent Casino — старт за столом</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
 <div class="lv-links rv">
@@ -1647,16 +1678,16 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
+    {n:"Spinto",      c:"#6cc4ff", c2:"#2a86e0", s:"9.8", d:"мгновенный вывод со стола · крипта",             h:"/casino/spinto"},
     {n:"7K Casino",   c:"#37e0c8", c2:"#12a892", s:"9.8", d:"полный набор столов Evolution · вывод от 40 мин", h:"/casino/7k"},
     {n:"1win",        c:"#a879ff", c2:"#7d4fd6", s:"9.6", d:"максимум live-столов и шоу-игр · 12000 игр",     h:"/casino/1win"},
-    {n:"Spinto",      c:"#6cc4ff", c2:"#2a86e0", s:"9.3", d:"мгновенный вывод со стола · крипта",             h:"/casino/spinto"},
-    {n:"Vavada",      c:"#ffcf3f", c2:"#e0952f", s:"9.2", d:"стабильные столы Evolution · рубли",             h:"/casino/vavada"},
     {n:"Banda",       c:"#ff2e93", c2:"#c81f6f", s:"9.1", d:"живая баккара и еженедельные турниры",           h:"/casino/banda"},
     {n:"Leebet",      c:"#b8ff2b", c2:"#8fd400", s:"9.0", d:"live под USDT и BTC · минимум KYC",              h:"/casino/leebet"},
-    {n:"Sol Casino",  c:"#37e0c8", c2:"#12a892", s:"8.9", d:"большой live-каталог · кэшбэк",                  h:"/casino/sol"},
-    {n:"Kent Casino", c:"#6cc4ff", c2:"#2a86e0", s:"8.7", d:"простой старт за столом · 250 FS",               h:"/casino/kent"},
+    {n:"APEX",        c:"#a879ff", c2:"#7d4fd6", s:"8.5", d:"новый бренд 2026 · крупный стартовый пакет",     h:"/casino/apex"},
     {n:"Starda",      c:"#ffa63d", c2:"#e07a12", s:"8.6", d:"Lightning-рулетка Evolution · турниры",          h:"/casino/starda"},
-    {n:"APEX",        c:"#a879ff", c2:"#7d4fd6", s:"8.5", d:"новый бренд 2026 · крупный стартовый пакет",     h:"/casino/apex"}
+    {n:"Sol Casino",  c:"#37e0c8", c2:"#12a892", s:"8.9", d:"большой live-каталог · кэшбэк",                  h:"/casino/sol"},
+    {n:"Vavada",      c:"#ffcf3f", c2:"#e0952f", s:"9.2", d:"стабильные столы Evolution · рубли",             h:"/casino/vavada"},
+    {n:"Kent Casino", c:"#6cc4ff", c2:"#2a86e0", s:"8.7", d:"простой старт за столом · 250 FS",               h:"/casino/kent"}
   ];
   var SLOTS = [
     {n:"Crazy Time",                   pv:"Evolution",           rtp:"95.5",  vol:"средняя", kind:"live", img:"https://v1.bundlecdn.com/casino-images/v/9ea794e4-af4d-439a-9c8a-849d0ed77818_vertical.png", h:"/slots/crazy-time"},
@@ -1783,16 +1814,16 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 10,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":3,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
-        {"@type":"ListItem","position":4,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
-        {"@type":"ListItem","position":5,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
-        {"@type":"ListItem","position":6,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
-        {"@type":"ListItem","position":7,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
-        {"@type":"ListItem","position":8,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
-        {"@type":"ListItem","position":9,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
-        {"@type":"ListItem","position":10,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"}
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
+        {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
+        {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
+        {"@type":"ListItem","position":6,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"},
+        {"@type":"ListItem","position":7,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
+        {"@type":"ListItem","position":8,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
+        {"@type":"ListItem","position":9,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":10,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"}
       ]
     },
     {

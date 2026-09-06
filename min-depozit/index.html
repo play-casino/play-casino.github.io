@@ -284,6 +284,8 @@
   .md-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(255,207,63,.7);color:#231600}
   .md-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .md-go:hover::after{animation:md-shim .85s var(--ez)}
+  .md-obz{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);background:rgba(255,255,255,.03);font-weight:800;padding:11px 16px;border-radius:11px;font-size:13.5px;white-space:nowrap;transition:transform .18s,border-color .18s,color .18s}
+  .md-obz:hover{transform:translateY(-2px);border-color:var(--c);color:var(--c)}
   /* per-rank palette */
   .md-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .md-card.r2{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
@@ -295,9 +297,10 @@
   .md-card.r8{--c:#c8ff5a;--c2:#8fd400;--ct:#0a1200}
   .md-card.r9{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
   .md-card.r10{--c:var(--hot);--c2:#c81f6f;--ct:#fff}
+  .md-card.r11{--c:var(--viol);--c2:#7d4fd6;--ct:#fff}
   @media(max-width:760px){
     .md-card{grid-template-columns:48px 1fr;gap:12px}
-    .md-right{grid-column:1 / -1;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
+    .md-right{grid-column:1 / -1;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
   }
 
   .md-note{font-size:13px;color:var(--mu);margin:12px 0 0}
@@ -770,28 +773,28 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="md-ticket rv" style="--d:.2s">
-<span class="md-ribbon gold">Выбор редакции</span>
-<div class="md-chip-oh"><div class="cv">9.6</div><div class="cl">балл из 10</div></div>
+<span class="md-ribbon gold">Выбор редакции · №1</span>
+<div class="md-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">₽</span>
 <div class="tag">Чек редакции · вход дешёвый</div>
-<div class="bn">Vavada</div>
-<div class="bs">депозит 100 ₽, вывод от 9 минут на USDT</div>
-<div class="why"><b>Почему в топе:</b> быстрые выплаты и проверяемая лицензия при минимуме спорных ситуаций — бонус активируется с той же минимальной сотки.</div>
+<div class="bn">Spinto</div>
+<div class="bs">депозит 50 ₽, выплаты СБП/крипта до 1 часа</div>
+<div class="why"><b>Почему в топе:</b> самый низкий порог входа с рабочим бонусом и быстрые выплаты — приветственный пакет активируется уже с минимального депозита.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Минимальный депозит</span><span class="big">100 ₽</span></div>
-<div class="line"><span>Оценка редакции</span><span class="sc">9.6 / 10</span></div>
-<div class="line spec"><span>Бонус с минималки</span><i class="dts"></i><span class="val hl-gold">100% + 100 FS</span></div>
-<div class="line spec"><span>Вейджер бонуса</span><i class="dts"></i><span class="val hl-neon">x40</span></div>
-<div class="line spec"><span>Способы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · карта · USDT</span></div>
-<div class="line spec"><span>Средний срок выплаты</span><i class="dts"></i><span class="val hl-neon">~9 минут</span></div>
-<div class="line spec"><span>Валюты счёта</span><i class="dts"></i><span class="val hl-gold">₽ · USDT · BTC</span></div>
-<div class="line spec"><span>Слотов в каталоге</span><i class="dts"></i><span class="val hl-gold">7000+</span></div>
-<div class="line spec"><span>Кэшбэк</span><i class="dts"></i><span class="val hl-hot">до 10%</span></div>
-<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао GCB 8048</span></div>
+<div class="line"><span>Минимальный депозит</span><span class="big">50 ₽</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Бонус с минималки</span><i class="dts"></i><span class="val hl-gold">200% + 150 FS</span></div>
+<div class="line spec"><span>Вейджер бонуса</span><i class="dts"></i><span class="val hl-neon">x35</span></div>
+<div class="line spec"><span>Способы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · крипта</span></div>
+<div class="line spec"><span>Срок выплаты</span><i class="dts"></i><span class="val hl-neon">до 1 часа</span></div>
+<div class="line spec"><span>Валюты счёта</span><i class="dts"></i><span class="val hl-gold">₽ · USDT</span></div>
+<div class="line spec"><span>Слотов в каталоге</span><i class="dts"></i><span class="val hl-gold">—</span></div>
+<div class="line spec"><span>Кэшбэк</span><i class="dts"></i><span class="val hl-hot">—</span></div>
+<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао</span></div>
 </div>
-<a class="md-btn md-btn-neon" href="/go/vavada" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Vavada</a>
-<div class="foot"><span>СБП от 100 ₽</span><span>Мир · USDT · BTC</span><span>Кюрасао GCB 8048</span></div>
+<a class="md-btn md-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Spinto</a>
+<div class="foot"><span>СБП от 50 ₽</span><span>₽ · USDT</span><span>Кюрасао</span></div>
 <ul class="tguar">
 <li>Депозиты и выводы проверены кассой</li>
 <li>Лицензия сверена по номеру в реестре</li>
@@ -855,19 +858,20 @@ window.addEventListener('load',function(){
 <span class="md-kick">Топ-10 · сентябрь 2026</span>
 <h2>Рейтинг казино с низким депозитом 2026: <span class="g-lime">топ-10 по реальному порогу входа</span></h2>
 </div>
-<p class="rv">Список отранжирован по совокупной оценке, но колонку с порогом мы вынесли на первый план — ради неё вы и открыли страницу. Цифра рядом с брендом — минимальный депозит, который реально прошёл через кассу. Оценка — средневзвешенный балл по семи критериям.</p>
+<p class="rv">Это подборка редакции по совокупности бонусов, скорости выплат и надёжности, но колонку с порогом мы вынесли на первый план — ради неё вы и открыли страницу. Цифра рядом с брендом — минимальный депозит, который реально прошёл через кассу. Оценка — средневзвешенный балл по семи критериям.</p>
 <div class="md-rate">
 <article class="md-card r1 rv">
 <div class="rkw"><span class="md-medal g">1</span></div>
 <div class="md-mid">
-<div class="bn">Vavada</div>
-<span class="bt">Лучшее за — баланс порога и надёжности</span>
-<div class="prm"><span>Вывод <b>от 9 мин (USDT)</b></span><span>Бонус <b>100% + 100 FS</b></span><span>Лиц. <b>Кюрасао</b></span></div>
+<div class="bn">Spinto</div>
+<span class="bt">Лучшее за — бонус 200% и вход от 50 ₽</span>
+<div class="prm"><span>Вывод <b>до 1 ч (СБП/крипта)</b></span><span>Бонус <b>200% + 150 FS</b></span><span>Вейджер <b>x35</b></span></div>
 </div>
 <div class="md-right">
-<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="md-sccol"><span class="md-score">9.6</span><span class="md-sbar"><i data-score="9.6"></i></span></div>
-<a class="md-go" href="/go/vavada" rel="nofollow sponsored">Играть</a>
+<div class="md-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="md-sccol"><span class="md-score">9.8</span><span class="md-sbar"><i data-score="9.8"></i></span></div>
+<a class="md-obz" href="/casino/spinto/">Обзор</a>
+<a class="md-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
 <article class="md-card r2 rv">
@@ -880,24 +884,12 @@ window.addEventListener('load',function(){
 <div class="md-right">
 <div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
 <div class="md-sccol"><span class="md-score">9.4</span><span class="md-sbar"><i data-score="9.4"></i></span></div>
+<a class="md-obz" href="/casino/7k/">Обзор</a>
 <a class="md-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
 <article class="md-card r3 rv">
 <div class="rkw"><span class="md-medal">3</span></div>
-<div class="md-mid">
-<div class="bn">PokerDom <span style="font-weight:600;color:var(--mu);font-size:12px">· самый низкий порог</span></div>
-<span class="bt">Лучшее за — вход всего от 50 ₽</span>
-<div class="prm"><span>Вывод <b>1–48 ч</b></span><span>Бонус <b>100% до 60 000 ₽</b></span><span>Карты РФ <b>напрямую</b></span></div>
-</div>
-<div class="md-right">
-<div class="md-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
-<div class="md-sccol"><span class="md-score">9.3</span><span class="md-sbar"><i data-score="9.3"></i></span></div>
-<a class="md-go" href="/go/pokerdom" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="md-card r4 rv">
-<div class="rkw"><span class="md-medal">4</span></div>
 <div class="md-mid">
 <div class="bn">1win</div>
 <span class="bt">Лучшее за — казино и ставки с одного счёта</span>
@@ -906,63 +898,12 @@ window.addEventListener('load',function(){
 <div class="md-right">
 <div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
 <div class="md-sccol"><span class="md-score">9.2</span><span class="md-sbar"><i data-score="9.2"></i></span></div>
+<a class="md-obz" href="/casino/1win/">Обзор</a>
 <a class="md-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
-<article class="md-card r5 rv">
-<div class="rkw"><span class="md-medal">5</span></div>
-<div class="md-mid">
-<div class="bn">Sol Casino</div>
-<span class="bt">Лучшее за — 7 000+ слотов под маленькую ставку</span>
-<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Кэшбэк <b>до 10%</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
-</div>
-<div class="md-right">
-<div class="md-thr"><div class="n">150 ₽</div><div class="k">депозит</div></div>
-<div class="md-sccol"><span class="md-score">9.0</span><span class="md-sbar"><i data-score="9.0"></i></span></div>
-<a class="md-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="md-card r6 rv">
-<div class="rkw"><span class="md-medal">6</span></div>
-<div class="md-mid">
-<div class="bn">Kent Casino</div>
-<span class="bt">Лучшее за — старт новичка без риска</span>
-<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 250 FS</b></span><span>СБП <b>от 100 ₽</b></span></div>
-</div>
-<div class="md-right">
-<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="md-sccol"><span class="md-score">8.9</span><span class="md-sbar"><i data-score="8.9"></i></span></div>
-<a class="md-go" href="/go/kent" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="md-card r7 rv">
-<div class="rkw"><span class="md-medal">7</span></div>
-<div class="md-mid">
-<div class="bn">Starda</div>
-<span class="bt">Лучшее за — турниры с малым бай-ином</span>
-<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 200 FS</b></span><span>Live <b>Evolution</b></span></div>
-</div>
-<div class="md-right">
-<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="md-sccol"><span class="md-score">8.8</span><span class="md-sbar"><i data-score="8.8"></i></span></div>
-<a class="md-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="md-card r8 rv">
-<div class="rkw"><span class="md-medal">8</span></div>
-<div class="md-mid">
-<div class="bn">Izzi</div>
-<span class="bt">Лучшее за — простой вход и крипту</span>
-<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 50 FS</b></span><span>Регистрация <b>~1 мин</b></span></div>
-</div>
-<div class="md-right">
-<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="md-sccol"><span class="md-score">8.6</span><span class="md-sbar"><i data-score="8.6"></i></span></div>
-<a class="md-go" href="/go/izzi" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="md-card r9 rv">
-<div class="rkw"><span class="md-medal">9</span></div>
+<article class="md-card r4 rv">
+<div class="rkw"><span class="md-medal">4</span></div>
 <div class="md-mid">
 <div class="bn">Legzo</div>
 <span class="bt">Лучшее за — мобильную кассу</span>
@@ -971,11 +912,54 @@ window.addEventListener('load',function(){
 <div class="md-right">
 <div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
 <div class="md-sccol"><span class="md-score">8.5</span><span class="md-sbar"><i data-score="8.5"></i></span></div>
+<a class="md-obz" href="/casino/legzo/">Обзор</a>
 <a class="md-go" href="/go/legzo" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
-<article class="md-card r10 rv">
-<div class="rkw"><span class="md-medal">10</span></div>
+<article class="md-card r5 rv">
+<div class="rkw"><span class="md-medal">5</span></div>
+<div class="md-mid">
+<div class="bn">Starda</div>
+<span class="bt">Лучшее за — турниры с малым бай-ином</span>
+<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 200 FS</b></span><span>Live <b>Evolution</b></span></div>
+</div>
+<div class="md-right">
+<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="md-sccol"><span class="md-score">8.8</span><span class="md-sbar"><i data-score="8.8"></i></span></div>
+<a class="md-obz" href="/casino/starda/">Обзор</a>
+<a class="md-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
+</div>
+</article>
+<article class="md-card r6 rv">
+<div class="rkw"><span class="md-medal">6</span></div>
+<div class="md-mid">
+<div class="bn">Sol Casino</div>
+<span class="bt">Лучшее за — 7 000+ слотов под маленькую ставку</span>
+<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Кэшбэк <b>до 10%</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
+</div>
+<div class="md-right">
+<div class="md-thr"><div class="n">150 ₽</div><div class="k">депозит</div></div>
+<div class="md-sccol"><span class="md-score">9.0</span><span class="md-sbar"><i data-score="9.0"></i></span></div>
+<a class="md-obz" href="/casino/sol/">Обзор</a>
+<a class="md-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
+</div>
+</article>
+<article class="md-card r7 rv">
+<div class="rkw"><span class="md-medal">7</span></div>
+<div class="md-mid">
+<div class="bn">Izzi</div>
+<span class="bt">Лучшее за — простой вход и крипту</span>
+<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 50 FS</b></span><span>Регистрация <b>~1 мин</b></span></div>
+</div>
+<div class="md-right">
+<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="md-sccol"><span class="md-score">8.6</span><span class="md-sbar"><i data-score="8.6"></i></span></div>
+<a class="md-obz" href="/casino/izzi/">Обзор</a>
+<a class="md-go" href="/go/izzi" rel="nofollow sponsored">Играть</a>
+</div>
+</article>
+<article class="md-card r8 rv">
+<div class="rkw"><span class="md-medal">8</span></div>
 <div class="md-mid">
 <div class="bn">Monro</div>
 <span class="bt">Лучшее за — лояльность постоянному игроку</span>
@@ -984,26 +968,70 @@ window.addEventListener('load',function(){
 <div class="md-right">
 <div class="md-thr"><div class="n">150 ₽</div><div class="k">депозит</div></div>
 <div class="md-sccol"><span class="md-score">8.4</span><span class="md-sbar"><i data-score="8.4"></i></span></div>
+<a class="md-obz" href="/casino/monro/">Обзор</a>
 <a class="md-go" href="/go/monro" rel="nofollow sponsored">Играть</a>
+</div>
+</article>
+<article class="md-card r9 rv">
+<div class="rkw"><span class="md-medal">9</span></div>
+<div class="md-mid">
+<div class="bn">Vavada</div>
+<span class="bt">Лучшее за — баланс порога и надёжности</span>
+<div class="prm"><span>Вывод <b>от 9 мин (USDT)</b></span><span>Бонус <b>100% + 100 FS</b></span><span>Лиц. <b>Кюрасао</b></span></div>
+</div>
+<div class="md-right">
+<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="md-sccol"><span class="md-score">9.6</span><span class="md-sbar"><i data-score="9.6"></i></span></div>
+<a class="md-obz" href="/casino/vavada/">Обзор</a>
+<a class="md-go" href="/casino/vavada/">Играть</a>
+</div>
+</article>
+<article class="md-card r10 rv">
+<div class="rkw"><span class="md-medal">10</span></div>
+<div class="md-mid">
+<div class="bn">PokerDom <span style="font-weight:600;color:var(--mu);font-size:12px">· самый низкий порог</span></div>
+<span class="bt">Лучшее за — вход всего от 50 ₽</span>
+<div class="prm"><span>Вывод <b>1–48 ч</b></span><span>Бонус <b>100% до 60 000 ₽</b></span><span>Карты РФ <b>напрямую</b></span></div>
+</div>
+<div class="md-right">
+<div class="md-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="md-sccol"><span class="md-score">9.3</span><span class="md-sbar"><i data-score="9.3"></i></span></div>
+<a class="md-obz" href="/casino/pokerdom/">Обзор</a>
+<a class="md-go" href="/casino/pokerdom/">Играть</a>
+</div>
+</article>
+<article class="md-card r11 rv">
+<div class="rkw"><span class="md-medal">11</span></div>
+<div class="md-mid">
+<div class="bn">Kent Casino</div>
+<span class="bt">Лучшее за — старт новичка без риска</span>
+<div class="prm"><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 250 FS</b></span><span>СБП <b>от 100 ₽</b></span></div>
+</div>
+<div class="md-right">
+<div class="md-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="md-sccol"><span class="md-score">8.9</span><span class="md-sbar"><i data-score="8.9"></i></span></div>
+<a class="md-obz" href="/casino/kent/">Обзор</a>
+<a class="md-go" href="/casino/kent/">Играть</a>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица топ-10 казино по минимальному депозиту</h3>
 <div class="md-tbox md-scroll rv" style="margin:12px 0 0">
 <table class="md-t mfit">
-<caption>Порог входа подтверждён кассой; сортировка — по оценке редакции. Валюта — рубли.</caption>
+<caption>Порог входа подтверждён кассой; порядок — по совокупному приоритету редакции. Валюта — рубли.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Мин. депозит</th><th>Мин. вывод</th><th>Оценка</th><th>Бонус с минималки</th></tr></thead>
 <tbody>
-<tr><td class="md-rub mfit-num" data-label="">1</td><td class="md-bc" data-label="Казино"><span class="md-bn">Vavada</span><span class="md-line2"><span class="md-best" style="--rc:#ffcf3f">Лучшее за — баланс порога и надёжности</span><span class="md-ed">№1</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.6</span></td><td data-label="Бонус с минималки">100% + 100 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">1</td><td class="md-bc" data-label="Казино"><span class="md-bn">Spinto</span><span class="md-line2"><span class="md-best" style="--rc:#ffcf3f">Лучшее за — бонус 200% и вход от 50 ₽</span><span class="md-ed">№1</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-g">50 ₽</span></td><td class="md-min" data-label="Мин. вывод">—</td><td data-label="Оценка"><span class="neon">9.8</span></td><td data-label="Бонус с минималки">200% + 150 FS</td></tr>
 <tr><td class="md-rub mfit-num" data-label="">2</td><td class="md-bc" data-label="Казино"><span class="md-bn">7K Casino</span><span class="md-line2"><span class="md-best" style="--rc:#e6eaf3">Лучшее за — быстрый вывод с минималки</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.4</span></td><td data-label="Бонус с минималки">100% + 100 FS</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">3</td><td class="md-bc" data-label="Казино"><span class="md-bn">PokerDom</span><span class="md-line2"><span class="md-best" style="--rc:#37e0c8">Лучшее за — вход всего от 50 ₽</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-g">50 ₽</span></td><td class="md-min" data-label="Мин. вывод">300 ₽</td><td data-label="Оценка"><span class="neon">9.3</span></td><td data-label="Бонус с минималки">100% до 60 000 ₽</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">4</td><td class="md-bc" data-label="Казино"><span class="md-bn">1win</span><span class="md-line2"><span class="md-best" style="--rc:#b8ff2b">Лучшее за — казино и ставки</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.2</span></td><td data-label="Бонус с минималки">до 500% (от 300 ₽)</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">5</td><td class="md-bc" data-label="Казино"><span class="md-bn">Sol Casino</span><span class="md-line2"><span class="md-best" style="--rc:#ff2e93">Лучшее за — каталог под низкую ставку</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-m">150 ₽</span></td><td class="md-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">9.0</span></td><td data-label="Бонус с минималки">100% + 100 FS</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">6</td><td class="md-bc" data-label="Казино"><span class="md-bn">Kent Casino</span><span class="md-line2"><span class="md-best" style="--rc:#6cc4ff">Лучшее за — старт новичка</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.9</span></td><td data-label="Бонус с минималки">100% + 250 FS</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">7</td><td class="md-bc" data-label="Казино"><span class="md-bn">Starda</span><span class="md-line2"><span class="md-best" style="--rc:#ffa63d">Лучшее за — турниры с малым бай-ином</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.8</span></td><td data-label="Бонус с минималки">100% + 200 FS</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">8</td><td class="md-bc" data-label="Казино"><span class="md-bn">Izzi</span><span class="md-line2"><span class="md-best" style="--rc:#c8ff5a">Лучшее за — простой вход и крипту</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.6</span></td><td data-label="Бонус с минималки">100% + 50 FS</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">9</td><td class="md-bc" data-label="Казино"><span class="md-bn">Legzo</span><span class="md-line2"><span class="md-best" style="--rc:#37e0c8">Лучшее за — мобильную кассу</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.5</span></td><td data-label="Бонус с минималки">100% + 100 FS</td></tr>
-<tr><td class="md-rub mfit-num" data-label="">10</td><td class="md-bc" data-label="Казино"><span class="md-bn">Monro</span><span class="md-line2"><span class="md-best" style="--rc:#ff2e93">Лучшее за — лояльность игроку</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-m">150 ₽</span></td><td class="md-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">8.4</span></td><td data-label="Бонус с минималки">150% + 150 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">3</td><td class="md-bc" data-label="Казино"><span class="md-bn">1win</span><span class="md-line2"><span class="md-best" style="--rc:#b8ff2b">Лучшее за — казино и ставки</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.2</span></td><td data-label="Бонус с минималки">до 500% (от 300 ₽)</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">4</td><td class="md-bc" data-label="Казино"><span class="md-bn">Legzo</span><span class="md-line2"><span class="md-best" style="--rc:#37e0c8">Лучшее за — мобильную кассу</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.5</span></td><td data-label="Бонус с минималки">100% + 100 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">5</td><td class="md-bc" data-label="Казино"><span class="md-bn">Starda</span><span class="md-line2"><span class="md-best" style="--rc:#ffa63d">Лучшее за — турниры с малым бай-ином</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.8</span></td><td data-label="Бонус с минималки">100% + 200 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">6</td><td class="md-bc" data-label="Казино"><span class="md-bn">Sol Casino</span><span class="md-line2"><span class="md-best" style="--rc:#ff2e93">Лучшее за — каталог под низкую ставку</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-m">150 ₽</span></td><td class="md-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">9.0</span></td><td data-label="Бонус с минималки">100% + 100 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">7</td><td class="md-bc" data-label="Казино"><span class="md-bn">Izzi</span><span class="md-line2"><span class="md-best" style="--rc:#c8ff5a">Лучшее за — простой вход и крипту</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.6</span></td><td data-label="Бонус с минималки">100% + 50 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">8</td><td class="md-bc" data-label="Казино"><span class="md-bn">Monro</span><span class="md-line2"><span class="md-best" style="--rc:#ff2e93">Лучшее за — лояльность игроку</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-m">150 ₽</span></td><td class="md-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">8.4</span></td><td data-label="Бонус с минималки">150% + 150 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">9</td><td class="md-bc" data-label="Казино"><span class="md-bn">Vavada</span><span class="md-line2"><span class="md-best" style="--rc:#ffcf3f">Лучшее за — баланс порога и надёжности</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.6</span></td><td data-label="Бонус с минималки">100% + 100 FS</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">10</td><td class="md-bc" data-label="Казино"><span class="md-bn">PokerDom</span><span class="md-line2"><span class="md-best" style="--rc:#37e0c8">Лучшее за — вход всего от 50 ₽</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-g">50 ₽</span></td><td class="md-min" data-label="Мин. вывод">300 ₽</td><td data-label="Оценка"><span class="neon">9.3</span></td><td data-label="Бонус с минималки">100% до 60 000 ₽</td></tr>
+<tr><td class="md-rub mfit-num" data-label="">11</td><td class="md-bc" data-label="Казино"><span class="md-bn">Kent Casino</span><span class="md-line2"><span class="md-best" style="--rc:#6cc4ff">Лучшее за — старт новичка</span></span></td><td data-label="Мин. депозит"><span class="md-pill dep-y">100 ₽</span></td><td class="md-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.9</span></td><td data-label="Бонус с минималки">100% + 250 FS</td></tr>
 </tbody>
 </table>
 </div>

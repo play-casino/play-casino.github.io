@@ -268,6 +268,10 @@
   .av-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(184,255,43,.7);color:#0a1200}
   .av-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .av-go:hover::after{animation:av-shim .85s var(--ez)}
+  .av-acts{display:flex;align-items:center;gap:8px}
+  .av-obz{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);background:rgba(255,255,255,.03);font-weight:800;padding:11px 16px;border-radius:11px;font-size:13.5px;white-space:nowrap;transition:border-color .18s,color .18s,background .18s}
+  .av-obz:hover{border-color:var(--c);color:var(--c);background:rgba(255,255,255,.05)}
+  @media(max-width:420px){.av-acts{flex-direction:column;align-items:stretch;gap:7px}.av-obz,.av-acts .av-go{justify-content:center}}
   .av-card.r1{--c:var(--cyan);--c2:#12a892;--ct:#04231e;background:linear-gradient(120deg,rgba(55,224,200,.1),var(--pan) 72%)}
   .av-card.r2{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
   .av-card.r3{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.09),var(--pan) 72%)}
@@ -750,7 +754,7 @@ window.addEventListener('load',function(){
 <span class="av-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка отдачи кассой · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Игровые автоматы на <span class="g-cyan">реальные деньги</span> — слоты с выводом и <span class="g-neon">честной отдачей</span></h1>
 <p class="av-lead rv" style="--d:.16s">
-          Под слоты на деньги первой в подборке редакция ставит <span class="hl-cyan">7K Casino</span>: оригинальные автоматы <span class="hl-gold">Pragmatic Play</span> и <span class="hl-hot">Nolimit City</span> с проверяемым <b>RTP около 96,5%</b>, вывод выигрыша по СБП и на карту <span class="hl-neon">от 15 минут</span>. Дальше — разбор отдачи по цифрам: где <span class="hl-sky">RTP не режут</span>, какой провайдер честный, как подобрать волатильность под банкролл и куда уходит выигрыш со слота. Все шесть площадок крутят автоматы сертифицированных студий — это и есть разница между честным слотом и «вулкан-подобной» витриной без лицензии.
+          Под слоты на деньги первой в подборке редакция ставит <span class="hl-cyan">Spinto</span>: свежие автоматы <span class="hl-gold">Nolimit City</span> и <span class="hl-hot">Hacksaw</span> с проверяемым <b>RTP около 96%</b>, вывод выигрыша в USDT <span class="hl-neon">минут за сорок</span> и по СБП меньше часа. Дальше — разбор отдачи по цифрам: где <span class="hl-sky">RTP не режут</span>, какой провайдер честный, как подобрать волатильность под банкролл и куда уходит выигрыш со слота. Все шесть площадок крутят автоматы сертифицированных студий — это и есть разница между честным слотом и «вулкан-подобной» витриной без лицензии.
         </p>
 <div aria-hidden="false" class="av-rtpscale rv" style="--d:.2s">
 <div class="z"><div class="amt">&lt; 94%</div><small>отдачу режут · мимо</small></div>
@@ -770,27 +774,27 @@ window.addEventListener('load',function(){
 </div>
 <aside class="av-ticket rv" style="--d:.2s">
 <span class="av-ribbon cyan">Выбор редакции</span>
-<div class="av-chip-oh"><div class="cv">9.9</div><div class="cl">балл из 10</div></div>
+<div class="av-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">RTP</span>
 <div class="tag">Чек редакции · лучший под слоты</div>
-<div class="bn">7K Casino</div>
-<div class="bs">Pragmatic и Nolimit City в оригинале, вывод со слота от 15 минут</div>
-<div class="why"><b>Почему №1:</b> народные автоматы с непорезанным RTP около 96,5% и касса, которая отдаёт занос по СБП в тот же вечер — на малых суммах без верификации.</div>
+<div class="bn">Spinto</div>
+<div class="bs">Nolimit City и Hacksaw в оригинале, самая быстрая касса под слот</div>
+<div class="why"><b>Почему №1:</b> свежие автоматы с непорезанным RTP около 96% и касса, которая отдаёт занос со слота в USDT минут за сорок — на старте без лишней верификации.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line big-l"><span>Отдача хитов (RTP)</span><span class="big">96,5%</span></div>
-<div class="line big-l"><span>Оценка редакции</span><span class="sc">9.9 / 10</span></div>
-<div class="line spec"><span>Провайдеры слотов</span><i class="dts"></i><span class="val hl-cyan">Pragmatic · Nolimit City</span></div>
-<div class="line spec"><span>Хиты в каталоге</span><i class="dts"></i><span class="val hl-gold">Gates · Sweet Bonanza</span></div>
+<div class="line big-l"><span>Отдача хитов (RTP)</span><span class="big">96%</span></div>
+<div class="line big-l"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Провайдеры слотов</span><i class="dts"></i><span class="val hl-cyan">Nolimit City · Hacksaw</span></div>
+<div class="line spec"><span>Хиты в каталоге</span><i class="dts"></i><span class="val hl-gold">Le Bandit · San Quentin</span></div>
 <div class="line spec"><span>Мин. ставка в слоте</span><i class="dts"></i><span class="val hl-neon">от 1 ₽</span></div>
 <div class="line spec"><span>Порог входа</span><i class="dts"></i><span class="val hl-gold">50 ₽</span></div>
-<div class="line spec"><span>Вывод со слота</span><i class="dts"></i><span class="val hl-cyan">СБП · карта · крипта</span></div>
-<div class="line spec"><span>Скорость вывода</span><i class="dts"></i><span class="val hl-neon">от 15 минут</span></div>
-<div class="line spec"><span>Бонус на автоматы</span><i class="dts"></i><span class="val hl-hot">225% + 200 FS</span></div>
+<div class="line spec"><span>Вывод со слота</span><i class="dts"></i><span class="val hl-cyan">USDT · СБП · крипта</span></div>
+<div class="line spec"><span>Скорость вывода</span><i class="dts"></i><span class="val hl-neon">USDT ~40 минут</span></div>
+<div class="line spec"><span>Бонус на автоматы</span><i class="dts"></i><span class="val hl-hot">200% + 150 FS</span></div>
 <div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Curaçao</span></div>
 </div>
-<a class="av-btn av-btn-cyan" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:6px">Крутить слоты в 7K</a>
-<div class="foot"><span>RTP около 96,5%</span><span>Ставка от 1 ₽</span><span>Curaçao</span></div>
+<a class="av-btn av-btn-cyan" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:6px">Крутить слоты в Spinto</a>
+<div class="foot"><span>RTP около 96%</span><span>Ставка от 1 ₽</span><span>Curaçao</span></div>
 <ul class="tguar">
 <li>RTP слотов сверен с данными провайдеров</li>
 <li>Оригинальные версии автоматов, не клоны</li>
@@ -854,23 +858,10 @@ window.addEventListener('load',function(){
 <span class="av-kick">Топ-6 · сентябрь 2026</span>
 <h2>Игровые автоматы на реальные деньги — <span class="g-neon">рейтинг площадок по отдаче и кассе</span></h2>
 </div>
-<p class="rv">Порядок — по совокупной оценке, но веса смещены к отдаче и провайдерам, а не к размеру бонуса. Рядом с брендом — ключевые студии и хиты, ради которых вы и открыли страницу. Что за чем и почему — разбираем в секциях ниже.</p>
+<p class="rv">Это подборка редакции — по совокупности отдачи, провайдеров, скорости вывода со слота и надёжности, а не строго по размеру бонуса или одной цифре. Рядом с брендом — ключевые студии и хиты, ради которых вы и открыли страницу. Что за чем и почему — разбираем в секциях ниже.</p>
 <div class="av-rate">
 <article class="av-card r1 rv">
 <div class="rkw"><span class="av-medal g">1</span></div>
-<div class="av-mid">
-<div class="bn">7K Casino</div>
-<span class="bt">Лучшее за — народные слоты Pragmatic и быстрый вывод</span>
-<div class="prm"><span>Слоты <b>Pragmatic · Nolimit City</b></span><span>Хиты <b>Gates · Sweet Bonanza</b></span><span>Бонус <b>225% + 200 FS</b></span></div>
-</div>
-<div class="av-right">
-<div class="av-rtpbadge"><div class="n">~96,5%</div><div class="k">RTP хитов</div></div>
-<div class="av-sccol"><span class="av-score">9.9</span><span class="av-sbar"><i data-score="9.9"></i></span></div>
-<a class="av-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="av-card r2 rv">
-<div class="rkw"><span class="av-medal">2</span></div>
 <div class="av-mid">
 <div class="bn">Spinto</div>
 <span class="bt">Лучшее за — свежие слоты Hacksaw и Nolimit, самая быстрая касса</span>
@@ -879,7 +870,20 @@ window.addEventListener('load',function(){
 <div class="av-right">
 <div class="av-rtpbadge"><div class="n">~96%</div><div class="k">RTP хитов</div></div>
 <div class="av-sccol"><span class="av-score">9.8</span><span class="av-sbar"><i data-score="9.8"></i></span></div>
-<a class="av-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+<div class="av-acts"><a class="av-obz" href="/casino/spinto/">Обзор</a><a class="av-go" href="/go/spinto" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="av-card r2 rv">
+<div class="rkw"><span class="av-medal">2</span></div>
+<div class="av-mid">
+<div class="bn">7K Casino</div>
+<span class="bt">Лучшее за — народные слоты Pragmatic и быстрый вывод</span>
+<div class="prm"><span>Слоты <b>Pragmatic · Nolimit City</b></span><span>Хиты <b>Gates · Sweet Bonanza</b></span><span>Бонус <b>225% + 200 FS</b></span></div>
+</div>
+<div class="av-right">
+<div class="av-rtpbadge"><div class="n">~96,5%</div><div class="k">RTP хитов</div></div>
+<div class="av-sccol"><span class="av-score">9.9</span><span class="av-sbar"><i data-score="9.9"></i></span></div>
+<div class="av-acts"><a class="av-obz" href="/casino/7k/">Обзор</a><a class="av-go" href="/go/7k" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="av-card r3 rv">
@@ -892,7 +896,7 @@ window.addEventListener('load',function(){
 <div class="av-right">
 <div class="av-rtpbadge"><div class="n">97%</div><div class="k">RTP Lucky Jet</div></div>
 <div class="av-sccol"><span class="av-score">9.7</span><span class="av-sbar"><i data-score="9.7"></i></span></div>
-<a class="av-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<div class="av-acts"><a class="av-obz" href="/casino/1win/">Обзор</a><a class="av-go" href="/go/1win" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="av-card r4 rv">
@@ -905,7 +909,7 @@ window.addEventListener('load',function(){
 <div class="av-right">
 <div class="av-rtpbadge"><div class="n">96,55%</div><div class="k">RTP Dog House</div></div>
 <div class="av-sccol"><span class="av-score">9.6</span><span class="av-sbar"><i data-score="9.6"></i></span></div>
-<a class="av-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+<div class="av-acts"><a class="av-obz" href="/casino/banda/">Обзор</a><a class="av-go" href="/go/banda" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="av-card r5 rv">
@@ -918,7 +922,7 @@ window.addEventListener('load',function(){
 <div class="av-right">
 <div class="av-rtpbadge"><div class="n">96,23%</div><div class="k">RTP Le Bandit</div></div>
 <div class="av-sccol"><span class="av-score">9.5</span><span class="av-sbar"><i data-score="9.5"></i></span></div>
-<a class="av-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+<div class="av-acts"><a class="av-obz" href="/casino/leebet/">Обзор</a><a class="av-go" href="/go/leebet" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="av-card r6 rv">
@@ -931,18 +935,18 @@ window.addEventListener('load',function(){
 <div class="av-right">
 <div class="av-rtpbadge"><div class="n">~96%</div><div class="k">RTP хитов</div></div>
 <div class="av-sccol"><span class="av-score">9.4</span><span class="av-sbar"><i data-score="9.4"></i></span></div>
-<a class="av-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+<div class="av-acts"><a class="av-obz" href="/casino/apex/">Обзор</a><a class="av-go" href="/go/apex" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица: провайдеры, хиты и вывод по каждой площадке</h3>
 <div class="av-tbox av-scroll rv" style="margin:12px 0 0">
 <table class="av-t mfit">
-<caption>Сортировка — по оценке редакции. RTP хитов сверен с данными провайдеров, вывод замерен на реальных заявках.</caption>
+<caption>Подборка редакции — по совокупности отдачи, кассы и надёжности. RTP хитов сверен с данными провайдеров, вывод замерен на реальных заявках.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Слоты и провайдеры</th><th>Ставка</th><th>Вывод со слота</th><th>Оценка</th><th>Бонус на автоматы</th></tr></thead>
 <tbody>
-<tr><td class="av-rub mfit-num" data-label="">1</td><td class="av-bc" data-label="Казино"><span class="av-bn">7K Casino</span><span class="av-line2"><span class="av-best" style="--rc:#37e0c8">Лучшее за — Pragmatic и быстрый вывод</span><span class="av-ed">№1</span></span></td><td data-label="Слоты и провайдеры">Pragmatic, Nolimit City · Gates of Olympus, Sweet Bonanza</td><td class="av-min" data-label="Ставка">от 1 ₽</td><td data-label="Вывод со слота"><span class="av-pill pay">СБП от 15 мин</span></td><td data-label="Оценка"><span class="neon">9.9</span></td><td data-label="Бонус на автоматы">225% + 200 FS</td></tr>
-<tr><td class="av-rub mfit-num" data-label="">2</td><td class="av-bc" data-label="Казино"><span class="av-bn">Spinto</span><span class="av-line2"><span class="av-best" style="--rc:#b8ff2b">Лучшее за — Hacksaw и Nolimit City</span></span></td><td data-label="Слоты и провайдеры">Nolimit City, Hacksaw · Le Bandit, San Quentin</td><td class="av-min" data-label="Ставка">от 1 ₽</td><td data-label="Вывод со слота"><span class="av-pill pay">USDT ~40 мин</span></td><td data-label="Оценка"><span class="neon">9.8</span></td><td data-label="Бонус на автоматы">200% + 150 FS</td></tr>
+<tr><td class="av-rub mfit-num" data-label="">1</td><td class="av-bc" data-label="Казино"><span class="av-bn">Spinto</span><span class="av-line2"><span class="av-best" style="--rc:#b8ff2b">Лучшее за — Hacksaw и Nolimit City</span><span class="av-ed">№1</span></span></td><td data-label="Слоты и провайдеры">Nolimit City, Hacksaw · Le Bandit, San Quentin</td><td class="av-min" data-label="Ставка">от 1 ₽</td><td data-label="Вывод со слота"><span class="av-pill pay">USDT ~40 мин</span></td><td data-label="Оценка"><span class="neon">9.8</span></td><td data-label="Бонус на автоматы">200% + 150 FS</td></tr>
+<tr><td class="av-rub mfit-num" data-label="">2</td><td class="av-bc" data-label="Казино"><span class="av-bn">7K Casino</span><span class="av-line2"><span class="av-best" style="--rc:#37e0c8">Лучшее за — Pragmatic и быстрый вывод</span></span></td><td data-label="Слоты и провайдеры">Pragmatic, Nolimit City · Gates of Olympus, Sweet Bonanza</td><td class="av-min" data-label="Ставка">от 1 ₽</td><td data-label="Вывод со слота"><span class="av-pill pay">СБП от 15 мин</span></td><td data-label="Оценка"><span class="neon">9.9</span></td><td data-label="Бонус на автоматы">225% + 200 FS</td></tr>
 <tr><td class="av-rub mfit-num" data-label="">3</td><td class="av-bc" data-label="Казино"><span class="av-bn">1win</span><span class="av-line2"><span class="av-best" style="--rc:#ffcf3f">Лучшее за — каталог 12 000+ и краш</span></span></td><td data-label="Слоты и провайдеры">Pragmatic, Evolution · Lucky Jet, Gates of Olympus</td><td class="av-min" data-label="Ставка">от 1 ₽</td><td data-label="Вывод со слота"><span class="av-pill pay">СБП · крипта</span></td><td data-label="Оценка"><span class="neon">9.7</span></td><td data-label="Бонус на автоматы">до 500% (4 депозита)</td></tr>
 <tr><td class="av-rub mfit-num" data-label="">4</td><td class="av-bc" data-label="Казино"><span class="av-bn">Banda</span><span class="av-line2"><span class="av-best" style="--rc:#ff2e93">Лучшее за — 500 FS и турниры</span></span></td><td data-label="Слоты и провайдеры">Pragmatic · The Dog House · 500 FS на старте</td><td class="av-min" data-label="Ставка">от 1 ₽</td><td data-label="Вывод со слота"><span class="av-pill pay">карта · крипта</span></td><td data-label="Оценка"><span class="neon">9.6</span></td><td data-label="Бонус на автоматы">100% + 500 FS</td></tr>
 <tr><td class="av-rub mfit-num" data-label="">5</td><td class="av-bc" data-label="Казино"><span class="av-bn">Leebet</span><span class="av-line2"><span class="av-best" style="--rc:#6cc4ff">Лучшее за — вывод слота в USDT</span></span></td><td data-label="Слоты и провайдеры">Hacksaw, Pragmatic · Le Bandit · упор на крипту</td><td class="av-min" data-label="Ставка">от 1 ₽</td><td data-label="Вывод со слота"><span class="av-pill pay">USDT ~20 мин</span></td><td data-label="Оценка"><span class="neon">9.5</span></td><td data-label="Бонус на автоматы">150% до 1000 USDT</td></tr>
@@ -1285,23 +1289,23 @@ window.addEventListener('load',function(){
 </div>
 <div class="av-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-cyan">1. 7K Casino <span>Pragmatic и Nolimit City в оригинале</span></div><div class="sc">9.9 / 10</div></div>
-<p>Под слоты это первая рекомендация. В каталоге живые Pragmatic Play и Nolimit City — Gates of Olympus, Sweet Bonanza, The Dog House идут в оригинальных версиях с заявленным RTP около 96,5%, а не в урезанном режиме. Gates of Olympus по 20 ₽ за спин: бонусная игра купилась честно, занос вывели по СБП за 17 минут. На малых суммах KYC не спрашивают — выигрыш не буксует на верификации. Кэшбэк до 20% по понедельникам добирает проигрыш на автоматах.</p>
-<div class="av-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Pragmatic и Nolimit City в оригинале, RTP около 96,5%</li><li>выигрыш со слота уходит по СБП и карте от 15 минут</li><li>минимальная ставка от 1 ₽ — растянуть 50 ₽ на 50 спинов</li><li>кэшбэк до 20% по понедельникам</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>на вывод по карте в час пик до 2 часов</li><li>бонусные средства нельзя тронуть до закрытия отыгрыша</li></ul></div>
-</div>
-<div class="av-facts"><span class="thr">Порог: 50 ₽</span><span>Вывод: <b>от 15 мин</b></span><span>Бонус: <b>225% + 200 FS</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="av-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-neon">2. Spinto <span>Hacksaw и Nolimit City, быстрая касса</span></div><div class="sc">9.8 / 10</div></div>
+<div class="rh"><div class="nm c-cyan">1. Spinto <span>Hacksaw и Nolimit City, быстрая касса</span></div><div class="sc">9.8 / 10</div></div>
 <p>Spinto собирает полку под тех, кто устал от Gates of Olympus. Здесь Nolimit City и Hacksaw — Le Bandit, San Quentin, слоты с высокой волатильностью и механикой xWays. RTP San Quentin около 96%, честный, версии непорезанные. Площадка запущена в 2026-м, длинной истории выплат нет, зато касса летает: USDT дошёл минут за сорок, СБП меньше часа. Старт 200% и 150 фриспинов, порог 50 ₽ — банкролл под хай-вол растягивается.</p>
 <div class="av-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Nolimit City и Hacksaw — редкие механики, не только Pragmatic</li><li>RTP слотов честный, около 96%</li><li>минимальная верификация на старте</li><li>USDT около 40 минут, СБП меньше часа</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>площадка молодая — многолетней статистики выплат ещё нет</li><li>высокая волатильность Nolimit съедает банкролл быстрее</li></ul></div>
 </div>
 <div class="av-facts"><span class="thr">Порог: 50 ₽</span><span>Вывод: <b>USDT ~40 мин</b></span><span>Бонус: <b>200% + 150 FS</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="av-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-neon">2. 7K Casino <span>Pragmatic и Nolimit City в оригинале</span></div><div class="sc">9.9 / 10</div></div>
+<p>Под слоты это одна из первых рекомендаций. В каталоге живые Pragmatic Play и Nolimit City — Gates of Olympus, Sweet Bonanza, The Dog House идут в оригинальных версиях с заявленным RTP около 96,5%, а не в урезанном режиме. Gates of Olympus по 20 ₽ за спин: бонусная игра купилась честно, занос вывели по СБП за 17 минут. На малых суммах KYC не спрашивают — выигрыш не буксует на верификации. Кэшбэк до 20% по понедельникам добирает проигрыш на автоматах.</p>
+<div class="av-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Pragmatic и Nolimit City в оригинале, RTP около 96,5%</li><li>выигрыш со слота уходит по СБП и карте от 15 минут</li><li>минимальная ставка от 1 ₽ — растянуть 50 ₽ на 50 спинов</li><li>кэшбэк до 20% по понедельникам</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>на вывод по карте в час пик до 2 часов</li><li>бонусные средства нельзя тронуть до закрытия отыгрыша</li></ul></div>
+</div>
+<div class="av-facts"><span class="thr">Порог: 50 ₽</span><span>Вывод: <b>от 15 мин</b></span><span>Бонус: <b>225% + 200 FS</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
 </div>
 <div class="av-rev rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1559,8 +1563,8 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: провайдеры и хиты, реальный RTP версий, скорость вывода со слота по замерам, условия бонуса и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="av-brands rv" id="brandsGrid"></div>
 <ul class="av-seo-links">
-<li><a href="/casino/7k">Обзор казино 7K Casino — Pragmatic и Nolimit City</a></li>
 <li><a href="/casino/spinto">Обзор казино Spinto — Hacksaw и Nolimit City</a></li>
+<li><a href="/casino/7k">Обзор казино 7K Casino — Pragmatic и Nolimit City</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — каталог 12 000+ и краш</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — 500 фриспинов на слоты</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — слоты и вывод в крипте</a></li>
@@ -1643,8 +1647,8 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"7K Casino", c:"#37e0c8", c2:"#12a892", s:"9.9", d:"Pragmatic и Nolimit City · вывод от 15 мин", h:"/casino/7k"},
     {n:"Spinto",    c:"#b8ff2b", c2:"#8fd400", s:"9.8", d:"Hacksaw и Nolimit · самая быстрая касса",  h:"/casino/spinto"},
+    {n:"7K Casino", c:"#37e0c8", c2:"#12a892", s:"9.9", d:"Pragmatic и Nolimit City · вывод от 15 мин", h:"/casino/7k"},
     {n:"1win",      c:"#ffcf3f", c2:"#e0952f", s:"9.7", d:"каталог 12 000+ игр и краш Lucky Jet",     h:"/casino/1win"},
     {n:"Banda",     c:"#ff2e93", c2:"#c81f6f", s:"9.6", d:"500 фриспинов и турниры по слотам",        h:"/casino/banda"},
     {n:"Leebet",    c:"#6cc4ff", c2:"#2a86e0", s:"9.5", d:"слоты Hacksaw · вывод в USDT ~20 мин",      h:"/casino/leebet"},
@@ -1780,8 +1784,8 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 6,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
         {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
         {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
         {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},

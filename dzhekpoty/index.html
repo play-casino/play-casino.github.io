@@ -265,6 +265,8 @@
   .jp-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(255,207,63,.7);color:#231600}
   .jp-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .jp-go:hover::after{animation:jp-shim .85s var(--ez)}
+  .jp-go2{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);background:rgba(255,255,255,.03);font-weight:800;padding:10px 15px;border-radius:11px;font-size:13.5px;white-space:nowrap;transition:border-color .18s,color .18s,transform .18s}
+  .jp-go2:hover{border-color:color-mix(in srgb,var(--c) 60%,var(--hair2));color:color-mix(in srgb,var(--c) 70%,#eef0fb);transform:translateY(-2px)}
   .jp-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .jp-card.r2{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
   .jp-card.r3{--c:#f0a35a;--c2:#c9752e;--ct:#2a1600;background:linear-gradient(120deg,rgba(240,163,90,.1),var(--pan) 72%)}
@@ -275,9 +277,10 @@
   .jp-card.r8{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
   .jp-card.r9{--c:var(--amber);--c2:#e07a12;--ct:#2a1600}
   .jp-card.r10{--c:#c8ff5a;--c2:#8fd400;--ct:#0a1200}
+  .jp-card.r11{--c:#8a93b5;--c2:#5a6180;--ct:#0a0d16}
   @media(max-width:760px){
     .jp-card{grid-template-columns:48px 1fr;gap:12px}
-    .jp-right{grid-column:1 / -1;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
+    .jp-right{grid-column:1 / -1;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
   }
   .jp-note{font-size:13px;color:var(--mu);margin:12px 0 0}
 
@@ -383,6 +386,7 @@
   .jp-rev .rh .nm.c-viol{--nc:var(--viol)}
   .jp-rev .rh .nm.c-hot{--nc:var(--hot)}
   .jp-rev .rh .nm.c-cyan{--nc:var(--cyan)}
+  .jp-rev .rh .nm.c-sky{--nc:var(--sky)}
   .jp-rev .rh .nm span{font-family:"Manrope",sans-serif;font-size:12.5px;font-weight:600;color:var(--mu);margin-left:8px;text-shadow:none}
   .jp-rev .rh .sc{font-family:"Unbounded",sans-serif;font-weight:800;font-size:17px;color:var(--gold)}
   .jp-rev>p{margin:14px 0 0;color:#d3d7ee;position:relative;z-index:1}
@@ -708,7 +712,7 @@ window.addEventListener('load',function(){
 <span class="jp-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка джекпот-сетей · обновлено 6 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Казино с <span class="g-viol">джекпотами</span>: где реально выпадают <span class="g-gold">крупные прогрессивные</span> банки и как поймать Mega (Мега) в <span class="g-hot">2026</span></h1>
 <p class="jp-lead rv" style="--d:.16s">
-          Ответ сразу: лучший баланс джекпот-сетей и честной кассы редакция подтвердила у <span class="hl-viol">Vavada</span> — на борту прогрессивные сети <b>Mega Moolah (Мега Мула)</b> и <b>Pragmatic Drops &amp; Wins (Дропс энд Уинс)</b>. Прогрессивный джекпот (progressive jackpot — растущий банк) собирается с каждой ставки по всей сети, сетевой (networked — общий пул на много казино) бьёт рекорды за €10 млн, а Daily Drops (Дейли Дропс — ежедневные розыгрыши) падают гарантированно по таймеру. Ниже — рейтинг из 10 казино с джекпот-слотами, разбор видов джекпотов и честные шансы.
+          Ответ сразу: лучший баланс джекпот-сетей и честной кассы редакция подтвердила у <span class="hl-viol">Vavada</span> — на борту прогрессивные сети <b>Mega Moolah (Мега Мула)</b> и <b>Pragmatic Drops &amp; Wins (Дропс энд Уинс)</b>. Прогрессивный джекпот (progressive jackpot — растущий банк) собирается с каждой ставки по всей сети, сетевой (networked — общий пул на много казино) бьёт рекорды за €10 млн, а Daily Drops (Дейли Дропс — ежедневные розыгрыши) падают гарантированно по таймеру. Ниже — рейтинг из 11 казино с джекпот-слотами, разбор видов джекпотов и честные шансы.
         </p>
 <div aria-hidden="false" class="jp-tiers rv" style="--d:.2s">
 <div class="tier"><div class="tn">Mini · Мини</div><div class="amt">×20</div><small>от ставки, часто</small></div>
@@ -749,7 +753,7 @@ window.addEventListener('load',function(){
 <div class="line spec"><span>Валюты счёта</span><i class="dts"></i><span class="val hl-gold">₽ · USDT · BTC</span></div>
 <div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао GCB 8048</span></div>
 </div>
-<a class="jp-btn jp-btn-neon" href="/go/vavada" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Vavada</a>
+<a class="jp-btn jp-btn-neon" href="/casino/vavada/" style="width:100%;margin-top:12px">Обзор Vavada</a>
 <div class="foot"><span>Mega Moolah · WowPot</span><span>Drops &amp; Wins</span><span>Кюрасао GCB 8048</span></div>
 <ul class="tguar">
 <li>Джекпот-сети сверены по провайдерам</li>
@@ -764,7 +768,7 @@ window.addEventListener('load',function(){
 <section class="jp-strip">
 <div class="jp-shell">
 <div class="u"><span aria-hidden="true" class="wm">18</span><div class="v" data-count="18" data-suffix=",9M €">18,9M €</div><div class="l">рекорд Mega Moolah</div></div>
-<div class="u"><span aria-hidden="true" class="wm">10</span><div class="v" data-count="10">10</div><div class="l">казино в рейтинге</div></div>
+<div class="u"><span aria-hidden="true" class="wm">11</span><div class="v" data-count="11">11</div><div class="l">казино в рейтинге</div></div>
 <div class="u"><span aria-hidden="true" class="wm">4</span><div class="v" data-count="4">4</div><div class="l">вида джекпотов</div></div>
 <div class="u"><span aria-hidden="true" class="wm">72</span><div class="v" data-count="72">72</div><div class="l">джекпот-слота проверено</div></div>
 </div>
@@ -811,65 +815,27 @@ window.addEventListener('load',function(){
 <!-- ===== H2 #2 rating ===== -->
 <section class="jp-sect" id="rating">
 <div class="jp-sh rv">
-<span class="jp-kick">Топ-10 · сентябрь 2026</span>
-<h2>Рейтинг казино с джекпотами 2026: <span class="g-lime">топ-10, где выпадают крупные банки</span></h2>
+<span class="jp-kick">Топ-11 · сентябрь 2026</span>
+<h2>Рейтинг казино с джекпотами 2026: <span class="g-lime">топ-11, где выпадают крупные банки</span></h2>
 </div>
-<p class="rv">Список отранжирован по совокупной оценке, но колонку с джекпот-сетью мы вынесли на первый план — ради неё вы и открыли страницу. Ярлык рядом с брендом — флагманская джекпот-сеть, доступ к которой редакция проверила в каталоге. Оценка — средневзвешенный балл по семи критериям.</p>
+<p class="rv">Это подборка редакции по совокупности бонусов, скорости выплат и надёжности площадок, а колонку с джекпот-сетью мы вынесли на первый план — ради неё вы и открыли страницу. Ярлык рядом с брендом — флагманская джекпот-сеть, доступ к которой редакция проверила в каталоге. Оценка рядом — средневзвешенный балл каждой площадки по семи критериям, а не порядок в списке.</p>
 <div class="jp-rate">
 <article class="jp-card r1 rv">
 <div class="rkw"><span class="jp-medal g">1</span></div>
 <div class="jp-mid">
-<div class="bn">Vavada</div>
-<span class="bt">Лучшее за — сеть Mega Moolah и Drops &amp; Wins</span>
-<div class="prm"><span>Сети <b>Mega Moolah · WowPot</b></span><span>Джекпот-слотов <b>180+</b></span><span>Вывод <b>от 9 мин</b></span></div>
+<div class="bn">Spinto</div>
+<span class="bt">Лучшее за — бонус 200% и быстрые выплаты</span>
+<div class="prm"><span>Бонус <b>200% + 150 FS</b></span><span>Мин. депозит <b>50 ₽</b></span><span>Вейджер <b>x35</b></span></div>
 </div>
 <div class="jp-right">
-<div class="jp-pool"><div class="n">Mega Moolah</div><div class="k">джекпот-сеть</div></div>
-<div class="jp-sccol"><span class="jp-score">9.5</span><span class="jp-sbar"><i data-score="9.5"></i></span></div>
-<a class="jp-go" href="/go/vavada" rel="nofollow sponsored">Играть</a>
+<div class="jp-pool"><div class="n">Прогрессив</div><div class="k">джекпоты + дропы</div></div>
+<div class="jp-sccol"><span class="jp-score">9.8</span><span class="jp-sbar"><i data-score="9.8"></i></span></div>
+<a class="jp-go2" href="/casino/spinto/">Обзор</a>
+<a class="jp-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
 <article class="jp-card r2 rv">
 <div class="rkw"><span class="jp-medal">2</span></div>
-<div class="jp-mid">
-<div class="bn">Sol Casino</div>
-<span class="bt">Лучшее за — 7 000+ слотов и ежедневные дропы</span>
-<div class="prm"><span>Сеть <b>Drops &amp; Wins</b></span><span>Джекпот-слотов <b>150+</b></span><span>Кэшбэк <b>до 10%</b></span></div>
-</div>
-<div class="jp-right">
-<div class="jp-pool"><div class="n">Drops &amp; Wins</div><div class="k">джекпот-сеть</div></div>
-<div class="jp-sccol"><span class="jp-score">9.3</span><span class="jp-sbar"><i data-score="9.3"></i></span></div>
-<a class="jp-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="jp-card r3 rv">
-<div class="rkw"><span class="jp-medal">3</span></div>
-<div class="jp-mid">
-<div class="bn">JoyCasino</div>
-<span class="bt">Лучшее за — прогрессивы Playtech Age of the Gods</span>
-<div class="prm"><span>Сеть <b>Age of the Gods</b></span><span>Провайдер <b>Playtech</b></span><span>Live <b>Evolution</b></span></div>
-</div>
-<div class="jp-right">
-<div class="jp-pool"><div class="n">Age of Gods</div><div class="k">джекпот-сеть</div></div>
-<div class="jp-sccol"><span class="jp-score">9.2</span><span class="jp-sbar"><i data-score="9.2"></i></span></div>
-<a class="jp-go" href="/go/joycasino" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="jp-card r4 rv">
-<div class="rkw"><span class="jp-medal">4</span></div>
-<div class="jp-mid">
-<div class="bn">1win</div>
-<span class="bt">Лучшее за — джекпот-слоты и краш в одном счёте</span>
-<div class="prm"><span>Сеть <b>Drops &amp; Wins</b></span><span>Крипта <b>USDT/BTC</b></span><span>Бонус <b>до 500%</b></span></div>
-</div>
-<div class="jp-right">
-<div class="jp-pool"><div class="n">Drops &amp; Wins</div><div class="k">джекпот-сеть</div></div>
-<div class="jp-sccol"><span class="jp-score">9.1</span><span class="jp-sbar"><i data-score="9.1"></i></span></div>
-<a class="jp-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="jp-card r5 rv">
-<div class="rkw"><span class="jp-medal">5</span></div>
 <div class="jp-mid">
 <div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — быстрый вывод крупного выигрыша</span>
@@ -878,24 +844,26 @@ window.addEventListener('load',function(){
 <div class="jp-right">
 <div class="jp-pool"><div class="n">Hold &amp; Win</div><div class="k">джекпот-механика</div></div>
 <div class="jp-sccol"><span class="jp-score">9.0</span><span class="jp-sbar"><i data-score="9.0"></i></span></div>
+<a class="jp-go2" href="/casino/7k/">Обзор</a>
 <a class="jp-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
-<article class="jp-card r6 rv">
-<div class="rkw"><span class="jp-medal">6</span></div>
+<article class="jp-card r3 rv">
+<div class="rkw"><span class="jp-medal">3</span></div>
 <div class="jp-mid">
-<div class="bn">PokerDom</div>
-<span class="bt">Лучшее за — собственные локальные джекпоты</span>
-<div class="prm"><span>Джекпот <b>локальный</b></span><span>Покер-рум <b>свой</b></span><span>Карты РФ <b>напрямую</b></span></div>
+<div class="bn">1win</div>
+<span class="bt">Лучшее за — джекпот-слоты и краш в одном счёте</span>
+<div class="prm"><span>Сеть <b>Drops &amp; Wins</b></span><span>Крипта <b>USDT/BTC</b></span><span>Бонус <b>до 500%</b></span></div>
 </div>
 <div class="jp-right">
-<div class="jp-pool"><div class="n">Локальный</div><div class="k">тип джекпота</div></div>
-<div class="jp-sccol"><span class="jp-score">8.9</span><span class="jp-sbar"><i data-score="8.9"></i></span></div>
-<a class="jp-go" href="/go/pokerdom" rel="nofollow sponsored">Играть</a>
+<div class="jp-pool"><div class="n">Drops &amp; Wins</div><div class="k">джекпот-сеть</div></div>
+<div class="jp-sccol"><span class="jp-score">9.1</span><span class="jp-sbar"><i data-score="9.1"></i></span></div>
+<a class="jp-go2" href="/casino/1win/">Обзор</a>
+<a class="jp-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
-<article class="jp-card r7 rv">
-<div class="rkw"><span class="jp-medal">7</span></div>
+<article class="jp-card r4 rv">
+<div class="rkw"><span class="jp-medal">4</span></div>
 <div class="jp-mid">
 <div class="bn">Rox Casino</div>
 <span class="bt">Лучшее за — сетевой джекпот WowPot</span>
@@ -904,24 +872,12 @@ window.addEventListener('load',function(){
 <div class="jp-right">
 <div class="jp-pool"><div class="n">WowPot</div><div class="k">джекпот-сеть</div></div>
 <div class="jp-sccol"><span class="jp-score">8.8</span><span class="jp-sbar"><i data-score="8.8"></i></span></div>
+<a class="jp-go2" href="/casino/rox/">Обзор</a>
 <a class="jp-go" href="/go/rox" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
-<article class="jp-card r8 rv">
-<div class="rkw"><span class="jp-medal">8</span></div>
-<div class="jp-mid">
-<div class="bn">Kent Casino</div>
-<span class="bt">Лучшее за — ежедневные дропы для новичка</span>
-<div class="prm"><span>Сеть <b>Drops &amp; Wins</b></span><span>Бонус <b>100% + 250 FS</b></span><span>СБП <b>от 100 ₽</b></span></div>
-</div>
-<div class="jp-right">
-<div class="jp-pool"><div class="n">Drops &amp; Wins</div><div class="k">джекпот-сеть</div></div>
-<div class="jp-sccol"><span class="jp-score">8.7</span><span class="jp-sbar"><i data-score="8.7"></i></span></div>
-<a class="jp-go" href="/go/kent" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="jp-card r9 rv">
-<div class="rkw"><span class="jp-medal">9</span></div>
+<article class="jp-card r5 rv">
+<div class="rkw"><span class="jp-medal">5</span></div>
 <div class="jp-mid">
 <div class="bn">Starda</div>
 <span class="bt">Лучшее за — Hold &amp; Win джекпоты и турниры</span>
@@ -930,11 +886,26 @@ window.addEventListener('load',function(){
 <div class="jp-right">
 <div class="jp-pool"><div class="n">Hold &amp; Win</div><div class="k">джекпот-механика</div></div>
 <div class="jp-sccol"><span class="jp-score">8.6</span><span class="jp-sbar"><i data-score="8.6"></i></span></div>
+<a class="jp-go2" href="/casino/starda/">Обзор</a>
 <a class="jp-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
-<article class="jp-card r10 rv">
-<div class="rkw"><span class="jp-medal">10</span></div>
+<article class="jp-card r6 rv">
+<div class="rkw"><span class="jp-medal">6</span></div>
+<div class="jp-mid">
+<div class="bn">Sol Casino</div>
+<span class="bt">Лучшее за — 7 000+ слотов и ежедневные дропы</span>
+<div class="prm"><span>Сеть <b>Drops &amp; Wins</b></span><span>Джекпот-слотов <b>150+</b></span><span>Кэшбэк <b>до 10%</b></span></div>
+</div>
+<div class="jp-right">
+<div class="jp-pool"><div class="n">Drops &amp; Wins</div><div class="k">джекпот-сеть</div></div>
+<div class="jp-sccol"><span class="jp-score">9.3</span><span class="jp-sbar"><i data-score="9.3"></i></span></div>
+<a class="jp-go2" href="/casino/sol/">Обзор</a>
+<a class="jp-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
+</div>
+</article>
+<article class="jp-card r7 rv">
+<div class="rkw"><span class="jp-medal">7</span></div>
 <div class="jp-mid">
 <div class="bn">Monro</div>
 <span class="bt">Лучшее за — кэшбэк плюс ежедневные дропы</span>
@@ -943,26 +914,84 @@ window.addEventListener('load',function(){
 <div class="jp-right">
 <div class="jp-pool"><div class="n">Drops &amp; Wins</div><div class="k">джекпот-сеть</div></div>
 <div class="jp-sccol"><span class="jp-score">8.5</span><span class="jp-sbar"><i data-score="8.5"></i></span></div>
+<a class="jp-go2" href="/casino/monro/">Обзор</a>
 <a class="jp-go" href="/go/monro" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
+<article class="jp-card r8 rv">
+<div class="rkw"><span class="jp-medal">8</span></div>
+<div class="jp-mid">
+<div class="bn">Vavada</div>
+<span class="bt">Лучшее за — сеть Mega Moolah и Drops &amp; Wins</span>
+<div class="prm"><span>Сети <b>Mega Moolah · WowPot</b></span><span>Джекпот-слотов <b>180+</b></span><span>Вывод <b>от 9 мин</b></span></div>
 </div>
-<h3 class="rv">Полная таблица топ-10 казино с джекпот слотами</h3>
+<div class="jp-right">
+<div class="jp-pool"><div class="n">Mega Moolah</div><div class="k">джекпот-сеть</div></div>
+<div class="jp-sccol"><span class="jp-score">9.5</span><span class="jp-sbar"><i data-score="9.5"></i></span></div>
+<a class="jp-go2" href="/casino/vavada/">Обзор</a>
+<a class="jp-go" href="/casino/vavada/">Играть</a>
+</div>
+</article>
+<article class="jp-card r9 rv">
+<div class="rkw"><span class="jp-medal">9</span></div>
+<div class="jp-mid">
+<div class="bn">JoyCasino</div>
+<span class="bt">Лучшее за — прогрессивы Playtech Age of the Gods</span>
+<div class="prm"><span>Сеть <b>Age of the Gods</b></span><span>Провайдер <b>Playtech</b></span><span>Live <b>Evolution</b></span></div>
+</div>
+<div class="jp-right">
+<div class="jp-pool"><div class="n">Age of Gods</div><div class="k">джекпот-сеть</div></div>
+<div class="jp-sccol"><span class="jp-score">9.2</span><span class="jp-sbar"><i data-score="9.2"></i></span></div>
+<a class="jp-go2" href="/casino/joycasino/">Обзор</a>
+<a class="jp-go" href="/casino/joycasino/">Играть</a>
+</div>
+</article>
+<article class="jp-card r10 rv">
+<div class="rkw"><span class="jp-medal">10</span></div>
+<div class="jp-mid">
+<div class="bn">PokerDom</div>
+<span class="bt">Лучшее за — собственные локальные джекпоты</span>
+<div class="prm"><span>Джекпот <b>локальный</b></span><span>Покер-рум <b>свой</b></span><span>Карты РФ <b>напрямую</b></span></div>
+</div>
+<div class="jp-right">
+<div class="jp-pool"><div class="n">Локальный</div><div class="k">тип джекпота</div></div>
+<div class="jp-sccol"><span class="jp-score">8.9</span><span class="jp-sbar"><i data-score="8.9"></i></span></div>
+<a class="jp-go2" href="/casino/pokerdom/">Обзор</a>
+<a class="jp-go" href="/casino/pokerdom/">Играть</a>
+</div>
+</article>
+<article class="jp-card r11 rv">
+<div class="rkw"><span class="jp-medal">11</span></div>
+<div class="jp-mid">
+<div class="bn">Kent Casino</div>
+<span class="bt">Лучшее за — ежедневные дропы для новичка</span>
+<div class="prm"><span>Сеть <b>Drops &amp; Wins</b></span><span>Бонус <b>100% + 250 FS</b></span><span>СБП <b>от 100 ₽</b></span></div>
+</div>
+<div class="jp-right">
+<div class="jp-pool"><div class="n">Drops &amp; Wins</div><div class="k">джекпот-сеть</div></div>
+<div class="jp-sccol"><span class="jp-score">8.7</span><span class="jp-sbar"><i data-score="8.7"></i></span></div>
+<a class="jp-go2" href="/casino/kent/">Обзор</a>
+<a class="jp-go" href="/casino/kent/">Играть</a>
+</div>
+</article>
+</div>
+<h3 class="rv">Полная таблица топ-11 казино с джекпот слотами</h3>
 <div class="jp-tbox jp-scroll rv" style="margin:12px 0 0">
 <table class="jp-t mfit">
-<caption>Доступ к джекпот-сетям подтверждён в каталоге; сортировка — по оценке редакции.</caption>
+<caption>Доступ к джекпот-сетям подтверждён в каталоге; порядок — подборка редакции, оценка приведена по каждой площадке.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Джекпот-сеть</th><th>Тип джекпота</th><th>Оценка</th><th>Флагман-слот</th></tr></thead>
 <tbody>
-<tr><td class="jp-rub mfit-num" data-label="">1</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Vavada</span><span class="jp-line2"><span class="jp-best" style="--rc:#ffcf3f">Лучшее за — Mega Moolah и Drops &amp; Wins</span><span class="jp-ed">№1</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-net">Mega Moolah</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-prog">прогрессивный</span></td><td data-label="Оценка"><span class="viol">9.5</span></td><td data-label="Флагман-слот">Mega Moolah</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">2</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Sol Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#e6eaf3">Лучшее за — дропы и каталог</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">9.3</span></td><td data-label="Флагман-слот">Gates of Olympus</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">3</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">JoyCasino</span><span class="jp-line2"><span class="jp-best" style="--rc:#f0a35a">Лучшее за — прогрессивы Playtech</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-net">Age of the Gods</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-prog">прогрессивный</span></td><td data-label="Оценка"><span class="viol">9.2</span></td><td data-label="Флагман-слот">Age of the Gods</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">4</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">1win</span><span class="jp-line2"><span class="jp-best" style="--rc:#a879ff">Лучшее за — джекпот-слоты и краш</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">9.1</span></td><td data-label="Флагман-слот">Sugar Rush 1000</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">5</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">7K Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#ff2e93">Лучшее за — быстрый вывод</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-fix">Hold &amp; Win</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-loc">локальный</span></td><td data-label="Оценка"><span class="viol">9.0</span></td><td data-label="Флагман-слот">Coin UP: Hot Fire</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">6</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">PokerDom</span><span class="jp-line2"><span class="jp-best" style="--rc:#37e0c8">Лучшее за — свои джекпоты</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-loc">Локальная</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-loc">локальный</span></td><td data-label="Оценка"><span class="viol">8.9</span></td><td data-label="Флагман-слот">Собственные</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">7</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Rox Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#6cc4ff">Лучшее за — сеть WowPot</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-net">WowPot</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-prog">прогрессивный</span></td><td data-label="Оценка"><span class="viol">8.8</span></td><td data-label="Флагман-слот">Book of Atem WowPot</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">8</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Kent Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#b8ff2b">Лучшее за — дропы новичку</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">8.7</span></td><td data-label="Флагман-слот">Big Bass Bonanza</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">9</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Starda</span><span class="jp-line2"><span class="jp-best" style="--rc:#ffa63d">Лучшее за — Hold &amp; Win</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-fix">Hold &amp; Win</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-loc">локальный</span></td><td data-label="Оценка"><span class="viol">8.6</span></td><td data-label="Флагман-слот">3 Coin Volcanoes</td></tr>
-<tr><td class="jp-rub mfit-num" data-label="">10</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Monro</span><span class="jp-line2"><span class="jp-best" style="--rc:#c8ff5a">Лучшее за — кэшбэк и дропы</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">8.5</span></td><td data-label="Флагман-слот">Aztec Fire 2</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">1</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Spinto</span><span class="jp-line2"><span class="jp-best" style="--rc:#ffcf3f">Лучшее за — бонус 200% и быстрые выплаты</span><span class="jp-ed">№1</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-prog">прогрессивы</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">джекпоты + дропы</span></td><td data-label="Оценка"><span class="viol">9.8</span></td><td data-label="Флагман-слот">Jackpot-подборка</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">2</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">7K Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#e6eaf3">Лучшее за — быстрый вывод</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-fix">Hold &amp; Win</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-loc">локальный</span></td><td data-label="Оценка"><span class="viol">9.0</span></td><td data-label="Флагман-слот">Coin UP: Hot Fire</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">3</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">1win</span><span class="jp-line2"><span class="jp-best" style="--rc:#f0a35a">Лучшее за — джекпот-слоты и краш</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">9.1</span></td><td data-label="Флагман-слот">Sugar Rush 1000</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">4</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Rox Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#a879ff">Лучшее за — сеть WowPot</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-net">WowPot</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-prog">прогрессивный</span></td><td data-label="Оценка"><span class="viol">8.8</span></td><td data-label="Флагман-слот">Book of Atem WowPot</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">5</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Starda</span><span class="jp-line2"><span class="jp-best" style="--rc:#ff2e93">Лучшее за — Hold &amp; Win</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-fix">Hold &amp; Win</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-loc">локальный</span></td><td data-label="Оценка"><span class="viol">8.6</span></td><td data-label="Флагман-слот">3 Coin Volcanoes</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">6</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Sol Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#37e0c8">Лучшее за — дропы и каталог</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">9.3</span></td><td data-label="Флагман-слот">Gates of Olympus</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">7</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Monro</span><span class="jp-line2"><span class="jp-best" style="--rc:#6cc4ff">Лучшее за — кэшбэк и дропы</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">8.5</span></td><td data-label="Флагман-слот">Aztec Fire 2</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">8</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Vavada</span><span class="jp-line2"><span class="jp-best" style="--rc:#b8ff2b">Лучшее за — Mega Moolah и Drops &amp; Wins</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-net">Mega Moolah</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-prog">прогрессивный</span></td><td data-label="Оценка"><span class="viol">9.5</span></td><td data-label="Флагман-слот">Mega Moolah</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">9</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">JoyCasino</span><span class="jp-line2"><span class="jp-best" style="--rc:#ffa63d">Лучшее за — прогрессивы Playtech</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-net">Age of the Gods</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-prog">прогрессивный</span></td><td data-label="Оценка"><span class="viol">9.2</span></td><td data-label="Флагман-слот">Age of the Gods</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">10</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">PokerDom</span><span class="jp-line2"><span class="jp-best" style="--rc:#c8ff5a">Лучшее за — свои джекпоты</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-loc">Локальная</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-loc">локальный</span></td><td data-label="Оценка"><span class="viol">8.9</span></td><td data-label="Флагман-слот">Собственные</td></tr>
+<tr><td class="jp-rub mfit-num" data-label="">11</td><td class="jp-bc" data-label="Казино"><span class="jp-bn">Kent Casino</span><span class="jp-line2"><span class="jp-best" style="--rc:#8a93b5">Лучшее за — дропы новичку</span></span></td><td data-label="Джекпот-сеть"><span class="jp-pill jt-drop">Drops &amp; Wins</span></td><td data-label="Тип джекпота"><span class="jp-pill jt-drop">Daily Drops</span></td><td data-label="Оценка"><span class="viol">8.7</span></td><td data-label="Флагман-слот">Big Bass Bonanza</td></tr>
 </tbody>
 </table>
 </div>
@@ -1232,41 +1261,31 @@ window.addEventListener('load',function(){
 <section class="jp-sect" id="reviews">
 <div class="jp-sh rv">
 <span class="jp-kick">Разбор по делу</span>
-<h2>Обзоры казино с джекпотами: <span class="g-gold">топ-6 по делу</span></h2>
+<h2>Обзоры казино с джекпотами: <span class="g-gold">топ-7 по делу</span></h2>
 </div>
 <div class="jp-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. Vavada <span>сеть Mega Moolah и Drops &amp; Wins</span></div><div class="sc">9.5 / 10</div></div>
-<p>Лучший набор джекпот-механик в топе: сетевые Mega Moolah (Мега Мула) и WowPot (ВауПот) плюс ежедневные Drops &amp; Wins. Каталог из 180+ джекпот-слотов, крупный выигрыш приходит полной суммой, USDT за 9 минут по замерам. Лимита на вывод джекпота нет — редкая честность.</p>
+<div class="rh"><div class="nm c-gold">1. Spinto <span>крупный бонус и быстрые выплаты</span></div><div class="sc">9.8 / 10</div></div>
+<p>Наш выбор №1 на охоту за джекпотом: приветственный пакет 200% + 150 фриспинов при входе от 50 ₽, а касса отдаёт выигрыш по СБП и в крипте в пределах часа. Свежая площадка с быстрым лобби и понятными условиями — удобно стартовать под дропы и прогрессивы.</p>
 <div class="jp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Сети Mega Moolah и WowPot в лобби</li><li>Daily Drops от Pragmatic каждый день</li><li>Джекпот без лимита на вывод</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Периодическая блокировка домена — нужен доступ к зеркалу</li><li>Под крупный банк — полный KYC</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Бонус 200% + 150 фриспинов</li><li>Низкий вход — депозит от 50 ₽</li><li>Быстрые выплаты: СБП и крипта до 1 ч</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Вейджер x35 — отыгрывать внимательно</li><li>Молодой бренд, репутация ещё набирается</li></ul></div>
 </div>
-<div class="jp-facts"><span class="thr">Сеть: Mega Moolah</span><span>Джекпот-слотов: <b>180+</b></span><span>Вывод: <b>от 9 мин</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+<div class="jp-facts"><span class="thr">Бонус: 200% + 150 FS</span><span>Мин. депозит: <b>50 ₽</b></span><span>Вейджер: <b>x35</b></span><span>Вывод: <b>СБП/крипта, до 1 ч</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="jp-rev rv">
 <span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-silv">2. Sol Casino <span>дропы и каталог 7 000+</span></div><div class="sc">9.3 / 10</div></div>
-<p>Ставка на Pragmatic Drops &amp; Wins (Дропс энд Уинс) и огромный каталог. Ежедневные дропы падают гарантированно, а джекпот-слотов больше 150. Еженедельный кэшбэк до 10% приятно страхует охоту. Ветеран рынка со стабильной кассой.</p>
+<div class="rh"><div class="nm c-silv">2. 7K Casino <span>быстрый вывод крупного выигрыша</span></div><div class="sc">9.0 / 10</div></div>
+<p>Главная фишка — скорость кассы даже на крупных суммах и Hold &amp; Win (Холд энд Уин) джекпоты от 3 Oaks и Playson. Моментальные выводы на карту и СБП. Если поймали банк и хотите деньги быстро — первый кандидат.</p>
 <div class="jp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Daily &amp; Weekly Drops от Pragmatic</li><li>7 000+ слотов, 150+ с джекпотом</li><li>Кэшбэк до 10% без сложных условий</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Мега-сетей Microgaming меньше, чем у Vavada</li><li>Поддержка отвечает не мгновенно в пик</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Моментальные выплаты крупных сумм</li><li>Hold &amp; Win джекпоты в каталоге</li><li>Удобное мобильное приложение</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Сетевых мега-прогрессивов меньше</li><li>Программа лояльности проще</li></ul></div>
 </div>
-<div class="jp-facts"><span class="thr">Сеть: Drops &amp; Wins</span><span>Джекпот-слотов: <b>150+</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
+<div class="jp-facts"><span class="thr">Механика: Hold &amp; Win</span><span>Вывод: <b>моментально–1 ч</b></span><span>СБП: <b>от 100 ₽</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
 </div>
 <div class="jp-rev rv">
 <span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="nm c-brnz">3. JoyCasino <span>прогрессивы Playtech Age of the Gods</span></div><div class="sc">9.2 / 10</div></div>
-<p>Единственный в топе с полной линейкой Age of the Gods (Эйдж оф зе Годс) от Playtech — четыре уровня джекпота Power/Extra/Super/Ultimate. Живой раздел Evolution и стабильная история выплат. Выбор тех, кто охотится именно за прогрессивами Playtech.</p>
-<div class="jp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>4-уровневый Age of the Gods в каталоге</li><li>Прогрессивы Playtech на любой ставке</li><li>Ветеран рынка, длинная история выплат</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Интерфейс тяжеловат для новичка</li><li>Верификация под крупный банк строгая</li></ul></div>
-</div>
-<div class="jp-facts"><span class="thr">Сеть: Age of the Gods</span><span>Провайдер: <b>Playtech</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/joycasino">Полный обзор JoyCasino →</a></div>
-</div>
-<div class="jp-rev rv">
-<span aria-hidden="true" class="wm">04</span>
-<div class="rh"><div class="nm c-viol">4. 1win <span>джекпот-слоты и краш в одном счёте</span></div><div class="sc">9.1 / 10</div></div>
+<div class="rh"><div class="nm c-brnz">3. 1win <span>джекпот-слоты и краш в одном счёте</span></div><div class="sc">9.1 / 10</div></div>
 <p>Drops &amp; Wins плюс краш-игры и ставки под одним кабинетом. Сильная касса: вывод через СБП и крипту без комиссии. Разумный выбор, когда нужны и джекпот-слот, и Lucky Jet (Лаки Джет), и линия на матч сразу.</p>
 <div class="jp-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Drops &amp; Wins и большой каталог</li><li>Вывод USDT/BTC без комиссии</li><li>Казино, краш и ставки вместе</li></ul></div>
@@ -1275,24 +1294,44 @@ window.addEventListener('load',function(){
 <div class="jp-facts"><span class="thr">Сеть: Drops &amp; Wins</span><span>Крипта: <b>USDT/BTC</b></span><span>Вывод: <b>от 15 мин</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
 </div>
 <div class="jp-rev rv">
-<span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-hot">5. 7K Casino <span>быстрый вывод крупного выигрыша</span></div><div class="sc">9.0 / 10</div></div>
-<p>Главная фишка — скорость кассы даже на крупных суммах и Hold &amp; Win (Холд энд Уин) джекпоты от 3 Oaks и Playson. Моментальные выводы на карту и СБП. Если поймали банк и хотите деньги быстро — первый кандидат.</p>
-<div class="jp-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Моментальные выплаты крупных сумм</li><li>Hold &amp; Win джекпоты в каталоге</li><li>Удобное мобильное приложение</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Сетевых мега-прогрессивов меньше</li><li>Программа лояльности проще</li></ul></div>
-</div>
-<div class="jp-facts"><span class="thr">Механика: Hold &amp; Win</span><span>Вывод: <b>моментально–1 ч</b></span><span>СБП: <b>от 100 ₽</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="jp-rev rv">
-<span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-cyan">6. Rox Casino <span>сетевой джекпот WowPot</span></div><div class="sc">8.8 / 10</div></div>
+<span aria-hidden="true" class="wm">04</span>
+<div class="rh"><div class="nm c-viol">4. Rox Casino <span>сетевой джекпот WowPot</span></div><div class="sc">8.8 / 10</div></div>
 <p>Держит сеть WowPot (ВауПот) от Games Global — вторую по величине после Mega Moolah. Book of Atem WowPot (Бук оф Атем ВауПот) и другие тайтлы с сетевым банком за миллионы. Хороший второй адрес для охоты за крупным прогрессивом.</p>
 <div class="jp-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Сеть WowPot с банком за €1 млн</li><li>Слоты Games Global в лобби</li><li>Стабильная касса, вывод 1–24 ч</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Каталог джекпотов уже, чем у лидеров</li><li>Нет собственного приложения</li></ul></div>
 </div>
 <div class="jp-facts"><span class="thr">Сеть: WowPot</span><span>Провайдер: <b>Games Global</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/rox">Полный обзор Rox →</a></div>
+</div>
+<div class="jp-rev rv">
+<span aria-hidden="true" class="wm">05</span>
+<div class="rh"><div class="nm c-hot">5. Sol Casino <span>дропы и каталог 7 000+</span></div><div class="sc">9.3 / 10</div></div>
+<p>Ставка на Pragmatic Drops &amp; Wins (Дропс энд Уинс) и огромный каталог. Ежедневные дропы падают гарантированно, а джекпот-слотов больше 150. Еженедельный кэшбэк до 10% приятно страхует охоту. Ветеран рынка со стабильной кассой.</p>
+<div class="jp-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Daily &amp; Weekly Drops от Pragmatic</li><li>7 000+ слотов, 150+ с джекпотом</li><li>Кэшбэк до 10% без сложных условий</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Мега-сетей Microgaming меньше, чем у Vavada</li><li>Поддержка отвечает не мгновенно в пик</li></ul></div>
+</div>
+<div class="jp-facts"><span class="thr">Сеть: Drops &amp; Wins</span><span>Джекпот-слотов: <b>150+</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
+</div>
+<div class="jp-rev rv">
+<span aria-hidden="true" class="wm">06</span>
+<div class="rh"><div class="nm c-cyan">6. Vavada <span>сеть Mega Moolah и Drops &amp; Wins</span></div><div class="sc">9.5 / 10</div></div>
+<p>Лучший набор джекпот-механик в топе: сетевые Mega Moolah (Мега Мула) и WowPot (ВауПот) плюс ежедневные Drops &amp; Wins. Каталог из 180+ джекпот-слотов, крупный выигрыш приходит полной суммой, USDT за 9 минут по замерам. Лимита на вывод джекпота нет — редкая честность.</p>
+<div class="jp-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Сети Mega Moolah и WowPot в лобби</li><li>Daily Drops от Pragmatic каждый день</li><li>Джекпот без лимита на вывод</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Периодическая блокировка домена — нужен доступ к зеркалу</li><li>Под крупный банк — полный KYC</li></ul></div>
+</div>
+<div class="jp-facts"><span class="thr">Сеть: Mega Moolah</span><span>Джекпот-слотов: <b>180+</b></span><span>Вывод: <b>от 9 мин</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+</div>
+<div class="jp-rev rv">
+<span aria-hidden="true" class="wm">07</span>
+<div class="rh"><div class="nm c-sky">7. JoyCasino <span>прогрессивы Playtech Age of the Gods</span></div><div class="sc">9.2 / 10</div></div>
+<p>Единственный в топе с полной линейкой Age of the Gods (Эйдж оф зе Годс) от Playtech — четыре уровня джекпота Power/Extra/Super/Ultimate. Живой раздел Evolution и стабильная история выплат. Выбор тех, кто охотится именно за прогрессивами Playtech.</p>
+<div class="jp-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>4-уровневый Age of the Gods в каталоге</li><li>Прогрессивы Playtech на любой ставке</li><li>Ветеран рынка, длинная история выплат</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Интерфейс тяжеловат для новичка</li><li>Верификация под крупный банк строгая</li></ul></div>
+</div>
+<div class="jp-facts"><span class="thr">Сеть: Age of the Gods</span><span>Провайдер: <b>Playtech</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/joycasino">Полный обзор JoyCasino →</a></div>
 </div>
 </section>
 <!-- ===== H2 #13 cases ===== -->
@@ -1518,16 +1557,17 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: состав джекпот-сетей, скорость вывода крупного выигрыша, условия бонуса, лицензия и слабые места. Открывайте разбор до первой охоты за банком.</p>
 <div aria-label="Случайная подборка обзоров казино" class="jp-brands rv" id="brandsGrid"></div>
 <ul class="jp-seo-links">
-<li><a href="/casino/vavada">Обзор казино Vavada — сеть Mega Moolah</a></li>
-<li><a href="/casino/sol">Обзор казино Sol Casino — Drops &amp; Wins</a></li>
-<li><a href="/casino/joycasino">Обзор казино JoyCasino — Age of the Gods</a></li>
-<li><a href="/casino/1win">Обзор казино 1win — джекпот-слоты и краш</a></li>
+<li><a href="/casino/spinto">Обзор казино Spinto — бонус 200% и быстрые выплаты</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino — Hold &amp; Win</a></li>
-<li><a href="/casino/pokerdom">Обзор казино PokerDom — локальные джекпоты</a></li>
+<li><a href="/casino/1win">Обзор казино 1win — джекпот-слоты и краш</a></li>
 <li><a href="/casino/rox">Обзор казино Rox Casino — сеть WowPot</a></li>
-<li><a href="/casino/kent">Обзор казино Kent Casino — ежедневные дропы</a></li>
 <li><a href="/casino/starda">Обзор казино Starda — Hold &amp; Win</a></li>
+<li><a href="/casino/sol">Обзор казино Sol Casino — Drops &amp; Wins</a></li>
 <li><a href="/casino/monro">Обзор казино Monro — кэшбэк и дропы</a></li>
+<li><a href="/casino/vavada">Обзор казино Vavada — сеть Mega Moolah</a></li>
+<li><a href="/casino/joycasino">Обзор казино JoyCasino — Age of the Gods</a></li>
+<li><a href="/casino/pokerdom">Обзор казино PokerDom — локальные джекпоты</a></li>
+<li><a href="/casino/kent">Обзор казино Kent Casino — ежедневные дропы</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
 <div class="jp-links rv">
@@ -1617,16 +1657,17 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"Vavada",       c:"#ffcf3f", c2:"#e0952f", s:"9.5", d:"сеть Mega Moolah и Drops & Wins", h:"/casino/vavada"},
-    {n:"Sol Casino",   c:"#e6eaf3", c2:"#a9b1c6", s:"9.3", d:"ежедневные дропы и каталог 7000+", h:"/casino/sol"},
-    {n:"JoyCasino",    c:"#f0a35a", c2:"#c9752e", s:"9.2", d:"прогрессивы Playtech Age of the Gods", h:"/casino/joycasino"},
-    {n:"1win",         c:"#a879ff", c2:"#7d4fd6", s:"9.1", d:"джекпот-слоты и краш в одном счёте", h:"/casino/1win"},
-    {n:"7K Casino",    c:"#ff2e93", c2:"#c81f6f", s:"9.0", d:"Hold & Win и быстрый вывод банка", h:"/casino/7k"},
-    {n:"PokerDom",     c:"#37e0c8", c2:"#12a892", s:"8.9", d:"собственные локальные джекпоты", h:"/casino/pokerdom"},
-    {n:"Rox Casino",   c:"#6cc4ff", c2:"#2a86e0", s:"8.8", d:"сетевой джекпот WowPot от Games Global", h:"/casino/rox"},
-    {n:"Kent Casino",  c:"#b8ff2b", c2:"#8fd400", s:"8.7", d:"ежедневные дропы для новичка", h:"/casino/kent"},
-    {n:"Starda",       c:"#ffa63d", c2:"#e07a12", s:"8.6", d:"Hold & Win джекпоты и турниры", h:"/casino/starda"},
-    {n:"Monro",        c:"#c8ff5a", c2:"#8fd400", s:"8.5", d:"кэшбэк до 15% и ежедневные дропы", h:"/casino/monro"}
+    {n:"Spinto",       c:"#ffcf3f", c2:"#e0952f", s:"9.8", d:"бонус 200% + 150 FS и быстрые выплаты", h:"/casino/spinto"},
+    {n:"7K Casino",    c:"#e6eaf3", c2:"#a9b1c6", s:"9.0", d:"Hold & Win и быстрый вывод банка", h:"/casino/7k"},
+    {n:"1win",         c:"#f0a35a", c2:"#c9752e", s:"9.1", d:"джекпот-слоты и краш в одном счёте", h:"/casino/1win"},
+    {n:"Rox Casino",   c:"#a879ff", c2:"#7d4fd6", s:"8.8", d:"сетевой джекпот WowPot от Games Global", h:"/casino/rox"},
+    {n:"Starda",       c:"#ff2e93", c2:"#c81f6f", s:"8.6", d:"Hold & Win джекпоты и турниры", h:"/casino/starda"},
+    {n:"Sol Casino",   c:"#37e0c8", c2:"#12a892", s:"9.3", d:"ежедневные дропы и каталог 7000+", h:"/casino/sol"},
+    {n:"Monro",        c:"#6cc4ff", c2:"#2a86e0", s:"8.5", d:"кэшбэк до 15% и ежедневные дропы", h:"/casino/monro"},
+    {n:"Vavada",       c:"#b8ff2b", c2:"#8fd400", s:"9.5", d:"сеть Mega Moolah и Drops & Wins", h:"/casino/vavada"},
+    {n:"JoyCasino",    c:"#ffa63d", c2:"#e07a12", s:"9.2", d:"прогрессивы Playtech Age of the Gods", h:"/casino/joycasino"},
+    {n:"PokerDom",     c:"#c8ff5a", c2:"#8fd400", s:"8.9", d:"собственные локальные джекпоты", h:"/casino/pokerdom"},
+    {n:"Kent Casino",  c:"#8a93b5", c2:"#5a6180", s:"8.7", d:"ежедневные дропы для новичка", h:"/casino/kent"}
   ];
   /* реальный пул слотов с обложками 1win (bundlecdn) — дополняйте объектами */
   var SLOTS = [
@@ -1757,18 +1798,19 @@ window.addEventListener('load',function(){
       "@type": "ItemList",
       "name": "Рейтинг казино с джекпотами 2026",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 10,
+      "numberOfItems": 11,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
-        {"@type":"ListItem","position":2,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
-        {"@type":"ListItem","position":3,"name":"JoyCasino","url":"https://rejting-kazino777.top/casino/joycasino"},
-        {"@type":"ListItem","position":4,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":5,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":6,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"},
-        {"@type":"ListItem","position":7,"name":"Rox Casino","url":"https://rejting-kazino777.top/casino/rox"},
-        {"@type":"ListItem","position":8,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
-        {"@type":"ListItem","position":9,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
-        {"@type":"ListItem","position":10,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"}
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
+        {"@type":"ListItem","position":4,"name":"Rox Casino","url":"https://rejting-kazino777.top/casino/rox"},
+        {"@type":"ListItem","position":5,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
+        {"@type":"ListItem","position":6,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
+        {"@type":"ListItem","position":7,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"},
+        {"@type":"ListItem","position":8,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":9,"name":"JoyCasino","url":"https://rejting-kazino777.top/casino/joycasino"},
+        {"@type":"ListItem","position":10,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"},
+        {"@type":"ListItem","position":11,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"}
       ]
     },
     {
