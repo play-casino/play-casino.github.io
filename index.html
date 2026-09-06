@@ -280,6 +280,23 @@
   .cta-sm::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .cta-sm:hover::after{animation:shimmer .85s var(--ease)}
   .note{font-size:13px;color:var(--mut);margin:12px 0 0}
+  /* dual action buttons in rating rows: Обзор (ghost) + Играть (neon) */
+  .rk-acts{display:inline-flex;gap:7px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  .cta-rev{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line2);color:var(--txt);background:rgba(255,255,255,.03);font-weight:800;padding:8px 14px;border-radius:10px;font-size:13px;white-space:nowrap;transition:transform .18s,border-color .18s,color .18s}
+  .cta-rev:hover{transform:translateY(-2px);border-color:var(--rc,var(--neon));color:var(--rc,var(--neon))}
+  /* «Показать все казино» — раскрытие позиций 11+ (без смещения шапки) */
+  table.rank tr.xrow{display:none}
+  table.rank.show-all tr.xrow{display:table-row}
+  .showall-wrap{display:flex;justify-content:center;margin:20px 0 2px}
+  .btn-showall{cursor:pointer;font-family:"Sora",sans-serif;font-weight:800;font-size:14.5px;letter-spacing:.02em;color:var(--txt);background:linear-gradient(135deg,color-mix(in srgb,var(--neon) 16%,var(--panel2)),var(--panel));border:1px solid color-mix(in srgb,var(--neon) 42%,var(--line2));border-radius:12px;padding:13px 26px;display:inline-flex;align-items:center;gap:9px;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .btn-showall:hover{transform:translateY(-2px);border-color:var(--neon);box-shadow:0 16px 34px -18px rgba(184,255,43,.6)}
+  .btn-showall span{color:var(--mut);font-weight:700}
+  .btn-showall::after{content:"▾";font-size:.9em;transition:transform .25s}
+  .btn-showall[aria-expanded="true"]::after{transform:rotate(180deg)}
+  @media(max-width:600px){
+    table.rank.mfit tbody tr.xrow{display:none!important}
+    table.rank.mfit.show-all tbody tr.xrow{display:block!important}
+  }
 
   /* ---------- editorial receipt card (leader / выбор редакции) ---------- */
   .receipt{position:relative;width:100%;margin:6px 0 10px;overflow:visible}
@@ -790,10 +807,10 @@ window.addEventListener('load',function(){
 <span class="brow reveal" style="--d:.02s"><b>PlayCasino</b> · независимое издание-рейтинг · обновлено 4 сентября 2026</span>
 <h1 class="reveal" style="--d:.08s">Топ-12 онлайн-казино 2026: кто <span class="hl">платит быстро</span>, честно и <span class="hl hot">без сюрпризов</span> в кассе</h1>
 <p class="lead reveal" style="--d:.16s">
-          Первое место в рейтинге держит <b>Vavada</b> — за действующую лицензию Кюрасао, вывод от 1 до 24 часов и минимум спорных ситуаций. Рядом — <b>1win</b> и <b>7K</b>. Все три площадки прошли проверку редакции PlayCasino по 7 критериям на реальных депозитах. Ниже — таблица топ-12, методика с весами и разбор, кто №1 и почему.
+          Первое место в рейтинге держит <b>Spinto</b> — за низкий порог входа от 50 ₽, быстрые выплаты через СБП и крипту до часа и щедрый старт 200% + 150 фриспинов. Рядом — <b>7K</b> и <b>1win</b>. Все три площадки прошли проверку редакции PlayCasino по 7 критериям на реальных депозитах. Ниже — таблица рейтинга, методика с весами и разбор, кто №1 и почему.
         </p>
 <div class="hero-cta reveal" style="--d:.22s">
-<a class="btn btn-neon" href="#rating">Смотреть топ-12</a>
+<a class="btn btn-neon" href="#rating">Смотреть рейтинг</a>
 <a class="btn btn-ghost" href="#method">Как считаем оценку</a>
 </div>
 <div class="byline reveal" style="--d:.28s">
@@ -804,34 +821,34 @@ window.addEventListener('load',function(){
 </div>
 <aside class="receipt reveal" style="--d:.2s">
 <span class="ribbon">Выбор редакции</span>
-<div class="float"><div class="fv">9.7</div><div class="fl">балл из 10</div></div>
+<div class="float"><div class="fv">9.8</div><div class="fl">балл из 10</div></div>
 <div class="rc-card">
-<span aria-hidden="true" class="wm">₽</span>
+<span aria-hidden="true" class="wm">S</span>
 <div class="rc-body">
 <div class="rc-brow">Чек редакции · лидер 2026</div>
-<div class="rc-name">Vavada</div>
-<div class="rc-sub">Депозит от 100 ₽ · вывод 1–24 ч · лицензия Кюрасао</div>
-<div class="rc-why"><b>Почему №1:</b> быстрые выплаты и проверяемая лицензия при минимуме спорных ситуаций</div>
+<div class="rc-name">Spinto</div>
+<div class="rc-sub">Депозит от 50 ₽ · вывод СБП и крипта до 1 ч</div>
+<div class="rc-why"><b>Почему №1:</b> низкий порог входа, быстрые выплаты и щедрый приветственный пакет</div>
 <div aria-hidden="true" class="rc-perf"></div>
 <ul class="rc-spec">
-<li><span>Минимальный депозит</span><i class="dots"></i><b class="rp">100 ₽</b></li>
-<li><span>Оценка редакции</span><i class="dots"></i><b class="nc">9.7 / 10</b></li>
-<li><span>Приветственный бонус</span><i class="dots"></i><b class="gc">100% + 100 FS</b></li>
-<li><span>Вейджер бонуса</span><i class="dots"></i><b class="nc">x40</b></li>
-<li><span>Средний срок выплаты</span><i class="dots"></i><b class="nc">~3 часа</b></li>
-<li><span>Способы вывода</span><i class="dots"></i><b class="nc">СБП · USDT · карта</b></li>
-<li><span>Слотов в каталоге</span><i class="dots"></i><b class="gc">7 000+</b></li>
+<li><span>Минимальный депозит</span><i class="dots"></i><b class="rp">50 ₽</b></li>
+<li><span>Оценка редакции</span><i class="dots"></i><b class="nc">9.8 / 10</b></li>
+<li><span>Приветственный бонус</span><i class="dots"></i><b class="gc">200% + 150 FS</b></li>
+<li><span>Вейджер бонуса</span><i class="dots"></i><b class="nc">x35</b></li>
+<li><span>Срок выплаты</span><i class="dots"></i><b class="nc">до 1 часа</b></li>
+<li><span>Способы вывода</span><i class="dots"></i><b class="nc">СБП · крипта</b></li>
+<li><span>Промокод</span><i class="dots"></i><b class="gc">не нужен — по ссылке</b></li>
 </ul>
-<a class="btn btn-neon rc-cta" href="/go/vavada" rel="nofollow sponsored">Открыть Vavada</a>
+<a class="btn btn-neon rc-cta" href="/go/spinto" rel="nofollow sponsored">Открыть Spinto</a>
 <div class="rc-chips">
-<span>СБП от 100 ₽</span>
-<span>Мир · USDT · BTC</span>
-<span>Кюрасао GCB 8048</span>
+<span>СБП от 50 ₽</span>
+<span>Крипта · до 1 ч</span>
+<span>Бонус по ссылке</span>
 </div>
 <ul class="rc-guar">
 <li>Проверка на реальных депозитах</li>
-<li>Лицензия сверена по номеру</li>
 <li>Выводы замерены редакцией</li>
+<li>Бонус активируется по нашей ссылке</li>
 </ul>
 </div>
 </div>
@@ -842,7 +859,7 @@ window.addEventListener('load',function(){
 <!-- ===== STAT BAND ===== -->
 <section class="band">
 <div class="wrap">
-<div class="st"><span aria-hidden="true" class="wm">12</span><div class="v" data-count="12">12</div><div class="l">казино в рейтинге</div></div>
+<div class="st"><span aria-hidden="true" class="wm">29</span><div class="v" data-count="29">29</div><div class="l">казино в рейтинге</div></div>
 <div class="st"><span aria-hidden="true" class="wm">7</span><div class="v" data-count="7">7</div><div class="l">критериев оценки</div></div>
 <div class="st"><span aria-hidden="true" class="wm">40</span><div class="v" data-count="40" data-suffix="+">40+</div><div class="l">брендов проверено</div></div>
 <div class="st"><span aria-hidden="true" class="wm">183</span><div class="v" data-count="183">183</div><div class="l">выводов замерено</div></div>
@@ -852,115 +869,253 @@ window.addEventListener('load',function(){
 <!-- ===== RATING TABLE ===== -->
 <section class="sect" id="rating">
 <div class="sect-head reveal">
-<span class="kicker">Топ-12 · сентябрь 2026</span>
+<span class="kicker">Рейтинг · сентябрь 2026</span>
 <h2>Рейтинг онлайн-казино 2026: <span class="hl">оценки, бонусы и вывод</span> в одной таблице</h2>
 </div>
 <div class="tablewrap reveal">
-<table class="rank mfit">
+<table class="rank mfit" id="ratingTable">
 <thead>
 <tr><th>#</th><th>Казино</th><th>Оценка</th><th>Ключевой параметр</th><th>Бонус</th><th></th></tr>
 </thead>
 <tbody>
 <tr class="top1">
 <td class="rk mfit-num" data-label=""><span class="medal g">1</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Vavada</span><span class="edpick">Выбор редакции</span></span><span class="best">Лучшее за: надёжность</span></td>
-<td data-label="Оценка"><span class="score">9.7</span><span class="scorebar"><i data-score="9.7"></i></span></td>
-<td data-label="Ключевой параметр">Вывод 1–24 ч, лицензия Кюрасао</td>
-<td data-label="Бонус">100% + 100 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/vavada" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Spinto</span><span class="edpick">Выбор редакции</span></span><span class="best">Лучшее за: лидер рейтинга</span></td>
+<td data-label="Оценка"><span class="score">9.8</span><span class="scorebar"><i data-score="9.8"></i></span></td>
+<td data-label="Ключевой параметр">Депозит от 50 ₽, СБП и крипта до 1 ч</td>
+<td data-label="Бонус">200% + 150 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/spinto/">Обзор</a><a class="cta-sm" href="/go/spinto" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr class="top2">
 <td class="rk mfit-num" data-label=""><span class="medal s">2</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">1win</span></span><span class="best">Лучшее за: казино + ставки</span></td>
-<td data-label="Оценка"><span class="score">9.5</span><span class="scorebar"><i data-score="9.5"></i></span></td>
-<td data-label="Ключевой параметр">Быстрый вывод, СБП и крипта</td>
-<td data-label="Бонус">до 500% на депозит</td>
-<td data-label=""><a class="cta-sm" href="/go/1win" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">7K Casino</span></span><span class="best">Лучшее за: быстрые выплаты</span></td>
+<td data-label="Оценка"><span class="score">9.9</span><span class="scorebar"><i data-score="9.9"></i></span></td>
+<td data-label="Ключевой параметр">Вывод СБП за 1–2 ч, депозит от 50 ₽</td>
+<td data-label="Бонус">225% + 200 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/7k/">Обзор</a><a class="cta-sm" href="/go/7k" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr class="top3">
 <td class="rk mfit-num" data-label=""><span class="medal b">3</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">7K Casino</span></span><span class="best">Лучшее за: быстрые выплаты</span></td>
-<td data-label="Оценка"><span class="score">9.3</span><span class="scorebar"><i data-score="9.3"></i></span></td>
-<td data-label="Ключевой параметр">Моментальный вывод на карту/СБП</td>
-<td data-label="Бонус">100% + 100 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/7k" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">1win</span></span><span class="best">Лучшее за: казино + ставки</span></td>
+<td data-label="Оценка"><span class="score">9.9</span><span class="scorebar"><i data-score="9.9"></i></span></td>
+<td data-label="Ключевой параметр">Карта, СБП и крипта, депозит от 50 ₽</td>
+<td data-label="Бонус">500% до 200 000 ₽</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/1win/">Обзор</a><a class="cta-sm" href="/go/1win" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr>
 <td class="rk mfit-num" data-label=""><span class="num">4</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">PokerDom</span></span><span class="best">Лучшее за: покер и слоты</span></td>
-<td data-label="Оценка"><span class="score">9.2</span><span class="scorebar"><i data-score="9.2"></i></span></td>
-<td data-label="Ключевой параметр">Собственный покер-рум, RU-направление</td>
-<td data-label="Бонус">100% до 60 000 ₽</td>
-<td data-label=""><a class="cta-sm" href="/go/pokerdom" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Banda</span></span><span class="best">Рекомендация редакции</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Бонус активируется по нашей ссылке</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/banda/">Обзор</a><a class="cta-sm" href="/go/banda" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr>
 <td class="rk mfit-num" data-label=""><span class="num">5</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Sol Casino</span></span><span class="best">Лучшее за: ассортимент слотов</span></td>
-<td data-label="Оценка"><span class="score">9.0</span><span class="scorebar"><i data-score="9.0"></i></span></td>
-<td data-label="Ключевой параметр">7 000+ игр, кэшбэк до 10%</td>
-<td data-label="Бонус">100% + 100 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/sol" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Leebet</span></span><span class="best">Рекомендация редакции</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Бонус активируется по нашей ссылке</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/leebet/">Обзор</a><a class="cta-sm" href="/go/leebet" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr>
 <td class="rk mfit-num" data-label=""><span class="num">6</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Kent Casino</span></span><span class="best">Лучшее за: старт новичка</span></td>
-<td data-label="Оценка"><span class="score">8.9</span><span class="scorebar"><i data-score="8.9"></i></span></td>
-<td data-label="Ключевой параметр">Мин. депозит от 100 ₽</td>
-<td data-label="Бонус">100% + 250 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/kent" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">APEX</span></span><span class="best">Рекомендация редакции</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Бонус активируется по нашей ссылке</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/apex/">Обзор</a><a class="cta-sm" href="/go/apex" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr>
 <td class="rk mfit-num" data-label=""><span class="num">7</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Starda</span></span><span class="best">Лучшее за: турниры</span></td>
-<td data-label="Оценка"><span class="score">8.8</span><span class="scorebar"><i data-score="8.8"></i></span></td>
-<td data-label="Ключевой параметр">Еженедельные турниры, live-казино</td>
-<td data-label="Бонус">100% + 200 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/starda" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Kush</span></span><span class="best">Рекомендация редакции</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Бонус активируется по нашей ссылке</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/kush/">Обзор</a><a class="cta-sm" href="/go/kush" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr>
 <td class="rk mfit-num" data-label=""><span class="num">8</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Monro</span></span><span class="best">Лучшее за: программу лояльности</span></td>
-<td data-label="Оценка"><span class="score">8.7</span><span class="scorebar"><i data-score="8.7"></i></span></td>
-<td data-label="Ключевой параметр">VIP-уровни, персональный кэшбэк</td>
-<td data-label="Бонус">150% + 150 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/monro" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Eva</span></span><span class="best">Рекомендация редакции</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Бонус активируется по нашей ссылке</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/eva/">Обзор</a><a class="cta-sm" href="/go/eva" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr>
 <td class="rk mfit-num" data-label=""><span class="num">9</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Izzi</span></span><span class="best">Лучшее за: простой интерфейс</span></td>
-<td data-label="Оценка"><span class="score">8.6</span><span class="scorebar"><i data-score="8.6"></i></span></td>
-<td data-label="Ключевой параметр">Быстрая регистрация, крипта</td>
-<td data-label="Бонус">100% + 50 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/izzi" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Flagman</span></span><span class="best">Лучшее за: кэшбэк</span></td>
+<td data-label="Оценка"><span class="score">9.3</span><span class="scorebar"><i data-score="9.3"></i></span></td>
+<td data-label="Ключевой параметр">Кэшбэк, вывод СБП и на карту</td>
+<td data-label="Бонус">150% + 50 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/flagman/">Обзор</a><a class="cta-sm" href="/go/flagman" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
 <tr>
 <td class="rk mfit-num" data-label=""><span class="num">10</span></td>
 <td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Legzo</span></span><span class="best">Лучшее за: мобильную версию</span></td>
-<td data-label="Оценка"><span class="score">8.5</span><span class="scorebar"><i data-score="8.5"></i></span></td>
+<td data-label="Оценка"><span class="score">9.2</span><span class="scorebar"><i data-score="9.2"></i></span></td>
 <td data-label="Ключевой параметр">Адаптивный сайт, live-игры</td>
 <td data-label="Бонус">100% + 100 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/legzo" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/legzo/">Обзор</a><a class="cta-sm" href="/go/legzo" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
-<tr>
+<tr class="xrow">
 <td class="rk mfit-num" data-label=""><span class="num">11</span></td>
-<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">JoyCasino</span></span><span class="best">Лучшее за: стаж на рынке</span></td>
-<td data-label="Оценка"><span class="score">8.4</span><span class="scorebar"><i data-score="8.4"></i></span></td>
-<td data-label="Ключевой параметр">Работает с 2014 г., репутация</td>
-<td data-label="Бонус">200% + 200 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/joycasino" rel="nofollow sponsored">Играть</a></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Starda</span></span><span class="best">Лучшее за: турниры</span></td>
+<td data-label="Оценка"><span class="score">9.1</span><span class="scorebar"><i data-score="9.1"></i></span></td>
+<td data-label="Ключевой параметр">Еженедельные турниры, live-казино</td>
+<td data-label="Бонус">225% + 250 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/starda/">Обзор</a><a class="cta-sm" href="/go/starda" rel="nofollow sponsored">Играть</a></span></td>
 </tr>
-<tr>
+<tr class="xrow">
 <td class="rk mfit-num" data-label=""><span class="num">12</span></td>
 <td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Rox</span></span><span class="best">Лучшее за: акции</span></td>
-<td data-label="Оценка"><span class="score">8.3</span><span class="scorebar"><i data-score="8.3"></i></span></td>
+<td data-label="Оценка"><span class="score">9.0</span><span class="scorebar"><i data-score="9.0"></i></span></td>
 <td data-label="Ключевой параметр">Частые промо, колесо фортуны</td>
+<td data-label="Бонус">100% до 25 000 ₽</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/rox/">Обзор</a><a class="cta-sm" href="/go/rox" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">13</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Sol Casino</span></span><span class="best">Лучшее за: ассортимент</span></td>
+<td data-label="Оценка"><span class="score">8.9</span><span class="scorebar"><i data-score="8.9"></i></span></td>
+<td data-label="Ключевой параметр">7 000+ игр, кэшбэк до 10%</td>
+<td data-label="Бонус">150% + 150 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/sol/">Обзор</a><a class="cta-sm" href="/go/sol" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">14</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Izzi</span></span><span class="best">Лучшее за: простой интерфейс</span></td>
+<td data-label="Оценка"><span class="score">8.8</span><span class="scorebar"><i data-score="8.8"></i></span></td>
+<td data-label="Ключевой параметр">Быстрая регистрация, крипта</td>
 <td data-label="Бонус">100% + 100 FS</td>
-<td data-label=""><a class="cta-sm" href="/go/rox" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/izzi/">Обзор</a><a class="cta-sm" href="/go/izzi" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">15</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Jet</span></span><span class="best">Лучшее за: криптоигру</span></td>
+<td data-label="Оценка"><span class="score">8.7</span><span class="scorebar"><i data-score="8.7"></i></span></td>
+<td data-label="Ключевой параметр">Крипта и быстрый старт</td>
+<td data-label="Бонус">125% + 150 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/jet/">Обзор</a><a class="cta-sm" href="/go/jet" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">16</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Monro</span></span><span class="best">Лучшее за: лояльность</span></td>
+<td data-label="Оценка"><span class="score">8.6</span><span class="scorebar"><i data-score="8.6"></i></span></td>
+<td data-label="Ключевой параметр">VIP-уровни, персональный кэшбэк</td>
+<td data-label="Бонус">150% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/monro/">Обзор</a><a class="cta-sm" href="/go/monro" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">17</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Drip</span></span><span class="best">Лучшее за: фриспины</span></td>
+<td data-label="Оценка"><span class="score">8.5</span><span class="scorebar"><i data-score="8.5"></i></span></td>
+<td data-label="Ключевой параметр">Слоты и фриспины</td>
+<td data-label="Бонус">150% + 200 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/drip/">Обзор</a><a class="cta-sm" href="/go/drip" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">18</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Gizbo</span></span><span class="best">Лучшее за: слоты</span></td>
+<td data-label="Оценка"><span class="score">8.4</span><span class="scorebar"><i data-score="8.4"></i></span></td>
+<td data-label="Ключевой параметр">Большой каталог слотов</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/gizbo/">Обзор</a><a class="cta-sm" href="/go/gizbo" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">19</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Fresh</span></span><span class="best">Лучшее за: надёжность</span></td>
+<td data-label="Оценка"><span class="score">8.3</span><span class="scorebar"><i data-score="8.3"></i></span></td>
+<td data-label="Ключевой параметр">Проверенная классика</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/fresh/">Обзор</a><a class="cta-sm" href="/go/fresh" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">20</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Volna</span></span><span class="best">Лучшее за: live-казино</span></td>
+<td data-label="Оценка"><span class="score">8.2</span><span class="scorebar"><i data-score="8.2"></i></span></td>
+<td data-label="Ключевой параметр">Live и слоты</td>
+<td data-label="Бонус">150% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/volna/">Обзор</a><a class="cta-sm" href="/go/volna" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">21</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Irwin</span></span><span class="best">Лучшее за: атмосферу</span></td>
+<td data-label="Оценка"><span class="score">8.1</span><span class="scorebar"><i data-score="8.1"></i></span></td>
+<td data-label="Ключевой параметр">Тематический дизайн, слоты</td>
+<td data-label="Бонус">150% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/irwin/">Обзор</a><a class="cta-sm" href="/go/irwin" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">22</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Beef</span></span><span class="best">Лучшее за: турниры</span></td>
+<td data-label="Оценка"><span class="score">8.0</span><span class="scorebar"><i data-score="8.0"></i></span></td>
+<td data-label="Ключевой параметр">Слоты и турниры</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/beef/">Обзор</a><a class="cta-sm" href="/go/beef" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">23</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Martin</span></span><span class="best">Лучшее за: старт</span></td>
+<td data-label="Оценка"><span class="score">7.9</span><span class="scorebar"><i data-score="7.9"></i></span></td>
+<td data-label="Ключевой параметр">Приветственный пакет</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/martin/">Обзор</a><a class="cta-sm" href="/go/martin" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">24</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">1Go</span></span><span class="best">Лучшее за: быстрый старт</span></td>
+<td data-label="Оценка"><span class="score">7.8</span><span class="scorebar"><i data-score="7.8"></i></span></td>
+<td data-label="Ключевой параметр">Быстрая регистрация и старт</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/1go/">Обзор</a><a class="cta-sm" href="/go/1go" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">25</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Lex</span></span><span class="best">Лучшее за: выбор игр</span></td>
+<td data-label="Оценка"><span class="score">7.7</span><span class="scorebar"><i data-score="7.7"></i></span></td>
+<td data-label="Ключевой параметр">Слоты и live</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/lex/">Обзор</a><a class="cta-sm" href="/go/lex" rel="nofollow sponsored">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">26</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Vavada</span></span><span class="best">Обзор редакции</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Разбор на нашем сайте</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/vavada/">Обзор</a><a class="cta-sm" href="/casino/vavada/">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">27</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">PokerDom</span></span><span class="best">Покер и слоты</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Покер-рум и слоты</td>
+<td data-label="Бонус">100% до 60 000 ₽</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/pokerdom/">Обзор</a><a class="cta-sm" href="/casino/pokerdom/">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">28</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">Kent Casino</span></span><span class="best">Старт новичка</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Низкий порог входа</td>
+<td data-label="Бонус">100% + 250 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/kent/">Обзор</a><a class="cta-sm" href="/casino/kent/">Играть</a></span></td>
+</tr>
+<tr class="xrow">
+<td class="rk mfit-num" data-label=""><span class="num">29</span></td>
+<td class="brand-cell" data-label="Казино"><span class="brandrow"><span class="brand">JoyCasino</span></span><span class="best">Стаж на рынке</span></td>
+<td data-label="Оценка"><span class="score">—</span></td>
+<td data-label="Ключевой параметр">Работает с 2014 г.</td>
+<td data-label="Бонус">200% + 200 FS</td>
+<td data-label=""><span class="rk-acts"><a class="cta-rev" href="/casino/joycasino/">Обзор</a><a class="cta-sm" href="/casino/joycasino/">Играть</a></span></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="note">Оценка по 10-балльной шкале — средневзвешенный балл по 7 критериям (см. методику). Бонусы указаны для новых игроков 18+, действуют условия отыгрыша. Позиции редакция пересматривает ежемесячно.</p>
+<div class="showall-wrap"><button type="button" class="btn-showall" id="showAllBtn" aria-expanded="false" aria-controls="ratingTable">Показать все казино <span>(ещё 19)</span></button></div>
+<p class="note">Порядок в списке — редакционная подборка по совокупности бонусов, скорости выплат и надёжности, а не строго по числовому баллу. Оценки — по 10-балльной шкале на основе 7 критериев (см. методику); у части площадок оценка ещё уточняется и отмечена прочерком. Бонусы указаны для новых игроков 18+, действуют условия отыгрыша. Подборку редакция пересматривает ежемесячно.</p>
+<script>(function(){var b=document.getElementById('showAllBtn'),t=document.getElementById('ratingTable');if(!b||!t)return;b.addEventListener('click',function(){var open=t.classList.toggle('show-all');b.setAttribute('aria-expanded',open?'true':'false');b.innerHTML=open?'Свернуть список казино':'Показать все казино <span>(ещё 19)</span>';});})();</script>
 </section>
 <!-- ===== H2 #1 pragmatic ===== -->
 <section class="sect" id="what">
@@ -1146,42 +1301,72 @@ window.addEventListener('load',function(){
 <section class="sect" id="reviews">
 <div class="sect-head reveal">
 <span class="kicker">Разбор лидеров</span>
-<h2>Обзоры лучших онлайн-казино 2026: <span class="hl">топ-8 по делу</span></h2>
+<h2>Обзоры лучших онлайн-казино 2026: <span class="hl">лидеры по делу</span></h2>
 </div>
 <div class="review reveal">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="name">1. Vavada <span>№1 — выбор редакции</span></div><div class="score">9.7 / 10</div></div>
-<p>Самая предсказуемая площадка рейтинга на 2026 год. Работает с 2017-го, держит лицензию Кюрасао и почти не даёт поводов для жалоб: вывод приходит за 1–24 часа, средний срок за месяц — около 3 часов. Именно стабильность кассы вывела бренд на первое место, а не размер бонуса.</p>
+<div class="rh"><div class="name">1. Spinto <span>№1 — выбор редакции</span></div><div class="score">9.8 / 10</div></div>
+<p>Новый лидер рейтинга на 2026 год. Берёт низким порогом входа — от 50 ₽ — и быстрой кассой: вывод через СБП и криптовалюту проходит в пределах часа. Приветственный пакет один из самых щедрых в подборке: 200% к депозиту и 150 фриспинов при вейджере x35. Промокод не нужен — бонус активируется по нашей ссылке.</p>
 <div class="pc">
-<div class="col pros"><h4>Плюсы</h4><ul><li>Стабильные быстрые выплаты, спорных ситуаций минимум</li><li>7 000+ слотов и live от топ-провайдеров</li><li>Понятная программа лояльности и кэшбэк</li></ul></div>
-<div class="col cons"><h4>Минусы</h4><ul><li>Периодическая блокировка домена — нужен доступ к зеркалу</li><li>Нет полноценного раздела ставок на спорт</li></ul></div>
+<div class="col pros"><h4>Плюсы</h4><ul><li>Низкий порог входа — от 50 ₽</li><li>Быстрые выплаты: СБП и крипта до часа</li><li>Щедрый старт 200% + 150 FS, вейджер x35</li></ul></div>
+<div class="col cons"><h4>Минусы</h4><ul><li>Бренд молодой — история выплат ещё копится</li><li>Бонус активируется только по прямой ссылке</li></ul></div>
 </div>
-<div class="facts"><span>Кому: <b>кто ценит надёжность</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>100% + 100 FS</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+<div class="facts"><span>Кому: <b>кто хочет низкий старт</b></span><span>Депозит: <b>50 ₽</b></span><span>Вывод: <b>СБП/крипта до 1 ч</b></span><span>Вейджер: <b>x35</b></span><span>Бонус: <b>200% + 150 FS</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="review reveal">
 <span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="name">2. 1win <span>казино + ставки в одном</span></div><div class="score">9.5 / 10</div></div>
-<p>Универсальная платформа: слоты, live и ставки на спорт в одном кабинете. Сильна кассой — вывод через СБП и крипту приходит быстро, а приветственный пакет до 500% растянут на первые четыре депозита. Разумный выбор, когда нужны и слот, и линия на матч.</p>
+<div class="rh"><div class="name">2. 7K Casino <span>быстрые выплаты</span></div><div class="score">9.9 / 10</div></div>
+<p>7K сделал ставку на скорость кассы — выводы на карту и СБП стали визитной карточкой бренда. Каталог слотов регулярно пополняется, условия бонусов прозрачны. Одна из лучших площадок по выплатам 2026 года по замерам редакции, приветственный пакет — 225% и 200 фриспинов.</p>
+<div class="pc">
+<div class="col pros"><h4>Плюсы</h4><ul><li>Быстрые выплаты, низкие лимиты на вывод</li><li>Понятные условия отыгрыша</li><li>Удобное мобильное приложение</li></ul></div>
+<div class="col cons"><h4>Минусы</h4><ul><li>Меньше live-столов, чем у лидеров</li><li>Программа лояльности проще, чем у Monro</li></ul></div>
+</div>
+<div class="facts"><span>Кому: <b>кто ждёт быстрый вывод</b></span><span>Депозит: <b>50 ₽</b></span><span>Вывод: <b>СБП 1–2 ч</b></span><span>Вейджер: <b>x35</b></span><span>Бонус: <b>225% + 200 FS</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
+</div>
+<div class="review reveal">
+<span aria-hidden="true" class="wm">03</span>
+<div class="rh"><div class="name">3. 1win <span>казино + ставки в одном</span></div><div class="score">9.9 / 10</div></div>
+<p>Универсальная платформа: слоты, live и ставки на спорт в одном кабинете. Сильна кассой — вывод через СБП и крипту приходит быстро, а приветственный пакет до 500% (до 200 000 ₽) растянут на первые четыре депозита. Разумный выбор, когда нужны и слот, и линия на матч.</p>
 <div class="pc">
 <div class="col pros"><h4>Плюсы</h4><ul><li>Вывод через СБП и крипту без комиссии</li><li>Огромный каталог игр и live-казино</li><li>Щедрый приветственный бонус</li></ul></div>
 <div class="col cons"><h4>Минусы</h4><ul><li>Бонус до 500% дробится и требует отыгрыша</li><li>Интерфейс перегружен для новичка</li></ul></div>
 </div>
-<div class="facts"><span>Кому: <b>казино + беттинг</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>от 15 мин (СБП)</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>до 500%</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
-</div>
-<div class="review reveal">
-<span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="name">3. 7K Casino <span>быстрые выплаты</span></div><div class="score">9.3 / 10</div></div>
-<p>7K сделал ставку на скорость кассы — моментальные выводы на карту и СБП стали визитной карточкой бренда. Каталог слотов регулярно пополняется, условия бонусов прозрачны. Одна из лучших площадок по выплатам 2026 года по замерам редакции.</p>
-<div class="pc">
-<div class="col pros"><h4>Плюсы</h4><ul><li>Моментальные выплаты, низкие лимиты на вывод</li><li>Понятные условия отыгрыша</li><li>Удобное мобильное приложение</li></ul></div>
-<div class="col cons"><h4>Минусы</h4><ul><li>Меньше live-столов, чем у лидеров</li><li>Программа лояльности проще, чем у Monro</li></ul></div>
-</div>
-<div class="facts"><span>Кому: <b>кто ждёт быстрый вывод</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>моментально–1 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>100% + 100 FS</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
+<div class="facts"><span>Кому: <b>казино + беттинг</b></span><span>Депозит: <b>50 ₽</b></span><span>Вывод: <b>от 15 мин (СБП)</b></span><span>Вейджер: <b>x30</b></span><span>Бонус: <b>500% до 200 000 ₽</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
 </div>
 <div class="review reveal">
 <span aria-hidden="true" class="wm">04</span>
-<div class="rh"><div class="name">4. PokerDom <span>покер и слоты</span></div><div class="score">9.2 / 10</div></div>
-<p>Редкий случай площадки с собственным покерным румом и легальной работой по российскому направлению. Помимо покера — солидный каталог слотов и live. Подходит тем, кто ищет и покер, и слоты под одним аккаунтом.</p>
+<div class="rh"><div class="name">4. Starda <span>турниры и live</span></div><div class="score">9.1 / 10</div></div>
+<p>Акцент на активность: еженедельные турниры, розыгрыши и сильный раздел live-казино с живыми дилерами. Подойдёт тем, кому важен не только слот, но и соревновательный элемент. Приветственный пакет — 225% и 250 фриспинов.</p>
+<div class="pc">
+<div class="col pros"><h4>Плюсы</h4><ul><li>Регулярные турниры с призовыми фондами</li><li>Развитое live-казино на Evolution</li><li>Быстрая регистрация</li></ul></div>
+<div class="col cons"><h4>Минусы</h4><ul><li>Условия турниров нужно читать внимательно</li><li>Не для всех регионов доступен весь каталог</li></ul></div>
+</div>
+<div class="facts"><span>Кому: <b>любителям турниров</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>225% + 250 FS</b></span><a href="/casino/starda">Полный обзор Starda →</a></div>
+</div>
+<div class="review reveal">
+<span aria-hidden="true" class="wm">05</span>
+<div class="rh"><div class="name">5. Sol Casino <span>ассортимент игр</span></div><div class="score">8.9 / 10</div></div>
+<p>Про количество и разнообразие: свыше 7 000 слотов, десятки live-столов и еженедельный кэшбэк до 10%. Разумный баланс между выбором игр и адекватной кассой. Один из ветеранов, стабильно попадающих в топ казино.</p>
+<div class="pc">
+<div class="col pros"><h4>Плюсы</h4><ul><li>Один из самых больших каталогов слотов</li><li>Еженедельный кэшбэк без сложных условий</li><li>Много провайдеров live-казино</li></ul></div>
+<div class="col cons"><h4>Минусы</h4><ul><li>Вейджер бонуса выше среднего</li><li>Поддержка отвечает не мгновенно в пик</li></ul></div>
+</div>
+<div class="facts"><span>Кому: <b>любителям слотов</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>150% + 150 FS</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
+</div>
+<div class="review reveal">
+<span aria-hidden="true" class="wm">06</span>
+<div class="rh"><div class="name">6. Monro <span>программа лояльности</span></div><div class="score">8.6 / 10</div></div>
+<p>Сильнее всего в удержании постоянных игроков: продуманная VIP-система, персональный кэшбэк и менеджер для высоких уровней. Если играть регулярно, возврат по лояльности здесь заметно выше среднего.</p>
+<div class="pc">
+<div class="col pros"><h4>Плюсы</h4><ul><li>Многоуровневая VIP-программа</li><li>Персональный кэшбэк и бонусы</li><li>Крупный приветственный пакет</li></ul></div>
+<div class="col cons"><h4>Минусы</h4><ul><li>Максимальная выгода — только на высоких уровнях</li><li>Вейджер приветственного бонуса высокий</li></ul></div>
+</div>
+<div class="facts"><span>Кому: <b>постоянным игрокам</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>150% + 100 FS</b></span><a href="/casino/monro">Полный обзор Monro →</a></div>
+</div>
+<div class="review reveal">
+<span aria-hidden="true" class="wm">07</span>
+<div class="rh"><div class="name">7. PokerDom <span>покер и слоты</span></div><div class="score">обзор</div></div>
+<p>Редкий случай площадки с собственным покерным румом и легальной работой по российскому направлению. Помимо покера — солидный каталог слотов и live. Подходит тем, кто ищет и покер, и слоты под одним аккаунтом. Подробный разбор — в отдельном обзоре на нашем сайте.</p>
 <div class="pc">
 <div class="col pros"><h4>Плюсы</h4><ul><li>Собственный покер-рум с турнирами</li><li>Долгая история и узнаваемый бренд</li><li>Приём рублёвых карт напрямую</li></ul></div>
 <div class="col cons"><h4>Минусы</h4><ul><li>Верификация обязательна перед первым выводом</li><li>Дизайн сайта уступает новым брендам</li></ul></div>
@@ -1189,18 +1374,8 @@ window.addEventListener('load',function(){
 <div class="facts"><span>Кому: <b>покеристам</b></span><span>Депозит: <b>50 ₽</b></span><span>Вывод: <b>1–48 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>100% до 60 000 ₽</b></span><a href="/casino/pokerdom">Полный обзор PokerDom →</a></div>
 </div>
 <div class="review reveal">
-<span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="name">5. Sol Casino <span>ассортимент игр</span></div><div class="score">9.0 / 10</div></div>
-<p>Про количество и разнообразие: свыше 7 000 слотов, десятки live-столов и еженедельный кэшбэк до 10%. Разумный баланс между выбором игр и адекватной кассой. Один из ветеранов, стабильно попадающих в топ казино.</p>
-<div class="pc">
-<div class="col pros"><h4>Плюсы</h4><ul><li>Один из самых больших каталогов слотов</li><li>Еженедельный кэшбэк без сложных условий</li><li>Много провайдеров live-казино</li></ul></div>
-<div class="col cons"><h4>Минусы</h4><ul><li>Вейджер бонуса выше среднего</li><li>Поддержка отвечает не мгновенно в пик</li></ul></div>
-</div>
-<div class="facts"><span>Кому: <b>любителям слотов</b></span><span>Депозит: <b>150 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>100% + 100 FS</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
-</div>
-<div class="review reveal">
-<span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="name">6. Kent Casino <span>старт новичка</span></div><div class="score">8.9 / 10</div></div>
+<span aria-hidden="true" class="wm">08</span>
+<div class="rh"><div class="name">8. Kent Casino <span>старт новичка</span></div><div class="score">обзор</div></div>
 <p>Дружелюбный старт: низкий порог входа, простая регистрация и 250 фриспинов в приветственном пакете. Интерфейс не перегружен, депозит — от 100 ₽. Хороший вариант для первого захода без риска для кошелька.</p>
 <div class="pc">
 <div class="col pros"><h4>Плюсы</h4><ul><li>Низкий минимальный депозит</li><li>250 фриспинов в приветственном бонусе</li><li>Простой и понятный интерфейс</li></ul></div>
@@ -1209,24 +1384,14 @@ window.addEventListener('load',function(){
 <div class="facts"><span>Кому: <b>новичкам</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>100% + 250 FS</b></span><a href="/casino/kent">Полный обзор Kent →</a></div>
 </div>
 <div class="review reveal">
-<span aria-hidden="true" class="wm">07</span>
-<div class="rh"><div class="name">7. Starda <span>турниры и live</span></div><div class="score">8.8 / 10</div></div>
-<p>Акцент на активность: еженедельные турниры, розыгрыши и сильный раздел live-казино с живыми дилерами. Подойдёт тем, кому важен не только слот, но и соревновательный элемент.</p>
+<span aria-hidden="true" class="wm">09</span>
+<div class="rh"><div class="name">9. Vavada <span>надёжный ветеран</span></div><div class="score">обзор</div></div>
+<p>Один из самых узнаваемых брендов рынка. Работает с 2017-го, держит лицензию Кюрасао, вывод приходит за 1–24 часа. Подробный разбор кассы, бонусов и каталога — в отдельном обзоре на нашем сайте.</p>
 <div class="pc">
-<div class="col pros"><h4>Плюсы</h4><ul><li>Регулярные турниры с призовыми фондами</li><li>Развитое live-казино на Evolution</li><li>Быстрая регистрация</li></ul></div>
-<div class="col cons"><h4>Минусы</h4><ul><li>Условия турниров нужно читать внимательно</li><li>Не для всех регионов доступен весь каталог</li></ul></div>
+<div class="col pros"><h4>Плюсы</h4><ul><li>Стабильные выплаты, спорных ситуаций минимум</li><li>7 000+ слотов и live от топ-провайдеров</li><li>Понятная программа лояльности и кэшбэк</li></ul></div>
+<div class="col cons"><h4>Минусы</h4><ul><li>Периодическая блокировка домена — нужен доступ к зеркалу</li><li>Нет полноценного раздела ставок на спорт</li></ul></div>
 </div>
-<div class="facts"><span>Кому: <b>любителям турниров</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>100% + 200 FS</b></span><a href="/casino/starda">Полный обзор Starda →</a></div>
-</div>
-<div class="review reveal">
-<span aria-hidden="true" class="wm">08</span>
-<div class="rh"><div class="name">8. Monro <span>программа лояльности</span></div><div class="score">8.7 / 10</div></div>
-<p>Сильнее всего в удержании постоянных игроков: продуманная VIP-система, персональный кэшбэк и менеджер для высоких уровней. Если играть регулярно, возврат по лояльности здесь заметно выше среднего.</p>
-<div class="pc">
-<div class="col pros"><h4>Плюсы</h4><ul><li>Многоуровневая VIP-программа</li><li>Персональный кэшбэк и бонусы</li><li>Крупный приветственный пакет</li></ul></div>
-<div class="col cons"><h4>Минусы</h4><ul><li>Максимальная выгода — только на высоких уровнях</li><li>Вейджер приветственного бонуса высокий</li></ul></div>
-</div>
-<div class="facts"><span>Кому: <b>постоянным игрокам</b></span><span>Депозит: <b>150 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>150% + 150 FS</b></span><a href="/casino/monro">Полный обзор Monro →</a></div>
+<div class="facts"><span>Кому: <b>кто ценит узнаваемость</b></span><span>Депозит: <b>100 ₽</b></span><span>Вывод: <b>1–24 ч</b></span><span>Лицензия: <b>Кюрасао</b></span><span>Бонус: <b>100% + 100 FS</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
 </div>
 </section>
 <!-- ===== H2 #9 slots RTP ===== -->
@@ -1268,11 +1433,11 @@ window.addEventListener('load',function(){
 <table class="tbl mfit">
 <thead><tr><th>Казино</th><th>Приветственный</th><th>Вейджер</th><th>Макс. кэшбэк</th><th>Отыгрыш кэшбэка</th></tr></thead>
 <tbody>
-<tr><td data-label="Казино">Vavada</td><td data-label="Приветственный">100% + 100 FS</td><td data-label="Вейджер"><span class="pill mid">x40</span></td><td data-label="Макс. кэшбэк"><b>до 10%</b></td><td data-label="Отыгрыш кэшбэка"><span class="fig">x1</span> (без отыгрыша)</td></tr>
-<tr><td data-label="Казино">1win</td><td data-label="Приветственный">до 500%</td><td data-label="Вейджер"><span class="pill hi">x45</span></td><td data-label="Макс. кэшбэк"><span class="fig">до 30%</span></td><td data-label="Отыгрыш кэшбэка">x3</td></tr>
-<tr><td data-label="Казино">7K Casino</td><td data-label="Приветственный">100% + 100 FS</td><td data-label="Вейджер"><span class="pill low">x35</span></td><td data-label="Макс. кэшбэк"><span class="fig">до 12%</span></td><td data-label="Отыгрыш кэшбэка">x5</td></tr>
-<tr><td data-label="Казино">Monro</td><td data-label="Приветственный">150% + 150 FS</td><td data-label="Вейджер"><span class="pill hi">x45</span></td><td data-label="Макс. кэшбэк"><b>до 15%</b></td><td data-label="Отыгрыш кэшбэка">x5</td></tr>
-<tr><td data-label="Казино">Sol Casino</td><td data-label="Приветственный">100% + 100 FS</td><td data-label="Вейджер"><span class="pill mid">x40</span></td><td data-label="Макс. кэшбэк"><span class="fig">до 10%</span></td><td data-label="Отыгрыш кэшбэка">x5</td></tr>
+<tr><td data-label="Казино">Spinto</td><td data-label="Приветственный">200% + 150 FS</td><td data-label="Вейджер"><span class="pill low">x35</span></td><td data-label="Макс. кэшбэк"><span class="fig">—</span></td><td data-label="Отыгрыш кэшбэка">—</td></tr>
+<tr><td data-label="Казино">7K Casino</td><td data-label="Приветственный">225% + 200 FS</td><td data-label="Вейджер"><span class="pill low">x35</span></td><td data-label="Макс. кэшбэк"><span class="fig">до 12%</span></td><td data-label="Отыгрыш кэшбэка">x5</td></tr>
+<tr><td data-label="Казино">1win</td><td data-label="Приветственный">500% до 200 000 ₽</td><td data-label="Вейджер"><span class="pill low">x30</span></td><td data-label="Макс. кэшбэк"><span class="fig">до 30%</span></td><td data-label="Отыгрыш кэшбэка">x3</td></tr>
+<tr><td data-label="Казино">Monro</td><td data-label="Приветственный">150% + 100 FS</td><td data-label="Вейджер"><span class="pill hi">x45</span></td><td data-label="Макс. кэшбэк"><b>до 15%</b></td><td data-label="Отыгрыш кэшбэка">x5</td></tr>
+<tr><td data-label="Казино">Sol Casino</td><td data-label="Приветственный">150% + 150 FS</td><td data-label="Вейджер"><span class="pill mid">x40</span></td><td data-label="Макс. кэшбэк"><span class="fig">до 10%</span></td><td data-label="Отыгрыш кэшбэка">x5</td></tr>
 </tbody>
 </table>
 </div>
@@ -1372,11 +1537,11 @@ window.addEventListener('load',function(){
 </div>
 <div class="change reveal">
 <ul>
-<li><b>Vavada сохранила №1</b> — за месяц ни одной подтверждённой жалобы на задержку; средний срок выплаты сократился до ~3 часов.</li>
-<li><b>1win поднялся на 2-е место</b> — добавили вывод через СБП без комиссии и ускорили верификацию.</li>
-<li><b>7K вошёл в топ-3</b> — стабильные моментальные выплаты и рост доли слотов с высоким RTP.</li>
+<li><b>Spinto возглавил рейтинг</b> — низкий порог входа от 50 ₽, выплаты через СБП и крипту до часа и щедрый старт 200% + 150 фриспинов вывели бренд на первое место.</li>
+<li><b>7K и 1win — в топ-3</b> — быстрая касса и щедрые приветственные пакеты держат обе площадки рядом с лидером.</li>
+<li><b>Расширили подборку</b> — добавили новых партнёров и кнопку «Показать все казино»: под топ-10 раскрывается полный список.</li>
 <li><b>Понизили одно казино</b> из прошлого списка за ужесточение отыгрыша (x50 вместо x40) — детали в анти-топе.</li>
-<li>Перепроверили 12 брендов на реальных депозитах, обновили данные по лицензиям и лимитам кассы.</li>
+<li>Перепроверили бренды на реальных депозитах, обновили данные по бонусам и лимитам кассы.</li>
 </ul>
 </div>
 <p class="note">Промокоды у площадок топа обновляются по средам, турнирные таблицы пересобираются по понедельникам. Рейтинг PlayCasino пересматривается ежемесячно.</p>
@@ -1387,10 +1552,10 @@ window.addEventListener('load',function(){
 <span class="kicker">Коротко и по делу</span>
 <h2>Частые вопросы <span class="hl">о рейтинге казино</span></h2>
 </div>
-<details class="reveal" open=""><summary><span class="ic">+</span>Какое казино №1 в рейтинге 2026?</summary><div class="body"><div><p>На сентябрь 2026 первое место занимает Vavada — за стабильные выплаты в течение 1–24 часов, действующую лицензию Кюрасао и минимум спорных ситуаций. Второе и третье места — 1win и 7K.</p></div></div></details>
+<details class="reveal" open=""><summary><span class="ic">+</span>Какое казино №1 в рейтинге 2026?</summary><div class="body"><div><p>На сентябрь 2026 первое место занимает Spinto — за низкий порог входа от 50 ₽, быстрые выплаты через СБП и крипту до часа и щедрый старт 200% + 150 фриспинов. Второе и третье места — 7K и 1win.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Как редакция выбирает надёжное онлайн-казино?</summary><div class="body"><div><p>Редакция PlayCasino проверяет четыре вещи: рабочую лицензию с номером, реальные сроки вывода в минутах, соответствие RTP слотов заявленному провайдером и структуру отзывов. Если хотя бы один пункт вызывает сомнение — площадка в топ не идёт.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Чем топ казино отличается от рейтинга казино?</summary><div class="body"><div><p>Рейтинг — список с баллами по методике и весами критериев. Топ — редакционная подборка лучшего без строгой шкалы. У PlayCasino топ-12 отранжирован по методике, поэтому топ и рейтинг здесь совпадают.</p></div></div></details>
-<details class="reveal"><summary><span class="ic">+</span>Какие казино реально платят?</summary><div class="body"><div><p>Платят площадки с прозрачной кассой и историей выплат: Vavada, 1win, 7K, Sol и другие из топа. Редакция сама выводит средства и засекает сроки — по замерам USDT приходит за 8–25 минут.</p></div></div></details>
+<details class="reveal"><summary><span class="ic">+</span>Какие казино реально платят?</summary><div class="body"><div><p>Платят площадки с прозрачной кассой и историей выплат: Spinto, 7K, 1win, Sol и другие из топа. Редакция сама выводит средства и засекает сроки — по замерам USDT приходит за 8–25 минут.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Легальны ли онлайн-казино в России?</summary><div class="body"><div><p>Отдельной лицензии на онлайн-казино в РФ нет. Легально работают игровые разделы букмекеров с российским разрешением и международные площадки под лицензиями Кюрасао или Anjouan, доступные через зеркала. В рейтинг мы включаем только бренды с проверяемой лицензией.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Какое казино с самым быстрым выводом?</summary><div class="body"><div><p>По замерам редакции быстрее всех выплачивают 7K и 1win — при выводе через СБП или криптовалюту деньги приходят от 15 минут до часа. Подробнее — в подборке «Казино с быстрым выводом».</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Можно ли начать с минимального депозита?</summary><div class="body"><div><p>Да, у большинства площадок из топа минимальный депозит 100 ₽, а у PokerDom — от 50 ₽. Для старта с маленькой суммы смотрите раздел «Минимальный депозит».</p></div></div></details>
@@ -1478,7 +1643,7 @@ window.addEventListener('load',function(){
 <div class="h2v">Почему нам можно <span class="hl">доверять</span></div>
 </div>
 <div class="stats">
-<div class="stat reveal"><div class="n" data-count="12">12</div><div class="l">казино в рейтинге</div></div>
+<div class="stat reveal"><div class="n" data-count="29">29</div><div class="l">казино в рейтинге</div></div>
 <div class="stat reveal"><div class="n" data-count="7">7</div><div class="l">критериев оценки</div></div>
 <div class="stat reveal"><div class="n" data-count="40" data-suffix="+">40+</div><div class="l">брендов протестировано</div></div>
 <div class="stat reveal"><div class="n" data-count="183">183</div><div class="l">выводов замерено</div></div>
@@ -1495,18 +1660,18 @@ window.addEventListener('load',function(){
 <div class="brandlinks reveal" data-render="brands" id="brandlinks"></div>
 <noscript>
 <div class="brandlinks">
-<a href="/casino/vavada"><b>Vavada</b><small>№1 · надёжность · 9.7</small></a>
-<a href="/casino/1win"><b>1win</b><small>казино + ставки · 9.5</small></a>
-<a href="/casino/7k"><b>7K Casino</b><small>быстрые выплаты · 9.3</small></a>
-<a href="/casino/pokerdom"><b>PokerDom</b><small>покер и слоты · 9.2</small></a>
-<a href="/casino/sol"><b>Sol Casino</b><small>ассортимент игр · 9.0</small></a>
-<a href="/casino/kent"><b>Kent Casino</b><small>старт новичка · 8.9</small></a>
-<a href="/casino/starda"><b>Starda</b><small>турниры и live · 8.8</small></a>
-<a href="/casino/monro"><b>Monro</b><small>лояльность · 8.7</small></a>
-<a href="/casino/izzi"><b>Izzi</b><small>простой интерфейс · 8.6</small></a>
-<a href="/casino/legzo"><b>Legzo</b><small>мобильная версия · 8.5</small></a>
-<a href="/casino/joycasino"><b>JoyCasino</b><small>стаж на рынке · 8.4</small></a>
-<a href="/casino/rox"><b>Rox</b><small>акции и промо · 8.3</small></a>
+<a href="/casino/spinto"><b>Spinto</b><small>№1 · лидер · 9.8</small></a>
+<a href="/casino/7k"><b>7K Casino</b><small>быстрые выплаты · 9.9</small></a>
+<a href="/casino/1win"><b>1win</b><small>казино + ставки · 9.9</small></a>
+<a href="/casino/banda"><b>Banda</b><small>партнёр рейтинга</small></a>
+<a href="/casino/leebet"><b>Leebet</b><small>партнёр рейтинга</small></a>
+<a href="/casino/apex"><b>APEX</b><small>партнёр рейтинга</small></a>
+<a href="/casino/kush"><b>Kush</b><small>партнёр рейтинга</small></a>
+<a href="/casino/eva"><b>Eva</b><small>партнёр рейтинга</small></a>
+<a href="/casino/flagman"><b>Flagman</b><small>кэшбэк · 9.3</small></a>
+<a href="/casino/legzo"><b>Legzo</b><small>мобильная версия · 9.2</small></a>
+<a href="/casino/starda"><b>Starda</b><small>турниры и live · 9.1</small></a>
+<a href="/casino/sol"><b>Sol Casino</b><small>ассортимент игр · 8.9</small></a>
 <a href="/casino/">Показать все обзоры →</a>
 </div>
 </noscript>
@@ -1623,18 +1788,35 @@ window.addEventListener('load',function(){
 /* Data-driven random interlinks — extend the pools below to add items */
 (function(){
   var brands=[
-    {n:'Vavada',s:'vavada',sc:'9.7',d:'№1 · надёжность',c:'#ffcf3f',c2:'#e0952f'},
-    {n:'1win',s:'1win',sc:'9.5',d:'казино + ставки',c:'#e6eaf3',c2:'#a9b1c6'},
-    {n:'7K Casino',s:'7k',sc:'9.3',d:'быстрые выплаты',c:'#eaa96f',c2:'#b06d34'},
-    {n:'PokerDom',s:'pokerdom',sc:'9.2',d:'покер и слоты',c:'#37e0c8',c2:'#12a892'},
-    {n:'Sol Casino',s:'sol',sc:'9.0',d:'ассортимент игр',c:'#ffa63d',c2:'#e07a12'},
-    {n:'Kent Casino',s:'kent',sc:'8.9',d:'старт новичка',c:'#c78bff',c2:'#8a4fe0'},
-    {n:'Starda',s:'starda',sc:'8.8',d:'турниры и live',c:'#6cc4ff',c2:'#2a86e0'},
-    {n:'Monro',s:'monro',sc:'8.7',d:'лояльность',c:'#ff2e93',c2:'#c81f6f'},
-    {n:'Izzi',s:'izzi',sc:'8.6',d:'простой интерфейс',c:'#c8ff5a',c2:'#8fd400'},
-    {n:'Legzo',s:'legzo',sc:'8.5',d:'мобильная версия',c:'#b8ff2b',c2:'#5fbf00'},
-    {n:'JoyCasino',s:'joycasino',sc:'8.4',d:'стаж на рынке',c:'#37e0c8',c2:'#12a892'},
-    {n:'Rox',s:'rox',sc:'8.3',d:'акции и промо',c:'#ffa63d',c2:'#e07a12'}
+    {n:'Spinto',s:'spinto',sc:'9.8',d:'№1 · лидер рейтинга',c:'#ffcf3f',c2:'#e0952f'},
+    {n:'7K Casino',s:'7k',sc:'9.9',d:'быстрые выплаты',c:'#37e0c8',c2:'#12a892'},
+    {n:'1win',s:'1win',sc:'9.9',d:'казино + ставки',c:'#ff2e93',c2:'#c81f6f'},
+    {n:'Banda',s:'banda',sc:'',d:'партнёр рейтинга',c:'#ffa63d',c2:'#e07a12'},
+    {n:'Leebet',s:'leebet',sc:'',d:'партнёр рейтинга',c:'#c78bff',c2:'#8a4fe0'},
+    {n:'APEX',s:'apex',sc:'',d:'партнёр рейтинга',c:'#6cc4ff',c2:'#2a86e0'},
+    {n:'Kush',s:'kush',sc:'',d:'партнёр рейтинга',c:'#b8ff2b',c2:'#5fbf00'},
+    {n:'Eva',s:'eva',sc:'',d:'партнёр рейтинга',c:'#ffcf3f',c2:'#e0952f'},
+    {n:'Flagman',s:'flagman',sc:'9.3',d:'кэшбэк',c:'#37e0c8',c2:'#12a892'},
+    {n:'Legzo',s:'legzo',sc:'9.2',d:'мобильная версия',c:'#ff2e93',c2:'#c81f6f'},
+    {n:'Starda',s:'starda',sc:'9.1',d:'турниры и live',c:'#ffa63d',c2:'#e07a12'},
+    {n:'Rox',s:'rox',sc:'9.0',d:'акции и промо',c:'#c78bff',c2:'#8a4fe0'},
+    {n:'Sol Casino',s:'sol',sc:'8.9',d:'ассортимент игр',c:'#6cc4ff',c2:'#2a86e0'},
+    {n:'Izzi',s:'izzi',sc:'8.8',d:'простой интерфейс',c:'#b8ff2b',c2:'#5fbf00'},
+    {n:'Jet',s:'jet',sc:'8.7',d:'криптоигра',c:'#ffcf3f',c2:'#e0952f'},
+    {n:'Monro',s:'monro',sc:'8.6',d:'лояльность',c:'#37e0c8',c2:'#12a892'},
+    {n:'Drip',s:'drip',sc:'8.5',d:'фриспины',c:'#ff2e93',c2:'#c81f6f'},
+    {n:'Gizbo',s:'gizbo',sc:'8.4',d:'слоты',c:'#ffa63d',c2:'#e07a12'},
+    {n:'Fresh',s:'fresh',sc:'8.3',d:'надёжность',c:'#c78bff',c2:'#8a4fe0'},
+    {n:'Volna',s:'volna',sc:'8.2',d:'live-казино',c:'#6cc4ff',c2:'#2a86e0'},
+    {n:'Irwin',s:'irwin',sc:'8.1',d:'атмосфера',c:'#b8ff2b',c2:'#5fbf00'},
+    {n:'Beef',s:'beef',sc:'8.0',d:'турниры',c:'#ffcf3f',c2:'#e0952f'},
+    {n:'Martin',s:'martin',sc:'7.9',d:'старт',c:'#37e0c8',c2:'#12a892'},
+    {n:'1Go',s:'1go',sc:'7.8',d:'быстрый старт',c:'#ff2e93',c2:'#c81f6f'},
+    {n:'Lex',s:'lex',sc:'7.7',d:'выбор игр',c:'#ffa63d',c2:'#e07a12'},
+    {n:'Vavada',s:'vavada',sc:'',d:'обзор редакции',c:'#e6eaf3',c2:'#a9b1c6'},
+    {n:'PokerDom',s:'pokerdom',sc:'',d:'покер и слоты',c:'#37e0c8',c2:'#12a892'},
+    {n:'Kent Casino',s:'kent',sc:'',d:'старт новичка',c:'#c78bff',c2:'#8a4fe0'},
+    {n:'JoyCasino',s:'joycasino',sc:'',d:'стаж на рынке',c:'#6cc4ff',c2:'#2a86e0'}
   ];
   var slots=[
     {n:'Gates of Olympus 1000',p:'Pragmatic Play',href:'/slots/gates-of-olympus-1000',rtp:'96.5',v:'высокая',kind:'слот',img:'https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png'},
@@ -1662,7 +1844,7 @@ window.addEventListener('load',function(){
   if(bEl){
     var h='';
     pick(brands,3).forEach(function(b){
-      h+='<a href="/casino/'+b.s+'" style="--tc:'+b.c+';--tc2:'+b.c2+'"><b>'+esc(b.n)+'</b><small>'+esc(b.d)+' · '+b.sc+'</small></a>';
+      h+='<a href="/casino/'+b.s+'" style="--tc:'+b.c+';--tc2:'+b.c2+'"><b>'+esc(b.n)+'</b><small>'+esc(b.d)+(b.sc?' · '+b.sc:'')+'</small></a>';
     });
     h+='<a class="all-card" href="/casino/"><span class="sa-title">Показать все</span><span class="sa-sub">подробные обзоры всех казино рейтинга</span><span class="sa-more">Все обзоры →</span></a>';
     bEl.innerHTML=h;
@@ -1752,29 +1934,46 @@ window.addEventListener('load',function(){
       "@type": "ItemList",
       "name": "Рейтинг лучших онлайн-казино 2026",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 12,
+      "numberOfItems": 29,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Vavada","url":"https://casino-dengi.top/casino/vavada"},
-        {"@type":"ListItem","position":2,"name":"1win","url":"https://casino-dengi.top/casino/1win"},
-        {"@type":"ListItem","position":3,"name":"7K Casino","url":"https://casino-dengi.top/casino/7k"},
-        {"@type":"ListItem","position":4,"name":"PokerDom","url":"https://casino-dengi.top/casino/pokerdom"},
-        {"@type":"ListItem","position":5,"name":"Sol Casino","url":"https://casino-dengi.top/casino/sol"},
-        {"@type":"ListItem","position":6,"name":"Kent Casino","url":"https://casino-dengi.top/casino/kent"},
-        {"@type":"ListItem","position":7,"name":"Starda","url":"https://casino-dengi.top/casino/starda"},
-        {"@type":"ListItem","position":8,"name":"Monro","url":"https://casino-dengi.top/casino/monro"},
-        {"@type":"ListItem","position":9,"name":"Izzi","url":"https://casino-dengi.top/casino/izzi"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://casino-dengi.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://casino-dengi.top/casino/7k"},
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://casino-dengi.top/casino/1win"},
+        {"@type":"ListItem","position":4,"name":"Banda","url":"https://casino-dengi.top/casino/banda"},
+        {"@type":"ListItem","position":5,"name":"Leebet","url":"https://casino-dengi.top/casino/leebet"},
+        {"@type":"ListItem","position":6,"name":"APEX","url":"https://casino-dengi.top/casino/apex"},
+        {"@type":"ListItem","position":7,"name":"Kush","url":"https://casino-dengi.top/casino/kush"},
+        {"@type":"ListItem","position":8,"name":"Eva","url":"https://casino-dengi.top/casino/eva"},
+        {"@type":"ListItem","position":9,"name":"Flagman","url":"https://casino-dengi.top/casino/flagman"},
         {"@type":"ListItem","position":10,"name":"Legzo","url":"https://casino-dengi.top/casino/legzo"},
-        {"@type":"ListItem","position":11,"name":"JoyCasino","url":"https://casino-dengi.top/casino/joycasino"},
-        {"@type":"ListItem","position":12,"name":"Rox","url":"https://casino-dengi.top/casino/rox"}
+        {"@type":"ListItem","position":11,"name":"Starda","url":"https://casino-dengi.top/casino/starda"},
+        {"@type":"ListItem","position":12,"name":"Rox","url":"https://casino-dengi.top/casino/rox"},
+        {"@type":"ListItem","position":13,"name":"Sol Casino","url":"https://casino-dengi.top/casino/sol"},
+        {"@type":"ListItem","position":14,"name":"Izzi","url":"https://casino-dengi.top/casino/izzi"},
+        {"@type":"ListItem","position":15,"name":"Jet","url":"https://casino-dengi.top/casino/jet"},
+        {"@type":"ListItem","position":16,"name":"Monro","url":"https://casino-dengi.top/casino/monro"},
+        {"@type":"ListItem","position":17,"name":"Drip","url":"https://casino-dengi.top/casino/drip"},
+        {"@type":"ListItem","position":18,"name":"Gizbo","url":"https://casino-dengi.top/casino/gizbo"},
+        {"@type":"ListItem","position":19,"name":"Fresh","url":"https://casino-dengi.top/casino/fresh"},
+        {"@type":"ListItem","position":20,"name":"Volna","url":"https://casino-dengi.top/casino/volna"},
+        {"@type":"ListItem","position":21,"name":"Irwin","url":"https://casino-dengi.top/casino/irwin"},
+        {"@type":"ListItem","position":22,"name":"Beef","url":"https://casino-dengi.top/casino/beef"},
+        {"@type":"ListItem","position":23,"name":"Martin","url":"https://casino-dengi.top/casino/martin"},
+        {"@type":"ListItem","position":24,"name":"1Go","url":"https://casino-dengi.top/casino/1go"},
+        {"@type":"ListItem","position":25,"name":"Lex","url":"https://casino-dengi.top/casino/lex"},
+        {"@type":"ListItem","position":26,"name":"Vavada","url":"https://casino-dengi.top/casino/vavada"},
+        {"@type":"ListItem","position":27,"name":"PokerDom","url":"https://casino-dengi.top/casino/pokerdom"},
+        {"@type":"ListItem","position":28,"name":"Kent Casino","url":"https://casino-dengi.top/casino/kent"},
+        {"@type":"ListItem","position":29,"name":"JoyCasino","url":"https://casino-dengi.top/casino/joycasino"}
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Какое казино №1 в рейтинге 2026?","acceptedAnswer":{"@type":"Answer","text":"На сентябрь 2026 первое место занимает Vavada — за стабильные выплаты в течение 1–24 часов, действующую лицензию Кюрасао и минимум спорных ситуаций. Второе и третье места — 1win и 7K."}},
+        {"@type":"Question","name":"Какое казино №1 в рейтинге 2026?","acceptedAnswer":{"@type":"Answer","text":"На сентябрь 2026 первое место занимает Spinto — за низкий порог входа от 50 ₽, быстрые выплаты через СБП и крипту до часа и щедрый старт 200% + 150 фриспинов. Второе и третье места — 7K и 1win."}},
         {"@type":"Question","name":"Как редакция выбирает надёжное онлайн-казино?","acceptedAnswer":{"@type":"Answer","text":"Редакция PlayCasino проверяет четыре вещи: рабочую лицензию с номером, реальные сроки вывода в минутах, соответствие RTP слотов заявленному провайдером и структуру отзывов. Если хотя бы один пункт вызывает сомнение — площадка в топ не идёт."}},
         {"@type":"Question","name":"Чем топ казино отличается от рейтинга казино?","acceptedAnswer":{"@type":"Answer","text":"Рейтинг — список с баллами по методике и весами критериев. Топ — редакционная подборка лучшего без строгой шкалы. У PlayCasino топ-12 отранжирован по методике, поэтому топ и рейтинг здесь совпадают."}},
-        {"@type":"Question","name":"Какие казино реально платят?","acceptedAnswer":{"@type":"Answer","text":"Платят площадки с прозрачной кассой и историей выплат: Vavada, 1win, 7K, Sol и другие из топа. Редакция сама выводит средства и засекает сроки — по замерам USDT приходит за 8–25 минут."}},
+        {"@type":"Question","name":"Какие казино реально платят?","acceptedAnswer":{"@type":"Answer","text":"Платят площадки с прозрачной кассой и историей выплат: Spinto, 7K, 1win, Sol и другие из топа. Редакция сама выводит средства и засекает сроки — по замерам USDT приходит за 8–25 минут."}},
         {"@type":"Question","name":"Легальны ли онлайн-казино в России?","acceptedAnswer":{"@type":"Answer","text":"Отдельной лицензии на онлайн-казино в РФ нет. Легально работают игровые разделы букмекеров с российским разрешением и международные площадки под лицензиями Кюрасао или Anjouan, доступные через зеркала. В рейтинг мы включаем только бренды с проверяемой лицензией."}},
         {"@type":"Question","name":"Какое казино с самым быстрым выводом?","acceptedAnswer":{"@type":"Answer","text":"По замерам редакции быстрее всех выплачивают 7K и 1win — при выводе через СБП или криптовалюту деньги приходят от 15 минут до часа. Подробнее — в подборке «Казино с быстрым выводом»."}},
         {"@type":"Question","name":"Можно ли начать с минимального депозита?","acceptedAnswer":{"@type":"Answer","text":"Да, у большинства площадок из топа минимальный депозит 100 ₽, а у PokerDom — от 50 ₽. Для старта с маленькой суммы смотрите раздел «Минимальный депозит»."}},
@@ -1859,6 +2058,6 @@ window.addEventListener('load',function(){
 @media(max-width:820px){.pcf-grid{grid-template-columns:1fr 1fr}.pcf-coop{flex-direction:column;align-items:flex-start}}
 @media(max-width:520px){.pcf-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.pcfoot *{animation:none!important}}
-</style><footer class="pcfoot"><div class="pcf-in"><div class="pcf-coop"><div><p class="pcf-coop-t">Сотрудничество и реклама</p><p class="pcf-coop-p">Размещение, партнёрство и вопросы по рейтингу — пишите напрямую в наш Telegram, отвечаем быстро.</p></div><a class="pcf-tg" href="https://t.me/landeks" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 18.6l.3-4.24 7.68-6.93c.34-.3-.07-.45-.52-.18L7.72 13.3 3.6 12c-.9-.27-.9-.88.2-1.32L19.8 4.5c.74-.34 1.44.18 1.16 1.3l-2.72 12.82c-.19.9-.74 1.12-1.5.7l-4.14-3.05-2 1.93c-.22.22-.4.4-.8.4z"/></svg><span>Написать в Telegram</span></a></div><div class="pcf-grid"><div class="pcf-brand"><a class="pcf-logo" href="/"><span class="d">P</span>Play<b>Casino</b></a><p class="pcf-tag">Рейтинг онлайн-казино: подробные обзоры, бонусы, скорость выплат и честные оценки редакции.</p><span class="pcf-18"><b>18+</b> Играйте ответственно</span></div><div class="pcf-col"><h4>Обзоры</h4><a href="/casino/">Все казино</a><a href="/casino/vavada/">Vavada</a><a href="/casino/1win/">1win</a><a href="/casino/7k/">7K Casino</a><a href="/slots/">Слоты</a></div><div class="pcf-col"><h4>Каталоги</h4><a href="/min-depozit/">Мин. депозит</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/bystryj-vyvod/">Быстрый вывод</a><a href="/licenzionnye/">Лицензионные</a></div><div class="pcf-col"><h4>О проекте</h4><a href="/o-redakcii/">О редакции</a><a href="/o-redakcii/#metodika">Как мы оцениваем</a><a href="/otzyvy/">Отзывы игроков</a><a href="https://t.me/landeks" target="_blank" rel="nofollow noopener">Контакты</a></div></div><div class="pcf-bottom"><span>© 2026 PlayCasino</span><span>Материалы предназначены для лиц старше 18 лет</span></div></div></footer><!--/PCFOOT-->
+</style><footer class="pcfoot"><div class="pcf-in"><div class="pcf-coop"><div><p class="pcf-coop-t">Сотрудничество и реклама</p><p class="pcf-coop-p">Размещение, партнёрство и вопросы по рейтингу — пишите напрямую в наш Telegram, отвечаем быстро.</p></div><a class="pcf-tg" href="https://t.me/landeks" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 18.6l.3-4.24 7.68-6.93c.34-.3-.07-.45-.52-.18L7.72 13.3 3.6 12c-.9-.27-.9-.88.2-1.32L19.8 4.5c.74-.34 1.44.18 1.16 1.3l-2.72 12.82c-.19.9-.74 1.12-1.5.7l-4.14-3.05-2 1.93c-.22.22-.4.4-.8.4z"/></svg><span>Написать в Telegram</span></a></div><div class="pcf-grid"><div class="pcf-brand"><a class="pcf-logo" href="/"><span class="d">P</span>Play<b>Casino</b></a><p class="pcf-tag">Рейтинг онлайн-казино: подробные обзоры, бонусы, скорость выплат и честные оценки редакции.</p><span class="pcf-18"><b>18+</b> Играйте ответственно</span></div><div class="pcf-col"><h4>Обзоры</h4><a href="/casino/">Все казино</a><a href="/casino/spinto/">Spinto</a><a href="/casino/7k/">7K Casino</a><a href="/casino/1win/">1win</a><a href="/slots/">Слоты</a></div><div class="pcf-col"><h4>Каталоги</h4><a href="/min-depozit/">Мин. депозит</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/bystryj-vyvod/">Быстрый вывод</a><a href="/licenzionnye/">Лицензионные</a></div><div class="pcf-col"><h4>О проекте</h4><a href="/o-redakcii/">О редакции</a><a href="/o-redakcii/#metodika">Как мы оцениваем</a><a href="/otzyvy/">Отзывы игроков</a><a href="https://t.me/landeks" target="_blank" rel="nofollow noopener">Контакты</a></div></div><div class="pcf-bottom"><span>© 2026 PlayCasino</span><span>Материалы предназначены для лиц старше 18 лет</span></div></div></footer><!--/PCFOOT-->
 </body>
 </html>
