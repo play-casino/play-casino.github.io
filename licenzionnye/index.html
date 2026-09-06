@@ -257,6 +257,9 @@
   .lz-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(55,224,200,.7);color:#022420}
   .lz-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .lz-go:hover::after{animation:lz-shim .85s var(--ez)}
+  .lz-acts{display:flex;flex-direction:column;gap:7px}
+  .lz-rev{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid color-mix(in srgb,var(--c) 42%,var(--hair2));color:var(--c);font-weight:800;padding:9px 18px;border-radius:11px;font-size:13px;white-space:nowrap;background:color-mix(in srgb,var(--c) 8%,transparent);transition:border-color .18s,background .18s}
+  .lz-rev:hover{border-color:var(--c);color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent)}
   .lz-rrow.r1{--c:var(--cyan);--c2:#12a892;--ct:#04231e;background:linear-gradient(120deg,rgba(55,224,200,.1),var(--pan) 72%)}
   .lz-rrow.r2{--c:var(--sky);--c2:#2a86e0;--ct:#04121f}
   .lz-rrow.r3{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
@@ -686,7 +689,7 @@ window.addEventListener('load',function(){
 <span class="lz-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка лицензий · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Лицензионные казино: где лицензию <span class="g-cyan">пробить по номеру</span>, а не увидеть <span class="g-sky">картинку в подвале</span> — рейтинг <span class="g-viol">2026</span></h1>
 <p class="lz-lead rv" style="--d:.16s">
-          Лицензионное казино — это не значок в футере, а <b>проверяемые обязательства оператора</b>. №1 в подборке — <span class="hl-cyan">7K Casino</span>: лицензия <span class="hl-sky">Curaçao</span>, слоты от сертифицированных студий (Pragmatic, Nolimit City), а вывод по СБП идёт <b>от 15 минут</b> — редакция гоняла малой суммой. Сразу честно: онлайн-казино в России <span class="hl-hot">не лицензируются</span> — российской игорной лицензии для интернет-казино не существует. Все 6 площадок работают по зарубежной лицензии Curaçao. Ниже — как за пару минут отличить легал от скама, чем <span class="hl-viol">MGA</span> строже Кюрасао и какие бренды проверку прошли.
+          Лицензионное казино — это не значок в футере, а <b>проверяемые обязательства оператора</b>. №1 в подборке — <span class="hl-cyan">Spinto</span>: лицензия <span class="hl-sky">Curaçao (CGA)</span>, слоты от сертифицированных студий (Nolimit City, Hacksaw), порог входа <b>от 50 ₽</b>, а вывод по СБП и крипте укладывается в час — редакция гоняла малой суммой. Сразу честно: онлайн-казино в России <span class="hl-hot">не лицензируются</span> — российской игорной лицензии для интернет-казино не существует. Все 6 площадок работают по зарубежной лицензии Curaçao. Ниже — как за пару минут отличить легал от скама, чем <span class="hl-viol">MGA</span> строже Кюрасао и какие бренды проверку прошли.
         </p>
 <div aria-label="Пятишаговая проверка лицензии" class="lz-chain rv" style="--d:.2s">
 <div class="lnk"><span class="t">Футер</span><small>номер + юрлицо</small></div>
@@ -707,26 +710,26 @@ window.addEventListener('load',function(){
 </div>
 <aside class="lz-dossier rv" style="--d:.2s">
 <span class="lz-ribbon cyan">Выбор редакции</span>
-<div class="lz-scorechip"><div class="cv">9.9</div><div class="cl">балл из 10</div></div>
+<div class="lz-scorechip"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">CG</span>
 <div class="tag">Лицензионное досье · проверено</div>
-<div class="bn">7K Casino</div>
-<div class="bs">лицензия Curaçao, вывод СБП от 15 минут</div>
-<div class="why"><b>Почему №1:</b> юрлицо указано и сверяемо, софт от Pragmatic и Nolimit City с сертифицированным RNG, а первый вывод малой суммой прошёл без задержки.</div>
+<div class="bn">Spinto</div>
+<div class="bs">лицензия Curaçao (CGA), низкий порог и крипто-вывод</div>
+<div class="why"><b>Почему №1:</b> оператор находится в реестре Curaçao Gaming Authority, софт от Nolimit City и Hacksaw с сертифицированным RNG, а первый вывод малой суммой прошёл без задержки — порог входа всего 50 ₽.</div>
 <div aria-hidden="true" class="rule"></div>
 <ul class="lz-dspec">
 <li><span class="k">Регулятор</span><i class="dt"></i><span class="v hl-cyan">Curaçao (CGA)</span></li>
-<li><span class="k">Юрлицо</span><i class="dt"></i><span class="v hl-sky">указано в подвале</span></li>
-<li><span class="k">Софт (RNG)</span><i class="dt"></i><span class="v hl-neon">Pragmatic · Nolimit City</span></li>
+<li><span class="k">Юрлицо</span><i class="dt"></i><span class="v hl-sky">сверено в реестре</span></li>
+<li><span class="k">Софт (RNG)</span><i class="dt"></i><span class="v hl-neon">Nolimit City · Hacksaw</span></li>
+<li><span class="k">Бонус старта</span><i class="dt"></i><span class="v hl-gold">200% + 150 FS</span></li>
 <li><span class="k">Порог входа</span><i class="dt"></i><span class="v hl-gold">от 50 ₽</span></li>
-<li><span class="k">Вывод СБП / карта</span><i class="dt"></i><span class="v hl-cyan">от 15 минут</span></li>
-<li><span class="k">Крипта (USDT)</span><i class="dt"></i><span class="v hl-viol">до 30 минут</span></li>
-<li><span class="k">Оценка редакции</span><i class="dt"></i><span class="v hl-cyan">9.9 / 10</span></li>
+<li><span class="k">Вывод СБП / крипта</span><i class="dt"></i><span class="v hl-cyan">до 1 часа</span></li>
+<li><span class="k">Оценка редакции</span><i class="dt"></i><span class="v hl-cyan">9.8 / 10</span></li>
 </ul>
-<a class="lz-btn lz-btn-cyan" href="/go/7k" rel="nofollow sponsored" style="width:100%">Открыть 7K Casino</a>
-<div class="foot"><span>Curaçao</span><span>СБП · Мир · USDT</span><span>сертифицированный RNG</span></div>
+<a class="lz-btn lz-btn-cyan" href="/go/spinto" rel="nofollow sponsored" style="width:100%">Открыть Spinto</a>
+<div class="foot"><span>Curaçao (CGA)</span><span>СБП · USDT · крипта</span><span>сертифицированный RNG</span></div>
 <ul class="lz-dcheck">
-<li>Номер лицензии сверен в реестре регулятора</li>
+<li>Оператор сверен в реестре Curaçao Gaming Authority</li>
 <li>Юрлицо совпадает с пользовательским соглашением</li>
 <li>Первый вывод малой суммой проверен редакцией</li>
 </ul>
@@ -797,32 +800,38 @@ window.addEventListener('load',function(){
 <span class="lz-eyebrow">Топ-6 · сентябрь 2026</span>
 <h2>Лицензионные казино 2026: <span class="g-lime">рейтинг площадок с проверяемой лицензией</span></h2>
 </div>
-<p class="rv">Список отранжирован по совокупной оценке, но колонку с лицензией мы вынесли на первый план — ради неё вы и открыли страницу. Порядок собран по прозрачности лицензии и скорости вывода, которую редакция замеряла сама. Номер всегда сверяйте в реестре регулятора — как это делать, показываем в разделах ниже.</p>
+<p class="rv">Это подборка редакции по совокупности прозрачности лицензии, скорости выплат и надёжности, а колонку с лицензией мы вынесли на первый план — ради неё вы и открыли страницу. Скорость вывода редакция замеряла сама. Номер всегда сверяйте в реестре регулятора — как это делать, показываем в разделах ниже.</p>
 <div class="lz-rank">
 <article class="lz-rrow r1 rv">
 <div class="rkw"><span class="lz-medal g">1</span></div>
 <div class="lz-mid">
-<div class="bn">7K Casino<span class="ed">№1</span></div>
+<div class="bn">Spinto<span class="ed">№1</span></div>
+<span class="bt">Лучшее за — новую лицензию CGA и крипто-вывод</span>
+<div class="prm"><span>Софт <b>Nolimit · Hacksaw</b></span><span>Бонус <b>200% + 150 FS</b></span><span>Вход <b>от 50 ₽</b></span></div>
+</div>
+<div class="lz-right">
+<div class="lz-lic"><div class="n">Curaçao</div><div class="k">оператор в реестре CGA</div></div>
+<div class="lz-sccol"><span class="lz-score">9.8</span><span class="lz-sbar"><i data-score="9.8"></i></span></div>
+<div class="lz-acts">
+<a class="lz-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+<a class="lz-rev" href="/casino/spinto/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="lz-rrow r2 rv">
+<div class="rkw"><span class="lz-medal">2</span></div>
+<div class="lz-mid">
+<div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — проверяемую лицензию и быстрый вывод</span>
 <div class="prm"><span>Софт <b>Pragmatic · Nolimit</b></span><span>Вывод <b>от 15 мин</b></span><span>Вход <b>от 50 ₽</b></span></div>
 </div>
 <div class="lz-right">
 <div class="lz-lic"><div class="n">Curaçao</div><div class="k">юрлицо указано</div></div>
 <div class="lz-sccol"><span class="lz-score">9.9</span><span class="lz-sbar"><i data-score="9.9"></i></span></div>
+<div class="lz-acts">
 <a class="lz-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+<a class="lz-rev" href="/casino/7k/">Обзор</a>
 </div>
-</article>
-<article class="lz-rrow r2 rv">
-<div class="rkw"><span class="lz-medal">2</span></div>
-<div class="lz-mid">
-<div class="bn">Spinto</div>
-<span class="bt">Лучшее за — новую лицензию CGA и крипто-вывод</span>
-<div class="prm"><span>Софт <b>Nolimit · Hacksaw</b></span><span>USDT <b>~40 мин</b></span><span>Запуск <b>2026</b></span></div>
-</div>
-<div class="lz-right">
-<div class="lz-lic"><div class="n">Curaçao</div><div class="k">лицензия в подвале</div></div>
-<div class="lz-sccol"><span class="lz-score">9.8</span><span class="lz-sbar"><i data-score="9.8"></i></span></div>
-<a class="lz-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
 <article class="lz-rrow r3 rv">
@@ -835,7 +844,10 @@ window.addEventListener('load',function(){
 <div class="lz-right">
 <div class="lz-lic"><div class="n">Curaçao</div><div class="k">работает с 2016</div></div>
 <div class="lz-sccol"><span class="lz-score">9.7</span><span class="lz-sbar"><i data-score="9.7"></i></span></div>
+<div class="lz-acts">
 <a class="lz-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<a class="lz-rev" href="/casino/1win/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="lz-rrow r4 rv">
@@ -848,7 +860,10 @@ window.addEventListener('load',function(){
 <div class="lz-right">
 <div class="lz-lic"><div class="n">Curaçao</div><div class="k">слоты Pragmatic</div></div>
 <div class="lz-sccol"><span class="lz-score">9.6</span><span class="lz-sbar"><i data-score="9.6"></i></span></div>
+<div class="lz-acts">
 <a class="lz-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+<a class="lz-rev" href="/casino/banda/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="lz-rrow r5 rv">
@@ -861,7 +876,10 @@ window.addEventListener('load',function(){
 <div class="lz-right">
 <div class="lz-lic"><div class="n">Curaçao</div><div class="k">крипто-ориентир</div></div>
 <div class="lz-sccol"><span class="lz-score">9.5</span><span class="lz-sbar"><i data-score="9.5"></i></span></div>
+<div class="lz-acts">
 <a class="lz-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+<a class="lz-rev" href="/casino/leebet/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="lz-rrow r6 rv">
@@ -874,18 +892,21 @@ window.addEventListener('load',function(){
 <div class="lz-right">
 <div class="lz-lic"><div class="n">Curaçao</div><div class="k">запуск 2026</div></div>
 <div class="lz-sccol"><span class="lz-score">9.4</span><span class="lz-sbar"><i data-score="9.4"></i></span></div>
+<div class="lz-acts">
 <a class="lz-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+<a class="lz-rev" href="/casino/apex/">Обзор</a>
+</div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица: тип лицензии, софт и реальная скорость вывода</h3>
 <div class="lz-twrap lz-tscroll rv" style="margin:12px 0 0">
 <table class="lz-t mfit">
-<caption>Лицензии сверены редакцией по номеру в реестре регулятора; сортировка — по оценке. Онлайн-казино в РФ не лицензируются, все площадки — под зарубежной лицензией Curaçao.</caption>
+<caption>Лицензии сверены редакцией по номеру в реестре регулятора; порядок — подборка редакции по совокупности лицензии, выплат и надёжности. Онлайн-казино в РФ не лицензируются, все площадки — под зарубежной лицензией Curaçao.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Лицензия и юрлицо</th><th>Софт (RNG)</th><th>Оценка</th><th>Стартовый бонус</th></tr></thead>
 <tbody>
-<tr><td class="lz-rub mfit-num" data-label="">1</td><td class="lz-bc" data-label="Казино"><span class="lz-bn">7K Casino</span><span class="l2"><span class="best" style="--rc:#37e0c8">Проверяемая лицензия</span><span class="edb">№1</span></span></td><td data-label="Лицензия и юрлицо"><b>Curaçao</b>, юрлицо указано</td><td data-label="Софт (RNG)">Pragmatic · Nolimit City</td><td data-label="Оценка"><span class="lz-rtp" style="color:var(--cyan)">9.9</span></td><td data-label="Стартовый бонус">225% + 200 FS</td></tr>
-<tr><td class="lz-rub mfit-num" data-label="">2</td><td class="lz-bc" data-label="Казино"><span class="lz-bn">Spinto</span><span class="l2"><span class="best" style="--rc:#6cc4ff">Новая CGA-лицензия</span></span></td><td data-label="Лицензия и юрлицо"><b>Curaçao</b>, лицензия в подвале</td><td data-label="Софт (RNG)">Nolimit City · Hacksaw</td><td data-label="Оценка"><span class="lz-rtp" style="color:var(--sky)">9.8</span></td><td data-label="Стартовый бонус">200% + 150 FS</td></tr>
+<tr><td class="lz-rub mfit-num" data-label="">1</td><td class="lz-bc" data-label="Казино"><span class="lz-bn">Spinto</span><span class="l2"><span class="best" style="--rc:#37e0c8">Новая CGA-лицензия</span><span class="edb">№1</span></span></td><td data-label="Лицензия и юрлицо"><b>Curaçao</b>, лицензия в подвале</td><td data-label="Софт (RNG)">Nolimit City · Hacksaw</td><td data-label="Оценка"><span class="lz-rtp" style="color:var(--cyan)">9.8</span></td><td data-label="Стартовый бонус">200% + 150 FS</td></tr>
+<tr><td class="lz-rub mfit-num" data-label="">2</td><td class="lz-bc" data-label="Казино"><span class="lz-bn">7K Casino</span><span class="l2"><span class="best" style="--rc:#6cc4ff">Проверяемая лицензия</span></span></td><td data-label="Лицензия и юрлицо"><b>Curaçao</b>, юрлицо указано</td><td data-label="Софт (RNG)">Pragmatic · Nolimit City</td><td data-label="Оценка"><span class="lz-rtp" style="color:var(--sky)">9.9</span></td><td data-label="Стартовый бонус">225% + 200 FS</td></tr>
 <tr><td class="lz-rub mfit-num" data-label="">3</td><td class="lz-bc" data-label="Казино"><span class="lz-bn">1win</span><span class="l2"><span class="best" style="--rc:#b8ff2b">Долгая история с 2016</span></span></td><td data-label="Лицензия и юрлицо"><b>Curaçao</b>, каталог 12 000+</td><td data-label="Софт (RNG)">Pragmatic · Evolution</td><td data-label="Оценка"><span class="lz-rtp">9.7</span></td><td data-label="Стартовый бонус">500% до 200 000 ₽</td></tr>
 <tr><td class="lz-rub mfit-num" data-label="">4</td><td class="lz-bc" data-label="Казино"><span class="lz-bn">Banda</span><span class="l2"><span class="best" style="--rc:#ffcf3f">Турниры на легале</span></span></td><td data-label="Лицензия и юрлицо"><b>Curaçao</b>, турнирная сетка</td><td data-label="Софт (RNG)">Pragmatic Play</td><td data-label="Оценка"><span class="lz-rtp" style="color:var(--gold)">9.6</span></td><td data-label="Стартовый бонус">100% + 500 FS</td></tr>
 <tr><td class="lz-rub mfit-num" data-label="">5</td><td class="lz-bc" data-label="Казино"><span class="lz-bn">Leebet</span><span class="l2"><span class="best" style="--rc:#a879ff">Крипто-ориентир</span></span></td><td data-label="Лицензия и юрлицо"><b>Curaçao</b>, упор на USDT</td><td data-label="Софт (RNG)">Hacksaw · Pragmatic</td><td data-label="Оценка"><span class="lz-rtp" style="color:var(--viol)">9.5</span></td><td data-label="Стартовый бонус">150% до 1000 USDT</td></tr>
@@ -1053,10 +1074,10 @@ window.addEventListener('load',function(){
 <table class="lz-t mfit">
 <thead><tr><th>Казино</th><th>Быстрый метод</th><th>Замеренный срок</th><th>Порог входа</th><th>Лицензия сверена</th></tr></thead>
 <tbody>
-<tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Быстрый метод"><span class="lz-pill p-cyan">СБП · карта</span></td><td class="lz-rtp" data-label="Замеренный срок" style="color:var(--cyan)">от 15 мин</td><td data-label="Порог входа">от 50 ₽</td><td data-label="Лицензия сверена"><span class="lz-pill yes">да</span></td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Leebet</b></td><td data-label="Быстрый метод"><span class="lz-pill p-viol">USDT TRC-20</span></td><td class="lz-rtp" data-label="Замеренный срок" style="color:var(--viol)">~20 мин</td><td data-label="Порог входа">от 100 ₽</td><td data-label="Лицензия сверена"><span class="lz-pill yes">да</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Быстрый метод"><span class="lz-pill p-sky">крипта</span></td><td class="lz-rtp" data-label="Замеренный срок" style="color:var(--sky)">~40 мин</td><td data-label="Порог входа">от 50 ₽</td><td data-label="Лицензия сверена"><span class="lz-pill yes">да</span></td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Быстрый метод"><span class="lz-pill p-cyan">СБП · карта</span></td><td class="lz-rtp" data-label="Замеренный срок" style="color:var(--cyan)">от 15 мин</td><td data-label="Порог входа">от 50 ₽</td><td data-label="Лицензия сверена"><span class="lz-pill yes">да</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win</b></td><td data-label="Быстрый метод"><span class="lz-pill p-neon">СБП · USDT</span></td><td class="lz-rtp" data-label="Замеренный срок">от 15 мин*</td><td data-label="Порог входа">от 50 ₽</td><td data-label="Лицензия сверена"><span class="lz-pill yes">да</span></td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Leebet</b></td><td data-label="Быстрый метод"><span class="lz-pill p-viol">USDT TRC-20</span></td><td class="lz-rtp" data-label="Замеренный срок" style="color:var(--viol)">~20 мин</td><td data-label="Порог входа">от 100 ₽</td><td data-label="Лицензия сверена"><span class="lz-pill yes">да</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">APEX</b></td><td data-label="Быстрый метод"><span class="lz-pill p-gold">СБП · крипта</span></td><td class="lz-rtp" data-label="Замеренный срок" style="color:var(--gold)">в срок</td><td data-label="Порог входа">от 100 ₽</td><td data-label="Лицензия сверена"><span class="lz-pill yes">да</span></td></tr>
 </tbody>
 </table>
@@ -1069,14 +1090,14 @@ window.addEventListener('load',function(){
 <span class="lz-eyebrow">На деньги</span>
 <h2>Лицензионные казино онлайн на реальные деньги: <span class="g-sky">рубли, СБП, минимум</span></h2>
 </div>
-<p class="rv">Лицензия нужна ради одного — играть на реальные деньги и спокойно забирать выигрыш. Здесь игрока волнуют две цифры: минимум для входа и в какой валюте всё считается. Порог низкий: от 50 ₽ у 7K, Spinto и 1win, от 100 ₽ у Banda, Leebet и APEX. Это позволяет проверить лицензионную площадку минимальным заносом до крупной игры.</p>
+<p class="rv">Лицензия нужна ради одного — играть на реальные деньги и спокойно забирать выигрыш. Здесь игрока волнуют две цифры: минимум для входа и в какой валюте всё считается. Порог низкий: от 50 ₽ у Spinto, 7K и 1win, от 100 ₽ у Banda, Leebet и APEX. Это позволяет проверить лицензионную площадку минимальным заносом до крупной игры.</p>
 <p class="rv">Все шесть принимают депозит и вывод в рублях через СБП и карту, интерфейс и поддержка на русском. Крипта (USDT) — как альтернатива. Нюанс по валюте: у Leebet и APEX бонус считается в USDT, а не в рублях — это влияет на отыгрыш.</p>
 <div class="lz-twrap lz-tscroll rv" style="margin:16px 0">
 <table class="lz-t mfit">
 <thead><tr><th>Казино</th><th>Порог входа</th><th>Валюта счёта</th><th>Стартовый бонус</th><th>Методы вывода</th></tr></thead>
 <tbody>
-<tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Порог входа"><span class="lz-pill p-neon">от 50 ₽</span></td><td data-label="Валюта счёта">₽ · USDT</td><td data-label="Стартовый бонус">225% + 200 FS</td><td data-label="Методы вывода">СБП · карта · USDT</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Порог входа"><span class="lz-pill p-neon">от 50 ₽</span></td><td data-label="Валюта счёта">₽ · USDT</td><td data-label="Стартовый бонус">200% + 150 FS</td><td data-label="Методы вывода">крипта · СБП</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Порог входа"><span class="lz-pill p-neon">от 50 ₽</span></td><td data-label="Валюта счёта">₽ · USDT</td><td data-label="Стартовый бонус">225% + 200 FS</td><td data-label="Методы вывода">СБП · карта · USDT</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win</b></td><td data-label="Порог входа"><span class="lz-pill p-neon">от 50 ₽</span></td><td data-label="Валюта счёта">₽ · USDT · BTC</td><td data-label="Стартовый бонус">500% до 200 000 ₽</td><td data-label="Методы вывода">СБП · USDT</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Banda</b></td><td data-label="Порог входа"><span class="lz-pill p-gold">от 100 ₽</span></td><td data-label="Валюта счёта">₽ · крипта</td><td data-label="Стартовый бонус">100% + 500 FS</td><td data-label="Методы вывода">карта · крипта</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Leebet</b></td><td data-label="Порог входа"><span class="lz-pill p-gold">от 100 ₽</span></td><td data-label="Валюта счёта">USDT · ₽</td><td data-label="Стартовый бонус">150% до 1000 USDT</td><td data-label="Методы вывода">USDT TRC-20</td></tr>
@@ -1142,23 +1163,23 @@ window.addEventListener('load',function(){
 </div>
 <div class="lz-review rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-cyan">1. 7K Casino <span>проверяемая лицензия и быстрый вывод</span></div><div class="sc">9.9 / 10</div></div>
+<div class="rh"><div class="nm c-cyan">1. Spinto <span>новая CGA-лицензия и крипто-вывод</span></div><div class="sc">9.8 / 10</div></div>
+<p>Spinto запустился в 2026-м, лицензия Curaçao лежит кликабельной в подвале, оператора мы нашли в реестре Curaçao Gaming Authority. Каталог собран из Nolimit City и Hacksaw — студий с сертифицированным софтом, так что к честности слотов вопросов нет. USDT приходит примерно за 40 минут, СБП укладывается в час. Верификация минимальная, регистрация занимает минуту, порог входа 50 ₽, а стартовый бонус — 200% и 150 фриспинов.</p>
+<div class="lz-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Лицензия Curaçao в открытом доступе, юрлицо сошлось</li><li>Софт Nolimit City и Hacksaw — сертифицированные студии</li><li>Минимальная верификация, порог 50 ₽</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Бренд молодой, истории домена мало</li><li>Упор на крипту, фиатных методов меньше</li></ul></div>
+</div>
+<div class="lz-facts"><span class="who">Лицензия: Curaçao (CGA)</span><span>Софт: <b>Nolimit · Hacksaw</b></span><span>Вход: <b>от 50 ₽</b></span><span>USDT: <b>~40 мин</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="lz-review rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-sky">2. 7K Casino <span>проверяемая лицензия и быстрый вывод</span></div><div class="sc">9.9 / 10</div></div>
 <p>7K работает по лицензии Curaçao, юрлицо указано в подвале — это первое, что редакция проверяет. Слоты идут от сертифицированных студий Pragmatic и Nolimit City, значит RNG и заявленный RTP не подкручены под площадку. Вывод СБП и картой мы гоняли малой суммой: от 15 минут до пары часов, крипта до 30 минут. На небольших суммах паспорт сразу не спрашивают — KYC всплывает позже.</p>
 <div class="lz-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Лицензия Curaçao, юрлицо указано и сверяемо</li><li>Софт Pragmatic и Nolimit City — сертифицированный RNG</li><li>Вывод СБП и картой от 15 минут, тестировали сами</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Кэшбэк до 20% начисляется по понедельникам, не мгновенно</li><li>Бонусные средства до отыгрыша не вывести</li></ul></div>
 </div>
 <div class="lz-facts"><span class="who">Лицензия: Curaçao</span><span>Софт: <b>Pragmatic · Nolimit</b></span><span>Вход: <b>от 50 ₽</b></span><span>Вывод: <b>от 15 мин</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="lz-review rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-sky">2. Spinto <span>новая CGA-лицензия и крипто-вывод</span></div><div class="sc">9.8 / 10</div></div>
-<p>Spinto запустился в 2026-м, лицензия Curaçao лежит кликабельной в подвале, оператора мы нашли в реестре Curaçao Gaming Authority. Каталог собран из Nolimit City и Hacksaw — студий с сертифицированным софтом, так что к честности слотов вопросов нет. USDT приходит примерно за 40 минут, СБП укладывается в час. Верификация минимальная, регистрация занимает минуту.</p>
-<div class="lz-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Лицензия Curaçao в открытом доступе, юрлицо сошлось</li><li>Софт Nolimit City и Hacksaw — сертифицированные студии</li><li>Минимальная верификация, порог 50 ₽</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Бренд молодой, истории домена мало</li><li>Упор на крипту, фиатных методов меньше</li></ul></div>
-</div>
-<div class="lz-facts"><span class="who">Лицензия: Curaçao (CGA)</span><span>Софт: <b>Nolimit · Hacksaw</b></span><span>Вход: <b>от 50 ₽</b></span><span>USDT: <b>~40 мин</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="lz-review rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1426,8 +1447,8 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: лицензия и юрлицо, сертификация софта, скорость кассы по замерам и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="lz-cards rv" id="brandsGrid"></div>
 <ul class="lz-seo-links">
-<li><a href="/casino/7k">Обзор казино 7K Casino — лицензия Curaçao</a></li>
 <li><a href="/casino/spinto">Обзор казино Spinto — лицензия Curaçao</a></li>
+<li><a href="/casino/7k">Обзор казино 7K Casino — лицензия Curaçao</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — лицензия Curaçao</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — лицензия Curaçao</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — лицензия Curaçao</a></li>
@@ -1510,8 +1531,8 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"7K Casino", c:"#37e0c8", c2:"#12a892", s:"9.9", d:"проверяемая лицензия Curaçao · вывод от 15 мин", h:"/casino/7k"},
-    {n:"Spinto",    c:"#6cc4ff", c2:"#2a86e0", s:"9.8", d:"новая CGA-лицензия · крипта ~40 мин",          h:"/casino/spinto"},
+    {n:"Spinto",    c:"#37e0c8", c2:"#12a892", s:"9.8", d:"новая CGA-лицензия · крипта ~40 мин",          h:"/casino/spinto"},
+    {n:"7K Casino", c:"#6cc4ff", c2:"#2a86e0", s:"9.9", d:"проверяемая лицензия Curaçao · вывод от 15 мин", h:"/casino/7k"},
     {n:"1win",      c:"#b8ff2b", c2:"#8fd400", s:"9.7", d:"лицензия с 2016 · каталог 12 000+",            h:"/casino/1win"},
     {n:"Banda",     c:"#ffcf3f", c2:"#e0952f", s:"9.6", d:"Curaçao · турниры и 500 FS",                   h:"/casino/banda"},
     {n:"Leebet",    c:"#a879ff", c2:"#7d4fd6", s:"9.5", d:"Curaçao · USDT TRC-20 ~20 мин",                h:"/casino/leebet"},
@@ -1647,8 +1668,8 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 6,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
         {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
         {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
         {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
