@@ -268,6 +268,9 @@
   .bo-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(184,255,43,.7);color:#0a1200}
   .bo-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .bo-go:hover::after{animation:bo-shim .85s var(--ez)}
+  .bo-acts{display:flex;align-items:center;gap:8px}
+  .bo-go.ghost{background:transparent;color:var(--tx);border:1px solid var(--hair2);box-shadow:none}
+  .bo-go.ghost:hover{transform:translateY(-2px);border-color:var(--c,var(--neon));color:var(--c,var(--neon));box-shadow:none}
   .bo-card.r1{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200;background:linear-gradient(120deg,rgba(184,255,43,.1),var(--pan) 72%)}
   .bo-card.r2{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
   .bo-card.r3{--c:var(--gold);--c2:#e0952f;--ct:#231600}
@@ -727,31 +730,29 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="bo-ticket rv" style="--d:.2s">
-<span class="bo-ribbon neon">Выбор редакции</span>
-<div class="bo-chip-oh"><div class="cv">9.9</div><div class="cl">балл из 10</div></div>
-<span aria-hidden="true" class="wm">×0</span>
-<div class="tag">Чек без отыгрыша · реальный x0</div>
-<div class="bn">7K Casino</div>
-<div class="bs">кэшбэк до 20% деньгами, вывод СБП от 15 минут</div>
-<div class="why"><b>Почему №1:</b> единственный в подборке, у кого вейджер x0 не в рекламе, а в кассе — возврат ложится на основной баланс и выводится без прокрутки.</div>
+<span class="bo-ribbon neon">Выбор редакции · №1</span>
+<div class="bo-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
+<span aria-hidden="true" class="wm">№1</span>
+<div class="tag">Лидер подборки · сентябрь 2026</div>
+<div class="bn">Spinto</div>
+<div class="bs">старт 200% + 150 FS, вывод СБП и крипта до 1 часа</div>
+<div class="why"><b>Почему №1:</b> сильный старт при пороге входа 50 ₽ и быстрая касса — редакция ставит Spinto первым по совокупности бонуса, скорости выплат и надёжности площадки.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Кэшбэк без отыгрыша</span><span class="big">до 20%</span></div>
-<div class="line"><span>Оценка редакции</span><span class="sc">9.9 / 10</span></div>
-<div class="line spec"><span>Вейджер кэшбэка</span><i class="dts"></i><span class="val hl-neon">x0</span></div>
-<div class="line spec"><span>Форма возврата</span><i class="dts"></i><span class="val hl-cyan">живые деньги</span></div>
-<div class="line spec"><span>Вывод возврата</span><i class="dts"></i><span class="val hl-neon">СБП от 15 мин</span></div>
-<div class="line spec"><span>Приветственный пакет</span><i class="dts"></i><span class="val hl-gold">225% + 200 FS</span></div>
-<div class="line spec"><span>Вейджер welcome</span><i class="dts"></i><span class="val hl-hot">x40</span></div>
-<div class="line spec"><span>Порог входа</span><i class="dts"></i><span class="val hl-gold">50 ₽</span></div>
-<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Curaçao</span></div>
+<div class="line"><span>Приветственный бонус</span><span class="big">200% + 150 FS</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Вейджер welcome</span><i class="dts"></i><span class="val hl-hot">x35</span></div>
+<div class="line spec"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-gold">50 ₽</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-neon">СБП / крипта</span></div>
+<div class="line spec"><span>Скорость вывода</span><i class="dts"></i><span class="val hl-neon">до 1 часа</span></div>
+<div class="line spec"><span>Промокод</span><i class="dts"></i><span class="val hl-cyan">без кода — по ссылке</span></div>
 </div>
-<a class="bo-btn bo-btn-neon" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:6px">Открыть 7K Casino</a>
-<div class="foot"><span>Кэшбэк x0</span><span>₽ · USDT</span><span>Curaçao</span></div>
+<a class="bo-btn bo-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:6px">Открыть Spinto</a>
+<div class="foot"><span>200% + 150 FS</span><span>₽ · USDT</span><span>до 1 часа</span></div>
 <ul class="tguar">
-<li>Кэшбэк приходит деньгами на основной баланс</li>
-<li>Возврат выводится без прокрутки, СБП от 15 мин</li>
-<li>Условия welcome и вейджер сверены в правилах</li>
+<li>Быстрый вывод: СБП и крипта до 1 часа</li>
+<li>Низкий порог входа — от 50 ₽</li>
+<li>Бонус активируется по ссылке, без промокода</li>
 </ul>
 </aside>
 </div>
@@ -806,10 +807,26 @@ window.addEventListener('load',function(){
 <span class="bo-kick">Топ-6 · сентябрь 2026</span>
 <h2>Рейтинг бонусов без отыгрыша 2026: <span class="g-lime">где вейджер x0, а где он спрятан</span></h2>
 </div>
-<p class="rv">Список отранжирован по интенту: первым идёт тот, у кого проще забрать неотыгрываемую часть и вывести её. Цифра рядом с брендом — вейджер той части бонуса, что реально выводится: <span class="hl-neon">x0</span> у возврата деньгами, <span class="hl-hot">x40</span> у крупного welcome. Оценка — средневзвешенный балл по шести критериям интента.</p>
+<p class="rv">Подборка редакции — по совокупности силы бонуса, скорости выплат и надёжности площадки, а не строго по числу в колонке оценки. Первым идёт <span class="hl-neon">Spinto</span>: сильный старт, быстрый вывод и низкий порог входа. Цифра рядом с брендом — вейджер той части бонуса, что реально выводится: <span class="hl-neon">x0</span> у возврата деньгами, <span class="hl-hot">x40</span> у крупного welcome. Отдельно ниже разбираем, где вейджер x0 настоящий (это кэшбэк деньгами), а где он спрятан.</p>
 <div class="bo-rate">
 <article class="bo-card r1 rv">
 <div class="rkw"><span class="bo-medal g">1</span></div>
+<div class="bo-mid">
+<div class="bn">Spinto</div>
+<span class="bt">Выбор редакции — сильный старт и быстрый вывод</span>
+<div class="prm"><span>Бонус <b>200% + 150 FS</b></span><span>Вывод <b>СБП/крипта до 1 ч</b></span><span>Порог <b>50 ₽</b></span></div>
+</div>
+<div class="bo-right">
+<div class="bo-thr"><div class="n">x35</div><div class="k">welcome</div></div>
+<div class="bo-sccol"><span class="bo-score">9.8</span><span class="bo-sbar"><i data-score="9.8"></i></span></div>
+<div class="bo-acts">
+<a class="bo-go ghost" href="/casino/spinto/">Обзор</a>
+<a class="bo-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+</div>
+</div>
+</article>
+<article class="bo-card r2 rv">
+<div class="rkw"><span class="bo-medal">2</span></div>
 <div class="bo-mid">
 <div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — кэшбэк до 20% деньгами, реальный x0</span>
@@ -818,20 +835,10 @@ window.addEventListener('load',function(){
 <div class="bo-right">
 <div class="bo-thr"><div class="n">x0</div><div class="k">кэшбэк</div></div>
 <div class="bo-sccol"><span class="bo-score">9.9</span><span class="bo-sbar"><i data-score="9.9"></i></span></div>
+<div class="bo-acts">
+<a class="bo-go ghost" href="/casino/7k/">Обзор</a>
 <a class="bo-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
 </div>
-</article>
-<article class="bo-card r2 rv">
-<div class="rkw"><span class="bo-medal">2</span></div>
-<div class="bo-mid">
-<div class="bn">Spinto</div>
-<span class="bt">Лучшее за — быстрый вывод и фриспины в акциях</span>
-<div class="prm"><span>x0 <b>в лояльности и акциях</b></span><span>Вывод <b>USDT ~40 мин</b></span><span>Welcome <b>200% + 150 FS</b></span></div>
-</div>
-<div class="bo-right">
-<div class="bo-thr"><div class="n">x40</div><div class="k">welcome</div></div>
-<div class="bo-sccol"><span class="bo-score">9.8</span><span class="bo-sbar"><i data-score="9.8"></i></span></div>
-<a class="bo-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
 <article class="bo-card r3 rv">
@@ -844,7 +851,10 @@ window.addEventListener('load',function(){
 <div class="bo-right">
 <div class="bo-thr"><div class="n">x40</div><div class="k">welcome</div></div>
 <div class="bo-sccol"><span class="bo-score">9.7</span><span class="bo-sbar"><i data-score="9.7"></i></span></div>
+<div class="bo-acts">
+<a class="bo-go ghost" href="/casino/1win/">Обзор</a>
 <a class="bo-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="bo-card r4 rv">
@@ -857,7 +867,10 @@ window.addEventListener('load',function(){
 <div class="bo-right">
 <div class="bo-thr"><div class="n">x0</div><div class="k">приз</div></div>
 <div class="bo-sccol"><span class="bo-score">9.6</span><span class="bo-sbar"><i data-score="9.6"></i></span></div>
+<div class="bo-acts">
+<a class="bo-go ghost" href="/casino/banda/">Обзор</a>
 <a class="bo-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="bo-card r5 rv">
@@ -870,7 +883,10 @@ window.addEventListener('load',function(){
 <div class="bo-right">
 <div class="bo-thr"><div class="n">x0</div><div class="k">лояльность</div></div>
 <div class="bo-sccol"><span class="bo-score">9.5</span><span class="bo-sbar"><i data-score="9.5"></i></span></div>
+<div class="bo-acts">
+<a class="bo-go ghost" href="/casino/leebet/">Обзор</a>
 <a class="bo-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="bo-card r6 rv">
@@ -883,11 +899,14 @@ window.addEventListener('load',function(){
 <div class="bo-right">
 <div class="bo-thr"><div class="n">x40</div><div class="k">welcome</div></div>
 <div class="bo-sccol"><span class="bo-score">9.4</span><span class="bo-sbar"><i data-score="9.4"></i></span></div>
+<div class="bo-acts">
+<a class="bo-go ghost" href="/casino/apex/">Обзор</a>
 <a class="bo-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 </div>
-<p class="bo-note">Вейджер в столбце — у той части бонуса, что реально выводится. У 7K, Banda и Leebet это возврат деньгами (x0); у Spinto, 1win и APEX выводимого x0-бонуса нет, весь стартовый пакет с отыгрышем — они выше по общей силе площадки, но по интенту «без отыгрыша» уступают возврату.</p>
+<p class="bo-note">Место — это оценка редакции по совокупности бонуса, кассы и надёжности, а не рейтинг «у кого меньше вейджер». Вейджер в столбце — у той части бонуса, что реально выводится: у 7K, Banda и Leebet это возврат деньгами (x0), у Spinto, 1win и APEX выводимого x0-бонуса нет — их сила в крупном старте и скорости кассы. Если нужен именно неотыгрываемый возврат, ниже отдельно показываем, у кого он есть.</p>
 </section>
 <!-- ===== comparison table ===== -->
 <section class="bo-sect" id="sravnenie">
@@ -895,22 +914,22 @@ window.addEventListener('load',function(){
 <span class="bo-kick">Сравнение</span>
 <h2>Казино и вейджер бонусов: <span class="g-hot">где отыгрыша нет, а где он есть</span></h2>
 </div>
-<p class="rv">Одна таблица от честного к маркетинговому. Столбец «Отыгрыш» показывает, что происходит с бонусом на самом деле: где вейджер x0 живёт в кассе, а где надпись «без отыгрыша» относится в лучшем случае к акции, а весь welcome идёт с прокруткой.</p>
+<p class="rv">Одна таблица по местам подборки. Столбец «Отыгрыш» показывает, что происходит с бонусом на самом деле: где вейджер x0 живёт в кассе, а где надпись «без отыгрыша» относится в лучшем случае к акции, а весь welcome идёт с прокруткой. Порядок — редакционный, по совокупности силы бонуса и кассы, а не по одному числу вейджера.</p>
 <div class="bo-tbox bo-scroll rv" style="margin:16px 0">
 <table class="bo-t mfit">
 <thead><tr><th>Казино</th><th>Отыгрыш / вейджер</th><th>Бонус</th><th>Оценка</th></tr></thead>
 <tbody>
 <tr>
-<td data-label="Казино"><div class="bo-bc"><span class="bo-bn">7K Casino</span><span class="bo-line2"><span class="bo-best" style="--rc:#b8ff2b">кэшбэк x0</span><span class="bo-ed">Выбор редакции</span></span></div></td>
-<td data-label="Отыгрыш / вейджер"><span class="bo-pill w0">x0 кэшбэк</span> до 20% деньгами; welcome с отыгрышем</td>
-<td data-label="Бонус">225% + 200 FS</td>
-<td class="bo-rub" data-label="Оценка"><span class="neon">9.9</span></td>
+<td data-label="Казино"><div class="bo-bc"><span class="bo-bn">Spinto</span><span class="bo-line2"><span class="bo-best" style="--rc:#b8ff2b">быстрый вывод</span><span class="bo-ed">Выбор редакции</span></span></div></td>
+<td data-label="Отыгрыш / вейджер"><span class="bo-pill whigh">x35 welcome</span> весь пакет с отыгрышем; касса до 1 ч</td>
+<td data-label="Бонус">200% + 150 FS</td>
+<td class="bo-rub" data-label="Оценка"><span class="neon">9.8</span></td>
 </tr>
 <tr>
-<td data-label="Казино"><div class="bo-bc"><span class="bo-bn">Spinto</span><span class="bo-line2"><span class="bo-best" style="--rc:#37e0c8">быстрый вывод</span></span></div></td>
-<td data-label="Отыгрыш / вейджер"><span class="bo-pill wmid">x0 в лояльности</span> welcome и FS с вейджером</td>
-<td data-label="Бонус">200% + 150 FS</td>
-<td class="bo-rub" data-label="Оценка"><span class="cyan">9.8</span></td>
+<td data-label="Казино"><div class="bo-bc"><span class="bo-bn">7K Casino</span><span class="bo-line2"><span class="bo-best" style="--rc:#37e0c8">кэшбэк x0</span></span></div></td>
+<td data-label="Отыгрыш / вейджер"><span class="bo-pill w0">x0 кэшбэк</span> до 20% деньгами; welcome с отыгрышем</td>
+<td data-label="Бонус">225% + 200 FS</td>
+<td class="bo-rub" data-label="Оценка"><span class="cyan">9.9</span></td>
 </tr>
 <tr>
 <td data-label="Казино"><div class="bo-bc"><span class="bo-bn">1win</span><span class="bo-line2"><span class="bo-best" style="--rc:#ffcf3f">каталог 12 000+</span></span></div></td>
@@ -939,7 +958,7 @@ window.addEventListener('load',function(){
 </tbody>
 </table>
 </div>
-<p class="rv bo-prose">Читается так: чем ниже по таблице, тем громче welcome и тем дальше он от x0. 7K держит первое место не размером стартового пакета, а тем, что у него неотыгрываемый возврат работает в кассе, а не на баннере. APEX, 1win и Spinto — сильные площадки, но по этому интенту делают ставку на крупный бонус с прокруткой, а не на возврат без вейджера.</p>
+<p class="rv bo-prose">Читается так: место — это оценка редакции по совокупности бонуса, кассы и надёжности. Spinto ведёт подборку за сильный старт 200% + 150 FS, низкий порог и быстрый вывод. При этом честный вейджер x0 в подборке даёт не крупный welcome, а кэшбэк деньгами у 7K — если нужен именно неотыгрываемый возврат, это отдельный сценарий, и его мы разбираем ниже.</p>
 </section>
 <!-- ===== H2 answer main ===== -->
 <section class="bo-sect bo-prose" id="est-li">
@@ -1228,23 +1247,23 @@ window.addEventListener('load',function(){
 <p class="rv">Шесть площадок из подборки — по каждой честно, где живёт неотыгрываемая часть, а где её нет. Название бренда своим цветом, плюсы и честные минусы — без дежурных заглушек.</p>
 <article class="bo-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><span class="nm c-neon">7K Casino <span>кэшбэк до 20% деньгами · x0</span></span><span class="sc">9.9 / 10</span></div>
-<p>7K — единственный в подборке, у кого вейджер x0 не в рекламе, а в кассе. Работает это через кэшбэк: до 20% от чистого недельного проигрыша начисляют по понедельникам живыми деньгами на основной баланс, отыгрывать их не надо — забрал и вывел через СБП за 15 минут. Приветственные 225% + 200 FS — это уже другой продукт, у них стандартный отыгрыш. Честный ответ: без отыгрыша здесь работает возврат, а не стартовый бонус, и это лучший расклад по интенту.</p>
+<div class="rh"><span class="nm c-neon">Spinto <span>старт 200% + 150 FS · быстрый вывод</span></span><span class="sc">9.8 / 10</span></div>
+<p>Spinto — выбор редакции по совокупности: сильный старт 200% + 150 фриспинов при пороге входа всего 50 ₽, быстрая касса (СБП и крипта до часа) и минимальная верификация. Бонус активируется по ссылке, отдельного промокода у площадки нет. Честно про интент страницы: стартовый пакет идёт с вейджером x35 — это не безвейджерное предложение, поэтому за чистым x0 идите в кэшбэк 7K. Но по силе бонуса, скорости выплат и надёжности Spinto держит первое место подборки.</p>
+<div class="bo-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>сильный старт 200% + 150 FS</li><li>быстрый вывод: СБП и крипта до 1 часа</li><li>низкий порог входа — от 50 ₽</li><li>минимальная верификация на входе, бонус по ссылке без кода</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>welcome с вейджером x35, отдельного x0-бонуса нет</li><li>бренд молодой, длинной истории выплат меньше</li></ul></div>
+</div>
+<div class="bo-verd"><b>Кому подходит:</b> тем, кому важнее сильный старт и быстрый вывод, чем возврат без прокрутки. <a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</article>
+<article class="bo-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><span class="nm c-cyan">7K Casino <span>кэшбэк до 20% деньгами · x0</span></span><span class="sc">9.9 / 10</span></div>
+<p>7K — единственный в подборке, у кого вейджер x0 не в рекламе, а в кассе. Работает это через кэшбэк: до 20% от чистого недельного проигрыша начисляют по понедельникам живыми деньгами на основной баланс, отыгрывать их не надо — забрал и вывел через СБП за 15 минут. Приветственные 225% + 200 FS — это уже другой продукт, у них стандартный отыгрыш. Честный ответ: без отыгрыша здесь работает возврат, а не стартовый бонус, и по этому конкретному интенту 7K — эталон.</p>
 <div class="bo-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>кэшбэк до 20% деньгами — реальный вейджер x0</li><li>возврат ложится на баланс и сразу выводится, СБП от 15 минут</li><li>процент кэшбэка растёт со статусом, потолок 20%</li><li>порог входа 50 ₽ — проверить механику дёшево</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>welcome 225% + 200 FS идёт с обычным отыгрышем, не x0</li><li>кэшбэк считается от нетто-проигрыша за неделю, не от оборота</li></ul></div>
 </div>
 <div class="bo-verd"><b>Кому подходит:</b> тем, кому нужен возврат без прокрутки, а не большой бонус с условиями. <a href="/casino/7k">Полный обзор 7K →</a></div>
-</article>
-<article class="bo-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><span class="nm c-cyan">Spinto <span>быстрый вывод · x0 только в акциях</span></span><span class="sc">9.8 / 10</span></div>
-<p>Spinto запустился в 2026-м и тянет быстрым стартом 200% + 150 FS и минимальной верификацией. Но старт этот — с отыгрышем. Безвейджерная часть у бренда есть только внутри лояльности и в акциях на конкретные слоты, витрина — welcome. Молодой площадке редакция пока не гоняет крупный оборот ради статуса: истории безусловных выплат у неё короче, чем у 7K. Как чистый x0 Spinto брать рано, как быстрый старт — норм.</p>
-<div class="bo-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>быстрый вывод: USDT ~40 минут, СБП меньше часа</li><li>минимальная верификация на входе</li><li>фриспины без отыгрыша мелькают в акциях на слотах</li><li>порог 50 ₽</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>welcome с вейджером, отдельного x0-бонуса нет</li><li>бренд молодой, длинной статистики по безусловным выплатам нет</li></ul></div>
-</div>
-<div class="bo-verd"><b>Кому подходит:</b> тем, кто идёт за быстрым стартом и ловит неотыгрываемые спины в акциях. <a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </article>
 <article class="bo-rev rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1339,7 +1358,7 @@ window.addEventListener('load',function(){
 <ul>
 <li><b>7K сохранил кэшбэк до 20% деньгами</b> — возврат по-прежнему приходит на основной баланс без вейджера, вывод через СБП от 15 минут.</li>
 <li><b>Leebet поднял процент возврата на верхних статусах</b> — кэшбэк в USDT уходит без доп. прокрутки примерно за 20 минут.</li>
-<li><b>Spinto добавил акции с фриспинами без отыгрыша</b> на отдельных слотах — выигрыш падает деньгами, но с потолком вывода.</li>
+<li><b>Spinto возглавил подборку редакции</b> — старт 200% + 150 FS при пороге 50 ₽ и быстрый вывод (СБП и крипта до часа); бонус активируется по ссылке, без промокода.</li>
 <li><b>Проверили 30+ офферов «без отыгрыша»</b> по правилам — у большинства нашли max cashout или тихий вейджер на выигрыш.</li>
 <li><b>Обновили таблицу форматов</b> — развели, где x0 настоящий (возврат деньгами), а где надпись относится только к акции.</li>
 </ul>
@@ -1494,8 +1513,8 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: где живёт неотыгрываемый возврат, вейджер welcome, скорость кассы по замерам, лицензия и слабые места. Открывайте разбор до активации бонуса.</p>
 <div aria-label="Случайная подборка обзоров казино" class="bo-brands rv" id="brandsGrid"></div>
 <ul class="bo-seo-links">
+<li><a href="/casino/spinto">Обзор казино Spinto — старт 200% + 150 FS</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino — кэшбэк x0</a></li>
-<li><a href="/casino/spinto">Обзор казино Spinto — фриспины в акциях</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — welcome до 500%</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — турнирный приз</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — кэшбэк в USDT</a></li>

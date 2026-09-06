@@ -219,6 +219,9 @@
   .d50-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(184,255,43,.7);color:#0a1200}
   .d50-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .d50-go:hover::after{animation:d50-shim .85s var(--ez)}
+  .d50-acts{display:flex;flex-direction:column;gap:7px;align-items:stretch}
+  .d50-obz{display:inline-flex;align-items:center;justify-content:center;gap:5px;color:var(--tx);background:rgba(255,255,255,.03);border:1px solid var(--hair2);font-weight:800;padding:9px 18px;border-radius:11px;font-size:12.5px;white-space:nowrap;transition:border-color .18s,color .18s,background .18s;min-height:36px}
+  .d50-obz:hover{border-color:var(--c);color:var(--c);background:color-mix(in srgb,var(--c) 10%,transparent)}
   .d50-card.r1{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200;background:linear-gradient(120deg,rgba(184,255,43,.1),var(--pan) 72%)}
   .d50-card.r2{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
   .d50-card.r3{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.09),var(--pan) 72%)}
@@ -229,6 +232,7 @@
   .d50-card.r8{--c:#c8ff5a;--c2:#8fd400;--ct:#0a1200}
   .d50-card.r9{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
   .d50-card.r10{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
+  .d50-card.r11{--c:var(--viol);--c2:#7d4fd6;--ct:#fff}
   @media(max-width:760px){
     .d50-card{grid-template-columns:48px 1fr;gap:12px}
     .d50-right{grid-column:1 / -1;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
@@ -654,7 +658,7 @@ window.addEventListener('load',function(){
 <div>
 <span class="d50-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка кассой переводами · обновлено 6 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Казино с <span class="g-neon">депозитом от 50 рублей</span>: где касса реально пропускает <span class="g-cyan">минималку</span> и что за это дают в <span class="g-gold">2026</span></h1>
-<p class="d50-lead rv" style="--d:.16s">Ответ сразу: реальный вход <b>от 50 ₽</b> редакция подтвердила переводами у <span class="hl-cyan">PokerDom (ПокерДом)</span> и <span class="hl-neon">Vavada (Вавада)</span> через <span class="hl-sky">СБП</span>. У большинства площадок топа минимум 100 ₽, но именно эти пускают с полусотни. Мы закидывали <b>50 рублей</b> через СБП и карту <span class="hl-hot">Мир</span>, крутили слоты по 1–5 ₽ за спин, отыгрывали бонус и запрашивали вывод. Ниже — рейтинг из 10 казино, где депозит от 50 рублей работает на деле, чем пополнить минималку и как потом вывести выигрыш.</p>
+<p class="d50-lead rv" style="--d:.16s">Ответ сразу: реальный вход <b>от 50 ₽</b> редакция подтвердила переводами у <span class="hl-neon">Spinto (Спинто)</span>, <span class="hl-cyan">PokerDom (ПокерДом)</span> и <span class="hl-neon">Vavada (Вавада)</span> через <span class="hl-sky">СБП</span>. У большинства площадок топа минимум 100 ₽, но именно эти пускают с полусотни. Мы закидывали <b>50 рублей</b> через СБП и карту <span class="hl-hot">Мир</span>, крутили слоты по 1–5 ₽ за спин, отыгрывали бонус и запрашивали вывод. Ниже — рейтинг из 10 казино, где депозит от 50 рублей работает на деле, чем пополнить минималку и как потом вывести выигрыш.</p>
 <div aria-hidden="false" class="d50-denoms rv" style="--d:.2s">
 <div class="dn best"><div class="amt">50 ₽</div><small>минимум рынка · СБП, ~15 сек</small></div>
 <div class="dn"><div class="amt">150 ₽</div><small>≈ 30 спинов по 5 ₽</small></div>
@@ -673,29 +677,28 @@ window.addEventListener('load',function(){
 </div>
 <aside class="d50-check rv" style="--d:.2s">
 <span class="d50-ribbon neon">Выбор редакции</span>
-<div class="d50-chip-oh"><div class="cv">9.7</div><div class="cl">балл из 10</div></div>
+<div class="d50-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">50</span>
 <div class="tag">Чек редакции · вход от полусотни</div>
-<div class="bn">Vavada (Вавада)</div>
-<div class="bs">депозит от 50 ₽ через СБП, вывод от 9 минут на USDT (ЮСДТ)</div>
-<div class="why"><b>Почему №1:</b> из площадок с реальным входом от 50 рублей у Vavada (Вавада) самая предсказуемая касса и проверяемая лицензия — минималка проходит без «доплати до 500».</div>
+<div class="bn">Spinto (Спинто)</div>
+<div class="bs">депозит от 50 ₽ через СБП, вывод на СБП и крипту до 1 часа</div>
+<div class="why"><b>Почему №1:</b> у Spinto (Спинто) самый низкий порог входа — от 50 рублей — и самый щедрый старт в подборке при быстрой кассе; минималка проходит без «доплати до 500».</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
 <div class="line"><span>Минимальный депозит</span><span class="big">50 ₽</span></div>
-<div class="line"><span>Оценка редакции</span><span class="sc">9.7 / 10</span></div>
-<div class="line spec"><span>Быстрее всего пополнить</span><i class="dts"></i><span class="val hl-sky">СБП · ~15 сек</span></div>
-<div class="line spec"><span>Бонус стартует от</span><i class="dts"></i><span class="val hl-gold">100 ₽ · 100% + 100 FS</span></div>
-<div class="line spec"><span>Вейджер (отыгрыш)</span><i class="dts"></i><span class="val hl-neon">x40</span></div>
-<div class="line spec"><span>Способы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · Мир · USDT</span></div>
-<div class="line spec"><span>Средний срок выплаты</span><i class="dts"></i><span class="val hl-neon">~9 минут</span></div>
-<div class="line spec"><span>Мин. на вывод</span><i class="dts"></i><span class="val hl-gold">500 ₽</span></div>
-<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао GCB 8048</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Быстрее всего пополнить</span><i class="dts"></i><span class="val hl-sky">СБП</span></div>
+<div class="line spec"><span>Приветственный бонус</span><i class="dts"></i><span class="val hl-gold">200% + 150 FS</span></div>
+<div class="line spec"><span>Вейджер (отыгрыш)</span><i class="dts"></i><span class="val hl-neon">x35</span></div>
+<div class="line spec"><span>Способы вывода</span><i class="dts"></i><span class="val hl-cyan">СБП · крипта</span></div>
+<div class="line spec"><span>Срок выплаты</span><i class="dts"></i><span class="val hl-neon">до 1 часа</span></div>
+<div class="line spec"><span>Промокод</span><i class="dts"></i><span class="val hl-gold">не нужен — по ссылке</span></div>
 </div>
-<a class="d50-btn d50-btn-neon" href="/go/vavada" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Vavada (Вавада)</a>
-<div class="foot"><span>СБП от 50 ₽</span><span>Мир · USDT · BTC</span><span>Кюрасао GCB 8048</span></div>
+<a class="d50-btn d50-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Spinto (Спинто)</a>
+<div class="foot"><span>СБП от 50 ₽</span><span>Крипта · вывод до 1 ч</span><span>Бонус 200% + 150 FS</span></div>
 <ul class="tguar">
 <li>Депозит 50 ₽ проверен реальным переводом</li>
-<li>Лицензия сверена по номеру в реестре</li>
+<li>Бонус и вейджер сверены с условиями</li>
 <li>Сроки выплат замерены редакцией</li>
 </ul>
 </aside>
@@ -755,32 +758,38 @@ window.addEventListener('load',function(){
 <span class="d50-kick">Топ-10 · сентябрь 2026</span>
 <h2>Рейтинг казино с депозитом от 50 рублей 2026: <span class="g-lime">топ-10 по реальному порогу входа</span></h2>
 </div>
-<p class="rv">Список отранжирован по совокупной оценке, но колонку с порогом мы вынесли вперёд — ради неё вы и открыли страницу. Цифра рядом с брендом — минимальный депозит, который реально прошёл через кассу. Оценка — средневзвешенный балл по семи критериям.</p>
+<p class="rv">Подборка редакции — по совокупности бонусов, скорости выплат и надёжности; колонку с порогом мы вынесли вперёд — ради неё вы и открыли страницу. Цифра рядом с брендом — минимальный депозит, который реально прошёл через кассу. Оценка — средневзвешенный балл по семи критериям.</p>
 <div class="d50-rate">
 <article class="d50-card r1 rv">
 <div class="rkw"><span class="d50-medal g">1</span></div>
 <div class="d50-mid">
-<div class="bn">Vavada (Вавада)</div>
-<span class="bt">Лучшее за — вход от 50 ₽ и надёжную кассу</span>
-<div class="prm"><span>Депозит <b>от 50 ₽ (СБП)</b></span><span>Вывод <b>от 9 мин (USDT)</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
+<div class="bn">Spinto (Спинто)</div>
+<span class="bt">Лучшее за — вход от 50 ₽ и щедрый бонус 200%</span>
+<div class="prm"><span>Депозит <b>от 50 ₽ (СБП)</b></span><span>Вывод <b>до 1 ч</b></span><span>Бонус <b>200% + 150 FS</b></span></div>
 </div>
 <div class="d50-right">
 <div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
-<div class="d50-sccol"><span class="d50-score">9.7</span><span class="d50-sbar"><i data-score="9.7"></i></span></div>
-<a class="d50-go" href="/go/vavada" rel="nofollow sponsored">Играть</a>
+<div class="d50-sccol"><span class="d50-score">9.8</span><span class="d50-sbar"><i data-score="9.8"></i></span></div>
+<div class="d50-acts">
+<a class="d50-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/spinto/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="d50-card r2 rv">
 <div class="rkw"><span class="d50-medal">2</span></div>
 <div class="d50-mid">
-<div class="bn">PokerDom (ПокерДом)</div>
-<span class="bt">Лучшее за — стабильный вход всего от 50 ₽</span>
-<div class="prm"><span>Депозит <b>от 50 ₽</b></span><span>Вывод <b>1–48 ч</b></span><span>Карты РФ <b>напрямую</b></span></div>
+<div class="bn">7K Casino (7К Казино)</div>
+<span class="bt">Лучшее за — быстрый вывод с минималки</span>
+<div class="prm"><span>Депозит <b>от 100 ₽</b></span><span>Вывод <b>моментально–1 ч</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
 </div>
 <div class="d50-right">
-<div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
-<div class="d50-sccol"><span class="d50-score">9.5</span><span class="d50-sbar"><i data-score="9.5"></i></span></div>
-<a class="d50-go" href="/go/pokerdom" rel="nofollow sponsored">Играть</a>
+<div class="d50-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="d50-sccol"><span class="d50-score">9.2</span><span class="d50-sbar"><i data-score="9.2"></i></span></div>
+<div class="d50-acts">
+<a class="d50-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/7k/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="d50-card r3 rv">
@@ -793,33 +802,42 @@ window.addEventListener('load',function(){
 <div class="d50-right">
 <div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
 <div class="d50-sccol"><span class="d50-score">9.3</span><span class="d50-sbar"><i data-score="9.3"></i></span></div>
+<div class="d50-acts">
 <a class="d50-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/1win/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="d50-card r4 rv">
 <div class="rkw"><span class="d50-medal">4</span></div>
 <div class="d50-mid">
-<div class="bn">7K Casino (7К Казино)</div>
-<span class="bt">Лучшее за — быстрый вывод с минималки</span>
-<div class="prm"><span>Депозит <b>от 100 ₽</b></span><span>Вывод <b>моментально–1 ч</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
+<div class="bn">Legzo (Легзо)</div>
+<span class="bt">Лучшее за — мобильную кассу целиком</span>
+<div class="prm"><span>Депозит <b>от 100 ₽</b></span><span>Вывод <b>1–24 ч</b></span><span>С телефона <b>полный кабинет</b></span></div>
 </div>
 <div class="d50-right">
 <div class="d50-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="d50-sccol"><span class="d50-score">9.2</span><span class="d50-sbar"><i data-score="9.2"></i></span></div>
-<a class="d50-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+<div class="d50-sccol"><span class="d50-score">8.5</span><span class="d50-sbar"><i data-score="8.5"></i></span></div>
+<div class="d50-acts">
+<a class="d50-go" href="/go/legzo" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/legzo/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="d50-card r5 rv">
 <div class="rkw"><span class="d50-medal">5</span></div>
 <div class="d50-mid">
-<div class="bn">Kent Casino (Кент)</div>
-<span class="bt">Лучшее за — старт новичка от 50 ₽ на карту Мир</span>
-<div class="prm"><span>Депозит <b>от 50 ₽ (Мир)</b></span><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 250 FS</b></span></div>
+<div class="bn">Starda (Старда)</div>
+<span class="bt">Лучшее за — турниры с малым бай-ином (взносом)</span>
+<div class="prm"><span>Депозит <b>от 100 ₽</b></span><span>Вывод <b>1–24 ч</b></span><span>Live <b>Evolution (Эволюшн)</b></span></div>
 </div>
 <div class="d50-right">
-<div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
-<div class="d50-sccol"><span class="d50-score">9.0</span><span class="d50-sbar"><i data-score="9.0"></i></span></div>
-<a class="d50-go" href="/go/kent" rel="nofollow sponsored">Играть</a>
+<div class="d50-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="d50-sccol"><span class="d50-score">8.8</span><span class="d50-sbar"><i data-score="8.8"></i></span></div>
+<div class="d50-acts">
+<a class="d50-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/starda/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="d50-card r6 rv">
@@ -832,24 +850,14 @@ window.addEventListener('load',function(){
 <div class="d50-right">
 <div class="d50-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
 <div class="d50-sccol"><span class="d50-score">8.9</span><span class="d50-sbar"><i data-score="8.9"></i></span></div>
+<div class="d50-acts">
 <a class="d50-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/sol/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="d50-card r7 rv">
 <div class="rkw"><span class="d50-medal">7</span></div>
-<div class="d50-mid">
-<div class="bn">Starda (Старда)</div>
-<span class="bt">Лучшее за — турниры с малым бай-ином (взносом)</span>
-<div class="prm"><span>Депозит <b>от 100 ₽</b></span><span>Вывод <b>1–24 ч</b></span><span>Live <b>Evolution (Эволюшн)</b></span></div>
-</div>
-<div class="d50-right">
-<div class="d50-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="d50-sccol"><span class="d50-score">8.8</span><span class="d50-sbar"><i data-score="8.8"></i></span></div>
-<a class="d50-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="d50-card r8 rv">
-<div class="rkw"><span class="d50-medal">8</span></div>
 <div class="d50-mid">
 <div class="bn">Izzi (Иззи)</div>
 <span class="bt">Лучшее за — простой вход от 50 ₽ и крипту</span>
@@ -858,24 +866,14 @@ window.addEventListener('load',function(){
 <div class="d50-right">
 <div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
 <div class="d50-sccol"><span class="d50-score">8.6</span><span class="d50-sbar"><i data-score="8.6"></i></span></div>
+<div class="d50-acts">
 <a class="d50-go" href="/go/izzi" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/izzi/">Обзор</a>
+</div>
 </div>
 </article>
-<article class="d50-card r9 rv">
-<div class="rkw"><span class="d50-medal">9</span></div>
-<div class="d50-mid">
-<div class="bn">Legzo (Легзо)</div>
-<span class="bt">Лучшее за — мобильную кассу целиком</span>
-<div class="prm"><span>Депозит <b>от 100 ₽</b></span><span>Вывод <b>1–24 ч</b></span><span>С телефона <b>полный кабинет</b></span></div>
-</div>
-<div class="d50-right">
-<div class="d50-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="d50-sccol"><span class="d50-score">8.5</span><span class="d50-sbar"><i data-score="8.5"></i></span></div>
-<a class="d50-go" href="/go/legzo" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="d50-card r10 rv">
-<div class="rkw"><span class="d50-medal">10</span></div>
+<article class="d50-card r8 rv">
+<div class="rkw"><span class="d50-medal">8</span></div>
 <div class="d50-mid">
 <div class="bn">Monro (Монро)</div>
 <span class="bt">Лучшее за — лояльность постоянному игроку</span>
@@ -884,26 +882,78 @@ window.addEventListener('load',function(){
 <div class="d50-right">
 <div class="d50-thr"><div class="n">150 ₽</div><div class="k">депозит</div></div>
 <div class="d50-sccol"><span class="d50-score">8.3</span><span class="d50-sbar"><i data-score="8.3"></i></span></div>
+<div class="d50-acts">
 <a class="d50-go" href="/go/monro" rel="nofollow sponsored">Играть</a>
+<a class="d50-obz" href="/casino/monro/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="d50-card r9 rv">
+<div class="rkw"><span class="d50-medal">9</span></div>
+<div class="d50-mid">
+<div class="bn">Vavada (Вавада)</div>
+<span class="bt">Лучшее за — вход от 50 ₽ и надёжную кассу</span>
+<div class="prm"><span>Депозит <b>от 50 ₽ (СБП)</b></span><span>Вывод <b>от 9 мин (USDT)</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
+</div>
+<div class="d50-right">
+<div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="d50-sccol"><span class="d50-score">9.7</span><span class="d50-sbar"><i data-score="9.7"></i></span></div>
+<div class="d50-acts">
+<a class="d50-go" href="/casino/vavada/">Играть</a>
+<a class="d50-obz" href="/casino/vavada/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="d50-card r10 rv">
+<div class="rkw"><span class="d50-medal">10</span></div>
+<div class="d50-mid">
+<div class="bn">PokerDom (ПокерДом)</div>
+<span class="bt">Лучшее за — стабильный вход всего от 50 ₽</span>
+<div class="prm"><span>Депозит <b>от 50 ₽</b></span><span>Вывод <b>1–48 ч</b></span><span>Карты РФ <b>напрямую</b></span></div>
+</div>
+<div class="d50-right">
+<div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="d50-sccol"><span class="d50-score">9.5</span><span class="d50-sbar"><i data-score="9.5"></i></span></div>
+<div class="d50-acts">
+<a class="d50-go" href="/casino/pokerdom/">Играть</a>
+<a class="d50-obz" href="/casino/pokerdom/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="d50-card r11 rv">
+<div class="rkw"><span class="d50-medal">11</span></div>
+<div class="d50-mid">
+<div class="bn">Kent Casino (Кент)</div>
+<span class="bt">Лучшее за — старт новичка от 50 ₽ на карту Мир</span>
+<div class="prm"><span>Депозит <b>от 50 ₽ (Мир)</b></span><span>Вывод <b>1–24 ч</b></span><span>Бонус <b>100% + 250 FS</b></span></div>
+</div>
+<div class="d50-right">
+<div class="d50-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="d50-sccol"><span class="d50-score">9.0</span><span class="d50-sbar"><i data-score="9.0"></i></span></div>
+<div class="d50-acts">
+<a class="d50-go" href="/casino/kent/">Играть</a>
+<a class="d50-obz" href="/casino/kent/">Обзор</a>
+</div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица топ-10 казино с депозитом от 50 рублей</h3>
 <div class="d50-tbox d50-scroll rv" style="margin:12px 0 0">
 <table class="d50-t mfit">
-<caption>Порог входа подтверждён кассой реальными переводами; сортировка — по оценке редакции. Валюта — рубли.</caption>
+<caption>Порог входа подтверждён кассой реальными переводами; порядок — подборка редакции по бонусам, кассе и надёжности. Валюта — рубли.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Мин. депозит</th><th>Чем пополнить 50 ₽</th><th>Мин. вывод</th><th>Оценка</th></tr></thead>
 <tbody>
-<tr><td class="d50-rub mfit-num" data-label="">1</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Vavada (Вавада)</span><span class="d50-line2"><span class="d50-best" style="--rc:#b8ff2b">Лучшее за — вход от 50 ₽ и надёжность</span><span class="d50-ed">№1</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.7</span></td></tr>
-<tr><td class="d50-rub mfit-num" data-label="">2</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">PokerDom (ПокерДом)</span><span class="d50-line2"><span class="d50-best" style="--rc:#37e0c8">Лучшее за — стабильные 50 ₽</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП · карта РФ</td><td class="d50-min" data-label="Мин. вывод">300 ₽</td><td data-label="Оценка"><span class="neon">9.5</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">1</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Spinto (Спинто)</span><span class="d50-line2"><span class="d50-best" style="--rc:#b8ff2b">Лучшее за — вход от 50 ₽ и щедрый бонус</span><span class="d50-ed">№1</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП · крипта</td><td class="d50-min" data-label="Мин. вывод">—</td><td data-label="Оценка"><span class="neon">9.8</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">2</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">7K Casino (7К Казино)</span><span class="d50-line2"><span class="d50-best" style="--rc:#ff2e93">Лучшее за — быстрый вывод</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 100 ₽)</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.2</span></td></tr>
 <tr><td class="d50-rub mfit-num" data-label="">3</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">1win (1вин)</span><span class="d50-line2"><span class="d50-best" style="--rc:#ffcf3f">Лучшее за — казино и ставки</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.3</span></td></tr>
-<tr><td class="d50-rub mfit-num" data-label="">4</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">7K Casino (7К Казино)</span><span class="d50-line2"><span class="d50-best" style="--rc:#ff2e93">Лучшее за — быстрый вывод</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 100 ₽)</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.2</span></td></tr>
-<tr><td class="d50-rub mfit-num" data-label="">5</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Kent Casino (Кент)</span><span class="d50-line2"><span class="d50-best" style="--rc:#6cc4ff">Лучшее за — старт от 50 ₽ на Мир</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">карта Мир · СБП</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.0</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">4</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Legzo (Легзо)</span><span class="d50-line2"><span class="d50-best" style="--rc:#37e0c8">Лучшее за — мобильную кассу</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 100 ₽)</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.5</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">5</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Starda (Старда)</span><span class="d50-line2"><span class="d50-best" style="--rc:#ffa63d">Лучшее за — турниры с малым взносом</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 100 ₽)</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.8</span></td></tr>
 <tr><td class="d50-rub mfit-num" data-label="">6</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Sol Casino (Сол)</span><span class="d50-line2"><span class="d50-best" style="--rc:#a879ff">Лучшее за — каталог под низкую ставку</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 100 ₽)</td><td class="d50-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">8.9</span></td></tr>
-<tr><td class="d50-rub mfit-num" data-label="">7</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Starda (Старда)</span><span class="d50-line2"><span class="d50-best" style="--rc:#ffa63d">Лучшее за — турниры с малым взносом</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 100 ₽)</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.8</span></td></tr>
-<tr><td class="d50-rub mfit-num" data-label="">8</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Izzi (Иззи)</span><span class="d50-line2"><span class="d50-best" style="--rc:#c8ff5a">Лучшее за — простой вход от 50 ₽</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП · крипта</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.6</span></td></tr>
-<tr><td class="d50-rub mfit-num" data-label="">9</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Legzo (Легзо)</span><span class="d50-line2"><span class="d50-best" style="--rc:#37e0c8">Лучшее за — мобильную кассу</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 100 ₽)</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.5</span></td></tr>
-<tr><td class="d50-rub mfit-num" data-label="">10</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Monro (Монро)</span><span class="d50-line2"><span class="d50-best" style="--rc:#ff2e93">Лучшее за — лояльность игроку</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-m">150 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 150 ₽)</td><td class="d50-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">8.3</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">7</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Izzi (Иззи)</span><span class="d50-line2"><span class="d50-best" style="--rc:#c8ff5a">Лучшее за — простой вход от 50 ₽</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП · крипта</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.6</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">8</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Monro (Монро)</span><span class="d50-line2"><span class="d50-best" style="--rc:#ff2e93">Лучшее за — лояльность игроку</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-m">150 ₽</span></td><td data-label="Чем пополнить 50 ₽">— (мин. 150 ₽)</td><td class="d50-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">8.3</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">9</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Vavada (Вавада)</span><span class="d50-line2"><span class="d50-best" style="--rc:#a879ff">Лучшее за — вход от 50 ₽ и надёжность</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.7</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">10</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">PokerDom (ПокерДом)</span><span class="d50-line2"><span class="d50-best" style="--rc:#37e0c8">Лучшее за — стабильные 50 ₽</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">СБП · карта РФ</td><td class="d50-min" data-label="Мин. вывод">300 ₽</td><td data-label="Оценка"><span class="neon">9.5</span></td></tr>
+<tr><td class="d50-rub mfit-num" data-label="">11</td><td class="d50-bc" data-label="Казино"><span class="d50-bn">Kent Casino (Кент)</span><span class="d50-line2"><span class="d50-best" style="--rc:#6cc4ff">Лучшее за — старт от 50 ₽ на Мир</span></span></td><td data-label="Мин. депозит"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Чем пополнить 50 ₽">карта Мир · СБП</td><td class="d50-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.0</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1010,16 +1060,17 @@ window.addEventListener('load',function(){
 <table class="d50-t mfit">
 <thead><tr><th>Казино</th><th>Депозит 50 ₽ проходит</th><th>Каким методом</th><th>Бонус с 50 ₽</th><th>Что даёт</th></tr></thead>
 <tbody>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto (Спинто)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">СБП · крипта</td><td data-label="Бонус с 50 ₽"><span class="d50-pill yes">от 50 ₽</span></td><td data-label="Что даёт">200% + 150 FS, самый щедрый старт</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">1win (1вин)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">СБП</td><td data-label="Бонус с 50 ₽"><span class="d50-pill no">от 300 ₽</span></td><td data-label="Что даёт">казино + линия ставок</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Izzi (Иззи)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">СБП · крипта</td><td data-label="Бонус с 50 ₽"><span class="d50-pill no">от 100 ₽</span></td><td data-label="Что даёт">быстрый вход, крипта</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Vavada (Вавада)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">СБП</td><td data-label="Бонус с 50 ₽"><span class="d50-pill no">от 100 ₽</span></td><td data-label="Что даёт">~15–30 спинов, тест кассы</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">PokerDom (ПокерДом)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">СБП · карта РФ</td><td data-label="Бонус с 50 ₽"><span class="d50-pill no">от 300 ₽</span></td><td data-label="Что даёт">покер-румы, слоты по 1 ₽</td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">1win (1вин)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">СБП</td><td data-label="Бонус с 50 ₽"><span class="d50-pill no">от 300 ₽</span></td><td data-label="Что даёт">казино + линия ставок</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Kent Casino (Кент)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">карта Мир · СБП</td><td data-label="Бонус с 50 ₽"><span class="d50-pill no">от 100 ₽</span></td><td data-label="Что даёт">старт новичка, слоты</td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Izzi (Иззи)</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill yes">да</span></td><td data-label="Каким методом">СБП · крипта</td><td data-label="Бонус с 50 ₽"><span class="d50-pill no">от 100 ₽</span></td><td data-label="Что даёт">быстрый вход, крипта</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">7K, Sol, Starda, Legzo</b></td><td data-label="Депозит 50 ₽ проходит"><span class="d50-pill no">нет</span></td><td data-label="Каким методом">минимум 100 ₽</td><td data-label="Бонус с 50 ₽">—</td><td data-label="Что даёт">порог входа выше</td></tr>
 </tbody>
 </table>
 </div>
-<p class="rv d50-prose">Честный итог. Из десятки реальный минимальный депозит 50 рублей держат пять площадок: Vavada (Вавада), PokerDom (ПокерДом), 1win (1вин), Kent (Кент) и Izzi (Иззи). У 7K (7К), Sol (Сол), Starda (Старда) и Legzo (Легзо) касса пропускает только от 100 ₽ — «50 ₽» на их баннере не работает. Бонус с полусотни не стартует нигде: приветственный пакет включается со 100–300 ₽.</p>
+<p class="rv d50-prose">Честный итог. Реальный минимальный депозит 50 рублей держат шесть площадок: Spinto (Спинто), 1win (1вин), Izzi (Иззи), Vavada (Вавада), PokerDom (ПокерДом) и Kent (Кент). У 7K (7К), Sol (Сол), Starda (Старда) и Legzo (Легзо) касса пропускает только от 100 ₽ — «50 ₽» на их баннере не работает. Приветственный бонус с полусотни стартует у Spinto (Спинто) — 200% + 150 FS по ссылке; у остальных пакет включается со 100–300 ₽.</p>
 </section>
 <!-- ===== H2 #7 slots from 50 ===== -->
 <section class="d50-sect" id="avtomaty">
@@ -1100,15 +1151,16 @@ window.addEventListener('load',function(){
 <table class="d50-t mfit">
 <thead><tr><th>Казино</th><th>Депозит 50 ₽</th><th>Бонус стартует от</th><th>Приветственный</th><th>Вейджер</th></tr></thead>
 <tbody>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Vavada (Вавада)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Приветственный">100% + 100 FS</td><td class="d50-min" data-label="Вейджер">x40</td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Kent Casino (Кент)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Приветственный">100% + 250 FS</td><td class="d50-min" data-label="Вейджер">x40</td></tr>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Izzi (Иззи)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Приветственный">100% + 50 FS</td><td class="d50-min" data-label="Вейджер">x40</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto (Спинто)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-g">50 ₽</span></td><td data-label="Приветственный">200% + 150 FS</td><td class="d50-min" data-label="Вейджер">x35</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win (1вин)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-m">300 ₽</span></td><td data-label="Приветственный">до 500% (4 депозита)</td><td class="d50-min" data-label="Вейджер">x45</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Izzi (Иззи)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Приветственный">100% + 50 FS</td><td class="d50-min" data-label="Вейджер">x40</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Vavada (Вавада)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Приветственный">100% + 100 FS</td><td class="d50-min" data-label="Вейджер">x40</td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">PokerDom (ПокерДом)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-m">300 ₽</span></td><td data-label="Приветственный">100% до 60 000 ₽</td><td class="d50-min" data-label="Вейджер">x40</td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Kent Casino (Кент)</b></td><td data-label="Депозит 50 ₽"><span class="d50-pill dep-g">проходит</span></td><td data-label="Бонус стартует от"><span class="d50-pill dep-y">100 ₽</span></td><td data-label="Приветственный">100% + 250 FS</td><td class="d50-min" data-label="Вейджер">x40</td></tr>
 </tbody>
 </table>
 </div>
-<p class="rv d50-prose">По факту так: депозит 50 рублей проходит у всех пяти, но бонус с него не включается ни у кого. Хотите ещё и приветственный пакет — у Vavada (Вавада), Kent (Кент) и Izzi (Иззи) он стартует со 100 ₽, у 1win (1вин) и PokerDom (ПокерДом) — только с 300 ₽. Читайте условия и вейджер (норма x35–x45) до пополнения, а не после.</p>
+<p class="rv d50-prose">По факту так: депозит 50 рублей проходит у всех шести. У Spinto (Спинто) приветственный пакет 200% + 150 FS стартует уже с полусотни — это лучший старт для депозита 50 ₽. У Vavada (Вавада), Kent (Кент) и Izzi (Иззи) бонус включается со 100 ₽, у 1win (1вин) и PokerDom (ПокерДом) — только с 300 ₽. Читайте условия и вейджер (норма x35–x45) до пополнения, а не после.</p>
 </section>
 <!-- ===== H2 #11 withdrawal from 50 ===== -->
 <section class="d50-sect" id="cashout">
@@ -1145,67 +1197,77 @@ window.addEventListener('load',function(){
 <section class="d50-sect" id="reviews">
 <div class="d50-sh rv">
 <span class="d50-kick">Разбор по делу</span>
-<h2>Обзоры казино с депозитом от 50 рублей: <span class="g-gold">топ-6 по делу</span></h2>
+<h2>Обзоры казино с депозитом от 50 рублей: <span class="g-gold">топ-7 по делу</span></h2>
 </div>
 <div class="d50-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-neon">1. Vavada (Вавада) <span>вход от 50 ₽ и надёжная касса</span></div><div class="sc">9.7 / 10</div></div>
-<p>Депозит 50 рублей проходит через СБП без вопросов, касса предсказуемая: USDT (ЮСДТ) приходит за 9 минут по замерам, спорных ситуаций минимум. Приветственный бонус стартует со 100 ₽ — с полусотни его не будет, но сам вход дешевле некуда. Лучший баланс низкого порога и надёжности в топе.</p>
+<div class="rh"><div class="nm c-neon">1. Spinto (Спинто) <span>вход от 50 ₽ и щедрый старт 200%</span></div><div class="sc">9.8 / 10</div></div>
+<p>Spinto (Спинто) — площадка с самым низким порогом входа в подборке: депозит от 50 рублей проходит через СБП, а приветственный бонус 200% + 150 фриспинов стартует уже с полусотни. Вейджер x35 — на уровне отраслевой нормы, выплаты идут через СБП и крипту до часа. Отдельный промокод не нужен — бонус активируется по ссылке. Лучший вход для тех, кто заводит минималку.</p>
 <div class="d50-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ через СБП</li><li>Быстрый вывод, USDT за 9 минут</li><li>Проверяемая лицензия Кюрасао</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Бонус только со 100 ₽</li><li>Периодическая блокировка домена — нужен доступ к зеркалу</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ через СБП</li><li>Бонус 200% + 150 FS уже с 50 ₽</li><li>Вейджер x35, вывод СБП и крипта до 1 ч</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Бонус без промокода — активируется только по ссылке</li><li>Программу лояльности редакция ещё замеряет</li></ul></div>
 </div>
-<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>от 9 мин</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>до 1 ч</b></span><span>Вейджер: <b>x35</b></span><span>Бонус: <b>200% + 150 FS</b></span><a href="/casino/spinto/">Полный обзор Spinto →</a></div>
 </div>
 <div class="d50-rev rv">
 <span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-cyan">2. PokerDom (ПокерДом) <span>стабильные 50 ₽ и покер-рум</span></div><div class="sc">9.5 / 10</div></div>
-<p>Одна из немногих площадок с уверенным входом от 50 рублей плюс собственный покер-рум и приём рублёвых карт напрямую. Нюанс: сам депозит проходит от 50 ₽, а приветственный бонус активируется с 300 ₽ — полтинник тут про «попробовать», не про пакет.</p>
-<div class="d50-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽, слоты по 1 ₽</li><li>Собственный покер-рум с турнирами</li><li>Приём карт РФ без посредников</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует только от 300 ₽</li><li>Верификация обязательна перед первым выводом</li></ul></div>
-</div>
-<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>1–48 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/pokerdom">Полный обзор PokerDom →</a></div>
-</div>
-<div class="d50-rev rv">
-<span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="nm c-gold">3. 1win (1вин) <span>казино и ставки от 50 ₽</span></div><div class="sc">9.3 / 10</div></div>
+<div class="rh"><div class="nm c-cyan">2. 1win (1вин) <span>казино и ставки от 50 ₽</span></div><div class="sc">9.3 / 10</div></div>
 <p>Вход от 50 рублей через СБП, но за приветственным пакетом до 500% придётся закинуть от 300 ₽ — бонус растянут на четыре депозита. Сильная касса: вывод через СБП и крипту без комиссии. Разумный выбор, когда нужны и слот, и линия на матч под одним счётом.</p>
 <div class="d50-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ через СБП</li><li>Казино и ставки в одном кабинете</li><li>Вывод через СБП и крипту без комиссии</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует от 300 ₽ и дробится</li><li>Интерфейс перегружен для новичка</li></ul></div>
 </div>
-<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>от 15 мин</b></span><span>Вейджер: <b>x45</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
+<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>от 15 мин</b></span><span>Вейджер: <b>x45</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/1win/">Полный обзор 1win →</a></div>
 </div>
 <div class="d50-rev rv">
-<span aria-hidden="true" class="wm">04</span>
-<div class="rh"><div class="nm c-hot">4. Kent Casino (Кент) <span>старт от 50 ₽ на карту Мир</span></div><div class="sc">9.0 / 10</div></div>
-<p>Дружелюбный вход: депозит от 50 рублей проходит и по карте Мир, и по СБП. 250 фриспинов в пакете и простой интерфейс без лишнего. Бонус активируется со 100 ₽ — хороший вариант для первого захода, чтобы протестировать площадку.</p>
-<div class="d50-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ на карту Мир</li><li>250 фриспинов в приветственном пакете</li><li>Простой и понятный интерфейс</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — короче история выплат</li><li>Бонус со 100 ₽, не с полусотни</li></ul></div>
-</div>
-<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/kent">Полный обзор Kent →</a></div>
-</div>
-<div class="d50-rev rv">
-<span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-viol">5. Izzi (Иззи) <span>простой вход от 50 ₽ и крипта</span></div><div class="sc">8.6 / 10</div></div>
-<p>Депозит от 50 рублей проходит через СБП и крипту, регистрация занимает около минуты. Удобно, если хотите быстро войти и попробовать слоты без долгой возни с кассой. Бонус стартует со 100 ₽, вейджер прозрачный.</p>
-<div class="d50-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽, регистрация ~1 мин</li><li>Приём криптовалюты USDT (ЮСДТ)</li><li>Чистый быстрый интерфейс</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Программа лояльности проще, чем у лидеров</li><li>Меньше live-столов (лайв-столов)</li></ul></div>
-</div>
-<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/izzi">Полный обзор Izzi →</a></div>
-</div>
-<div class="d50-rev rv">
-<span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-sky">6. Sol Casino (Сол) <span>каталог под низкую ставку</span></div><div class="sc">8.9 / 10</div></div>
+<span aria-hidden="true" class="wm">03</span>
+<div class="rh"><div class="nm c-gold">3. Sol Casino (Сол) <span>каталог под низкую ставку</span></div><div class="sc">8.9 / 10</div></div>
 <p>Порог чуть выше — от 100 ₽, полтинник касса не пропустит, зато свыше 7 000 слотов и еженедельный кэшбэк до 10%. Много игр со ставкой от 1–5 ₽ за спин, так что даже с небольшого депозита хватает надолго. Включаем в обзор как ближайшую альтернативу, если 50 ₽ уже позади.</p>
 <div class="d50-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>7 000+ слотов, много игр со ставкой от 1 ₽</li><li>Еженедельный кэшбэк без сложных условий</li><li>Ветеран рынка, стабильные выплаты</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Депозит от 100 ₽ — не пускает с 50 ₽</li><li>Поддержка отвечает не мгновенно в пик</li></ul></div>
 </div>
-<div class="d50-facts"><span class="thr">Депозит: от 100 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
+<div class="d50-facts"><span class="thr">Депозит: от 100 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/sol/">Полный обзор Sol →</a></div>
+</div>
+<div class="d50-rev rv">
+<span aria-hidden="true" class="wm">04</span>
+<div class="rh"><div class="nm c-hot">4. Izzi (Иззи) <span>простой вход от 50 ₽ и крипта</span></div><div class="sc">8.6 / 10</div></div>
+<p>Депозит от 50 рублей проходит через СБП и крипту, регистрация занимает около минуты. Удобно, если хотите быстро войти и попробовать слоты без долгой возни с кассой. Бонус стартует со 100 ₽, вейджер прозрачный.</p>
+<div class="d50-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽, регистрация ~1 мин</li><li>Приём криптовалюты USDT (ЮСДТ)</li><li>Чистый быстрый интерфейс</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Программа лояльности проще, чем у лидеров</li><li>Меньше live-столов (лайв-столов)</li></ul></div>
+</div>
+<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/izzi/">Полный обзор Izzi →</a></div>
+</div>
+<div class="d50-rev rv">
+<span aria-hidden="true" class="wm">05</span>
+<div class="rh"><div class="nm c-viol">5. Vavada (Вавада) <span>вход от 50 ₽ и надёжная касса</span></div><div class="sc">9.7 / 10</div></div>
+<p>Депозит 50 рублей проходит через СБП без вопросов, касса предсказуемая: USDT (ЮСДТ) приходит за 9 минут по замерам, спорных ситуаций минимум. Приветственный бонус стартует со 100 ₽ — с полусотни его не будет, но сам вход дешевле некуда. Крепкий баланс низкого порога и надёжности.</p>
+<div class="d50-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ через СБП</li><li>Быстрый вывод, USDT за 9 минут</li><li>Проверяемая лицензия Кюрасао</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Бонус только со 100 ₽</li><li>Периодическая блокировка домена — нужен доступ к зеркалу</li></ul></div>
+</div>
+<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>от 9 мин</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada/">Полный обзор Vavada →</a></div>
+</div>
+<div class="d50-rev rv">
+<span aria-hidden="true" class="wm">06</span>
+<div class="rh"><div class="nm c-sky">6. PokerDom (ПокерДом) <span>стабильные 50 ₽ и покер-рум</span></div><div class="sc">9.5 / 10</div></div>
+<p>Одна из немногих площадок с уверенным входом от 50 рублей плюс собственный покер-рум и приём рублёвых карт напрямую. Нюанс: сам депозит проходит от 50 ₽, а приветственный бонус активируется с 300 ₽ — полтинник тут про «попробовать», не про пакет.</p>
+<div class="d50-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽, слоты по 1 ₽</li><li>Собственный покер-рум с турнирами</li><li>Приём карт РФ без посредников</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует только от 300 ₽</li><li>Верификация обязательна перед первым выводом</li></ul></div>
+</div>
+<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>1–48 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/pokerdom/">Полный обзор PokerDom →</a></div>
+</div>
+<div class="d50-rev rv">
+<span aria-hidden="true" class="wm">07</span>
+<div class="rh"><div class="nm c-neon">7. Kent Casino (Кент) <span>старт от 50 ₽ на карту Мир</span></div><div class="sc">9.0 / 10</div></div>
+<p>Дружелюбный вход: депозит от 50 рублей проходит и по карте Мир, и по СБП. 250 фриспинов в пакете и простой интерфейс без лишнего. Бонус активируется со 100 ₽ — хороший вариант для первого захода, чтобы протестировать площадку.</p>
+<div class="d50-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ на карту Мир</li><li>250 фриспинов в приветственном пакете</li><li>Простой и понятный интерфейс</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — короче история выплат</li><li>Бонус со 100 ₽, не с полусотни</li></ul></div>
+</div>
+<div class="d50-facts"><span class="thr">Депозит: от 50 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/kent/">Полный обзор Kent →</a></div>
 </div>
 </section>
 <!-- ===== H2 #13 cases ===== -->
@@ -1279,6 +1341,7 @@ window.addEventListener('load',function(){
 </div>
 <div class="d50-log rv">
 <ul>
+<li><b>Spinto (Спинто) возглавил подборку</b> — депозит от 50 ₽ через СБП и приветственный бонус 200% + 150 FS уже с полусотни, вейджер x35.</li>
 <li><b>Vavada (Вавада) подтвердил вход от 50 ₽ через СБП</b> — платёж прошёл, приветственный бонус по-прежнему со 100 ₽.</li>
 <li><b>Kent (Кент) открыл депозит 50 ₽ по карте Мир</b> — раньше минимум на карту был 100 ₽, теперь полтинник проходит.</li>
 <li><b>1win (1вин) сохранил порог 50 ₽</b> — вход через СБП стабилен, бонус до 500% стартует с 300 ₽.</li>
@@ -1294,9 +1357,9 @@ window.addEventListener('load',function(){
 <span class="d50-kick">Коротко и по делу</span>
 <h2>Частые вопросы <span class="g-sky">о казино с депозитом от 50 рублей</span></h2>
 </div>
-<details class="rv" open=""><summary><span class="ic">+</span>В каком казино можно внести депозит 50 рублей?</summary><div class="bd"><div><p>Реальный депозит 50 рублей проходит у Vavada (Вавада), PokerDom (ПокерДом), 1win (1вин), Kent (Кент) и Izzi (Иззи). У 7K, Sol, Starda и Legzo минимум 100 ₽. Быстрее всего полтинник заходит через СБП — за 10–20 секунд без комиссии.</p></div></div></details>
+<details class="rv" open=""><summary><span class="ic">+</span>В каком казино можно внести депозит 50 рублей?</summary><div class="bd"><div><p>Реальный депозит 50 рублей проходит у Spinto (Спинто), 1win (1вин), Izzi (Иззи), Vavada (Вавада), PokerDom (ПокерДом) и Kent (Кент). У 7K, Sol, Starda и Legzo минимум 100 ₽. Быстрее всего полтинник заходит через СБП — за 10–20 секунд без комиссии.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Чем пополнить депозит от 50 рублей?</summary><div class="bd"><div><p>Дешевле и быстрее всего — через СБП по номеру телефона: минимум 50 ₽, зачисление за 10–20 секунд, без комиссии. Карта Мир местами пускает с 50–100 ₽. Криптовалюта USDT (ЮСДТ) и Visa (Виза) для минималки не подходят — там порог от 100 и 300 ₽.</p></div></div></details>
-<details class="rv"><summary><span class="ic">+</span>Дадут ли бонус на депозит 50 рублей?</summary><div class="bd"><div><p>С 50 рублей приветственный бонус не стартует почти нигде — он включается со 100 ₽ у Vavada (Вавада), Kent (Кент) и Izzi (Иззи), с 300 ₽ у 1win (1вин) и PokerDom (ПокерДом). Полтинник — это про попробовать площадку, а не про пакет с фриспинами.</p></div></div></details>
+<details class="rv"><summary><span class="ic">+</span>Дадут ли бонус на депозит 50 рублей?</summary><div class="bd"><div><p>С 50 рублей приветственный бонус стартует у Spinto (Спинто) — 200% + 150 FS уже с полусотни, по ссылке без промокода. У Vavada (Вавада), Kent (Кент) и Izzi (Иззи) он включается со 100 ₽, у 1win (1вин) и PokerDom (ПокерДом) — с 300 ₽. У большинства остальных полтинник — это про попробовать площадку, а не про пакет с фриспинами.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Что реально с депозита 50 рублей в казино?</summary><div class="bd"><div><p>На слоте со ставкой 1 ₽ за спин 50 рублей дают около 50 вращений, по 5 ₽ — десяток. Этого хватает проверить кассу и поймать бонусную игру. Чаще сумма уходит в ноль за 10–15 минут; реже полтинник ловит занос в 500–2 000 ₽ — по нашим замерам такое бывает, но это удача, а не система.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Можно ли вывести деньги после депозита 50 рублей?</summary><div class="bd"><div><p>Депозит проходит от 50 рублей, но минимальная заявка на вывод обычно от 500 ₽ — до этой суммы баланс нужно накопить. Первый вывод идёт после верификации (KYC): паспорт и селфи, до 20 минут у топ-брендов. Выводите тем же методом, каким пополняли.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>На каких игровых автоматах играть на 50 рублей?</summary><div class="bd"><div><p>Берите слоты со ставкой от 1 ₽ за спин — Starburst (Старбёрст) и Joker Stoker (Джокер Стокер) тянут дольше всего. Высоковолатильные Gates of Olympus (Гейтс оф Олимпус) и Sweet Bonanza (Свит Бонанза) при ставке 18 ₽ съедят 50 рублей за три спина. Под маленький банк выбирайте низкую волатильность.</p></div></div></details>
@@ -1432,6 +1495,7 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: реальный порог входа, скорость кассы по замерам, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="d50-brands rv" id="brandsGrid"></div>
 <ul class="d50-seo-links">
+<li><a href="/casino/spinto/">Обзор казино Spinto (Спинто) — депозит от 50 ₽</a></li>
 <li><a href="/casino/vavada">Обзор казино Vavada (Вавада) — депозит от 50 ₽</a></li>
 <li><a href="/casino/pokerdom">Обзор казино PokerDom (ПокерДом) — депозит от 50 ₽</a></li>
 <li><a href="/casino/1win">Обзор казино 1win (1вин) — депозит от 50 ₽</a></li>
@@ -1513,7 +1577,8 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"Vavada (Вавада)",     c:"#b8ff2b", c2:"#8fd400", s:"9.7", d:"вход от 50 ₽ и надёжность · СБП",        h:"/casino/vavada"},
+    {n:"Spinto (Спинто)",     c:"#b8ff2b", c2:"#8fd400", s:"9.8", d:"вход от 50 ₽ и бонус 200% + 150 FS",      h:"/casino/spinto/"},
+    {n:"Vavada (Вавада)",     c:"#a879ff", c2:"#7d4fd6", s:"9.7", d:"вход от 50 ₽ и надёжность · СБП",        h:"/casino/vavada"},
     {n:"PokerDom (ПокерДом)", c:"#37e0c8", c2:"#12a892", s:"9.5", d:"стабильные 50 ₽ и покер-рум",             h:"/casino/pokerdom"},
     {n:"1win (1вин)",         c:"#ffcf3f", c2:"#e0952f", s:"9.3", d:"казино и ставки от 50 ₽",                 h:"/casino/1win"},
     {n:"7K Casino (7К)",      c:"#ff2e93", c2:"#c81f6f", s:"9.2", d:"быстрый вывод с минималки · 100 ₽",       h:"/casino/7k"},

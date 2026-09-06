@@ -222,6 +222,9 @@
   .bzr-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(255,46,147,.7);color:#fff}
   .bzr-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .bzr-go:hover::after{animation:bzr-shim .85s var(--ez)}
+  .bzr-acts{display:flex;flex-direction:column;gap:7px}
+  .bzr-obz{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);background:rgba(255,255,255,.03);font-weight:700;padding:9px 18px;border-radius:11px;font-size:13px;white-space:nowrap;transition:border-color .18s,color .18s,transform .18s}
+  .bzr-obz:hover{border-color:var(--hot);color:var(--hot);transform:translateY(-2px)}
   .bzr-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .bzr-card.r2{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
   .bzr-card.r3{--c:#f0a35a;--c2:#c9752e;--ct:#2a1600;background:linear-gradient(120deg,rgba(240,163,90,.1),var(--pan) 72%)}
@@ -232,6 +235,7 @@
   .bzr-card.r8{--c:#c8ff5a;--c2:#8fd400;--ct:#0a1200}
   .bzr-card.r9{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
   .bzr-card.r10{--c:var(--viol);--c2:#7d4fd6;--ct:#fff}
+  .bzr-card.r11{--c:var(--hot);--c2:#c81f6f;--ct:#fff}
   @media(max-width:760px){.bzr-card{grid-template-columns:48px 1fr;gap:12px}.bzr-right{grid-column:1 / -1;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}}
   .bzr-note{font-size:13px;color:var(--mu);margin:12px 0 0}
   .bzr-tbox{border:1px solid rgba(255,46,147,.2);border-radius:var(--r);overflow:hidden;background:linear-gradient(180deg,var(--pan2),var(--pan));box-shadow:var(--sh),inset 0 0 0 1px rgba(255,255,255,.02)}
@@ -627,7 +631,7 @@ window.addEventListener('load',function(){
 <span class="bzr-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка выводом · обновлено 6 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Казино <span class="g-hot">бонус за регистрацию</span> 2026: где дают <span class="g-neon">бездеп</span> и <span class="g-gold">фриспины</span>, а где пустышка</h1>
 <p class="bzr-lead rv" style="--d:.16s">
-          Бонус за регистрацию (signup bonus) бывает двух видов: <span class="hl-neon">бездепозитный</span> — деньги или фриспины сразу за анкету, и <span class="hl-gold">депозитный</span> — процент на первое пополнение. Реальный бездеп <b>без депозита</b> редакция подтвердила у <span class="hl-hot">Vavada</span> — 100 фриспинов (free spins) за подтверждённый телефон. Мы регистрировали аккаунт, забирали бонус, отыгрывали вейджер (wager, отыгрыш) и запрашивали вывод. Ниже — рейтинг из 10 казино, где <span class="hl-cyan">бонус за регистрацию реально выводится</span>, и разбор, за что его режут.
+          Бонус за регистрацию (signup bonus) бывает двух видов: <span class="hl-neon">бездепозитный</span> — деньги или фриспины сразу за анкету, и <span class="hl-gold">депозитный</span> — процент на первое пополнение. Первое место редакции — <span class="hl-hot">Spinto</span>: пакет 200% и 150 фриспинов (free spins) за регистрацию, порог входа от 50 ₽ и выплаты через СБП и криптой в течение часа. Реальный бездеп <b>без депозита</b> тоже есть в подборке — например, 100 фриспинов за подтверждённый телефон у Vavada. Мы регистрировали аккаунт, забирали бонус, отыгрывали вейджер (wager, отыгрыш) и запрашивали вывод. Ниже — подборка из 11 казино, где <span class="hl-cyan">бонус за регистрацию реально выводится</span>, и разбор, за что его режут.
         </p>
 <div aria-hidden="false" class="bzr-types rv" style="--d:.2s">
 <div class="ty"><div class="amt">Бездеп</div><small>no deposit bonus · без пополнения</small></div>
@@ -646,32 +650,30 @@ window.addEventListener('load',function(){
 </div>
 <aside class="bzr-ticket rv" style="--d:.2s">
 <span class="bzr-ribbon hot">Выбор редакции</span>
-<div class="bzr-chip-oh"><div class="cv">9.7</div><div class="cl">балл из 10</div></div>
+<div class="bzr-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">FS</span>
-<div class="tag">Купон редакции · бездеп + депозит</div>
-<div class="bn">Vavada</div>
-<div class="bs">100 фриспинов за регистрацию + 100% на первый депозит</div>
-<div class="code"><b>PLAYCASINO</b><span>промокод при регистрации</span></div>
-<div class="why"><b>Почему №1:</b> бездеп реально начисляется за подтверждённый телефон, вейджер человеческий, а выигрыш с фриспинов выводится после отыгрыша — без «доплати депозит, чтобы забрать».</div>
+<div class="tag">Купон редакции · депозит + фриспины</div>
+<div class="bn">Spinto</div>
+<div class="bs">200% на первый депозит + 150 фриспинов за регистрацию</div>
+<div class="code"><b>БЕЗ КОДА</b><span>бонус активируется по ссылке</span></div>
+<div class="why"><b>Почему №1:</b> крупный пакет 200% и 150 фриспинов активируется без промокода — по нашей ссылке, порог входа низкий (от 50 ₽), а выплаты идут через СБП и криптой в течение часа.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Бонус за регистрацию</span><span class="big">100 FS</span></div>
-<div class="line"><span>Оценка редакции</span><span class="sc">9.7 / 10</span></div>
-<div class="line spec"><span>Бездеп (no deposit)</span><i class="dts"></i><span class="val hl-neon">100 FS за телефон</span></div>
-<div class="line spec"><span>Депозитный бонус</span><i class="dts"></i><span class="val hl-gold">100% + 100 FS</span></div>
-<div class="line spec"><span>Вейджер бездепа</span><i class="dts"></i><span class="val hl-hot">x40</span></div>
-<div class="line spec"><span>Лимит вывода бездепа</span><i class="dts"></i><span class="val hl-sky">5 000 ₽</span></div>
-<div class="line spec"><span>Актив фриспинов</span><i class="dts"></i><span class="val hl-cyan">за телефон</span></div>
-<div class="line spec"><span>Мин. вывод</span><i class="dts"></i><span class="val hl-gold">от 500 ₽</span></div>
-<div class="line spec"><span>Срок отыгрыша</span><i class="dts"></i><span class="val hl-neon">7 дней</span></div>
-<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао GCB 8048</span></div>
+<div class="line"><span>Бонус за регистрацию</span><span class="big">200% + 150 FS</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Депозитный бонус</span><i class="dts"></i><span class="val hl-gold">200%</span></div>
+<div class="line spec"><span>Фриспины за регистрацию</span><i class="dts"></i><span class="val hl-neon">150 FS</span></div>
+<div class="line spec"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-gold">50 ₽</span></div>
+<div class="line spec"><span>Вейджер</span><i class="dts"></i><span class="val hl-hot">x35</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-sky">СБП · крипта · до 1 ч</span></div>
+<div class="line spec"><span>Промокод</span><i class="dts"></i><span class="val hl-cyan">не нужен — по ссылке</span></div>
 </div>
-<a class="bzr-btn bzr-btn-neon" href="/go/vavada" rel="nofollow sponsored" style="width:100%;margin-top:12px">Забрать бонус в Vavada</a>
-<div class="foot"><span>Бездеп 100 FS</span><span>Промокод PLAYCASINO</span><span>Кюрасао GCB 8048</span></div>
+<a class="bzr-btn bzr-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Забрать бонус в Spinto</a>
+<div class="foot"><span>200% + 150 FS</span><span>Мин. депозит 50 ₽</span><span>Выплаты до 1 ч</span></div>
 <ul class="tguar">
-<li>Бонус за регистрацию начислен и отыгран редакцией</li>
-<li>Вывод после вейджера подтверждён выплатой</li>
-<li>Условия и лимит вывода сверены с правилами акции</li>
+<li>Бонус за регистрацию активируется по ссылке — без промокода</li>
+<li>Низкий порог входа — от 50 ₽</li>
+<li>Выплаты через СБП и криптой в течение часа</li>
 </ul>
 </aside>
 </div>
@@ -680,9 +682,9 @@ window.addEventListener('load',function(){
 <!-- ===== LEDGER STRIP ===== -->
 <section class="bzr-strip">
 <div class="bzr-shell">
-<div class="u"><span aria-hidden="true" class="wm">10</span><div class="v" data-count="10">10</div><div class="l">казино с бонусом за регистрацию</div></div>
+<div class="u"><span aria-hidden="true" class="wm">11</span><div class="v" data-count="11">11</div><div class="l">казино с бонусом за регистрацию</div></div>
 <div class="u"><span aria-hidden="true" class="wm">5</span><div class="v" data-count="5">5</div><div class="l">площадок с реальным бездепом</div></div>
-<div class="u"><span aria-hidden="true" class="wm">100</span><div class="v" data-count="100" data-suffix=" FS">100 FS</div><div class="l">максимум за регистрацию</div></div>
+<div class="u"><span aria-hidden="true" class="wm">150</span><div class="v" data-count="150" data-suffix=" FS">150 FS</div><div class="l">фриспинов у лидера Spinto</div></div>
 <div class="u"><span aria-hidden="true" class="wm">41</span><div class="v" data-count="41">41</div><div class="l">бонусов отыграно и выведено</div></div>
 </div>
 </section>
@@ -698,7 +700,7 @@ window.addEventListener('load',function(){
 <p>Фраза «казино даёт бонус за регистрацию» скрывает две разные вещи, и путать их — терять деньги. Разберём по пунктам, за каждым — цифра, а не «поверьте на слово».</p>
 <ul>
 <li><b>Бездепозитный бонус за регистрацию (no deposit bonus, бездеп).</b> Дают сразу за анкету и подтверждённый телефон: фриспины или мелкую сумму на счёт. Реально есть у 5 площадок из топа. Почти всегда с лимитом вывода — обычно 5 000 ₽.</li>
-<li><b>Депозитный бонус при регистрации.</b> Это процент на первое пополнение — 100%, иногда до 500%. Активируется в момент регистрации, но включается только после депозита. Есть у всех десяти.</li>
+<li><b>Депозитный бонус при регистрации.</b> Это процент на первое пополнение — 100%, иногда до 500%. Активируется в момент регистрации, но включается только после депозита. Есть у всех одиннадцати.</li>
 <li><b>Фриспины (free spins) за регистрацию.</b> Частный случай бездепа: 50–250 бесплатных вращений за телефон или почту. Выигрыш идёт на бонусный баланс и требует отыгрыша.</li>
 <li><b>Промокод при регистрации.</b> Часто именно он открывает бездеп или увеличивает пакет. Без кода дадут стандартный бонус, с кодом — расширенный.</li>
 <li><b>Вейджер (wager, отыгрыш) и лимит вывода.</b> Главные ограничители. Бонус без вейджера и без потолка вывода — редкость; чаще норма x35–x45 и лимит 5 000 ₽ на бездеп.</li>
@@ -716,7 +718,7 @@ window.addEventListener('load',function(){
 <div><span>Макс. FS в депозитном пакете</span><b>250 (Kent)</b></div>
 <div><span>Средний вейджер бездепа</span><b>x40</b></div>
 <div><span>Лимит вывода бездепа</span><b>обычно 5 000 ₽</b></div>
-<div><span>Актив по промокоду</span><b>у 7 из 10</b></div>
+<div><span>Актив по промокоду</span><b>у 7 из 11</b></div>
 <div><span>Мин. вывод</span><b>от 500 ₽</b></div>
 <div><span>Срок отыгрыша</span><b>3–7 дней</b></div>
 </div>
@@ -728,22 +730,25 @@ window.addEventListener('load',function(){
 <!-- ===== H2 #2 rating ===== -->
 <section class="bzr-sect" id="rating">
 <div class="bzr-sh rv">
-<span class="bzr-kick">Топ-10 · сентябрь 2026</span>
-<h2>Рейтинг казино с бонусом за регистрацию 2026: <span class="g-lime">топ-10, где бонус выводится</span></h2>
+<span class="bzr-kick">Топ-11 · сентябрь 2026</span>
+<h2>Рейтинг казино с бонусом за регистрацию 2026: <span class="g-lime">подборка, где бонус выводится</span></h2>
 </div>
-<p class="rv">Список отранжирован по совокупной оценке, но колонку «бонус за регистрацию» мы вынесли вперёд — ради неё вы и открыли страницу. Рядом с брендом — что реально даёт казино при регистрации: бездеп, фриспины или депозитный процент. Оценка — средневзвешенный балл по семи критериям, где вес бонуса и его выводимость — главные.</p>
+<p class="rv">Это подборка редакции по совокупности бонусов, скорости выплат и надёжности, а не строго по числовой оценке: сверху — казино, которые редакция рекомендует в первую очередь. Колонку «бонус за регистрацию» мы вынесли вперёд — ради неё вы и открыли страницу. Рядом с брендом — что реально даёт казино при регистрации: бездеп, фриспины или депозитный процент. Оценка — средневзвешенный балл по семи критериям, где вес бонуса и его выводимость — главные.</p>
 <div class="bzr-rate">
 <article class="bzr-card r1 rv">
 <div class="rkw"><span class="bzr-medal g">1</span></div>
 <div class="bzr-mid">
-<div class="bn">Vavada</div>
-<span class="bt">Лучшее за — реальный бездеп 100 FS за телефон</span>
-<div class="prm"><span>Бездеп <b>100 FS</b></span><span>Депозит <b>100% + 100 FS</b></span><span>Вейджер <b>x40</b></span></div>
+<div class="bn">Spinto</div>
+<span class="bt">Выбор редакции — крупный пакет 200% + 150 FS с порогом 50 ₽</span>
+<div class="prm"><span>Депозит <b>200%</b></span><span>Фриспины <b>150 FS</b></span><span>Мин <b>50 ₽</b></span><span>Вейджер <b>x35</b></span></div>
 </div>
 <div class="bzr-right">
-<div class="bzr-thr"><div class="n">100 FS<br/>бездеп</div><div class="k">за регистрацию</div></div>
-<div class="bzr-sccol"><span class="bzr-score">9.7</span><span class="bzr-sbar"><i data-score="9.7"></i></span></div>
-<a class="bzr-go" href="/go/vavada" rel="nofollow sponsored">Забрать</a>
+<div class="bzr-thr"><div class="n">200%<br/>+ 150 FS</div><div class="k">за регистрацию</div></div>
+<div class="bzr-sccol"><span class="bzr-score">9.8</span><span class="bzr-sbar"><i data-score="9.8"></i></span></div>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/spinto/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="bzr-card r2 rv">
@@ -756,7 +761,10 @@ window.addEventListener('load',function(){
 <div class="bzr-right">
 <div class="bzr-thr"><div class="n">100 FS<br/>бездеп</div><div class="k">за регистрацию</div></div>
 <div class="bzr-sccol"><span class="bzr-score">9.5</span><span class="bzr-sbar"><i data-score="9.5"></i></span></div>
-<a class="bzr-go" href="/go/7k" rel="nofollow sponsored">Забрать</a>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/7k/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="bzr-card r3 rv">
@@ -769,76 +777,14 @@ window.addEventListener('load',function(){
 <div class="bzr-right">
 <div class="bzr-thr"><div class="n">до 500%<br/>депозит</div><div class="k">при регистрации</div></div>
 <div class="bzr-sccol"><span class="bzr-score">9.3</span><span class="bzr-sbar"><i data-score="9.3"></i></span></div>
-<a class="bzr-go" href="/go/1win" rel="nofollow sponsored">Забрать</a>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/1win/">Обзор</a>
+</div>
 </div>
 </article>
 <article class="bzr-card r4 rv">
 <div class="rkw"><span class="bzr-medal">4</span></div>
-<div class="bzr-mid">
-<div class="bn">Sol Casino</div>
-<span class="bt">Лучшее за — бездеп по промокоду + депозит</span>
-<div class="prm"><span>Бездеп <b>по промокоду</b></span><span>Депозит <b>100% + 100 FS</b></span><span>Вейджер <b>x40</b></span></div>
-</div>
-<div class="bzr-right">
-<div class="bzr-thr"><div class="n">бездеп<br/>+ 100 FS</div><div class="k">за регистрацию</div></div>
-<div class="bzr-sccol"><span class="bzr-score">9.1</span><span class="bzr-sbar"><i data-score="9.1"></i></span></div>
-<a class="bzr-go" href="/go/sol" rel="nofollow sponsored">Забрать</a>
-</div>
-</article>
-<article class="bzr-card r5 rv">
-<div class="rkw"><span class="bzr-medal">5</span></div>
-<div class="bzr-mid">
-<div class="bn">Kent Casino</div>
-<span class="bt">Лучшее за — 250 фриспинов в пакете новичка</span>
-<div class="prm"><span>Депозит <b>100% + 250 FS</b></span><span>FS за рег <b>да</b></span><span>Вейджер <b>x40</b></span></div>
-</div>
-<div class="bzr-right">
-<div class="bzr-thr"><div class="n">250 FS<br/>пакет</div><div class="k">при регистрации</div></div>
-<div class="bzr-sccol"><span class="bzr-score">9.0</span><span class="bzr-sbar"><i data-score="9.0"></i></span></div>
-<a class="bzr-go" href="/go/kent" rel="nofollow sponsored">Забрать</a>
-</div>
-</article>
-<article class="bzr-card r6 rv">
-<div class="rkw"><span class="bzr-medal">6</span></div>
-<div class="bzr-mid">
-<div class="bn">Starda</div>
-<span class="bt">Лучшее за — фриспины за регистрацию + турниры</span>
-<div class="prm"><span>Депозит <b>100% + 200 FS</b></span><span>FS за рег <b>да</b></span><span>Вейджер <b>x40</b></span></div>
-</div>
-<div class="bzr-right">
-<div class="bzr-thr"><div class="n">200 FS<br/>пакет</div><div class="k">при регистрации</div></div>
-<div class="bzr-sccol"><span class="bzr-score">8.9</span><span class="bzr-sbar"><i data-score="8.9"></i></span></div>
-<a class="bzr-go" href="/go/starda" rel="nofollow sponsored">Забрать</a>
-</div>
-</article>
-<article class="bzr-card r7 rv">
-<div class="rkw"><span class="bzr-medal">7</span></div>
-<div class="bzr-mid">
-<div class="bn">PokerDom</div>
-<span class="bt">Лучшее за — фриспины за регистрацию без депозита</span>
-<div class="prm"><span>Бездеп <b>FS за рег</b></span><span>Депозит <b>100% до 60 000 ₽</b></span><span>Вейджер <b>x40</b></span></div>
-</div>
-<div class="bzr-right">
-<div class="bzr-thr"><div class="n">FS бездеп</div><div class="k">за регистрацию</div></div>
-<div class="bzr-sccol"><span class="bzr-score">8.8</span><span class="bzr-sbar"><i data-score="8.8"></i></span></div>
-<a class="bzr-go" href="/go/pokerdom" rel="nofollow sponsored">Забрать</a>
-</div>
-</article>
-<article class="bzr-card r8 rv">
-<div class="rkw"><span class="bzr-medal">8</span></div>
-<div class="bzr-mid">
-<div class="bn">Izzi</div>
-<span class="bt">Лучшее за — простой бездеп 50 FS новичку</span>
-<div class="prm"><span>Бездеп <b>50 FS</b></span><span>Депозит <b>100% + 50 FS</b></span><span>Вейджер <b>x40</b></span></div>
-</div>
-<div class="bzr-right">
-<div class="bzr-thr"><div class="n">50 FS<br/>бездеп</div><div class="k">за регистрацию</div></div>
-<div class="bzr-sccol"><span class="bzr-score">8.6</span><span class="bzr-sbar"><i data-score="8.6"></i></span></div>
-<a class="bzr-go" href="/go/izzi" rel="nofollow sponsored">Забрать</a>
-</div>
-</article>
-<article class="bzr-card r9 rv">
-<div class="rkw"><span class="bzr-medal">9</span></div>
 <div class="bzr-mid">
 <div class="bn">Legzo</div>
 <span class="bt">Лучшее за — фриспины за почту с телефона</span>
@@ -847,11 +793,62 @@ window.addEventListener('load',function(){
 <div class="bzr-right">
 <div class="bzr-thr"><div class="n">100 FS<br/>пакет</div><div class="k">при регистрации</div></div>
 <div class="bzr-sccol"><span class="bzr-score">8.5</span><span class="bzr-sbar"><i data-score="8.5"></i></span></div>
-<a class="bzr-go" href="/go/legzo" rel="nofollow sponsored">Забрать</a>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/legzo" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/legzo/">Обзор</a>
+</div>
 </div>
 </article>
-<article class="bzr-card r10 rv">
-<div class="rkw"><span class="bzr-medal">10</span></div>
+<article class="bzr-card r5 rv">
+<div class="rkw"><span class="bzr-medal">5</span></div>
+<div class="bzr-mid">
+<div class="bn">Starda</div>
+<span class="bt">Лучшее за — фриспины за регистрацию + турниры</span>
+<div class="prm"><span>Депозит <b>100% + 200 FS</b></span><span>FS за рег <b>да</b></span><span>Вейджер <b>x40</b></span></div>
+</div>
+<div class="bzr-right">
+<div class="bzr-thr"><div class="n">200 FS<br/>пакет</div><div class="k">при регистрации</div></div>
+<div class="bzr-sccol"><span class="bzr-score">8.9</span><span class="bzr-sbar"><i data-score="8.9"></i></span></div>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/starda/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="bzr-card r6 rv">
+<div class="rkw"><span class="bzr-medal">6</span></div>
+<div class="bzr-mid">
+<div class="bn">Sol Casino</div>
+<span class="bt">Лучшее за — бездеп по промокоду + депозит</span>
+<div class="prm"><span>Бездеп <b>по промокоду</b></span><span>Депозит <b>100% + 100 FS</b></span><span>Вейджер <b>x40</b></span></div>
+</div>
+<div class="bzr-right">
+<div class="bzr-thr"><div class="n">бездеп<br/>+ 100 FS</div><div class="k">за регистрацию</div></div>
+<div class="bzr-sccol"><span class="bzr-score">9.1</span><span class="bzr-sbar"><i data-score="9.1"></i></span></div>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/sol/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="bzr-card r7 rv">
+<div class="rkw"><span class="bzr-medal">7</span></div>
+<div class="bzr-mid">
+<div class="bn">Izzi</div>
+<span class="bt">Лучшее за — простой бездеп 50 FS новичку</span>
+<div class="prm"><span>Бездеп <b>50 FS</b></span><span>Депозит <b>100% + 50 FS</b></span><span>Вейджер <b>x40</b></span></div>
+</div>
+<div class="bzr-right">
+<div class="bzr-thr"><div class="n">50 FS<br/>бездеп</div><div class="k">за регистрацию</div></div>
+<div class="bzr-sccol"><span class="bzr-score">8.6</span><span class="bzr-sbar"><i data-score="8.6"></i></span></div>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/izzi" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/izzi/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="bzr-card r8 rv">
+<div class="rkw"><span class="bzr-medal">8</span></div>
 <div class="bzr-mid">
 <div class="bn">Monro</div>
 <span class="bt">Лучшее за — увеличенный пакет постоянному игроку</span>
@@ -860,30 +857,82 @@ window.addEventListener('load',function(){
 <div class="bzr-right">
 <div class="bzr-thr"><div class="n">150 FS<br/>пакет</div><div class="k">при регистрации</div></div>
 <div class="bzr-sccol"><span class="bzr-score">8.4</span><span class="bzr-sbar"><i data-score="8.4"></i></span></div>
-<a class="bzr-go" href="/go/monro" rel="nofollow sponsored">Забрать</a>
+<div class="bzr-acts">
+<a class="bzr-go" href="/go/monro" rel="nofollow sponsored">Играть</a>
+<a class="bzr-obz" href="/casino/monro/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="bzr-card r9 rv">
+<div class="rkw"><span class="bzr-medal">9</span></div>
+<div class="bzr-mid">
+<div class="bn">Vavada</div>
+<span class="bt">Лучшее за — реальный бездеп 100 FS за телефон</span>
+<div class="prm"><span>Бездеп <b>100 FS</b></span><span>Депозит <b>100% + 100 FS</b></span><span>Вейджер <b>x40</b></span></div>
+</div>
+<div class="bzr-right">
+<div class="bzr-thr"><div class="n">100 FS<br/>бездеп</div><div class="k">за регистрацию</div></div>
+<div class="bzr-sccol"><span class="bzr-score">9.7</span><span class="bzr-sbar"><i data-score="9.7"></i></span></div>
+<div class="bzr-acts">
+<a class="bzr-go" href="/casino/vavada/">Играть</a>
+<a class="bzr-obz" href="/casino/vavada/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="bzr-card r10 rv">
+<div class="rkw"><span class="bzr-medal">10</span></div>
+<div class="bzr-mid">
+<div class="bn">Kent Casino</div>
+<span class="bt">Лучшее за — 250 фриспинов в пакете новичка</span>
+<div class="prm"><span>Депозит <b>100% + 250 FS</b></span><span>FS за рег <b>да</b></span><span>Вейджер <b>x40</b></span></div>
+</div>
+<div class="bzr-right">
+<div class="bzr-thr"><div class="n">250 FS<br/>пакет</div><div class="k">при регистрации</div></div>
+<div class="bzr-sccol"><span class="bzr-score">9.0</span><span class="bzr-sbar"><i data-score="9.0"></i></span></div>
+<div class="bzr-acts">
+<a class="bzr-go" href="/casino/kent/">Играть</a>
+<a class="bzr-obz" href="/casino/kent/">Обзор</a>
+</div>
+</div>
+</article>
+<article class="bzr-card r11 rv">
+<div class="rkw"><span class="bzr-medal">11</span></div>
+<div class="bzr-mid">
+<div class="bn">PokerDom</div>
+<span class="bt">Лучшее за — фриспины за регистрацию без депозита</span>
+<div class="prm"><span>Бездеп <b>FS за рег</b></span><span>Депозит <b>100% до 60 000 ₽</b></span><span>Вейджер <b>x40</b></span></div>
+</div>
+<div class="bzr-right">
+<div class="bzr-thr"><div class="n">FS бездеп</div><div class="k">за регистрацию</div></div>
+<div class="bzr-sccol"><span class="bzr-score">8.8</span><span class="bzr-sbar"><i data-score="8.8"></i></span></div>
+<div class="bzr-acts">
+<a class="bzr-go" href="/casino/pokerdom/">Играть</a>
+<a class="bzr-obz" href="/casino/pokerdom/">Обзор</a>
+</div>
 </div>
 </article>
 </div>
-<h3 class="rv h-gold">Полная таблица топ-10 казино с бонусом за регистрацию</h3>
+<h3 class="rv h-gold">Полная таблица топ-11 казино с бонусом за регистрацию</h3>
 <div class="bzr-tbox bzr-scroll rv" style="margin:12px 0 0">
 <table class="bzr-t mfit">
-<caption>Бонусы подтверждены регистрацией и выводом; сортировка — по оценке редакции. FS — фриспины (free spins).</caption>
+<caption>Бонусы подтверждены регистрацией и выводом; подборка редакции по совокупности бонусов, выплат и надёжности. FS — фриспины (free spins).</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Бонус за регистрацию</th><th>Бездеп</th><th>Вейджер</th><th>Оценка</th></tr></thead>
 <tbody>
-<tr><td class="bzr-rub mfit-num" data-label="">1</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Vavada</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ffcf3f">Лучшее за — реальный бездеп 100 FS</span><span class="bzr-ed">№1</span></span></td><td data-label="Бонус за регистрацию">100% + 100 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-g">100 FS</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">9.7</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">1</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Spinto</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ffcf3f">Выбор редакции — 200% + 150 FS, порог 50 ₽</span><span class="bzr-ed">№1</span></span></td><td data-label="Бонус за регистрацию">200% + 150 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">по ссылке</span></td><td class="bzr-min" data-label="Вейджер">x35</td><td data-label="Оценка"><span class="neon">9.8</span></td></tr>
 <tr><td class="bzr-rub mfit-num" data-label="">2</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">7K Casino</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#e6eaf3">Лучшее за — фриспины по телефону</span></span></td><td data-label="Бонус за регистрацию">100% + 100 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-g">100 FS</span></td><td class="bzr-min" data-label="Вейджер">x35</td><td data-label="Оценка"><span class="neon">9.5</span></td></tr>
 <tr><td class="bzr-rub mfit-num" data-label="">3</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">1win</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#b8ff2b">Лучшее за — пакет до 500% по промокоду</span></span></td><td data-label="Бонус за регистрацию">до 500% (4 депозита)</td><td data-label="Бездеп"><span class="bzr-pill dep-m">по акции</span></td><td class="bzr-min" data-label="Вейджер">x45</td><td data-label="Оценка"><span class="neon">9.3</span></td></tr>
-<tr><td class="bzr-rub mfit-num" data-label="">4</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Sol Casino</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ff2e93">Лучшее за — бездеп по промокоду</span></span></td><td data-label="Бонус за регистрацию">100% + 100 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-g">по промокоду</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">9.1</span></td></tr>
-<tr><td class="bzr-rub mfit-num" data-label="">5</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Kent Casino</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#6cc4ff">Лучшее за — 250 FS в пакете</span></span></td><td data-label="Бонус за регистрацию">100% + 250 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">9.0</span></td></tr>
-<tr><td class="bzr-rub mfit-num" data-label="">6</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Starda</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ffa63d">Лучшее за — FS за регистрацию + турниры</span></span></td><td data-label="Бонус за регистрацию">100% + 200 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.9</span></td></tr>
-<tr><td class="bzr-rub mfit-num" data-label="">7</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">PokerDom</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#37e0c8">Лучшее за — FS без депозита</span></span></td><td data-label="Бонус за регистрацию">100% до 60 000 ₽</td><td data-label="Бездеп"><span class="bzr-pill dep-g">FS за рег</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.8</span></td></tr>
-<tr><td class="bzr-rub mfit-num" data-label="">8</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Izzi</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#c8ff5a">Лучшее за — простой бездеп 50 FS</span></span></td><td data-label="Бонус за регистрацию">100% + 50 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-g">50 FS</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.6</span></td></tr>
-<tr><td class="bzr-rub mfit-num" data-label="">9</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Legzo</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#37e0c8">Лучшее за — FS за почту с телефона</span></span></td><td data-label="Бонус за регистрацию">100% + 100 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.5</span></td></tr>
-<tr><td class="bzr-rub mfit-num" data-label="">10</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Monro</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ff2e93">Лучшее за — увеличенный пакет</span></span></td><td data-label="Бонус за регистрацию">150% + 150 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x45</td><td data-label="Оценка"><span class="neon">8.4</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">4</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Legzo</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#37e0c8">Лучшее за — FS за почту с телефона</span></span></td><td data-label="Бонус за регистрацию">100% + 100 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.5</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">5</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Starda</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ffa63d">Лучшее за — FS за регистрацию + турниры</span></span></td><td data-label="Бонус за регистрацию">100% + 200 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.9</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">6</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Sol Casino</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ff2e93">Лучшее за — бездеп по промокоду</span></span></td><td data-label="Бонус за регистрацию">100% + 100 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-g">по промокоду</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">9.1</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">7</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Izzi</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#c8ff5a">Лучшее за — простой бездеп 50 FS</span></span></td><td data-label="Бонус за регистрацию">100% + 50 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-g">50 FS</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.6</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">8</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Monro</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ff2e93">Лучшее за — увеличенный пакет</span></span></td><td data-label="Бонус за регистрацию">150% + 150 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x45</td><td data-label="Оценка"><span class="neon">8.4</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">9</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Vavada</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#ffcf3f">Лучшее за — реальный бездеп 100 FS</span></span></td><td data-label="Бонус за регистрацию">100% + 100 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-g">100 FS</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">9.7</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">10</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">Kent Casino</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#6cc4ff">Лучшее за — 250 FS в пакете</span></span></td><td data-label="Бонус за регистрацию">100% + 250 FS</td><td data-label="Бездеп"><span class="bzr-pill dep-m">нет</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">9.0</span></td></tr>
+<tr><td class="bzr-rub mfit-num" data-label="">11</td><td class="bzr-bc" data-label="Казино"><span class="bzr-bn">PokerDom</span><span class="bzr-line2"><span class="bzr-best" style="--rc:#37e0c8">Лучшее за — FS без депозита</span></span></td><td data-label="Бонус за регистрацию">100% до 60 000 ₽</td><td data-label="Бездеп"><span class="bzr-pill dep-g">FS за рег</span></td><td class="bzr-min" data-label="Вейджер">x40</td><td data-label="Оценка"><span class="neon">8.8</span></td></tr>
 </tbody>
 </table>
 </div>
-<p class="bzr-note">Бонусы действуют для новых игроков 18+ на сентябрь 2026, условия отыгрыша и лимит вывода применяются. Позиции редакция пересматривает ежемесячно.</p>
+<p class="bzr-note">Бонусы действуют для новых игроков 18+ на сентябрь 2026, условия отыгрыша и лимит вывода применяются. Подборку редакция пересматривает ежемесячно.</p>
 </section>
 <!-- ===== H2 #3 methodology ===== -->
 <section class="bzr-sect" id="method">
@@ -1143,17 +1192,17 @@ window.addEventListener('load',function(){
 <section class="bzr-sect" id="reviews">
 <div class="bzr-sh rv">
 <span class="bzr-kick">Разбор по делу</span>
-<h2>Обзоры казино с бонусом за регистрацию: <span class="g-gold">топ-6 по делу</span></h2>
+<h2>Обзоры казино с бонусом за регистрацию: <span class="g-gold">топ-7 по делу</span></h2>
 </div>
 <div class="bzr-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. Vavada <span>реальный бездеп 100 FS за телефон</span></div><div class="sc">9.7 / 10</div></div>
-<p>Единственная площадка топа, где бездеп начисляется без нюансов: подтвердили телефон — получили 100 фриспинов, отыграли вейджер x40 — вывели в пределах 5 000 ₽. Плюс депозитный 100% + 100 FS по промокоду. Касса предсказуемая, аннулирований бонуса по нашим замерам не было.</p>
+<div class="rh"><div class="nm c-gold">1. Spinto <span>выбор редакции — 200% + 150 FS с порогом 50 ₽</span></div><div class="sc">9.8 / 10</div></div>
+<p>Первое место редакции. Крупный стартовый пакет — 200% на первый депозит и 150 фриспинов за регистрацию, а порог входа низкий: от 50 ₽. Промокод не нужен — бонус активируется по нашей ссылке. Выплаты идут через СБП и криптой, по замерам — в течение часа. Вейджер пакета — x35.</p>
 <div class="bzr-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Бездеп 100 FS реально начисляется за телефон</li><li>Выигрыш с бонуса выводится после отыгрыша</li><li>Депозитный 100% + 100 FS по промокоду</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Лимит вывода бездепа 5 000 ₽</li><li>Периодическая блокировка домена — нужен доступ к зеркалу</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Крупный пакет 200% + 150 FS за регистрацию</li><li>Низкий порог входа — от 50 ₽</li><li>Бонус активируется без промокода — по ссылке</li><li>Быстрые выплаты: СБП и крипта до 1 часа</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Вейджер x35 нужно отыграть до вывода</li><li>Точные лимиты вывода уточняйте в правилах акции</li></ul></div>
 </div>
-<div class="bzr-facts"><span class="thr">Бездеп: 100 FS</span><span>Вейджер: <b>x40</b></span><span>Лимит: <b>5 000 ₽</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+<div class="bzr-facts"><span class="thr">Бонус: 200% + 150 FS</span><span>Вейджер: <b>x35</b></span><span>Мин: <b>50 ₽</b></span><span>Выплаты: <b>СБП/крипта до 1 ч</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="bzr-rev rv">
 <span aria-hidden="true" class="wm">02</span>
@@ -1187,7 +1236,17 @@ window.addEventListener('load',function(){
 </div>
 <div class="bzr-rev rv">
 <span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-cyan">5. Kent Casino <span>250 фриспинов в пакете новичка</span></div><div class="sc">9.0 / 10</div></div>
+<div class="rh"><div class="nm c-cyan">5. Vavada <span>реальный бездеп 100 FS за телефон</span></div><div class="sc">9.7 / 10</div></div>
+<p>Площадка подборки, где бездеп начисляется без нюансов: подтвердили телефон — получили 100 фриспинов, отыграли вейджер x40 — вывели в пределах 5 000 ₽. Плюс депозитный 100% + 100 FS по промокоду. Касса предсказуемая, аннулирований бонуса по нашим замерам не было.</p>
+<div class="bzr-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Бездеп 100 FS реально начисляется за телефон</li><li>Выигрыш с бонуса выводится после отыгрыша</li><li>Депозитный 100% + 100 FS по промокоду</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Лимит вывода бездепа 5 000 ₽</li><li>Периодическая блокировка домена — нужен доступ к зеркалу</li></ul></div>
+</div>
+<div class="bzr-facts"><span class="thr">Бездеп: 100 FS</span><span>Вейджер: <b>x40</b></span><span>Лимит: <b>5 000 ₽</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+</div>
+<div class="bzr-rev rv">
+<span aria-hidden="true" class="wm">06</span>
+<div class="rh"><div class="nm c-viol">6. Kent Casino <span>250 фриспинов в пакете новичка</span></div><div class="sc">9.0 / 10</div></div>
 <p>Самый щедрый по фриспинам депозитный пакет — 100% и 250 FS. Бездепа нет, зато фриспины начисляются частями за первые пополнения, что растягивает удовольствие. Простой интерфейс и прозрачный вейджер x40 — хороший вариант для первого захода.</p>
 <div class="bzr-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>250 фриспинов в приветственном пакете</li><li>Прозрачный вейджер x40</li><li>Простой и понятный интерфейс</li></ul></div>
@@ -1196,8 +1255,8 @@ window.addEventListener('load',function(){
 <div class="bzr-facts"><span class="thr">Бонус: 100% + 250 FS</span><span>Вейджер: <b>x40</b></span><span>Промокод: <b>KENT250</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/kent">Полный обзор Kent →</a></div>
 </div>
 <div class="bzr-rev rv">
-<span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-viol">6. PokerDom <span>фриспины за регистрацию без депозита</span></div><div class="sc">8.8 / 10</div></div>
+<span aria-hidden="true" class="wm">07</span>
+<div class="rh"><div class="nm c-brnz">7. PokerDom <span>фриспины за регистрацию без депозита</span></div><div class="sc">8.8 / 10</div></div>
 <p>Даёт фриспины за регистрацию по акции плюс депозитный 100% до 60 000 ₽. Собственный покер-рум и приём рублёвых карт напрямую. Нюанс: лимит вывода бездепа ниже рынка — 3 000 ₽, зато сам факт бездепа честный и проверяемый.</p>
 <div class="bzr-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Фриспины за регистрацию без депозита</li><li>Депозитный бонус до 60 000 ₽</li><li>Собственный покер-рум и карты РФ</li></ul></div>
@@ -1433,16 +1492,17 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: какой бонус даёт при регистрации, есть ли бездеп, реальный вейджер и лимит вывода, лицензия и слабые места. Открывайте разбор до активации бонуса.</p>
 <div aria-label="Случайная подборка обзоров казино" class="bzr-brands rv" id="brandsGrid"></div>
 <ul class="bzr-seo-links">
-<li><a href="/casino/vavada">Обзор казино Vavada — бездеп 100 FS за регистрацию</a></li>
+<li><a href="/casino/spinto">Обзор казино Spinto — 200% + 150 FS за регистрацию</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino — 100 FS за телефон</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — пакет до 500% по промокоду</a></li>
-<li><a href="/casino/sol">Обзор казино Sol Casino — бездеп по промокоду</a></li>
-<li><a href="/casino/kent">Обзор казино Kent Casino — 250 FS в пакете</a></li>
-<li><a href="/casino/starda">Обзор казино Starda — 200 FS за регистрацию</a></li>
-<li><a href="/casino/pokerdom">Обзор казино PokerDom — фриспины без депозита</a></li>
-<li><a href="/casino/izzi">Обзор казино Izzi — бездеп 50 FS</a></li>
 <li><a href="/casino/legzo">Обзор казино Legzo — 100 FS в пакете</a></li>
+<li><a href="/casino/starda">Обзор казино Starda — 200 FS за регистрацию</a></li>
+<li><a href="/casino/sol">Обзор казино Sol Casino — бездеп по промокоду</a></li>
+<li><a href="/casino/izzi">Обзор казино Izzi — бездеп 50 FS</a></li>
 <li><a href="/casino/monro">Обзор казино Monro — 150% + 150 FS</a></li>
+<li><a href="/casino/vavada">Обзор казино Vavada — бездеп 100 FS за регистрацию</a></li>
+<li><a href="/casino/kent">Обзор казино Kent Casino — 250 FS в пакете</a></li>
+<li><a href="/casino/pokerdom">Обзор казино PokerDom — фриспины без депозита</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
 <div class="bzr-links rv">
@@ -1518,16 +1578,17 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"Vavada",       c:"#ffcf3f", c2:"#e0952f", s:"9.7", d:"бездеп 100 FS за телефон · промокод", h:"/casino/vavada"},
+    {n:"Spinto",       c:"#ffcf3f", c2:"#e0952f", s:"9.8", d:"200% + 150 FS за регистрацию · от 50 ₽", h:"/casino/spinto"},
     {n:"7K Casino",    c:"#e6eaf3", c2:"#a9b1c6", s:"9.5", d:"100 FS за регистрацию · вейджер x35",  h:"/casino/7k"},
     {n:"1win",         c:"#b8ff2b", c2:"#8fd400", s:"9.3", d:"пакет до 500% по промокоду",           h:"/casino/1win"},
-    {n:"Sol Casino",   c:"#ff2e93", c2:"#c81f6f", s:"9.1", d:"бездеп по промокоду + 100% + 100 FS",   h:"/casino/sol"},
-    {n:"Kent Casino",  c:"#6cc4ff", c2:"#2a86e0", s:"9.0", d:"100% + 250 FS в пакете новичка",        h:"/casino/kent"},
-    {n:"Starda",       c:"#ffa63d", c2:"#e07a12", s:"8.9", d:"100% + 200 FS за регистрацию",          h:"/casino/starda"},
-    {n:"PokerDom",     c:"#a879ff", c2:"#7d4fd6", s:"8.8", d:"фриспины за рег без депозита",           h:"/casino/pokerdom"},
-    {n:"Izzi",         c:"#c8ff5a", c2:"#8fd400", s:"8.6", d:"бездеп 50 FS за почту и телефон",        h:"/casino/izzi"},
     {n:"Legzo",        c:"#37e0c8", c2:"#12a892", s:"8.5", d:"100% + 100 FS, мобильная касса",         h:"/casino/legzo"},
-    {n:"Monro",        c:"#ff2e93", c2:"#c81f6f", s:"8.4", d:"150% + 150 FS постоянному игроку",       h:"/casino/monro"}
+    {n:"Starda",       c:"#ffa63d", c2:"#e07a12", s:"8.9", d:"100% + 200 FS за регистрацию",          h:"/casino/starda"},
+    {n:"Sol Casino",   c:"#ff2e93", c2:"#c81f6f", s:"9.1", d:"бездеп по промокоду + 100% + 100 FS",   h:"/casino/sol"},
+    {n:"Izzi",         c:"#c8ff5a", c2:"#8fd400", s:"8.6", d:"бездеп 50 FS за почту и телефон",        h:"/casino/izzi"},
+    {n:"Monro",        c:"#ff2e93", c2:"#c81f6f", s:"8.4", d:"150% + 150 FS постоянному игроку",       h:"/casino/monro"},
+    {n:"Vavada",       c:"#ffcf3f", c2:"#e0952f", s:"9.7", d:"бездеп 100 FS за телефон · промокод", h:"/casino/vavada"},
+    {n:"Kent Casino",  c:"#6cc4ff", c2:"#2a86e0", s:"9.0", d:"100% + 250 FS в пакете новичка",        h:"/casino/kent"},
+    {n:"PokerDom",     c:"#a879ff", c2:"#7d4fd6", s:"8.8", d:"фриспины за рег без депозита",           h:"/casino/pokerdom"}
   ];
   var SLOTS = [
     {n:"Gates of Olympus 1000",        pv:"Pragmatic Play",      rtp:"96.5",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png", h:"/slots/gates-of-olympus-1000"},
@@ -1653,18 +1714,19 @@ window.addEventListener('load',function(){
       "@type": "ItemList",
       "name": "Рейтинг казино с бонусом за регистрацию 2026",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 10,
+      "numberOfItems": 11,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
         {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
         {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":4,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
-        {"@type":"ListItem","position":5,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
-        {"@type":"ListItem","position":6,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
-        {"@type":"ListItem","position":7,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"},
-        {"@type":"ListItem","position":8,"name":"Izzi","url":"https://rejting-kazino777.top/casino/izzi"},
-        {"@type":"ListItem","position":9,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
-        {"@type":"ListItem","position":10,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"}
+        {"@type":"ListItem","position":4,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
+        {"@type":"ListItem","position":5,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
+        {"@type":"ListItem","position":6,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
+        {"@type":"ListItem","position":7,"name":"Izzi","url":"https://rejting-kazino777.top/casino/izzi"},
+        {"@type":"ListItem","position":8,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"},
+        {"@type":"ListItem","position":9,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":10,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
+        {"@type":"ListItem","position":11,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"}
       ]
     },
     {

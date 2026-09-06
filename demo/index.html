@@ -277,6 +277,10 @@
   .dm-card.r8{--c:#c8ff5a;--c2:#8fd400;--ct:#0a1200}
   .dm-card.r9{--c:var(--viol);--c2:#7d4fd6;--ct:#fff}
   .dm-card.r10{--c:var(--gold);--c2:#e0952f;--ct:#231600}
+  .dm-card.r11{--c:var(--sky);--c2:#2a86e0;--ct:#04121f}
+  .dm-acts{display:flex;flex-direction:column;gap:7px}
+  .dm-rev-lnk{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);font-weight:800;padding:9px 18px;border-radius:11px;font-size:13px;white-space:nowrap;transition:border-color .18s,color .18s}
+  .dm-rev-lnk:hover{border-color:var(--cyan);color:var(--cyan)}
   @media(max-width:760px){
     .dm-card{grid-template-columns:48px 1fr;gap:12px}
     .dm-right{grid-column:1 / -1;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
@@ -379,6 +383,7 @@
   .dm-rev .rh .nm.c-neon{--nc:var(--neon)}
   .dm-rev .rh .nm.c-hot{--nc:var(--hot)}
   .dm-rev .rh .nm.c-gold{--nc:var(--gold)}
+  .dm-rev .rh .nm.c-sky{--nc:var(--sky)}
   .dm-rev .rh .nm span{font-family:"Manrope",sans-serif;font-size:12.5px;font-weight:600;color:var(--mu);margin-left:8px;text-shadow:none}
   .dm-rev .rh .sc{font-family:"Unbounded",sans-serif;font-weight:800;font-size:17px;color:var(--cyan)}
   .dm-rev>p{margin:14px 0 0;color:#d3d7ee;position:relative;z-index:1}
@@ -724,32 +729,31 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="dm-ticket rv" style="--d:.2s">
-<span class="dm-ribbon cyan">Выбор редакции</span>
-<div class="dm-chip-oh"><div class="cv">9.7</div><div class="cl">балл из 10</div></div>
+<span class="dm-ribbon cyan">Выбор редакции · №1</span>
+<div class="dm-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">DEMO</span>
 <div class="tag">Демо-пропуск редакции · бесплатно</div>
-<div class="bn">Vavada</div>
-<div class="bs">демо без регистрации у большинства слотов, RTP как на деньги</div>
+<div class="bn">Spinto</div>
+<div class="bs">№1 подборки: демо (fun mode) бесплатно, а на деньги — низкий порог входа и быстрые выплаты</div>
 <div aria-hidden="false" class="dm-screen">
 <div class="dm-scr-top"><span class="dm-scr-dot"></span> DEMO · режим на фантики</div>
 <div class="dm-scr-bal"><span class="dm-scr-lbl">Демо-баланс</span><span class="dm-scr-amt">10 000 ₽</span><span class="dm-scr-fun">фантики</span></div>
 <div class="dm-toggle"><span class="on">Демо</span><span>На деньги</span></div>
 </div>
-<div class="why"><b>Почему №1:</b> демо (fun mode) открывается в один клик без аккаунта, каталог с демо самый широкий, а переход на деньги — без навязывания.</div>
+<div class="why"><b>Spinto — №1:</b> демо (fun mode) запускает слоты бесплатно и без риска, RTP тот же, что и на деньги, а переход на реальный счёт — с низким порогом входа и быстрым выводом.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Демо-режим</span><span class="big">без рег</span></div>
-<div class="line"><span>Оценка редакции</span><span class="sc">9.7 / 10</span></div>
-<div class="line spec"><span>Демо-баланс</span><i class="dts"></i><span class="val hl-neon">виртуальный, 0 ₽</span></div>
+<div class="line"><span>Демо-режим</span><span class="big">fun mode</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Бонус</span><i class="dts"></i><span class="val hl-neon">200% + 150 FS</span></div>
+<div class="line spec"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-cyan">50 ₽</span></div>
+<div class="line spec"><span>Вейджер</span><i class="dts"></i><span class="val hl-gold">x35</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-cyan">СБП, крипта, до 1 ч</span></div>
 <div class="line spec"><span>RTP в демо</span><i class="dts"></i><span class="val hl-gold">= как на деньги</span></div>
-<div class="line spec"><span>Слотов с демо</span><i class="dts"></i><span class="val hl-cyan">5000+</span></div>
-<div class="line spec"><span>Запуск</span><i class="dts"></i><span class="val hl-neon">в браузере, без скачивания</span></div>
-<div class="line spec"><span>Где демо нет</span><i class="dts"></i><span class="val hl-hot">live · часть craш</span></div>
-<div class="line spec"><span>Переход на деньги</span><i class="dts"></i><span class="val hl-cyan">тот же слот, 1 клик</span></div>
-<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао GCB 8048</span></div>
+<div class="line spec"><span>Промокод</span><i class="dts"></i><span class="val hl-sky">без кода — бонус по ссылке</span></div>
 </div>
-<a class="dm-btn dm-btn-neon" href="/go/vavada" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть демо Vavada</a>
-<div class="foot"><span>Демо · fun mode</span><span>Без депозита</span><span>Кюрасао GCB 8048</span></div>
+<a class="dm-btn dm-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Играть в Spinto</a>
+<div class="foot"><span>Демо · fun mode</span><span>Депозит от 50 ₽</span><span>Выплаты до 1 ч</span></div>
 <ul class="tguar">
 <li>Демо-режим проверен вручную по каждому бренду</li>
 <li>RTP сверен с данными провайдеров</li>
@@ -763,7 +767,7 @@ window.addEventListener('load',function(){
 <section class="dm-strip">
 <div class="dm-shell">
 <div class="u"><span aria-hidden="true" class="wm">0</span><div class="v" data-count="0" data-suffix=" ₽">0 ₽</div><div class="l">стоит демо-режим</div></div>
-<div class="u"><span aria-hidden="true" class="wm">10</span><div class="v" data-count="10">10</div><div class="l">казино с демо в рейтинге</div></div>
+<div class="u"><span aria-hidden="true" class="wm">11</span><div class="v" data-count="11">11</div><div class="l">казино с демо в рейтинге</div></div>
 <div class="u"><span aria-hidden="true" class="wm">5000</span><div class="v" data-count="5000" data-suffix="+">5000+</div><div class="l">слотов в fun mode</div></div>
 <div class="u"><span aria-hidden="true" class="wm">40</span><div class="v" data-count="40" data-suffix="+">40+</div><div class="l">провайдеров с демо</div></div>
 </div>
@@ -813,36 +817,26 @@ window.addEventListener('load',function(){
 <span class="dm-kick">Топ-10 · сентябрь 2026</span>
 <h2>Рейтинг казино с демо-режимом 2026: <span class="g-lime">топ-10, где играть бесплатно</span></h2>
 </div>
-<p class="rv">Список отранжирован по совокупной оценке, но колонку «демо-режим» мы вынесли вперёд — ради неё вы и открыли страницу. Значение рядом с брендом показывает, как открывается free play: без регистрации, после входа или частично. Оценка — средневзвешенный балл по семи критериям.</p>
+<p class="rv">Это подборка редакции по совокупности демо-режима, скорости выплат, условий бонуса и надёжности, а колонку «демо-режим» мы вынесли вперёд — ради неё вы и открыли страницу. Значение рядом с брендом показывает, как открывается free play: без регистрации, после входа или частично. Оценка — средневзвешенный балл по семи критериям.</p>
 <div class="dm-rate">
 <article class="dm-card r1 rv">
 <div class="rkw"><span class="dm-medal g">1</span></div>
 <div class="dm-mid">
-<div class="bn">Vavada</div>
-<span class="bt">Лучшее за — демо без регистрации у большинства слотов</span>
-<div class="prm"><span>Слотов с демо <b>5000+</b></span><span>RTP <b>как на деньги</b></span><span>Запуск <b>в браузере</b></span></div>
+<div class="bn">Spinto</div>
+<span class="bt">Лучшее за — низкий порог входа и быстрые выплаты</span>
+<div class="prm"><span>Демо <b>fun mode</b></span><span>Бонус <b>200% + 150 FS</b></span><span>Выплаты <b>до 1 ч</b></span></div>
 </div>
 <div class="dm-right">
-<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
-<div class="dm-sccol"><span class="dm-score">9.7</span><span class="dm-sbar"><i data-score="9.7"></i></span></div>
-<a class="dm-go" href="/go/vavada" rel="nofollow sponsored">Демо</a>
+<div class="dm-dstat"><div class="n">Да · fun mode</div><div class="k">демо-режим</div></div>
+<div class="dm-sccol"><span class="dm-score">9.8</span><span class="dm-sbar"><i data-score="9.8"></i></span></div>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/spinto/">Обзор</a>
+<a class="dm-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="dm-card r2 rv">
 <div class="rkw"><span class="dm-medal">2</span></div>
-<div class="dm-mid">
-<div class="bn">1win</div>
-<span class="bt">Лучшее за — огромный каталог демо в браузере</span>
-<div class="prm"><span>Демо <b>слоты + краш</b></span><span>Провайдеров <b>100+</b></span><span>Переход <b>1 клик</b></span></div>
-</div>
-<div class="dm-right">
-<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
-<div class="dm-sccol"><span class="dm-score">9.5</span><span class="dm-sbar"><i data-score="9.5"></i></span></div>
-<a class="dm-go" href="/go/1win" rel="nofollow sponsored">Демо</a>
-</div>
-</article>
-<article class="dm-card r3 rv">
-<div class="rkw"><span class="dm-medal">3</span></div>
 <div class="dm-mid">
 <div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — демо и быстрый переход на деньги</span>
@@ -851,37 +845,46 @@ window.addEventListener('load',function(){
 <div class="dm-right">
 <div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
 <div class="dm-sccol"><span class="dm-score">9.4</span><span class="dm-sbar"><i data-score="9.4"></i></span></div>
-<a class="dm-go" href="/go/7k" rel="nofollow sponsored">Демо</a>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/7k/">Обзор</a>
+<a class="dm-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+</div>
+</div>
+</article>
+<article class="dm-card r3 rv">
+<div class="rkw"><span class="dm-medal">3</span></div>
+<div class="dm-mid">
+<div class="bn">1win</div>
+<span class="bt">Лучшее за — огромный каталог демо в браузере</span>
+<div class="prm"><span>Демо <b>слоты + краш</b></span><span>Провайдеров <b>100+</b></span><span>Переход <b>1 клик</b></span></div>
+</div>
+<div class="dm-right">
+<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
+<div class="dm-sccol"><span class="dm-score">9.5</span><span class="dm-sbar"><i data-score="9.5"></i></span></div>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/1win/">Обзор</a>
+<a class="dm-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="dm-card r4 rv">
 <div class="rkw"><span class="dm-medal">4</span></div>
 <div class="dm-mid">
-<div class="bn">Sol Casino</div>
-<span class="bt">Лучшее за — 7000+ слотов доступны в демо</span>
-<div class="prm"><span>Демо <b>весь каталог слотов</b></span><span>RTP <b>сверен</b></span><span>Провайдеров <b>90+</b></span></div>
+<div class="bn">Legzo</div>
+<span class="bt">Лучшее за — демо с телефона целиком</span>
+<div class="prm"><span>Демо <b>мобайл</b></span><span>Слотов <b>3000+</b></span><span>Запуск <b>без скачивания</b></span></div>
 </div>
 <div class="dm-right">
 <div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
-<div class="dm-sccol"><span class="dm-score">9.1</span><span class="dm-sbar"><i data-score="9.1"></i></span></div>
-<a class="dm-go" href="/go/sol" rel="nofollow sponsored">Демо</a>
+<div class="dm-sccol"><span class="dm-score">8.5</span><span class="dm-sbar"><i data-score="8.5"></i></span></div>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/legzo/">Обзор</a>
+<a class="dm-go" href="/go/legzo" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="dm-card r5 rv">
 <div class="rkw"><span class="dm-medal">5</span></div>
-<div class="dm-mid">
-<div class="bn">Kent Casino</div>
-<span class="bt">Лучшее за — простой запуск демо новичку</span>
-<div class="prm"><span>Демо <b>в один клик</b></span><span>Слотов <b>3500+</b></span><span>Интерфейс <b>лёгкий</b></span></div>
-</div>
-<div class="dm-right">
-<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
-<div class="dm-sccol"><span class="dm-score">9.0</span><span class="dm-sbar"><i data-score="9.0"></i></span></div>
-<a class="dm-go" href="/go/kent" rel="nofollow sponsored">Демо</a>
-</div>
-</article>
-<article class="dm-card r6 rv">
-<div class="rkw"><span class="dm-medal">6</span></div>
 <div class="dm-mid">
 <div class="bn">Starda</div>
 <span class="bt">Лучшее за — демо перед турнирами</span>
@@ -890,7 +893,26 @@ window.addEventListener('load',function(){
 <div class="dm-right">
 <div class="dm-dstat"><div class="n">Да · после входа</div><div class="k">демо-режим</div></div>
 <div class="dm-sccol"><span class="dm-score">8.8</span><span class="dm-sbar"><i data-score="8.8"></i></span></div>
-<a class="dm-go" href="/go/starda" rel="nofollow sponsored">Демо</a>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/starda/">Обзор</a>
+<a class="dm-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
+</div>
+</div>
+</article>
+<article class="dm-card r6 rv">
+<div class="rkw"><span class="dm-medal">6</span></div>
+<div class="dm-mid">
+<div class="bn">Sol Casino</div>
+<span class="bt">Лучшее за — 7000+ слотов доступны в демо</span>
+<div class="prm"><span>Демо <b>весь каталог слотов</b></span><span>RTP <b>сверен</b></span><span>Провайдеров <b>90+</b></span></div>
+</div>
+<div class="dm-right">
+<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
+<div class="dm-sccol"><span class="dm-score">9.1</span><span class="dm-sbar"><i data-score="9.1"></i></span></div>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/sol/">Обзор</a>
+<a class="dm-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="dm-card r7 rv">
@@ -903,24 +925,14 @@ window.addEventListener('load',function(){
 <div class="dm-right">
 <div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
 <div class="dm-sccol"><span class="dm-score">8.6</span><span class="dm-sbar"><i data-score="8.6"></i></span></div>
-<a class="dm-go" href="/go/izzi" rel="nofollow sponsored">Демо</a>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/izzi/">Обзор</a>
+<a class="dm-go" href="/go/izzi" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="dm-card r8 rv">
 <div class="rkw"><span class="dm-medal">8</span></div>
-<div class="dm-mid">
-<div class="bn">Legzo</div>
-<span class="bt">Лучшее за — демо с телефона целиком</span>
-<div class="prm"><span>Демо <b>мобайл</b></span><span>Слотов <b>3000+</b></span><span>Запуск <b>без скачивания</b></span></div>
-</div>
-<div class="dm-right">
-<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
-<div class="dm-sccol"><span class="dm-score">8.5</span><span class="dm-sbar"><i data-score="8.5"></i></span></div>
-<a class="dm-go" href="/go/legzo" rel="nofollow sponsored">Демо</a>
-</div>
-</article>
-<article class="dm-card r9 rv">
-<div class="rkw"><span class="dm-medal">9</span></div>
 <div class="dm-mid">
 <div class="bn">Monro</div>
 <span class="bt">Лучшее за — демо постоянному игроку</span>
@@ -929,11 +941,46 @@ window.addEventListener('load',function(){
 <div class="dm-right">
 <div class="dm-dstat"><div class="n">Да · после входа</div><div class="k">демо-режим</div></div>
 <div class="dm-sccol"><span class="dm-score">8.4</span><span class="dm-sbar"><i data-score="8.4"></i></span></div>
-<a class="dm-go" href="/go/monro" rel="nofollow sponsored">Демо</a>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/monro/">Обзор</a>
+<a class="dm-go" href="/go/monro" rel="nofollow sponsored">Играть</a>
+</div>
+</div>
+</article>
+<article class="dm-card r9 rv">
+<div class="rkw"><span class="dm-medal">9</span></div>
+<div class="dm-mid">
+<div class="bn">Vavada</div>
+<span class="bt">Лучшее за — демо без регистрации у большинства слотов</span>
+<div class="prm"><span>Слотов с демо <b>5000+</b></span><span>RTP <b>как на деньги</b></span><span>Запуск <b>в браузере</b></span></div>
+</div>
+<div class="dm-right">
+<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
+<div class="dm-sccol"><span class="dm-score">9.7</span><span class="dm-sbar"><i data-score="9.7"></i></span></div>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/vavada/">Обзор</a>
+<a class="dm-go" href="/casino/vavada/">Играть</a>
+</div>
 </div>
 </article>
 <article class="dm-card r10 rv">
 <div class="rkw"><span class="dm-medal">10</span></div>
+<div class="dm-mid">
+<div class="bn">Kent Casino</div>
+<span class="bt">Лучшее за — простой запуск демо новичку</span>
+<div class="prm"><span>Демо <b>в один клик</b></span><span>Слотов <b>3500+</b></span><span>Интерфейс <b>лёгкий</b></span></div>
+</div>
+<div class="dm-right">
+<div class="dm-dstat"><div class="n">Да · без рег</div><div class="k">демо-режим</div></div>
+<div class="dm-sccol"><span class="dm-score">9.0</span><span class="dm-sbar"><i data-score="9.0"></i></span></div>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/kent/">Обзор</a>
+<a class="dm-go" href="/casino/kent/">Играть</a>
+</div>
+</div>
+</article>
+<article class="dm-card r11 rv">
+<div class="rkw"><span class="dm-medal">11</span></div>
 <div class="dm-mid">
 <div class="bn">PokerDom</div>
 <span class="bt">Лучшее за — демо слотов (покер — только на деньги)</span>
@@ -942,26 +989,30 @@ window.addEventListener('load',function(){
 <div class="dm-right">
 <div class="dm-dstat"><div class="n">Частично</div><div class="k">демо-режим</div></div>
 <div class="dm-sccol"><span class="dm-score">8.2</span><span class="dm-sbar"><i data-score="8.2"></i></span></div>
-<a class="dm-go" href="/go/pokerdom" rel="nofollow sponsored">Демо</a>
+<div class="dm-acts">
+<a class="dm-rev-lnk" href="/casino/pokerdom/">Обзор</a>
+<a class="dm-go" href="/casino/pokerdom/">Играть</a>
+</div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица топ-10 казино с демо-режимом</h3>
 <div class="dm-tbox dm-scroll rv" style="margin:12px 0 0">
 <table class="dm-t mfit">
-<caption>Наличие демо (fun mode) проверено вручную; сортировка — по оценке редакции.</caption>
+<caption>Наличие демо (fun mode) проверено вручную; порядок — подборка редакции по совокупности демо, выплат, бонуса и надёжности.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Демо-режим</th><th>Регистрация для демо</th><th>Оценка</th><th>Слотов с демо</th></tr></thead>
 <tbody>
-<tr><td class="dm-rub mfit-num" data-label="">1</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Vavada</span><span class="dm-line2"><span class="dm-best" style="--rc:#37e0c8">Лучшее за — демо без регистрации</span><span class="dm-ed">№1</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.7</span></td><td data-label="Слотов с демо">5000+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">2</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">1win</span><span class="dm-line2"><span class="dm-best" style="--rc:#e6eaf3">Лучшее за — каталог демо в браузере</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.5</span></td><td data-label="Слотов с демо">4500+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">3</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">7K Casino</span><span class="dm-line2"><span class="dm-best" style="--rc:#f0a35a">Лучшее за — демо + быстрый переход</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.4</span></td><td data-label="Слотов с демо">4000+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">4</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Sol Casino</span><span class="dm-line2"><span class="dm-best" style="--rc:#b8ff2b">Лучшее за — весь каталог в демо</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.1</span></td><td data-label="Слотов с демо">7000+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">5</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Kent Casino</span><span class="dm-line2"><span class="dm-best" style="--rc:#ff2e93">Лучшее за — простой запуск</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.0</span></td><td data-label="Слотов с демо">3500+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">6</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Starda</span><span class="dm-line2"><span class="dm-best" style="--rc:#6cc4ff">Лучшее за — демо перед турниром</span></span></td><td data-label="Демо-режим"><span class="dm-pill part">после входа</span></td><td data-label="Регистрация для демо"><span class="dm-pill part">нужна</span></td><td data-label="Оценка"><span class="neon">8.8</span></td><td data-label="Слотов с демо">3200+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">1</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Spinto</span><span class="dm-line2"><span class="dm-best" style="--rc:#37e0c8">Лучшее за — низкий порог входа и быстрые выплаты</span><span class="dm-ed">№1</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">fun mode</span></td><td data-label="Регистрация для демо"><span class="dm-pill neu">—</span></td><td data-label="Оценка"><span class="neon">9.8</span></td><td data-label="Слотов с демо">—</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">2</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">7K Casino</span><span class="dm-line2"><span class="dm-best" style="--rc:#e6eaf3">Лучшее за — демо + быстрый переход</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.4</span></td><td data-label="Слотов с демо">4000+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">3</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">1win</span><span class="dm-line2"><span class="dm-best" style="--rc:#f0a35a">Лучшее за — каталог демо в браузере</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.5</span></td><td data-label="Слотов с демо">4500+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">4</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Legzo</span><span class="dm-line2"><span class="dm-best" style="--rc:#b8ff2b">Лучшее за — демо с телефона</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">8.5</span></td><td data-label="Слотов с демо">3000+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">5</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Starda</span><span class="dm-line2"><span class="dm-best" style="--rc:#ff2e93">Лучшее за — демо перед турниром</span></span></td><td data-label="Демо-режим"><span class="dm-pill part">после входа</span></td><td data-label="Регистрация для демо"><span class="dm-pill part">нужна</span></td><td data-label="Оценка"><span class="neon">8.8</span></td><td data-label="Слотов с демо">3200+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">6</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Sol Casino</span><span class="dm-line2"><span class="dm-best" style="--rc:#6cc4ff">Лучшее за — весь каталог в демо</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.1</span></td><td data-label="Слотов с демо">7000+</td></tr>
 <tr><td class="dm-rub mfit-num" data-label="">7</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Izzi</span><span class="dm-line2"><span class="dm-best" style="--rc:#ffa63d">Лучшее за — демо без аккаунта</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">8.6</span></td><td data-label="Слотов с демо">3000+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">8</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Legzo</span><span class="dm-line2"><span class="dm-best" style="--rc:#c8ff5a">Лучшее за — демо с телефона</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">8.5</span></td><td data-label="Слотов с демо">3000+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">9</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Monro</span><span class="dm-line2"><span class="dm-best" style="--rc:#a879ff">Лучшее за — демо лояльным</span></span></td><td data-label="Демо-режим"><span class="dm-pill part">после входа</span></td><td data-label="Регистрация для демо"><span class="dm-pill part">нужна</span></td><td data-label="Оценка"><span class="neon">8.4</span></td><td data-label="Слотов с демо">2800+</td></tr>
-<tr><td class="dm-rub mfit-num" data-label="">10</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">PokerDom</span><span class="dm-line2"><span class="dm-best" style="--rc:#37e0c8">Лучшее за — демо слотов</span></span></td><td data-label="Демо-режим"><span class="dm-pill neu">частично</span></td><td data-label="Регистрация для демо"><span class="dm-pill part">для части игр</span></td><td data-label="Оценка"><span class="neon">8.2</span></td><td data-label="Слотов с демо">2500+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">8</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Monro</span><span class="dm-line2"><span class="dm-best" style="--rc:#c8ff5a">Лучшее за — демо лояльным</span></span></td><td data-label="Демо-режим"><span class="dm-pill part">после входа</span></td><td data-label="Регистрация для демо"><span class="dm-pill part">нужна</span></td><td data-label="Оценка"><span class="neon">8.4</span></td><td data-label="Слотов с демо">2800+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">9</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Vavada</span><span class="dm-line2"><span class="dm-best" style="--rc:#a879ff">Лучшее за — демо без регистрации</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.7</span></td><td data-label="Слотов с демо">5000+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">10</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">Kent Casino</span><span class="dm-line2"><span class="dm-best" style="--rc:#ffcf3f">Лучшее за — простой запуск</span></span></td><td data-label="Демо-режим"><span class="dm-pill yes">без рег</span></td><td data-label="Регистрация для демо"><span class="dm-pill yesg">не нужна</span></td><td data-label="Оценка"><span class="neon">9.0</span></td><td data-label="Слотов с демо">3500+</td></tr>
+<tr><td class="dm-rub mfit-num" data-label="">11</td><td class="dm-bc" data-label="Казино"><span class="dm-bn">PokerDom</span><span class="dm-line2"><span class="dm-best" style="--rc:#6cc4ff">Лучшее за — демо слотов</span></span></td><td data-label="Демо-режим"><span class="dm-pill neu">частично</span></td><td data-label="Регистрация для демо"><span class="dm-pill part">для части игр</span></td><td data-label="Оценка"><span class="neon">8.2</span></td><td data-label="Слотов с демо">2500+</td></tr>
 </tbody>
 </table>
 </div>
@@ -1293,37 +1344,37 @@ window.addEventListener('load',function(){
 <section class="dm-sect" id="reviews">
 <div class="dm-sh rv">
 <span class="dm-kick">Разбор по делу</span>
-<h2>Обзоры казино с демо-режимом: <span class="g-gold">топ-6 по делу</span></h2>
+<h2>Обзоры казино с демо-режимом: <span class="g-gold">топ-7 по делу</span></h2>
 </div>
 <div class="dm-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-cyan">1. Vavada <span>демо без регистрации, широкий каталог</span></div><div class="sc">9.7 / 10</div></div>
-<p>Демо (fun mode) открывается по клику из каталога без аккаунта — так работают почти все 5000+ слотов. RTP сверяется с данными провайдеров, отдача в демо и на деньги совпадает. Переход на реальный счёт спокойный, без агрессивных поп-апов. Эталон бесплатной игры среди площадок топа.</p>
+<div class="rh"><div class="nm c-cyan">1. Spinto <span>лидер подборки: демо бесплатно, низкий порог и быстрые выплаты</span></div><div class="sc">9.8 / 10</div></div>
+<p>Spinto ведёт подборку редакции. Демо-режим (fun mode) запускает слоты на виртуальный баланс — механику и темп игры можно проверить бесплатно, а RTP в демо тот же, что и на реальные ставки. На деньги — бонус 200% + 150 фриспинов, депозит от 50 ₽, вейджер x35 и быстрые выплаты через СБП и крипту (до часа). Отдельного промокода нет: бонус активируется по нашей ссылке.</p>
 <div class="dm-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Демо без регистрации у большинства слотов</li><li>5000+ игр в fun mode, много новинок</li><li>Честный RTP, спокойный переход на деньги</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Live-игры только на деньги (демо нет технически)</li><li>Периодические блокировки домена — нужен доступ к зеркалу</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Демо (fun mode) — слоты бесплатно, без риска</li><li>Бонус 200% + 150 FS, депозит от 50 ₽</li><li>Выплаты через СБП и крипту — до часа</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Live-игры доступны только на деньги — демо у них нет технически</li><li>Отдельного промокода нет — бонус активируется по ссылке</li></ul></div>
 </div>
-<div class="dm-facts"><span class="thr">Демо: без рег</span><span>Слотов с демо: <b>5000+</b></span><span>RTP: <b>как на деньги</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+<div class="dm-facts"><span class="thr">Демо: fun mode</span><span>Бонус: <b>200% + 150 FS</b></span><span>Мин. депозит: <b>50 ₽</b></span><span>Выплаты: <b>до 1 ч</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="dm-rev rv">
 <span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-silv">2. 1win <span>каталог демо и краш в браузере</span></div><div class="sc">9.5 / 10</div></div>
-<p>Один из самых широких наборов demo casino games: слоты сотни провайдеров плюс краш-игры, часть которых тоже гоняется в демо. Всё запускается в браузере без скачивания и без аккаунта. Минус — перегруженный интерфейс, новичку легко потеряться между казино и ставками.</p>
-<div class="dm-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Демо слотов и части краш-игр без регистрации</li><li>100+ провайдеров, запуск в браузере</li><li>Казино и ставки в одном кабинете</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Интерфейс перегружен для новичка</li><li>У части краш-игр демо ограничено</li></ul></div>
-</div>
-<div class="dm-facts"><span class="thr">Демо: без рег</span><span>Провайдеров: <b>100+</b></span><span>Краш: <b>частично демо</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
-</div>
-<div class="dm-rev rv">
-<span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="nm c-brnz">3. 7K Casino <span>демо и быстрый переход на деньги</span></div><div class="sc">9.4 / 10</div></div>
+<div class="rh"><div class="nm c-silv">2. 7K Casino <span>демо и быстрый переход на деньги</span></div><div class="sc">9.4 / 10</div></div>
 <p>Демо без аккаунта плюс главная фишка бренда — скорость перехода на реальный счёт: понравился слот в fun mode, регистрация за минуту, депозит через СБП, и тот же слот уже на деньги. Мобильная версия держит весь демо-каталог. Ровный выбор, чтобы попробовать и сразу играть.</p>
 <div class="dm-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Демо без регистрации, 4000+ слотов</li><li>Быстрый переход демо → на деньги</li><li>Полный fun mode в мобильной версии</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Меньше live-столов, чем у лидеров</li><li>Демо у джекпот-слотов ограничено</li></ul></div>
 </div>
 <div class="dm-facts"><span class="thr">Демо: без рег</span><span>Слотов с демо: <b>4000+</b></span><span>Мобайл: <b>полный демо</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
+</div>
+<div class="dm-rev rv">
+<span aria-hidden="true" class="wm">03</span>
+<div class="rh"><div class="nm c-brnz">3. 1win <span>каталог демо и краш в браузере</span></div><div class="sc">9.5 / 10</div></div>
+<p>Один из самых широких наборов demo casino games: слоты сотни провайдеров плюс краш-игры, часть которых тоже гоняется в демо. Всё запускается в браузере без скачивания и без аккаунта. Минус — перегруженный интерфейс, новичку легко потеряться между казино и ставками.</p>
+<div class="dm-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Демо слотов и части краш-игр без регистрации</li><li>100+ провайдеров, запуск в браузере</li><li>Казино и ставки в одном кабинете</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Интерфейс перегружен для новичка</li><li>У части краш-игр демо ограничено</li></ul></div>
+</div>
+<div class="dm-facts"><span class="thr">Демо: без рег</span><span>Провайдеров: <b>100+</b></span><span>Краш: <b>частично демо</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
 </div>
 <div class="dm-rev rv">
 <span aria-hidden="true" class="wm">04</span>
@@ -1337,23 +1388,33 @@ window.addEventListener('load',function(){
 </div>
 <div class="dm-rev rv">
 <span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-hot">5. Kent Casino <span>простой запуск демо новичку</span></div><div class="sc">9.0 / 10</div></div>
-<p>Самый дружелюбный вход в бесплатную игру: чистый интерфейс, крупная кнопка «Демо» на каждой обложке, никакой путаницы. Для первого знакомства с онлайн-слотами — то, что нужно. Каталог скромнее лидеров (3500+), но для старта этого с запасом.</p>
-<div class="dm-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Демо в один клик, понятный интерфейс</li><li>3500+ слотов в fun mode без регистрации</li><li>Хороший выбор для новичка</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Каталог меньше, чем у ветеранов</li><li>Молодой бренд — короче история</li></ul></div>
-</div>
-<div class="dm-facts"><span class="thr">Демо: без рег</span><span>Слотов с демо: <b>3500+</b></span><span>Интерфейс: <b>лёгкий</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/kent">Полный обзор Kent →</a></div>
-</div>
-<div class="dm-rev rv">
-<span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-gold">6. Izzi <span>демо без аккаунта и крипта</span></div><div class="sc">8.6 / 10</div></div>
+<div class="rh"><div class="nm c-hot">5. Izzi <span>демо без аккаунта и крипта</span></div><div class="sc">8.6 / 10</div></div>
 <p>Быстрый запуск демо без регистрации и заметный крен в крипту на реальном счёте. Слотов 3000+, fun mode стабильный, регистрация потом занимает минуту. Крепкий середняк для тех, кто хочет бесплатно попробовать, а играть — на USDT.</p>
 <div class="dm-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Демо без аккаунта, быстрая регистрация</li><li>Приём криптовалюты на реальном счёте</li><li>Стабильный fun mode в браузере</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Каталог демо средний по объёму</li><li>Программа лояльности проще, чем у топ-3</li></ul></div>
 </div>
 <div class="dm-facts"><span class="thr">Демо: без рег</span><span>Слотов с демо: <b>3000+</b></span><span>Крипта: <b>USDT/BTC</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/izzi">Полный обзор Izzi →</a></div>
+</div>
+<div class="dm-rev rv">
+<span aria-hidden="true" class="wm">06</span>
+<div class="rh"><div class="nm c-gold">6. Vavada <span>демо без регистрации, широкий каталог</span></div><div class="sc">9.7 / 10</div></div>
+<p>Демо (fun mode) открывается по клику из каталога без аккаунта — так работают почти все 5000+ слотов. RTP сверяется с данными провайдеров, отдача в демо и на деньги совпадает. Переход на реальный счёт спокойный, без агрессивных поп-апов. Эталон бесплатной игры среди площадок топа.</p>
+<div class="dm-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Демо без регистрации у большинства слотов</li><li>5000+ игр в fun mode, много новинок</li><li>Честный RTP, спокойный переход на деньги</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Live-игры только на деньги (демо нет технически)</li><li>Периодические блокировки домена — нужен доступ к зеркалу</li></ul></div>
+</div>
+<div class="dm-facts"><span class="thr">Демо: без рег</span><span>Слотов с демо: <b>5000+</b></span><span>RTP: <b>как на деньги</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+</div>
+<div class="dm-rev rv">
+<span aria-hidden="true" class="wm">07</span>
+<div class="rh"><div class="nm c-sky">7. Kent Casino <span>простой запуск демо новичку</span></div><div class="sc">9.0 / 10</div></div>
+<p>Самый дружелюбный вход в бесплатную игру: чистый интерфейс, крупная кнопка «Демо» на каждой обложке, никакой путаницы. Для первого знакомства с онлайн-слотами — то, что нужно. Каталог скромнее лидеров (3500+), но для старта этого с запасом.</p>
+<div class="dm-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Демо в один клик, понятный интерфейс</li><li>3500+ слотов в fun mode без регистрации</li><li>Хороший выбор для новичка</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Каталог меньше, чем у ветеранов</li><li>Молодой бренд — короче история</li></ul></div>
+</div>
+<div class="dm-facts"><span class="thr">Демо: без рег</span><span>Слотов с демо: <b>3500+</b></span><span>Интерфейс: <b>лёгкий</b></span><span>Лицензия: <b>Кюрасао</b></span><a href="/casino/kent">Полный обзор Kent →</a></div>
 </div>
 </section>
 <!-- ===== H2 #18 anti-top ===== -->
@@ -1559,15 +1620,16 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: как открывается демо, широк ли fun mode, нужен ли аккаунт, условия перехода на деньги, лицензия и слабые места. Открывайте разбор перед первым запуском.</p>
 <div aria-label="Случайная подборка обзоров казино" class="dm-brands rv" id="brandsGrid"></div>
 <ul class="dm-seo-links">
-<li><a href="/casino/vavada">Обзор казино Vavada — демо без регистрации</a></li>
-<li><a href="/casino/1win">Обзор казино 1win — демо слотов и краш</a></li>
+<li><a href="/casino/spinto">Обзор казино Spinto — лидер подборки, демо и быстрые выплаты</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino — демо без аккаунта</a></li>
-<li><a href="/casino/sol">Обзор казино Sol Casino — весь каталог в демо</a></li>
-<li><a href="/casino/kent">Обзор казино Kent Casino — простой запуск демо</a></li>
-<li><a href="/casino/starda">Обзор казино Starda — демо после входа</a></li>
-<li><a href="/casino/izzi">Обзор казино Izzi — демо без аккаунта</a></li>
+<li><a href="/casino/1win">Обзор казино 1win — демо слотов и краш</a></li>
 <li><a href="/casino/legzo">Обзор казино Legzo — демо с телефона</a></li>
+<li><a href="/casino/starda">Обзор казино Starda — демо после входа</a></li>
+<li><a href="/casino/sol">Обзор казино Sol Casino — весь каталог в демо</a></li>
+<li><a href="/casino/izzi">Обзор казино Izzi — демо без аккаунта</a></li>
 <li><a href="/casino/monro">Обзор казино Monro — демо лояльным</a></li>
+<li><a href="/casino/vavada">Обзор казино Vavada — демо без регистрации</a></li>
+<li><a href="/casino/kent">Обзор казино Kent Casino — простой запуск демо</a></li>
 <li><a href="/casino/pokerdom">Обзор казино PokerDom — демо слотов</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
@@ -1643,15 +1705,16 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"Vavada",       c:"#37e0c8", c2:"#12a892", s:"9.7", d:"демо без регистрации, 5000+ слотов",   h:"/casino/vavada"},
-    {n:"1win",         c:"#e6eaf3", c2:"#a9b1c6", s:"9.5", d:"каталог демо и краш в браузере",        h:"/casino/1win"},
+    {n:"Spinto",       c:"#37e0c8", c2:"#12a892", s:"9.8", d:"лидер подборки: бонус 200% + 150 FS, выплаты до 1 ч", h:"/casino/spinto"},
     {n:"7K Casino",    c:"#f0a35a", c2:"#c9752e", s:"9.4", d:"демо без аккаунта, быстрый переход",     h:"/casino/7k"},
-    {n:"Sol Casino",   c:"#b8ff2b", c2:"#8fd400", s:"9.1", d:"весь каталог 7000+ слотов в демо",       h:"/casino/sol"},
-    {n:"Kent Casino",  c:"#ff2e93", c2:"#c81f6f", s:"9.0", d:"простой запуск демо новичку",            h:"/casino/kent"},
-    {n:"Starda",       c:"#6cc4ff", c2:"#2a86e0", s:"8.8", d:"демо после входа, турниры",              h:"/casino/starda"},
-    {n:"Izzi",         c:"#ffa63d", c2:"#e07a12", s:"8.6", d:"демо без аккаунта и крипта",             h:"/casino/izzi"},
+    {n:"1win",         c:"#e6eaf3", c2:"#a9b1c6", s:"9.5", d:"каталог демо и краш в браузере",        h:"/casino/1win"},
     {n:"Legzo",        c:"#c8ff5a", c2:"#8fd400", s:"8.5", d:"демо с телефона целиком",                h:"/casino/legzo"},
+    {n:"Starda",       c:"#6cc4ff", c2:"#2a86e0", s:"8.8", d:"демо после входа, турниры",              h:"/casino/starda"},
+    {n:"Sol Casino",   c:"#b8ff2b", c2:"#8fd400", s:"9.1", d:"весь каталог 7000+ слотов в демо",       h:"/casino/sol"},
+    {n:"Izzi",         c:"#ffa63d", c2:"#e07a12", s:"8.6", d:"демо без аккаунта и крипта",             h:"/casino/izzi"},
     {n:"Monro",        c:"#a879ff", c2:"#7d4fd6", s:"8.4", d:"демо лояльным, кэшбэк до 15%",           h:"/casino/monro"},
+    {n:"Vavada",       c:"#37e0c8", c2:"#12a892", s:"9.7", d:"демо без регистрации, 5000+ слотов",   h:"/casino/vavada"},
+    {n:"Kent Casino",  c:"#ff2e93", c2:"#c81f6f", s:"9.0", d:"простой запуск демо новичку",            h:"/casino/kent"},
     {n:"PokerDom",     c:"#37e0c8", c2:"#12a892", s:"8.2", d:"демо слотов, покер только на деньги",    h:"/casino/pokerdom"}
   ];
   var SLOTS = [
@@ -1778,18 +1841,19 @@ window.addEventListener('load',function(){
       "@type": "ItemList",
       "name": "Рейтинг казино с демо-режимом 2026",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 10,
+      "numberOfItems": 11,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
-        {"@type":"ListItem","position":2,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":3,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":4,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
-        {"@type":"ListItem","position":5,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
-        {"@type":"ListItem","position":6,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
+        {"@type":"ListItem","position":4,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
+        {"@type":"ListItem","position":5,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
+        {"@type":"ListItem","position":6,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
         {"@type":"ListItem","position":7,"name":"Izzi","url":"https://rejting-kazino777.top/casino/izzi"},
-        {"@type":"ListItem","position":8,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
-        {"@type":"ListItem","position":9,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"},
-        {"@type":"ListItem","position":10,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"}
+        {"@type":"ListItem","position":8,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"},
+        {"@type":"ListItem","position":9,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":10,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
+        {"@type":"ListItem","position":11,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"}
       ]
     },
     {

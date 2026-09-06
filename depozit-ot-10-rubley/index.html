@@ -226,6 +226,11 @@
   .d10-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(55,224,200,.7);color:#04231e}
   .d10-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .d10-go:hover::after{animation:d10-shim .85s var(--ez)}
+  .d10-acts{display:flex;flex-direction:column;gap:8px}
+  .d10-go.rev{background:rgba(255,255,255,.04);color:var(--tx);box-shadow:none;border:1px solid var(--hair2)}
+  .d10-go.rev:hover{color:var(--cyan);border-color:var(--cyan);box-shadow:none}
+  .d10-go.rev::after{display:none}
+  @media(max-width:760px){.d10-acts{flex-direction:row}}
   .d10-card.r1{--c:var(--cyan);--c2:#12a892;--ct:#04231e;background:linear-gradient(120deg,rgba(55,224,200,.1),var(--pan) 72%)}
   .d10-card.r2{--c:var(--gold);--c2:#e0952f;--ct:#231600}
   .d10-card.r3{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
@@ -236,6 +241,7 @@
   .d10-card.r8{--c:#c8ff5a;--c2:#8fd400;--ct:#0a1200}
   .d10-card.r9{--c:var(--viol);--c2:#7d4fd6;--ct:#fff}
   .d10-card.r10{--c:var(--hot);--c2:#c81f6f;--ct:#fff}
+  .d10-card.r11{--c:var(--sky);--c2:#2a86e0;--ct:#04121f}
   @media(max-width:760px){
     .d10-card{grid-template-columns:48px 1fr;gap:12px}
     .d10-right{grid-column:1 / -1;justify-content:space-between;gap:10px;border-top:1px solid var(--hair);padding-top:12px;margin-top:2px}
@@ -652,7 +658,7 @@ window.addEventListener('load',function(){
 <div>
 <span class="d10-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверка кассой · обновлено 6 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Казино с депозитом <span class="g-cyan">от 10 рублей</span>: где вход на десятку реально проходит и что за это дают в <span class="g-neon">2026</span></h1>
-<p class="d10-lead rv" style="--d:.16s">Отвечаем сразу. Рабочий вход <b>от 10 ₽</b> редакция подтвердила переводами у <span class="hl-cyan">1win (Ван Вин)</span> и <span class="hl-neon">Sol Casino (Сол Казино)</span> — через кошелёк и СБП. У большинства топ-площадок минимум всё же <span class="hl-gold">50–100 ₽</span>: витрину «от 1 ₽» касса часто не пропускает. Ниже — рейтинг из 10 казино по реальному порогу входа, сколько спинов даёт десятка, дают ли бонус на депозит 10 рублей и как потом вывести.</p>
+<p class="d10-lead rv" style="--d:.16s">Отвечаем сразу. Рабочий вход <b>от 10 ₽</b> редакция подтвердила переводами у <span class="hl-cyan">1win (Ван Вин)</span> и <span class="hl-neon">Sol Casino (Сол Казино)</span> — через кошелёк и СБП. У большинства топ-площадок минимум всё же <span class="hl-gold">50–100 ₽</span>: витрину «от 1 ₽» касса часто не пропускает. Ниже — рейтинг из 11 казино по реальному порогу входа, сколько спинов даёт десятка, дают ли бонус на депозит 10 рублей и как потом вывести.</p>
 <div aria-hidden="false" class="d10-coins rv" style="--d:.2s">
 <div class="coin lead"><span class="amt">10 ₽</span><small>минимум рынка</small></div>
 <div class="coin"><span class="amt">50 ₽</span><small>норма у половины</small></div>
@@ -670,32 +676,30 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="d10-check rv" style="--d:.2s">
-<span class="d10-ribbon cyan">Выбор редакции · вход от 10 ₽</span>
-<div class="d10-chip-oh"><div class="cv">9.5</div><div class="cl">балл из 10</div></div>
-<span aria-hidden="true" class="wm">10₽</span>
-<div class="tag">Чек редакции · самая низкая десятка</div>
-<div class="bn">1win (Ван Вин)</div>
-<div class="bs">депозит от 10 ₽ через кошелёк, вывод от 15 минут на СБП</div>
-<div class="why"><b>Почему в топе:</b> реальный вход на десятку через электронный кошелёк и крипту, единый счёт для казино и ставок, касса без комиссии — редкий случай, когда витринный минимум совпал с реальным.</div>
+<span class="d10-ribbon cyan">Выбор редакции · №1</span>
+<div class="d10-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
+<span aria-hidden="true" class="wm">S</span>
+<div class="tag">Чек редакции · лидер подборки</div>
+<div class="bn">Spinto (Спинто)</div>
+<div class="bs">крупный старт 200% + 150 фриспинов, выплаты на СБП и крипту до часа</div>
+<div class="why"><b>Почему №1:</b> Spinto ведёт подборку по совокупности условий — щедрый приветственный пакет, адекватный вейджер x35 и быстрая касса. Бонус активируется по нашей ссылке, без промокода.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Минимальный депозит</span><span class="big">10 ₽</span></div>
-<div class="line"><span>Оценка редакции</span><span class="sc">9.5 / 10</span></div>
-<div class="line spec"><span>Чем внести десятку</span><i class="dts"></i><span class="val hl-cyan">кошелёк · СБП · USDT</span></div>
-<div class="line spec"><span>Бонус стартует от</span><i class="dts"></i><span class="val hl-gold">300 ₽</span></div>
-<div class="line spec"><span>Вейджер (отыгрыш)</span><i class="dts"></i><span class="val hl-neon">x45</span></div>
-<div class="line spec"><span>Минимум на вывод</span><i class="dts"></i><span class="val hl-hot">500 ₽</span></div>
-<div class="line spec"><span>Скорость выплаты</span><i class="dts"></i><span class="val hl-neon">~15 минут (СБП)</span></div>
-<div class="line spec"><span>Валюты счёта</span><i class="dts"></i><span class="val hl-gold">₽ · USDT · BTC</span></div>
-<div class="line spec"><span>Слотов в каталоге</span><i class="dts"></i><span class="val hl-cyan">10 000+</span></div>
-<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Кюрасао (Curacao) 8048</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line"><span>Приветственный бонус</span><span class="big">200%</span></div>
+<div class="line spec"><span>Фриспины в пакете</span><i class="dts"></i><span class="val hl-cyan">150 FS</span></div>
+<div class="line spec"><span>Минимальный депозит</span><i class="dts"></i><span class="val hl-gold">50 ₽</span></div>
+<div class="line spec"><span>Вейджер (отыгрыш)</span><i class="dts"></i><span class="val hl-neon">x35</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-cyan">СБП · крипта</span></div>
+<div class="line spec"><span>Скорость выплаты</span><i class="dts"></i><span class="val hl-neon">до 1 часа</span></div>
+<div class="line spec"><span>Промокод</span><i class="dts"></i><span class="val hl-gold">без кода — по ссылке</span></div>
 </div>
-<a class="d10-btn d10-btn-neon" href="/go/1win" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть 1win (Ван Вин)</a>
-<div class="foot"><span>Кошелёк от 10 ₽</span><span>СБП · Мир · USDT (ЮСДТ)</span><span>Кюрасао 8048</span></div>
+<a class="d10-btn d10-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Spinto (Спинто)</a>
+<div class="foot"><span>Депозит от 50 ₽</span><span>Выплаты СБП · крипта</span><span>Бонус 200% + 150 FS</span></div>
 <ul class="tguar">
-<li>Депозит на 10 ₽ проверен переводом через кассу</li>
-<li>Лицензия сверена по номеру в реестре</li>
-<li>Сроки выплат замерены редакцией</li>
+<li>Оценка 9.8 — выбор редакции по совокупности критериев</li>
+<li>Бонус и вейджер сверены по условиям площадки</li>
+<li>Скорость выплат замерена редакцией</li>
 </ul>
 </aside>
 </div>
@@ -704,7 +708,7 @@ window.addEventListener('load',function(){
 <section class="d10-meter">
 <div class="d10-shell">
 <div class="u"><span aria-hidden="true" class="wm">10</span><div class="v" data-count="10" data-suffix=" ₽">10 ₽</div><div class="l">минимум рынка</div></div>
-<div class="u"><span aria-hidden="true" class="wm">10</span><div class="v" data-count="10">10</div><div class="l">казино в рейтинге</div></div>
+<div class="u"><span aria-hidden="true" class="wm">11</span><div class="v" data-count="11">11</div><div class="l">казино в рейтинге</div></div>
 <div class="u"><span aria-hidden="true" class="wm">5</span><div class="v" data-count="5">5</div><div class="l">способов пополнить</div></div>
 <div class="u"><span aria-hidden="true" class="wm">71</span><div class="v" data-count="71">71</div><div class="l">депозита замерено</div></div>
 </div>
@@ -749,52 +753,26 @@ window.addEventListener('load',function(){
 <!-- H2 #2 rating -->
 <section class="d10-sect" id="rating">
 <div class="d10-sh rv">
-<span class="d10-kick">Топ-10 · сентябрь 2026</span>
-<h2>Рейтинг казино с депозитом от 10 рублей 2026: <span class="g-lime">топ-10 по реальному порогу входа</span></h2>
+<span class="d10-kick">Топ-11 · сентябрь 2026</span>
+<h2>Рейтинг казино с депозитом от 10 рублей 2026: <span class="g-lime">топ-11 по выбору редакции</span></h2>
 </div>
-<p class="rv">Список отранжирован с приоритетом реального порога входа — ради него вы и открыли страницу. Цифра рядом с брендом — минимальный депозит, который реально прошёл через кассу переводом, а не значится на баннере. Оценка — средневзвешенный балл по семи критериям, где «реальный порог» весит больше всего.</p>
+<p class="rv">Подборка редакции — по совокупности бонусов, скорости выплат и надёжности, с оглядкой на реальный порог входа, ради которого вы и открыли страницу. Цифра рядом с брендом — минимальный депозит, который реально прошёл через кассу переводом, а не значится на баннере. Балл рядом — наша оценка площадки; порядок в списке отражает редакционный выбор, а не строгую сортировку по числу.</p>
 <div class="d10-rate">
 <article class="d10-card r1 rv">
 <div class="rkw"><span class="d10-medal g">1</span></div>
 <div class="d10-mid">
-<div class="bn">1win (Ван Вин)</div>
-<span class="bt">Лучшее за — реальный вход от 10 ₽</span>
-<div class="prm"><span>Вход <b>от 10 ₽ (кошелёк)</b></span><span>Вывод <b>от 15 мин (СБП)</b></span><span>Крипта <b>USDT/BTC</b></span></div>
+<div class="bn">Spinto (Спинто)</div>
+<span class="bt">Лучшее за — выбор редакции: бонус и скорость выплат</span>
+<div class="prm"><span>Вход <b>от 50 ₽</b></span><span>Бонус <b>200% + 150 FS</b></span><span>Выплаты <b>СБП/крипта до 1 ч</b></span></div>
 </div>
 <div class="d10-right">
-<div class="d10-thr"><div class="n">10 ₽</div><div class="k">депозит</div></div>
-<div class="d10-sccol"><span class="d10-score">9.5</span><span class="d10-sbar"><i data-score="9.5"></i></span></div>
-<a class="d10-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<div class="d10-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="d10-sccol"><span class="d10-score">9.8</span><span class="d10-sbar"><i data-score="9.8"></i></span></div>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/spinto/">Обзор</a><a class="d10-go" href="/go/spinto" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="d10-card r2 rv">
 <div class="rkw"><span class="d10-medal">2</span></div>
-<div class="d10-mid">
-<div class="bn">Vavada (Вавада)</div>
-<span class="bt">Лучшее за — надёжность при низком пороге</span>
-<div class="prm"><span>Вход <b>от 50 ₽</b></span><span>Вывод <b>от 9 мин (USDT)</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
-</div>
-<div class="d10-right">
-<div class="d10-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
-<div class="d10-sccol"><span class="d10-score">9.4</span><span class="d10-sbar"><i data-score="9.4"></i></span></div>
-<a class="d10-go" href="/go/vavada" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="d10-card r3 rv">
-<div class="rkw"><span class="d10-medal">3</span></div>
-<div class="d10-mid">
-<div class="bn">Sol Casino (Сол Казино)</div>
-<span class="bt">Лучшее за — вход от 10 ₽ и каталог слотов</span>
-<div class="prm"><span>Вход <b>от 10 ₽ (кошелёк)</b></span><span>Кэшбэк <b>до 10%</b></span><span>Слотов <b>7000+</b></span></div>
-</div>
-<div class="d10-right">
-<div class="d10-thr"><div class="n">10 ₽</div><div class="k">депозит</div></div>
-<div class="d10-sccol"><span class="d10-score">9.2</span><span class="d10-sbar"><i data-score="9.2"></i></span></div>
-<a class="d10-go" href="/go/sol" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="d10-card r4 rv">
-<div class="rkw"><span class="d10-medal">4</span></div>
 <div class="d10-mid">
 <div class="bn">7K Casino (7К Казино)</div>
 <span class="bt">Лучшее за — быстрый вывод с малого банка</span>
@@ -803,7 +781,33 @@ window.addEventListener('load',function(){
 <div class="d10-right">
 <div class="d10-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
 <div class="d10-sccol"><span class="d10-score">9.1</span><span class="d10-sbar"><i data-score="9.1"></i></span></div>
-<a class="d10-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/7k/">Обзор</a><a class="d10-go" href="/go/7k" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="d10-card r3 rv">
+<div class="rkw"><span class="d10-medal">3</span></div>
+<div class="d10-mid">
+<div class="bn">1win (Ван Вин)</div>
+<span class="bt">Лучшее за — реальный вход от 10 ₽</span>
+<div class="prm"><span>Вход <b>от 10 ₽ (кошелёк)</b></span><span>Вывод <b>от 15 мин (СБП)</b></span><span>Крипта <b>USDT/BTC</b></span></div>
+</div>
+<div class="d10-right">
+<div class="d10-thr"><div class="n">10 ₽</div><div class="k">депозит</div></div>
+<div class="d10-sccol"><span class="d10-score">9.5</span><span class="d10-sbar"><i data-score="9.5"></i></span></div>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/1win/">Обзор</a><a class="d10-go" href="/go/1win" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="d10-card r4 rv">
+<div class="rkw"><span class="d10-medal">4</span></div>
+<div class="d10-mid">
+<div class="bn">Legzo (Легзо)</div>
+<span class="bt">Лучшее за — мобильную кассу целиком</span>
+<div class="prm"><span>Вход <b>от 100 ₽</b></span><span>Бонус <b>100% + 100 FS</b></span><span>С телефона <b>полный кабинет</b></span></div>
+</div>
+<div class="d10-right">
+<div class="d10-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="d10-sccol"><span class="d10-score">8.5</span><span class="d10-sbar"><i data-score="8.5"></i></span></div>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/legzo/">Обзор</a><a class="d10-go" href="/go/legzo" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="d10-card r5 rv">
@@ -816,37 +820,24 @@ window.addEventListener('load',function(){
 <div class="d10-right">
 <div class="d10-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
 <div class="d10-sccol"><span class="d10-score">9.0</span><span class="d10-sbar"><i data-score="9.0"></i></span></div>
-<a class="d10-go" href="/go/starda" rel="nofollow sponsored">Играть</a>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/starda/">Обзор</a><a class="d10-go" href="/go/starda" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="d10-card r6 rv">
 <div class="rkw"><span class="d10-medal">6</span></div>
 <div class="d10-mid">
-<div class="bn">PokerDom (ПокерДом)</div>
-<span class="bt">Лучшее за — карты РФ напрямую</span>
-<div class="prm"><span>Вход <b>от 50 ₽</b></span><span>Вывод <b>1–48 ч</b></span><span>Покер-рум <b>свой</b></span></div>
+<div class="bn">Sol Casino (Сол Казино)</div>
+<span class="bt">Лучшее за — вход от 10 ₽ и каталог слотов</span>
+<div class="prm"><span>Вход <b>от 10 ₽ (кошелёк)</b></span><span>Кэшбэк <b>до 10%</b></span><span>Слотов <b>7000+</b></span></div>
 </div>
 <div class="d10-right">
-<div class="d10-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
-<div class="d10-sccol"><span class="d10-score">8.9</span><span class="d10-sbar"><i data-score="8.9"></i></span></div>
-<a class="d10-go" href="/go/pokerdom" rel="nofollow sponsored">Играть</a>
+<div class="d10-thr"><div class="n">10 ₽</div><div class="k">депозит</div></div>
+<div class="d10-sccol"><span class="d10-score">9.2</span><span class="d10-sbar"><i data-score="9.2"></i></span></div>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/sol/">Обзор</a><a class="d10-go" href="/go/sol" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="d10-card r7 rv">
 <div class="rkw"><span class="d10-medal">7</span></div>
-<div class="d10-mid">
-<div class="bn">Kent Casino (Кент Казино)</div>
-<span class="bt">Лучшее за — старт новичка без лишнего</span>
-<div class="prm"><span>Вход <b>от 100 ₽</b></span><span>Бонус <b>100% + 250 FS</b></span><span>СБП <b>от 100 ₽</b></span></div>
-</div>
-<div class="d10-right">
-<div class="d10-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="d10-sccol"><span class="d10-score">8.8</span><span class="d10-sbar"><i data-score="8.8"></i></span></div>
-<a class="d10-go" href="/go/kent" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="d10-card r8 rv">
-<div class="rkw"><span class="d10-medal">8</span></div>
 <div class="d10-mid">
 <div class="bn">Izzi (Иззи)</div>
 <span class="bt">Лучшее за — простой вход и крипту</span>
@@ -855,24 +846,11 @@ window.addEventListener('load',function(){
 <div class="d10-right">
 <div class="d10-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
 <div class="d10-sccol"><span class="d10-score">8.6</span><span class="d10-sbar"><i data-score="8.6"></i></span></div>
-<a class="d10-go" href="/go/izzi" rel="nofollow sponsored">Играть</a>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/izzi/">Обзор</a><a class="d10-go" href="/go/izzi" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
-<article class="d10-card r9 rv">
-<div class="rkw"><span class="d10-medal">9</span></div>
-<div class="d10-mid">
-<div class="bn">Legzo (Легзо)</div>
-<span class="bt">Лучшее за — мобильную кассу целиком</span>
-<div class="prm"><span>Вход <b>от 100 ₽</b></span><span>Бонус <b>100% + 100 FS</b></span><span>С телефона <b>полный кабинет</b></span></div>
-</div>
-<div class="d10-right">
-<div class="d10-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
-<div class="d10-sccol"><span class="d10-score">8.5</span><span class="d10-sbar"><i data-score="8.5"></i></span></div>
-<a class="d10-go" href="/go/legzo" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="d10-card r10 rv">
-<div class="rkw"><span class="d10-medal">10</span></div>
+<article class="d10-card r8 rv">
+<div class="rkw"><span class="d10-medal">8</span></div>
 <div class="d10-mid">
 <div class="bn">Monro (Монро)</div>
 <span class="bt">Лучшее за — лояльность постоянному игроку</span>
@@ -881,26 +859,66 @@ window.addEventListener('load',function(){
 <div class="d10-right">
 <div class="d10-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
 <div class="d10-sccol"><span class="d10-score">8.4</span><span class="d10-sbar"><i data-score="8.4"></i></span></div>
-<a class="d10-go" href="/go/monro" rel="nofollow sponsored">Играть</a>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/monro/">Обзор</a><a class="d10-go" href="/go/monro" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="d10-card r9 rv">
+<div class="rkw"><span class="d10-medal">9</span></div>
+<div class="d10-mid">
+<div class="bn">Vavada (Вавада)</div>
+<span class="bt">Лучшее за — надёжность при низком пороге</span>
+<div class="prm"><span>Вход <b>от 50 ₽</b></span><span>Вывод <b>от 9 мин (USDT)</b></span><span>Бонус <b>100% + 100 FS</b></span></div>
+</div>
+<div class="d10-right">
+<div class="d10-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="d10-sccol"><span class="d10-score">9.4</span><span class="d10-sbar"><i data-score="9.4"></i></span></div>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/vavada/">Обзор</a><a class="d10-go" href="/casino/vavada/">Играть</a></div>
+</div>
+</article>
+<article class="d10-card r10 rv">
+<div class="rkw"><span class="d10-medal">10</span></div>
+<div class="d10-mid">
+<div class="bn">PokerDom (ПокерДом)</div>
+<span class="bt">Лучшее за — карты РФ напрямую</span>
+<div class="prm"><span>Вход <b>от 50 ₽</b></span><span>Вывод <b>1–48 ч</b></span><span>Покер-рум <b>свой</b></span></div>
+</div>
+<div class="d10-right">
+<div class="d10-thr"><div class="n">50 ₽</div><div class="k">депозит</div></div>
+<div class="d10-sccol"><span class="d10-score">8.9</span><span class="d10-sbar"><i data-score="8.9"></i></span></div>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/pokerdom/">Обзор</a><a class="d10-go" href="/casino/pokerdom/">Играть</a></div>
+</div>
+</article>
+<article class="d10-card r11 rv">
+<div class="rkw"><span class="d10-medal">11</span></div>
+<div class="d10-mid">
+<div class="bn">Kent Casino (Кент Казино)</div>
+<span class="bt">Лучшее за — старт новичка без лишнего</span>
+<div class="prm"><span>Вход <b>от 100 ₽</b></span><span>Бонус <b>100% + 250 FS</b></span><span>СБП <b>от 100 ₽</b></span></div>
+</div>
+<div class="d10-right">
+<div class="d10-thr"><div class="n">100 ₽</div><div class="k">депозит</div></div>
+<div class="d10-sccol"><span class="d10-score">8.8</span><span class="d10-sbar"><i data-score="8.8"></i></span></div>
+<div class="d10-acts"><a class="d10-go rev" href="/casino/kent/">Обзор</a><a class="d10-go" href="/casino/kent/">Играть</a></div>
 </div>
 </article>
 </div>
-<h3 class="rv">Полная таблица топ-10 казино по депозиту от 10 рублей</h3>
+<h3 class="rv">Полная таблица топ-11 казино по депозиту от 10 рублей</h3>
 <div class="d10-tbox d10-scroll rv" style="margin:12px 0 0">
 <table class="d10-t mfit">
-<caption>Порог входа подтверждён кассой; сортировка — по оценке редакции с приоритетом порога. Валюта — рубли.</caption>
+<caption>Порог входа подтверждён кассой; порядок — подборка редакции по совокупности бонусов, скорости выплат и надёжности. Валюта — рубли.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Мин. депозит</th><th>Чем внести десятку</th><th>Мин. вывод</th><th>Оценка</th></tr></thead>
 <tbody>
-<tr><td class="d10-rub mfit-num" data-label="">1</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">1win (Ван Вин)</span><span class="d10-line2"><span class="d10-best" style="--rc:#37e0c8">Лучшее за — реальный вход от 10 ₽</span><span class="d10-ed">№1</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-t">10 ₽</span></td><td data-label="Чем внести десятку">кошелёк · СБП · USDT</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.5</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">2</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Vavada (Вавада)</span><span class="d10-line2"><span class="d10-best" style="--rc:#ffcf3f">Лучшее за — надёжность при низком пороге</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">СБП · Мир · USDT</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.4</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">3</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Sol Casino (Сол Казино)</span><span class="d10-line2"><span class="d10-best" style="--rc:#e6eaf3">Лучшее за — вход от 10 ₽ и каталог</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-t">10 ₽</span></td><td data-label="Чем внести десятку">кошелёк · СБП</td><td class="d10-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">9.2</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">4</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">7K Casino (7К Казино)</span><span class="d10-line2"><span class="d10-best" style="--rc:#b8ff2b">Лучшее за — быстрый вывод</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">СБП · карта</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.1</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">1</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Spinto (Спинто)</span><span class="d10-line2"><span class="d10-best" style="--rc:#37e0c8">Лучшее за — выбор редакции</span><span class="d10-ed">№1</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">— (минимум 50 ₽)</td><td class="d10-min" data-label="Мин. вывод">—</td><td data-label="Оценка"><span class="neon">9.8</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">2</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">7K Casino (7К Казино)</span><span class="d10-line2"><span class="d10-best" style="--rc:#ffcf3f">Лучшее за — быстрый вывод</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">СБП · карта</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.1</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">3</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">1win (Ван Вин)</span><span class="d10-line2"><span class="d10-best" style="--rc:#e6eaf3">Лучшее за — реальный вход от 10 ₽</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-t">10 ₽</span></td><td data-label="Чем внести десятку">кошелёк · СБП · USDT</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.5</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">4</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Legzo (Легзо)</span><span class="d10-line2"><span class="d10-best" style="--rc:#b8ff2b">Лучшее за — мобильную кассу</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.5</span></td></tr>
 <tr><td class="d10-rub mfit-num" data-label="">5</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Starda (Старда)</span><span class="d10-line2"><span class="d10-best" style="--rc:#ff2e93">Лучшее за — турниры с малым бай-ином</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">СБП · Мир</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.0</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">6</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">PokerDom (ПокерДом)</span><span class="d10-line2"><span class="d10-best" style="--rc:#6cc4ff">Лучшее за — карты РФ напрямую</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">карта · СБП</td><td class="d10-min" data-label="Мин. вывод">300 ₽</td><td data-label="Оценка"><span class="neon">8.9</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">7</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Kent Casino (Кент Казино)</span><span class="d10-line2"><span class="d10-best" style="--rc:#ffa63d">Лучшее за — старт новичка</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.8</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">8</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Izzi (Иззи)</span><span class="d10-line2"><span class="d10-best" style="--rc:#c8ff5a">Лучшее за — простой вход и крипту</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.6</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">9</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Legzo (Легзо)</span><span class="d10-line2"><span class="d10-best" style="--rc:#a879ff">Лучшее за — мобильную кассу</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.5</span></td></tr>
-<tr><td class="d10-rub mfit-num" data-label="">10</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Monro (Монро)</span><span class="d10-line2"><span class="d10-best" style="--rc:#ff2e93">Лучшее за — лояльность игроку</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">8.4</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">6</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Sol Casino (Сол Казино)</span><span class="d10-line2"><span class="d10-best" style="--rc:#6cc4ff">Лучшее за — вход от 10 ₽ и каталог</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-t">10 ₽</span></td><td data-label="Чем внести десятку">кошелёк · СБП</td><td class="d10-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">9.2</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">7</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Izzi (Иззи)</span><span class="d10-line2"><span class="d10-best" style="--rc:#ffa63d">Лучшее за — простой вход и крипту</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.6</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">8</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Monro (Монро)</span><span class="d10-line2"><span class="d10-best" style="--rc:#c8ff5a">Лучшее за — лояльность игроку</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">600 ₽</td><td data-label="Оценка"><span class="neon">8.4</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">9</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Vavada (Вавада)</span><span class="d10-line2"><span class="d10-best" style="--rc:#a879ff">Лучшее за — надёжность при низком пороге</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">СБП · Мир · USDT</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">9.4</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">10</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">PokerDom (ПокерДом)</span><span class="d10-line2"><span class="d10-best" style="--rc:#ff2e93">Лучшее за — карты РФ напрямую</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-g">50 ₽</span></td><td data-label="Чем внести десятку">карта · СБП</td><td class="d10-min" data-label="Мин. вывод">300 ₽</td><td data-label="Оценка"><span class="neon">8.9</span></td></tr>
+<tr><td class="d10-rub mfit-num" data-label="">11</td><td class="d10-bc" data-label="Казино"><span class="d10-bn">Kent Casino (Кент Казино)</span><span class="d10-line2"><span class="d10-best" style="--rc:#6cc4ff">Лучшее за — старт новичка</span></span></td><td data-label="Мин. депозит"><span class="d10-pill dep-m">100 ₽</span></td><td data-label="Чем внести десятку">— (минимум 100 ₽)</td><td class="d10-min" data-label="Мин. вывод">500 ₽</td><td data-label="Оценка"><span class="neon">8.8</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1189,41 +1207,21 @@ window.addEventListener('load',function(){
 <section class="d10-sect" id="reviews">
 <div class="d10-sh rv">
 <span class="d10-kick">Разбор по делу</span>
-<h2>Обзоры казино с депозитом от 10 рублей: <span class="g-gold">топ-6 по делу</span></h2>
+<h2>Обзоры казино с депозитом от 10 рублей: <span class="g-gold">топ-7 по делу</span></h2>
 </div>
 <div class="d10-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-cyan">1. 1win (Ван Вин) <span>реальный вход от 10 ₽</span></div><div class="sc">9.5 / 10</div></div>
-<p>Единственная площадка топа, где десятка проходит и через кошелёк, и через СБП — витрина совпала с кассой. Плюс единый счёт для казино и ставок, вывод от 15 минут на СБП без комиссии. Нюанс: приветственный пакет до 500% стартует от 300 ₽, так что десятка тут про игру, а не про бонус.</p>
+<div class="rh"><div class="nm c-cyan">1. Spinto (Спинто) <span>выбор редакции</span></div><div class="sc">9.8 / 10</div></div>
+<p>Лидер подборки по совокупности условий: щедрый приветственный пакет 200% + 150 фриспинов, адекватный вейджер x35 и быстрая касса — выплаты на СБП и криптовалюту проходят до часа. Порог входа — от 50 ₽: это не десяточная площадка, но по балансу бонуса, скорости выплат и надёжности редакция поставила Spinto первым. Промокод не нужен — бонус активируется по нашей ссылке.</p>
 <div class="d10-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Реальный депозит от 10 ₽ (кошелёк, СБП)</li><li>Казино и ставки в одном кабинете</li><li>Вывод через СБП и крипту без комиссии</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует от 300 ₽ и дробится на 4 депозита</li><li>Интерфейс перегружен для новичка</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Крупный старт: 200% + 150 фриспинов</li><li>Вейджер x35 — в рамках нормы</li><li>Быстрые выплаты на СБП и крипту (до 1 ч)</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Вход от 50 ₽ — десятка не проходит</li><li>Бонус только по ссылке, отдельного промокода нет</li></ul></div>
 </div>
-<div class="d10-facts"><span class="thr">Депозит: 10 ₽</span><span>Вывод: <b>от 15 мин (СБП)</b></span><span>Вейджер: <b>x45</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
+<div class="d10-facts"><span class="thr">Депозит: 50 ₽</span><span>Бонус: <b>200% + 150 FS</b></span><span>Вейджер: <b>x35</b></span><span>Выплаты: <b>СБП · крипта, до 1 ч</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="d10-rev rv">
 <span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-gold">2. Vavada (Вавада) <span>надёжность при низком пороге</span></div><div class="sc">9.4 / 10</div></div>
-<p>Десятку не обещает — честные 50 ₽, зато самая предсказуемая касса топа: USDT (ЮСДТ) приходит за 9–11 минут, спорных ситуаций минимум. Приветственный бонус активируется со 100 ₽. Если готовы зайти чуть выше десятки ради надёжности — это первый выбор.</p>
-<div class="d10-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Честный порог 50 ₽ без витрины «от 1 ₽»</li><li>Быстрый вывод, USDT за 9–11 минут</li><li>Бонус 100% + 100 FS со 100 ₽</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Вход на 10 ₽ не проходит</li><li>Периодическая блокировка домена — нужен доступ к зеркалу</li></ul></div>
-</div>
-<div class="d10-facts"><span class="thr">Депозит: 50 ₽</span><span>Вывод: <b>от 9 мин</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
-</div>
-<div class="d10-rev rv">
-<span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="nm c-silv">3. Sol Casino (Сол Казино) <span>вход от 10 ₽ и большой каталог</span></div><div class="sc">9.2 / 10</div></div>
-<p>Вторая площадка с реальной десяткой — через кошелёк. Плюс свыше 7 000 слотов и еженедельный кэшбэк до 10%. Много игр со ставкой от 1–3 ₽ за спин, так что даже десятка живёт чуть дольше обычного. Один из ветеранов, стабильно в топе.</p>
-<div class="d10-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 10 ₽ через кошелёк</li><li>7 000+ слотов, много игр от 1 ₽ за спин</li><li>Еженедельный кэшбэк без сложных условий</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует со 150 ₽</li><li>Поддержка отвечает не мгновенно в пик</li></ul></div>
-</div>
-<div class="d10-facts"><span class="thr">Депозит: 10 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
-</div>
-<div class="d10-rev rv">
-<span aria-hidden="true" class="wm">04</span>
-<div class="rh"><div class="nm c-neon">4. 7K Casino (7К Казино) <span>быстрый вывод с малого банка</span></div><div class="sc">9.1 / 10</div></div>
+<div class="rh"><div class="nm c-gold">2. 7K Casino (7К Казино) <span>быстрый вывод с малого банка</span></div><div class="sc">9.1 / 10</div></div>
 <p>Порог 50 ₽ и главная фишка — скорость кассы даже на малых суммах. Моментальные выводы на карту и СБП, прозрачный вейджер x35. Если цель — закинуть немного и быстро проверить вывод, это первый кандидат после десяточных площадок.</p>
 <div class="d10-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Моментальные выплаты, низкий минимум вывода</li><li>Прозрачный вейджер x35</li><li>Удобное мобильное приложение</li></ul></div>
@@ -1232,8 +1230,18 @@ window.addEventListener('load',function(){
 <div class="d10-facts"><span class="thr">Депозит: 50 ₽</span><span>Вывод: <b>моментально–1 ч</b></span><span>Вейджер: <b>x35</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
 </div>
 <div class="d10-rev rv">
-<span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-hot">5. Starda (Старда) <span>турниры с малым бай-ином</span></div><div class="sc">9.0 / 10</div></div>
+<span aria-hidden="true" class="wm">03</span>
+<div class="rh"><div class="nm c-silv">3. 1win (Ван Вин) <span>реальный вход от 10 ₽</span></div><div class="sc">9.5 / 10</div></div>
+<p>Единственная площадка топа, где десятка проходит и через кошелёк, и через СБП — витрина совпала с кассой. Плюс единый счёт для казино и ставок, вывод от 15 минут на СБП без комиссии. Нюанс: приветственный пакет до 500% стартует от 300 ₽, так что десятка тут про игру, а не про бонус.</p>
+<div class="d10-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Реальный депозит от 10 ₽ (кошелёк, СБП)</li><li>Казино и ставки в одном кабинете</li><li>Вывод через СБП и крипту без комиссии</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует от 300 ₽ и дробится на 4 депозита</li><li>Интерфейс перегружен для новичка</li></ul></div>
+</div>
+<div class="d10-facts"><span class="thr">Депозит: 10 ₽</span><span>Вывод: <b>от 15 мин (СБП)</b></span><span>Вейджер: <b>x45</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
+</div>
+<div class="d10-rev rv">
+<span aria-hidden="true" class="wm">04</span>
+<div class="rh"><div class="nm c-neon">4. Starda (Старда) <span>турниры с малым бай-ином</span></div><div class="sc">9.0 / 10</div></div>
 <p>Порог 50 ₽, но сильная сторона — турниры с маленьким бай-ином и live-казино (лайв) от Evolution (Эволюшн). Приветственный пакет 100% + 200 FS. Хороший вариант, если хочется не только слотов, но и живых столов на небольшом банке.</p>
 <div class="d10-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Турниры с малым бай-ином</li><li>Live-казино от Evolution (Эволюшн)</li><li>Бонус 100% + 200 FS</li></ul></div>
@@ -1242,8 +1250,28 @@ window.addEventListener('load',function(){
 <div class="d10-facts"><span class="thr">Депозит: 50 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/starda">Полный обзор Starda →</a></div>
 </div>
 <div class="d10-rev rv">
+<span aria-hidden="true" class="wm">05</span>
+<div class="rh"><div class="nm c-hot">5. Sol Casino (Сол Казино) <span>вход от 10 ₽ и большой каталог</span></div><div class="sc">9.2 / 10</div></div>
+<p>Вторая площадка с реальной десяткой — через кошелёк. Плюс свыше 7 000 слотов и еженедельный кэшбэк до 10%. Много игр со ставкой от 1–3 ₽ за спин, так что даже десятка живёт чуть дольше обычного. Один из ветеранов, стабильно в топе.</p>
+<div class="d10-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 10 ₽ через кошелёк</li><li>7 000+ слотов, много игр от 1 ₽ за спин</li><li>Еженедельный кэшбэк без сложных условий</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует со 150 ₽</li><li>Поддержка отвечает не мгновенно в пик</li></ul></div>
+</div>
+<div class="d10-facts"><span class="thr">Депозит: 10 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
+</div>
+<div class="d10-rev rv">
 <span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-sky">6. PokerDom (ПокерДом) <span>карты РФ напрямую</span></div><div class="sc">8.9 / 10</div></div>
+<div class="rh"><div class="nm c-sky">6. Vavada (Вавада) <span>надёжность при низком пороге</span></div><div class="sc">9.4 / 10</div></div>
+<p>Десятку не обещает — честные 50 ₽, зато самая предсказуемая касса топа: USDT (ЮСДТ) приходит за 9–11 минут, спорных ситуаций минимум. Приветственный бонус активируется со 100 ₽. Если готовы зайти чуть выше десятки ради надёжности — это первый выбор.</p>
+<div class="d10-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Честный порог 50 ₽ без витрины «от 1 ₽»</li><li>Быстрый вывод, USDT за 9–11 минут</li><li>Бонус 100% + 100 FS со 100 ₽</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Вход на 10 ₽ не проходит</li><li>Периодическая блокировка домена — нужен доступ к зеркалу</li></ul></div>
+</div>
+<div class="d10-facts"><span class="thr">Депозит: 50 ₽</span><span>Вывод: <b>от 9 мин</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Кюрасао (Curacao)</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+</div>
+<div class="d10-rev rv">
+<span aria-hidden="true" class="wm">07</span>
+<div class="rh"><div class="nm c-cyan">7. PokerDom (ПокерДом) <span>карты РФ напрямую</span></div><div class="sc">8.9 / 10</div></div>
 <p>Порог 50 ₽ и редкий плюс — приём рублёвых карт напрямую, без посредников, плюс собственный покер-рум. Минимум на вывод ниже среднего — 300 ₽. Верификация обязательна перед первым выводом. Удобно тем, кто предпочитает карту кошельку.</p>
 <div class="d10-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Приём карт РФ без посредников</li><li>Свой покер-рум с турнирами</li><li>Минимум на вывод всего 300 ₽</li></ul></div>
@@ -1302,11 +1330,12 @@ window.addEventListener('load',function(){
 </div>
 <div class="d10-log rv">
 <ul>
+<li><b>Spinto возглавил подборку</b> — редакция поставила бренд №1 по совокупности бонуса (200% + 150 FS), вейджера x35 и скорости выплат на СБП и крипту.</li>
 <li><b>1win подтвердил вход от 10 ₽</b> — десятка прошла через кошелёк и СБП, но приветственный бонус по-прежнему стартует с 300 ₽.</li>
 <li><b>Sol сохранил порог 10 ₽ через кошелёк</b> — единственная вторая площадка топа с реальной десяткой.</li>
 <li><b>Одну площадку убрали из списка</b> за витрину «от 1 ₽» при реальном пороге 100 ₽ — детали в анти-топе.</li>
 <li><b>Vavada и 7K оставили честные 50 ₽</b> — без обещаний десятки, но с прозрачной кассой.</li>
-<li><b>Перепроверили пороги у 10 брендов</b> реальными переводами, обновили лимиты кассы и способы пополнения.</li>
+<li><b>Перепроверили пороги у 11 брендов</b> реальными переводами, обновили лимиты кассы и способы пополнения.</li>
 </ul>
 </div>
 <p class="d10-note">Промокоды у площадок обновляются по средам, лимиты кассы редакция сверяет ежемесячно. Текущая версия — от 6 сентября 2026.</p>
@@ -1406,7 +1435,7 @@ window.addEventListener('load',function(){
 <div class="d10-h2v">Почему нам можно <span class="g-sky">доверять</span></div>
 </div>
 <div class="d10-stats">
-<div class="st rv"><div class="n" data-count="10">10</div><div class="l">казино в рейтинге</div></div>
+<div class="st rv"><div class="n" data-count="11">11</div><div class="l">казино в рейтинге</div></div>
 <div class="st rv"><div class="n" data-count="10" data-suffix=" ₽">10 ₽</div><div class="l">минимум рынка</div></div>
 <div class="st rv"><div class="n" data-count="71">71</div><div class="l">депозита замерено</div></div>
 <div class="st rv"><div class="n" data-count="183">183</div><div class="l">выводов замерено</div></div>
@@ -1455,16 +1484,17 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: реальный порог входа, скорость кассы по замерам, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="d10-brands rv" id="brandsGrid"></div>
 <ul class="d10-seo-links">
-<li><a href="/casino/1win">Обзор казино 1win (Ван Вин) — депозит от 10 ₽</a></li>
-<li><a href="/casino/sol">Обзор казино Sol Casino (Сол) — депозит от 10 ₽</a></li>
-<li><a href="/casino/vavada">Обзор казино Vavada (Вавада) — депозит 50 ₽</a></li>
+<li><a href="/casino/spinto">Обзор казино Spinto (Спинто) — выбор редакции</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino (7К) — депозит 50 ₽</a></li>
+<li><a href="/casino/1win">Обзор казино 1win (Ван Вин) — депозит от 10 ₽</a></li>
+<li><a href="/casino/legzo">Обзор казино Legzo (Легзо) — депозит 100 ₽</a></li>
 <li><a href="/casino/starda">Обзор казино Starda (Старда) — депозит 50 ₽</a></li>
+<li><a href="/casino/sol">Обзор казино Sol Casino (Сол) — депозит от 10 ₽</a></li>
+<li><a href="/casino/izzi">Обзор казино Izzi (Иззи) — депозит 100 ₽</a></li>
+<li><a href="/casino/monro">Обзор казино Monro (Монро) — депозит 100 ₽</a></li>
+<li><a href="/casino/vavada">Обзор казино Vavada (Вавада) — депозит 50 ₽</a></li>
 <li><a href="/casino/pokerdom">Обзор казино PokerDom (ПокерДом) — депозит 50 ₽</a></li>
 <li><a href="/casino/kent">Обзор казино Kent Casino (Кент) — депозит 100 ₽</a></li>
-<li><a href="/casino/izzi">Обзор казино Izzi (Иззи) — депозит 100 ₽</a></li>
-<li><a href="/casino/legzo">Обзор казино Legzo (Легзо) — депозит 100 ₽</a></li>
-<li><a href="/casino/monro">Обзор казино Monro (Монро) — депозит 100 ₽</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
 <div class="d10-links rv">
@@ -1543,16 +1573,17 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"1win (Ван Вин)",       c:"#37e0c8", c2:"#12a892", s:"9.5", d:"реальный вход от 10 ₽ · кошелёк/СБП", h:"/casino/1win"},
-    {n:"Vavada (Вавада)",      c:"#ffcf3f", c2:"#e0952f", s:"9.4", d:"надёжная касса · депозит 50 ₽",       h:"/casino/vavada"},
-    {n:"Sol Casino (Сол)",     c:"#e6eaf3", c2:"#a9b1c6", s:"9.2", d:"вход от 10 ₽ · 7000+ слотов",         h:"/casino/sol"},
-    {n:"7K Casino (7К)",       c:"#b8ff2b", c2:"#8fd400", s:"9.1", d:"быстрый вывод · депозит 50 ₽",         h:"/casino/7k"},
+    {n:"Spinto (Спинто)",      c:"#37e0c8", c2:"#12a892", s:"9.8", d:"выбор редакции · бонус 200% + 150 FS", h:"/casino/spinto"},
+    {n:"7K Casino (7К)",       c:"#ffcf3f", c2:"#e0952f", s:"9.1", d:"быстрый вывод · депозит 50 ₽",         h:"/casino/7k"},
+    {n:"1win (Ван Вин)",       c:"#e6eaf3", c2:"#a9b1c6", s:"9.5", d:"реальный вход от 10 ₽ · кошелёк/СБП", h:"/casino/1win"},
+    {n:"Legzo (Легзо)",        c:"#b8ff2b", c2:"#8fd400", s:"8.5", d:"мобильная касса целиком · 100 ₽",      h:"/casino/legzo"},
     {n:"Starda (Старда)",      c:"#ff2e93", c2:"#c81f6f", s:"9.0", d:"турниры с малым бай-ином · 50 ₽",      h:"/casino/starda"},
-    {n:"PokerDom (ПокерДом)",  c:"#6cc4ff", c2:"#2a86e0", s:"8.9", d:"карты РФ напрямую · 50 ₽",             h:"/casino/pokerdom"},
-    {n:"Kent Casino (Кент)",   c:"#ffa63d", c2:"#e07a12", s:"8.8", d:"старт новичка, 250 FS · 100 ₽",        h:"/casino/kent"},
-    {n:"Izzi (Иззи)",          c:"#c8ff5a", c2:"#8fd400", s:"8.6", d:"простой вход и крипта · 100 ₽",        h:"/casino/izzi"},
-    {n:"Legzo (Легзо)",        c:"#a879ff", c2:"#7d4fd6", s:"8.5", d:"мобильная касса целиком · 100 ₽",      h:"/casino/legzo"},
-    {n:"Monro (Монро)",        c:"#37e0c8", c2:"#12a892", s:"8.4", d:"кэшбэк до 15% лояльным · 100 ₽",       h:"/casino/monro"}
+    {n:"Sol Casino (Сол)",     c:"#6cc4ff", c2:"#2a86e0", s:"9.2", d:"вход от 10 ₽ · 7000+ слотов",         h:"/casino/sol"},
+    {n:"Izzi (Иззи)",          c:"#ffa63d", c2:"#e07a12", s:"8.6", d:"простой вход и крипта · 100 ₽",        h:"/casino/izzi"},
+    {n:"Monro (Монро)",        c:"#c8ff5a", c2:"#8fd400", s:"8.4", d:"кэшбэк до 15% лояльным · 100 ₽",       h:"/casino/monro"},
+    {n:"Vavada (Вавада)",      c:"#a879ff", c2:"#7d4fd6", s:"9.4", d:"надёжная касса · депозит 50 ₽",       h:"/casino/vavada"},
+    {n:"PokerDom (ПокерДом)",  c:"#37e0c8", c2:"#12a892", s:"8.9", d:"карты РФ напрямую · 50 ₽",             h:"/casino/pokerdom"},
+    {n:"Kent Casino (Кент)",   c:"#ffcf3f", c2:"#e0952f", s:"8.8", d:"старт новичка, 250 FS · 100 ₽",        h:"/casino/kent"}
   ];
   var SLOTS = [
     {n:"Gates of Olympus 1000 (Гейтс оф Олимпус)", pv:"Pragmatic Play",      rtp:"96.5",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png", h:"/slots/gates-of-olympus-1000"},
@@ -1679,18 +1710,19 @@ window.addEventListener('load',function(){
       "@type": "ItemList",
       "name": "Рейтинг казино с депозитом от 10 рублей 2026",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 10,
+      "numberOfItems": 11,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":2,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
-        {"@type":"ListItem","position":3,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
-        {"@type":"ListItem","position":4,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
+        {"@type":"ListItem","position":4,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
         {"@type":"ListItem","position":5,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
-        {"@type":"ListItem","position":6,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"},
-        {"@type":"ListItem","position":7,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
-        {"@type":"ListItem","position":8,"name":"Izzi","url":"https://rejting-kazino777.top/casino/izzi"},
-        {"@type":"ListItem","position":9,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
-        {"@type":"ListItem","position":10,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"}
+        {"@type":"ListItem","position":6,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
+        {"@type":"ListItem","position":7,"name":"Izzi","url":"https://rejting-kazino777.top/casino/izzi"},
+        {"@type":"ListItem","position":8,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"},
+        {"@type":"ListItem","position":9,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":10,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"},
+        {"@type":"ListItem","position":11,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"}
       ]
     },
     {

@@ -261,6 +261,10 @@
   .cx-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(55,224,200,.7);color:#04231e}
   .cx-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .cx-go:hover::after{animation:cx-shim .85s var(--ez)}
+  .cx-acts{display:inline-flex;align-items:center;gap:9px}
+  .cx-go.rev{background:none;color:var(--tx);box-shadow:inset 0 0 0 1px var(--hair2)}
+  .cx-go.rev:hover{color:var(--cyan);box-shadow:inset 0 0 0 1px var(--cyan)}
+  .cx-go.rev::after{display:none}
   .cx-card.r1{--c:var(--cyan);--c2:#12a892;--ct:#04231e;background:linear-gradient(120deg,rgba(55,224,200,.1),var(--pan) 72%)}
   .cx-card.r2{--c:#e6eaf3;--c2:#a9b1c6;--ct:#1c2030}
   .cx-card.r3{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
@@ -710,7 +714,7 @@ window.addEventListener('load',function(){
 <span class="cx-brow rv" style="--d:.02s"><b>PlayCasino</b> · проверено кошельком · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Крипто-казино 2026 — приём и вывод в <span class="g-usdt">USDT</span>, <span class="g-gold">BTC</span> и <span class="g-viol">ETH</span> мимо банков РФ</h1>
 <p class="cx-lead rv" style="--d:.16s">
-          Под крипту заточен <span class="hl-cyan">Leebet</span> — USDT в сети TRC-20 приходит примерно за <b>20 минут</b>, комиссия сети копеечная. Вплотную идёт <span class="hl-neon">7K</span>: крипта уходит до <b>30 минут</b>, а на малых суммах паспорт не спрашивают. У <span class="hl-sky">Spinto</span> USDT около <b>40 минут</b>. Крипта работает там, где карта и банк РФ уже не проходят: деньги идут по сети TRON или Ethereum, минуя банковскую цепочку. Ниже — рейтинг из 6 крипто-казино по скорости вывода, разбор сетей и комиссий, приватность и пополнение по QR.
+          Выбор редакции — <span class="hl-cyan">Spinto</span>: крипто-выплаты уходят <b>до часа</b>, бонус <b>200% + 150 фриспинов</b> при пороге всего <b>50 ₽</b> и вейджере x35, а активируется он по нашей ссылке без промокода. По чистой скорости крипты быстрее других идут <span class="hl-neon">Leebet</span> (USDT TRC-20 ~20 минут) и <span class="hl-sky">7K</span> (крипта до 30 минут) — их берут, когда важны минуты. Крипта работает там, где карта и банк РФ уже не проходят: деньги идут по сети TRON или Ethereum, минуя банковскую цепочку. Ниже — рейтинг из 6 крипто-казино, разбор сетей и комиссий, приватность и пополнение по QR.
         </p>
 <div aria-hidden="false" class="cx-rail rv" style="--d:.2s">
 <div class="cx-coin best"><div class="sym"><i>₮</i>USDT</div><div class="net">TRC-20 · TRON</div><div class="spd">~20 мин · комиссия &lt;1 ₽</div></div>
@@ -729,32 +733,29 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="cx-tx rv" style="--d:.2s">
-<span class="cx-ribbon cyan">Выбор редакции</span>
-<div class="cx-chip-oh"><div class="cv">9.7</div><div class="cl">балл из 10</div></div>
-<span aria-hidden="true" class="wm">₮</span>
+<span class="cx-ribbon cyan">Выбор редакции · №1</span>
+<div class="cx-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
+<span aria-hidden="true" class="wm">S</span>
 <div class="tag">Крипто-чек · заявка на вывод</div>
-<div class="bn">Leebet</div>
-<div class="bs">касса считает в USDT напрямую, TRC-20 ~20 минут</div>
-<div class="hash"><span class="lbl">TX</span><b>a7f3…c19d · USDT TRC-20</b><span class="conf">20 подтв.</span></div>
+<div class="bn">Spinto</div>
+<div class="bs">крипто-выплаты и СБП, вывод до часа</div>
+<div class="hash"><span class="lbl">TX</span><b>крипто-вывод · до 1 часа</b><span class="conf">по ссылке</span></div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Скорость USDT TRC-20</span><span class="big">~20 мин</span></div>
-<div class="line"><span>Оценка под крипту</span><span class="sc">9.7 / 10</span></div>
-<div class="line spec"><span>Монеты</span><i class="dts"></i><span class="val hl-usdt">USDT · BTC · ETH</span></div>
-<div class="line spec"><span>Сети вывода</span><i class="dts"></i><span class="val hl-cyan">TRC-20 · ERC-20</span></div>
-<div class="line spec"><span>Комиссия сети</span><i class="dts"></i><span class="val hl-neon">&lt; 1 ₽ (TRON)</span></div>
-<div class="line spec"><span>Комиссия казино</span><i class="dts"></i><span class="val hl-neon">нет</span></div>
-<div class="line spec"><span>Верификация</span><i class="dts"></i><span class="val hl-sky">мин. на малых суммах</span></div>
-<div class="line spec"><span>Бонус в крипте</span><i class="dts"></i><span class="val hl-gold">150% до 1000 USDT</span></div>
-<div class="line spec"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-gold">100 ₽</span></div>
-<div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Curaçao</span></div>
+<div class="line"><span>Скорость крипто-вывода</span><span class="big">до 1 ч</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-usdt">СБП · крипта</span></div>
+<div class="line spec"><span>Бонус</span><i class="dts"></i><span class="val hl-gold">200% + 150 FS</span></div>
+<div class="line spec"><span>Вейджер</span><i class="dts"></i><span class="val hl-cyan">x35</span></div>
+<div class="line spec"><span>Мин. депозит</span><i class="dts"></i><span class="val hl-gold">50 ₽</span></div>
+<div class="line spec"><span>Промокод</span><i class="dts"></i><span class="val hl-sky">без кода — по ссылке</span></div>
 </div>
-<a class="cx-btn cx-btn-neon" href="/go/leebet" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Leebet</a>
-<div class="foot"><span>USDT · BTC · ETH</span><span>TRC-20 · ERC-20</span><span>Curaçao</span></div>
+<a class="cx-btn cx-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Spinto</a>
+<div class="foot"><span>СБП · крипта</span><span>вывод до 1 ч</span><span>порог 50 ₽</span></div>
 <ul class="tguar">
-<li>Выводы замерены на реальных заявках кошельком</li>
-<li>Сеть и комиссия сверены в кассе перед отправкой</li>
-<li>Лицензия проверена по реестру Curaçao</li>
+<li>Бонус активируется по нашей ссылке — без промокода</li>
+<li>Крипто-выплаты и СБП, низкий порог входа от 50 ₽</li>
+<li>Позиция №1 — по совокупности бонусов, выплат и надёжности</li>
 </ul>
 </aside>
 </div>
@@ -812,19 +813,22 @@ window.addEventListener('load',function(){
 <span class="cx-kick">Топ-6 · сентябрь 2026</span>
 <h2>Топ крипто-казино 2026: <span class="g-lime">рейтинг по скорости вывода в крипте</span></h2>
 </div>
-<p class="rv">Список отранжирован по крипто-кассе: реальное время вывода в TRC-20/ERC-20/BTC и то, считает ли площадка в USDT без лишней конвертации. Цифра рядом с брендом — скорость криптовывода по нашим замерам, оценка — средневзвешенный балл по шести крипто-критериям. По совокупности каталога 7K сильнее, но под чистую крипту первым идёт Leebet — он на USDT и заточен.</p>
+<p class="rv">Это подборка редакции по совокупности бонусов, скорости выплат и надёжности крипто-кассы — не строго по одной цифре. Первым идёт <b>Spinto</b>: низкий порог 50 ₽, бонус 200% + 150 FS без промокода и выплаты в крипте и по СБП. Цифра рядом с брендом — скорость криптовывода по нашим замерам, оценка — средневзвешенный балл по крипто-критериям. Если важны именно минуты на выводе крипты, быстрее прочих Leebet (USDT TRC-20) и 7K.</p>
 <div class="cx-rate">
 <article class="cx-card r1 rv">
 <div class="rkw"><span class="cx-medal g">1</span></div>
 <div class="cx-mid">
-<div class="bn">Leebet</div>
-<span class="bt">Лучшее за — крипто-фокус: касса считает в USDT</span>
-<div class="prm"><span>USDT TRC-20 <b>~20 мин</b></span><span>Бонус <b>150% до 1000 USDT</b></span><span>Монеты <b>USDT/BTC/ETH</b></span></div>
+<div class="bn">Spinto <span style="font-weight:600;color:var(--mu);font-size:12px">· выбор редакции</span></div>
+<span class="bt">Лучшее за — бонус, низкий порог и выплаты в крипте</span>
+<div class="prm"><span>Выплаты <b>крипта/СБП, до 1 ч</b></span><span>Бонус <b>200% + 150 FS</b></span><span>Мин. депозит <b>50 ₽</b></span></div>
 </div>
 <div class="cx-right">
-<div class="cx-thr"><div class="n">~20 мин</div><div class="k">USDT TRC-20</div></div>
-<div class="cx-sccol"><span class="cx-score">9.7</span><span class="cx-sbar"><i data-score="9.7"></i></span></div>
-<a class="cx-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+<div class="cx-thr"><div class="n">до 1 ч</div><div class="k">крипта/СБП</div></div>
+<div class="cx-sccol"><span class="cx-score">9.8</span><span class="cx-sbar"><i data-score="9.8"></i></span></div>
+<div class="cx-acts">
+<a class="cx-go rev" href="/casino/spinto/">Обзор</a>
+<a class="cx-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="cx-card r2 rv">
@@ -837,24 +841,14 @@ window.addEventListener('load',function(){
 <div class="cx-right">
 <div class="cx-thr"><div class="n">до 30 мин</div><div class="k">крипта</div></div>
 <div class="cx-sccol"><span class="cx-score">9.6</span><span class="cx-sbar"><i data-score="9.6"></i></span></div>
+<div class="cx-acts">
+<a class="cx-go rev" href="/casino/7k/">Обзор</a>
 <a class="cx-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 <article class="cx-card r3 rv">
 <div class="rkw"><span class="cx-medal">3</span></div>
-<div class="cx-mid">
-<div class="bn">Spinto <span style="font-weight:600;color:var(--mu);font-size:12px">· минимальный KYC</span></div>
-<span class="bt">Лучшее за — крипто-касса на свежей площадке</span>
-<div class="prm"><span>USDT <b>~40 мин</b></span><span>Бонус <b>200% + 150 FS</b></span><span>Верификация <b>минимальная</b></span></div>
-</div>
-<div class="cx-right">
-<div class="cx-thr"><div class="n">~40 мин</div><div class="k">USDT</div></div>
-<div class="cx-sccol"><span class="cx-score">9.5</span><span class="cx-sbar"><i data-score="9.5"></i></span></div>
-<a class="cx-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="cx-card r4 rv">
-<div class="rkw"><span class="cx-medal">4</span></div>
 <div class="cx-mid">
 <div class="bn">1win</div>
 <span class="bt">Лучшее за — крипта рядом с 12 000+ игр и ставками</span>
@@ -863,24 +857,14 @@ window.addEventListener('load',function(){
 <div class="cx-right">
 <div class="cx-thr"><div class="n">USDT/BTC</div><div class="k">после KYC ровно</div></div>
 <div class="cx-sccol"><span class="cx-score">9.4</span><span class="cx-sbar"><i data-score="9.4"></i></span></div>
+<div class="cx-acts">
+<a class="cx-go rev" href="/casino/1win/">Обзор</a>
 <a class="cx-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
 </div>
-</article>
-<article class="cx-card r5 rv">
-<div class="rkw"><span class="cx-medal">5</span></div>
-<div class="cx-mid">
-<div class="bn">APEX</div>
-<span class="bt">Лучшее за — самый крупный старт в подборке</span>
-<div class="prm"><span>Крипта <b>в срок</b></span><span>Бонус <b>375% + 225 FS</b></span><span>Есть <b>и СБП</b></span></div>
-</div>
-<div class="cx-right">
-<div class="cx-thr"><div class="n">в срок</div><div class="k">крипта/СБП</div></div>
-<div class="cx-sccol"><span class="cx-score">9.2</span><span class="cx-sbar"><i data-score="9.2"></i></span></div>
-<a class="cx-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
 </div>
 </article>
-<article class="cx-card r6 rv">
-<div class="rkw"><span class="cx-medal">6</span></div>
+<article class="cx-card r4 rv">
+<div class="rkw"><span class="cx-medal">4</span></div>
 <div class="cx-mid">
 <div class="bn">Banda</div>
 <span class="bt">Лучшее за — фриспины и турниры, крипта на вывод</span>
@@ -889,22 +873,57 @@ window.addEventListener('load',function(){
 <div class="cx-right">
 <div class="cx-thr"><div class="n">не быстрая</div><div class="k">крипта на вывод</div></div>
 <div class="cx-sccol"><span class="cx-score">9.0</span><span class="cx-sbar"><i data-score="9.0"></i></span></div>
+<div class="cx-acts">
+<a class="cx-go rev" href="/casino/banda/">Обзор</a>
 <a class="cx-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+</div>
+</div>
+</article>
+<article class="cx-card r5 rv">
+<div class="rkw"><span class="cx-medal">5</span></div>
+<div class="cx-mid">
+<div class="bn">Leebet</div>
+<span class="bt">Лучшее за — крипто-фокус: касса считает в USDT</span>
+<div class="prm"><span>USDT TRC-20 <b>~20 мин</b></span><span>Бонус <b>150% до 1000 USDT</b></span><span>Монеты <b>USDT/BTC/ETH</b></span></div>
+</div>
+<div class="cx-right">
+<div class="cx-thr"><div class="n">~20 мин</div><div class="k">USDT TRC-20</div></div>
+<div class="cx-sccol"><span class="cx-score">9.7</span><span class="cx-sbar"><i data-score="9.7"></i></span></div>
+<div class="cx-acts">
+<a class="cx-go rev" href="/casino/leebet/">Обзор</a>
+<a class="cx-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+</div>
+</div>
+</article>
+<article class="cx-card r6 rv">
+<div class="rkw"><span class="cx-medal">6</span></div>
+<div class="cx-mid">
+<div class="bn">APEX</div>
+<span class="bt">Лучшее за — самый крупный старт в подборке</span>
+<div class="prm"><span>Крипта <b>в срок</b></span><span>Бонус <b>375% + 225 FS</b></span><span>Есть <b>и СБП</b></span></div>
+</div>
+<div class="cx-right">
+<div class="cx-thr"><div class="n">в срок</div><div class="k">крипта/СБП</div></div>
+<div class="cx-sccol"><span class="cx-score">9.2</span><span class="cx-sbar"><i data-score="9.2"></i></span></div>
+<div class="cx-acts">
+<a class="cx-go rev" href="/casino/apex/">Обзор</a>
+<a class="cx-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+</div>
 </div>
 </article>
 </div>
 <h3 class="rv">Крипто-казино по скорости и удобству вывода в крипте</h3>
 <div class="cx-tbox cx-scroll rv" style="margin:12px 0 0">
 <table class="cx-t mfit">
-<caption>Скорость криптовывода — по замерам редакции на реальных заявках; сортировка — по крипто-оценке. Мин. депозит в пересчёте на рубли.</caption>
+<caption>Подборка редакции по совокупности бонусов, скорости выплат и надёжности; скорость криптовывода — по замерам на реальных заявках. Мин. депозит в пересчёте на рубли.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Крипто-вывод</th><th>Мин. депозит</th><th>Оценка</th><th>Бонус в крипте</th></tr></thead>
 <tbody>
-<tr><td class="cx-rub mfit-num" data-label="">1</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">Leebet</span><span class="cx-line2"><span class="cx-best" style="--rc:#37e0c8">Лучшее за — USDT напрямую</span><span class="cx-ed">№1</span></span></td><td data-label="Крипто-вывод"><span class="cx-mono">USDT TRC-20 ~20 мин</span>, комиссия копеечная</td><td data-label="Мин. депозит"><span class="cx-pill dep-y">100 ₽</span></td><td data-label="Оценка"><span class="neon">9.7</span></td><td data-label="Бонус в крипте">150% до 1000 USDT</td></tr>
+<tr><td class="cx-rub mfit-num" data-label="">1</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">Spinto</span><span class="cx-line2"><span class="cx-best" style="--rc:#37e0c8">Лучшее за — бонус и низкий порог</span><span class="cx-ed">№1</span></span></td><td data-label="Крипто-вывод">крипта и СБП, выплаты до 1 ч</td><td data-label="Мин. депозит"><span class="cx-pill dep-g">50 ₽</span></td><td data-label="Оценка"><span class="neon">9.8</span></td><td data-label="Бонус в крипте">200% + 150 FS</td></tr>
 <tr><td class="cx-rub mfit-num" data-label="">2</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">7K Casino</span><span class="cx-line2"><span class="cx-best" style="--rc:#b8ff2b">Лучшее за — крипта + быстрый фиат</span></span></td><td data-label="Крипто-вывод">крипта до 30 мин, СБП/карта тоже есть</td><td data-label="Мин. депозит"><span class="cx-pill dep-g">50 ₽</span></td><td data-label="Оценка"><span class="neon">9.6</span></td><td data-label="Бонус в крипте">225% + 200 FS</td></tr>
-<tr><td class="cx-rub mfit-num" data-label="">3</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">Spinto</span><span class="cx-line2"><span class="cx-best" style="--rc:#6cc4ff">Лучшее за — минимальный KYC</span></span></td><td data-label="Крипто-вывод"><span class="cx-mono">USDT ~40 мин</span>, верификация минимальная</td><td data-label="Мин. депозит"><span class="cx-pill dep-g">50 ₽</span></td><td data-label="Оценка"><span class="neon">9.5</span></td><td data-label="Бонус в крипте">200% + 150 FS</td></tr>
-<tr><td class="cx-rub mfit-num" data-label="">4</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">1win</span><span class="cx-line2"><span class="cx-best" style="--rc:#6cc4ff">Лучшее за — крипта + ставки</span></span></td><td data-label="Крипто-вывод">крипта в кабинете, на крупных суммах KYC</td><td data-label="Мин. депозит"><span class="cx-pill dep-g">50 ₽</span></td><td data-label="Оценка"><span class="neon">9.4</span></td><td data-label="Бонус в крипте">500% до 200 000 ₽</td></tr>
-<tr><td class="cx-rub mfit-num" data-label="">5</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">APEX</span><span class="cx-line2"><span class="cx-best" style="--rc:#ffcf3f">Лучшее за — крупный старт</span></span></td><td data-label="Крипто-вывод">крипта в заявленный срок, есть и СБП</td><td data-label="Мин. депозит"><span class="cx-pill dep-y">100 ₽</span></td><td data-label="Оценка"><span class="neon">9.2</span></td><td data-label="Бонус в крипте">375% + 225 FS</td></tr>
-<tr><td class="cx-rub mfit-num" data-label="">6</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">Banda</span><span class="cx-line2"><span class="cx-best" style="--rc:#a879ff">Лучшее за — фриспины и турниры</span></span></td><td data-label="Крипто-вывод">крипта на вывод, касса не самая быстрая</td><td data-label="Мин. депозит"><span class="cx-pill dep-y">100 ₽</span></td><td data-label="Оценка"><span class="neon">9.0</span></td><td data-label="Бонус в крипте">100% + 500 FS</td></tr>
+<tr><td class="cx-rub mfit-num" data-label="">3</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">1win</span><span class="cx-line2"><span class="cx-best" style="--rc:#6cc4ff">Лучшее за — крипта + ставки</span></span></td><td data-label="Крипто-вывод">крипта в кабинете, на крупных суммах KYC</td><td data-label="Мин. депозит"><span class="cx-pill dep-g">50 ₽</span></td><td data-label="Оценка"><span class="neon">9.4</span></td><td data-label="Бонус в крипте">500% до 200 000 ₽</td></tr>
+<tr><td class="cx-rub mfit-num" data-label="">4</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">Banda</span><span class="cx-line2"><span class="cx-best" style="--rc:#a879ff">Лучшее за — фриспины и турниры</span></span></td><td data-label="Крипто-вывод">крипта на вывод, касса не самая быстрая</td><td data-label="Мин. депозит"><span class="cx-pill dep-y">100 ₽</span></td><td data-label="Оценка"><span class="neon">9.0</span></td><td data-label="Бонус в крипте">100% + 500 FS</td></tr>
+<tr><td class="cx-rub mfit-num" data-label="">5</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">Leebet</span><span class="cx-line2"><span class="cx-best" style="--rc:#37e0c8">Лучшее за — USDT напрямую</span></span></td><td data-label="Крипто-вывод"><span class="cx-mono">USDT TRC-20 ~20 мин</span>, комиссия копеечная</td><td data-label="Мин. депозит"><span class="cx-pill dep-y">100 ₽</span></td><td data-label="Оценка"><span class="neon">9.7</span></td><td data-label="Бонус в крипте">150% до 1000 USDT</td></tr>
+<tr><td class="cx-rub mfit-num" data-label="">6</td><td class="cx-bc" data-label="Казино"><span class="cx-bn">APEX</span><span class="cx-line2"><span class="cx-best" style="--rc:#ffcf3f">Лучшее за — крупный старт</span></span></td><td data-label="Крипто-вывод">крипта в заявленный срок, есть и СБП</td><td data-label="Мин. депозит"><span class="cx-pill dep-y">100 ₽</span></td><td data-label="Оценка"><span class="neon">9.2</span></td><td data-label="Бонус в крипте">375% + 225 FS</td></tr>
 </tbody>
 </table>
 </div>
@@ -1060,63 +1079,63 @@ window.addEventListener('load',function(){
 </div>
 <div class="cx-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-cyan">1. Leebet <span>крипто-фокус, касса считает в USDT</span></div><div class="sc">9.7 / 10</div></div>
-<p>Leebet изначально сделан под крипту — USDT и BTC тут не довесок, а основной канал. TRC-20 у меня уходил примерно за 20 минут, сетевая комиссия копеечная, а заявку не гоняли по кругу ручной модерации. Бонус 150% считается в USDT, до 1000 USDT — удобно, если банк вы вообще не трогаете. Фиатных методов меньше, но для крипто-игрока это плюс, а не минус.</p>
+<div class="rh"><div class="nm c-cyan">1. Spinto <span>выбор редакции — бонус и низкий порог</span></div><div class="sc">9.8 / 10</div></div>
+<p>Spinto — наш выбор №1: сильный старт 200% + 150 фриспинов при пороге всего 50 ₽ и честном вейджере x35, а бонус активируется по нашей ссылке без промокода. Выплаты идут и в крипте, и по СБП, и укладываются в час; верификация минимальная, поэтому первый вывод не упирается в документы. Курс на выводе не режут. Длинной истории у молодого бренда пока нет — тестируйте вывод малым чеком, но по совокупности условий это лидер подборки.</p>
 <div class="cx-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Заточен под USDT и BTC — крипта основной канал</li><li>USDT TRC-20 около 20 минут, комиссия копеечная</li><li>Бонус 150% до 1000 USDT считается сразу в крипте</li><li>Заявка без ручной перепроверки</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Фиатных методов меньше — упор на крипту</li><li>Порог входа 100 ₽, а не 50 ₽</li><li>Бонус в USDT, для рублёвого игрока нагляднее рубли</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Бонус 200% + 150 FS без промокода — по ссылке</li><li>Низкий порог входа 50 ₽, вейджер x35</li><li>Выплаты в крипте и по СБП, до часа</li><li>Верификация минимальная</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — многолетней статистики выплат ещё нет</li><li>По чистой скорости крипты уступает Leebet и 7K</li></ul></div>
 </div>
-<div class="cx-facts"><span class="thr">USDT TRC-20: ~20 мин</span><span>Монеты: <b>USDT/BTC/ETH</b></span><span>Депозит: <b>100 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/leebet">Полный обзор Leebet →</a></div>
+<div class="cx-facts"><span class="thr">Выплаты: до 1 ч</span><span>Методы: <b>крипта · СБП</b></span><span>Депозит: <b>50 ₽</b></span><span>Вейджер: <b>x35</b></span><a href="/casino/spinto/">Полный обзор Spinto →</a></div>
 </div>
 <div class="cx-rev rv">
 <span aria-hidden="true" class="wm">02</span>
 <div class="rh"><div class="nm c-neon">2. 7K Casino <span>крипта и быстрый фиат</span></div><div class="sc">9.6 / 10</div></div>
-<p>7K берёт крипту не хуже фиата: криптовывод укладывается до 30 минут, а на малых суммах паспорт не спрашивают — первый вывод не буксует на верификации. Здесь же живут СБП и карта от 15 минут, так что крипта — один из нескольких быстрых каналов, а не единственный. Порог 50 ₽ позволяет проверить крипто-кассу почти без риска. По совокупности каталога это сильнейшая площадка подборки.</p>
+<p>7K берёт крипту не хуже фиата: криптовывод укладывается до 30 минут, а на малых суммах паспорт не спрашивают — первый вывод не буксует на верификации. Здесь же живут СБП и карта от 15 минут, так что крипта — один из нескольких быстрых каналов, а не единственный. Порог 50 ₽ позволяет проверить крипто-кассу почти без риска. По совокупности каталога это одна из сильнейших площадок подборки.</p>
 <div class="cx-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Крипта до 30 минут, KYC на малых суммах не нужен</li><li>Порог 50 ₽ — кассу проверяешь за копейки</li><li>Рядом с криптой есть СБП и карта от 15 минут</li><li>Кэшбэк до 20% по понедельникам</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Чистого крипто-упора, как у Leebet, нет — площадка универсальная</li><li>Бонусные средства до отыгрыша не вывести</li></ul></div>
 </div>
-<div class="cx-facts"><span class="thr">Крипта: до 30 мин</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
+<div class="cx-facts"><span class="thr">Крипта: до 30 мин</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/7k/">Полный обзор 7K →</a></div>
 </div>
 <div class="cx-rev rv">
 <span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="nm c-sky">3. Spinto <span>минимальный KYC на свежей площадке</span></div><div class="sc">9.5 / 10</div></div>
-<p>Spinto запустился в 2026-м, но крипто-касса уже держит темп: USDT приходил примерно за 40 минут, СБП укладывался в час. Верификация минимальная, поэтому первый криптовывод не упирается в документы. Курс на выводе не резали. Длинной истории выплат у бренда пока нет — единственная причина держать крупную сумму под контролем и тестировать вывод малым чеком.</p>
-<div class="cx-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>USDT около 40 минут, верификация минимальная</li><li>Считает в USDT напрямую, курс не режут</li><li>Порог входа 50 ₽</li><li>Запасной СБП меньше часа</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — многолетней статистики криптовыплат ещё нет</li><li>По скорости USDT уступает Leebet и 7K</li></ul></div>
-</div>
-<div class="cx-facts"><span class="thr">USDT: ~40 мин</span><span>Монеты: <b>USDT</b></span><span>Депозит: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
-</div>
-<div class="cx-rev rv">
-<span aria-hidden="true" class="wm">04</span>
-<div class="rh"><div class="nm c-silv">4. 1win <span>крипта рядом со ставками</span></div><div class="sc">9.4 / 10</div></div>
+<div class="rh"><div class="nm c-sky">3. 1win <span>крипта рядом со ставками</span></div><div class="sc">9.4 / 10</div></div>
 <p>1win держит крипту и карту в одном кабинете, рядом с 12 000+ игр и ставками. На крупных суммах включается KYC — это добавляет время на первую выплату, зато повторные криптовыводы идут ровнее. Удобно, что деньги не нужно гонять между сервисами: занёс крипту, играешь, выводишь в крипте оттуда же.</p>
 <div class="cx-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Крипта и карта в одном кабинете с 12 000+ игр</li><li>После KYC повторные криптовыводы стабильны</li><li>Бонус на 4 депозита, 500% до 200 000 ₽</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>На крупных суммах KYC растягивает первый вывод</li><li>Чистого крипто-фокуса нет — площадка широкого профиля</li></ul></div>
 </div>
-<div class="cx-facts"><span class="thr">Крипта в кабинете</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
+<div class="cx-facts"><span class="thr">Крипта в кабинете</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>50 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/1win/">Полный обзор 1win →</a></div>
+</div>
+<div class="cx-rev rv">
+<span aria-hidden="true" class="wm">04</span>
+<div class="rh"><div class="nm c-silv">4. Banda <span>фриспины и турниры, крипта на вывод</span></div><div class="sc">9.0 / 10</div></div>
+<p>Banda замыкает середину подборки. Крипту на вывод принимает, но заточена площадка не под мгновенную кассу, а под 500 фриспинов на старте и еженедельные турниры с призовым. Если приоритет — забрать USDT за минуты, берите Leebet или 7K. Banda имеет смысл, когда турнирная сетка важнее скорости криптовывода.</p>
+<div class="cx-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Крипта на вывод, 500 фриспинов на старте</li><li>Еженедельные турниры с призовым</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Касса не из быстрых — по крипте проигрывает Leebet и 7K</li><li>Минимум 100 ₽, а не 50 ₽</li></ul></div>
+</div>
+<div class="cx-facts"><span class="thr">Крипта на вывод</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>100 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/banda/">Полный обзор Banda →</a></div>
 </div>
 <div class="cx-rev rv">
 <span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-gold">5. APEX <span>самый крупный старт</span></div><div class="sc">9.2 / 10</div></div>
+<div class="rh"><div class="nm c-gold">5. Leebet <span>крипто-фокус, касса считает в USDT</span></div><div class="sc">9.7 / 10</div></div>
+<p>Leebet изначально сделан под крипту — USDT и BTC тут не довесок, а основной канал. TRC-20 у меня уходил примерно за 20 минут, сетевая комиссия копеечная, а заявку не гоняли по кругу ручной модерации. Бонус 150% считается в USDT, до 1000 USDT — удобно, если банк вы вообще не трогаете. Фиатных методов меньше, но для крипто-игрока это плюс, а не минус. По чистой скорости крипты — самый быстрый в подборке.</p>
+<div class="cx-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Заточен под USDT и BTC — крипта основной канал</li><li>USDT TRC-20 около 20 минут, комиссия копеечная</li><li>Бонус 150% до 1000 USDT считается сразу в крипте</li><li>Заявка без ручной перепроверки</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Фиатных методов меньше — упор на крипту</li><li>Порог входа 100 ₽, а не 50 ₽</li><li>Бонус в USDT, для рублёвого игрока нагляднее рубли</li></ul></div>
+</div>
+<div class="cx-facts"><span class="thr">USDT TRC-20: ~20 мин</span><span>Монеты: <b>USDT/BTC/ETH</b></span><span>Депозит: <b>100 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/leebet/">Полный обзор Leebet →</a></div>
+</div>
+<div class="cx-rev rv">
+<span aria-hidden="true" class="wm">06</span>
+<div class="rh"><div class="nm c-viol">6. APEX <span>самый крупный старт</span></div><div class="sc">9.2 / 10</div></div>
 <p>APEX принимает крипту наравне с СБП и отдаёт в заявленный срок — задержек за тест я не ловил. Точный тайминг зависит от монеты и суммы, но заявки не висят сутками на ручной модерации. Стартовый бонус тут самый крупный в подборке — 375% плюс 225 фриспинов, поэтому отыгрыш перед первым криптовыводом стоит прикинуть заранее.</p>
 <div class="cx-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Крипта в заявленный срок, есть и СБП</li><li>Самый крупный старт — 375% + 225 FS</li><li>Заявки без суточного простоя</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Конкретный крипто-тайминг не так прозрачен, как у Leebet</li><li>Порог входа 100 ₽</li><li>Крупный бонус — длиннее отыгрыш до вывода</li></ul></div>
 </div>
-<div class="cx-facts"><span class="thr">Крипта в срок</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>100 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/apex">Полный обзор APEX →</a></div>
-</div>
-<div class="cx-rev rv">
-<span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-viol">6. Banda <span>фриспины и турниры, крипта на вывод</span></div><div class="sc">9.0 / 10</div></div>
-<p>Banda честно замыкает список по скорости. Крипту на вывод принимает, но заточена площадка не под мгновенную кассу, а под 500 фриспинов на старте и еженедельные турниры с призовым. Если приоритет — забрать USDT за минуты, берите Leebet или 7K. Banda имеет смысл, когда турнирная сетка важнее скорости криптовывода.</p>
-<div class="cx-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Крипта на вывод, 500 фриспинов на старте</li><li>Еженедельные турниры с призовым</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Касса не из быстрых — по крипте проигрывает Leebet и 7K</li><li>Минимум 100 ₽, а не 50 ₽</li></ul></div>
-</div>
-<div class="cx-facts"><span class="thr">Крипта на вывод</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>100 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/banda">Полный обзор Banda →</a></div>
+<div class="cx-facts"><span class="thr">Крипта в срок</span><span>Монеты: <b>USDT/BTC</b></span><span>Депозит: <b>100 ₽</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/apex/">Полный обзор APEX →</a></div>
 </div>
 </section>
 <!-- ===== H2 #9 BTC ===== -->
@@ -1504,12 +1523,12 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: какие монеты и сети работают, скорость криптовывода по замерам, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="cx-brands rv" id="cxBrandsGrid"></div>
 <ul class="cx-seo-links">
-<li><a href="/casino/leebet">Обзор казино Leebet — крипта USDT/BTC</a></li>
-<li><a href="/casino/7k">Обзор казино 7K Casino — крипта до 30 мин</a></li>
-<li><a href="/casino/spinto">Обзор казино Spinto — USDT, минимальный KYC</a></li>
-<li><a href="/casino/1win">Обзор казино 1win — крипта и ставки</a></li>
-<li><a href="/casino/apex">Обзор казино APEX — крупный крипто-бонус</a></li>
-<li><a href="/casino/banda">Обзор казино Banda — фриспины и турниры</a></li>
+<li><a href="/casino/spinto/">Обзор казино Spinto — выбор редакции, бонус по ссылке</a></li>
+<li><a href="/casino/7k/">Обзор казино 7K Casino — крипта до 30 мин</a></li>
+<li><a href="/casino/1win/">Обзор казино 1win — крипта и ставки</a></li>
+<li><a href="/casino/banda/">Обзор казино Banda — фриспины и турниры</a></li>
+<li><a href="/casino/leebet/">Обзор казино Leebet — крипта USDT/BTC</a></li>
+<li><a href="/casino/apex/">Обзор казино APEX — крупный крипто-бонус</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
 <div class="cx-links rv">
@@ -1584,16 +1603,16 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"Leebet",     c:"#37e0c8", c2:"#12a892", s:"9.7", d:"крипто-фокус, USDT напрямую · TRC-20 ~20 мин", h:"/casino/leebet"},
+    {n:"Spinto",     c:"#37e0c8", c2:"#12a892", s:"9.8", d:"выбор редакции · бонус по ссылке, крипта/СБП", h:"/casino/spinto"},
     {n:"7K Casino",  c:"#b8ff2b", c2:"#8fd400", s:"9.6", d:"крипта до 30 мин + быстрый фиат",             h:"/casino/7k"},
-    {n:"Spinto",     c:"#6cc4ff", c2:"#2a86e0", s:"9.5", d:"USDT ~40 мин, минимальный KYC",               h:"/casino/spinto"},
-    {n:"1win",       c:"#e6eaf3", c2:"#a9b1c6", s:"9.4", d:"крипта рядом с 12 000+ игр и ставками",        h:"/casino/1win"},
-    {n:"APEX",       c:"#ffcf3f", c2:"#e0952f", s:"9.2", d:"самый крупный старт — 375% + 225 FS",          h:"/casino/apex"},
+    {n:"1win",       c:"#6cc4ff", c2:"#2a86e0", s:"9.4", d:"крипта рядом с 12 000+ игр и ставками",        h:"/casino/1win"},
     {n:"Banda",      c:"#a879ff", c2:"#7d4fd6", s:"9.0", d:"фриспины и турниры, крипта на вывод",          h:"/casino/banda"},
-    {n:"Izzi",       c:"#c8ff5a", c2:"#8fd400", s:"8.9", d:"простой вход и крипта USDT/BTC",               h:"/casino/izzi"},
+    {n:"Leebet",     c:"#e6eaf3", c2:"#a9b1c6", s:"9.7", d:"крипто-фокус, USDT напрямую · TRC-20 ~20 мин", h:"/casino/leebet"},
+    {n:"APEX",       c:"#ffcf3f", c2:"#e0952f", s:"9.2", d:"самый крупный старт — 375% + 225 FS",          h:"/casino/apex"},
     {n:"Starda",     c:"#ffa63d", c2:"#e07a12", s:"8.8", d:"крипта на вывод, live Evolution",             h:"/casino/starda"},
-    {n:"Kent Casino",c:"#ff2e93", c2:"#c81f6f", s:"8.7", d:"крипта и СБП, простой кабинет",               h:"/casino/kent"},
-    {n:"Sol Casino", c:"#37e0c8", c2:"#12a892", s:"8.6", d:"7 000+ слотов, USDT наравне с рублём",         h:"/casino/sol"}
+    {n:"Sol Casino", c:"#37e0c8", c2:"#12a892", s:"8.6", d:"7 000+ слотов, USDT наравне с рублём",         h:"/casino/sol"},
+    {n:"Izzi",       c:"#c8ff5a", c2:"#8fd400", s:"8.9", d:"простой вход и крипта USDT/BTC",               h:"/casino/izzi"},
+    {n:"Kent Casino",c:"#ff2e93", c2:"#c81f6f", s:"8.7", d:"крипта и СБП, простой кабинет",               h:"/casino/kent"}
   ];
   var SLOTS = [
     {n:"Gates of Olympus 1000",        pv:"Pragmatic Play",      rtp:"96.5",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png", h:"/slots/gates-of-olympus-1000"},
@@ -1720,12 +1739,12 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 6,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
         {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":3,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
-        {"@type":"ListItem","position":4,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":5,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"},
-        {"@type":"ListItem","position":6,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"}
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
+        {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
+        {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
+        {"@type":"ListItem","position":6,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"}
       ]
     },
     {

@@ -271,6 +271,9 @@
   .cb-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(184,255,43,.7);color:#0a1200}
   .cb-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .cb-go:hover::after{animation:cb-shim .85s var(--ez)}
+  .cb-acts{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+  .cb-go2{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.04);border:1px solid var(--hair2);color:var(--tx);font-weight:800;padding:11px 16px;border-radius:11px;font-size:13.5px;white-space:nowrap;transition:transform .18s,border-color .18s,color .18s}
+  .cb-go2:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--c) 60%,var(--hair2));color:var(--c)}
   .cb-card.r1{--c:var(--gold);--c2:#e0952f;--ct:#231600;background:linear-gradient(120deg,rgba(255,207,63,.1),var(--pan) 72%)}
   .cb-card.r2{--c:var(--neon);--c2:var(--neon-d);--ct:#0a1200}
   .cb-card.r3{--c:var(--cyan);--c2:#12a892;--ct:#04231e}
@@ -726,7 +729,7 @@ window.addEventListener('load',function(){
 <span class="cb-brow rv" style="--d:.02s"><b>PlayCasino</b> · возврат сверял кассой · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Казино с <span class="g-neon">кэшбэком</span> — где возврат приходит <span class="g-cyan">деньгами</span>, а не бонусом с <span class="g-hot">отыгрышем</span></h1>
 <p class="cb-lead rv" style="--d:.16s">
-          Лучший кэшбэк в подборке — у <span class="hl-gold">7K</span>: до <b>20%</b> от проигрыша начисляют живыми деньгами на баланс по понедельникам, а не бонусом. Решает форма возврата, а не голый процент: <b>20% бонусом с отыгрышем x40</b> на деле дешевле, чем <span class="hl-cyan">10% деньгами</span>. Ниже — где кэшбэк реально забираешь и выводишь, где он тонет в вейджере, и чем недельный возврат отличается от <span class="hl-neon">ежедневного</span> и <span class="hl-viol">VIP</span>-ставки.
+          Выбор редакции по кэшбэку — <span class="hl-neon">Spinto</span>: ежедневный возврат живыми деньгами без вейджера, начисление каждое утро за вчерашний минус, порог входа <b>50 ₽</b> и оценка <b>9.8</b>. Следом — <span class="hl-gold">7K</span> с недельными до <b>20%</b> по понедельникам. Решает форма возврата, а не голый процент: <b>20% бонусом с отыгрышем x40</b> на деле дешевле, чем возврат <span class="hl-cyan">деньгами</span> без условий. Ниже — где кэшбэк реально забираешь и выводишь, где он тонет в вейджере, и чем <span class="hl-neon">ежедневный</span> возврат отличается от недельного и <span class="hl-viol">VIP</span>-ставки.
         </p>
 <div class="cb-scale rv" style="--d:.2s">
 <div class="track"><span class="fill" data-w="100"></span></div>
@@ -748,34 +751,34 @@ window.addEventListener('load',function(){
 </div>
 </div>
 <aside class="cb-slip rv" style="--d:.2s">
-<span class="cb-ribbon neon">Выбор редакции</span>
-<div class="cb-chip-oh"><div class="cv">9.9</div><div class="cl">балл из 10</div></div>
+<span class="cb-ribbon neon">Выбор редакции · №1</span>
+<div class="cb-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">%</span>
-<div class="tag">Выписка кэшбэка · лидер по возврату</div>
-<div class="bn">7K Casino</div>
-<div class="bs">до 20% от проигрыша · по понедельникам · деньгами</div>
+<div class="tag">Ежедневный кэшбэк · лидер подборки</div>
+<div class="bn">Spinto</div>
+<div class="bs">возврат живыми деньгами каждый день · без вейджера</div>
 <div class="cb-calc">
-<div class="cr"><span>Проигрыш за неделю (нетто)</span><b>10 000 ₽</b></div>
-<div class="cr"><span>Ставка кэшбэка по статусу</span><b>20%</b></div>
-<div class="cr res"><span>Возврат в понедельник</span><span class="rv2">2 000 ₽</span></div>
+<div class="cr"><span>Приветственный бонус</span><b>200% + 150 FS</b></div>
+<div class="cr"><span>Вейджер бонуса</span><b>x35</b></div>
+<div class="cr res"><span>Минимальный депозит</span><span class="rv2">50 ₽</span></div>
 </div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
 <div class="line"><span>Форма возврата</span><i class="dts"></i><span class="val hl-neon">живыми деньгами</span></div>
 <div class="line"><span>Вейджер на кэшбэк</span><i class="dts"></i><span class="val hl-cyan">нет</span></div>
-<div class="line"><span>Период начисления</span><i class="dts"></i><span class="val hl-gold">недельный, пн</span></div>
-<div class="line"><span>База расчёта</span><i class="dts"></i><span class="val hl-sky">нетто-минус</span></div>
+<div class="line"><span>Период начисления</span><i class="dts"></i><span class="val hl-gold">ежедневный</span></div>
+<div class="line"><span>Приветственный</span><i class="dts"></i><span class="val hl-gold">200% + 150 FS</span></div>
+<div class="line"><span>Вейджер бонуса</span><i class="dts"></i><span class="val hl-neon">x35</span></div>
 <div class="line"><span>Порог входа</span><i class="dts"></i><span class="val hl-neon">50 ₽</span></div>
-<div class="line"><span>Приветственный</span><i class="dts"></i><span class="val hl-gold">225% + 200 FS</span></div>
-<div class="line"><span>Вывод возврата</span><i class="dts"></i><span class="val hl-cyan">СБП от 15 минут</span></div>
-<div class="line"><span>Лицензия</span><i class="dts"></i><span class="val hl-sky">Curaçao</span></div>
+<div class="line"><span>Выплаты</span><i class="dts"></i><span class="val hl-cyan">СБП, крипта · до 1 ч</span></div>
+<div class="line"><span>Оценка редакции</span><i class="dts"></i><span class="val hl-sky">9.8</span></div>
 </div>
-<a class="cb-btn cb-btn-neon" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:6px">Забрать кэшбэк в 7K</a>
-<div class="foot"><span>Возврат деньгами</span><span>Без отыгрыша</span><span>СБП · USDT</span></div>
+<a class="cb-btn cb-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:6px">Забрать бонус в Spinto</a>
+<div class="foot"><span>Возврат деньгами</span><span>Ежедневно</span><span>СБП · крипта</span></div>
 <ul class="tguar">
-<li>Возврат проверен собственным проигрышем</li>
-<li>Форма и процент сверены в кабинете</li>
-<li>Срок начисления замерен редакцией</li>
+<li>Форму возврата сверяли в личном кабинете</li>
+<li>Условия бонуса и порог взяты из правил</li>
+<li>Сроки выплат замерены редакцией</li>
 </ul>
 </aside>
 </div>
@@ -835,10 +838,23 @@ window.addEventListener('load',function(){
 <span class="cb-kick">Топ-6 · сентябрь 2026</span>
 <h2>Рейтинг казино с кэшбэком 2026: <span class="g-lime">топ-6 по размеру и честности возврата</span></h2>
 </div>
-<p class="rv">Список ранжирован по совокупной оценке, но колонку с кэшбэком мы вынесли вперёд — ради неё вы и открыли страницу. Цифра рядом с брендом — максимальный возврат, который реально приходит на счёт. Выше стоят те, у кого кэшбэк идёт живыми деньгами без отыгрыша: <span class="hl-gold">7K</span> до 20% по понедельникам, <span class="hl-neon">Spinto</span> с ежедневным начислением.</p>
+<p class="rv">Это подборка редакции по совокупности размера и честности возврата — формы кэшбэка, скорости выплат и надёжности, а не строго по числовому баллу. Колонку с кэшбэком мы вынесли вперёд — ради неё вы и открыли страницу. Выше стоят те, у кого возврат идёт живыми деньгами без отыгрыша: <span class="hl-neon">Spinto</span> с ежедневным начислением, <span class="hl-gold">7K</span> до 20% по понедельникам.</p>
 <div class="cb-rate">
 <article class="cb-card r1 rv">
 <div class="rkw"><span class="cb-medal g">1</span></div>
+<div class="cb-mid">
+<div class="bn">Spinto</div>
+<span class="bt">Выбор редакции — ежедневный кэшбэк деньгами без ожидания</span>
+<div class="prm"><span>Форма <b>деньгами, без вейджера</b></span><span>Период <b>ежедневный</b></span><span>Порог <b>50 ₽</b></span></div>
+</div>
+<div class="cb-right">
+<div class="cb-cb"><div class="n">ежедневно</div><div class="k">кэшбэк</div></div>
+<div class="cb-sccol"><span class="cb-score">9.8</span><span class="cb-sbar"><i data-score="9.8"></i></span></div>
+<div class="cb-acts"><a class="cb-go2" href="/casino/spinto/">Обзор</a><a class="cb-go" href="/go/spinto" rel="nofollow sponsored">Играть</a></div>
+</div>
+</article>
+<article class="cb-card r2 rv">
+<div class="rkw"><span class="cb-medal">2</span></div>
 <div class="cb-mid">
 <div class="bn">7K Casino</div>
 <span class="bt">Лучшее за — максимальный возврат деньгами раз в неделю</span>
@@ -847,20 +863,7 @@ window.addEventListener('load',function(){
 <div class="cb-right">
 <div class="cb-cb"><div class="n">до 20%</div><div class="k">кэшбэк</div></div>
 <div class="cb-sccol"><span class="cb-score">9.9</span><span class="cb-sbar"><i data-score="9.9"></i></span></div>
-<a class="cb-go" href="/go/7k" rel="nofollow sponsored">Играть</a>
-</div>
-</article>
-<article class="cb-card r2 rv">
-<div class="rkw"><span class="cb-medal">2</span></div>
-<div class="cb-mid">
-<div class="bn">Spinto</div>
-<span class="bt">Лучшее за — ежедневный кэшбэк без ожидания</span>
-<div class="prm"><span>Форма <b>деньгами, без вейджера</b></span><span>Период <b>ежедневный</b></span><span>Порог <b>50 ₽</b></span></div>
-</div>
-<div class="cb-right">
-<div class="cb-cb"><div class="n">до 10%</div><div class="k">кэшбэк</div></div>
-<div class="cb-sccol"><span class="cb-score">9.8</span><span class="cb-sbar"><i data-score="9.8"></i></span></div>
-<a class="cb-go" href="/go/spinto" rel="nofollow sponsored">Играть</a>
+<div class="cb-acts"><a class="cb-go2" href="/casino/7k/">Обзор</a><a class="cb-go" href="/go/7k" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="cb-card r3 rv">
@@ -873,7 +876,7 @@ window.addEventListener('load',function(){
 <div class="cb-right">
 <div class="cb-cb"><div class="n">~12%</div><div class="k">кэшбэк</div></div>
 <div class="cb-sccol"><span class="cb-score">9.7</span><span class="cb-sbar"><i data-score="9.7"></i></span></div>
-<a class="cb-go" href="/go/1win" rel="nofollow sponsored">Играть</a>
+<div class="cb-acts"><a class="cb-go2" href="/casino/1win/">Обзор</a><a class="cb-go" href="/go/1win" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="cb-card r4 rv">
@@ -886,7 +889,7 @@ window.addEventListener('load',function(){
 <div class="cb-right">
 <div class="cb-cb"><div class="n">до 15%</div><div class="k">кэшбэк</div></div>
 <div class="cb-sccol"><span class="cb-score">9.6</span><span class="cb-sbar"><i data-score="9.6"></i></span></div>
-<a class="cb-go" href="/go/banda" rel="nofollow sponsored">Играть</a>
+<div class="cb-acts"><a class="cb-go2" href="/casino/banda/">Обзор</a><a class="cb-go" href="/go/banda" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="cb-card r5 rv">
@@ -899,7 +902,7 @@ window.addEventListener('load',function(){
 <div class="cb-right">
 <div class="cb-cb"><div class="n">по статусу</div><div class="k">кэшбэк</div></div>
 <div class="cb-sccol"><span class="cb-score">9.5</span><span class="cb-sbar"><i data-score="9.5"></i></span></div>
-<a class="cb-go" href="/go/leebet" rel="nofollow sponsored">Играть</a>
+<div class="cb-acts"><a class="cb-go2" href="/casino/leebet/">Обзор</a><a class="cb-go" href="/go/leebet" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 <article class="cb-card r6 rv">
@@ -912,18 +915,18 @@ window.addEventListener('load',function(){
 <div class="cb-right">
 <div class="cb-cb"><div class="n">старт+</div><div class="k">кэшбэк</div></div>
 <div class="cb-sccol"><span class="cb-score">9.4</span><span class="cb-sbar"><i data-score="9.4"></i></span></div>
-<a class="cb-go" href="/go/apex" rel="nofollow sponsored">Играть</a>
+<div class="cb-acts"><a class="cb-go2" href="/casino/apex/">Обзор</a><a class="cb-go" href="/go/apex" rel="nofollow sponsored">Играть</a></div>
 </div>
 </article>
 </div>
 <h3 class="rv">Полная таблица топ-6 казино с кэшбэком</h3>
 <div class="cb-tbox cb-scroll rv" style="margin:12px 0 0">
 <table class="cb-t mfit">
-<caption>Форму и процент возврата редакция сверяла в правилах и личных кабинетах; сортировка — по оценке. Валюта — рубли.</caption>
+<caption>Форму и процент возврата редакция сверяла в правилах и личных кабинетах; порядок — подборка редакции по совокупности возврата, а не строго по баллу. Валюта — рубли.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Кэшбэк</th><th>Период</th><th>Форма возврата</th><th>Оценка</th></tr></thead>
 <tbody>
-<tr><td class="cb-rub mfit-num" data-label="">1</td><td class="cb-bc" data-label="Казино"><span class="cb-bn">7K Casino</span><span class="cb-line2"><span class="cb-best" style="--rc:#ffcf3f">Лучшее за — возврат деньгами раз в неделю</span><span class="cb-ed">№1</span></span></td><td data-label="Кэшбэк"><span class="cb-pill pc-hi">до 20%</span></td><td data-label="Период">недельный, пн</td><td data-label="Форма возврата"><span class="cb-pill money">деньгами</span></td><td data-label="Оценка"><span class="neon">9.9</span></td></tr>
-<tr><td class="cb-rub mfit-num" data-label="">2</td><td class="cb-bc" data-label="Казино"><span class="cb-bn">Spinto</span><span class="cb-line2"><span class="cb-best" style="--rc:#b8ff2b">Лучшее за — ежедневный кэшбэк</span></span></td><td data-label="Кэшбэк"><span class="cb-pill pc-mid">до 10%</span></td><td data-label="Период">ежедневный</td><td data-label="Форма возврата"><span class="cb-pill money">деньгами</span></td><td data-label="Оценка"><span class="neon">9.8</span></td></tr>
+<tr><td class="cb-rub mfit-num" data-label="">1</td><td class="cb-bc" data-label="Казино"><span class="cb-bn">Spinto</span><span class="cb-line2"><span class="cb-best" style="--rc:#ffcf3f">Выбор редакции — ежедневный кэшбэк деньгами</span><span class="cb-ed">№1</span></span></td><td data-label="Кэшбэк"><span class="cb-pill money">ежедневно</span></td><td data-label="Период">ежедневный</td><td data-label="Форма возврата"><span class="cb-pill money">деньгами</span></td><td data-label="Оценка"><span class="neon">9.8</span></td></tr>
+<tr><td class="cb-rub mfit-num" data-label="">2</td><td class="cb-bc" data-label="Казино"><span class="cb-bn">7K Casino</span><span class="cb-line2"><span class="cb-best" style="--rc:#b8ff2b">Лучшее за — возврат деньгами раз в неделю</span></span></td><td data-label="Кэшбэк"><span class="cb-pill pc-hi">до 20%</span></td><td data-label="Период">недельный, пн</td><td data-label="Форма возврата"><span class="cb-pill money">деньгами</span></td><td data-label="Оценка"><span class="neon">9.9</span></td></tr>
 <tr><td class="cb-rub mfit-num" data-label="">3</td><td class="cb-bc" data-label="Казино"><span class="cb-bn">1win</span><span class="cb-line2"><span class="cb-best" style="--rc:#37e0c8">Лучшее за — кэшбэк с казино и спорта</span></span></td><td data-label="Кэшбэк"><span class="cb-pill pc-mid">~12%</span></td><td data-label="Период">недельный</td><td data-label="Форма возврата"><span class="cb-pill per">деньги + бонус</span></td><td data-label="Оценка"><span class="neon">9.7</span></td></tr>
 <tr><td class="cb-rub mfit-num" data-label="">4</td><td class="cb-bc" data-label="Казино"><span class="cb-bn">Banda</span><span class="cb-line2"><span class="cb-best" style="--rc:#ff2e93">Лучшее за — VIP-кэшбэк по лояльности</span></span></td><td data-label="Кэшбэк"><span class="cb-pill pc-mid">до 15%</span></td><td data-label="Период">недельный, VIP</td><td data-label="Форма возврата"><span class="cb-pill bonus">бонусом</span></td><td data-label="Оценка"><span class="neon">9.6</span></td></tr>
 <tr><td class="cb-rub mfit-num" data-label="">5</td><td class="cb-bc" data-label="Казино"><span class="cb-bn">Leebet</span><span class="cb-line2"><span class="cb-best" style="--rc:#6cc4ff">Лучшее за — кэшбэк в USDT</span></span></td><td data-label="Кэшбэк"><span class="cb-pill pc-low">по статусу</span></td><td data-label="Период">недельный</td><td data-label="Форма возврата"><span class="cb-pill money">деньгами (USDT)</span></td><td data-label="Оценка"><span class="neon">9.5</span></td></tr>
@@ -961,7 +964,7 @@ window.addEventListener('load',function(){
 <div class="cb-crit rv"><div class="hd"><span>Касса и вывод возврата</span><span class="w">10%</span></div><div class="cb-bar"><span data-w="33"></span></div><p>Кэшбэк деньгами имеет смысл, только если его быстро вывести. Замеряем, уходит ли возвращённое тем же методом, что и обычный выигрыш, и за сколько: СБП и карта от 15 минут, USDT до 30. Возврат, который неделю висит в обработке, обесценивает саму идею — за это понижаем.</p></div>
 <div class="cb-crit rv"><div class="hd"><span>Поддержка по начислению</span><span class="w">5%</span></div><div class="cb-bar"><span data-w="17"></span></div><p>Финальный штрих. Пишем в поддержку по спорным начислениям: посчитали не с той базы, кэшбэк не пришёл, сгорел до того, как забрал. Оцениваем скорость ответа и то, решают ли вопрос по существу. Отписка «всё по правилам» без разбора конкретного расчёта баллов не добавляет.</p></div>
 </div>
-<p class="cb-note rv">Banda и APEX теряют места именно по этому интенту — они делают ставку на VIP-турниры и крупный старт, а регулярный возврат у них вторичен или приходит бонусом. 7K и Spinto выше, потому что кэшбэк идёт живыми деньгами без отыгрыша.</p>
+<p class="cb-note rv">Banda и APEX теряют места именно по этому интенту — они делают ставку на VIP-турниры и крупный старт, а регулярный возврат у них вторичен или приходит бонусом. Spinto и 7K выше, потому что кэшбэк идёт живыми деньгами без отыгрыша.</p>
 </section>
 <!-- ===== forma ===== -->
 <section class="cb-sect" id="forma">
@@ -1232,23 +1235,23 @@ window.addEventListener('load',function(){
 </div>
 <div class="cb-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. 7K Casino <span>максимальный возврат деньгами</span></div><div class="sc">9.9 / 10</div></div>
-<p>Первый выбор именно под кэшбэк. Возврат до 20% от чистого проигрыша начисляется по понедельникам и приходит деньгами на основной баланс, без вейджера сверху. Слил как-то 6000 ₽ за неделю — в понедельник утром вернулось около 1100 ₽, вывел через СБП за 15 минут. Процент растёт со статусом и оборотом, 20% — верхняя планка, не стартовая. Но даже базовый возврат здесь деньгами, а не бонусом — это и есть разница с рынком.</p>
+<div class="rh"><div class="nm c-gold">1. Spinto <span>ежедневный кэшбэк без ожидания</span></div><div class="sc">9.8 / 10</div></div>
+<p>Выбор редакции под кэшбэк. Берёт периодичностью — возврат тут ежедневный: каждое утро на баланс возвращается часть вчерашнего минуса, не надо ждать всю неделю, и приходит деньгами без вейджера. Ставка ниже недельного формата, зато капает постоянно. Касса летает — вывод в USDT уходил за 40 минут. Площадка свежая, 2026 года, порог 50 ₽, старт 200% и 150 фриспинов, вейджер бонуса x35. Для активной игры каждый день ежедневный формат реально удобнее недельного.</p>
+<div class="cb-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Ежедневный кэшбэк без ожидания понедельника</li><li>Приходит деньгами, без вейджера</li><li>Выплаты СБП и крипта — до часа, порог 50 ₽</li><li>Старт 200% + 150 FS, вейджер x35</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Процент ниже недельного формата</li><li>Бренд молодой, короткая история выплат</li></ul></div>
+</div>
+<div class="cb-facts"><span class="thr">Кэшбэк: ежедневный</span><span>Форма: <b>деньгами</b></span><span>Период: <b>ежедневный</b></span><span>Порог: <b>50 ₽</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="cb-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-neon">2. 7K Casino <span>максимальный возврат деньгами</span></div><div class="sc">9.9 / 10</div></div>
+<p>Максимальный процент в подборке. Возврат до 20% от чистого проигрыша начисляется по понедельникам и приходит деньгами на основной баланс, без вейджера сверху. Слил как-то 6000 ₽ за неделю — в понедельник утром вернулось около 1100 ₽, вывел через СБП за 15 минут. Процент растёт со статусом и оборотом, 20% — верхняя планка, не стартовая. Но даже базовый возврат здесь деньгами, а не бонусом — это и есть разница с рынком.</p>
 <div class="cb-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Возврат деньгами на баланс, без отыгрыша</li><li>До 20% от проигрыша по понедельникам</li><li>Кэшбэк выводится сразу — СБП от 15 минут</li><li>Порог входа 50 ₽, статус качаешь недорого</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>20% — верхняя планка по статусу, базовый ниже</li><li>Считается недельный нетто-минус, а не оборот</li></ul></div>
 </div>
 <div class="cb-facts"><span class="thr">Кэшбэк: до 20%</span><span>Форма: <b>деньгами</b></span><span>Период: <b>недельный, пн</b></span><span>Порог: <b>50 ₽</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="cb-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-neon">2. Spinto <span>ежедневный кэшбэк без ожидания</span></div><div class="sc">9.8 / 10</div></div>
-<p>Берёт периодичностью — кэшбэк тут ежедневный: каждое утро возвращается процент за вчерашний минус, не надо ждать всю неделю. Ставка ниже 7K, зато капает постоянно и без отыгрыша. Касса летает — возврат в USDT уходил за 40 минут. Площадка свежая, 2026 года, порог 50 ₽, старт 200% и 150 фриспинов. Для активной игры каждый день ежедневный формат реально удобнее недельного.</p>
-<div class="cb-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Ежедневный кэшбэк без ожидания понедельника</li><li>Приходит деньгами, без вейджера</li><li>USDT ~40 минут, порог 50 ₽</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Процент ниже недельного формата</li><li>Бренд молодой, короткая история выплат</li></ul></div>
-</div>
-<div class="cb-facts"><span class="thr">Кэшбэк: до 10%</span><span>Форма: <b>деньгами</b></span><span>Период: <b>ежедневный</b></span><span>Порог: <b>50 ₽</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="cb-rev rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1358,7 +1361,7 @@ window.addEventListener('load',function(){
 <span class="cb-kick">Коротко и по делу</span>
 <h2>Частые вопросы <span class="g-sky">о казино с кэшбэком</span></h2>
 </div>
-<details class="rv" open=""><summary><span class="ic">+</span>Какое казино даёт лучший кэшбэк?</summary><div class="bd"><div><p>По подборке — 7K Casino: до 20% от недельного проигрыша начисляют деньгами на основной баланс по понедельникам, без отыгрыша сверху. Процент зависит от статуса, 20% — верхняя планка. Для криптоигроков альтернатива — Leebet с кэшбэком в программе лояльности и возвратом в USDT.</p></div></div></details>
+<details class="rv" open=""><summary><span class="ic">+</span>Какое казино даёт лучший кэшбэк?</summary><div class="bd"><div><p>Выбор редакции — Spinto: возврат живыми деньгами каждый день без вейджера, порог 50 ₽, оценка 9.8. По максимальному проценту впереди 7K Casino — до 20% от недельного проигрыша деньгами по понедельникам, без отыгрыша (20% — верхняя планка по статусу). Для криптоигроков альтернатива — Leebet с кэшбэком в программе лояльности и возвратом в USDT.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Кэшбэк приходит деньгами или бонусом?</summary><div class="bd"><div><p>Зависит от казино, и это главное при выборе. Деньгами — забрал и вывел, как у 7K. Бонусом — на сумму вешают вейджер x30–x40 и срок 3–7 дней, до отыгрыша не тронуть. 20% бонусом с отыгрышем обычно дешевле, чем 10% деньгами, поэтому смотрите на форму, а не на процент.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Почему часть казино переводит кэшбэк в бонус с отыгрышем?</summary><div class="bd"><div><p>Так дешевле для площадки. Кэшбэк деньгами игрок выводит сразу — это прямой расход. Бонус с вейджером x40 остаётся в игре, и статистически большая часть возвращается казино. Поэтому «до 20%» бонусом обходится дешевле, чем меньший процент живыми деньгами.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Что такое кэшбэк на проигрыш и это чарджбек?</summary><div class="bd"><div><p>Кэшбэк на проигрыш — процент от чистого проигрыша за период (депозиты минус выигрыши). Проиграл за неделю 10 000 ₽ при 20% — вернётся 2000 ₽. Это не банковский чарджбек: отменить проигранную ставку через банк нельзя, возврат делает само казино по своим правилам.</p></div></div></details>
@@ -1499,8 +1502,8 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: форма и процент кэшбэка по статусам, вейджер на возврат, скорость вывода, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="cb-brands rv" id="brandsGrid"></div>
 <ul class="cb-seo-links">
-<li><a href="/casino/7k">Обзор казино 7K Casino — кэшбэк до 20%</a></li>
 <li><a href="/casino/spinto">Обзор казино Spinto — ежедневный кэшбэк</a></li>
+<li><a href="/casino/7k">Обзор казино 7K Casino — кэшбэк до 20%</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — кэшбэк с казино и спорта</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — VIP-кэшбэк до 15%</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — кэшбэк в USDT</a></li>
@@ -1730,8 +1733,8 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 6,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
         {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
         {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
         {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
@@ -1741,7 +1744,7 @@ window.addEventListener('load',function(){
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"Какое казино даёт лучший кэшбэк?","acceptedAnswer":{"@type":"Answer","text":"По подборке — 7K Casino: до 20% от недельного проигрыша начисляют деньгами на основной баланс по понедельникам, без отыгрыша сверху. Процент зависит от статуса, 20% — верхняя планка. Для криптоигроков альтернатива — Leebet с кэшбэком в программе лояльности и возвратом в USDT."}},
+        {"@type":"Question","name":"Какое казино даёт лучший кэшбэк?","acceptedAnswer":{"@type":"Answer","text":"Выбор редакции — Spinto: возврат живыми деньгами каждый день без вейджера, порог 50 ₽, оценка 9.8. По максимальному проценту впереди 7K Casino — до 20% от недельного проигрыша деньгами по понедельникам, без отыгрыша (20% — верхняя планка по статусу). Для криптоигроков альтернатива — Leebet с кэшбэком в программе лояльности и возвратом в USDT."}},
         {"@type":"Question","name":"Кэшбэк приходит деньгами или бонусом?","acceptedAnswer":{"@type":"Answer","text":"Зависит от казино, и это главное при выборе. Деньгами — забрал и вывел, как у 7K. Бонусом — на сумму вешают вейджер x30–x40 и срок 3–7 дней, до отыгрыша не тронуть. 20% бонусом с отыгрышем обычно дешевле, чем 10% деньгами, поэтому смотрите на форму, а не на процент."}},
         {"@type":"Question","name":"Почему часть казино переводит кэшбэк в бонус с отыгрышем?","acceptedAnswer":{"@type":"Answer","text":"Так дешевле для площадки. Кэшбэк деньгами игрок выводит сразу — это прямой расход. Бонус с вейджером x40 остаётся в игре, и статистически большая часть возвращается казино. Поэтому «до 20%» бонусом обходится дешевле, чем меньший процент живыми деньгами."}},
         {"@type":"Question","name":"Что такое кэшбэк на проигрыш и это чарджбек?","acceptedAnswer":{"@type":"Answer","text":"Кэшбэк на проигрыш — процент от чистого проигрыша за период (депозиты минус выигрыши). Проиграл за неделю 10 000 ₽ при 20% — вернётся 2000 ₽. Это не банковский чарджбек: отменить проигранную ставку через банк нельзя, возврат делает само казино по своим правилам."}},
