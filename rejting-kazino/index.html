@@ -250,6 +250,18 @@
   .rk-ctas::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .rk-ctas:hover::after{animation:rkShim .85s var(--ez)}
   .rk-note{font-size:13px;color:var(--mu);margin:12px 0 0}
+  .rk-dash{color:var(--dm);font-weight:800;font-size:15px}
+  .rk-acts{display:inline-flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+  .rk-rev{display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--tx);background:rgba(255,255,255,.03);border:1px solid var(--hair2);border-radius:10px;padding:9px 14px;min-height:40px;white-space:nowrap;transition:border-color .18s,color .18s,transform .18s}
+  .rk-rev:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+  #rkMore{display:none!important}
+  #rkMore.on{display:table-row-group!important}
+  @media(max-width:600px){#rkMore.on{display:block!important}}
+  .rk-showall-wrap{display:flex;justify-content:center;margin:20px 0 0}
+  .rk-showall{display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-family:"Sora",sans-serif;font-weight:800;font-size:14.5px;color:var(--tx);background:linear-gradient(135deg,color-mix(in srgb,var(--cyan) 20%,var(--pan2)),var(--pan));border:1px solid color-mix(in srgb,var(--cyan) 44%,var(--hair2));border-radius:12px;padding:14px 28px;min-height:48px;transition:transform .18s,border-color .18s,box-shadow .18s,color .18s}
+  .rk-showall:hover{transform:translateY(-2px);border-color:var(--cyan);box-shadow:0 16px 34px -18px var(--cyan);color:var(--cyan)}
+  .rk-showall::after{content:"▾";font-size:.85em;transition:transform .25s}
+  .rk-showall.on::after{transform:rotate(180deg)}
 
   /* ---------- generic tables ---------- */
   .rk-tbox{--ta:#37e0c8;position:relative;border:1px solid var(--hair2);border-radius:var(--rad);overflow:hidden;background:linear-gradient(180deg,var(--pan2),var(--pan));box-shadow:var(--sh);margin:16px 0}
@@ -646,7 +658,7 @@ window.addEventListener('load',function(){
 <a href="#rk-method">Методика</a>
 <a href="#rk-reviews">Обзоры</a>
 <a href="#rk-faq">FAQ</a>
-<a class="cta" href="#rk-rating">Топ-6 · баллы</a>
+<a class="cta" href="#rk-rating">Топ-10 · баллы</a>
 </nav>
 </div>
 </header>
@@ -664,7 +676,7 @@ window.addEventListener('load',function(){
 <div class="rk-txt">
 <span class="rk-brow reveal" style="--d:.02s"><b>PlayCasino</b> · независимый рейтинг с методикой · обновлено 4 сентября 2026</span>
 <h1 class="reveal" style="--d:.08s">Рейтинг казино 2026: <span class="g">балльная оценка</span> по выплатам, отдаче и надёжности</h1>
-<p class="rk-answer reveal" style="--d:.16s">Место в этом рейтинге — не вкусовщина и не рекламный контракт, а сумма шести критериев с весами. Половину балла держат лицензия и реальные выплаты. Выше всех сейчас <b>7K Casino — 9.9 из 10</b>: вывод по СБП укладывается в 15 минут – 2 часа, и это редакция замерила своими деньгами. Ниже — таблица топ-6, разбор методики и вычетов, обзоры с плюсами и минусами.</p>
+<p class="rk-answer reveal" style="--d:.16s">Место в этом рейтинге — не рекламный контракт: это подборка редакции по совокупности бонусов, скорости выплат и надёжности, с опорой на шесть критериев с весами. Половину веса держат лицензия и реальные выплаты. Выбор редакции 2026 — <b>Spinto</b>: низкий порог от 50 ₽, выплаты по СБП и крипте укладываются в час, вейджер читаемый x35. Самый быстрый по замерам — <b>7K Casino</b>, вывод по СБП 15 минут – 2 часа, и это редакция проверила своими деньгами. Ниже — таблица топ-10, разбор методики и вычетов, обзоры с плюсами и минусами.</p>
 <div class="rk-hero-cta reveal" style="--d:.22s">
 <a class="rk-btn cyan" href="#rk-rating">Смотреть рейтинг</a>
 <a class="rk-btn ghost" href="#rk-method">Как считаем балл</a>
@@ -683,27 +695,27 @@ window.addEventListener('load',function(){
 </div>
 <aside class="rk-receipt reveal" style="--d:.2s">
 <span class="rk-ribbon">Выбор редакции</span>
-<div class="rk-float"><div class="fv">9.9</div><div class="fl">балл из 10</div></div>
+<div class="rk-float"><div class="fv">9.8</div><div class="fl">балл из 10</div></div>
 <div class="rk-rc">
 <span aria-hidden="true" class="wm">1</span>
 <div class="rk-rc-body">
 <div class="rk-rc-brow">Карточка лидера · №1 рейтинга 2026</div>
-<div class="rk-rc-name">7K Casino</div>
-<div class="rk-rc-sub">Балл 9.9 · выплаты 15 мин – 2 ч · лицензия Curaçao</div>
-<div class="rk-rc-why"><b>Почему №1:</b> максимум списка за скорость выплат, читаемый вейджер и низкий порог входа от 50 ₽</div>
+<div class="rk-rc-name">Spinto</div>
+<div class="rk-rc-sub">Балл 9.8 · выплаты по СБП и крипте до 1 ч · лицензия Curaçao</div>
+<div class="rk-rc-why"><b>Почему №1:</b> выбор редакции за низкий порог от 50 ₽, читаемый вейджер x35 и быстрые выплаты по СБП и крипте</div>
 <div aria-hidden="true" class="rk-tear"></div>
 <ul class="rk-spec">
-<li><span>Итоговый балл</span><i class="dots"></i><b class="a2">9.9 / 10</b></li>
-<li><span>Выплаты (вес 25%)</span><i class="dots"></i><b class="a1">15 мин – 2 ч</b></li>
+<li><span>Итоговый балл</span><i class="dots"></i><b class="a2">9.8 / 10</b></li>
+<li><span>Выплаты (вес 25%)</span><i class="dots"></i><b class="a1">СБП и крипта, до 1 ч</b></li>
 <li><span>Лицензия (вес 25%)</span><i class="dots"></i><b class="a3">Curaçao, в реестре</b></li>
-<li><span>Приветственный бонус</span><i class="dots"></i><b class="a2">225% + 200 FS</b></li>
-<li><span>Кэшбэк</span><i class="dots"></i><b class="a1">до 20% по пн</b></li>
+<li><span>Приветственный бонус</span><i class="dots"></i><b class="a2">200% + 150 FS</b></li>
+<li><span>Вейджер</span><i class="dots"></i><b class="a1">x35</b></li>
 <li><span>Минимальный депозит</span><i class="dots"></i><b class="a3">50 ₽</b></li>
 </ul>
-<a class="rk-btn cyan rk-rc-cta" href="/go/7k" rel="nofollow sponsored">Открыть 7K Casino</a>
+<a class="rk-btn cyan rk-rc-cta" href="/go/spinto" rel="nofollow sponsored">Открыть Spinto</a>
 <div class="rk-chips">
-<span>СБП · Мир · USDT</span>
-<span>KYC на малых суммах — нет</span>
+<span>СБП · крипта</span>
+<span>Порог от 50 ₽</span>
 <span>Curaçao</span>
 </div>
 <ul class="rk-guar">
@@ -720,7 +732,7 @@ window.addEventListener('load',function(){
 <!-- ===== SCOREBOARD BAND ===== -->
 <section class="rk-band">
 <div class="rk-wrap">
-<div class="rk-st"><span aria-hidden="true" class="wm">6</span><div class="v" data-count="6">6</div><div class="l">казино в рейтинге</div></div>
+<div class="rk-st"><span aria-hidden="true" class="wm">25</span><div class="v" data-count="25">25</div><div class="l">казино в рейтинге</div></div>
 <div class="rk-st"><span aria-hidden="true" class="wm">6</span><div class="v" data-count="6">6</div><div class="l">критериев с весами</div></div>
 <div class="rk-st"><span aria-hidden="true" class="wm">9.9</span><div class="v">9.9</div><div class="l">высший балл — 7K</div></div>
 <div class="rk-st"><span aria-hidden="true" class="wm">30</span><div class="v" data-count="30" data-suffix=" дн">30 дн</div><div class="l">между пересмотрами</div></div>
@@ -730,7 +742,7 @@ window.addEventListener('load',function(){
 <!-- ===== RATING TABLE ===== -->
 <section class="rk-sect" id="rk-rating">
 <div class="rk-head reveal">
-<span class="rk-kick">Топ-6 · сентябрь 2026</span>
+<span class="rk-kick">Топ-10 · сентябрь 2026</span>
 <h2>Рейтинг онлайн-казино 2026: <span class="g">балл, выплаты и бонус</span> в одной таблице</h2>
 </div>
 <div class="rk-tablewrap reveal">
@@ -741,19 +753,19 @@ window.addEventListener('load',function(){
 <tbody>
 <tr class="r1">
 <td class="rk-rk mfit-num" data-label=""><span class="rk-medal g">1</span></td>
-<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">7K Casino</span><span class="rk-ed">Выбор редакции</span></span><span class="rk-best">Лучшее за: быстрые выплаты</span></td>
-<td data-label="Балл"><span class="rk-score">9.9</span><span class="rk-sbar"><i data-score="9.9"></i></span></td>
-<td data-label="За что балл">Выплаты 15 мин – 2 ч, кэшбэк до 20%</td>
-<td data-label="Бонус">225% + 200 FS</td>
-<td data-label=""><a class="rk-ctas" href="/go/7k" rel="nofollow sponsored">Играть</a></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Spinto</span><span class="rk-ed">Выбор редакции</span></span><span class="rk-best">Лучшее за: низкий порог и крипта</span></td>
+<td data-label="Балл"><span class="rk-score">9.8</span><span class="rk-sbar"><i data-score="9.8"></i></span></td>
+<td data-label="За что балл">Выплаты по СБП и крипте до 1 ч, вейджер x35</td>
+<td data-label="Бонус">200% + 150 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/spinto" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/spinto/">Обзор</a></span></td>
 </tr>
 <tr class="r2">
 <td class="rk-rk mfit-num" data-label=""><span class="rk-medal">2</span></td>
-<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Spinto</span></span><span class="rk-best">Лучшее за: минимум верификации</span></td>
-<td data-label="Балл"><span class="rk-score">9.8</span><span class="rk-sbar"><i data-score="9.8"></i></span></td>
-<td data-label="За что балл">USDT ~40 мин, KYC минимальная</td>
-<td data-label="Бонус">200% + 150 FS</td>
-<td data-label=""><a class="rk-ctas" href="/go/spinto" rel="nofollow sponsored">Играть</a></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">7K Casino</span></span><span class="rk-best">Лучшее за: быстрые выплаты</span></td>
+<td data-label="Балл"><span class="rk-score">9.9</span><span class="rk-sbar"><i data-score="9.9"></i></span></td>
+<td data-label="За что балл">Выплаты 15 мин – 2 ч, кэшбэк до 20%</td>
+<td data-label="Бонус">225% + 200 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/7k" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/7k/">Обзор</a></span></td>
 </tr>
 <tr class="r3">
 <td class="rk-rk mfit-num" data-label=""><span class="rk-medal">3</span></td>
@@ -761,7 +773,7 @@ window.addEventListener('load',function(){
 <td data-label="Балл"><span class="rk-score">9.7</span><span class="rk-sbar"><i data-score="9.7"></i></span></td>
 <td data-label="За что балл">12 000+ игр, ставки в кабинете</td>
 <td data-label="Бонус">500% до 200 000 ₽</td>
-<td data-label=""><a class="rk-ctas" href="/go/1win" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/1win" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/1win/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="rk-rk mfit-num" data-label=""><span class="rk-num">4</span></td>
@@ -769,7 +781,7 @@ window.addEventListener('load',function(){
 <td data-label="Балл"><span class="rk-score">9.6</span><span class="rk-sbar"><i data-score="9.6"></i></span></td>
 <td data-label="За что балл">500 FS и турниры, вывод без точного срока</td>
 <td data-label="Бонус">100% + 500 FS</td>
-<td data-label=""><a class="rk-ctas" href="/go/banda" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/banda" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/banda/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="rk-rk mfit-num" data-label=""><span class="rk-num">5</span></td>
@@ -777,7 +789,7 @@ window.addEventListener('load',function(){
 <td data-label="Балл"><span class="rk-score">9.5</span><span class="rk-sbar"><i data-score="9.5"></i></span></td>
 <td data-label="За что балл">USDT TRC-20 ~20 мин, комиссия копеечная</td>
 <td data-label="Бонус">150% до 1000 USDT</td>
-<td data-label=""><a class="rk-ctas" href="/go/leebet" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/leebet" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/leebet/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="rk-rk mfit-num" data-label=""><span class="rk-num">6</span></td>
@@ -785,12 +797,217 @@ window.addEventListener('load',function(){
 <td data-label="Балл"><span class="rk-score">9.4</span><span class="rk-sbar"><i data-score="9.4"></i></span></td>
 <td data-label="За что балл">Старт 375%, история с 2026</td>
 <td data-label="Бонус">375% + 225 FS</td>
-<td data-label=""><a class="rk-ctas" href="/go/apex" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/apex" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/apex/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">7</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Kush</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Профиль в подготовке</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/kush" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/kush/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">8</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Eva</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Профиль в подготовке</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/eva" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/eva/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">9</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Flagman</span></span></td>
+<td data-label="Балл"><span class="rk-score">9.3</span><span class="rk-sbar"><i data-score="9.3"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">150% + 50 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/flagman" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/flagman/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">10</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Legzo</span></span></td>
+<td data-label="Балл"><span class="rk-score">9.2</span><span class="rk-sbar"><i data-score="9.2"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/legzo" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/legzo/">Обзор</a></span></td>
+</tr>
+</tbody>
+<tbody id="rkMore">
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">11</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Starda</span></span></td>
+<td data-label="Балл"><span class="rk-score">9.1</span><span class="rk-sbar"><i data-score="9.1"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">225% + 250 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/starda" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/starda/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">12</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Rox</span></span></td>
+<td data-label="Балл"><span class="rk-score">9.0</span><span class="rk-sbar"><i data-score="9.0"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% до 25 000 ₽</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/rox" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/rox/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">13</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Sol</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.9</span><span class="rk-sbar"><i data-score="8.9"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">150% + 150 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/sol" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/sol/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">14</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Izzi</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.8</span><span class="rk-sbar"><i data-score="8.8"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/izzi" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/izzi/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">15</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Jet</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.7</span><span class="rk-sbar"><i data-score="8.7"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">125% + 150 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/jet" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/jet/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">16</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Monro</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.6</span><span class="rk-sbar"><i data-score="8.6"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">150% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/monro" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/monro/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">17</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Drip</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.5</span><span class="rk-sbar"><i data-score="8.5"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">150% + 200 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/drip" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/drip/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">18</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Gizbo</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.4</span><span class="rk-sbar"><i data-score="8.4"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/gizbo" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/gizbo/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">19</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Fresh</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.3</span><span class="rk-sbar"><i data-score="8.3"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/fresh" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/fresh/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">20</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Volna</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.2</span><span class="rk-sbar"><i data-score="8.2"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">150% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/volna" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/volna/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">21</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Irwin</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.1</span><span class="rk-sbar"><i data-score="8.1"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">150% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/irwin" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/irwin/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">22</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Beef</span></span></td>
+<td data-label="Балл"><span class="rk-score">8.0</span><span class="rk-sbar"><i data-score="8.0"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/beef" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/beef/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">23</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Martin</span></span></td>
+<td data-label="Балл"><span class="rk-score">7.9</span><span class="rk-sbar"><i data-score="7.9"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/martin" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/martin/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">24</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">1Go</span></span></td>
+<td data-label="Балл"><span class="rk-score">7.8</span><span class="rk-sbar"><i data-score="7.8"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/1go" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/1go/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">25</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Lex</span></span></td>
+<td data-label="Балл"><span class="rk-score">7.7</span><span class="rk-sbar"><i data-score="7.7"></i></span></td>
+<td data-label="За что балл">Мин. 100 ₽, вейджер x40</td>
+<td data-label="Бонус">100% + 100 FS</td>
+<td data-label=""><span class="rk-acts"><a class="rk-ctas" href="/go/lex" rel="nofollow sponsored">Играть</a><a class="rk-rev" href="/casino/lex/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">26</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Vavada</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Не партнёр — ведём на обзор</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-rev" href="/casino/vavada/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">27</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Kent</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Не партнёр — ведём на обзор</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-rev" href="/casino/kent/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">28</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">PokerDom</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Не партнёр — ведём на обзор</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-rev" href="/casino/pokerdom/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">29</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">JoyCasino</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Не партнёр — ведём на обзор</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-rev" href="/casino/joycasino/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">30</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Daddy</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Не партнёр — ведём на обзор</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-rev" href="/casino/daddy/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="rk-rk mfit-num" data-label=""><span class="rk-num">31</span></td>
+<td class="rk-bcell" data-label="Казино"><span class="rk-brow2"><span class="rk-brand">Jetton</span></span></td>
+<td data-label="Балл"><span class="rk-dash">—</span></td>
+<td data-label="За что балл">Не партнёр — ведём на обзор</td>
+<td data-label="Бонус">—</td>
+<td data-label=""><span class="rk-acts"><a class="rk-rev" href="/casino/jetton/">Обзор</a></span></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="rk-note">Балл по 10-балльной шкале — средневзвешенный по 6 критериям (см. методику). Это и есть наш топ-10 рейтинг казино 2026 в коротком, проверенном виде: шесть площадок, а не витрина на полсотни. Бонусы — для новых игроков 18+, действуют условия отыгрыша. Порядок мест редакция пересматривает раз в месяц.</p>
+<div class="rk-showall-wrap">
+<button type="button" class="rk-showall" id="rkShowAll" aria-controls="rkMore" aria-expanded="false" onclick="var t=document.getElementById('rkMore'),o=t.classList.toggle('on');this.classList.toggle('on',o);this.setAttribute('aria-expanded',o);document.getElementById('rkShowAllTxt').textContent=o?'Свернуть список':'Показать все казино (+21)';"><span id="rkShowAllTxt">Показать все казино (+21)</span></button>
+</div>
+<p class="rk-note">Порядок мест — подборка редакции по совокупности бонусов, скорости выплат и надёжности, а не строго по числу балла. В топ-10 — ядро, которое редакция проверяет плотнее всего; полный список партнёров открывается кнопкой «Показать все». Балл — средневзвешенный по 6 критериям (см. методику). Бонусы — для новых игроков 18+, действуют условия отыгрыша. Места редакция пересматривает раз в месяц.</p>
 </section>
 <!-- ===== H2 #1 how it's built (methodology) ===== -->
 <section class="rk-sect" id="rk-method">
@@ -840,8 +1057,8 @@ window.addEventListener('load',function(){
 <table class="rk-tbl mfit">
 <thead><tr><th>Казино</th><th>Метод</th><th>Скорость (замер)</th><th>Мин. вывод</th></tr></thead>
 <tbody>
-<tr><td data-label="Казино">7K Casino</td><td data-label="Метод">СБП · карта · крипта</td><td data-label="Скорость (замер)"><b>15 мин – 2 ч</b></td><td data-label="Мин. вывод"><span class="fig">от 500 ₽</span></td></tr>
 <tr><td data-label="Казино">Spinto</td><td data-label="Метод">USDT · СБП</td><td data-label="Скорость (замер)"><span class="fig-c">USDT ~40 мин</span></td><td data-label="Мин. вывод"><span class="fig">от 500 ₽</span></td></tr>
+<tr><td data-label="Казино">7K Casino</td><td data-label="Метод">СБП · карта · крипта</td><td data-label="Скорость (замер)"><b>15 мин – 2 ч</b></td><td data-label="Мин. вывод"><span class="fig">от 500 ₽</span></td></tr>
 <tr><td data-label="Казино">1win</td><td data-label="Метод">СБП · карта · крипта</td><td data-label="Скорость (замер)"><span class="fig">быстро, KYC при крупных</span></td><td data-label="Мин. вывод"><span class="fig">от 500 ₽</span></td></tr>
 <tr><td data-label="Казино">Banda</td><td data-label="Метод">карта · крипта</td><td data-label="Скорость (замер)"><span class="fig-h">без заявленного срока</span></td><td data-label="Мин. вывод"><span class="fig">от 500 ₽</span></td></tr>
 <tr><td data-label="Казино">Leebet</td><td data-label="Метод">USDT TRC-20 · BTC</td><td data-label="Скорость (замер)"><b>~20 минут</b></td><td data-label="Мин. вывод"><span class="fig">от 500 ₽</span></td></tr>
@@ -894,7 +1111,7 @@ window.addEventListener('load',function(){
 <span class="rk-kick">Арифметика балла</span>
 <h2>Как из шести критериев <span class="g">получается один балл</span>: разбор на 7K</h2>
 </div>
-<p class="rk-prose reveal">Показываем арифметику на лидере. Оценку по каждому критерию умножаем на его вес и складываем — так таблица не переставляется по настроению.</p>
+<p class="rk-prose reveal">Показываем арифметику на примере 7K — у него самый высокий балл в списке. Оценку по каждому критерию умножаем на его вес и складываем — так число не берётся с потолка.</p>
 <div class="rk-tbox rk-tscroll reveal">
 <table class="rk-tbl mfit">
 <thead><tr><th>Критерий</th><th>Оценка</th><th>Вес</th><th>Вклад в балл</th></tr></thead>
@@ -936,7 +1153,7 @@ window.addEventListener('load',function(){
 <div class="big">0</div>
 <div class="cap">мест в рейтинге за деньги</div>
 <div class="rows">
-<div><span>Площадок в топе</span><b>6</b></div>
+<div><span>Казино в рейтинге</span><b>25</b></div>
 <div><span>Критериев в оценке</span><b>6</b></div>
 <div><span>Проверка выплат</span><b>своими деньгами</b></div>
 <div><span>Партнёрские ссылки</span><b>на балл не влияют</b></div>
@@ -953,7 +1170,7 @@ window.addEventListener('load',function(){
 <li><b>Вейджер прописан цифрой,</b> а не спрятан в правилах акции.</li>
 <li><b>История без резаных выплат</b> — задержки сверх срока роняют балл быстрее, чем красивый интерфейс тянет его вверх.</li>
 </ul>
-<p class="reveal">Безымянный «топ-100 лучших» мы не ведём: в рейтинге ровно шесть площадок — столько, сколько редакция проверила кошельком и готова держать под своим именем. Меньше строк — больше ответственности за каждую. Голый список без методики — на <a href="/">главной</a>; здесь показываем, как проверяется каждая площадка.</p>
+<p class="reveal">Безымянный «топ-100 лучших» мы не ведём: в верхушке — те площадки, что редакция прогнала кошельком и готова держать под своим именем, а полный список партнёров открывается кнопкой «Показать все» в таблице. Меньше громких обещаний — больше ответственности за каждую строку. Голый список без методики — на <a href="/">главной</a>; здесь показываем, как проверяется каждая площадка.</p>
 </div>
 </div>
 </section>
@@ -963,14 +1180,14 @@ window.addEventListener('load',function(){
 <span class="rk-kick">Порог допуска</span>
 <h2>Рейтинг казино по надёжности: <span class="g">лицензия и репутация</span> как первый фильтр</h2>
 </div>
-<p class="rk-prose reveal">Прежде чем казино вообще попадёт в оценку, оно проходит порог допуска. Номер лицензии Curaçao редакция пробивает у регулятора: нет действующей — разговор окончен. Молодость бренда не приговор, но повод проверять чаще. Все шесть площадок в списке работают на лицензии Curaçao и принимают рубли.</p>
+<p class="rk-prose reveal">Прежде чем казино вообще попадёт в оценку, оно проходит порог допуска. Номер лицензии Curaçao редакция пробивает у регулятора: нет действующей — разговор окончен. Молодость бренда не приговор, но повод проверять чаще. Площадки нашего топа работают на лицензии Curaçao и принимают рубли.</p>
 <div class="rk-tbox rk-tscroll reveal">
 <table class="rk-tbl mfit">
 <thead><tr><th>Казино</th><th>Лицензия</th><th>История</th><th>Балл по надёжности</th></tr></thead>
 <tbody>
+<tr><td data-label="Казино">Spinto</td><td data-label="Лицензия"><b>Curaçao</b>, в реестре</td><td data-label="История">бренд 2026, репутация копится</td><td data-label="Балл по надёжности"><span class="fig">9,8</span></td></tr>
 <tr><td data-label="Казино">7K Casino</td><td data-label="Лицензия"><b>Curaçao</b>, в реестре</td><td data-label="История">длинная, жалоб на невыплаты нет</td><td data-label="Балл по надёжности"><span class="fig-c">9,9</span></td></tr>
 <tr><td data-label="Казино">1win</td><td data-label="Лицензия"><b>Curaçao</b>, в реестре</td><td data-label="История">длинная, репутация устойчива</td><td data-label="Балл по надёжности"><span class="fig-c">9,7</span></td></tr>
-<tr><td data-label="Казино">Spinto</td><td data-label="Лицензия"><b>Curaçao</b>, в реестре</td><td data-label="История">бренд 2026, репутация копится</td><td data-label="Балл по надёжности"><span class="fig">9,8</span></td></tr>
 <tr><td data-label="Казино">Banda</td><td data-label="Лицензия"><b>Curaçao</b>, в реестре</td><td data-label="История">без заявленного срока вывода</td><td data-label="Балл по надёжности"><span class="fig">9,6</span></td></tr>
 <tr><td data-label="Казино">Leebet</td><td data-label="Лицензия"><b>Curaçao</b>, в реестре</td><td data-label="История">крипто-профиль, задержек нет</td><td data-label="Балл по надёжности"><span class="fig">9,5</span></td></tr>
 <tr><td data-label="Казино">APEX</td><td data-label="Лицензия"><b>Curaçao</b>, в реестре</td><td data-label="История">бренд 2026, истории мало</td><td data-label="Балл по надёжности"><span class="fig-h">9,4</span></td></tr>
@@ -990,12 +1207,12 @@ window.addEventListener('load',function(){
 <table class="rk-tbl mfit">
 <thead><tr><th>Казино</th><th>Приветственный</th><th>Отыгрыш</th><th>Кэшбэк / особое</th></tr></thead>
 <tbody>
+<tr><td data-label="Казино">Spinto</td><td data-label="Приветственный"><b>200% + 150 FS</b></td><td data-label="Отыгрыш">вейджер x35, KYC минимальная</td><td data-label="Кэшбэк / особое">Nolimit City, Hacksaw</td></tr>
 <tr><td data-label="Казино">7K Casino</td><td data-label="Приветственный"><b>225% + 200 FS</b></td><td data-label="Отыгрыш">вейджер читаемый</td><td data-label="Кэшбэк / особое"><span class="fig">до 20% по пн</span></td></tr>
 <tr><td data-label="Казино">1win</td><td data-label="Приветственный"><b>500% до 200 000 ₽</b></td><td data-label="Отыгрыш">размазан на 4 депозита</td><td data-label="Кэшбэк / особое">есть крипта</td></tr>
-<tr><td data-label="Казино">APEX</td><td data-label="Приветственный"><b>375% + 225 FS</b></td><td data-label="Отыгрыш">самый крупный старт</td><td data-label="Кэшбэк / особое"><span class="fig-h">история с 2026</span></td></tr>
-<tr><td data-label="Казино">Spinto</td><td data-label="Приветственный"><b>200% + 150 FS</b></td><td data-label="Отыгрыш">KYC минимальная</td><td data-label="Кэшбэк / особое">Nolimit City, Hacksaw</td></tr>
-<tr><td data-label="Казино">Leebet</td><td data-label="Приветственный"><b>150% до 1000 USDT</b></td><td data-label="Отыгрыш">логичен для крипты</td><td data-label="Кэшбэк / особое">USDT и BTC</td></tr>
 <tr><td data-label="Казино">Banda</td><td data-label="Приветственный"><b>100% + 500 FS</b></td><td data-label="Отыгрыш">вейджер на FS — до старта</td><td data-label="Кэшбэк / особое"><span class="fig">турниры каждую неделю</span></td></tr>
+<tr><td data-label="Казино">Leebet</td><td data-label="Приветственный"><b>150% до 1000 USDT</b></td><td data-label="Отыгрыш">логичен для крипты</td><td data-label="Кэшбэк / особое">USDT и BTC</td></tr>
+<tr><td data-label="Казино">APEX</td><td data-label="Приветственный"><b>375% + 225 FS</b></td><td data-label="Отыгрыш">самый крупный старт</td><td data-label="Кэшбэк / особое"><span class="fig-h">история с 2026</span></td></tr>
 </tbody>
 </table>
 </div>
@@ -1009,23 +1226,23 @@ window.addEventListener('load',function(){
 </div>
 <div class="rk-review reveal">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rk-rh"><div class="nm">1. 7K Casino <span>№1 — выбор редакции</span></div><div class="sc">9.9 / 10</div></div>
-<p>9.9 — максимум в списке. Балл вытянули выплаты: СБП и карта уходят за 15 минут – 2 часа, крипта до 30 минут. Кэшбэк до 20% по понедельникам добавил к бонусной части, а KYC на малых суммах без паспорта убрал лишний вычет по кассе. Минусов по кассе за всё время тестов редакция не поймала — отсюда и вершина.</p>
+<div class="rk-rh"><div class="nm">1. Spinto <span>№1 — выбор редакции</span></div><div class="sc">9.8 / 10</div></div>
+<p>Выбор редакции 2026. USDT приходит примерно за 40 минут, СБП — меньше часа, вейджер x35 читаемый, а KYC минимальная. Запуск в 2026 году означает свежую площадку без накопленных жалоб, вход те же 50 ₽. Студии топовые — Nolimit City и Hacksaw без нареканий. По совокупности низкого порога, крипто-кассы и честного отыгрыша редакция ставит его первым.</p>
+<div class="rk-pc">
+<div class="col pros"><h4>Плюсы</h4><ul><li>USDT ~40 мин, СБП меньше часа</li><li>KYC минимальная, вейджер x35</li><li>Минимум 50 ₽</li><li>Слоты Nolimit City и Hacksaw</li></ul></div>
+<div class="col cons"><h4>Минусы</h4><ul><li>USDT медленнее, чем СБП у 7K</li><li>Молодой бренд 2026 года — история короткая</li></ul></div>
+</div>
+<div class="rk-verdict"><span><b>Кому подходит:</b> игрокам на USDT, кому важен низкий порог и минимальная верификация</span><a href="/casino/spinto/">Полный обзор Spinto →</a></div>
+</div>
+<div class="rk-review reveal">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rk-rh"><div class="nm">2. 7K Casino <span>эталон быстрых выплат</span></div><div class="sc">9.9 / 10</div></div>
+<p>9.9 — самый высокий балл в списке за скорость. СБП и карта уходят за 15 минут – 2 часа, крипта до 30 минут. Кэшбэк до 20% по понедельникам добавил к бонусной части, а KYC на малых суммах без паспорта убрал лишний вычет по кассе. Минусов по кассе за всё время тестов редакция почти не поймала — эталон быстрых выплат.</p>
 <div class="rk-pc">
 <div class="col pros"><h4>Плюсы</h4><ul><li>Вывод СБП и картой за 15 мин – 2 ч</li><li>Кэшбэк до 20% по понедельникам</li><li>KYC на малых суммах без паспорта</li><li>Минимум 50 ₽</li></ul></div>
 <div class="col cons"><h4>Минусы</h4><ul><li>По крупным суммам вывод ближе к 2 часам</li><li>Кэшбэк начисляют только по понедельникам</li></ul></div>
 </div>
-<div class="rk-verdict"><span><b>Кому подходит:</b> тем, кто хочет быстрый вывод и старт без паспорта на малых суммах</span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="rk-review reveal">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rk-rh"><div class="nm">2. Spinto <span>минимум верификации</span></div><div class="sc">9.8 / 10</div></div>
-<p>Потерял 0,1 к 7K из-за кассы: USDT приходит примерно за 40 минут, СБП — меньше часа, это медленнее лидера. Зато KYC минимальная, а запуск в 2026 году означает свежую площадку без накопленных жалоб. Студии топовые — Nolimit City и Hacksaw без нареканий, вход те же 50 ₽.</p>
-<div class="rk-pc">
-<div class="col pros"><h4>Плюсы</h4><ul><li>USDT ~40 мин, СБП меньше часа</li><li>KYC минимальная</li><li>Минимум 50 ₽</li><li>Слоты Nolimit City и Hacksaw</li></ul></div>
-<div class="col cons"><h4>Минусы</h4><ul><li>USDT медленнее, чем СБП у лидера</li><li>Молодой бренд 2026 года — история короткая</li></ul></div>
-</div>
-<div class="rk-verdict"><span><b>Кому подходит:</b> игрокам на USDT, кому важна минимальная верификация</span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+<div class="rk-verdict"><span><b>Кому подходит:</b> тем, кто хочет быстрый вывод и старт без паспорта на малых суммах</span><a href="/casino/7k/">Полный обзор 7K →</a></div>
 </div>
 <div class="rk-review reveal">
 <span aria-hidden="true" class="wm">03</span>
@@ -1076,7 +1293,7 @@ window.addEventListener('load',function(){
 </div>
 <div class="rk-two">
 <div class="rk-txt rk-prose">
-<p class="reveal">Все шесть площадок принимают рубли и вывод в рублях через СБП или карту — иначе для игрока из России рейтинг бессмысленен. Крипта здесь опция поверх рублей, а не вместо: у Leebet и APEX она даже быстрее, USDT TRC-20 у Leebet уходит за ~20 минут. Площадки без рублёвой кассы в этот рейтинг казино рф не ставим.</p>
+<p class="reveal">Площадки нашего топа принимают рубли и вывод в рублях через СБП или карту — иначе для игрока из России рейтинг бессмысленен. Крипта здесь опция поверх рублей, а не вместо: у Leebet и APEX она даже быстрее, USDT TRC-20 у Leebet уходит за ~20 минут. Площадки без рублёвой кассы в этот рейтинг казино рф не ставим.</p>
 <p class="reveal">Минимум, с которого можно попробовать: 50 ₽ у 7K, Spinto и 1win, 100 ₽ у Banda, Leebet и APEX. Это заодно и рейтинг казино с минимальным депозитом внутри общего списка — низкий порог входа мы считаем плюсом по критерию кассы, а не отдельной номинацией.</p>
 <p class="reveal">Отдельные подборки под запрос — <a href="/na-rubli/">казино на рубли</a>, <a href="/rossiya/">казино для России</a> и <a href="/na-dengi/">казино на реальные деньги</a>. Формат короткого пронумерованного списка — на странице <a href="/top-casino/">топ-10 казино</a>, а подбор под конкретную задачу — в <a href="/luchshie/">лучших под задачу</a>.</p>
 </div>
@@ -1153,8 +1370,8 @@ window.addEventListener('load',function(){
 <p class="rk-prose reveal">Дата у рейтинга не для красоты. Полный пересмотр — раз в месяц, а вне графика редакция правит места сразу, как приходит тревожный сигнал. Запросы «рейтинг казино 2025» и «рейтинг казино 2026» ведут на один и тот же живой список, а не на архив прошлого года. Вот правки последнего пересмотра.</p>
 <div class="rk-change reveal">
 <ul>
-<li><b>7K подтвердил №1:</b> контрольный вывод по СБП снова уложился в 15 минут – 2 часа, балл 9.9 без изменений.</li>
-<li><b>Spinto поднялся к 9.8:</b> за месяц — ни одной жалобы на выплаты, KYC по-прежнему минимальная.</li>
+<li><b>Spinto — выбор редакции №1:</b> за месяц ни одной жалобы на выплаты, KYC по-прежнему минимальная, порог входа от 50 ₽.</li>
+<li><b>7K держит высший балл 9.9:</b> контрольный вывод по СБП снова уложился в 15 минут – 2 часа.</li>
 <li><b>Banda осталась на 9.6:</b> заявленной скорости вывода в минутах так и не появилось — вычет по кассе сохранён.</li>
 <li><b>APEX держим под наблюдением:</b> бренд 2026 года, история выплат короткая — балл 9.4 до накопления репутации.</li>
 <li><b>Веса критериев не трогали:</b> лицензия и выплаты — по 25%, чтобы порядок мест не зависел от бонусных акций.</li>
@@ -1169,7 +1386,7 @@ window.addEventListener('load',function(){
 </div>
 <details class="reveal"><summary><span class="ic">+</span>По каким критериям вы оцениваете казино?</summary><div class="bd"><div><p>По шести: лицензия (25%), реальные выплаты (25%), бонусы и условия отыгрыша (20%), касса и платёжки (15%), поддержка (10%), мобайл (5%). Каждый критерий оцениваю по 10-балльной шкале и умножаю на вес.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Как считается итоговый балл?</summary><div class="bd"><div><p>Оценку по каждому критерию умножаю на его вес и складываю в один итог от 0 до 10. Половину дают лицензия и выплаты. Максимум сейчас у 7K Casino — 9.9.</p></div></div></details>
-<details class="reveal"><summary><span class="ic">+</span>Какое казино сейчас на первом месте и почему?</summary><div class="bd"><div><p>7K Casino, 9.9 из 10. Вывод по СБП и карте укладывается в 15 минут – 2 часа, крипта до 30 минут, плюс кэшбэк до 20% по понедельникам и KYC на малых суммах без паспорта.</p></div></div></details>
+<details class="reveal"><summary><span class="ic">+</span>Какое казино сейчас на первом месте и почему?</summary><div class="bd"><div><p>Выбор редакции — Spinto: низкий порог от 50 ₽, выплаты по СБП и крипте укладываются в час, вейджер x35 читаемый, KYC минимальная. Самый высокий балл при этом у 7K Casino — 9.9 за скорость выплат по СБП 15 минут – 2 часа.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Вы правда проверяете выплаты своими деньгами?</summary><div class="bd"><div><p>Да. Вношу минимум — у 7K, Spinto и 1win это 50 ₽ — вывожу и засекаю время. У 7K по СБП это 15 минут – 2 часа, у Leebet по USDT TRC-20 около 20 минут.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Как в рейтинге учитывается отдача (RTP)?</summary><div class="bd"><div><p>Процент возврата задаёт провайдер слота, а не казино, поэтому «высокую отдачу площадки» я не обещаю. Оцениваю честность софта: лицензированные Pragmatic, Nolimit City, Hacksaw, Evolution и не занижен ли процент в настройках оператора.</p></div></div></details>
 <details class="reveal"><summary><span class="ic">+</span>Какие казино попадают в рейтинг, а какие нет?</summary><div class="bd"><div><p>Попадают только площадки с проверяемой лицензией Curaçao и рублёвой кассой. Без лицензии, с урезанным вейджером задним числом или жалобами на невыплаты — не попадают вообще.</p></div></div></details>
@@ -1186,7 +1403,7 @@ window.addEventListener('load',function(){
 <div class="rk-member"><span aria-hidden="true" class="wm">01</span><div class="av">АС</div><div class="nm">Артём Соколов</div><div class="role">Главный редактор</div><div class="exp">9 лет в iGaming, из спортжура</div><p>Отвечает за редполитику и финальный порядок мест. Ведёт таблицу, сводит баллы и держит правило «строчки не продаются».</p><div class="zone"><b>Зона:</b> редполитика, итоговый рейтинг. Факт: за 2026 год не поднял ни одного места по просьбе партнёрки.</div></div>
 <div class="rk-member"><span aria-hidden="true" class="wm">02</span><div class="av">МЛ</div><div class="nm">Марина Левченко</div><div class="role">Методолог рейтинга</div><div class="exp">7 лет аналитики данных</div><p>Автор методики: веса шести критериев и формула средневзвешенного балла. Следит, чтобы веса не двигались от бренда к бренду.</p><div class="zone"><b>Зона:</b> критерии, веса, вычеты. Факт: пересобрала формулу так, что бонус весит 20%, а не решает место.</div></div>
 <div class="rk-member"><span aria-hidden="true" class="wm">03</span><div class="av">ДК</div><div class="nm">Денис Кравцов</div><div class="role">Касса, выводы и KYC</div><div class="exp">6 лет тестирования платежей</div><p>Заносит депозиты, отыгрывает вейджер и замеряет минуты по каждому методу. Проходит верификацию на каждой площадке из топа.</p><div class="zone"><b>Зона:</b> депозиты, выводы, KYC, лимиты. Факт: замерил вывод 7K по СБП — 15 минут – 2 часа.</div></div>
-<div class="rk-member"><span aria-hidden="true" class="wm">04</span><div class="av">ОТ</div><div class="nm">Ольга Тарасова</div><div class="role">Комплаенс и фактчек лицензий</div><div class="exp">8 лет в юридическом комплаенсе</div><p>Сверяет номера лицензий Curaçao в реестрах, проверяет юрлица-держатели. Отсекает бренды с логотипом регулятора, но без рабочего номера — до баллов дело даже не доходит.</p><div class="zone"><b>Зона:</b> проверка лицензий, юрлиц, юрисдикций. Факт: все шесть площадок топа держат проверяемую Curaçao.</div></div>
+<div class="rk-member"><span aria-hidden="true" class="wm">04</span><div class="av">ОТ</div><div class="nm">Ольга Тарасова</div><div class="role">Комплаенс и фактчек лицензий</div><div class="exp">8 лет в юридическом комплаенсе</div><p>Сверяет номера лицензий Curaçao в реестрах, проверяет юрлица-держатели. Отсекает бренды с логотипом регулятора, но без рабочего номера — до баллов дело даже не доходит.</p><div class="zone"><b>Зона:</b> проверка лицензий, юрлиц, юрисдикций. Факт: площадки топа держат проверяемую Curaçao.</div></div>
 <div class="rk-member"><span aria-hidden="true" class="wm">05</span><div class="av">ИР</div><div class="nm">Илья Ремизов</div><div class="role">Слоты и RTP</div><div class="exp">5 лет обзоров игр</div><p>Сверяет RTP и волатильность автоматов с данными студий — Pragmatic, Nolimit City, Hacksaw, Evolution. Ловит «свои» сборки с заниженной отдачей и скрытым процентом.</p><div class="zone"><b>Зона:</b> каталог, RTP, провайдеры, live и краш. Факт: собрал базу проверенных RTP по 200+ слотам.</div></div>
 </div>
 </section>
@@ -1196,9 +1413,9 @@ window.addEventListener('load',function(){
 <span class="rk-kick">Доверие в цифрах</span>
 <div class="h2v">Почему этому рейтингу <span class="g">можно верить</span></div>
 </div>
-<p class="rk-prose reveal">Все площадки работают по лицензии Curaçao и принимают рубли. Переходы помечены как рекламные — партнёрские ссылки не влияют на баллы и порядок в таблице.</p>
+<p class="rk-prose reveal">Площадки нашего топа работают по лицензии Curaçao и принимают рубли; полный список партнёров открывается кнопкой «Показать все» в таблице. Переходы помечены как рекламные — партнёрские ссылки не влияют на порядок редакционной подборки.</p>
 <div class="rk-stats reveal">
-<div class="stat"><div class="n" data-count="6">6</div><div class="l">площадок после отбора</div></div>
+<div class="stat"><div class="n" data-count="25">25</div><div class="l">казино в рейтинге</div></div>
 <div class="stat"><div class="n" data-count="6">6</div><div class="l">критериев в каждой оценке</div></div>
 <div class="stat"><div class="n">50 ₽</div><div class="l">минимум для теста вывода</div></div>
 <div class="stat"><div class="n" data-count="30" data-suffix=" дн">30 дн</div><div class="l">между пересмотрами баллов</div></div>
@@ -1214,12 +1431,12 @@ window.addEventListener('load',function(){
 <div class="rk-brandlinks reveal" id="rkBrandlinks"></div>
 <noscript>
 <div class="rk-brandlinks">
-<a href="/casino/7k"><b>7K Casino</b><small>№1 · быстрые выплаты · 9.9</small></a>
-<a href="/casino/spinto"><b>Spinto</b><small>минимум верификации · 9.8</small></a>
-<a href="/casino/1win"><b>1win</b><small>каталог и ставки · 9.7</small></a>
-<a href="/casino/banda"><b>Banda</b><small>фриспины и турниры · 9.6</small></a>
-<a href="/casino/leebet"><b>Leebet</b><small>крипто-касса · 9.5</small></a>
-<a href="/casino/apex"><b>APEX</b><small>щедрый старт · 9.4</small></a>
+<a href="/casino/spinto/"><b>Spinto</b><small>№1 · выбор редакции · 9.8</small></a>
+<a href="/casino/7k/"><b>7K Casino</b><small>эталон быстрых выплат · 9.9</small></a>
+<a href="/casino/1win/"><b>1win</b><small>каталог и ставки · 9.7</small></a>
+<a href="/casino/banda/"><b>Banda</b><small>фриспины и турниры · 9.6</small></a>
+<a href="/casino/leebet/"><b>Leebet</b><small>крипто-касса · 9.5</small></a>
+<a href="/casino/apex/"><b>APEX</b><small>щедрый старт · 9.4</small></a>
 <a href="/casino/">Показать все обзоры →</a>
 </div>
 </noscript>
@@ -1318,8 +1535,8 @@ window.addEventListener('load',function(){
 /* Data-driven random interlinks — extend the pools below to add items */
 (function(){
   var brands=[
-    {n:'7K Casino',s:'7k',sc:'9.9',d:'№1 · быстрые выплаты',c:'#ffcf3f',c2:'#e0952f'},
-    {n:'Spinto',s:'spinto',sc:'9.8',d:'минимум верификации',c:'#e6eaf3',c2:'#a9b1c6'},
+    {n:'Spinto',s:'spinto',sc:'9.8',d:'№1 · выбор редакции',c:'#ffcf3f',c2:'#e0952f'},
+    {n:'7K Casino',s:'7k',sc:'9.9',d:'эталон быстрых выплат',c:'#e6eaf3',c2:'#a9b1c6'},
     {n:'1win',s:'1win',sc:'9.7',d:'каталог и ставки',c:'#eaa96f',c2:'#b06d34'},
     {n:'Banda',s:'banda',sc:'9.6',d:'фриспины и турниры',c:'#37e0c8',c2:'#12a892'},
     {n:'Leebet',s:'leebet',sc:'9.5',d:'крипто-касса',c:'#ff2e93',c2:'#c81f6f'},
@@ -1441,14 +1658,18 @@ window.addEventListener('load',function(){
       "@type": "ItemList",
       "name": "Рейтинг онлайн-казино 2026 по методике PlayCasino",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 6,
+      "numberOfItems": 10,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
-        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
-        {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
-        {"@type":"ListItem","position":6,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"}
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto/"},
+        {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k/"},
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win/"},
+        {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda/"},
+        {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet/"},
+        {"@type":"ListItem","position":6,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex/"},
+        {"@type":"ListItem","position":7,"name":"Kush","url":"https://rejting-kazino777.top/casino/kush/"},
+        {"@type":"ListItem","position":8,"name":"Eva","url":"https://rejting-kazino777.top/casino/eva/"},
+        {"@type":"ListItem","position":9,"name":"Flagman","url":"https://rejting-kazino777.top/casino/flagman/"},
+        {"@type":"ListItem","position":10,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo/"}
       ]
     },
     {
@@ -1456,7 +1677,7 @@ window.addEventListener('load',function(){
       "mainEntity": [
         {"@type":"Question","name":"По каким критериям вы оцениваете казино?","acceptedAnswer":{"@type":"Answer","text":"По шести: лицензия (25%), реальные выплаты (25%), бонусы и условия отыгрыша (20%), касса и платёжки (15%), поддержка (10%), мобайл (5%). Каждый критерий оцениваю по 10-балльной шкале и умножаю на вес."}},
         {"@type":"Question","name":"Как считается итоговый балл?","acceptedAnswer":{"@type":"Answer","text":"Оценку по каждому критерию умножаю на его вес и складываю в один итог от 0 до 10. Половину дают лицензия и выплаты. Максимум сейчас у 7K Casino — 9.9."}},
-        {"@type":"Question","name":"Какое казино сейчас на первом месте и почему?","acceptedAnswer":{"@type":"Answer","text":"7K Casino, 9.9 из 10. Вывод по СБП и карте укладывается в 15 минут – 2 часа, крипта до 30 минут, плюс кэшбэк до 20% по понедельникам и KYC на малых суммах без паспорта."}},
+        {"@type":"Question","name":"Какое казино сейчас на первом месте и почему?","acceptedAnswer":{"@type":"Answer","text":"Выбор редакции — Spinto: низкий порог от 50 ₽, выплаты по СБП и крипте укладываются в час, вейджер x35 читаемый, KYC минимальная. Самый высокий балл при этом у 7K Casino — 9.9 за скорость выплат по СБП 15 минут – 2 часа."}},
         {"@type":"Question","name":"Вы правда проверяете выплаты своими деньгами?","acceptedAnswer":{"@type":"Answer","text":"Да. Вношу минимум — у 7K, Spinto и 1win это 50 ₽ — вывожу и засекаю время. У 7K по СБП это 15 минут – 2 часа, у Leebet по USDT TRC-20 около 20 минут."}},
         {"@type":"Question","name":"Как в рейтинге учитывается отдача (RTP)?","acceptedAnswer":{"@type":"Answer","text":"Процент возврата задаёт провайдер слота, а не казино, поэтому «высокую отдачу площадки» я не обещаю. Оцениваю честность софта: лицензированные Pragmatic, Nolimit City, Hacksaw, Evolution и не занижен ли процент в настройках оператора."}},
         {"@type":"Question","name":"Какие казино попадают в рейтинг, а какие нет?","acceptedAnswer":{"@type":"Answer","text":"Попадают только площадки с проверяемой лицензией Curaçao и рублёвой кассой. Без лицензии, с урезанным вейджером задним числом или жалобами на невыплаты — не попадают вообще."}},

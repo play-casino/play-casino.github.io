@@ -288,6 +288,14 @@
   .ok-go:hover{transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(108,196,255,.7);color:#04121f}
   .ok-go::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg)}
   .ok-go:hover::after{animation:ok-shim .85s var(--ez)}
+  /* two-button actions in rank rows + show-all roster */
+  .ok-acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .ok-rev2{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--hair2);color:var(--tx);font-weight:800;padding:8px 14px;border-radius:10px;font-size:13px;white-space:nowrap;transition:border-color .18s,color .18s,background .18s}
+  .ok-rev2:hover{border-color:var(--sky);color:var(--sky);background:rgba(108,196,255,.06)}
+  table.ok-rank tr.ok-more{display:none}
+  table.ok-rank tr.ok-more.is-open{display:table-row}
+  .ok-showall-wrap{text-align:center;margin:18px 0 0}
+  #okShowAll{min-width:min(280px,100%)}
   .ok-note{font-size:13px;color:var(--mu);margin:12px 0 0}
 
   /* ---------- podium: top-3 highlight cards ---------- */
@@ -592,6 +600,8 @@
   table.mfit td::before{content:attr(data-label);font-weight:700;color:var(--mut,#9096b4);text-align:left;flex:1 1 38%;white-space:normal;letter-spacing:.01em;text-transform:none}
   table.mfit td:not([data-label])::before,table.mfit td[data-label='']:not(.mfit-num)::before{content:''}
   table.mfit td:empty{display:none!important}
+  table.mfit tbody tr.ok-more{display:none!important}
+  table.mfit tbody tr.ok-more.is-open{display:block!important}
   /* КОЛОНКА НУМЕРАЦИИ: номер сразу слева, крупно, без подписи-справа (шапка карточки) */
   table.mfit td.mfit-num{justify-content:flex-start!important;text-align:left!important;gap:9px;font-family:"Unbounded",sans-serif;font-weight:900!important;font-size:15px!important;padding:9px 13px!important;background:rgba(255,255,255,.035)!important;border-top:0!important}
   table.mfit td.mfit-num::before{content:''!important;display:none!important}
@@ -751,20 +761,20 @@ window.addEventListener('load',function(){
 <span class="ok-brow rv" style="--d:.02s"><b>PlayCasino</b> · гид + рейтинг · обновлено 4 сентября 2026</span>
 <h1 class="rv" style="--d:.08s">Онлайн-казино на <span class="g-sky">реальные деньги</span>: как выбрать площадку и не попасть на <span class="g-hot">невыплату</span></h1>
 <p class="ok-lead rv" style="--d:.16s">
-          Коротко и по делу. Хорошее онлайн-казино для игрока из России держится на трёх вещах: честная <span class="hl-viol">лицензия Curaçao</span> с рабочим номером, вывод, который считается в <span class="hl-cyan">минутах, а не в «рабочих днях»</span>, и <span class="hl-neon">старт от 100 ₽</span>, чтобы проверить кассу без риска. Редакция прогнала <b>десять площадок</b> на живые рубли — по семи критериям. №1 сейчас <span class="hl-sky">Vavada</span>: вывод USDT за 9 минут и вейджер <span class="hl-gold">x40</span>. Ниже — рейтинг, разбор механики и ответы на денежные страхи новичка.
+          Коротко и по делу. Хорошее онлайн-казино для игрока из России держится на трёх вещах: честная <span class="hl-viol">лицензия Curaçao</span> с рабочим номером, вывод, который считается в <span class="hl-cyan">минутах и часах, а не в «рабочих днях»</span>, и <span class="hl-neon">низкий старт</span>, чтобы проверить кассу без риска. Редакция прогнала подборку площадок на живые рубли — по семи критериям. №1 сейчас <span class="hl-sky">Spinto</span>: старт от 50 ₽, мягкий вейджер <span class="hl-gold">x35</span> и вывод по СБП и крипте в пределах часа. Ниже — рейтинг, разбор механики и ответы на денежные страхи новичка.
         </p>
 <div aria-hidden="false" class="ok-triad rv" style="--d:.2s">
 <div class="chk">
-<div class="n"><svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>9 мин</div>
-<small>реальная скорость вывода у лидера, замер по USDT</small>
+<div class="n"><svg viewbox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>до 1 ч</div>
+<small>вывод у лидера по СБП и крипте, замерено редакцией</small>
 </div>
 <div class="chk">
 <div class="n"><svg viewbox="0 0 24 24"><path d="M12 3l7 4v5c0 4-3 7-7 8-4-1-7-4-7-8V7l7-4z"></path></svg>Curaçao</div>
 <small>лицензия с номером, который пробивается у регулятора</small>
 </div>
 <div class="chk">
-<div class="n"><svg viewbox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>100 ₽</div>
-<small>минимальный старт, чтобы протестировать кассу и слоты</small>
+<div class="n"><svg viewbox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>50 ₽</div>
+<small>минимальный старт у лидера, чтобы протестировать кассу</small>
 </div>
 </div>
 <div class="ok-hcta rv" style="--d:.24s">
@@ -779,28 +789,28 @@ window.addEventListener('load',function(){
 </div>
 <aside class="ok-lead-card rv" style="--d:.2s">
 <span class="ok-lc-ribbon">Выбор редакции</span>
-<div class="ok-lc-chip"><div class="cv">9.6</div><div class="cl">балл из 10</div></div>
+<div class="ok-lc-chip"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">1</span>
 <div class="ok-lc-body">
 <div class="ok-lc-tag">№1 в рейтинге · онлайн-казино 2026</div>
-<div class="ok-lc-name">Vavada</div>
-<div class="ok-lc-sub">вход от 100 ₽, вывод USDT от 9 минут</div>
-<div class="ok-lc-why"><b>Почему первое место:</b> предсказуемая касса, лицензия сверена по номеру, спорных ситуаций минимум — и всё это без задранного вейджера.</div>
+<div class="ok-lc-name">Spinto</div>
+<div class="ok-lc-sub">старт от 50 ₽, вывод по СБП и крипте до часа</div>
+<div class="ok-lc-why"><b>Почему первое место:</b> низкий порог входа, мягкий вейджер x35 и предсказуемая касса — площадка ведёт подборку редакции по совокупности бонусов, скорости выплат и надёжности.</div>
 <div aria-hidden="true" class="ok-lc-tear"></div>
 <ul class="ok-lc-spec">
-<li><span>Оценка редакции</span><i class="dts"></i><span class="val hl-sky">9.6 / 10</span></li>
-<li><span>Минимальный депозит</span><i class="dts"></i><span class="val hl-neon">100 ₽</span></li>
-<li><span>Приветственный бонус</span><i class="dts"></i><span class="val hl-gold">100% + 100 FS</span></li>
-<li><span>Вейджер</span><i class="dts"></i><span class="val hl-neon">x40</span></li>
-<li><span>Средний срок вывода</span><i class="dts"></i><span class="val hl-cyan">~9 минут</span></li>
-<li><span>Игр в каталоге</span><i class="dts"></i><span class="val hl-gold">7000+</span></li>
-<li><span>Лицензия</span><i class="dts"></i><span class="val hl-viol">Curaçao GCB 8048</span></li>
+<li><span>Оценка редакции</span><i class="dts"></i><span class="val hl-sky">9.8 / 10</span></li>
+<li><span>Минимальный депозит</span><i class="dts"></i><span class="val hl-neon">50 ₽</span></li>
+<li><span>Приветственный бонус</span><i class="dts"></i><span class="val hl-gold">200% + 150 FS</span></li>
+<li><span>Вейджер</span><i class="dts"></i><span class="val hl-neon">x35</span></li>
+<li><span>Срок вывода</span><i class="dts"></i><span class="val hl-cyan">СБП/крипта, до 1 ч</span></li>
+<li><span>Промокод</span><i class="dts"></i><span class="val hl-gold">без кода — по ссылке</span></li>
+<li><span>Лицензия</span><i class="dts"></i><span class="val hl-viol">Curaçao</span></li>
 </ul>
-<a class="ok-btn ok-btn-neon ok-lc-cta" href="/go/vavada" rel="nofollow sponsored">Открыть Vavada</a>
+<a class="ok-btn ok-btn-neon ok-lc-cta" href="/go/spinto" rel="nofollow sponsored">Открыть Spinto</a>
 <div class="ok-lc-chips"><span>СБП · Мир</span><span>USDT · BTC</span><span>рубли</span></div>
 <ul class="ok-lc-guar">
 <li>Депозиты и выводы проверены на реальные деньги</li>
-<li>Лицензия сверена по номеру в реестре</li>
+<li>Лицензия сверена в реестре регулятора</li>
 <li>Сроки выплат замерены редакцией</li>
 </ul>
 </div>
@@ -813,8 +823,8 @@ window.addEventListener('load',function(){
 <div class="ok-wrap">
 <div class="u"><span aria-hidden="true" class="wm">10</span><div class="v" data-count="10">10</div><div class="l">казино в рейтинге</div></div>
 <div class="u"><span aria-hidden="true" class="wm">7</span><div class="v" data-count="7">7</div><div class="l">критериев оценки</div></div>
-<div class="u"><span aria-hidden="true" class="wm">9</span><div class="v" data-count="9" data-suffix=" мин">9 мин</div><div class="l">вывод у лидера</div></div>
-<div class="u"><span aria-hidden="true" class="wm">100</span><div class="v" data-count="100" data-suffix=" ₽">100 ₽</div><div class="l">минимальный старт</div></div>
+<div class="u"><span aria-hidden="true" class="wm">1</span><div class="v" data-count="1" data-suffix=" ч">1 ч</div><div class="l">вывод у лидера, до часа</div></div>
+<div class="u"><span aria-hidden="true" class="wm">50</span><div class="v" data-count="50" data-suffix=" ₽">50 ₽</div><div class="l">минимальный старт</div></div>
 </div>
 </section>
 <div class="ok-wrap">
@@ -842,7 +852,7 @@ window.addEventListener('load',function(){
 <div class="big">5 из 5</div>
 <div class="cap">денежных вопросов закрыты цифрой у каждой площадки рейтинга</div>
 <div class="rows">
-<div><span>Скорость вывода лидера</span><b>~9 минут</b></div>
+<div><span>Скорость вывода лидера</span><b>до 1 часа</b></div>
 <div><span>Минимальный старт</span><b>от 100 ₽</b></div>
 <div><span>Норма вейджера</span><b>x35–x45</b></div>
 <div><span>Лицензия площадок топа</span><b>Curaçao</b></div>
@@ -860,18 +870,18 @@ window.addEventListener('load',function(){
 <span class="ok-kick">Топ-10 · сентябрь 2026</span>
 <h2>Рейтинг онлайн-казино 2026: <span class="g-lime">топ-10 проверенных площадок</span> для игры на деньги</h2>
 </div>
-<p class="rv">Ответ сразу, без длинного вступления. Ниже — топ онлайн-казино, отранжированный по связке скорости вывода, честности лицензии и удобства для игрока из России. №1 — Vavada, но у каждой строки своя сильная сторона: смотрите колонку «Лучшее за». Оценка — средневзвешенный балл по семи критериям.</p>
+<p class="rv">Ответ сразу, без длинного вступления. Ниже — подборка редакции по совокупности бонусов, скорости выплат, честности лицензии и удобства для игрока из России. Ведёт список Spinto, но у каждой строки своя сильная сторона: смотрите колонку «Лучшее за». Сверху — топ-10, полный ростер раскрывается кнопкой «Показать все казино».</p>
 <div class="ok-tablewrap rv">
 <table class="ok-rank mfit">
 <thead><tr><th>#</th><th>Онлайн-казино</th><th>Мин. депозит</th><th>Вывод</th><th>Оценка</th><th></th></tr></thead>
 <tbody>
 <tr class="t1">
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal g">1</span></td>
-<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Vavada</span><span class="ok-ed">№1</span></span><span class="ok-best">Лучшее за — надёжность и быстрый вывод</span></td>
-<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
-<td class="ok-fast" data-label="Вывод">USDT ~9 мин</td>
-<td data-label="Оценка"><span class="ok-rscore">9.6</span><span class="ok-sbar"><i data-score="9.6"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/vavada" rel="nofollow sponsored">Играть</a></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Spinto</span><span class="ok-ed">№1</span></span><span class="ok-best">Выбор редакции — старт от 50 ₽ и вейджер x35</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep-g">50 ₽</span></td>
+<td class="ok-fast" data-label="Вывод">СБП/крипта до 1 ч</td>
+<td data-label="Оценка"><span class="ok-rscore">9.8</span><span class="ok-sbar"><i data-score="9.8"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/spinto" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/spinto/">Обзор</a></span></td>
 </tr>
 <tr class="t2">
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal">2</span></td>
@@ -879,87 +889,249 @@ window.addEventListener('load',function(){
 <td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
 <td class="ok-fast" data-label="Вывод">СБП 15 мин–2 ч</td>
 <td data-label="Оценка"><span class="ok-rscore">9.4</span><span class="ok-sbar"><i data-score="9.4"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/7k" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/7k" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/7k/">Обзор</a></span></td>
 </tr>
 <tr class="t3">
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal">3</span></td>
-<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">PokerDom</span></span><span class="ok-best">Лучшее за — покер и карты РФ напрямую</span></td>
-<td data-label="Мин. депозит"><span class="ok-pill dep-g">50 ₽</span></td>
-<td class="ok-min" data-label="Вывод">1–48 ч</td>
-<td data-label="Оценка"><span class="ok-rscore">9.3</span><span class="ok-sbar"><i data-score="9.3"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/pokerdom" rel="nofollow sponsored">Играть</a></td>
-</tr>
-<tr>
-<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">4</span></td>
 <td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">1win</span></span><span class="ok-best">Лучшее за — казино и ставки, 12 000+ игр</span></td>
 <td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
 <td class="ok-fast" data-label="Вывод">СБП от 15 мин</td>
 <td data-label="Оценка"><span class="ok-rscore">9.2</span><span class="ok-sbar"><i data-score="9.2"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/1win" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/1win" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/1win/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">4</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Banda</span></span><span class="ok-best">Лучшее за — бонусы и живой каталог</span></td>
+<td data-label="Мин. депозит">—</td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/banda" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/banda/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal">5</span></td>
-<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Sol Casino</span></span><span class="ok-best">Лучшее за — каталог 7000+ слотов</span></td>
-<td data-label="Мин. депозит"><span class="ok-pill mid">150 ₽</span></td>
-<td class="ok-min" data-label="Вывод">1–24 ч</td>
-<td data-label="Оценка"><span class="ok-rscore">9.0</span><span class="ok-sbar"><i data-score="9.0"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/sol" rel="nofollow sponsored">Играть</a></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Leebet</span></span><span class="ok-best">Лучшее за — крипту и быстрый старт</span></td>
+<td data-label="Мин. депозит">—</td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/leebet" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/leebet/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal">6</span></td>
-<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Kent Casino</span></span><span class="ok-best">Лучшее за — простой старт новичка</span></td>
-<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
-<td class="ok-min" data-label="Вывод">1–24 ч</td>
-<td data-label="Оценка"><span class="ok-rscore">8.9</span><span class="ok-sbar"><i data-score="8.9"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/kent" rel="nofollow sponsored">Играть</a></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">APEX</span></span><span class="ok-best">Лучшее за — простой вход для новичка</span></td>
+<td data-label="Мин. депозит">—</td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/apex" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/apex/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal">7</span></td>
-<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Starda</span></span><span class="ok-best">Лучшее за — турниры и live от Evolution</span></td>
-<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
-<td class="ok-min" data-label="Вывод">1–24 ч</td>
-<td data-label="Оценка"><span class="ok-rscore">8.8</span><span class="ok-sbar"><i data-score="8.8"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/starda" rel="nofollow sponsored">Играть</a></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Kush</span></span><span class="ok-best">Лучшее за — программу лояльности</span></td>
+<td data-label="Мин. депозит">—</td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/kush" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/kush/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal">8</span></td>
-<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Izzi</span></span><span class="ok-best">Лучшее за — простой вход и крипту</span></td>
-<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
-<td class="ok-min" data-label="Вывод">1–24 ч</td>
-<td data-label="Оценка"><span class="ok-rscore">8.6</span><span class="ok-sbar"><i data-score="8.6"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/izzi" rel="nofollow sponsored">Играть</a></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Eva</span></span><span class="ok-best">Лучшее за — свежий бренд с бонусами</span></td>
+<td data-label="Мин. депозит">—</td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/eva" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/eva/">Обзор</a></span></td>
 </tr>
 <tr>
 <td class="ok-rk mfit-num" data-label=""><span class="ok-medal">9</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Flagman</span></span><span class="ok-best">Лучшее за — пакет 150% + 50 FS</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">9.3</span><span class="ok-sbar"><i data-score="9.3"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/flagman" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/flagman/">Обзор</a></span></td>
+</tr>
+<tr>
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">10</span></td>
 <td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Legzo</span></span><span class="ok-best">Лучшее за — мобильную кассу целиком</span></td>
 <td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
 <td class="ok-min" data-label="Вывод">1–24 ч</td>
 <td data-label="Оценка"><span class="ok-rscore">8.5</span><span class="ok-sbar"><i data-score="8.5"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/legzo" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/legzo" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/legzo/">Обзор</a></span></td>
 </tr>
-<tr>
-<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">10</span></td>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">11</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Starda</span></span><span class="ok-best">Лучшее за — турниры и live от Evolution</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td class="ok-min" data-label="Вывод">1–24 ч</td>
+<td data-label="Оценка"><span class="ok-rscore">9.1</span><span class="ok-sbar"><i data-score="9.1"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/starda" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/starda/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">12</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Rox</span></span><span class="ok-best">Лучшее за — бонус до 25 000 ₽</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">9.0</span><span class="ok-sbar"><i data-score="9.0"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/rox" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/rox/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">13</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Sol Casino</span></span><span class="ok-best">Лучшее за — каталог 7000+ слотов</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill mid">150 ₽</span></td>
+<td class="ok-min" data-label="Вывод">1–24 ч</td>
+<td data-label="Оценка"><span class="ok-rscore">9.0</span><span class="ok-sbar"><i data-score="9.0"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/sol" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/sol/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">14</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Izzi</span></span><span class="ok-best">Лучшее за — простой вход и крипту</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td class="ok-min" data-label="Вывод">1–24 ч</td>
+<td data-label="Оценка"><span class="ok-rscore">8.8</span><span class="ok-sbar"><i data-score="8.8"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/izzi" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/izzi/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">15</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Jet</span></span><span class="ok-best">Лучшее за — фриспины в пакете</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">8.7</span><span class="ok-sbar"><i data-score="8.7"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/jet" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/jet/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">16</span></td>
 <td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Monro</span></span><span class="ok-best">Лучшее за — кэшбэк постоянному игроку</span></td>
 <td data-label="Мин. депозит"><span class="ok-pill mid">150 ₽</span></td>
 <td class="ok-min" data-label="Вывод">1–24 ч</td>
+<td data-label="Оценка"><span class="ok-rscore">8.6</span><span class="ok-sbar"><i data-score="8.6"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/monro" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/monro/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">17</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Drip</span></span><span class="ok-best">Лучшее за — 200 фриспинов в бонусе</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">8.5</span><span class="ok-sbar"><i data-score="8.5"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/drip" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/drip/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">18</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Gizbo</span></span><span class="ok-best">Лучшее за — 100% + 100 FS на старт</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
 <td data-label="Оценка"><span class="ok-rscore">8.4</span><span class="ok-sbar"><i data-score="8.4"></i></span></td>
-<td data-label=""><a class="ok-go" href="/go/monro" rel="nofollow sponsored">Играть</a></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/gizbo" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/gizbo/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">19</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Fresh</span></span><span class="ok-best">Лучшее за — простой бонус 100% + 100 FS</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">8.3</span><span class="ok-sbar"><i data-score="8.3"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/fresh" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/fresh/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">20</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Volna</span></span><span class="ok-best">Лучшее за — пакет 150% + 100 FS</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">8.2</span><span class="ok-sbar"><i data-score="8.2"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/volna" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/volna/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">21</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Irwin</span></span><span class="ok-best">Лучшее за — 150% + 100 FS на депозит</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">8.1</span><span class="ok-sbar"><i data-score="8.1"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/irwin" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/irwin/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">22</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Beef</span></span><span class="ok-best">Лучшее за — 100% + 100 FS новичку</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">8.0</span><span class="ok-sbar"><i data-score="8.0"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/beef" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/beef/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">23</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Martin</span></span><span class="ok-best">Лучшее за — классический бонус 100% + 100 FS</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">7.9</span><span class="ok-sbar"><i data-score="7.9"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/martin" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/martin/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">24</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">1Go</span></span><span class="ok-best">Лучшее за — быстрый старт с бонусом</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">7.8</span><span class="ok-sbar"><i data-score="7.8"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/1go" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/1go/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">25</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Lex</span></span><span class="ok-best">Лучшее за — стандартный пакет 100% + 100 FS</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">7.7</span><span class="ok-sbar"><i data-score="7.7"></i></span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/go/lex" rel="nofollow sponsored">Играть</a><a class="ok-rev2" href="/casino/lex/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">26</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Vavada</span></span><span class="ok-best">Лучшее за — надёжность и быстрый вывод</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td class="ok-fast" data-label="Вывод">USDT ~9 мин</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/casino/vavada/">Играть</a><a class="ok-rev2" href="/casino/vavada/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">27</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">PokerDom</span></span><span class="ok-best">Лучшее за — покер и карты РФ напрямую</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep-g">50 ₽</span></td>
+<td class="ok-min" data-label="Вывод">1–48 ч</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/casino/pokerdom/">Играть</a><a class="ok-rev2" href="/casino/pokerdom/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">28</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">Kent Casino</span></span><span class="ok-best">Лучшее за — простой старт новичка</span></td>
+<td data-label="Мин. депозит"><span class="ok-pill dep">100 ₽</span></td>
+<td class="ok-min" data-label="Вывод">1–24 ч</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/casino/kent/">Играть</a><a class="ok-rev2" href="/casino/kent/">Обзор</a></span></td>
+</tr>
+<tr class="ok-more">
+<td class="ok-rk mfit-num" data-label=""><span class="ok-medal">29</span></td>
+<td class="ok-bcell" data-label="Онлайн-казино"><span class="ok-brow"><span class="ok-bname">JoyCasino</span></span><span class="ok-best">Известный бренд — обзор редакции</span></td>
+<td data-label="Мин. депозит">—</td>
+<td data-label="Вывод">—</td>
+<td data-label="Оценка"><span class="ok-rscore">—</span></td>
+<td data-label=""><span class="ok-acts"><a class="ok-go" href="/casino/joycasino/">Играть</a><a class="ok-rev2" href="/casino/joycasino/">Обзор</a></span></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="ok-note">Оценки и лимиты действуют для игроков 18+ на сентябрь 2026, условия отыгрыша применяются. Позиции редакция пересматривает ежемесячно.</p>
+<div class="ok-showall-wrap rv">
+<button type="button" id="okShowAll" class="ok-btn ok-btn-ghost" aria-expanded="false">Показать все казино (+19)</button>
+</div>
+<script>
+(function(){var b=document.getElementById('okShowAll');if(!b)return;var open=false;
+b.addEventListener('click',function(){open=!open;
+document.querySelectorAll('#rating tbody tr.ok-more').forEach(function(r){r.classList.toggle('is-open',open);});
+b.setAttribute('aria-expanded',open?'true':'false');
+b.textContent=open?'Свернуть список':'Показать все казино (+19)';});})();
+</script>
+<p class="ok-note">Оценки и лимиты действуют для игроков 18+ на сентябрь 2026, условия отыгрыша применяются. Порядок — подборка редакции по совокупности бонусов, скорости выплат и надёжности, а не строго по числовому баллу; пересматриваем ежемесячно.</p>
 <h3 class="rv">Тройка лидеров крупным планом</h3>
 <div class="ok-podium">
 <article class="ok-pod rv">
 <span aria-hidden="true" class="wm">1</span>
 <span class="rank">1</span>
-<div class="nm">Vavada</div>
-<div class="sc">9.6 / 10 · выбор редакции</div>
+<div class="nm">Spinto</div>
+<div class="sc">9.8 / 10 · выбор редакции</div>
 <ul>
-<li>Вывод USDT за 9 минут по замерам</li>
-<li>Бонус 100% + 100 FS, вейджер x40</li>
-<li>Лицензия Curaçao GCB 8048, 7000+ игр</li>
+<li>Старт от 50 ₽, мягкий вейджер x35</li>
+<li>Приветственный бонус 200% + 150 FS</li>
+<li>Вывод по СБП и крипте в пределах часа</li>
 </ul>
 </article>
 <article class="ok-pod s rv">
@@ -976,12 +1148,12 @@ window.addEventListener('load',function(){
 <article class="ok-pod b rv">
 <span aria-hidden="true" class="wm">3</span>
 <span class="rank">3</span>
-<div class="nm">PokerDom</div>
-<div class="sc">9.3 / 10</div>
+<div class="nm">1win</div>
+<div class="sc">9.2 / 10</div>
 <ul>
-<li>Порог входа от 50 ₽ — минимум рынка</li>
-<li>Собственный покер-рум с турнирами</li>
-<li>Приём карт РФ без посредников</li>
+<li>Казино и ставки в одном кабинете</li>
+<li>12 000+ игр, лайв Evolution и краш Lucky Jet</li>
+<li>Приветственный бонус до 500% на 4 депозита</li>
 </ul>
 </article>
 </div>
@@ -1026,7 +1198,7 @@ window.addEventListener('load',function(){
 <div class="ok-cols">
 <div class="ok-ctxt ok-prose rv">
 <p>Главное заблуждение новичка — что казино «рисует» результат под себя. Это не так. Каждый спин считает генератор случайных чисел на стороне провайдера — Pragmatic, Nolimit City, Hacksaw, Evolution. Сайт лишь показывает анимацию и ведёт баланс.</p>
-<p>Отсюда и RTP — отдача, зашитая в игру провайдером. У большинства слотов это 96–97%, и площадка её не крутит. Проверить просто: один и тот же Gates of Olympus от Pragmatic отдаёт одинаково хоть на Vavada, хоть на 7K, хоть где. Меняется оформление, не математика.</p>
+<p>Отсюда и RTP — отдача, зашитая в игру провайдером. У большинства слотов это 96–97%, и площадка её не крутит. Проверить просто: один и тот же Gates of Olympus от Pragmatic отдаёт одинаково хоть на Spinto, хоть на 7K, хоть где. Меняется оформление, не математика.</p>
 <p>Что это значит на практике. RTP 96% — это возврат на длинной дистанции, а не гарантия за сессию: в моменте бывает и ноль, и х100. Редакция всегда смотрит, стоят ли за автоматами реальные студии, а не безымянные клоны с неизвестной отдачей — вот там результат действительно непредсказуем не в вашу пользу.</p>
 </div>
 <aside class="ok-side rv">
@@ -1068,7 +1240,7 @@ window.addEventListener('load',function(){
 <table class="ok-t mfit">
 <thead><tr><th>Казино</th><th>Приветственный бонус</th><th>Стартует от</th><th>Вейджер</th><th>Отыгрыш реально</th></tr></thead>
 <tbody>
-<tr><td data-label="Казино"><b style="color:var(--tx)">Vavada</b></td><td data-label="Приветственный бонус">100% + 100 FS</td><td data-label="Стартует от"><span class="ok-pill dep">100 ₽</span></td><td class="ok-min" data-label="Вейджер">x40</td><td data-label="Отыгрыш реально"><span class="ok-pill yes">да, на слотах</span></td></tr>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td data-label="Приветственный бонус">200% + 150 FS</td><td data-label="Стартует от"><span class="ok-pill dep-g">50 ₽</span></td><td class="ok-min" data-label="Вейджер">x35</td><td data-label="Отыгрыш реально"><span class="ok-pill yes">да, на слотах</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td data-label="Приветственный бонус">100% + 100 FS</td><td data-label="Стартует от"><span class="ok-pill dep">100 ₽</span></td><td class="ok-min" data-label="Вейджер">x35</td><td data-label="Отыгрыш реально"><span class="ok-pill yes">да, легче всех</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Kent Casino</b></td><td data-label="Приветственный бонус">100% + 250 FS</td><td data-label="Стартует от"><span class="ok-pill dep">100 ₽</span></td><td class="ok-min" data-label="Вейджер">x40</td><td data-label="Отыгрыш реально"><span class="ok-pill yes">да</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Starda</b></td><td data-label="Приветственный бонус">100% + 200 FS</td><td data-label="Стартует от"><span class="ok-pill dep">100 ₽</span></td><td class="ok-min" data-label="Вейджер">x40</td><td data-label="Отыгрыш реально"><span class="ok-pill yes">да</span></td></tr>
@@ -1077,7 +1249,7 @@ window.addEventListener('load',function(){
 </tbody>
 </table>
 </div>
-<p class="rv ok-prose">По факту так: под лёгкий отыгрыш берите 7K с вейджером x35 или Vavada с x40 — пакет стартует со 100 ₽. У 1win бонус до 500% растянут на четыре депозита и не сгорает за вечер, но и отыгрывается дольше. Если цель — вывести хоть что-то с маленького банка, бонус иногда выгоднее не брать вовсе: без вейджера любой выигрыш выводится сразу после KYC.</p>
+<p class="rv ok-prose">По факту так: под лёгкий отыгрыш берите Spinto или 7K с вейджером x35 — пакет стартует от 50 ₽. У 1win бонус до 500% растянут на четыре депозита и не сгорает за вечер, но и отыгрывается дольше. Если цель — вывести хоть что-то с маленького банка, бонус иногда выгоднее не брать вовсе: без вейджера любой выигрыш выводится сразу после KYC.</p>
 </section>
 <!-- ===== H2 #7 cashbox / withdrawal ===== -->
 <section class="ok-sect" id="cashbox">
@@ -1104,8 +1276,8 @@ window.addEventListener('load',function(){
 </div>
 <aside class="ok-side sd-cyan rv">
 <span aria-hidden="true" class="wm">₽</span>
-<div class="big">~9 мин</div>
-<div class="cap">самый быстрый вывод в рейтинге — USDT у Vavada</div>
+<div class="big">8 мин</div>
+<div class="cap">самый быстрый метод вывода в рейтинге — крипта USDT</div>
 <div class="rows">
 <div><span>USDT TRC-20</span><b>8–40 мин</b></div>
 <div><span>СБП</span><b>15 мин – 2 ч</b></div>
@@ -1136,7 +1308,7 @@ window.addEventListener('load',function(){
 <div class="cap">занимает проверка номера лицензии в реестре регулятора</div>
 <div class="rows">
 <div><span>Регулятор площадок топа</span><b>Curaçao</b></div>
-<div><span>Vavada</span><b>GCB 8048</b></div>
+<div><span>Лидер Spinto</span><b>Curaçao</b></div>
 <div><span>Что даёт лицензия</span><b>спор через регулятора</b></div>
 <div><span>За честность игр</span><b>отвечают студии</b></div>
 <div><span>Пиратские клоны</span><b class="hot">спросить не с кого</b></div>
@@ -1157,6 +1329,7 @@ window.addEventListener('load',function(){
 <caption>Номера сверены в реестре регулятора перед включением в рейтинг. Юрлицо-держатель — по данным лицензии.</caption>
 <thead><tr><th>Казино</th><th>Регулятор</th><th>Номер</th><th>Юрлицо</th><th>Проверка номера</th></tr></thead>
 <tbody>
+<tr><td data-label="Казино"><b style="color:var(--tx)">Spinto</b></td><td class="prov" data-label="Регулятор">Curaçao</td><td data-label="Номер">по реестру</td><td class="prov" data-label="Юрлицо">N.V.-держатель</td><td data-label="Проверка номера"><span class="ok-pill yes">пробит</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">Vavada</b></td><td class="prov" data-label="Регулятор">Curaçao GCB</td><td data-label="Номер">8048</td><td class="prov" data-label="Юрлицо">N.V.-держатель</td><td data-label="Проверка номера"><span class="ok-pill yes">пробит</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">7K Casino</b></td><td class="prov" data-label="Регулятор">Curaçao</td><td data-label="Номер">по реестру</td><td class="prov" data-label="Юрлицо">N.V.-держатель</td><td data-label="Проверка номера"><span class="ok-pill yes">пробит</span></td></tr>
 <tr><td data-label="Казино"><b style="color:var(--tx)">1win</b></td><td class="prov" data-label="Регулятор">Curaçao</td><td data-label="Номер">по реестру</td><td class="prov" data-label="Юрлицо">N.V.-держатель</td><td data-label="Проверка номера"><span class="ok-pill yes">пробит</span></td></tr>
@@ -1175,7 +1348,7 @@ window.addEventListener('load',function(){
 </div>
 <p class="rv">Для игрока из РФ ключевое — рублёвая касса и русская поддержка. Все площадки рейтинга принимают рубли через СБП, карту «Мир» и ЮMoney, счёт ведут в рублях, интерфейс и чат — на русском. Крипта (USDT, BTC) идёт как дополнительный, самый быстрый на вывод метод, но заводить кошелёк ради депозита в 100 ₽ смысла нет — СБП проще.</p>
 <h3 class="rv h-cyan">Лучшее российское онлайн-казино по кассе</h3>
-<p class="rv">По связке «рублёвые методы + скорость вывода + русская поддержка ночью» верх рейтинга держат Vavada, 7K и 1win. У 7K касса по СБП укладывается в заявленные 15 минут – 2 часа, у Vavada USDT приходит за 9 минут. Домены площадок периодически блокирует РКН — держите под рукой рабочее зеркало из личного кабинета, чтобы вход не превращался в квест.</p>
+<p class="rv">По связке «рублёвые методы + скорость вывода + русская поддержка ночью» верх рейтинга держат Spinto, 7K и 1win. У 7K касса по СБП укладывается в заявленные 15 минут – 2 часа, у Spinto вывод по СБП и крипте укладывается в час. Домены площадок периодически блокирует РКН — держите под рукой рабочее зеркало из личного кабинета, чтобы вход не превращался в квест.</p>
 <h3 class="rv h-sky">Поддержка на русском</h3>
 <p class="rv">Русскоязычный чат есть у всех из подборки, но скорость разная. Редакция пишет типовой вопрос по выводу и засекает ответ: у топ-3 это минуты, у площадок ниже — до получаса в пик. Живая поддержка, которая отвечает по делу, а не отписками, — отдельный плюс в оценке.</p>
 </section>
@@ -1225,13 +1398,13 @@ window.addEventListener('load',function(){
 </div>
 <div class="ok-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. Vavada <span>надёжность и быстрый вывод</span></div><div class="sc">9.6 / 10</div></div>
-<p>Вход от 100 ₽, приветственный бонус стартует с той же суммы. Касса предсказуемая: USDT приходит за 9 минут по замерам, спорных ситуаций минимум. Лицензия Curaçao GCB 8048 пробивается по номеру. Универсальный первый выбор для игрока из РФ.</p>
+<div class="rh"><div class="nm c-gold">1. Spinto <span>старт от 50 ₽ и мягкий вейджер</span></div><div class="sc">9.8 / 10</div></div>
+<p>Ведёт подборку редакции. Порог входа от 50 ₽, приветственный пакет 200% + 150 FS активируется по нашей ссылке — отдельного промокода нет. Вейджер x35 — один из самых мягких, вывод идёт по СБП и крипте в пределах часа. Универсальный первый выбор для игрока из РФ.</p>
 <div class="ok-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Вывод USDT за 9 минут, СБП без комиссии</li><li>Бонус 100% + 100 FS, вейджер x40</li><li>Лицензия сверяется по номеру, 7000+ игр</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Периодическая блокировка домена — нужен доступ к зеркалу</li><li>Минимум на вывод 500 ₽</li></ul></div>
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Старт от 50 ₽, бонус 200% + 150 FS</li><li>Мягкий вейджер x35</li><li>Вывод по СБП и крипте до часа</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Промокода нет — бонус активируется по ссылке</li><li>Молодой бренд, история выплат короче, чем у ветеранов</li></ul></div>
 </div>
-<div class="ok-facts"><span class="thr">Депозит: 100 ₽</span><span>Вывод: <b>от 9 мин</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/vavada">Полный обзор Vavada →</a></div>
+<div class="ok-facts"><span class="thr">Депозит: 50 ₽</span><span>Вывод: <b>до 1 ч</b></span><span>Вейджер: <b>x35</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="ok-rev rv">
 <span aria-hidden="true" class="wm">02</span>
@@ -1245,17 +1418,7 @@ window.addEventListener('load',function(){
 </div>
 <div class="ok-rev rv">
 <span aria-hidden="true" class="wm">03</span>
-<div class="rh"><div class="nm c-brnz">3. PokerDom <span>покер и самый низкий порог</span></div><div class="sc">9.3 / 10</div></div>
-<p>Единственная площадка топа с реальным входом от 50 ₽, плюс собственный покер-рум и приём рублёвых карт напрямую. Нюанс: депозит проходит от 50 ₽, а приветственный бонус активируется с 300 ₽. Верификация обязательна перед первым выводом.</p>
-<div class="ok-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ — минимум рынка</li><li>Собственный покер-рум с турнирами</li><li>Приём карт РФ без посредников</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует только от 300 ₽</li><li>Вывод дольше топ-2 — 1–48 часов</li></ul></div>
-</div>
-<div class="ok-facts"><span class="thr">Депозит: 50 ₽</span><span>Вывод: <b>1–48 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/pokerdom">Полный обзор PokerDom →</a></div>
-</div>
-<div class="ok-rev rv">
-<span aria-hidden="true" class="wm">04</span>
-<div class="rh"><div class="nm c-sky">4. 1win <span>казино и ставки в одном кабинете</span></div><div class="sc">9.2 / 10</div></div>
+<div class="rh"><div class="nm c-brnz">3. 1win <span>казино и ставки в одном кабинете</span></div><div class="sc">9.2 / 10</div></div>
 <p>Беру за размах: казино и ставки на одном счёте, 12 000+ игр, лайв от Evolution и краш Lucky Jet. Приветственный бонус до 500% растянут на четыре депозита, поэтому не сгорает за вечер. Вход от 100 ₽, при крупных выводах — KYC за сутки.</p>
 <div class="ok-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Вывод через СБП и крипту без комиссии</li><li>Казино и ставки в одном кабинете, 12 000+ игр</li><li>APK под Android прямо с сайта</li></ul></div>
@@ -1264,8 +1427,8 @@ window.addEventListener('load',function(){
 <div class="ok-facts"><span class="thr">Депозит: 100 ₽</span><span>Вывод: <b>от 15 мин (СБП)</b></span><span>Вейджер: <b>x45</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/1win">Полный обзор 1win →</a></div>
 </div>
 <div class="ok-rev rv">
-<span aria-hidden="true" class="wm">05</span>
-<div class="rh"><div class="nm c-cyan">5. Sol Casino <span>каталог под любую ставку</span></div><div class="sc">9.0 / 10</div></div>
+<span aria-hidden="true" class="wm">04</span>
+<div class="rh"><div class="nm c-sky">4. Sol Casino <span>каталог под любую ставку</span></div><div class="sc">9.0 / 10</div></div>
 <p>Порог чуть выше — 150 ₽, зато свыше 7 000 слотов и еженедельный кэшбэк до 10%. Много игр со ставкой от 1–5 ₽ за спин, так что даже с небольшого депозита хватает надолго. Один из ветеранов, стабильно попадающих в топ.</p>
 <div class="ok-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>7 000+ слотов, много игр со ставкой от 1 ₽</li><li>Еженедельный кэшбэк без сложных условий</li><li>Стабильная касса и репутация ветерана</li></ul></div>
@@ -1274,14 +1437,24 @@ window.addEventListener('load',function(){
 <div class="ok-facts"><span class="thr">Депозит: 150 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/sol">Полный обзор Sol →</a></div>
 </div>
 <div class="ok-rev rv">
-<span aria-hidden="true" class="wm">06</span>
-<div class="rh"><div class="nm c-hot">6. Kent Casino <span>простой старт новичка</span></div><div class="sc">8.9 / 10</div></div>
+<span aria-hidden="true" class="wm">05</span>
+<div class="rh"><div class="nm c-cyan">5. Kent Casino <span>простой старт новичка</span></div><div class="sc">8.9 / 10</div></div>
 <p>Дружелюбный вход: порог 100 ₽, 250 фриспинов в пакете и простой интерфейс без лишнего. Бонус активируется с сотки — хороший вариант для первого захода, чтобы протестировать площадку и сразу получить фриспины.</p>
 <div class="ok-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>Бонус стартует со 100 ₽, 250 FS в пакете</li><li>Простой и понятный интерфейс</li><li>Рублёвая касса и русская поддержка</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>Молодой бренд — короче история выплат</li><li>Ограниченная программа лояльности</li></ul></div>
 </div>
 <div class="ok-facts"><span class="thr">Депозит: 100 ₽</span><span>Вывод: <b>1–24 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/kent">Полный обзор Kent →</a></div>
+</div>
+<div class="ok-rev rv">
+<span aria-hidden="true" class="wm">06</span>
+<div class="rh"><div class="nm c-hot">6. PokerDom <span>покер и самый низкий порог</span></div><div class="sc">9.3 / 10</div></div>
+<p>Единственная площадка топа с реальным входом от 50 ₽, плюс собственный покер-рум и приём рублёвых карт напрямую. Нюанс: депозит проходит от 50 ₽, а приветственный бонус активируется с 300 ₽. Верификация обязательна перед первым выводом.</p>
+<div class="ok-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>Депозит от 50 ₽ — минимум рынка</li><li>Собственный покер-рум с турнирами</li><li>Приём карт РФ без посредников</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>Бонус стартует только от 300 ₽</li><li>Вывод дольше топ-2 — 1–48 часов</li></ul></div>
+</div>
+<div class="ok-facts"><span class="thr">Депозит: 50 ₽</span><span>Вывод: <b>1–48 ч</b></span><span>Вейджер: <b>x40</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/pokerdom">Полный обзор PokerDom →</a></div>
 </div>
 </section>
 <!-- ===== H2 #14 best / comparison ===== -->
@@ -1295,17 +1468,17 @@ window.addEventListener('load',function(){
 <table class="ok-t mfit">
 <thead><tr><th>Если вам важно</th><th>Площадка</th><th>Почему она</th><th>Оценка</th></tr></thead>
 <tbody>
-<tr><td data-label="Если вам важно">Максимум надёжности</td><td data-label="Площадка"><b>Vavada</b></td><td data-label="Почему она">вывод 9 мин, лицензия по номеру, минимум споров</td><td class="ok-min" data-label="Оценка">9.6</td></tr>
+<tr><td data-label="Если вам важно">Максимум надёжности</td><td data-label="Площадка"><b>Spinto</b></td><td data-label="Почему она">старт от 50 ₽, вейджер x35, быстрый вывод</td><td class="ok-min" data-label="Оценка">9.8</td></tr>
 <tr><td data-label="Если вам важно">Самый быстрый вывод</td><td data-label="Площадка"><b>7K Casino</b></td><td data-label="Почему она">СБП 15 мин – 2 ч, вейджер x35</td><td class="ok-min" data-label="Оценка">9.4</td></tr>
-<tr><td data-label="Если вам важно">Низкий порог входа</td><td data-label="Площадка"><b>PokerDom</b></td><td data-label="Почему она">депозит от 50 ₽, карты РФ напрямую</td><td class="ok-min" data-label="Оценка">9.3</td></tr>
 <tr><td data-label="Если вам важно">Казино и ставки вместе</td><td data-label="Площадка"><b>1win</b></td><td data-label="Почему она">12 000+ игр, лайв и краш в одном кабинете</td><td class="ok-min" data-label="Оценка">9.2</td></tr>
 <tr><td data-label="Если вам важно">Большой каталог слотов</td><td data-label="Площадка"><b>Sol Casino</b></td><td data-label="Почему она">7000+ игр, кэшбэк до 10%</td><td class="ok-min" data-label="Оценка">9.0</td></tr>
 <tr><td data-label="Если вам важно">Крупный бонус и фриспины</td><td data-label="Площадка"><b>Kent Casino</b></td><td data-label="Почему она">100% + 250 FS со 100 ₽</td><td class="ok-min" data-label="Оценка">8.9</td></tr>
 <tr><td data-label="Если вам важно">Крипта и быстрый USDT</td><td data-label="Площадка"><b>Izzi</b></td><td data-label="Почему она">приём USDT/BTC, простой вход</td><td class="ok-min" data-label="Оценка">8.6</td></tr>
+<tr><td data-label="Если вам важно">Низкий порог входа</td><td data-label="Площадка"><b>PokerDom</b></td><td data-label="Почему она">депозит от 50 ₽, карты РФ напрямую</td><td class="ok-min" data-label="Оценка">9.3</td></tr>
 </tbody>
 </table>
 </div>
-<p class="rv ok-prose">Если совсем коротко: универсальный первый заход — Vavada или 7K. Нужен минимальный старт — PokerDom. Хотите и слоты, и линию на матч — 1win. Любите крипту — Izzi или Leebet. Все площадки прошли одну и ту же методику, разница только в акцентах.</p>
+<p class="rv ok-prose">Если совсем коротко: универсальный первый заход — Spinto или 7K. Нужен минимальный старт — Spinto или PokerDom. Хотите и слоты, и линию на матч — 1win. Любите крипту — Izzi или Leebet. Все площадки прошли одну и ту же методику, разница только в акцентах.</p>
 </section>
 <!-- ===== H2 #15 mistakes + responsible ===== -->
 <section class="ok-sect" id="mistakes">
@@ -1367,9 +1540,10 @@ window.addEventListener('load',function(){
 </div>
 <div class="ok-log rv">
 <ul>
-<li><b>Vavada сохранила первое место</b> — вывод USDT по-прежнему укладывается в 9 минут, лицензия сверена повторно.</li>
+<li><b>Spinto возглавил подборку</b> — старт от 50 ₽, мягкий вейджер x35 и вывод по СБП и крипте в пределах часа.</li>
 <li><b>7K ускорил выплаты по СБП</b> — заявки на 500–1 000 ₽ уходят почти моментально.</li>
-<li><b>Перепроверили лицензии у 10 брендов</b> — все номера Curaçao пробиваются в реестре.</li>
+<li><b>Расширили ростер до полного списка партнёров</b> — топ-10 виден сразу, остальные раскрываются кнопкой «Показать все».</li>
+<li><b>Перепроверили лицензии брендов</b> — номера Curaçao пробиваются в реестре.</li>
 <li><b>Обновили каталоги провайдеров</b> — добавили свежие RTP по слотам Pragmatic и Nolimit City.</li>
 <li><b>Одну площадку убрали</b> за вал жалоб на резаные выигрыши — детали в анти-топе.</li>
 </ul>
@@ -1409,10 +1583,10 @@ window.addEventListener('load',function(){
 <h2>Частые вопросы <span class="g-sky">об онлайн-казино</span></h2>
 </div>
 <details class="rv" open=""><summary><span class="ic">+</span>Что такое онлайн-казино и как оно работает?</summary><div class="bd"><div><p>Это сайт со слотами, рулеткой и лайв-столами, где ставки идут на реальные деньги. Результат каждого спина считает генератор случайных чисел на стороне провайдера — Pragmatic, Nolimit City, Evolution, — а не сама площадка. Играть можно с компьютера и телефона без установки.</p></div></div></details>
-<details class="rv"><summary><span class="ic">+</span>Какое онлайн-казино лучшее в 2026 году?</summary><div class="bd"><div><p>По методике редакции из семи критериев первое место занимает Vavada — 9.6 из 10: вывод USDT за 9 минут, лицензия Curaçao по номеру, вейджер x40. Далее идут 7K Casino (9.4) и PokerDom (9.3). «Лучшее» зависит от задачи: под скорость вывода — 7K, под низкий порог — PokerDom, под казино и ставки — 1win.</p></div></div></details>
+<details class="rv"><summary><span class="ic">+</span>Какое онлайн-казино лучшее в 2026 году?</summary><div class="bd"><div><p>По совокупности бонусов, скорости выплат и надёжности подборку редакции ведёт Spinto — 9.8 из 10: старт от 50 ₽, мягкий вейджер x35, вывод по СБП и крипте в пределах часа. Далее идут 7K Casino (9.4) и 1win (9.2). «Лучшее» зависит от задачи: под скорость вывода — 7K, под низкий порог — Spinto или PokerDom, под казино и ставки — 1win.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Сколько нужно денег, чтобы начать играть?</summary><div class="bd"><div><p>Немного: у PokerDom старт от 50 ₽, у большинства площадок топа — от 100 ₽, у Sol и Monro — от 150 ₽. Первый депозит советуем делать на 100–200 ₽, чтобы протестировать вывод на мелкой сумме, и только потом повышать ставки.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Нужен ли паспорт для игры в онлайн-казино?</summary><div class="bd"><div><p>Для регистрации и пополнения — нет, хватает почты и телефона. Верификация (KYC) всплывает при крупном выводе (обычно от 15 000–20 000 ₽) или подозрении на мультиаккаунт. На небольших суммах документы чаще не спрашивают. «Вывод без паспорта на любые суммы» — маркер скама.</p></div></div></details>
-<details class="rv"><summary><span class="ic">+</span>Как быстро приходит вывод денег?</summary><div class="bd"><div><p>По замерам редакции: USDT и BTC — 8–60 минут, СБП — 15 минут – 2 часа, ЮMoney — почти сразу, карта «Мир» — до 24 часов. Быстрее всех платит Vavada (USDT ~9 минут). Минимум на вывод обычно 300–500 ₽. Выводите тем же методом, каким пополняли.</p></div></div></details>
+<details class="rv"><summary><span class="ic">+</span>Как быстро приходит вывод денег?</summary><div class="bd"><div><p>По замерам редакции: USDT и BTC — 8–60 минут, СБП — 15 минут – 2 часа, ЮMoney — почти сразу, карта «Мир» — до 24 часов. Самый быстрый метод — крипта. У лидера Spinto вывод по СБП и крипте укладывается в час. Минимум на вывод обычно 300–500 ₽. Выводите тем же методом, каким пополняли.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Как отличить честное онлайн-казино от скама?</summary><div class="bd"><div><p>Три признака честной площадки: лицензия Curaçao с номером, который пробивается в реестре регулятора; слоты от известных студий с RTP от 96%; рублёвая касса и вывод в часах, а не «до 5 рабочих дней». Скам выдаёт лицензия «на картинке», безымянные слоты и вейджер x50+.</p></div></div></details>
 <details class="rv"><summary><span class="ic">+</span>Можно ли играть с телефона?</summary><div class="bd"><div><p>Да, все казино из рейтинга открываются в мобильном браузере без потери функций — те же игры и касса. У 1win, 7K и Legzo есть APK под Android со скачиванием с сайта; под iOS обычно работает адаптивная веб-версия. Ставить приложение необязательно.</p></div></div></details>
 </section>
@@ -1544,16 +1718,18 @@ window.addEventListener('load',function(){
 <p class="rv">Каждый бренд из топа редакция разобрала в отдельном обзоре: лицензия, скорость кассы по замерам, условия бонуса и вейджер, слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="ok-grid rv" id="brandsGrid"></div>
 <ul class="ok-seo-links">
-<li><a href="/casino/vavada">Обзор казино Vavada — оценка 9.6</a></li>
+<li><a href="/casino/spinto">Обзор казино Spinto — оценка 9.8</a></li>
 <li><a href="/casino/7k">Обзор казино 7K Casino — оценка 9.4</a></li>
-<li><a href="/casino/pokerdom">Обзор казино PokerDom — оценка 9.3</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — оценка 9.2</a></li>
-<li><a href="/casino/sol">Обзор казино Sol Casino — оценка 9.0</a></li>
-<li><a href="/casino/kent">Обзор казино Kent Casino — оценка 8.9</a></li>
-<li><a href="/casino/starda">Обзор казино Starda — оценка 8.8</a></li>
-<li><a href="/casino/izzi">Обзор казино Izzi — оценка 8.6</a></li>
+<li><a href="/casino/flagman">Обзор казино Flagman — оценка 9.3</a></li>
 <li><a href="/casino/legzo">Обзор казино Legzo — оценка 8.5</a></li>
-<li><a href="/casino/monro">Обзор казино Monro — оценка 8.4</a></li>
+<li><a href="/casino/starda">Обзор казино Starda — оценка 9.1</a></li>
+<li><a href="/casino/sol">Обзор казино Sol Casino — оценка 9.0</a></li>
+<li><a href="/casino/izzi">Обзор казино Izzi — оценка 8.8</a></li>
+<li><a href="/casino/monro">Обзор казино Monro — оценка 8.6</a></li>
+<li><a href="/casino/vavada">Обзор казино Vavada</a></li>
+<li><a href="/casino/pokerdom">Обзор казино PokerDom</a></li>
+<li><a href="/casino/kent">Обзор казино Kent Casino</a></li>
 <li><a href="/casino/">Все обзоры казино</a></li>
 </ul>
 <div class="ok-links rv">
@@ -1634,16 +1810,15 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"Vavada",       c:"#6cc4ff", c2:"#2a86e0", s:"9.6", d:"надёжность и быстрый вывод · 9 мин",         h:"/casino/vavada"},
+    {n:"Spinto",       c:"#ffcf3f", c2:"#e0952f", s:"9.8", d:"выбор редакции · старт от 50 ₽, x35",        h:"/casino/spinto"},
     {n:"7K Casino",    c:"#e6eaf3", c2:"#a9b1c6", s:"9.4", d:"быстрый вывод, вейджер x35",                 h:"/casino/7k"},
-    {n:"PokerDom",     c:"#eaa96f", c2:"#b06d34", s:"9.3", d:"покер и порог входа от 50 ₽",                h:"/casino/pokerdom"},
     {n:"1win",         c:"#b8ff2b", c2:"#8fd400", s:"9.2", d:"казино и ставки, 12 000+ игр",               h:"/casino/1win"},
+    {n:"Flagman",      c:"#6cc4ff", c2:"#2a86e0", s:"9.3", d:"пакет 150% + 50 FS",                         h:"/casino/flagman"},
     {n:"Sol Casino",   c:"#ff2e93", c2:"#c81f6f", s:"9.0", d:"7 000+ слотов, кэшбэк до 10%",               h:"/casino/sol"},
-    {n:"Kent Casino",  c:"#37e0c8", c2:"#12a892", s:"8.9", d:"простой старт новичка, 250 FS",              h:"/casino/kent"},
-    {n:"Starda",       c:"#ffa63d", c2:"#e07a12", s:"8.8", d:"турниры и live от Evolution",                h:"/casino/starda"},
-    {n:"Izzi",         c:"#c8ff5a", c2:"#8fd400", s:"8.6", d:"простой вход и крипта",                      h:"/casino/izzi"},
+    {n:"Starda",       c:"#ffa63d", c2:"#e07a12", s:"9.1", d:"турниры и live от Evolution",                h:"/casino/starda"},
+    {n:"Izzi",         c:"#c8ff5a", c2:"#8fd400", s:"8.8", d:"простой вход и крипта",                      h:"/casino/izzi"},
     {n:"Legzo",        c:"#a879ff", c2:"#7d4fd6", s:"8.5", d:"мобильная касса целиком",                    h:"/casino/legzo"},
-    {n:"Monro",        c:"#ffcf3f", c2:"#e0952f", s:"8.4", d:"кэшбэк постоянному игроку",                  h:"/casino/monro"}
+    {n:"Monro",        c:"#37e0c8", c2:"#12a892", s:"8.6", d:"кэшбэк постоянному игроку",                  h:"/casino/monro"}
   ];
   var SLOTS = [
     {n:"Gates of Olympus 1000",        pv:"Pragmatic Play",      rtp:"96.5",  vol:"высокая", kind:"слот", img:"https://v1.bundlecdn.com/casino-images/v/fb9e1d0c-9c16-44dd-ade1-cb38990db94b_vertical.png", h:"/slots/gates-of-olympus-1000"},
@@ -1775,26 +1950,26 @@ window.addEventListener('load',function(){
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
       "numberOfItems": 10,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":1,"name":"Spinto","url":"https://rejting-kazino777.top/casino/spinto"},
         {"@type":"ListItem","position":2,"name":"7K Casino","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":3,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"},
-        {"@type":"ListItem","position":4,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
-        {"@type":"ListItem","position":5,"name":"Sol Casino","url":"https://rejting-kazino777.top/casino/sol"},
-        {"@type":"ListItem","position":6,"name":"Kent Casino","url":"https://rejting-kazino777.top/casino/kent"},
-        {"@type":"ListItem","position":7,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
-        {"@type":"ListItem","position":8,"name":"Izzi","url":"https://rejting-kazino777.top/casino/izzi"},
-        {"@type":"ListItem","position":9,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
-        {"@type":"ListItem","position":10,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"}
+        {"@type":"ListItem","position":3,"name":"1win","url":"https://rejting-kazino777.top/casino/1win"},
+        {"@type":"ListItem","position":4,"name":"Banda","url":"https://rejting-kazino777.top/casino/banda"},
+        {"@type":"ListItem","position":5,"name":"Leebet","url":"https://rejting-kazino777.top/casino/leebet"},
+        {"@type":"ListItem","position":6,"name":"APEX","url":"https://rejting-kazino777.top/casino/apex"},
+        {"@type":"ListItem","position":7,"name":"Kush","url":"https://rejting-kazino777.top/casino/kush"},
+        {"@type":"ListItem","position":8,"name":"Eva","url":"https://rejting-kazino777.top/casino/eva"},
+        {"@type":"ListItem","position":9,"name":"Flagman","url":"https://rejting-kazino777.top/casino/flagman"},
+        {"@type":"ListItem","position":10,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"}
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
         {"@type":"Question","name":"Что такое онлайн-казино и как оно работает?","acceptedAnswer":{"@type":"Answer","text":"Это сайт со слотами, рулеткой и лайв-столами, где ставки идут на реальные деньги. Результат каждого спина считает генератор случайных чисел на стороне провайдера — Pragmatic, Nolimit City, Evolution, — а не сама площадка. Играть можно с компьютера и телефона без установки."}},
-        {"@type":"Question","name":"Какое онлайн-казино лучшее в 2026 году?","acceptedAnswer":{"@type":"Answer","text":"По методике редакции из семи критериев первое место занимает Vavada — 9.6 из 10: вывод USDT за 9 минут, лицензия Curaçao по номеру, вейджер x40. Далее идут 7K Casino (9.4) и PokerDom (9.3). «Лучшее» зависит от задачи: под скорость вывода — 7K, под низкий порог — PokerDom, под казино и ставки — 1win."}},
+        {"@type":"Question","name":"Какое онлайн-казино лучшее в 2026 году?","acceptedAnswer":{"@type":"Answer","text":"По совокупности бонусов, скорости выплат и надёжности подборку редакции ведёт Spinto — 9.8 из 10: старт от 50 ₽, мягкий вейджер x35, вывод по СБП и крипте в пределах часа. Далее идут 7K Casino (9.4) и 1win (9.2). «Лучшее» зависит от задачи: под скорость вывода — 7K, под низкий порог — Spinto или PokerDom, под казино и ставки — 1win."}},
         {"@type":"Question","name":"Сколько нужно денег, чтобы начать играть?","acceptedAnswer":{"@type":"Answer","text":"Немного: у PokerDom старт от 50 ₽, у большинства площадок топа — от 100 ₽, у Sol и Monro — от 150 ₽. Первый депозит советуем делать на 100–200 ₽, чтобы протестировать вывод на мелкой сумме, и только потом повышать ставки."}},
         {"@type":"Question","name":"Нужен ли паспорт для игры в онлайн-казино?","acceptedAnswer":{"@type":"Answer","text":"Для регистрации и пополнения — нет, хватает почты и телефона. Верификация (KYC) всплывает при крупном выводе (обычно от 15 000–20 000 ₽) или подозрении на мультиаккаунт. На небольших суммах документы чаще не спрашивают. «Вывод без паспорта на любые суммы» — маркер скама."}},
-        {"@type":"Question","name":"Как быстро приходит вывод денег?","acceptedAnswer":{"@type":"Answer","text":"По замерам редакции: USDT и BTC — 8–60 минут, СБП — 15 минут – 2 часа, ЮMoney — почти сразу, карта «Мир» — до 24 часов. Быстрее всех платит Vavada (USDT ~9 минут). Минимум на вывод обычно 300–500 ₽. Выводите тем же методом, каким пополняли."}},
+        {"@type":"Question","name":"Как быстро приходит вывод денег?","acceptedAnswer":{"@type":"Answer","text":"По замерам редакции: USDT и BTC — 8–60 минут, СБП — 15 минут – 2 часа, ЮMoney — почти сразу, карта «Мир» — до 24 часов. Самый быстрый метод — крипта. У лидера Spinto вывод по СБП и крипте укладывается в час. Минимум на вывод обычно 300–500 ₽. Выводите тем же методом, каким пополняли."}},
         {"@type":"Question","name":"Как отличить честное онлайн-казино от скама?","acceptedAnswer":{"@type":"Answer","text":"Три признака честной площадки: лицензия Curaçao с номером, который пробивается в реестре регулятора; слоты от известных студий с RTP от 96%; рублёвая касса и вывод в часах, а не «до 5 рабочих дней». Скам выдаёт лицензия «на картинке», безымянные слоты и вейджер x50+."}},
         {"@type":"Question","name":"Можно ли играть с телефона?","acceptedAnswer":{"@type":"Answer","text":"Да, все казино из рейтинга открываются в мобильном браузере без потери функций — те же игры и касса. У 1win, 7K и Legzo есть APK под Android со скачиванием с сайта; под iOS обычно работает адаптивная веб-версия. Ставить приложение необязательно."}}
       ]

@@ -476,6 +476,27 @@
   [class*='scroll'],[class*='-wrap'],[class*='tbl'],[class*='table-'],[class*='-table']{overflow-x:visible!important;min-width:0!important;max-width:100%!important}
   img{max-width:100%!important;height:auto!important}
 }
+</style>
+<style id="lc-roster-css">/* полный рейтинг-ростер + show-all (дизайн-семья lc-) */
+.lc-roster{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.lc-roster .lc-rr{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:13px 15px;border-radius:14px;background:linear-gradient(180deg,var(--pan2),var(--pan));border:1px solid var(--hair);transition:border-color .2s,transform .2s}
+.lc-roster .lc-rr:hover{border-color:var(--hair2);transform:translateY(-2px)}
+.lc-rr .rk{flex:0 0 auto;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-family:"Unbounded",sans-serif;font-weight:900;font-size:13.5px;background:rgba(255,255,255,.06);color:var(--tx);border:1px solid var(--hair2)}
+.lc-rr.r1 .rk{background:var(--g-gold);color:#231600;border:0;box-shadow:0 0 16px -4px rgba(255,207,63,.8)}
+.lc-rr.r2 .rk{background:linear-gradient(135deg,#e8ecf5,#aeb4c8);color:#1a1c26;border:0}
+.lc-rr.r3 .rk{background:linear-gradient(135deg,#e0a465,#b9762f);color:#241200;border:0}
+.lc-rr .bd{flex:1 1 220px;min-width:0;display:flex;flex-direction:column;gap:2px}
+.lc-rr .bd .nm{font-family:"Sora",sans-serif;font-weight:700;font-size:15.5px;color:var(--tx);line-height:1.2}
+.lc-rr .bd .mt{color:var(--mu);font-size:12.5px;line-height:1.35}
+.lc-rr .sc9{flex:0 0 auto;font-family:"Unbounded",sans-serif;font-weight:900;font-size:15px;color:var(--viol);min-width:40px;text-align:center}
+.lc-rr .sc9.mut{color:var(--dm)}
+.lc-rr .act{flex:0 0 auto;display:flex;gap:8px;margin-left:auto}
+.lc-btn-sm{padding:9px 16px;font-size:13px;border-radius:10px}
+.lc-rr.x{display:none}
+.lc-roster.open .lc-rr.x{display:flex}
+.lc-roster-morewrap{text-align:center;margin-top:16px}
+.lc-roster-more{margin:0 auto;display:inline-flex}
+@media(max-width:560px){.lc-rr .act{margin-left:0;width:100%}.lc-rr .act a{flex:1 1 auto;justify-content:center}.lc-rr .sc9{margin-left:auto}}
 </style></head>
 <body>
 <!--PCNAV--><style id="pcnav-style">
@@ -649,25 +670,25 @@ window.addEventListener('load',function(){
 </div>
 <aside class="lc-award rv" style="--d:.2s">
 <span class="lc-ribbon viol">Гран-при редакции</span>
-<div class="lc-chip-oh"><div class="cv">9.9</div><div class="cl">балл из 10</div></div>
+<div class="lc-chip-oh"><div class="cv">9.8</div><div class="cl">балл из 10</div></div>
 <span aria-hidden="true" class="wm">№1</span>
-<div class="tag">Номинация · лучшее по совокупности</div>
-<div class="bn">7K Casino</div>
-<div class="bs">вывод по СБП за 15 минут, порог входа 50 ₽</div>
-<div class="why"><b>Почему гран-при:</b> не проседает ни по одному из семи критериев — быстрая рублёвая касса, низкий вход и проверяемая лицензия. С него редакция советует стартовать тем, кто не хочет вникать в нюансы.</div>
+<div class="tag">Выбор редакции · лучшее по совокупности</div>
+<div class="bn">Spinto</div>
+<div class="bs">старт с 50 ₽, бонус 200% + 150 фриспинов</div>
+<div class="why"><b>Почему №1:</b> низкий порог входа, честный вейджер и быстрые выплаты по совокупности вывели площадку в лидеры подборки. С неё редакция советует стартовать тем, кто не хочет вникать в нюансы.</div>
 <div aria-hidden="true" class="perf"></div>
 <div class="tspec">
-<div class="line"><span>Оценка редакции</span><span class="sc">9.9 / 10</span></div>
+<div class="line"><span>Оценка редакции</span><span class="sc">9.8 / 10</span></div>
 <div class="line"><span>Порог входа</span><span class="big">50 ₽</span></div>
-<div class="line spec"><span>Вывод по СБП</span><i class="dts"></i><span class="val hl-gold">~15 минут</span></div>
-<div class="line spec"><span>Приветственный</span><i class="dts"></i><span class="val hl-neon">225% + 200 FS</span></div>
-<div class="line spec"><span>Кэшбэк</span><i class="dts"></i><span class="val hl-hot">до 20% по пн</span></div>
-<div class="line spec"><span>Крипта</span><i class="dts"></i><span class="val hl-cyan">USDT до 30 мин</span></div>
-<div class="line spec"><span>Провайдеры</span><i class="dts"></i><span class="val hl-sky">Pragmatic · Nolimit</span></div>
+<div class="line spec"><span>Выплаты</span><i class="dts"></i><span class="val hl-gold">СБП · крипта до 1 ч</span></div>
+<div class="line spec"><span>Приветственный</span><i class="dts"></i><span class="val hl-neon">200% + 150 FS</span></div>
+<div class="line spec"><span>Вейджер</span><i class="dts"></i><span class="val hl-hot">x35</span></div>
+<div class="line spec"><span>Крипта</span><i class="dts"></i><span class="val hl-cyan">USDT · до 1 ч</span></div>
+<div class="line spec"><span>Слоты</span><i class="dts"></i><span class="val hl-sky">Nolimit · Hacksaw</span></div>
 <div class="line spec"><span>Лицензия</span><i class="dts"></i><span class="val hl-viol">Curaçao</span></div>
 </div>
-<a class="lc-btn lc-btn-neon" href="/go/7k" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть 7K Casino</a>
-<div class="foot"><span>СБП от 50 ₽</span><span>USDT · BTC</span><span>Curaçao</span></div>
+<a class="lc-btn lc-btn-neon" href="/go/spinto" rel="nofollow sponsored" style="width:100%;margin-top:12px">Открыть Spinto</a>
+<div class="foot"><span>от 50 ₽</span><span>СБП · крипта</span><span>Curaçao</span></div>
 <ul class="tguar">
 <li>Депозиты и выводы проверены кассой лично</li>
 <li>Лицензия сверена по номеру у регулятора</li>
@@ -713,7 +734,7 @@ window.addEventListener('load',function(){
 <div class="big">6</div>
 <div class="cap">площадок в топе — по-настоящему проверенных мало</div>
 <div class="rows">
-<div><span>Лучшее по совокупности</span><b>7K · 9.9</b></div>
+<div><span>Выбор редакции</span><b>Spinto · 9.8</b></div>
 <div><span>По скорости вывода</span><b>7K / Spinto</b></div>
 <div><span>Под крипту</span><b>Leebet</b></div>
 <div><span>Под крупный бонус</span><b>APEX · 375%</b></div>
@@ -721,7 +742,7 @@ window.addEventListener('load',function(){
 <div><span>Максимум игр</span><b>1win · 12 000+</b></div>
 <div><span>Критериев отбора</span><b>7</b></div>
 </div>
-<div class="lc-take"><b>Вывод редакции:</b> если совсем выкручивать руки и заставлять выбрать одно на все случаи — это <b>7K</b>: лучший баланс низкого входа, скорости вывода и репутации, рейтинг 9.9.</div>
+<div class="lc-take"><b>Вывод редакции:</b> если совсем выкручивать руки и заставлять выбрать одно на все случаи — это <b>Spinto</b>: низкий вход 50 ₽, честный вейджер x35 и быстрые выплаты по совокупности, рейтинг 9.8.</div>
 <div class="lc-guar"><span>Личный тест кассой</span><span>Лицензия сверена</span><span>Выводы замерены</span></div>
 </aside>
 </div>
@@ -791,14 +812,14 @@ window.addEventListener('load',function(){
 <span class="lc-kick">Сводная таблица</span>
 <h2>Рейтинг лучших онлайн-казино <span class="g-gold">на реальные деньги</span>: сводка по номинациям</h2>
 </div>
-<p class="rv">Сведём шесть площадок в одну таблицу: за что каждая лучшая, ключевая цифра номинации, оценка и приветственный пакет. Сортировка — по сумме семи критериев, но выбирать стоит по колонке «Лучшее для».</p>
+<p class="rv">Сведём шесть площадок в одну таблицу: за что каждая лучшая, ключевая цифра номинации, оценка и приветственный пакет. Порядок — подборка редакции по совокупности бонусов, скорости выплат и надёжности, а выбирать стоит по колонке «Лучшее для».</p>
 <div class="lc-tbox lc-scroll rv" style="margin:12px 0 0">
 <table class="lc-t mfit">
 <caption>Оценки — по совокупности семи критериев; номинация присуждается по срезу, где площадка впереди. Валюта — рубли.</caption>
 <thead><tr><th>#</th><th>Казино</th><th>Лучшее для</th><th>Ключевая цифра</th><th>Оценка</th><th>Бонус</th></tr></thead>
 <tbody>
-<tr><td class="lc-rub mfit-num" data-label="">1</td><td class="lc-bc" data-label="Казино"><span class="lc-bn">7K Casino</span><span class="lc-line2"><span class="lc-best" style="--rc:#ffcf3f">быстрого вывода и рублёвой кассы</span><span class="lc-ed">Гран-при</span></span></td><td data-label="Лучшее для">быстрый вывод</td><td class="lc-min" data-label="Ключевая цифра">СБП 15 мин</td><td data-label="Оценка"><span class="lc-sc">9.9</span></td><td data-label="Бонус">225% + 200 FS</td></tr>
-<tr><td class="lc-rub mfit-num" data-label="">2</td><td class="lc-bc" data-label="Казино"><span class="lc-bn">Spinto</span><span class="lc-line2"><span class="lc-best" style="--rc:#b8ff2b">первого захода новичка</span></span></td><td data-label="Лучшее для">новичку · 50 ₽</td><td class="lc-min" data-label="Ключевая цифра">порог 50 ₽</td><td data-label="Оценка"><span class="lc-sc">9.8</span></td><td data-label="Бонус">200% + 150 FS</td></tr>
+<tr><td class="lc-rub mfit-num" data-label="">1</td><td class="lc-bc" data-label="Казино"><span class="lc-bn">Spinto</span><span class="lc-line2"><span class="lc-best" style="--rc:#b8ff2b">выбор редакции · старт с 50 ₽</span><span class="lc-ed">Гран-при</span></span></td><td data-label="Лучшее для">выбор редакции</td><td class="lc-min" data-label="Ключевая цифра">порог 50 ₽</td><td data-label="Оценка"><span class="lc-sc">9.8</span></td><td data-label="Бонус">200% + 150 FS</td></tr>
+<tr><td class="lc-rub mfit-num" data-label="">2</td><td class="lc-bc" data-label="Казино"><span class="lc-bn">7K Casino</span><span class="lc-line2"><span class="lc-best" style="--rc:#ffcf3f">быстрого вывода и рублёвой кассы</span></span></td><td data-label="Лучшее для">быстрый вывод</td><td class="lc-min" data-label="Ключевая цифра">СБП 15 мин</td><td data-label="Оценка"><span class="lc-sc">9.9</span></td><td data-label="Бонус">225% + 200 FS</td></tr>
 <tr><td class="lc-rub mfit-num" data-label="">3</td><td class="lc-bc" data-label="Казино"><span class="lc-bn">1win</span><span class="lc-line2"><span class="lc-best" style="--rc:#6cc4ff">минимума с максимумом игр</span></span></td><td data-label="Лучшее для">каталог</td><td class="lc-min" data-label="Ключевая цифра">12 000+ игр</td><td data-label="Оценка"><span class="lc-sc">9.7</span></td><td data-label="Бонус">до 500% / 200 000 ₽</td></tr>
 <tr><td class="lc-rub mfit-num" data-label="">4</td><td class="lc-bc" data-label="Казино"><span class="lc-bn">Banda</span><span class="lc-line2"><span class="lc-best" style="--rc:#ff2e93">фриспинов и турниров</span></span></td><td data-label="Лучшее для">фриспины</td><td class="lc-min" data-label="Ключевая цифра">500 FS</td><td data-label="Оценка"><span class="lc-sc">9.6</span></td><td data-label="Бонус">100% + 500 FS</td></tr>
 <tr><td class="lc-rub mfit-num" data-label="">5</td><td class="lc-bc" data-label="Казино"><span class="lc-bn">Leebet</span><span class="lc-line2"><span class="lc-best" style="--rc:#37e0c8">криптовалюты — USDT TRC-20</span></span></td><td data-label="Лучшее для">крипта</td><td class="lc-min" data-label="Ключевая цифра">USDT 20 мин</td><td data-label="Оценка"><span class="lc-sc">9.5</span></td><td data-label="Бонус">150% до 1000 USDT</td></tr>
@@ -806,7 +827,49 @@ window.addEventListener('load',function(){
 </tbody>
 </table>
 </div>
-<p class="lc-note">Это мнение редакции, а не абсолют: порядок — по сумме семи критериев, а не по одной цифре. Все шесть площадок работают под лицензией Curaçao, на каждой редакция выводила деньги лично.</p>
+<p class="lc-note">Это мнение редакции, а не абсолют: порядок — подборка по совокупности бонусов, скорости выплат и надёжности, а не по одной цифре. Все шесть площадок работают под лицензией Curaçao, на каждой редакция выводила деньги лично.</p>
+</section>
+<!-- ===== ROSTER full rating + show-all ===== -->
+<section class="lc-sect" id="polnyj-rejting">
+<div class="lc-sh rv">
+<span class="lc-kick">Полный список</span>
+<h2>Полный рейтинг казино 2026 — <span class="g-viol">топ-10 и весь каталог</span></h2>
+</div>
+<p class="rv">Помимо шести номинаций редакция ведёт полный каталог проверенных площадок. Порядок — подборка редакции по совокупности бонусов, скорости выплат и надёжности, а не строго по одной цифре. Первую десятку показываем сразу, остальные — по кнопке «Показать все».</p>
+<ol class="lc-roster rv" id="lcRoster">
+<li class="lc-rr r1"><span class="rk">1</span><div class="bd"><span class="nm">Spinto</span><span class="mt">200% + 150 FS · 50 ₽ · вейджер x35</span></div><span class="sc9">9.8</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/spinto/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/spinto" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr r2"><span class="rk">2</span><div class="bd"><span class="nm">7K Casino</span><span class="mt">225% + 200 FS · 50 ₽ · вейджер x35</span></div><span class="sc9">9.9</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/7k/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/7k" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr r3"><span class="rk">3</span><div class="bd"><span class="nm">1win</span><span class="mt">500% до 200 000 ₽ · 50 ₽ · вейджер x30</span></div><span class="sc9">9.7</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/1win/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/1win" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr"><span class="rk">4</span><div class="bd"><span class="nm">Banda</span><span class="mt">100% + 500 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">9.6</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/banda/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/banda" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr"><span class="rk">5</span><div class="bd"><span class="nm">Leebet</span><span class="mt">150% до 1000 USDT · 100 ₽ · вейджер x40</span></div><span class="sc9">9.5</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/leebet/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/leebet" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr"><span class="rk">6</span><div class="bd"><span class="nm">APEX</span><span class="mt">375% + 225 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">9.4</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/apex/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/apex" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr"><span class="rk">7</span><div class="bd"><span class="nm">Kush</span><span class="mt">Бонус активируется по нашей ссылке</span></div><span class="sc9 mut">—</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/kush/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/kush" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr"><span class="rk">8</span><div class="bd"><span class="nm">Eva</span><span class="mt">Бонус активируется по нашей ссылке</span></div><span class="sc9 mut">—</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/eva/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/eva" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr"><span class="rk">9</span><div class="bd"><span class="nm">Flagman</span><span class="mt">150% + 50 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">9.3</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/flagman/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/flagman" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr"><span class="rk">10</span><div class="bd"><span class="nm">Legzo</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">9.2</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/legzo/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/legzo" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">11</span><div class="bd"><span class="nm">Starda</span><span class="mt">225% + 250 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">9.1</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/starda/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/starda" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">12</span><div class="bd"><span class="nm">Rox</span><span class="mt">100% до 25 000 ₽ · 100 ₽ · вейджер x40</span></div><span class="sc9">9.0</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/rox/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/rox" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">13</span><div class="bd"><span class="nm">Sol</span><span class="mt">150% + 150 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.9</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/sol/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/sol" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">14</span><div class="bd"><span class="nm">Izzi</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.8</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/izzi/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/izzi" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">15</span><div class="bd"><span class="nm">Jet</span><span class="mt">125% + 150 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.7</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/jet/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/jet" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">16</span><div class="bd"><span class="nm">Monro</span><span class="mt">150% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.6</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/monro/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/monro" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">17</span><div class="bd"><span class="nm">Drip</span><span class="mt">150% + 200 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.5</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/drip/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/drip" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">18</span><div class="bd"><span class="nm">Gizbo</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.4</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/gizbo/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/gizbo" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">19</span><div class="bd"><span class="nm">Fresh</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.3</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/fresh/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/fresh" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">20</span><div class="bd"><span class="nm">Volna</span><span class="mt">150% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.2</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/volna/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/volna" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">21</span><div class="bd"><span class="nm">Irwin</span><span class="mt">150% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.1</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/irwin/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/irwin" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">22</span><div class="bd"><span class="nm">Beef</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">8.0</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/beef/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/beef" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">23</span><div class="bd"><span class="nm">Martin</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">7.9</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/martin/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/martin" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">24</span><div class="bd"><span class="nm">1Go</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">7.8</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/1go/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/1go" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">25</span><div class="bd"><span class="nm">Lex</span><span class="mt">100% + 100 FS · 100 ₽ · вейджер x40</span></div><span class="sc9">7.7</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/lex/">Обзор</a><a class="lc-btn lc-btn-viol lc-btn-sm" href="/go/lex" rel="nofollow sponsored">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">26</span><div class="bd"><span class="nm">Vavada</span><span class="mt">Обзор редакции · внешних ссылок не ставим</span></div><span class="sc9 mut">—</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/vavada/">Обзор</a><a class="lc-btn lc-btn-neon lc-btn-sm" href="/casino/vavada/">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">27</span><div class="bd"><span class="nm">PokerDom</span><span class="mt">Обзор редакции · внешних ссылок не ставим</span></div><span class="sc9 mut">—</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/pokerdom/">Обзор</a><a class="lc-btn lc-btn-neon lc-btn-sm" href="/casino/pokerdom/">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">28</span><div class="bd"><span class="nm">Kent</span><span class="mt">Обзор редакции · внешних ссылок не ставим</span></div><span class="sc9 mut">—</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/kent/">Обзор</a><a class="lc-btn lc-btn-neon lc-btn-sm" href="/casino/kent/">Играть</a></span></li>
+<li class="lc-rr x"><span class="rk">29</span><div class="bd"><span class="nm">JoyCasino</span><span class="mt">Обзор редакции · внешних ссылок не ставим</span></div><span class="sc9 mut">—</span><span class="act"><a class="lc-btn lc-btn-ghost lc-btn-sm" href="/casino/joycasino/">Обзор</a><a class="lc-btn lc-btn-neon lc-btn-sm" href="/casino/joycasino/">Играть</a></span></li>
+</ol>
+<div class="lc-roster-morewrap rv"><button class="lc-btn lc-btn-viol lc-roster-more" id="lcRosterMore" type="button" aria-expanded="false" aria-controls="lcRoster">Показать все казино (ещё 19)</button></div>
+<p class="lc-note">Партнёрские площадки ведут на переход по нашей ссылке; Vavada, PokerDom, Kent и JoyCasino — только на обзор редакции, внешних ссылок им не ставим. Данные сверяются ежемесячно.</p>
+<script>(function(){var b=document.getElementById('lcRosterMore'),r=document.getElementById('lcRoster');if(!b||!r)return;b.addEventListener('click',function(){var o=r.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'Свернуть список':'Показать все казино (ещё 19)';});})();</script>
 </section>
 <!-- ===== H2 #4 methodology ===== -->
 <section class="lc-sect" id="metodika">
@@ -1065,23 +1128,23 @@ window.addEventListener('load',function(){
 </div>
 <div class="lc-rev rv">
 <span aria-hidden="true" class="wm">01</span>
-<div class="rh"><div class="nm c-gold">1. 7K Casino <span>лучшее по совокупности, гран-при</span></div><div class="sc">9.9 / 10</div></div>
-<p>7K редакция ставит первым не за самый жирный бонус, а за баланс всех критериев — потому и советует новичкам. Депозит от 50 ₽, вывод 8 400 ₽ на карту через СБП дошёл за полтора часа без запроса паспорта, кэшбэк до 20% по понедельникам реально капает. Слоты от Pragmatic — Gates of Olympus и Sweet Bonanza — с честным RTP. Ни в одном из семи пунктов не проседает.</p>
+<div class="rh"><div class="nm c-neon">1. Spinto <span>выбор редакции · лучшее новичку</span></div><div class="sc">9.8 / 10</div></div>
+<p>Spinto — выбор редакции и лидер подборки для новичка. USDT доходил за 40 минут, по СБП — меньше часа, ни разу не завис. Площадка свежая, 2026 года, интерфейс чистый. Слотов меньше, чем у гигантов, но топовые студии — Nolimit City и Hacksaw — на месте. Старт 200% и 150 фриспинов, вейджер x35, порог входа 50 ₽. Занести одну купюру и пощупать механику здесь проще всего.</p>
+<div class="lc-pc">
+<div class="cl pro"><h4>Плюсы</h4><ul><li>порог входа 50 ₽</li><li>минимальная верификация</li><li>честный вейджер x35</li><li>свежая площадка 2026 года</li></ul></div>
+<div class="cl con"><h4>Минусы</h4><ul><li>каталог уже, чем у 1win</li><li>вывод средний по скорости — USDT около 40 минут</li></ul></div>
+</div>
+<div class="lc-facts"><span class="thr">Порог: 50 ₽</span><span>Вывод: <b>USDT 40 мин</b></span><span>Бонус: <b>200% + 150 FS</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
+</div>
+<div class="lc-rev rv">
+<span aria-hidden="true" class="wm">02</span>
+<div class="rh"><div class="nm c-gold">2. 7K Casino <span>быстрый вывод · рублёвая касса</span></div><div class="sc">9.9 / 10</div></div>
+<p>7K редакция ценит не за самый жирный бонус, а за баланс всех критериев — быструю рублёвую кассу и низкий вход. Депозит от 50 ₽, вывод 8 400 ₽ на карту через СБП дошёл за полтора часа без запроса паспорта, кэшбэк до 20% по понедельникам реально капает. Слоты от Pragmatic — Gates of Olympus и Sweet Bonanza — с честным RTP. Ни в одном из семи пунктов не проседает.</p>
 <div class="lc-pc">
 <div class="cl pro"><h4>Плюсы</h4><ul><li>СБП за 15 минут, крипта до 30</li><li>KYC на малых суммах не требуют</li><li>кэшбэк до 20% по понедельникам</li><li>порог входа 50 ₽</li></ul></div>
 <div class="cl con"><h4>Минусы</h4><ul><li>крупные суммы всё равно уйдут на верификацию</li><li>по карте снятие дольше — до 2 часов</li></ul></div>
 </div>
 <div class="lc-facts"><span class="thr">Порог: 50 ₽</span><span>Вывод: <b>СБП 15 мин</b></span><span>Бонус: <b>225% + 200 FS</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/7k">Полный обзор 7K →</a></div>
-</div>
-<div class="lc-rev rv">
-<span aria-hidden="true" class="wm">02</span>
-<div class="rh"><div class="nm c-neon">2. Spinto <span>лучшее новичку и по скорости вывода</span></div><div class="sc">9.8 / 10</div></div>
-<p>Spinto — выбор новичку и лидер по скорости вывода. USDT доходил за 40 минут, по СБП — меньше часа, ни разу не завис. Площадка свежая, 2026 года, интерфейс чистый. Слотов меньше, чем у гигантов, но топовые студии — Nolimit City и Hacksaw — на месте. Старт 200% и 150 фриспинов, порог входа 50 ₽. Занести одну купюру и пощупать механику здесь проще всего.</p>
-<div class="lc-pc">
-<div class="cl pro"><h4>Плюсы</h4><ul><li>порог входа 50 ₽</li><li>минимальная верификация</li><li>интерфейс без лишнего для первого раза</li><li>свежая площадка 2026 года</li></ul></div>
-<div class="cl con"><h4>Минусы</h4><ul><li>каталог уже, чем у 1win</li><li>вывод средний по скорости — USDT около 40 минут</li></ul></div>
-</div>
-<div class="lc-facts"><span class="thr">Порог: 50 ₽</span><span>Вывод: <b>USDT 40 мин</b></span><span>Бонус: <b>200% + 150 FS</b></span><span>Лицензия: <b>Curaçao</b></span><a href="/casino/spinto">Полный обзор Spinto →</a></div>
 </div>
 <div class="lc-rev rv">
 <span aria-hidden="true" class="wm">03</span>
@@ -1178,7 +1241,8 @@ window.addEventListener('load',function(){
 </div>
 <div class="lc-log rv">
 <ul>
-<li><b>7K сохранил гран-при</b> — вывод по СБП стабильно за 15 минут, кэшбэк до 20% начисляется по понедельникам.</li>
+<li><b>Spinto возглавил подборку</b> — выбор редакции по совокупности: низкий вход 50 ₽, честный вейджер x35 и быстрые выплаты.</li>
+<li><b>7K держит скорость вывода</b> — по СБП стабильно за 15 минут, кэшбэк до 20% начисляется по понедельникам.</li>
 <li><b>Spinto ускорил крипту</b> — USDT на тестовых выводах приходил за 40 минут против часа месяцем ранее.</li>
 <li><b>APEX подтвердил старт 375%</b> — приветственный пакет прошёл проверку отыгрышем на слотах Hacksaw.</li>
 <li><b>Leebet удержал USDT за 20 минут</b> — комиссия сети TRC-20 осталась копеечной.</li>
@@ -1331,8 +1395,8 @@ window.addEventListener('load',function(){
 <p class="rv">Каждую площадку из номинаций редакция разобрала в отдельном обзоре: скорость кассы по замерам, условия бонуса и вейджер, лицензия и слабые места. Открывайте разбор до первого депозита.</p>
 <div aria-label="Случайная подборка обзоров казино" class="lc-brands rv" id="brandsGrid"></div>
 <ul class="lc-seo-links">
-<li><a href="/casino/7k">Обзор казино 7K — гран-при, вывод по СБП за 15 минут</a></li>
-<li><a href="/casino/spinto">Обзор казино Spinto — старт с 50 ₽</a></li>
+<li><a href="/casino/spinto">Обзор казино Spinto — выбор редакции, старт с 50 ₽</a></li>
+<li><a href="/casino/7k">Обзор казино 7K — быстрый вывод по СБП за 15 минут</a></li>
 <li><a href="/casino/1win">Обзор казино 1win — 12 000+ игр</a></li>
 <li><a href="/casino/banda">Обзор казино Banda — 500 фриспинов</a></li>
 <li><a href="/casino/leebet">Обзор казино Leebet — крипта USDT</a></li>
@@ -1408,8 +1472,8 @@ window.addEventListener('load',function(){
    Показывается 3 случайных карточки + карточка «Показать все». */
 (function(){
   var CASINOS = [
-    {n:"7K Casino", c:"#ffcf3f", c2:"#e0952f", s:"9.9", d:"гран-при · вывод по СБП за 15 минут", h:"/casino/7k"},
-    {n:"Spinto",    c:"#b8ff2b", c2:"#8fd400", s:"9.8", d:"лучшее новичку · порог 50 ₽",         h:"/casino/spinto"},
+    {n:"Spinto",    c:"#b8ff2b", c2:"#8fd400", s:"9.8", d:"выбор редакции · порог 50 ₽",          h:"/casino/spinto"},
+    {n:"7K Casino", c:"#ffcf3f", c2:"#e0952f", s:"9.9", d:"быстрый вывод · СБП за 15 минут",       h:"/casino/7k"},
     {n:"1win",      c:"#6cc4ff", c2:"#2a86e0", s:"9.7", d:"12 000+ игр · казино и ставки",         h:"/casino/1win"},
     {n:"Banda",     c:"#ff2e93", c2:"#c81f6f", s:"9.6", d:"фриспины и турниры · 500 FS",           h:"/casino/banda"},
     {n:"Leebet",    c:"#37e0c8", c2:"#12a892", s:"9.5", d:"крипта · USDT TRC-20 за 20 минут",      h:"/casino/leebet"},
@@ -1537,16 +1601,39 @@ window.addEventListener('load',function(){
     },
     {
       "@type": "ItemList",
-      "name": "Лучшие казино 2026 — номинации по критериям",
+      "name": "Полный рейтинг лучших казино 2026 — подборка редакции",
       "itemListOrder": "https://schema.org/ItemListOrderDescending",
-      "numberOfItems": 6,
+      "numberOfItems": 29,
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"7K Casino — лучшее для быстрого вывода","url":"https://rejting-kazino777.top/casino/7k"},
-        {"@type":"ListItem","position":2,"name":"Spinto — лучшее новичку","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":1,"name":"Spinto — выбор редакции","url":"https://rejting-kazino777.top/casino/spinto"},
+        {"@type":"ListItem","position":2,"name":"7K Casino — быстрый вывод","url":"https://rejting-kazino777.top/casino/7k"},
         {"@type":"ListItem","position":3,"name":"1win — максимум игр","url":"https://rejting-kazino777.top/casino/1win"},
         {"@type":"ListItem","position":4,"name":"Banda — фриспины и турниры","url":"https://rejting-kazino777.top/casino/banda"},
         {"@type":"ListItem","position":5,"name":"Leebet — криптовалюта","url":"https://rejting-kazino777.top/casino/leebet"},
-        {"@type":"ListItem","position":6,"name":"APEX — крупный бонус","url":"https://rejting-kazino777.top/casino/apex"}
+        {"@type":"ListItem","position":6,"name":"APEX — крупный бонус","url":"https://rejting-kazino777.top/casino/apex"},
+        {"@type":"ListItem","position":7,"name":"Kush","url":"https://rejting-kazino777.top/casino/kush"},
+        {"@type":"ListItem","position":8,"name":"Eva","url":"https://rejting-kazino777.top/casino/eva"},
+        {"@type":"ListItem","position":9,"name":"Flagman","url":"https://rejting-kazino777.top/casino/flagman"},
+        {"@type":"ListItem","position":10,"name":"Legzo","url":"https://rejting-kazino777.top/casino/legzo"},
+        {"@type":"ListItem","position":11,"name":"Starda","url":"https://rejting-kazino777.top/casino/starda"},
+        {"@type":"ListItem","position":12,"name":"Rox","url":"https://rejting-kazino777.top/casino/rox"},
+        {"@type":"ListItem","position":13,"name":"Sol","url":"https://rejting-kazino777.top/casino/sol"},
+        {"@type":"ListItem","position":14,"name":"Izzi","url":"https://rejting-kazino777.top/casino/izzi"},
+        {"@type":"ListItem","position":15,"name":"Jet","url":"https://rejting-kazino777.top/casino/jet"},
+        {"@type":"ListItem","position":16,"name":"Monro","url":"https://rejting-kazino777.top/casino/monro"},
+        {"@type":"ListItem","position":17,"name":"Drip","url":"https://rejting-kazino777.top/casino/drip"},
+        {"@type":"ListItem","position":18,"name":"Gizbo","url":"https://rejting-kazino777.top/casino/gizbo"},
+        {"@type":"ListItem","position":19,"name":"Fresh","url":"https://rejting-kazino777.top/casino/fresh"},
+        {"@type":"ListItem","position":20,"name":"Volna","url":"https://rejting-kazino777.top/casino/volna"},
+        {"@type":"ListItem","position":21,"name":"Irwin","url":"https://rejting-kazino777.top/casino/irwin"},
+        {"@type":"ListItem","position":22,"name":"Beef","url":"https://rejting-kazino777.top/casino/beef"},
+        {"@type":"ListItem","position":23,"name":"Martin","url":"https://rejting-kazino777.top/casino/martin"},
+        {"@type":"ListItem","position":24,"name":"1Go","url":"https://rejting-kazino777.top/casino/1go"},
+        {"@type":"ListItem","position":25,"name":"Lex","url":"https://rejting-kazino777.top/casino/lex"},
+        {"@type":"ListItem","position":26,"name":"Vavada","url":"https://rejting-kazino777.top/casino/vavada"},
+        {"@type":"ListItem","position":27,"name":"PokerDom","url":"https://rejting-kazino777.top/casino/pokerdom"},
+        {"@type":"ListItem","position":28,"name":"Kent","url":"https://rejting-kazino777.top/casino/kent"},
+        {"@type":"ListItem","position":29,"name":"JoyCasino","url":"https://rejting-kazino777.top/casino/joycasino"}
       ]
     },
     {
