@@ -597,8 +597,8 @@
  .pcnav-drop:nth-of-type(2) .pcnav-dropbtn{color:#a97bff}
  .pcnav-drop.open .pcnav-dropbtn::after{transform:rotate(180deg)}
  .pcnav-drop.open .pcnav-dropbtn{color:#fff;background:rgba(255,255,255,.06)}
- .pcnav-menu,.pcnav-menu.pcnav-mega{position:static;min-width:0;width:100%;opacity:0;visibility:visible;transform:none;display:grid;grid-template-columns:1fr 1fr;gap:0 12px;background:none;border:0;box-shadow:none;max-height:0;overflow:hidden;padding:0 6px;transition:max-height .32s cubic-bezier(.22,1,.36,1),opacity .22s,padding .2s}
- .pcnav-drop.open .pcnav-menu,.pcnav-drop.open .pcnav-menu.pcnav-mega{max-height:1600px;opacity:1;padding:0 6px 10px}
+ .pcnav-menu,.pcnav-menu.pcnav-mega{position:static;min-width:0;width:100%;transform:none;display:none;grid-template-columns:1fr 1fr;gap:0 12px;background:none;border:0;box-shadow:none;max-height:none;overflow:visible;padding:2px 6px 10px}
+ .pcnav-drop.open .pcnav-menu,.pcnav-drop.open .pcnav-menu.pcnav-mega{display:grid}
  .pcnav-menu .pcnav-col{display:contents}
  .pcnav-menu .pcnav-h{display:none}
  .pcnav-menu a{color:#c4c9e8!important;font-size:13.5px;font-weight:600;padding:9px 2px!important;border-bottom:1px solid rgba(255,255,255,.05);border-radius:0}
