@@ -29,20 +29,31 @@ a{color:inherit}.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
 .c-score{margin-left:auto;flex:0 0 auto;text-align:center;font-family:"Unbounded",sans-serif;font-weight:800;font-size:20px;line-height:1;
  padding:8px 10px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
 .c-score small{display:block;font-size:9px;color:var(--mut);font-weight:700;letter-spacing:.5px}
-.ccard{flex-direction:column;align-items:stretch;padding:18px 20px}
+.ccard{position:relative;flex-direction:column;align-items:stretch;padding:20px 20px 16px;overflow:hidden}
+.ccard.top3{border-color:rgba(184,255,43,.35);box-shadow:0 0 0 1px rgba(184,255,43,.12),0 14px 34px rgba(0,0,0,.4)}
+.ccard.top3::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#b8ff2b,#ff2e93)}
+.ccard-rank{position:absolute;top:10px;left:15px;font-family:"Unbounded",sans-serif;font-weight:800;font-size:11px;color:var(--mut);opacity:.5}
 .ccard-top{display:flex;align-items:center;gap:15px}
 .ccard-h{flex:1 1 auto;min-width:0}
-.ccard-name{font-family:"Unbounded",sans-serif;font-weight:800;font-size:18px;line-height:1.15}
-.ccard-desc{color:var(--mut);font-size:13px;margin-top:5px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.ccard-score{flex:0 0 auto;text-align:center;font-family:"Unbounded",sans-serif;font-weight:800;font-size:24px;line-height:1;padding:10px 12px;border-radius:13px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
-.ccard-score small{display:block;font-size:9px;color:var(--mut);font-weight:700;letter-spacing:.5px;margin-top:2px}
-.ccard-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chip{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;color:var(--mut)}
+.ccard-name{font-family:"Unbounded",sans-serif;font-weight:800;font-size:18px;line-height:1.15;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.ccard-tag{font-family:"Manrope",sans-serif;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:#06070e;background:linear-gradient(105deg,#b8ff2b,#ffcf3f);padding:3px 8px;border-radius:999px}
+.ccard-stars{display:flex;gap:2px;margin-top:6px}
+.ccard-stars .st{display:inline-flex;color:rgba(255,255,255,.16)}
+.ccard-stars .st.on{color:#ffcf3f}
+.ccard-stars .st svg{width:14px;height:14px}
+.ccard-desc{color:var(--mut);font-size:13px;margin-top:7px;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ccard-score{flex:0 0 auto;text-align:center;font-family:"Unbounded",sans-serif;font-weight:800;font-size:24px;line-height:1;padding:9px 13px;border-radius:13px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.ccard-score small{display:block;font-size:9px;color:var(--mut);font-weight:700;letter-spacing:.5px;margin-top:3px}
+.ccard-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:11px;padding:7px 12px;font-size:12.5px;color:var(--mut)}
+.chip .chi{display:inline-flex;color:var(--cc,#b8ff2b)}
+.chip .chi svg{width:15px;height:15px}
 .chip b{color:#eef0fb;font-weight:700}
-.ccard-foot{display:flex;justify-content:flex-end;margin-top:14px}
-.ccard-read{color:var(--neon);font-weight:800;font-size:13.5px}
-.ccard:hover .ccard-read{text-decoration:underline}
-@media(max-width:560px){.ccard{padding:16px}.ccard-name{font-size:16px}.ccard-score{font-size:20px;padding:8px 10px}.c-vis{width:46px!important;height:46px!important}}
+.ccard-foot{display:flex;justify-content:flex-end;margin-top:15px}
+.ccard-read{display:inline-flex;align-items:center;gap:6px;color:var(--neon);font-weight:800;font-size:13.5px;transition:gap .2s}
+.ccard-read .ra{display:inline-flex}.ccard-read .ra svg{width:16px;height:16px}
+.ccard:hover .ccard-read{gap:10px}
+@media(max-width:560px){.ccard{padding:18px 16px 14px}.ccard-name{font-size:16px}.ccard-score{font-size:20px;padding:8px 11px}.c-vis{width:46px!important;height:46px!important}}
 .s-cover{aspect-ratio:3/4;width:100%;object-fit:cover;background:#0c0f1e;display:block}
 .s-b{padding:11px 12px}.s-name{font-weight:700;font-size:13.6px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:34px}
 .s-sub{color:var(--mut);font-size:11.5px;margin-top:4px;display:flex;justify-content:space-between;align-items:center}
@@ -78,6 +89,10 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 .pcnav-cta{margin-left:6px;color:#06070e!important;font-weight:800;padding:9px 16px;border-radius:11px;text-decoration:none;background:linear-gradient(105deg,#b8ff2b,#ffcf3f)!important;box-shadow:0 6px 18px rgba(184,255,43,.32);transition:transform .2s,box-shadow .2s;white-space:nowrap}
 .pcnav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,207,63,.45)}
 .pcnav-cta::after{display:none}
+.pcnav-cta svg{width:15px;height:15px;margin-right:6px;vertical-align:-2px}
+.pcnav-ic{display:inline-flex;align-items:center;justify-content:center;margin-right:8px;color:#8a90b4;vertical-align:-3px}
+.pcnav-ic svg{width:16px;height:16px}
+.pcnav-links>a:hover .pcnav-ic{color:currentColor}
 .pcnav-burger{display:none;margin-left:auto;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
 .pcnav-burger span{width:26px;height:3px;border-radius:3px;background:linear-gradient(90deg,#b8ff2b,#ff2e93);transition:.3s}
 .pcnav-burger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
@@ -108,11 +123,12 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
  .pcnav-links>a:active{background:rgba(255,255,255,.09)}
  .pcnav-links>a:active::after{transform:translateX(3px)}
  .pcnav-links>a:nth-of-type(1){color:#b8ff2b;border-left-color:#b8ff2b}
- .pcnav-links>a:nth-of-type(1)::before{content:"🎰";font-size:18px}
+ .pcnav-links>a:nth-of-type(1) .pcnav-ic{color:#b8ff2b}
  .pcnav-links>a:nth-of-type(2){color:#3fe0d0;border-left-color:#3fe0d0}
- .pcnav-links>a:nth-of-type(2)::before{content:"🎲";font-size:18px}
+ .pcnav-links>a:nth-of-type(2) .pcnav-ic{color:#3fe0d0}
  .pcnav-links>a:nth-of-type(3){color:#ffcf3f;border-left-color:#ffcf3f}
- .pcnav-links>a:nth-of-type(3)::before{content:"💰";font-size:18px}
+ .pcnav-links>a:nth-of-type(3) .pcnav-ic{color:#ffcf3f}
+ .pcnav-ic svg{width:19px;height:19px}
  .pcnav-drop{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden}
  .pcnav-dropbtn{pointer-events:none;display:flex;align-items:center;width:100%;padding:6px 4px 10px;font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#eef0fb}
  .pcnav-drop:nth-of-type(1) .pcnav-dropbtn{color:#ff2e93}
@@ -130,7 +146,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:v
 }
 @keyframes pcin{to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.pcnav *{animation:none!important;transition:none!important}.pcnav-links.open>*{opacity:1!important;transform:none!important}}
-</style><div class="pcnav" id="pcnav"><div class="pcnav-in"><a class="pcnav-logo" href="/"><span class="d">P</span>Play<b>Casino</b></a><button class="pcnav-burger" id="pcnavBurger" aria-label="Меню"><span></span><span></span><span></span></button><nav class="pcnav-links" id="pcnavLinks"><a href="/casino/">Казино</a><a href="/slots/">Слоты</a><a href="/min-depozit/">Мин. депозит</a><div class="pcnav-drop"><button class="pcnav-dropbtn">Бонусы ▾</button><div class="pcnav-menu"><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div></div><div class="pcnav-drop"><button class="pcnav-dropbtn">Каталоги ▾</button><div class="pcnav-menu pcnav-mega"><div class="pcnav-col"><span class="pcnav-h">Рейтинги</span><a href="/online-kazino/">Онлайн-казино</a><a href="/rejting-kazino/">Рейтинг казино</a><a href="/top-casino/">Топ казино</a><a href="/luchshie/">Лучшие казино</a><a href="/novye/">Новые казино</a></div><div class="pcnav-col"><span class="pcnav-h">По депозиту</span><a href="/min-depozit/">Мин. депозит</a><a href="/na-rubli/">На рубли</a><a href="/sbp/">СБП</a><a href="/vyvod-na-kartu/">Вывод на карту</a><a href="/bystryj-vyvod/">Быстрый вывод</a></div><div class="pcnav-col"><span class="pcnav-h">Бонусы</span><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div><div class="pcnav-col"><span class="pcnav-h">Игры</span><a href="/avtomaty/">Игровые автоматы</a><a href="/ruletka/">Рулетка</a><a href="/live/">Live-казино</a><a href="/vip/">VIP-казино</a></div><div class="pcnav-col"><span class="pcnav-h">Надёжность</span><a href="/licenzionnye/">Лицензионные</a><a href="/oficialnye/">Официальные</a><a href="/otzyvy/">Отзывы игроков</a><a href="/platjat/">Которые платят</a><a href="/bez-verifikacii/">Без верификации</a></div><div class="pcnav-col"><span class="pcnav-h">Крипто и устройства</span><a href="/bitkoin/">Биткоин</a><a href="/crypto/">Криптовалюта</a><a href="/mobilnye/">Мобильные</a><a href="/android/">Android</a><a href="/rossiya/">Россия</a><a href="/kazakhstan/">Казахстан</a></div></div></div><a class="pcnav-cta" href="/luchshie/">🏆 Топ казино</a><a class="pcnav-mtg" href="https://t.me/landeks" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 18.6l.3-4.24 7.68-6.93c.34-.3-.07-.45-.52-.18L7.72 13.3 3.6 12c-.9-.27-.9-.88.2-1.32L19.8 4.5c.74-.34 1.44.18 1.16 1.3l-2.72 12.82c-.19.9-.74 1.12-1.5.7l-4.14-3.05-2 1.93c-.22.22-.4.4-.8.4z"/></svg><span>Telegram — сотрудничество</span></a></nav></div></div><div class="pcnav-spacer" id="pcnavSpacer"></div><script id="pcnav-js">
+</style><div class="pcnav" id="pcnav"><div class="pcnav-in"><a class="pcnav-logo" href="/"><span class="d">P</span>Play<b>Casino</b></a><button class="pcnav-burger" id="pcnavBurger" aria-label="Меню"><span></span><span></span><span></span></button><nav class="pcnav-links" id="pcnavLinks"><a href="/casino/"><i class="pcnav-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3a7 7 0 0 1 6.7 5h-3.2A4 4 0 0 0 13 8.1V5zm-2 0v3.1A4 4 0 0 0 7.5 10H4.3A7 7 0 0 1 10 5zM4.3 14h3.2A4 4 0 0 0 11 15.9V19a7 7 0 0 1-6.7-5zM13 19v-3.1a4 4 0 0 0 2.5-1.9h3.2A7 7 0 0 1 13 19z"/></svg></i>Казино</a><a href="/slots/"><i class="pcnav-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8 17a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0-8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0-8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg></i>Слоты</a><a href="/min-depozit/"><i class="pcnav-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 15v1.2h-2V17a3.2 3.2 0 0 1-2.2-2h2a1.2 1.2 0 0 0 2.2-.7c0-.6-.4-.9-1.8-1.3-1.4-.4-2.4-1-2.4-2.5 0-1.2.8-2 2.2-2.3V6h2v1.2A3 3 0 0 1 15 9h-2a1.1 1.1 0 0 0-2 0c0 .5.4.7 1.8 1.1 1.5.4 2.4 1 2.4 2.6 0 1.3-.9 2-2.2 2.3z"/></svg></i>Мин. депозит</a><div class="pcnav-drop"><button class="pcnav-dropbtn">Бонусы ▾</button><div class="pcnav-menu"><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div></div><div class="pcnav-drop"><button class="pcnav-dropbtn">Каталоги ▾</button><div class="pcnav-menu pcnav-mega"><div class="pcnav-col"><span class="pcnav-h">Рейтинги</span><a href="/online-kazino/">Онлайн-казино</a><a href="/rejting-kazino/">Рейтинг казино</a><a href="/top-casino/">Топ казино</a><a href="/luchshie/">Лучшие казино</a><a href="/novye/">Новые казино</a></div><div class="pcnav-col"><span class="pcnav-h">По депозиту</span><a href="/min-depozit/">Мин. депозит</a><a href="/na-rubli/">На рубли</a><a href="/sbp/">СБП</a><a href="/vyvod-na-kartu/">Вывод на карту</a><a href="/bystryj-vyvod/">Быстрый вывод</a></div><div class="pcnav-col"><span class="pcnav-h">Бонусы</span><a href="/privetstvennyj/">Приветственный бонус</a><a href="/bezdepozit/">Бездепозит</a><a href="/frispiny/">Фриспины</a><a href="/cashback/">Кэшбэк</a><a href="/promo/">Промокоды</a><a href="/bez-otigrysha/">Без отыгрыша</a></div><div class="pcnav-col"><span class="pcnav-h">Игры</span><a href="/avtomaty/">Игровые автоматы</a><a href="/ruletka/">Рулетка</a><a href="/live/">Live-казино</a><a href="/vip/">VIP-казино</a></div><div class="pcnav-col"><span class="pcnav-h">Надёжность</span><a href="/licenzionnye/">Лицензионные</a><a href="/oficialnye/">Официальные</a><a href="/otzyvy/">Отзывы игроков</a><a href="/platjat/">Которые платят</a><a href="/bez-verifikacii/">Без верификации</a></div><div class="pcnav-col"><span class="pcnav-h">Крипто и устройства</span><a href="/bitkoin/">Биткоин</a><a href="/crypto/">Криптовалюта</a><a href="/mobilnye/">Мобильные</a><a href="/android/">Android</a><a href="/rossiya/">Россия</a><a href="/kazakhstan/">Казахстан</a></div></div></div><a class="pcnav-cta" href="/luchshie/"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2H6v2H3v3a4 4 0 0 0 4 4 5 5 0 0 0 4 3v2H8v2h8v-2h-3v-2a5 5 0 0 0 4-3 4 4 0 0 0 4-4V4h-3V2zM5 7V6h1v3a2 2 0 0 1-1-2zm14 0a2 2 0 0 1-1 2V6h1v1z"/></svg>Топ казино</a><a class="pcnav-mtg" href="https://t.me/landeks" target="_blank" rel="nofollow noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.8 18.6l.3-4.24 7.68-6.93c.34-.3-.07-.45-.52-.18L7.72 13.3 3.6 12c-.9-.27-.9-.88.2-1.32L19.8 4.5c.74-.34 1.44.18 1.16 1.3l-2.72 12.82c-.19.9-.74 1.12-1.5.7l-4.14-3.05-2 1.93c-.22.22-.4.4-.8.4z"/></svg><span>Telegram — сотрудничество</span></a></nav></div></div><div class="pcnav-spacer" id="pcnavSpacer"></div><script id="pcnav-js">
 (function(){if(window.__pcnav)return;window.__pcnav=1;
 var b=document.getElementById('pcnavBurger'),l=document.getElementById('pcnavLinks');
 var bar=document.getElementById('pcnav'),sp=document.getElementById('pcnavSpacer');
